@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+:root {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  @apply bg-orange-50 text-stone-900 dark:bg-stone-950 dark:text-stone-100;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.arabe {
+  font-family: "Geeza Pro", "Noto Naskh Arabic", "Arial", sans-serif;
+}

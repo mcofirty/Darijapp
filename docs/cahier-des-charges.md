@@ -65,7 +65,7 @@ Chaque mot est une fiche dont l'audio est l'élément principal ; le texte n'est
 
 Une fiche contient :
 
-- le mot en lettres latines (ex. « 3afak ») et, si l'option est activée, en arabe (عافاك) ;
+- le mot en lettres latines (ex. « 3afak ») et en arabe (عافاك), affiché par défaut et masquable dans les réglages ;
 - la traduction française (« s'il te plaît ») ;
 - l'audio à vitesse normale et ralentie (0,75×) ;
 - une phrase d'exemple avec son audio ;
@@ -150,9 +150,11 @@ Format d'un mot dans les données :
   "fr": "s'il te plaît",
   "theme": "politesse",
   "niveau": 1,
+  "prononciation": "3a-fak : commence par le 3 (ع), un « a » serré au fond de la gorge.",
   "audio": "audio/politesse-004.mp3",
   "exemple": {
     "latin": "3tini atay 3afak",
+    "arabe": "عطيني أتاي عافاك",
     "fr": "Donne-moi du thé, s'il te plaît",
     "audio": "audio/politesse-004-ex.mp3"
   }
@@ -178,6 +180,8 @@ Progression d'un mot, stockée sur le téléphone :
 Génération de l'audio : un script Python, lancé par Claude Code sur ton ordinateur, transforme l'écriture arabe de chaque mot et de chaque exemple en fichier MP3 avec le modèle de synthèse vocale arabe [facebook/mms-tts-ara](https://huggingface.co/facebook/mms-tts-ara). Les fichiers sont générés une fois, rangés dans `public/audio/` et embarqués dans l'appli.
 
 Cette voix est celle d'un arabe générique : elle sert de repère, et la fonction « Remplacer l'audio » permet d'y substituer une vraie voix marocaine dès que tu en as une.
+
+Tant qu'un MP3 n'a pas été généré, l'appli lit l'écriture arabe avec la synthèse vocale du téléphone.
 
 Pour un mot ajouté depuis l'appli, l'audio vient de la synthèse vocale intégrée au navigateur (API Web Speech) ou de ton propre enregistrement.
 
@@ -224,7 +228,7 @@ Interface :
 
 - 5 onglets en barre basse : Apprendre, Parcours, Quiz, Progrès, Profil (détail dans « Écrans et navigation ») ;
 - gros boutons audio accessibles au pouce, lecture automatique à l'affichage d'un mot ;
-- aucune lecture de l'arabe exigée, l'affichage arabe s'active dans les réglages ;
+- aucune lecture de l'arabe exigée : l'arabe est affiché par défaut à côté du latin, et se masque dans les réglages ;
 - interface en français, mode clair et sombre.
 
 Exigences non fonctionnelles :

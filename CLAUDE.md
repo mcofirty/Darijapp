@@ -36,23 +36,25 @@ Ne modifie jamais cette section sans demande explicite.
 
 ## Commandes
 
-Prévues, à confirmer dès qu'elles existent :
-
 ```bash
-npm run dev                         # serveur local
+npm run dev                         # serveur local (http://localhost:5173/Darijapp/)
 npm test                            # tests Vitest
-npm run build                       # build de production
-npm run deploy                      # publication sur GitHub Pages (script à créer au jalon 1)
-python scripts/generate_audio.py    # génère les MP3 manquants à partir de src/data/*.json
+npm run build                       # build de production dans dist/
+npm run deploy                      # tests + build + publication sur la branche gh-pages
+python scripts/generate_audio.py    # génère les MP3 manquants (options --theme, --force)
 ```
+
+Le script audio demande `pip install torch transformers uroman` et ffmpeg. Il doit tourner sur un ordinateur ayant accès à Hugging Face.
 
 ## Arborescence cible
 
 ```
 src/
   app/            navigation à 5 onglets, layout, en-tête (niveau, XP, série)
+  audio/          lecture des mots (MP3, sinon synthèse vocale du téléphone)
   features/
-    apprendre/    cartes du jour, mots difficiles, mode écoute
+    mots/         fiche d'un mot, liste de mots, bouton audio (partagés)
+    apprendre/    thèmes, guide des sons, puis cartes du jour, mots difficiles, mode écoute
     parcours/     chemin de leçons, trésors, trophées
     quiz/         quiz de 5 questions, 5 types d'exercices
     progres/      tableau de bord, quêtes, série, statistiques, dictionnaire
@@ -62,7 +64,7 @@ src/
   scoring/        score de prononciation (logique pure)
   gamification/   XP, niveaux, quêtes, série (logique pure)
   db/             schéma Dexie et migrations
-  data/           un fichier JSON par thème
+  data/           un fichier JSON par thème, liste des thèmes, sons du darija
 scripts/
   generate_audio.py
 public/audio/     MP3 générés
@@ -74,11 +76,13 @@ docs/
 
 | Onglet | Contenu |
 | --- | --- |
-| Apprendre | Session de 5 cartes du jour, dans les deux sens ; toucher pour retourner ; « À réviser » / « Je connais » |
+| Apprendre | Aujourd'hui : guide « Les sons du darija », 8 thèmes, liste des mots, fiche mot. Prévu : session de 5 cartes du jour, dans les deux sens ; toucher pour retourner ; « À réviser » / « Je connais » |
 | Parcours | Leçons groupées par niveau (niveau 1 « Les bases »), prochaine leçon mise en avant, nœuds Trésor, trophées |
 | Quiz | 5 questions mêlant les 5 exercices |
-| Progrès | Niveau, XP, quêtes, coffre, série, statistiques, bascule vers le Dictionnaire |
+| Progrès | Niveau, XP, quêtes, coffre, série, statistiques (prévu) ; bascule vers le Dictionnaire (fait : tous les mots, recherche latin/français/arabe) |
 | Profil | Prénom, avatar, genre, objectif, rappel, audio, affichage arabe, mode sombre, export/import/remise à zéro |
+
+Fiche mot : latin en grand, arabe dessous (affiché par défaut, masquable dans Profil), traduction, boutons « Écouter » et « Ralenti » (0,75×), lecture automatique à l'ouverture, explication de prononciation, explication de chaque son particulier du mot, exemple avec son audio.
 
 Exercices : Écoute et choisis, Associe les paires, Dis-le (avec score), Distingue les sons (paires comme 9elb / kelb), Quiz express (60 s).
 
@@ -101,16 +105,19 @@ Mot (`src/data/<theme>.json`) :
 
 ```json
 {
-  "id": "politesse-004",
+  "id": "salutations-012",
   "latin": "3afak",
   "arabe": "عافاك",
   "fr": "s'il te plaît",
-  "theme": "politesse",
+  "theme": "salutations",
   "niveau": 1,
-  "audio": "audio/politesse-004.mp3",
-  "exemple": { "latin": "3tini atay 3afak", "fr": "Donne-moi du thé, s'il te plaît", "audio": "audio/politesse-004-ex.mp3" }
+  "prononciation": "3a-fak : commence par le 3 (ع), un « a » serré au fond de la gorge.",
+  "audio": "audio/salutations-012.mp3",
+  "exemple": { "latin": "3tini atay 3afak", "arabe": "عطيني أتاي عافاك", "fr": "Donne-moi du thé, s'il te plaît", "audio": "audio/salutations-012-ex.mp3" }
 }
 ```
+
+L'id suit `<theme>-NNN` dans l'ordre du fichier ; `src/data/data.test.ts` vérifie le format, l'unicité et la translittération.
 
 Progression d'un mot (IndexedDB) :
 
@@ -143,11 +150,11 @@ Progression d'un mot (IndexedDB) :
 
 ## État du projet
 
-Jalon en cours : **1 — Socle**, pas commencé.
+Jalon en cours : **1 — Socle**, presque terminé : restent la génération des MP3 et la première publication sur GitHub Pages.
 
 | Jalon | Durée estimée | Contenu | Statut |
 | --- | --- | --- | --- |
-| 1. Socle | Semaine 1 | PWA, 5 onglets, script audio, 1 thème de 10 mots | À faire |
+| 1. Socle | Semaine 1 | PWA, 5 onglets, script audio, 1 thème de 10 mots (fait : 8 thèmes, 152 mots) | En cours |
 | 2. Exercices | Semaines 2 et 3 | Cartes, quiz, répétition espacée | À faire |
 | 3. Prononciation | Semaines 4 et 5 | Enregistrement, score sur 100, sons du darija | À faire |
 | 4. Jeu et contenu | Semaines 6 et 7 | Quêtes, séries, parcours complet, 150 mots | À faire |
@@ -157,7 +164,9 @@ Jalon en cours : **1 — Socle**, pas commencé.
 
 | Date | Fonctionnalité | Fichiers clés |
 | --- | --- | --- |
-| — | Rien pour l'instant | — |
+| 2026-10-10 | Socle PWA : 5 onglets, en-tête, base Dexie v1, réglage « afficher l'arabe » | `src/app/`, `src/db/`, `vite.config.ts` |
+| 2026-10-10 | 152 mots en 8 thèmes avec arabe, prononciation et exemple ; fiche mot, guide des sons, dictionnaire avec recherche | `src/data/`, `src/features/mots/`, `src/features/apprendre/`, `src/features/progres/` |
+| 2026-10-10 | Script de génération audio et lecture avec repli sur la synthèse vocale du téléphone | `scripts/generate_audio.py`, `src/audio/lecteur.ts` |
 
 ## Décisions
 
@@ -166,9 +175,19 @@ Jalon en cours : **1 — Socle**, pas commencé.
 - 2026-10-11 : score par comparaison acoustique MFCC + DTW sur l'appareil. Hors ligne, et la voix reste privée.
 - 2026-10-11 : rappel quotidien par fichier .ics. Une notification push exigerait un serveur.
 
+- 2026-10-10 : les 8 thèmes (152 mots) sont écrits dès le jalon 1, à la demande de l'utilisateur, au lieu d'un seul thème de 10 mots.
+- 2026-10-10 : l'écriture arabe s'affiche par défaut à côté du latin (demande de l'utilisateur) ; le réglage du Profil permet de la masquer.
+- 2026-10-10 : champ `prononciation` obligatoire et `exemple.arabe` ajoutés au format des mots, pour l'explication affichée et pour la synthèse de l'exemple.
+- 2026-10-10 : sans MP3, l'appli lit l'écriture arabe avec la synthèse vocale du téléphone (voix arabe) ; la liste des MP3 présents est fixée au build (`__AUDIOS__` dans `vite.config.ts`).
+- 2026-10-10 : publication par le paquet `gh-pages` (branche `gh-pages`), sans GitHub Actions.
+- 2026-10-10 : pas de routeur ; navigation par état React, suffisante pour 5 onglets.
+
 ## Points en suspens
 
-- Aucun pour l'instant.
+- MP3 non générés : Hugging Face est inaccessible depuis l'environnement cloud. Lancer `python scripts/generate_audio.py` sur un ordinateur, puis commiter `public/audio/`. En attendant, l'appli utilise la voix arabe du téléphone.
+- Le contenu (darija, arabe, explications) a été rédigé sans relecture par un locuteur natif : signaler les erreurs pour corriger les JSON.
+- Le Dictionnaire montre tous les mots ; il devra ne montrer que les mots déjà vus quand la progression existera (jalon 2).
+- Activer GitHub Pages (branche `gh-pages`) dans les réglages du repo après le premier `npm run deploy`.
 
 ## Mise à jour de ce fichier (obligatoire)
 

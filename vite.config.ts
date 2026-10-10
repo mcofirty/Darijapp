@@ -1,0 +1,50 @@
+/// <reference types="vitest/config" />
+import { existsSync, readdirSync } from 'node:fs'
+import tailwindcss from '@tailwindcss/vite'
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
+import { VitePWA } from 'vite-plugin-pwa'
+
+// MP3 présents dans public/audio : l'appli ne tente de les lire que s'ils existent,
+// sinon elle passe directement à la synthèse vocale du téléphone.
+const dossierAudio = 'public/audio'
+const audios = existsSync(dossierAudio)
+  ? readdirSync(dossierAudio).filter((f) => f.endsWith('.mp3')).sort()
+  : []
+
+export default defineConfig({
+  base: '/Darijapp/',
+  define: {
+    __AUDIOS__: JSON.stringify(audios),
+  },
+  plugins: [
+    react(),
+    tailwindcss(),
+    VitePWA({
+      registerType: 'autoUpdate',
+      includeAssets: ['apple-touch-icon.png', 'favicon.png'],
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,png,svg,mp3}'],
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
+      },
+      manifest: {
+        name: 'Darija',
+        short_name: 'Darija',
+        description: 'Apprendre le darija marocain à l\'oral',
+        lang: 'fr',
+        display: 'standalone',
+        orientation: 'portrait',
+        background_color: '#fff7ed',
+        theme_color: '#c2410c',
+        icons: [
+          { src: 'pwa-192.png', sizes: '192x192', type: 'image/png' },
+          { src: 'pwa-512.png', sizes: '512x512', type: 'image/png' },
+          { src: 'pwa-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+        ],
+      },
+    }),
+  ],
+  test: {
+    environment: 'node',
+  },
+})

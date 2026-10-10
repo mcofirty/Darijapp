@@ -1,0 +1,322 @@
+[
+  {
+    "id": "nourriture-001",
+    "latin": "khobz",
+    "arabe": "خبز",
+    "fr": "pain",
+    "theme": "nourriture",
+    "niveau": 1,
+    "prononciation": "khobz : kh (خ) raclé comme la jota espagnole, puis « obz » d'un seul coup.",
+    "audio": "audio/nourriture-001.mp3",
+    "exemple": {
+      "latin": "3tini khobz 3afak",
+      "arabe": "عطيني خبز عافاك",
+      "fr": "Donne-moi du pain, s'il te plaît",
+      "audio": "audio/nourriture-001-ex.mp3"
+    }
+  },
+  {
+    "id": "nourriture-002",
+    "latin": "atay",
+    "arabe": "أتاي",
+    "fr": "thé (à la menthe)",
+    "theme": "nourriture",
+    "niveau": 1,
+    "prononciation": "a-tay : « a » ouvert, rime avec « aïe ».",
+    "audio": "audio/nourriture-002.mp3",
+    "exemple": {
+      "latin": "bghit atay b na3na3",
+      "arabe": "بغيت أتاي بالنعناع",
+      "fr": "Je veux du thé à la menthe",
+      "audio": "audio/nourriture-002-ex.mp3"
+    }
+  },
+  {
+    "id": "nourriture-003",
+    "latin": "na3na3",
+    "arabe": "نعناع",
+    "fr": "menthe",
+    "theme": "nourriture",
+    "niveau": 1,
+    "prononciation": "na3-na3 : deux fois le 3 (ع) serré de la gorge.",
+    "audio": "audio/nourriture-003.mp3",
+    "exemple": {
+      "latin": "atay bla na3na3",
+      "arabe": "أتاي بلا نعناع",
+      "fr": "Du thé sans menthe",
+      "audio": "audio/nourriture-003-ex.mp3"
+    }
+  },
+  {
+    "id": "nourriture-004",
+    "latin": "9ahwa",
+    "arabe": "قهوة",
+    "fr": "café",
+    "theme": "nourriture",
+    "niveau": 1,
+    "prononciation": "9ah-wa : le 9 (ق) est un « k » tiré très au fond de la gorge, presque dans la glotte.",
+    "audio": "audio/nourriture-004.mp3",
+    "exemple": {
+      "latin": "wa7ed 9ahwa n9ia",
+      "arabe": "واحد قهوة نقية",
+      "fr": "Un café noir",
+      "audio": "audio/nourriture-004-ex.mp3"
+    }
+  },
+  {
+    "id": "nourriture-005",
+    "latin": "ma",
+    "arabe": "ما",
+    "fr": "eau",
+    "theme": "nourriture",
+    "niveau": 1,
+    "prononciation": "ma : comme « ma » en français.",
+    "audio": "audio/nourriture-005.mp3",
+    "exemple": {
+      "latin": "3tini chwiya d lma",
+      "arabe": "عطيني شوية د الما",
+      "fr": "Donne-moi un peu d'eau",
+      "audio": "audio/nourriture-005-ex.mp3"
+    }
+  },
+  {
+    "id": "nourriture-006",
+    "latin": "7lib",
+    "arabe": "حليب",
+    "fr": "lait",
+    "theme": "nourriture",
+    "niveau": 1,
+    "prononciation": "7lib : commence par le 7 (ح), un souffle chaud et sourd.",
+    "audio": "audio/nourriture-006.mp3",
+    "exemple": {
+      "latin": "9ahwa b 7lib",
+      "arabe": "قهوة بحليب",
+      "fr": "Un café au lait",
+      "audio": "audio/nourriture-006-ex.mp3"
+    }
+  },
+  {
+    "id": "nourriture-007",
+    "latin": "sokkar",
+    "arabe": "سكر",
+    "fr": "sucre",
+    "theme": "nourriture",
+    "niveau": 1,
+    "prononciation": "sok-kar : « k » doublé, appuyé.",
+    "audio": "audio/nourriture-007.mp3",
+    "exemple": {
+      "latin": "bla sokkar 3afak",
+      "arabe": "بلا سكر عافاك",
+      "fr": "Sans sucre, s'il te plaît",
+      "audio": "audio/nourriture-007-ex.mp3"
+    }
+  },
+  {
+    "id": "nourriture-008",
+    "latin": "l7em",
+    "arabe": "لحم",
+    "fr": "viande",
+    "theme": "nourriture",
+    "niveau": 1,
+    "prononciation": "l7em : le 7 (ح) soufflé juste après le « l ».",
+    "audio": "audio/nourriture-008.mp3",
+    "exemple": {
+      "latin": "ma kanaklch l7em",
+      "arabe": "ما كناكلش اللحم",
+      "fr": "Je ne mange pas de viande",
+      "audio": "audio/nourriture-008-ex.mp3"
+    }
+  },
+  {
+    "id": "nourriture-009",
+    "latin": "djaj",
+    "arabe": "دجاج",
+    "fr": "poulet",
+    "theme": "nourriture",
+    "niveau": 1,
+    "prononciation": "d-jaj : « d » et « j » collés, comme « dj » de « djembé ».",
+    "audio": "audio/nourriture-009.mp3",
+    "exemple": {
+      "latin": "tajine b djaj",
+      "arabe": "طاجين بالدجاج",
+      "fr": "Un tajine au poulet",
+      "audio": "audio/nourriture-009-ex.mp3"
+    }
+  },
+  {
+    "id": "nourriture-010",
+    "latin": "7ut",
+    "arabe": "حوت",
+    "fr": "poisson",
+    "theme": "nourriture",
+    "niveau": 1,
+    "prononciation": "7ut : 7 (ح) soufflé puis « out ».",
+    "audio": "audio/nourriture-010.mp3",
+    "exemple": {
+      "latin": "7ut tri",
+      "arabe": "حوت طري",
+      "fr": "Du poisson frais",
+      "audio": "audio/nourriture-010-ex.mp3"
+    }
+  },
+  {
+    "id": "nourriture-011",
+    "latin": "bid",
+    "arabe": "بيض",
+    "fr": "œufs",
+    "theme": "nourriture",
+    "niveau": 1,
+    "prononciation": "bid : le « d » est appuyé, langue un peu en arrière.",
+    "audio": "audio/nourriture-011.mp3",
+    "exemple": {
+      "latin": "bghit joj d lbid",
+      "arabe": "بغيت جوج د البيض",
+      "fr": "Je veux deux œufs",
+      "audio": "audio/nourriture-011-ex.mp3"
+    }
+  },
+  {
+    "id": "nourriture-012",
+    "latin": "khodra",
+    "arabe": "خضرة",
+    "fr": "légumes",
+    "theme": "nourriture",
+    "niveau": 1,
+    "prononciation": "khod-ra : kh (خ) raclé, « r » roulé.",
+    "audio": "audio/nourriture-012.mp3",
+    "exemple": {
+      "latin": "tajine b lkhodra",
+      "arabe": "طاجين بالخضرة",
+      "fr": "Un tajine aux légumes",
+      "audio": "audio/nourriture-012-ex.mp3"
+    }
+  },
+  {
+    "id": "nourriture-013",
+    "latin": "fakya",
+    "arabe": "فاكية",
+    "fr": "fruits",
+    "theme": "nourriture",
+    "niveau": 1,
+    "prononciation": "fak-ya : simple, « k » net.",
+    "audio": "audio/nourriture-013.mp3",
+    "exemple": {
+      "latin": "fakya tria",
+      "arabe": "فاكية طرية",
+      "fr": "Des fruits frais",
+      "audio": "audio/nourriture-013-ex.mp3"
+    }
+  },
+  {
+    "id": "nourriture-014",
+    "latin": "zitoun",
+    "arabe": "زيتون",
+    "fr": "olives",
+    "theme": "nourriture",
+    "niveau": 1,
+    "prononciation": "zi-toun : comme en français.",
+    "audio": "audio/nourriture-014.mp3",
+    "exemple": {
+      "latin": "chwiya d zitoun",
+      "arabe": "شوية د الزيتون",
+      "fr": "Un peu d'olives",
+      "audio": "audio/nourriture-014-ex.mp3"
+    }
+  },
+  {
+    "id": "nourriture-015",
+    "latin": "tajine",
+    "arabe": "طاجين",
+    "fr": "tajine",
+    "theme": "nourriture",
+    "niveau": 1,
+    "prononciation": "ta-jin : « t » appuyé, langue un peu en arrière.",
+    "audio": "audio/nourriture-015.mp3",
+    "exemple": {
+      "latin": "tajine bnin bezzaf",
+      "arabe": "طاجين بنين بزاف",
+      "fr": "Le tajine est très bon",
+      "audio": "audio/nourriture-015-ex.mp3"
+    }
+  },
+  {
+    "id": "nourriture-016",
+    "latin": "ksksou",
+    "arabe": "كسكسو",
+    "fr": "couscous",
+    "theme": "nourriture",
+    "niveau": 1,
+    "prononciation": "ks-ksou : les voyelles disparaissent presque.",
+    "audio": "audio/nourriture-016.mp3",
+    "exemple": {
+      "latin": "ksksou nhar jjem3a",
+      "arabe": "كسكسو نهار الجمعة",
+      "fr": "Couscous le vendredi",
+      "audio": "audio/nourriture-016-ex.mp3"
+    }
+  },
+  {
+    "id": "nourriture-017",
+    "latin": "7rira",
+    "arabe": "حريرة",
+    "fr": "harira (soupe)",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "7ri-ra : 7 (ح) soufflé, « r » roulés.",
+    "audio": "audio/nourriture-017.mp3",
+    "exemple": {
+      "latin": "7rira skhouna",
+      "arabe": "حريرة سخونة",
+      "fr": "Une harira chaude",
+      "audio": "audio/nourriture-017-ex.mp3"
+    }
+  },
+  {
+    "id": "nourriture-018",
+    "latin": "bnin",
+    "arabe": "بنين",
+    "fr": "délicieux",
+    "theme": "nourriture",
+    "niveau": 1,
+    "prononciation": "b-nin : « b » collé au « n ».",
+    "audio": "audio/nourriture-018.mp3",
+    "exemple": {
+      "latin": "had lmakla bnina",
+      "arabe": "هاد الماكلة بنينة",
+      "fr": "Ce plat est délicieux",
+      "audio": "audio/nourriture-018-ex.mp3"
+    }
+  },
+  {
+    "id": "nourriture-019",
+    "latin": "bghit",
+    "arabe": "بغيت",
+    "fr": "je veux",
+    "theme": "nourriture",
+    "niveau": 1,
+    "prononciation": "b-ghit : le gh (غ) est un « r » grasseyé à la parisienne.",
+    "audio": "audio/nourriture-019.mp3",
+    "exemple": {
+      "latin": "bghit 9ahwa 3afak",
+      "arabe": "بغيت قهوة عافاك",
+      "fr": "Je veux un café, s'il te plaît",
+      "audio": "audio/nourriture-019-ex.mp3"
+    }
+  },
+  {
+    "id": "nourriture-020",
+    "latin": "chbe3t",
+    "arabe": "شبعت",
+    "fr": "j'ai assez mangé, je suis rassasié",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "ch-be3t : 3 (ع) serré avant le « t » final.",
+    "audio": "audio/nourriture-020.mp3",
+    "exemple": {
+      "latin": "chokran, chbe3t",
+      "arabe": "شكرا، شبعت",
+      "fr": "Merci, j'ai assez mangé",
+      "audio": "audio/nourriture-020-ex.mp3"
+    }
+  }
+]

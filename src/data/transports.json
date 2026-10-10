@@ -1,0 +1,290 @@
+[
+  {
+    "id": "transports-001",
+    "latin": "taxi",
+    "arabe": "طاكسي",
+    "fr": "taxi",
+    "theme": "transports",
+    "niveau": 1,
+    "prononciation": "ta-k-si : « t » appuyé, langue en arrière.",
+    "audio": "audio/transports-001.mp3",
+    "exemple": {
+      "latin": "fin kayn taxi?",
+      "arabe": "فين كاين طاكسي؟",
+      "fr": "Où y a-t-il un taxi ?",
+      "audio": "audio/transports-001-ex.mp3"
+    }
+  },
+  {
+    "id": "transports-002",
+    "latin": "fin?",
+    "arabe": "فين؟",
+    "fr": "où ?",
+    "theme": "transports",
+    "niveau": 1,
+    "prononciation": "fin : comme « fine » en anglais, « i » bien long.",
+    "audio": "audio/transports-002.mp3",
+    "exemple": {
+      "latin": "fin lmdina?",
+      "arabe": "فين المدينة؟",
+      "fr": "Où est la médina ?",
+      "audio": "audio/transports-002-ex.mp3"
+    }
+  },
+  {
+    "id": "transports-003",
+    "latin": "3la limen",
+    "arabe": "على ليمن",
+    "fr": "à droite",
+    "theme": "transports",
+    "niveau": 1,
+    "prononciation": "3la li-men : 3 (ع) serré au début.",
+    "audio": "audio/transports-003.mp3",
+    "exemple": {
+      "latin": "dour 3la limen",
+      "arabe": "دور على ليمن",
+      "fr": "Tourne à droite",
+      "audio": "audio/transports-003-ex.mp3"
+    }
+  },
+  {
+    "id": "transports-004",
+    "latin": "3la liser",
+    "arabe": "على ليسر",
+    "fr": "à gauche",
+    "theme": "transports",
+    "niveau": 1,
+    "prononciation": "3la li-ser : 3 (ع) serré, « r » roulé.",
+    "audio": "audio/transports-004.mp3",
+    "exemple": {
+      "latin": "dour 3la liser",
+      "arabe": "دور على ليسر",
+      "fr": "Tourne à gauche",
+      "audio": "audio/transports-004-ex.mp3"
+    }
+  },
+  {
+    "id": "transports-005",
+    "latin": "nichan",
+    "arabe": "نيشان",
+    "fr": "tout droit",
+    "theme": "transports",
+    "niveau": 1,
+    "prononciation": "ni-chan : « ch » de « chat ».",
+    "audio": "audio/transports-005.mp3",
+    "exemple": {
+      "latin": "sir nichan",
+      "arabe": "سير نيشان",
+      "fr": "Va tout droit",
+      "audio": "audio/transports-005-ex.mp3"
+    }
+  },
+  {
+    "id": "transports-006",
+    "latin": "9rib",
+    "arabe": "قريب",
+    "fr": "près",
+    "theme": "transports",
+    "niveau": 1,
+    "prononciation": "9rib : le 9 (ق) est un « k » du fond de la gorge.",
+    "audio": "audio/transports-006.mp3",
+    "exemple": {
+      "latin": "wach 9rib?",
+      "arabe": "واش قريب؟",
+      "fr": "C'est près ?",
+      "audio": "audio/transports-006-ex.mp3"
+    }
+  },
+  {
+    "id": "transports-007",
+    "latin": "b3id",
+    "arabe": "بعيد",
+    "fr": "loin",
+    "theme": "transports",
+    "niveau": 1,
+    "prononciation": "b-3id : 3 (ع) serré entre le « b » et le « i ».",
+    "audio": "audio/transports-007.mp3",
+    "exemple": {
+      "latin": "b3id bezzaf",
+      "arabe": "بعيد بزاف",
+      "fr": "C'est très loin",
+      "audio": "audio/transports-007-ex.mp3"
+    }
+  },
+  {
+    "id": "transports-008",
+    "latin": "w9ef hna",
+    "arabe": "وقف هنا",
+    "fr": "arrête-toi ici",
+    "theme": "transports",
+    "niveau": 1,
+    "prononciation": "w9ef h-na : 9 (ق) du fond de la gorge.",
+    "audio": "audio/transports-008.mp3",
+    "exemple": {
+      "latin": "w9ef hna 3afak",
+      "arabe": "وقف هنا عافاك",
+      "fr": "Arrête-toi ici, s'il te plaît",
+      "audio": "audio/transports-008-ex.mp3"
+    }
+  },
+  {
+    "id": "transports-009",
+    "latin": "hna",
+    "arabe": "هنا",
+    "fr": "ici",
+    "theme": "transports",
+    "niveau": 1,
+    "prononciation": "h-na : « h » soufflé collé au « n ».",
+    "audio": "audio/transports-009.mp3",
+    "exemple": {
+      "latin": "ana hna",
+      "arabe": "أنا هنا",
+      "fr": "Je suis ici",
+      "audio": "audio/transports-009-ex.mp3"
+    }
+  },
+  {
+    "id": "transports-010",
+    "latin": "temma",
+    "arabe": "تما",
+    "fr": "là-bas",
+    "theme": "transports",
+    "niveau": 1,
+    "prononciation": "tem-ma : « m » doublé.",
+    "audio": "audio/transports-010.mp3",
+    "exemple": {
+      "latin": "lmdina temma",
+      "arabe": "المدينة تما",
+      "fr": "La médina est là-bas",
+      "audio": "audio/transports-010-ex.mp3"
+    }
+  },
+  {
+    "id": "transports-011",
+    "latin": "sir",
+    "arabe": "سير",
+    "fr": "va",
+    "theme": "transports",
+    "niveau": 1,
+    "prononciation": "sir : « r » roulé.",
+    "audio": "audio/transports-011.mp3",
+    "exemple": {
+      "latin": "sir m3aya",
+      "arabe": "سير معايا",
+      "fr": "Viens avec moi",
+      "audio": "audio/transports-011-ex.mp3"
+    }
+  },
+  {
+    "id": "transports-012",
+    "latin": "bghit nmchi l...",
+    "arabe": "بغيت نمشي ل...",
+    "fr": "je veux aller à...",
+    "theme": "transports",
+    "niveau": 1,
+    "prononciation": "b-ghit n-mchi : gh (غ) grasseyé, « ch » de « chat ».",
+    "audio": "audio/transports-012.mp3",
+    "exemple": {
+      "latin": "bghit nmchi l lmatar",
+      "arabe": "بغيت نمشي للمطار",
+      "fr": "Je veux aller à l'aéroport",
+      "audio": "audio/transports-012-ex.mp3"
+    }
+  },
+  {
+    "id": "transports-013",
+    "latin": "lmatar",
+    "arabe": "المطار",
+    "fr": "l'aéroport",
+    "theme": "transports",
+    "niveau": 1,
+    "prononciation": "l-ma-tar : « t » appuyé, langue en arrière.",
+    "audio": "audio/transports-013.mp3",
+    "exemple": {
+      "latin": "chhal l lmatar?",
+      "arabe": "شحال للمطار؟",
+      "fr": "C'est combien pour l'aéroport ?",
+      "audio": "audio/transports-013-ex.mp3"
+    }
+  },
+  {
+    "id": "transports-014",
+    "latin": "lagar",
+    "arabe": "لاڭار",
+    "fr": "la gare",
+    "theme": "transports",
+    "niveau": 1,
+    "prononciation": "la-gar : vient du français, « r » roulé.",
+    "audio": "audio/transports-014.mp3",
+    "exemple": {
+      "latin": "fin lagar?",
+      "arabe": "فين لاڭار؟",
+      "fr": "Où est la gare ?",
+      "audio": "audio/transports-014-ex.mp3"
+    }
+  },
+  {
+    "id": "transports-015",
+    "latin": "tobis",
+    "arabe": "طوبيس",
+    "fr": "bus",
+    "theme": "transports",
+    "niveau": 1,
+    "prononciation": "to-bis : « t » appuyé.",
+    "audio": "audio/transports-015.mp3",
+    "exemple": {
+      "latin": "fin kaywe9ef tobis?",
+      "arabe": "فين كيوقف الطوبيس؟",
+      "fr": "Où s'arrête le bus ?",
+      "audio": "audio/transports-015-ex.mp3"
+    }
+  },
+  {
+    "id": "transports-016",
+    "latin": "tran",
+    "arabe": "تران",
+    "fr": "train",
+    "theme": "transports",
+    "niveau": 1,
+    "prononciation": "tran : vient du français, « r » roulé.",
+    "audio": "audio/transports-016.mp3",
+    "exemple": {
+      "latin": "tran l merrakech",
+      "arabe": "التران لمراكش",
+      "fr": "Le train pour Marrakech",
+      "audio": "audio/transports-016-ex.mp3"
+    }
+  },
+  {
+    "id": "transports-017",
+    "latin": "zen9a",
+    "arabe": "زنقة",
+    "fr": "rue",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "zen-9a : 9 (ق) du fond de la gorge.",
+    "audio": "audio/transports-017.mp3",
+    "exemple": {
+      "latin": "fin had zen9a?",
+      "arabe": "فين هاد الزنقة؟",
+      "fr": "Où est cette rue ?",
+      "audio": "audio/transports-017-ex.mp3"
+    }
+  },
+  {
+    "id": "transports-018",
+    "latin": "lmdina",
+    "arabe": "المدينة",
+    "fr": "la médina (vieille ville)",
+    "theme": "transports",
+    "niveau": 1,
+    "prononciation": "l-mdi-na : « l » et « m » collés.",
+    "audio": "audio/transports-018.mp3",
+    "exemple": {
+      "latin": "bghit nmchi l lmdina",
+      "arabe": "بغيت نمشي للمدينة",
+      "fr": "Je veux aller à la médina",
+      "audio": "audio/transports-018-ex.mp3"
+    }
+  }
+]

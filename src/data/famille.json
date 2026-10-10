@@ -1,0 +1,306 @@
+[
+  {
+    "id": "famille-001",
+    "latin": "smiti...",
+    "arabe": "سميتي...",
+    "fr": "je m'appelle...",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "s-mi-ti : simple, comme en français.",
+    "audio": "audio/famille-001.mp3",
+    "exemple": {
+      "latin": "smiti romain",
+      "arabe": "سميتي رومان",
+      "fr": "Je m'appelle Romain",
+      "audio": "audio/famille-001-ex.mp3"
+    }
+  },
+  {
+    "id": "famille-002",
+    "latin": "chno smitek?",
+    "arabe": "شنو سميتك؟",
+    "fr": "comment tu t'appelles ?",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "ch-nou smi-tek : « ch » de « chat ».",
+    "audio": "audio/famille-002.mp3",
+    "exemple": {
+      "latin": "salam, chno smitek?",
+      "arabe": "سلام، شنو سميتك؟",
+      "fr": "Salut, comment tu t'appelles ?",
+      "audio": "audio/famille-002-ex.mp3"
+    }
+  },
+  {
+    "id": "famille-003",
+    "latin": "mnin nta?",
+    "arabe": "منين نتا؟",
+    "fr": "d'où viens-tu ? (à un homme)",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "m-nin n-ta : à une femme, on dit mnin nti ?",
+    "audio": "audio/famille-003.mp3",
+    "exemple": {
+      "latin": "mnin nta? — ana mn fransa",
+      "arabe": "منين نتا؟ — أنا من فرانسا",
+      "fr": "D'où viens-tu ? — Je viens de France",
+      "audio": "audio/famille-003-ex.mp3"
+    }
+  },
+  {
+    "id": "famille-004",
+    "latin": "ana mn fransa",
+    "arabe": "أنا من فرانسا",
+    "fr": "je viens de France",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "a-na mn fran-sa : « r » roulé.",
+    "audio": "audio/famille-004.mp3",
+    "exemple": {
+      "latin": "ana mn fransa, w nta?",
+      "arabe": "أنا من فرانسا، ونتا؟",
+      "fr": "Je viens de France, et toi ?",
+      "audio": "audio/famille-004-ex.mp3"
+    }
+  },
+  {
+    "id": "famille-005",
+    "latin": "ana",
+    "arabe": "أنا",
+    "fr": "moi, je",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "a-na : comme le prénom Anna.",
+    "audio": "audio/famille-005.mp3",
+    "exemple": {
+      "latin": "ana bikhir",
+      "arabe": "أنا بخير",
+      "fr": "Je vais bien",
+      "audio": "audio/famille-005-ex.mp3"
+    }
+  },
+  {
+    "id": "famille-006",
+    "latin": "nta / nti",
+    "arabe": "نتا / نتي",
+    "fr": "toi (homme / femme)",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "n-ta pour un homme, n-ti pour une femme.",
+    "audio": "audio/famille-006.mp3",
+    "exemple": {
+      "latin": "w nta, labas?",
+      "arabe": "ونتا، لاباس؟",
+      "fr": "Et toi, ça va ?",
+      "audio": "audio/famille-006-ex.mp3"
+    }
+  },
+  {
+    "id": "famille-007",
+    "latin": "howa / hiya",
+    "arabe": "هو / هي",
+    "fr": "lui / elle",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "ho-wa, hi-ya : « h » soufflé.",
+    "audio": "audio/famille-007.mp3",
+    "exemple": {
+      "latin": "howa khouya",
+      "arabe": "هو خويا",
+      "fr": "C'est mon frère",
+      "audio": "audio/famille-007-ex.mp3"
+    }
+  },
+  {
+    "id": "famille-008",
+    "latin": "mama",
+    "arabe": "ماما",
+    "fr": "maman",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "ma-ma : comme en français.",
+    "audio": "audio/famille-008.mp3",
+    "exemple": {
+      "latin": "mama f dar",
+      "arabe": "ماما فالدار",
+      "fr": "Maman est à la maison",
+      "audio": "audio/famille-008-ex.mp3"
+    }
+  },
+  {
+    "id": "famille-009",
+    "latin": "baba",
+    "arabe": "بابا",
+    "fr": "papa",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "ba-ba : comme en français.",
+    "audio": "audio/famille-009.mp3",
+    "exemple": {
+      "latin": "baba khdam",
+      "arabe": "بابا خدام",
+      "fr": "Papa travaille",
+      "audio": "audio/famille-009-ex.mp3"
+    }
+  },
+  {
+    "id": "famille-010",
+    "latin": "khouya",
+    "arabe": "خويا",
+    "fr": "mon frère",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "khou-ya : kh (خ) raclé comme la jota espagnole.",
+    "audio": "audio/famille-010.mp3",
+    "exemple": {
+      "latin": "hada khouya",
+      "arabe": "هادا خويا",
+      "fr": "Voici mon frère",
+      "audio": "audio/famille-010-ex.mp3"
+    }
+  },
+  {
+    "id": "famille-011",
+    "latin": "khti",
+    "arabe": "ختي",
+    "fr": "ma sœur",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "kh-ti : kh (خ) raclé, collé au « t ».",
+    "audio": "audio/famille-011.mp3",
+    "exemple": {
+      "latin": "hadi khti",
+      "arabe": "هادي ختي",
+      "fr": "Voici ma sœur",
+      "audio": "audio/famille-011-ex.mp3"
+    }
+  },
+  {
+    "id": "famille-012",
+    "latin": "mrati",
+    "arabe": "مراتي",
+    "fr": "ma femme",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "m-ra-ti : « m » collé au « r » roulé.",
+    "audio": "audio/famille-012.mp3",
+    "exemple": {
+      "latin": "hadi mrati",
+      "arabe": "هادي مراتي",
+      "fr": "Voici ma femme",
+      "audio": "audio/famille-012-ex.mp3"
+    }
+  },
+  {
+    "id": "famille-013",
+    "latin": "rajli",
+    "arabe": "راجلي",
+    "fr": "mon mari",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "raj-li : « r » roulé, « j » de « jour ».",
+    "audio": "audio/famille-013.mp3",
+    "exemple": {
+      "latin": "hada rajli",
+      "arabe": "هادا راجلي",
+      "fr": "Voici mon mari",
+      "audio": "audio/famille-013-ex.mp3"
+    }
+  },
+  {
+    "id": "famille-014",
+    "latin": "weldi",
+    "arabe": "ولدي",
+    "fr": "mon fils",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "wel-di : simple.",
+    "audio": "audio/famille-014.mp3",
+    "exemple": {
+      "latin": "weldi sghir",
+      "arabe": "ولدي صغير",
+      "fr": "Mon fils est petit",
+      "audio": "audio/famille-014-ex.mp3"
+    }
+  },
+  {
+    "id": "famille-015",
+    "latin": "benti",
+    "arabe": "بنتي",
+    "fr": "ma fille",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "ben-ti : simple.",
+    "audio": "audio/famille-015.mp3",
+    "exemple": {
+      "latin": "benti f lmadrasa",
+      "arabe": "بنتي فالمدرسة",
+      "fr": "Ma fille est à l'école",
+      "audio": "audio/famille-015-ex.mp3"
+    }
+  },
+  {
+    "id": "famille-016",
+    "latin": "l3ayla",
+    "arabe": "العايلة",
+    "fr": "la famille",
+    "theme": "famille",
+    "niveau": 2,
+    "prononciation": "l-3ay-la : 3 (ع) serré juste après le « l ».",
+    "audio": "audio/famille-016.mp3",
+    "exemple": {
+      "latin": "l3ayla dyali f fransa",
+      "arabe": "العايلة ديالي ففرانسا",
+      "fr": "Ma famille est en France",
+      "audio": "audio/famille-016-ex.mp3"
+    }
+  },
+  {
+    "id": "famille-017",
+    "latin": "sa7bi",
+    "arabe": "صاحبي",
+    "fr": "mon ami",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "sa7-bi : 7 (ح) soufflé entre « sa » et « bi ».",
+    "audio": "audio/famille-017.mp3",
+    "exemple": {
+      "latin": "hada sa7bi",
+      "arabe": "هادا صاحبي",
+      "fr": "Voici mon ami",
+      "audio": "audio/famille-017-ex.mp3"
+    }
+  },
+  {
+    "id": "famille-018",
+    "latin": "3ndi ... 3am",
+    "arabe": "عندي ... عام",
+    "fr": "j'ai ... ans",
+    "theme": "famille",
+    "niveau": 2,
+    "prononciation": "3n-di ... 3am : deux 3 (ع) serrés.",
+    "audio": "audio/famille-018.mp3",
+    "exemple": {
+      "latin": "3ndi tlatin 3am",
+      "arabe": "عندي تلاتين عام",
+      "fr": "J'ai trente ans",
+      "audio": "audio/famille-018-ex.mp3"
+    }
+  },
+  {
+    "id": "famille-019",
+    "latin": "fin kat sken?",
+    "arabe": "فين كتسكن؟",
+    "fr": "où habites-tu ?",
+    "theme": "famille",
+    "niveau": 2,
+    "prononciation": "fin kat-sken : « k » net, voyelles brèves.",
+    "audio": "audio/famille-019.mp3",
+    "exemple": {
+      "latin": "fin kat sken? — f lmdina",
+      "arabe": "فين كتسكن؟ — فالمدينة",
+      "fr": "Où habites-tu ? — Dans la médina",
+      "audio": "audio/famille-019-ex.mp3"
+    }
+  }
+]

@@ -1,0 +1,306 @@
+[
+  {
+    "id": "jours-001",
+    "latin": "lyoum",
+    "arabe": "اليوم",
+    "fr": "aujourd'hui",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "l-youm : « l » collé au « y ».",
+    "audio": "audio/jours-001.mp3",
+    "exemple": {
+      "latin": "lyoum ja l3id",
+      "arabe": "اليوم جا العيد",
+      "fr": "Aujourd'hui c'est l'Aïd",
+      "audio": "audio/jours-001-ex.mp3"
+    }
+  },
+  {
+    "id": "jours-002",
+    "latin": "ghedda",
+    "arabe": "غدا",
+    "fr": "demain",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "ghed-da : le gh (غ) est un « r » grasseyé à la parisienne.",
+    "audio": "audio/jours-002.mp3",
+    "exemple": {
+      "latin": "ntla9aw ghedda",
+      "arabe": "نتلاقاو غدا",
+      "fr": "On se voit demain",
+      "audio": "audio/jours-002-ex.mp3"
+    }
+  },
+  {
+    "id": "jours-003",
+    "latin": "lbare7",
+    "arabe": "البارح",
+    "fr": "hier",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "l-ba-re7 : finit sur le 7 (ح), un souffle chaud.",
+    "audio": "audio/jours-003.mp3",
+    "exemple": {
+      "latin": "lbare7 mchit l lmdina",
+      "arabe": "البارح مشيت للمدينة",
+      "fr": "Hier je suis allé à la médina",
+      "audio": "audio/jours-003-ex.mp3"
+    }
+  },
+  {
+    "id": "jours-004",
+    "latin": "daba",
+    "arabe": "دابا",
+    "fr": "maintenant",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "da-ba : simple.",
+    "audio": "audio/jours-004.mp3",
+    "exemple": {
+      "latin": "ji daba",
+      "arabe": "جي دابا",
+      "fr": "Viens maintenant",
+      "audio": "audio/jours-004-ex.mp3"
+    }
+  },
+  {
+    "id": "jours-005",
+    "latin": "mn b3d",
+    "arabe": "من بعد",
+    "fr": "après, plus tard",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "mn b3d : 3 (ع) serré au milieu de b3d.",
+    "audio": "audio/jours-005.mp3",
+    "exemple": {
+      "latin": "ntla9aw mn b3d",
+      "arabe": "نتلاقاو من بعد",
+      "fr": "On se voit plus tard",
+      "audio": "audio/jours-005-ex.mp3"
+    }
+  },
+  {
+    "id": "jours-006",
+    "latin": "sba7",
+    "arabe": "الصباح",
+    "fr": "le matin",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "s-ba7 : finit sur le 7 (ح) soufflé.",
+    "audio": "audio/jours-006.mp3",
+    "exemple": {
+      "latin": "f sba7 kanchreb atay",
+      "arabe": "فالصباح كنشرب أتاي",
+      "fr": "Le matin je bois du thé",
+      "audio": "audio/jours-006-ex.mp3"
+    }
+  },
+  {
+    "id": "jours-007",
+    "latin": "l3chiya",
+    "arabe": "العشية",
+    "fr": "l'après-midi",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "l-3chi-ya : 3 (ع) serré juste après le « l ».",
+    "audio": "audio/jours-007.mp3",
+    "exemple": {
+      "latin": "ntla9aw l3chiya",
+      "arabe": "نتلاقاو العشية",
+      "fr": "On se voit cet après-midi",
+      "audio": "audio/jours-007-ex.mp3"
+    }
+  },
+  {
+    "id": "jours-008",
+    "latin": "lil",
+    "arabe": "الليل",
+    "fr": "la nuit",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "lil : « i » long.",
+    "audio": "audio/jours-008.mp3",
+    "exemple": {
+      "latin": "f lil kayn lberd",
+      "arabe": "فالليل كاين البرد",
+      "fr": "La nuit, il fait froid",
+      "audio": "audio/jours-008-ex.mp3"
+    }
+  },
+  {
+    "id": "jours-009",
+    "latin": "nhar",
+    "arabe": "نهار",
+    "fr": "jour, journée",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "n-har : « h » soufflé, « r » roulé.",
+    "audio": "audio/jours-009.mp3",
+    "exemple": {
+      "latin": "nhar zwin",
+      "arabe": "نهار زوين",
+      "fr": "Une belle journée",
+      "audio": "audio/jours-009-ex.mp3"
+    }
+  },
+  {
+    "id": "jours-010",
+    "latin": "simana",
+    "arabe": "سيمانة",
+    "fr": "semaine",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "si-ma-na : vient du français « semaine ».",
+    "audio": "audio/jours-010.mp3",
+    "exemple": {
+      "latin": "simana jaya",
+      "arabe": "السيمانة الجاية",
+      "fr": "La semaine prochaine",
+      "audio": "audio/jours-010-ex.mp3"
+    }
+  },
+  {
+    "id": "jours-011",
+    "latin": "chhar",
+    "arabe": "شهر",
+    "fr": "mois",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "ch-har : « ch » de « chat » puis « h » soufflé.",
+    "audio": "audio/jours-011.mp3",
+    "exemple": {
+      "latin": "chhar f lmghrib",
+      "arabe": "شهر فالمغريب",
+      "fr": "Un mois au Maroc",
+      "audio": "audio/jours-011-ex.mp3"
+    }
+  },
+  {
+    "id": "jours-012",
+    "latin": "3am",
+    "arabe": "عام",
+    "fr": "an, année",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "3am : 3 (ع) serré au début.",
+    "audio": "audio/jours-012.mp3",
+    "exemple": {
+      "latin": "3am jdid",
+      "arabe": "عام جديد",
+      "fr": "Nouvelle année",
+      "audio": "audio/jours-012-ex.mp3"
+    }
+  },
+  {
+    "id": "jours-013",
+    "latin": "letnin",
+    "arabe": "الاتنين",
+    "fr": "lundi",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "let-nin : simple.",
+    "audio": "audio/jours-013.mp3",
+    "exemple": {
+      "latin": "nhar letnin",
+      "arabe": "نهار الاتنين",
+      "fr": "Le lundi",
+      "audio": "audio/jours-013-ex.mp3"
+    }
+  },
+  {
+    "id": "jours-014",
+    "latin": "tlat",
+    "arabe": "التلات",
+    "fr": "mardi",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "t-lat : « t » collé au « l ».",
+    "audio": "audio/jours-014.mp3",
+    "exemple": {
+      "latin": "ntla9aw nhar tlat",
+      "arabe": "نتلاقاو نهار التلات",
+      "fr": "On se voit mardi",
+      "audio": "audio/jours-014-ex.mp3"
+    }
+  },
+  {
+    "id": "jours-015",
+    "latin": "larb3",
+    "arabe": "الاربع",
+    "fr": "mercredi",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "lar-b3 : finit sur le 3 (ع) serré.",
+    "audio": "audio/jours-015.mp3",
+    "exemple": {
+      "latin": "nhar larb3",
+      "arabe": "نهار الاربع",
+      "fr": "Le mercredi",
+      "audio": "audio/jours-015-ex.mp3"
+    }
+  },
+  {
+    "id": "jours-016",
+    "latin": "lkhmis",
+    "arabe": "الخميس",
+    "fr": "jeudi",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "l-khmis : kh (خ) raclé.",
+    "audio": "audio/jours-016.mp3",
+    "exemple": {
+      "latin": "nhar lkhmis",
+      "arabe": "نهار الخميس",
+      "fr": "Le jeudi",
+      "audio": "audio/jours-016-ex.mp3"
+    }
+  },
+  {
+    "id": "jours-017",
+    "latin": "jjem3a",
+    "arabe": "الجمعة",
+    "fr": "vendredi",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "j-jem-3a : 3 (ع) serré à la fin.",
+    "audio": "audio/jours-017.mp3",
+    "exemple": {
+      "latin": "ksksou nhar jjem3a",
+      "arabe": "كسكسو نهار الجمعة",
+      "fr": "Couscous le vendredi",
+      "audio": "audio/jours-017-ex.mp3"
+    }
+  },
+  {
+    "id": "jours-018",
+    "latin": "ssebt",
+    "arabe": "السبت",
+    "fr": "samedi",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "s-sebt : « s » doublé au début.",
+    "audio": "audio/jours-018.mp3",
+    "exemple": {
+      "latin": "nhar ssebt",
+      "arabe": "نهار السبت",
+      "fr": "Le samedi",
+      "audio": "audio/jours-018-ex.mp3"
+    }
+  },
+  {
+    "id": "jours-019",
+    "latin": "l7ed",
+    "arabe": "الحد",
+    "fr": "dimanche",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "l-7ed : 7 (ح) soufflé juste après le « l ».",
+    "audio": "audio/jours-019.mp3",
+    "exemple": {
+      "latin": "nhar l7ed ma khdamch",
+      "arabe": "نهار الحد ما خدامش",
+      "fr": "Le dimanche je ne travaille pas",
+      "audio": "audio/jours-019-ex.mp3"
+    }
+  }
+]
