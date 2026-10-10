@@ -168,7 +168,7 @@ Jalon en cours : **1 — Socle**, pas commencé.
 
 ## Points en suspens
 
-- `docs/cahier-des-charges.md` n'existe pas encore dans le repo : à ajouter ou à rédiger.
+- Aucun pour l'instant.
 
 ## Mise à jour de ce fichier (obligatoire)
 
