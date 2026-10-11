@@ -1,6 +1,6 @@
 # Cahier des charges — Application d'apprentissage du darija marocain
 
-10 octobre 2026 · Romain Innocenzi
+10 octobre 2026
 
 ## Contexte et objectifs
 

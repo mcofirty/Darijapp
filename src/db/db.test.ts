@@ -22,9 +22,9 @@ describe('profil', () => {
   })
 
   it('enregistre une modification sans perdre le reste', async () => {
-    await modifierProfil({ prenom: 'Romain' }, base)
+    await modifierProfil({ prenom: 'Karim' }, base)
     await modifierProfil({ afficherArabe: false }, base)
-    expect(await lireProfil(base)).toEqual({ ...PROFIL_DEFAUT, prenom: 'Romain', afficherArabe: false })
+    expect(await lireProfil(base)).toEqual({ ...PROFIL_DEFAUT, prenom: 'Karim', afficherArabe: false })
   })
 })
 
