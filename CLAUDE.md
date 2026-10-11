@@ -139,6 +139,7 @@ Progression d'un mot (IndexedDB) :
 - Sur iPhone, le micro exige HTTPS et un geste de l'utilisateur. La lecture audio automatique ne démarre qu'après une première interaction.
 - Sur Safari, MediaRecorder produit de l'`audio/mp4` : décode l'enregistrement avec `AudioContext.decodeAudioData` avant de calculer les MFCC.
 - Tant que GitHub Pages n'est pas activé (Source « GitHub Actions »), le job `deploy` échoue avec une erreur 404 « Failed to create deployment ».
+- L'environnement cloud de Claude Code ne peut pas joindre mcofirty.github.io (proxy) : vérifier la mise en ligne par l'état du job `deploy`, pas par une requête au site.
 - Après la génération des MP3, mets à jour la liste des fichiers mis en cache par la PWA pour que l'audio marche hors ligne.
 
 ## Façon de travailler
@@ -150,11 +151,11 @@ Progression d'un mot (IndexedDB) :
 
 ## État du projet
 
-Jalon en cours : **1 — Socle**, presque terminé : les 304 MP3 sont générés ; reste la première mise en ligne, qui attend l'activation de GitHub Pages.
+Jalon en cours : **2 — Exercices**, pas commencé. Le jalon 1 est en ligne sur https://mcofirty.github.io/Darijapp/.
 
 | Jalon | Durée estimée | Contenu | Statut |
 | --- | --- | --- | --- |
-| 1. Socle | Semaine 1 | PWA, 5 onglets, script audio, 1 thème de 10 mots (fait : 8 thèmes, 152 mots) | En cours |
+| 1. Socle | Semaine 1 | PWA, 5 onglets, script audio, 1 thème de 10 mots (fait : 8 thèmes, 152 mots, 304 MP3) | Terminé |
 | 2. Exercices | Semaines 2 et 3 | Cartes, quiz, répétition espacée | À faire |
 | 3. Prononciation | Semaines 4 et 5 | Enregistrement, score sur 100, sons du darija | À faire |
 | 4. Jeu et contenu | Semaines 6 et 7 | Quêtes, séries, parcours complet, 150 mots | À faire |
@@ -188,7 +189,6 @@ Jalon en cours : **1 — Socle**, presque terminé : les 304 MP3 sont générés
 
 - Le contenu (darija, arabe, explications) a été rédigé sans relecture par un locuteur natif : signaler les erreurs pour corriger les JSON.
 - Le Dictionnaire montre tous les mots ; il devra ne montrer que les mots déjà vus quand la progression existera (jalon 2).
-- À faire par l'utilisateur : Settings → Pages → Source « GitHub Actions ». Ensuite, relancer les jobs échoués de l'Action « Publier ».
 
 ## Mise à jour de ce fichier (obligatoire)
 
