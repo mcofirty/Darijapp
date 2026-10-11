@@ -138,6 +138,7 @@ Progression d'un mot (IndexedDB) :
 - GitHub Pages sert l'appli dans un sous-dossier : il faut régler `base` dans `vite.config.ts` sur le nom du repo.
 - Sur iPhone, le micro exige HTTPS et un geste de l'utilisateur. La lecture audio automatique ne démarre qu'après une première interaction.
 - Sur Safari, MediaRecorder produit de l'`audio/mp4` : décode l'enregistrement avec `AudioContext.decodeAudioData` avant de calculer les MFCC.
+- Tant que GitHub Pages n'est pas activé (Source « GitHub Actions »), le job `deploy` échoue avec une erreur 404 « Failed to create deployment ».
 - Après la génération des MP3, mets à jour la liste des fichiers mis en cache par la PWA pour que l'audio marche hors ligne.
 
 ## Façon de travailler
@@ -149,7 +150,7 @@ Progression d'un mot (IndexedDB) :
 
 ## État du projet
 
-Jalon en cours : **1 — Socle**, presque terminé : reste à vérifier la première exécution de l'Action « Publier » (MP3 et mise en ligne).
+Jalon en cours : **1 — Socle**, presque terminé : les 304 MP3 sont générés ; reste la première mise en ligne, qui attend l'activation de GitHub Pages.
 
 | Jalon | Durée estimée | Contenu | Statut |
 | --- | --- | --- | --- |
@@ -185,10 +186,9 @@ Jalon en cours : **1 — Socle**, presque terminé : reste à vérifier la premi
 
 ## Points en suspens
 
-- MP3 pas encore générés : ils le seront par la première exécution de l'Action « Publier ». En attendant, l'appli utilise la voix arabe du téléphone.
 - Le contenu (darija, arabe, explications) a été rédigé sans relecture par un locuteur natif : signaler les erreurs pour corriger les JSON.
 - Le Dictionnaire montre tous les mots ; il devra ne montrer que les mots déjà vus quand la progression existera (jalon 2).
-- À faire par l'utilisateur : passer le repo en public, puis Settings → Pages → Source « GitHub Actions », puis relancer l'Action « Publier ».
+- À faire par l'utilisateur : Settings → Pages → Source « GitHub Actions ». Ensuite, relancer les jobs échoués de l'Action « Publier ».
 
 ## Mise à jour de ce fichier (obligatoire)
 
