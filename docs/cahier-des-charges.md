@@ -177,7 +177,7 @@ Progression d'un mot, stockée sur le téléphone :
 }
 ```
 
-Génération de l'audio : un script Python, lancé par Claude Code sur ton ordinateur, transforme l'écriture arabe de chaque mot et de chaque exemple en fichier MP3 avec le modèle de synthèse vocale arabe [facebook/mms-tts-ara](https://huggingface.co/facebook/mms-tts-ara). Les fichiers sont générés une fois, rangés dans `public/audio/` et embarqués dans l'appli.
+Génération de l'audio : un script Python, lancé automatiquement par GitHub Actions à chaque modification des mots, transforme l'écriture arabe de chaque mot et de chaque exemple en fichier MP3 avec le modèle de synthèse vocale arabe [facebook/mms-tts-ara](https://huggingface.co/facebook/mms-tts-ara). Les fichiers sont générés une fois, rangés dans `public/audio/` et embarqués dans l'appli.
 
 Cette voix est celle d'un arabe générique : elle sert de repère, et la fonction « Remplacer l'audio » permet d'y substituer une vraie voix marocaine dès que tu en as une.
 
@@ -204,7 +204,7 @@ Tout tourne sur le téléphone, sans serveur ni compte. L'audio est préparé un
   - **Script audio (Python)** : génère les MP3 une fois avec mms-tts-ara ;
   - **GitHub Pages** : sert l'appli au téléphone, publiée par Claude Code.
 
-Les écrans pilotent le moteur d'exercices, qui puise dans le contenu et transmet chaque résultat à la répétition espacée ; tout est enregistré sur l'appareil. Le script audio et la publication tournent sur ton ordinateur, lancés par Claude Code.
+Les écrans pilotent le moteur d'exercices, qui puise dans le contenu et transmet chaque résultat à la répétition espacée ; tout est enregistré sur l'appareil. Le script audio et la publication tournent sur GitHub Actions, à chaque modification poussée par Claude Code : aucun ordinateur n'est nécessaire.
 
 | Brique | Choix recommandé | Raison |
 | --- | --- | --- |
@@ -218,7 +218,7 @@ Les écrans pilotent le moteur d'exercices, qui puise dans le contenu et transme
 | Score de prononciation | Empreintes MFCC (bibliothèque Meyda) + comparaison DTW | Calcul sur le téléphone, hors ligne |
 | Rappel | Fichier .ics généré par l'appli | Rappel natif dans le Calendrier de l'iPhone |
 | Tests | Vitest | Vérifier la répétition espacée, la correction et le score |
-| Publication | GitHub Pages | Mise en ligne par Claude Code à chaque version |
+| Publication | GitHub Pages + GitHub Actions | Mise en ligne automatique à chaque modification, sans ordinateur |
 
 ## UX/UI et exigences non fonctionnelles
 

@@ -32,7 +32,7 @@ Ne modifie jamais cette section sans demande explicite.
 | Enregistrement | MediaRecorder |
 | Score de prononciation | MFCC (Meyda) + DTW, dans `src/scoring/` |
 | Tests | Vitest |
-| Publication | GitHub Pages |
+| Publication | GitHub Pages, via la GitHub Action `.github/workflows/publier.yml` |
 
 ## Commandes
 
@@ -40,11 +40,10 @@ Ne modifie jamais cette section sans demande explicite.
 npm run dev                         # serveur local (http://localhost:5173/Darijapp/)
 npm test                            # tests Vitest
 npm run build                       # build de production dans dist/
-npm run deploy                      # tests + build + publication sur la branche gh-pages
 python scripts/generate_audio.py    # génère les MP3 manquants (options --theme, --force)
 ```
 
-Le script audio demande `pip install torch transformers uroman` et ffmpeg. Il doit tourner sur un ordinateur ayant accès à Hugging Face.
+Publication : chaque push sur `main` lance la GitHub Action « Publier ». Elle génère les MP3 manquants et les commite (`github-actions[bot]`), lance les tests, construit l'appli et la publie sur https://mcofirty.github.io/Darijapp/. Pense à faire `git pull` avant de travailler, l'Action pouvant avoir ajouté des MP3. Le script audio demande `pip install torch transformers uroman` et ffmpeg, et un accès à Hugging Face (bloqué dans l'environnement cloud de Claude Code, ouvert sur GitHub Actions).
 
 ## Arborescence cible
 
@@ -150,7 +149,7 @@ Progression d'un mot (IndexedDB) :
 
 ## État du projet
 
-Jalon en cours : **1 — Socle**, presque terminé : restent la génération des MP3 et la première publication sur GitHub Pages.
+Jalon en cours : **1 — Socle**, presque terminé : reste à vérifier la première exécution de l'Action « Publier » (MP3 et mise en ligne).
 
 | Jalon | Durée estimée | Contenu | Statut |
 | --- | --- | --- | --- |
@@ -167,6 +166,7 @@ Jalon en cours : **1 — Socle**, presque terminé : restent la génération des
 | 2026-10-10 | Socle PWA : 5 onglets, en-tête, base Dexie v1, réglage « afficher l'arabe » | `src/app/`, `src/db/`, `vite.config.ts` |
 | 2026-10-10 | 152 mots en 8 thèmes avec arabe, prononciation et exemple ; fiche mot, guide des sons, dictionnaire avec recherche | `src/data/`, `src/features/mots/`, `src/features/apprendre/`, `src/features/progres/` |
 | 2026-10-10 | Script de génération audio et lecture avec repli sur la synthèse vocale du téléphone | `scripts/generate_audio.py`, `src/audio/lecteur.ts` |
+| 2026-10-11 | GitHub Action qui génère les MP3, teste, construit et publie l'appli sur GitHub Pages | `.github/workflows/publier.yml` |
 
 ## Décisions
 
@@ -179,15 +179,16 @@ Jalon en cours : **1 — Socle**, presque terminé : restent la génération des
 - 2026-10-10 : l'écriture arabe s'affiche par défaut à côté du latin (demande de l'utilisateur) ; le réglage du Profil permet de la masquer.
 - 2026-10-10 : champ `prononciation` obligatoire et `exemple.arabe` ajoutés au format des mots, pour l'explication affichée et pour la synthèse de l'exemple.
 - 2026-10-10 : sans MP3, l'appli lit l'écriture arabe avec la synthèse vocale du téléphone (voix arabe) ; la liste des MP3 présents est fixée au build (`__AUDIOS__` dans `vite.config.ts`).
-- 2026-10-10 : publication par le paquet `gh-pages` (branche `gh-pages`), sans GitHub Actions.
+- 2026-10-11 : publication et génération des MP3 par GitHub Actions, pour que tout se fasse sans ordinateur (l'utilisateur n'utilise que son iPhone).
+- 2026-10-11 : repo public, pour que GitHub Pages soit gratuit ; aucune donnée personnelle dans le repo, le prénom de l'utilisateur a été retiré des exemples.
 - 2026-10-10 : pas de routeur ; navigation par état React, suffisante pour 5 onglets.
 
 ## Points en suspens
 
-- MP3 non générés : Hugging Face est inaccessible depuis l'environnement cloud. Lancer `python scripts/generate_audio.py` sur un ordinateur, puis commiter `public/audio/`. En attendant, l'appli utilise la voix arabe du téléphone.
+- MP3 pas encore générés : ils le seront par la première exécution de l'Action « Publier ». En attendant, l'appli utilise la voix arabe du téléphone.
 - Le contenu (darija, arabe, explications) a été rédigé sans relecture par un locuteur natif : signaler les erreurs pour corriger les JSON.
 - Le Dictionnaire montre tous les mots ; il devra ne montrer que les mots déjà vus quand la progression existera (jalon 2).
-- Activer GitHub Pages (branche `gh-pages`) dans les réglages du repo après le premier `npm run deploy`.
+- À faire par l'utilisateur : passer le repo en public, puis Settings → Pages → Source « GitHub Actions », puis relancer l'Action « Publier ».
 
 ## Mise à jour de ce fichier (obligatoire)
 

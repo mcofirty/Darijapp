@@ -1,0 +1,89 @@
+# Génère les MP3 manquants, lance les tests, puis publie l'appli sur GitHub Pages.
+# Se déclenche à chaque push sur main, ou à la main depuis l'onglet Actions.
+name: Publier
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: publier
+  cancel-in-progress: false
+
+jobs:
+  audio:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      sha: ${{ steps.commit.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compter les MP3 manquants
+        id: manquants
+        run: |
+          n=$(python3 -c "import sys; sys.path.insert(0, 'scripts'); import generate_audio as g; print(len(g.lister_a_generer(None, False)))")
+          echo "nombre=$n" >> "$GITHUB_OUTPUT"
+          echo "$n fichier(s) audio à générer"
+
+      - uses: actions/setup-python@v5
+        if: steps.manquants.outputs.nombre != '0'
+        with:
+          python-version: '3.12'
+
+      - name: Installer la synthèse vocale
+        if: steps.manquants.outputs.nombre != '0'
+        run: |
+          sudo apt-get update && sudo apt-get install -y ffmpeg
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install transformers uroman
+
+      - name: Générer les MP3
+        if: steps.manquants.outputs.nombre != '0'
+        run: python scripts/generate_audio.py
+
+      - name: Enregistrer les MP3 dans le repo
+        id: commit
+        run: |
+          if [ -n "$(git status --porcelain public/audio)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add public/audio
+            git commit -m "feat: génère les MP3 manquants"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  build:
+    needs: audio
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.audio.outputs.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploiement.outputs.page_url }}
+    steps:
+      - id: deploiement
+        uses: actions/deploy-pages@v4
