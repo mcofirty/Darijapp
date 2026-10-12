@@ -2,10 +2,9 @@
 
 Modèle : facebook/mms-tts-ara (synthèse vocale arabe).
 
-Ce modèle lit du texte romanisé (uroman). Romaniser l'écriture arabe ne marche pas : elle
-n'a pas de voyelles, et « سلام » devient « slam ». On lui donne donc notre translittération
-latine (champ « latin »), qui porte les voyelles et la prononciation darija, convertie dans
-les conventions uroman (3 → ', 7 → h, 9 → q, ch → sh, ou → u).
+mms-tts-ara lit l'écriture arabe sans voyelles (champ « arabe »). Si un modèle demande du
+texte romanisé (uroman), le script lui donne notre translittération latine convertie
+(3 → ', 7 → h, 9 → q, ch → sh, ou → u), qui porte les voyelles du darija.
 
 Seuls les fichiers absents de public/audio/ sont générés, sauf avec --force.
 --apercu affiche le texte envoyé au modèle, sans rien générer.
