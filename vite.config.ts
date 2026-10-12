@@ -28,8 +28,8 @@ export default defineConfig({
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
       },
       manifest: {
-        name: 'Darija',
-        short_name: 'Darija',
+        name: 'Darijaapp',
+        short_name: 'Darijaapp',
         description: 'Apprendre le darija marocain à l\'oral',
         lang: 'fr',
         display: 'standalone',

@@ -1,4 +1,4 @@
-# Darija App
+# Darijaapp
 
 Ce fichier est la mémoire du projet. Lis-le en entier au début de chaque session et mets-le à jour à la fin de chaque tâche, en suivant les règles de la dernière section. Il doit toujours décrire le projet tel qu'il est aujourd'hui.
 
@@ -96,6 +96,8 @@ Session du jour (style Duolingo, plein écran) : jusqu'à 8 révisions dues et 5
 Exercices : Écoute et choisis, Associe les paires, Dis-le (avec score), Distingue les sons (paires comme 9elb / kelb), Quiz express (60 s).
 
 Mes mots (page cachée) : ouverte uniquement par le lien `https://mcofirty.github.io/Darijapp/#ajout`, sans entrée dans les onglets ni les menus. Formulaire à trois champs obligatoires (français, latin, arabe), validés par la translittération 3 7 9 kh gh ch ; liste de ses mots avec modification et suppression (seuls les mots ajoutés sur l'appareil, jamais ceux du programme), puis liste en lecture seule des mots du programme ; icône d'envoi sur chaque mot ajouté (feuille de partage de l'iPhone, sinon copie du lien), donc après l'avoir vu et corrigé, qui produit un lien `…/Darijapp/#mot=[latin, arabe, français]` : l'ouvrir affiche le mot et ne l'ajoute qu'après confirmation (jamais deux fois) ; pas de bouton de retour vers l'appli ; un message d'accueil s'adresse à la personne qui ajoute les mots (demande de l'utilisateur, prénoms visibles dans le repo public). Les mots ajoutés passent en tête des nouveaux mots des sessions, entrent dans la répétition espacée, le dictionnaire et les leurres, et sont lus par la synthèse vocale. Ils restent sur l'appareil.
+
+Aide à l'installation : à chaque ouverture dans Safari sur iPhone ou iPad (jamais dans l'appli installée, ni sur Android ou ordinateur, ni sur `#ajout` et `#mot=`), une feuille en verre monte du bas : logo, « Ajoute Darijaapp à ton écran d'accueil », 4 étapes (Partager, ou « ⋯ » d'abord sur iOS 26 ; « Sur l'écran d'accueil » ; « Ajouter » ; ouvrir depuis l'icône), bulle ronde « Ne plus afficher » et bouton « Compris ». Sans la bulle cochée, elle revient à l'ouverture suivante.
 
 Fonctions complémentaires : premier lancement guidé, remplacer l'audio d'un mot, signaler un mot, mots difficiles, favoris, mode écoute, rappel en fichier .ics, mode sans micro.
 
@@ -213,6 +215,7 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 | 2026-10-12 | Page cachée « Mes mots » (`#ajout`) : ajout, modification et suppression de mots (français, latin, arabe), intégrés aux sessions, au dictionnaire et à la répétition espacée ; base v3 | `src/features/ajout/`, `src/db/motsPerso.ts`, `src/data/motsPerso.ts`, `src/app/App.tsx` |
 | 2026-10-12 | Partage d'un mot par lien (`#mot=`) depuis Mes mots, avec écran de confirmation à l'ouverture | `src/features/ajout/Proposition.tsx`, `src/data/motsPerso.ts`, `src/app/App.tsx` |
 | 2026-10-12 | Session du jour style Duolingo en écran d'accueil : découverte, Écoute et choisis, Traduis, Associe les paires, bilan ; répétition espacée, XP, niveaux, série ; base v2 | `src/features/session/`, `src/exercices/`, `src/srs/`, `src/gamification/`, `src/db/apprentissage.ts` |
+| 2026-10-12 | Nom « Darijaapp » (icône d'écran d'accueil, titre) et feuille d'aide à l'installation sur l'écran d'accueil avec « Ne plus afficher » | `src/features/onboarding/AideInstallation.tsx`, `src/app/installation.ts`, `vite.config.ts`, `index.html` |
 | 2026-10-12 | Contrôles segmentés (Progrès, Profil) en capsule avec curseur en verre au repos | `src/ui/Boutons.tsx`, `src/index.css` |
 | 2026-10-12 | Liquid Glass d'iOS 26 sur toutes les commandes : bouton retour rond, bord de défilement flou, session et bilan, alertes en verre, recherche collante, goutte de verre du contrôle segmenté et de l'interrupteur | `src/ui/`, `src/index.css`, `src/features/session/`, `src/features/progres/Dictionnaire.tsx` |
 | 2026-10-12 | Barre d'onglets flottante « liquid glass » avec glissement du doigt, et balayage de page entre onglets | `src/app/BarreOnglets.tsx`, `src/app/glisser.ts`, `src/app/icones.tsx` |
@@ -244,6 +247,8 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 - 2026-10-12 : réglage d'apparence stocké dans le profil Dexie (`apparence`), copié dans localStorage uniquement pour l'appliquer avant le premier affichage (sans flash) ; Dexie reste la référence.
 - 2026-10-12 : refonte complète selon les règles d'Apple (demande de l'utilisateur) : Liquid Glass limité à la couche de commandes, fond système gris au lieu du fond coloré, listes groupées, grands titres ; l'en-tête niveau/XP/série devient une section de l'accueil et du tableau de bord Progrès.
 - 2026-10-12 : barre de navigation façon iOS 26 (demande de l'utilisateur, « Liquid Glass sur chaque menu ») : bouton retour réduit au chevron dans un rond en verre, sans le nom de la page précédente (gardé pour VoiceOver) ; la barre compacte n'est plus une bande de verre mais un bord de défilement flou.
+- 2026-10-12 : l'appli s'appelle « Darijaapp » (demande de l'utilisateur) : nom du manifeste, nom sous l'icône (`apple-mobile-web-app-title`) et titre de la page. L'adresse reste …/Darijapp/ (nom du repo).
+- 2026-10-12 : « Ne plus afficher » de l'aide à l'installation stocké dans le profil Dexie (`masquerAideInstallation`, champ non indexé, sans migration) ; l'aide attend la lecture du profil pour ne pas clignoter.
 - 2026-10-12 : alertes de l'appli (composant `Alerte`, rendu dans `document.body`) au lieu de `window.confirm`, qui affiche une boîte Safari impossible à styler.
 - 2026-10-12 : icônes Lucide au lieu des SF Symbols, dont la licence réserve l'usage aux applis natives Apple.
 - 2026-10-12 : le code SwiftUI d'Apple (`glassEffect`) ne s'applique qu'aux applis natives ; l'appli reste une PWA et reproduit le liquid glass en CSS. Pas de réfraction (filtres SVG dans `backdrop-filter` non pris en charge par Safari).
@@ -257,6 +262,7 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 - Voix : edge-tts est bloqué (403), les sons viennent du secours mms-tts-ara, qui prononce mal le darija. Seule voie officielle vers la voix marocaine Jamal : Azure Speech (offre gratuite, compte Azure et clé en secret GitHub), à proposer à l'utilisateur.
 - Le contenu a été relu et corrigé par Claude (cohérence latin/arabe, tournures), mais pas par un locuteur natif : signaler les erreurs pour corriger les JSON. Quand l'arabe d'un mot change, supprimer son MP3 pour que l'Action le régénère.
 - Le Dictionnaire montre tous les mots, avec un ✓ sur ceux déjà vus (le cahier des charges ne prévoyait que les mots vus).
+- Sur iPhone, l'appli installée sur l'écran d'accueil a sa propre mémoire, séparée de Safari (non vérifié sur appareil) : la progression faite dans Safari ne suit pas, et un lien `#mot=…` ouvert dans Safari ajoute sans doute le mot à Safari, pas à l'appli installée. À vérifier, puis prévoir un contournement (copier le lien et l'ouvrir dans l'appli, ou export/import).
 - Mes mots : pas de sauvegarde tant que l'export/import du Profil n'existe pas (effacer les données du site efface les mots ajoutés). Pas de prononciation ni d'exemple pour ces mots.
 - Onglet Quiz (5 questions) et Quiz express (60 s) : à faire pour finir le jalon 2, en réutilisant `src/exercices/`.
 

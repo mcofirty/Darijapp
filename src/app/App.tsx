@@ -4,6 +4,7 @@ import { motDuLien } from '../data/motsPerso'
 import { AjoutMots } from '../features/ajout/AjoutMots'
 import { Proposition } from '../features/ajout/Proposition'
 import { Apprendre } from '../features/apprendre/Apprendre'
+import { AideInstallation } from '../features/onboarding/AideInstallation'
 import { Parcours } from '../features/parcours/Parcours'
 import { Profil } from '../features/profil/Profil'
 import { Progres } from '../features/progres/Progres'
@@ -107,6 +108,7 @@ export default function App() {
         {onglet === 'profil' && <Profil />}
       </main>
       <BarreOnglets actif={onglet} onChange={changer} />
+      <AideInstallation />
     </div>
   )
 }

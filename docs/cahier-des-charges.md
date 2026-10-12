@@ -50,6 +50,7 @@ Ces fonctions complètent les écrans et se codent entièrement dans l'appli.
 | Fonctionnalité | Ce qu'elle fait | Où |
 | --- | --- | --- |
 | Premier lancement | Prénom, genre, objectif quotidien (5, 10 ou 15 min), autorisation du micro, guide d'installation sur l'écran d'accueil (Partager, puis « Sur l'écran d'accueil »), test des 5 sons clés | Premier démarrage |
+| Aide à l'installation | Fenêtre qui explique comment ajouter Darijaapp à l'écran d'accueil (Partager, « Sur l'écran d'accueil », « Ajouter »), avec une case « Ne plus afficher » | À chaque ouverture dans Safari sur iPhone ou iPad, jusqu'à ce que la case soit cochée ; jamais dans l'appli installée |
 | Mes mots | Ajouter un mot entendu au Maroc (latin, français, arabe facultatif), avec l'audio de la synthèse vocale du téléphone ou ton enregistrement | Dictionnaire |
 | Remplacer l'audio | Enregistrer ou importer un fichier pour remplacer l'audio d'un mot, par exemple le message vocal d'un ami | Fiche mot |
 | Signaler un mot | Marquer une traduction ou une translittération douteuse ; la liste s'exporte pour corriger le fichier JSON avec Claude Code | Fiche mot |

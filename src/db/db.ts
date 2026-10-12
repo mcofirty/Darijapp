@@ -18,6 +18,8 @@ export interface Profil {
   genre: 'm' | 'f' | null
   afficherArabe: boolean
   apparence: Apparence
+  /** « Ne plus afficher » coché sous l'aide à l'installation sur l'écran d'accueil. */
+  masquerAideInstallation: boolean
 }
 
 /** Apparence de l'appli : suit l'iPhone, ou forcée en clair ou en sombre. */
@@ -49,6 +51,7 @@ export const PROFIL_DEFAUT: Profil = {
   genre: null,
   afficherArabe: true,
   apparence: 'systeme',
+  masquerAideInstallation: false,
 }
 
 export class DarijaDB extends Dexie {
