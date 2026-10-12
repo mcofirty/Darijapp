@@ -1,4 +1,4 @@
-import { Flame } from 'lucide-react'
+import { Flame, Headphones } from 'lucide-react'
 import { useState } from 'react'
 import { motsDuTheme } from '../../data'
 import { SONS } from '../../data/sons'
@@ -8,6 +8,7 @@ import { useResume } from '../../db/useResume'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
 import { VISUELS_THEMES, VISUEL_SONS } from '../../ui/visuels'
+import { ModeEcoute } from '../ecoute/ModeEcoute'
 import { FicheMot } from '../mots/FicheMot'
 import { ListeMots } from '../mots/ListeMots'
 import { CarteSessionDuJour } from '../session/CarteSessionDuJour'
@@ -15,7 +16,7 @@ import { preparerSession, type SessionPrete } from '../session/lancer'
 import { Session } from '../session/Session'
 import { GuideSons } from './GuideSons'
 
-type Vue = { type: 'accueil' } | { type: 'sons' } | { type: 'theme'; themeId: string }
+type Vue = { type: 'accueil' } | { type: 'sons' } | { type: 'ecoute' } | { type: 'theme'; themeId: string }
 
 /** Pastille de série, à droite du grand titre. */
 function Serie() {
@@ -63,6 +64,7 @@ export function Apprendre() {
   }
 
   if (vue.type === 'sons') return <GuideSons onRetour={() => setVue({ type: 'accueil' })} />
+  if (vue.type === 'ecoute') return <ModeEcoute onRetour={() => setVue({ type: 'accueil' })} />
 
   return (
     <Page titre="Apprendre" accessoire={<Serie />}>
@@ -90,6 +92,13 @@ export function Apprendre() {
       </Section>
 
       <Section titre="Explorer">
+        <Ligne
+          tuile={<Tuile icone={Headphones} couleur="#ff3b30" />}
+          titre="Mode écoute"
+          sousTitre="Tes mots à voix haute, mains libres"
+          chevron
+          onClick={() => ouvrir({ type: 'ecoute' })}
+        />
         <Ligne
           tuile={<Tuile {...VISUEL_SONS} />}
           titre="Les sons du darija"

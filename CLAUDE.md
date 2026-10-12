@@ -54,7 +54,8 @@ src/
   features/
     mots/         fiche d'un mot, liste de mots, bouton audio (partagés)
     session/      session du jour : carte d'accueil, étapes, retour, bilan
-    apprendre/    accueil (session du jour, guide des sons, thèmes), puis mots difficiles, mode écoute
+    apprendre/    accueil (session du jour, guide des sons, thèmes), puis mots difficiles
+    ecoute/       mode écoute mains libres (choix, lecteur)
     parcours/     chemin de leçons, trésors, trophées
     quiz/         quiz de 5 questions, 5 types d'exercices
     progres/      tableau de bord, quêtes, série, statistiques, dictionnaire
@@ -78,7 +79,7 @@ docs/
 
 | Onglet | Contenu |
 | --- | --- |
-| Apprendre | Écran d'accueil. Grand titre avec la série (flamme). Carte « Session du jour » (nouveaux mots, révisions, mots vus, « Commencer » puis « Encore une session », sans limite), section « Ma progression » (niveau, XP), puis « Explorer » : guide des sons et 31 thèmes en liste groupée, fiches mots |
+| Apprendre | Écran d'accueil. Grand titre avec la série (flamme). Carte « Session du jour » (nouveaux mots, révisions, mots vus, « Commencer » puis « Encore une session », sans limite), section « Ma progression » (niveau, XP), puis « Explorer » : mode écoute, guide des sons et 31 thèmes en liste groupée, fiches mots |
 | Parcours | Leçons groupées par niveau (niveau 1 « Les bases »), prochaine leçon mise en avant, nœuds Trésor, trophées |
 | Quiz | Trois cartes. « Contrôle tes acquis » : quiz de 5 questions (Écoute et choisis, Traduis, une Distingue les sons et une Associe les paires, jamais en premier) sur les mots les moins sus (boîte, échecs, retard), complétés par le début du programme ; aucune question refaite ; bilan « x sur 5 », « Sans faute ! ». « Quiz express » : 60 s, questions enchaînées sans « Continuer » (réponse affichée 0,45 s), chrono qui rougit à 10 s, score, record gardé dans le profil. « Chasse aux sons » : même chrono avec des questions Distingue les sons, combo (dès la 5e bonne réponse d'affilée, chacune vaut 2 points), record en points. Quiz, Quiz express et Chasse aux sons donnent de l'XP et comptent pour la série, sans toucher à la répétition espacée |
 | Progrès | Contrôle segmenté Tableau de bord / Dictionnaire. Tableau : niveau et XP restants, XP total, XP du jour, série, sessions du jour, mots vus (quêtes, coffre et statistiques au jalon 4). Dictionnaire : recherche iOS, tous les mots avec ✓ sur ceux déjà vus |
@@ -99,6 +100,8 @@ Mes mots (page cachée) : ouverte uniquement par le lien `https://mcofirty.githu
 Aide à l'installation : à chaque ouverture dans Safari sur iPhone ou iPad (jamais dans l'appli installée, ni sur Android ou ordinateur, ni sur `#ajout` et `#mot=`), une feuille en verre monte du bas : logo, « Ajoute Darijaapp à ton écran d'accueil », phrase mise en avant « L'ajout à l'écran d'accueil enregistre ta progression. Dans Safari, elle peut être effacée. » (Safari efface les données d'un site non installé après 7 jours sans visite), 4 étapes (Partager, ou « ⋯ » d'abord sur iOS 26 ; « Sur l'écran d'accueil » ; « Ajouter » ; ouvrir depuis l'icône), bulle ronde « Ne plus afficher » et bouton « Compris ». Sans la bulle cochée, elle revient à l'ouverture suivante.
 
 Animation d'ouverture : à chaque lancement à froid (pas sur `#ajout` ni `#mot=`), la vidéo de l'utilisateur (`public/lancement.mp4`, 3 s, sombre, sans son : logo, « Darija », « Le marocain, à l'oral d'abord. », « Projet indépendant réalisé par Romain Innocenzi ») joue en plein écran sur fond #0d0c0f, puis s'efface en fondu sur l'appli ; un toucher la passe ; avec Réduire les animations, ou si la vidéo ne démarre pas en 2 s (mode Économie d'énergie), l'image finale s'affiche 1 s. L'aide à l'installation attend sa fin.
+
+Mode écoute (Apprendre > Explorer) : réglages « Répéter le darija au ralenti » et « Traduction en français » ; listes « À revoir en priorité » (30 mots vus les moins sus), « Tous mes mots vus », ou un thème, avec nombre de mots et durée ; lecteur plein écran : darija, 1,8 s pour le répéter, darija à 0,75×, français (voix française du téléphone), mot suivant ; précédent, pause, suivant ; écran gardé allumé (Wake Lock) ; titre du mot et commandes sur l'écran verrouillé quand iOS les propose (Media Session). Ne compte ni XP ni série.
 
 Fonctions complémentaires : premier lancement guidé, remplacer l'audio d'un mot, signaler un mot, mots difficiles, favoris, mode écoute, rappel en fichier .ics, mode sans micro.
 
@@ -185,6 +188,7 @@ Progression d'un mot (IndexedDB) :
 - `opacity` sur un élément `.verre` (ex. `.pressable:active`) en fait une racine d'arrière-plan : le verre devient opaque pendant l'appui. Les commandes en verre grossissent au toucher, sans opacité.
 - Le Chromium de Playwright ne lit pas le H.264 (erreur 4 sur `lancement.mp4`) : pour tester la lecture de la vidéo d'ouverture, servir une copie en VP9 (`ffmpeg -c:v libvpx-vp9`), sans la commiter.
 - Un commit poussé par l'Action (`GITHUB_TOKEN`, `github-actions[bot]`) ne déclenche aucun workflow `push` : « Publier » est relancée par `workflow_run` à la fin d'« Audio ». Les deux Actions font un checkout de `main` et non du commit déclencheur, qui n'a pas les MP3 ajoutés entre-temps par le bot.
+- Safari n'envoie pas toujours l'événement de fin de `speechSynthesis` : `parler()` (`src/audio/lecteur.ts`) a un délai de secours selon la longueur du texte, sans quoi le mode écoute resterait bloqué.
 - Après la génération des MP3, mets à jour la liste des fichiers mis en cache par la PWA pour que l'audio marche hors ligne.
 
 ## Façon de travailler
@@ -227,6 +231,7 @@ Jalon en cours : **3 — Prononciation** (Distingue les sons, mode écoute, puis
 | 2026-10-12 | Mise en ligne en 2 min, séparée de la génération audio ; Dictionnaire affiché progressivement | `.github/workflows/publier.yml`, `.github/workflows/audio.yml`, `src/features/mots/ListeMots.tsx` |
 | 2026-10-13 | Onglet Quiz : quiz de 5 questions sur les mots les moins sus et Quiz express de 60 s avec record | `src/features/quiz/`, `src/exercices/quiz.ts`, `src/db/apprentissage.ts`, `src/features/session/` |
 | 2026-10-13 | Distingue les sons : 14 paires (9elb / kelb…) avec voix Jamal, une question par session et par quiz, et mini-jeu Chasse aux sons avec combo et record | `src/data/sons/paires.json`, `src/data/pairesSons.ts`, `src/features/session/Distingue.tsx`, `src/features/quiz/Chrono.tsx`, `src/exercices/` |
+| 2026-10-13 | Mode écoute mains libres : darija, temps pour répéter, darija ralenti, français, sur ses mots à revoir ou un thème | `src/features/ecoute/`, `src/exercices/ecoute.ts`, `src/audio/lecteur.ts` |
 | 2026-10-12 | Animation d'ouverture : vidéo de 3 s de l'utilisateur sur fond sombre à chaque lancement, passée d'un toucher, image finale avec Réduire les animations ou si la vidéo ne démarre pas | `public/lancement.mp4`, `public/lancement-fin.jpg`, `src/app/lancement.ts`, `index.html` |
 
 ## Décisions
@@ -241,17 +246,14 @@ Jalon en cours : **3 — Prononciation** (Distingue les sons, mode écoute, puis
 - 2026-10-10 : sans MP3, l'appli lit l'écriture arabe avec la synthèse vocale du téléphone (voix arabe) ; la liste des MP3 présents est fixée au build (`__AUDIOS__` dans `vite.config.ts`).
 - 2026-10-11 : publication et génération des MP3 par GitHub Actions, pour que tout se fasse sans ordinateur (l'utilisateur n'utilise que son iPhone).
 - 2026-10-11 : repo public, pour que GitHub Pages soit gratuit ; aucune donnée personnelle dans le repo, le prénom de l'utilisateur a été retiré des exemples.
-- 2026-10-12 : effet « liquid glass » fait en CSS (backdrop-filter, transition élastique) et en Pointer Events, sans bibliothèque d'animation, pour rester léger et fluide sur iPhone ; désactivé avec « Réduire les animations ».
+- 2026-10-12 : design d'Apple en PWA (demandes de l'utilisateur) : Liquid Glass en CSS (deux couches `backdrop-filter` en pseudo-éléments, liseré et dispersion en ombres internes, Pointer Events, sans bibliothèque ; Safari n'accepte pas de filtre SVG dans `backdrop-filter`, donc pas de vraie réfraction, et `glassEffect` de SwiftUI ne vaut que pour les applis natives), réservé aux commandes ; fond système gris, listes groupées, grands titres ; retour réduit à un chevron dans un rond en verre (nom de la page précédente gardé pour VoiceOver) ; bord de défilement flou ; icônes Lucide (licence des SF Symbols réservée aux applis Apple) ; animations coupées avec « Réduire les animations ».
 - 2026-10-12 : nouveaux mots illimités (demande de l'utilisateur) : 5 par session, autant de sessions que voulu ; pas de cœurs ni de blocage.
 - 2026-10-12 : la session du jour remplace les « 5 cartes du jour » du cahier des charges ; les exercices Dis-le et Distingue les sons y entreront au jalon 3.
 - 2026-10-12 : les réponses ne sont enregistrées qu'en fin de session ; quitter en cours de route ne change rien, pour garder la répétition espacée cohérente.
 - 2026-10-12 : la série est calculée à partir de l'historique des sessions (table `sessions`), sans compteur stocké, pour qu'elle ne puisse pas se désynchroniser.
 - 2026-10-12 : sons de retour synthétisés par Web Audio, sans fichier à télécharger.
-- 2026-10-12 : Safari ne déforme pas l'arrière-plan (pas de filtre SVG dans `backdrop-filter`) : le Liquid Glass est imité par deux couches `backdrop-filter` en pseudo-éléments (centre et bords), liseré et dispersion en ombres internes. Pas de vraie réfraction sur iPhone en web.
 - 2026-10-12 : couleurs principales du drapeau marocain (demande de l'utilisateur), à la place de l'orange ; erreurs en rouge et réussites en vert restent lisibles car toujours accompagnées d'une icône (croix, coche).
 - 2026-10-12 : réglage d'apparence stocké dans le profil Dexie (`apparence`), copié dans localStorage uniquement pour l'appliquer avant le premier affichage (sans flash) ; Dexie reste la référence.
-- 2026-10-12 : refonte complète selon les règles d'Apple (demande de l'utilisateur) : Liquid Glass limité à la couche de commandes, fond système gris au lieu du fond coloré, listes groupées, grands titres ; l'en-tête niveau/XP/série devient une section de l'accueil et du tableau de bord Progrès.
-- 2026-10-12 : barre de navigation façon iOS 26 (demande de l'utilisateur, « Liquid Glass sur chaque menu ») : bouton retour réduit au chevron dans un rond en verre, sans le nom de la page précédente (gardé pour VoiceOver) ; la barre compacte n'est plus une bande de verre mais un bord de défilement flou.
 - 2026-10-12 : import du fichier de 1 739 entrées (demande de l'utilisateur) : les 130 mots déjà présents (même latin ou simple variante d'orthographe, comme mr7ba/mar7ba) gardent leur version, avec MP3 et progression ; les doublons du fichier sont fusionnés (sens réunis par « / ») ; les thèmes du fichier qui recoupent un thème existant le complètent, les autres deviennent 23 thèmes ajoutés après les 8 premiers ; niveau 1, 2 ou 3 selon le numéro du thème (1-10, 11-21, 22-31) ; première lettre du français en minuscule comme le reste du programme.
 - 2026-10-12 : retour à de vrais MP3, voix Jamal par l'API officielle Azure Speech (demande de l'utilisateur, qui a créé le compte et les secrets) : edge-tts était bloqué (403) et les voix iPhone / mms lisent de l'arabe standard. Écart assumé à « aucune clé d'API » : la clé ne sert que dans l'Action, jamais dans l'appli ni le repo. Offre F0 : 500 000 caractères par mois (le programme en pèse 13 000) et 20 requêtes par minute, d'où un fichier toutes les 3,2 s et une première génération d'environ 1h30 ; l'Action est prévue pour reprendre où elle s'est arrêtée.
 - 2026-10-12 : MP3 hors du précache de la PWA (cache à l'exécution `CacheFirst` avec `rangeRequests`, indispensable à Safari pour lire l'audio depuis le cache) : le premier chargement reste léger, chaque mot écouté une fois marche ensuite hors ligne. Un mot jamais écouté hors ligne retombe sur la voix de l'iPhone.
@@ -259,8 +261,6 @@ Jalon en cours : **3 — Prononciation** (Distingue les sons, mode écoute, puis
 - 2026-10-12 : l'appli s'appelle « Darijaapp » (demande de l'utilisateur) : nom du manifeste, nom sous l'icône (`apple-mobile-web-app-title`) et titre de la page. L'adresse reste …/Darijapp/ (nom du repo).
 - 2026-10-12 : « Ne plus afficher » de l'aide à l'installation stocké dans le profil Dexie (`masquerAideInstallation`, champ non indexé, sans migration) ; l'aide attend la lecture du profil pour ne pas clignoter.
 - 2026-10-12 : alertes de l'appli (composant `Alerte`, rendu dans `document.body`) au lieu de `window.confirm`, qui affiche une boîte Safari impossible à styler.
-- 2026-10-12 : icônes Lucide au lieu des SF Symbols, dont la licence réserve l'usage aux applis natives Apple.
-- 2026-10-12 : le code SwiftUI d'Apple (`glassEffect`) ne s'applique qu'aux applis natives ; l'appli reste une PWA et reproduit le liquid glass en CSS. Pas de réfraction (filtres SVG dans `backdrop-filter` non pris en charge par Safari).
 - 2026-10-12 : « Mes mots » n'est joignable que par le lien `#ajout` (hash lu dans `App.tsx`, sans routeur ni onglet) : caché, pas protégé, le repo étant public ; les mots restent sur l'appareil (pas de synchronisation sans serveur).
 - 2026-10-12 : les mots ajoutés ont leurs trois champs obligatoires et sont lus par la synthèse vocale ; ils passent avant le programme dans `tousLesMots()`. Le programme reste `MOTS` (JSON statique) ; la logique asynchrone et les écrans lisent `tousLesMots()` / `useMots()`.
 - 2026-10-12 : les mots d'une autre personne arrivent par un lien partagé (feuille de partage iOS) plutôt que par GitHub : un jeton d'écriture serait public, et un serveur contredit le 100 % local. Le lien contient le mot, rien n'est stocké en ligne ; l'ajout exige une confirmation et un mot valide (translittération vérifiée).
@@ -271,6 +271,7 @@ Jalon en cours : **3 — Prononciation** (Distingue les sons, mode écoute, puis
 - 2026-10-12 : listes de mots affichées par tranches (60, puis 120 à l'approche du bas, `IntersectionObserver`) au lieu des 1 682 lignes d'un coup.
 - 2026-10-13 : le Quiz contrôle sans réviser : il n'écrit pas dans la répétition espacée (des mots jamais vus peuvent le compléter) mais compte pour l'XP et la série ; il se compte par question, les paires justes seulement sans aucune erreur. Record du Quiz express dans le profil (`recordExpress`, champ non indexé, sans migration).
 - 2026-10-13 : les mots des paires de sons sont à part du programme (fichier hors des thèmes, ids `son-…`) et ne passent jamais par la répétition espacée (`Resultats.compter`) : ce sont des exemples d'écoute, pas du vocabulaire à apprendre. Record de la Chasse aux sons dans le profil (`recordSons`).
+- 2026-10-13 : mode écoute avec l'écran gardé allumé (Wake Lock) plutôt qu'en arrière-plan : la synthèse vocale de l'iPhone (voix de secours et français) s'arrête quand l'écran se verrouille.
 - 2026-10-10 : pas de routeur ; navigation par état React, suffisante pour 5 onglets.
 
 ## Points en suspens
@@ -279,6 +280,7 @@ Jalon en cours : **3 — Prononciation** (Distingue les sons, mode écoute, puis
 - Score de prononciation (jalon 3) : les MP3 Jamal serviront de référence (MFCC + DTW) ; envisagé : ajouter la voix féminine Mouna (`ar-MA-MounaNeural`) et garder la meilleure des deux notes. Enregistrement et auto-évaluation à construire.
 - Le contenu a été relu et corrigé par Claude (cohérence latin/arabe, tournures), mais pas par un locuteur natif : signaler les erreurs pour corriger les JSON. L'arabe des 1 530 mots importés a été écrit par Claude d'après le latin et le français, sans relecture.
 - Mots importés : pas d'explication de prononciation ni d'exemple (la fiche montre seulement les sons 3, 7, 9, kh, gh, ch).
+- Mode écoute : vérifier sur iPhone que la lecture continue écran allumé, et si les commandes de l'écran verrouillé apparaissent.
 - Le Dictionnaire montre tous les mots, avec un ✓ sur ceux déjà vus (le cahier des charges ne prévoyait que les mots vus).
 - Sur iPhone, l'appli installée sur l'écran d'accueil a sa propre mémoire, séparée de Safari (non vérifié sur appareil) : la progression faite dans Safari ne suit pas, et un lien `#mot=…` ouvert dans Safari ajoute sans doute le mot à Safari, pas à l'appli installée. À vérifier, puis prévoir un contournement (copier le lien et l'ouvrir dans l'appli, ou export/import).
 - Mes mots : pas de sauvegarde tant que l'export/import du Profil n'existe pas (effacer les données du site efface les mots ajoutés). Pas de prononciation ni d'exemple pour ces mots.

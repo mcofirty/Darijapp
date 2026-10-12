@@ -12,16 +12,38 @@ function voixArabe(): SpeechSynthesisVoice | undefined {
   return voix.find((v) => v.lang === 'ar-MA') ?? voix.find((v) => v.lang.startsWith('ar'))
 }
 
-function parlerArabe(texte: string, vitesse: number): void {
-  if (!('speechSynthesis' in window)) return
+/**
+ * Lit un texte avec la synthèse vocale du téléphone ; `fin` est appelée une fois la lecture finie.
+ * Safari oublie parfois l'événement de fin : un délai de secours, selon la longueur du texte, le remplace.
+ */
+function parler(texte: string, langue: string, voix: SpeechSynthesisVoice | undefined, vitesse: number, fin?: () => void): void {
+  if (!('speechSynthesis' in window)) {
+    fin?.()
+    return
+  }
   const synthese = window.speechSynthesis
   synthese.cancel()
   const enonce = new SpeechSynthesisUtterance(texte)
-  enonce.lang = 'ar-MA'
-  const voix = voixArabe()
+  enonce.lang = langue
   if (voix) enonce.voice = voix
   enonce.rate = vitesse
+  if (fin) {
+    let appelee = false
+    const finir = () => {
+      if (appelee) return
+      appelee = true
+      window.clearTimeout(secours)
+      fin()
+    }
+    const secours = window.setTimeout(finir, 2500 + (texte.length * 120) / vitesse)
+    enonce.onend = finir
+    enonce.onerror = finir
+  }
   synthese.speak(enonce)
+}
+
+function parlerArabe(texte: string, vitesse: number, fin?: () => void): void {
+  parler(texte, 'ar-MA', voixArabe(), vitesse, fin)
 }
 
 /**
@@ -35,7 +57,48 @@ export function jouer(chemin: string, texteArabe: string, vitesse = 1): void {
   }
   element ??= new Audio()
   element.pause()
+  element.onended = null
+  element.onerror = null
   element.src = import.meta.env.BASE_URL + chemin
   element.playbackRate = vitesse
   element.play().catch(() => parlerArabe(texteArabe, vitesse))
+}
+
+/** Comme `jouer`, mais attend la fin de la lecture (mode écoute). */
+export function lireEtAttendre(chemin: string, texteArabe: string, vitesse = 1): Promise<void> {
+  return new Promise((resolve) => {
+    if (!audioDisponible(chemin)) {
+      parlerArabe(texteArabe, vitesse, resolve)
+      return
+    }
+    element ??= new Audio()
+    const audio = element
+    audio.pause()
+    audio.src = import.meta.env.BASE_URL + chemin
+    audio.playbackRate = vitesse
+    const repli = () => parlerArabe(texteArabe, vitesse, resolve)
+    audio.onended = () => resolve()
+    audio.onerror = repli
+    audio.play().catch(repli)
+  })
+}
+
+function voixFrancaise(): SpeechSynthesisVoice | undefined {
+  const voix = window.speechSynthesis.getVoices()
+  return voix.find((v) => v.lang === 'fr-FR') ?? voix.find((v) => v.lang.startsWith('fr'))
+}
+
+/** Lit la traduction avec la voix française du téléphone, et attend la fin. */
+export function parlerFrancais(texte: string): Promise<void> {
+  return new Promise((resolve) => parler(texte, 'fr-FR', 'speechSynthesis' in window ? voixFrancaise() : undefined, 1, resolve))
+}
+
+/** Arrête toute lecture en cours (MP3 et synthèse vocale). */
+export function arreterLecture(): void {
+  if (element) {
+    element.onended = null
+    element.onerror = null
+    element.pause()
+  }
+  if ('speechSynthesis' in window) window.speechSynthesis.cancel()
 }
