@@ -26,7 +26,7 @@ export function FicheMot({ mot, onRetour }: Props) {
         ← Retour
       </button>
 
-      <div className="rounded-3xl bg-white p-6 text-center shadow-sm dark:bg-stone-900">
+      <div className="rounded-3xl p-6 text-center verre">
         <p className="text-4xl font-bold">{mot.latin}</p>
         {afficherArabe && (
           <p className="arabe mt-3 text-4xl text-stone-600 dark:text-stone-300" dir="rtl" lang="ar">
@@ -40,7 +40,7 @@ export function FicheMot({ mot, onRetour }: Props) {
         </div>
       </div>
 
-      <section className="rounded-3xl bg-white p-5 shadow-sm dark:bg-stone-900">
+      <section className="rounded-3xl p-5 verre">
         <h3 className="font-semibold">Prononciation</h3>
         <p className="mt-2 text-stone-700 dark:text-stone-300">{mot.prononciation}</p>
         {sons.length > 0 && (
@@ -58,7 +58,7 @@ export function FicheMot({ mot, onRetour }: Props) {
         )}
       </section>
 
-      <section className="rounded-3xl bg-white p-5 shadow-sm dark:bg-stone-900">
+      <section className="rounded-3xl p-5 verre">
         <h3 className="font-semibold">Exemple</h3>
         <p className="mt-2 text-lg font-semibold">{mot.exemple.latin}</p>
         {afficherArabe && (

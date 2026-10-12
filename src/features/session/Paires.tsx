@@ -41,12 +41,12 @@ export function Paires({ mots, onErreur, onTermine }: Props) {
 
   const style = (id: string, actif: boolean) =>
     trouves.has(id)
-      ? 'border-transparent bg-transparent text-stone-300 dark:text-stone-700'
+      ? 'verre-vert scale-95 opacity-40'
       : rate === id
-        ? 'border-red-400 bg-red-50 dark:bg-red-950'
+        ? 'verre-rouge'
         : actif
-          ? 'border-orange-500 bg-orange-50 dark:bg-stone-800'
-          : 'border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900'
+          ? 'verre ring-2 ring-orange-500'
+          : 'verre'
 
   return (
     <div className="space-y-6">
@@ -59,7 +59,7 @@ export function Paires({ mots, onErreur, onTermine }: Props) {
                 type="button"
                 disabled={trouves.has(m.id)}
                 onClick={() => toucherGauche(m)}
-                className={`min-h-14 w-full rounded-2xl border-2 border-b-4 px-3 py-2 font-semibold ${style(m.id, selection === m.id)}`}
+                className={`verre-interactif min-h-14 w-full rounded-2xl px-3 py-2 font-semibold ${style(m.id, selection === m.id)}`}
               >
                 {m.latin}
               </button>
@@ -73,7 +73,7 @@ export function Paires({ mots, onErreur, onTermine }: Props) {
                 type="button"
                 disabled={trouves.has(m.id)}
                 onClick={() => toucherDroite(m)}
-                className={`min-h-14 w-full rounded-2xl border-2 border-b-4 px-3 py-2 text-sm font-semibold ${style(m.id, false)}`}
+                className={`verre-interactif min-h-14 w-full rounded-2xl px-3 py-2 text-sm font-semibold ${style(m.id, false)}`}
               >
                 {m.fr}
               </button>

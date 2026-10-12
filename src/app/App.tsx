@@ -51,7 +51,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-dvh overflow-x-hidden" onTouchStart={debutToucher} onTouchEnd={finToucher}>
+    <div className="fond min-h-dvh overflow-x-hidden" onTouchStart={debutToucher} onTouchEnd={finToucher}>
       <EnTete />
       <main key={onglet} className={`mx-auto max-w-xl px-4 pb-36 pt-4 ${entree}`}>
         {onglet === 'apprendre' && <Apprendre />}

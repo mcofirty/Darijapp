@@ -19,7 +19,7 @@ export function Dictionnaire() {
         value={requete}
         onChange={(e) => setRequete(e.target.value)}
         placeholder="Chercher un mot"
-        className="w-full rounded-2xl border border-orange-200 bg-white px-4 py-3 text-base dark:border-stone-700 dark:bg-stone-900"
+        className="w-full rounded-2xl border border-orange-200 px-4 py-3 text-base verre"
       />
       <p className="text-sm text-stone-500">
         {resultats.length} mot{resultats.length > 1 ? 's' : ''}

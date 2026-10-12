@@ -61,15 +61,15 @@ export function Session({ etapes: depart, nouveaux, entrainement, onFermer, onEn
   return (
     <div
       data-sans-balayage
-      className="fixed inset-0 z-30 flex flex-col bg-orange-50 pt-[env(safe-area-inset-top)] dark:bg-stone-950"
+      className="fond fixed inset-0 z-30 flex flex-col pt-[env(safe-area-inset-top)]"
     >
       <div className="mx-auto flex w-full max-w-xl items-center gap-4 px-4 py-3">
-        <button type="button" onClick={quitter} aria-label="Quitter la session" className="text-2xl text-stone-400">
+        <button type="button" onClick={quitter} aria-label="Quitter la session" className="verre verre-interactif flex h-10 w-10 items-center justify-center rounded-full text-lg text-stone-500">
           ✕
         </button>
-        <div className="h-4 flex-1 overflow-hidden rounded-full bg-orange-200 dark:bg-stone-800">
+        <div className="verre h-4 flex-1 overflow-hidden rounded-full">
           <div
-            className="h-full rounded-full bg-orange-600 transition-[width] duration-500"
+            className="h-full rounded-full bg-gradient-to-r from-orange-400 to-orange-600 transition-[width] duration-500"
             style={{ width: `${(index / etapes.length) * 100}%` }}
           />
         </div>
@@ -94,31 +94,38 @@ export function Session({ etapes: depart, nouveaux, entrainement, onFermer, onEn
         </div>
       </div>
 
-      <div
-        className={`border-t-2 px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-4 ${
-          retour === null
-            ? 'border-transparent'
-            : retour.juste
-              ? 'border-green-200 bg-green-100 dark:border-green-900 dark:bg-green-950'
-              : 'border-red-200 bg-red-100 dark:border-red-900 dark:bg-red-950'
-        }`}
-      >
-        <div className="mx-auto max-w-xl space-y-3">
-          {retour?.juste === true && <p className="text-xl font-bold text-green-700 dark:text-green-400">Bravo !</p>}
-          {retour?.juste === false && (
-            <div className="text-red-700 dark:text-red-300">
-              <p className="text-xl font-bold">Bonne réponse :</p>
-              <p className="text-lg">
-                <span className="font-semibold">{retour.mot.latin}</span> = {retour.mot.fr}
-              </p>
+      <div className="px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2">
+        {/* Un seul panneau de verre qui se teinte et s'ouvre pour devenir le retour (façon glassEffectID). */}
+        <div
+          className={`mx-auto max-w-xl rounded-[2rem] p-3 transition-colors duration-300 ${
+            retour === null ? (etape.type === 'decouverte' ? 'verre' : '') : retour.juste ? 'verre-vert' : 'verre-rouge'
+          }`}
+        >
+          <div className={`deplier ${retour ? 'ouvert' : ''}`}>
+            <div>
+              {retour?.juste === true && (
+                <p className="px-2 pb-3 pt-1 text-xl font-bold text-green-700 dark:text-green-300">Bravo !</p>
+              )}
+              {retour?.juste === false && (
+                <div className="px-2 pb-3 pt-1 text-red-700 dark:text-red-200">
+                  <p className="text-xl font-bold">Bonne réponse :</p>
+                  <p className="text-lg">
+                    <span className="font-semibold">{retour.mot.latin}</span> = {retour.mot.fr}
+                  </p>
+                </div>
+              )}
             </div>
-          )}
+          </div>
           {(retour !== null || etape.type === 'decouverte') && (
             <button
               type="button"
               onClick={() => void suivant()}
-              className={`min-h-14 w-full rounded-2xl border-b-4 text-lg font-bold text-white active:translate-y-0.5 ${
-                retour?.juste === false ? 'border-red-700 bg-red-500' : retour?.juste ? 'border-green-700 bg-green-500' : 'border-orange-800 bg-orange-600'
+              className={`verre-interactif min-h-14 w-full rounded-2xl text-lg font-bold text-white ${
+                retour?.juste === false
+                  ? 'verre-teinte !bg-red-500/85'
+                  : retour?.juste
+                    ? 'verre-teinte !bg-green-600/85'
+                    : 'verre-teinte'
               }`}
             >
               Continuer

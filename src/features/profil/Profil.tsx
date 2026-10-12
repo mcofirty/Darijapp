@@ -7,7 +7,7 @@ export function Profil() {
   return (
     <section className="space-y-4">
       <h2 className="text-2xl font-bold">Profil</h2>
-      <label className="flex min-h-14 items-center justify-between gap-4 rounded-3xl bg-white px-5 py-3 shadow-sm dark:bg-stone-900">
+      <label className="flex min-h-14 items-center justify-between gap-4 rounded-3xl px-5 py-3 verre">
         <span>
           <span className="block font-semibold">Afficher l'écriture arabe</span>
           <span className="text-sm text-stone-500">À côté des lettres latines</span>

@@ -15,7 +15,7 @@ export function GuideSons({ onRetour }: { onRetour: () => void }) {
       </p>
       <ul className="space-y-3">
         {SONS.map((s) => (
-          <li key={s.latin} className="rounded-3xl bg-white p-4 shadow-sm dark:bg-stone-900">
+          <li key={s.latin} className="rounded-3xl p-4 verre">
             <div className="flex items-center gap-4">
               <span className="w-14 text-center text-3xl font-bold">
                 {s.latin}
@@ -23,7 +23,7 @@ export function GuideSons({ onRetour }: { onRetour: () => void }) {
               </span>
               <p className="flex-1 text-sm text-stone-700 dark:text-stone-300">{s.explication}</p>
             </div>
-            <div className="mt-3 flex items-center justify-between gap-2 rounded-2xl bg-orange-50 p-3 dark:bg-stone-800">
+            <div className="mt-3 flex items-center justify-between gap-2 rounded-2xl bg-white/40 p-3 ring-1 ring-white/60 dark:bg-white/5 dark:ring-white/10">
               <span>
                 <span className="font-semibold">{s.exemple.latin}</span>{' '}
                 <span className="arabe" lang="ar">{s.exemple.arabe}</span>

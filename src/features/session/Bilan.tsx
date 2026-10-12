@@ -14,7 +14,7 @@ const COULEURS = ['#ea580c', '#f59e0b', '#16a34a', '#0ea5e9', '#e11d48']
 export function Bilan({ bilan, taux, onFermer, onEncore }: Props) {
   const { serie } = useResume()
   return (
-    <div data-sans-balayage className="fixed inset-0 z-30 overflow-hidden bg-orange-50 dark:bg-stone-950">
+    <div data-sans-balayage className="fond fixed inset-0 z-30 overflow-hidden">
       <div aria-hidden className="pointer-events-none absolute inset-0">
         {Array.from({ length: 36 }, (_, i) => (
           <span
@@ -46,7 +46,7 @@ export function Bilan({ bilan, taux, onFermer, onEncore }: Props) {
           <button
             type="button"
             onClick={onEncore}
-            className="min-h-14 w-full rounded-2xl border-b-4 border-orange-800 bg-orange-600 text-lg font-bold text-white active:translate-y-0.5"
+            className="verre-teinte verre-interactif min-h-14 w-full rounded-2xl text-lg font-bold"
           >
             Encore une session
           </button>
@@ -61,7 +61,7 @@ export function Bilan({ bilan, taux, onFermer, onEncore }: Props) {
 
 function Case({ valeur, libelle }: { valeur: string; libelle: string }) {
   return (
-    <div className="rounded-2xl bg-white p-3 shadow-sm dark:bg-stone-900">
+    <div className="rounded-2xl p-3 verre">
       <p className="text-2xl font-bold">{valeur}</p>
       <p className="text-xs text-stone-500">{libelle}</p>
     </div>

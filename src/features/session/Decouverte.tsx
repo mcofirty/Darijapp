@@ -17,7 +17,7 @@ export function Decouverte({ mot }: { mot: Mot }) {
   return (
     <div className="space-y-4">
       <p className="text-sm font-bold uppercase tracking-wide text-orange-700 dark:text-orange-400">Nouveau mot</p>
-      <div className="rounded-3xl bg-white p-6 text-center shadow-sm dark:bg-stone-900">
+      <div className="rounded-3xl p-6 text-center verre">
         <p className="text-4xl font-bold">{mot.latin}</p>
         {afficherArabe && (
           <p className="arabe mt-2 text-4xl text-stone-600 dark:text-stone-300" dir="rtl" lang="ar">{mot.arabe}</p>
@@ -28,7 +28,7 @@ export function Decouverte({ mot }: { mot: Mot }) {
           <BoutonAudio chemin={mot.audio} arabe={mot.arabe} vitesse={0.75} libelle="Ralenti" grand />
         </div>
       </div>
-      <div className="rounded-3xl bg-white p-5 text-stone-700 shadow-sm dark:bg-stone-900 dark:text-stone-300">
+      <div className="rounded-3xl p-5 text-stone-700 dark:text-stone-300 verre">
         <p>{mot.prononciation}</p>
         {sons.map((s) => (
           <p key={s.latin} className="mt-2 text-sm">

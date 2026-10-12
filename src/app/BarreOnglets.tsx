@@ -84,7 +84,7 @@ export function BarreOnglets({ actif, onChange }: Props) {
     <nav
       aria-label="Navigation principale"
       data-sans-balayage
-      className="fixed inset-x-3 bottom-[max(0.75rem,env(safe-area-inset-bottom))] z-20 mx-auto max-w-xl rounded-[2.25rem] border border-white/70 bg-orange-50/70 p-1.5 shadow-[0_10px_30px_-8px_rgba(120,53,15,0.35),inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-xl backdrop-saturate-150 dark:border-white/10 dark:bg-stone-900/70 dark:shadow-[0_10px_30px_-8px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.08)]"
+      className="verre fixed inset-x-3 bottom-[max(0.75rem,env(safe-area-inset-bottom))] z-20 mx-auto max-w-xl rounded-[2.25rem] p-1.5"
     >
       <ul
         ref={rail}

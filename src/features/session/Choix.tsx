@@ -34,7 +34,7 @@ export function Choix({ type, mot, choix, onRepondu }: Props) {
           <button
             type="button"
             onClick={() => jouer(mot.audio, mot.arabe)}
-            className="flex h-24 w-24 items-center justify-center rounded-3xl bg-orange-600 text-4xl text-white shadow-md active:scale-95"
+            className="verre-teinte verre-interactif flex h-24 w-24 items-center justify-center rounded-3xl text-4xl"
             aria-label="Réécouter"
           >
             🔊
@@ -42,14 +42,14 @@ export function Choix({ type, mot, choix, onRepondu }: Props) {
           <button
             type="button"
             onClick={() => jouer(mot.audio, mot.arabe, 0.75)}
-            className="flex h-24 w-16 items-center justify-center self-end rounded-3xl bg-orange-100 text-2xl shadow-sm active:scale-95 dark:bg-stone-800"
+            className="verre verre-interactif flex h-24 w-16 items-center justify-center self-end rounded-3xl text-2xl"
             aria-label="Réécouter au ralenti"
           >
             🐢
           </button>
         </div>
       ) : (
-        <p className="rounded-3xl bg-white p-6 text-center text-2xl font-semibold shadow-sm dark:bg-stone-900">{mot.fr}</p>
+        <p className="rounded-3xl p-6 text-center text-2xl font-semibold verre">{mot.fr}</p>
       )}
       <ul className="grid gap-3">
         {choix.map((c) => {
@@ -60,12 +60,12 @@ export function Choix({ type, mot, choix, onRepondu }: Props) {
                 type="button"
                 disabled={choisi !== null}
                 onClick={() => choisir(c)}
-                className={`w-full rounded-2xl border-2 border-b-4 px-4 py-3 text-left text-lg font-semibold active:translate-y-0.5 ${
+                className={`verre-interactif w-full rounded-2xl px-4 py-3.5 text-left text-lg font-semibold ${
                   etat === 'juste'
-                    ? 'border-green-500 bg-green-50 text-green-800 dark:bg-green-950 dark:text-green-300'
+                    ? 'verre-vert text-green-800 dark:text-green-300'
                     : etat === 'faux'
-                      ? 'border-red-400 bg-red-50 text-red-700 dark:bg-red-950 dark:text-red-300'
-                      : 'border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900'
+                      ? 'verre-rouge text-red-700 dark:text-red-300'
+                      : 'verre'
                 }`}
               >
                 {type === 'ecoute' ? (

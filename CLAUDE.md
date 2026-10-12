@@ -83,6 +83,8 @@ docs/
 | Progrès | Niveau, XP, quêtes, coffre, série, statistiques (prévu) ; bascule vers le Dictionnaire (fait : tous les mots, ✓ sur les mots déjà vus, recherche latin/français/arabe) |
 | Profil | Prénom, avatar, genre, objectif, rappel, audio, affichage arabe, mode sombre, export/import/remise à zéro |
 
+Style « liquid glass » sur toute l'appli (transposition web des principes SwiftUI `glassEffect`) : fond coloré flouté (`.fond`), surfaces en verre (`.verre`, `.verre-teinte` orange, `.verre-vert`, `.verre-rouge` dans `src/index.css`, couche `components`), boutons `.verre-interactif` qui gonflent au toucher avec un reflet sous le doigt, et panneau de session qui s'ouvre et se teinte pour devenir le retour (`.deplier`). Mode sombre géré.
+
 Navigation : barre d'onglets flottante en verre dépoli, icônes SVG ; une lentille marque l'onglet actif et suit le doigt quand on glisse le long de la barre (étirement selon la vitesse, icônes grossies, retour élastique). Un balayage horizontal de la page change aussi d'onglet, sauf sur les zones marquées `data-sans-balayage`.
 
 Fiche mot : latin en grand, arabe dessous (affiché par défaut, masquable dans Profil), traduction, boutons « Écouter » et « Ralenti » (0,75×), lecture automatique à l'ouverture, explication de prononciation, explication de chaque son particulier du mot, exemple avec son audio.
@@ -153,6 +155,7 @@ Progression d'un mot (IndexedDB) :
 - Sur Safari, MediaRecorder produit de l'`audio/mp4` : décode l'enregistrement avec `AudioContext.decodeAudioData` avant de calculer les MFCC.
 - Tant que GitHub Pages n'est pas activé (Source « GitHub Actions »), le job `deploy` échoue avec une erreur 404 « Failed to create deployment ».
 - L'environnement cloud de Claude Code ne peut pas joindre mcofirty.github.io (proxy) : vérifier la mise en ligne par l'état du job `deploy`, pas par une requête au site.
+- Les classes de verre doivent rester dans `@layer components` : hors couche, leur `position: relative` écrase `fixed`/`sticky` de Tailwind (la barre du bas avait disparu).
 - Après la génération des MP3, mets à jour la liste des fichiers mis en cache par la PWA pour que l'audio marche hors ligne.
 
 ## Façon de travailler
@@ -181,6 +184,7 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 | 2026-10-10 | Socle PWA : 5 onglets, en-tête, base Dexie v1, réglage « afficher l'arabe » | `src/app/`, `src/db/`, `vite.config.ts` |
 | 2026-10-10 | 152 mots en 8 thèmes avec arabe, prononciation et exemple ; fiche mot, guide des sons, dictionnaire avec recherche | `src/data/`, `src/features/mots/`, `src/features/apprendre/`, `src/features/progres/` |
 | 2026-10-10 | Script de génération audio et lecture avec repli sur la synthèse vocale du téléphone | `scripts/generate_audio.py`, `src/audio/lecteur.ts` |
+| 2026-10-12 | Style liquid glass sur toute l'appli : fond coloré, cartes, en-tête, boutons interactifs, panneau de retour qui se transforme | `src/index.css`, `src/main.tsx`, composants de `src/features/` |
 | 2026-10-12 | Session du jour style Duolingo en écran d'accueil : découverte, Écoute et choisis, Traduis, Associe les paires, bilan ; répétition espacée, XP, niveaux, série ; base v2 | `src/features/session/`, `src/exercices/`, `src/srs/`, `src/gamification/`, `src/db/apprentissage.ts` |
 | 2026-10-12 | Barre d'onglets flottante « liquid glass » avec glissement du doigt, et balayage de page entre onglets | `src/app/BarreOnglets.tsx`, `src/app/glisser.ts`, `src/app/icones.tsx` |
 | 2026-10-11 | GitHub Action qui génère les MP3, teste, construit et publie l'appli sur GitHub Pages | `.github/workflows/publier.yml` |
@@ -205,6 +209,7 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 - 2026-10-12 : les réponses ne sont enregistrées qu'en fin de session ; quitter en cours de route ne change rien, pour garder la répétition espacée cohérente.
 - 2026-10-12 : la série est calculée à partir de l'historique des sessions (table `sessions`), sans compteur stocké, pour qu'elle ne puisse pas se désynchroniser.
 - 2026-10-12 : sons de retour synthétisés par Web Audio, sans fichier à télécharger.
+- 2026-10-12 : le code SwiftUI d'Apple (`glassEffect`) ne s'applique qu'aux applis natives ; l'appli reste une PWA et reproduit le liquid glass en CSS. Pas de réfraction (filtres SVG dans `backdrop-filter` non pris en charge par Safari).
 - 2026-10-10 : pas de routeur ; navigation par état React, suffisante pour 5 onglets.
 
 ## Points en suspens

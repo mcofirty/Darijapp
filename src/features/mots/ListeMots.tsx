@@ -14,7 +14,7 @@ export function ListeMots({ mots, onChoisir }: Props) {
   return (
     <ul className="space-y-2">
       {mots.map((m) => (
-        <li key={m.id} className="flex items-center gap-2 rounded-2xl bg-white p-2 pl-4 shadow-sm dark:bg-stone-900">
+        <li key={m.id} className="verre verre-interactif flex items-center gap-2 rounded-2xl p-2 pl-4">
           <button type="button" onClick={() => onChoisir(m)} className="min-h-12 flex-1 text-left">
             <span className="flex items-baseline justify-between gap-3">
               <span className="font-semibold">

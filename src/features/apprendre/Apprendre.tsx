@@ -61,12 +61,12 @@ export function Apprendre() {
       <button
         type="button"
         onClick={() => setVue({ type: 'sons' })}
-        className="flex w-full items-center gap-4 rounded-3xl bg-orange-600 p-4 text-left text-white shadow-sm active:scale-[0.98]"
+        className="verre verre-interactif flex w-full items-center gap-4 rounded-3xl p-4 text-left"
       >
         <span className="text-3xl" aria-hidden>🗣️</span>
         <span>
           <span className="block font-semibold">Les sons du darija</span>
-          <span className="text-sm text-orange-100">3, 7, 9, kh, gh, ch : comment les prononcer</span>
+          <span className="text-sm text-stone-600 dark:text-stone-400">3, 7, 9, kh, gh, ch : comment les prononcer</span>
         </span>
       </button>
       <ul className="grid grid-cols-2 gap-3">
@@ -75,7 +75,7 @@ export function Apprendre() {
             <button
               type="button"
               onClick={() => setVue({ type: 'theme', themeId: t.id })}
-              className="flex h-full w-full flex-col items-start gap-2 rounded-3xl bg-white p-4 text-left shadow-sm active:scale-[0.98] dark:bg-stone-900"
+              className="verre verre-interactif flex h-full w-full flex-col items-start gap-2 rounded-3xl p-4 text-left"
             >
               <span className="text-3xl" aria-hidden>{t.icone}</span>
               <span className="font-semibold leading-tight">{t.titre}</span>
