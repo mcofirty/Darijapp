@@ -1,25 +1,28 @@
+import { Languages } from 'lucide-react'
 import { modifierProfil } from '../../db/db'
 import { useProfil } from '../../db/useProfil'
+import { Interrupteur } from '../../ui/Boutons'
+import { Ligne, Section, Tuile } from '../../ui/Liste'
+import { Page } from '../../ui/Page'
 
 export function Profil() {
   const profil = useProfil()
-
   return (
-    <section className="space-y-4">
-      <h2 className="text-2xl font-bold">Profil</h2>
-      <label className="flex min-h-14 items-center justify-between gap-4 rounded-3xl px-5 py-3 verre">
-        <span>
-          <span className="block font-semibold">Afficher l'écriture arabe</span>
-          <span className="text-sm text-stone-500">À côté des lettres latines</span>
-        </span>
-        <input
-          type="checkbox"
-          checked={profil.afficherArabe}
-          onChange={(e) => void modifierProfil({ afficherArabe: e.target.checked })}
-          className="h-6 w-6 accent-orange-600"
+    <Page titre="Profil">
+      <Section titre="Affichage" note="Les autres réglages (prénom, objectif, rappel, sauvegarde) arrivent aux jalons suivants.">
+        <Ligne
+          tuile={<Tuile icone={Languages} couleur="#34c759" />}
+          titre="Écriture arabe"
+          sousTitre="À côté des lettres latines"
+          fin={
+            <Interrupteur
+              libelle="Afficher l'écriture arabe"
+              actif={profil.afficherArabe}
+              onChange={(v) => void modifierProfil({ afficherArabe: v })}
+            />
+          }
         />
-      </label>
-      <p className="text-center text-sm text-stone-500">Les autres réglages arrivent aux jalons suivants.</p>
-    </section>
+      </Section>
+    </Page>
   )
 }

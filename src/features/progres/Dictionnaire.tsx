@@ -1,30 +1,27 @@
+import { Search } from 'lucide-react'
 import { useState } from 'react'
 import { MOTS, chercherMots } from '../../data'
 import type { Mot } from '../../data/types'
-import { FicheMot } from '../mots/FicheMot'
 import { ListeMots } from '../mots/ListeMots'
 
-export function Dictionnaire() {
+/** Champ de recherche et liste de tous les mots. */
+export function Dictionnaire({ onChoisir }: { onChoisir: (mot: Mot) => void }) {
   const [requete, setRequete] = useState('')
-  const [mot, setMot] = useState<Mot | null>(null)
-
-  if (mot) return <FicheMot mot={mot} onRetour={() => setMot(null)} />
-
   const resultats = chercherMots(MOTS, requete)
   return (
-    <section className="space-y-4">
-      <input
-        data-sans-balayage
-        type="search"
-        value={requete}
-        onChange={(e) => setRequete(e.target.value)}
-        placeholder="Chercher un mot"
-        className="w-full rounded-2xl border border-orange-200 px-4 py-3 text-base verre"
-      />
-      <p className="text-sm text-stone-500">
-        {resultats.length} mot{resultats.length > 1 ? 's' : ''}
-      </p>
-      <ListeMots mots={resultats} onChoisir={setMot} />
-    </section>
+    <>
+      <label className="mb-6 flex h-9 items-center gap-1.5 rounded-[10px] bg-remplissage px-2 text-texte-2">
+        <Search className="h-[18px] w-[18px] shrink-0" strokeWidth={2.4} aria-hidden />
+        <input
+          data-sans-balayage
+          type="search"
+          value={requete}
+          onChange={(e) => setRequete(e.target.value)}
+          placeholder="Rechercher"
+          className="t-corps h-full min-w-0 flex-1 bg-transparent text-texte outline-none placeholder:text-texte-2"
+        />
+      </label>
+      <ListeMots mots={resultats} onChoisir={onChoisir} titre={`${resultats.length} mot${resultats.length > 1 ? 's' : ''}`} />
+    </>
   )
 }

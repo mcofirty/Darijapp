@@ -1,10 +1,12 @@
 import { useRef, useState } from 'react'
 import { jouer } from '../../audio/lecteur'
 import { sonReponse } from '../../audio/effets'
+import { CircleCheck, CircleX, X } from 'lucide-react'
 import { MOTS } from '../../data'
 import type { Mot } from '../../data/types'
 import { enregistrerSession, type BilanSession } from '../../db/apprentissage'
 import { Resultats, etapeARefaire, type Etape } from '../../exercices/session'
+import { Bouton } from '../../ui/Boutons'
 import { Bilan } from './Bilan'
 import { Choix } from './Choix'
 import { Decouverte } from './Decouverte'
@@ -59,23 +61,30 @@ export function Session({ etapes: depart, nouveaux, entrainement, onFermer, onEn
   if (bilan) return <Bilan bilan={bilan} taux={resultats.current.taux} onFermer={onFermer} onEncore={onEncore} />
 
   return (
-    <div
-      data-sans-balayage
-      className="fond fixed inset-0 z-30 flex flex-col pt-[env(safe-area-inset-top)]"
-    >
-      <div className="mx-auto flex w-full max-w-xl items-center gap-4 px-4 py-3">
-        <button type="button" onClick={quitter} aria-label="Quitter la session" className="verre verre-interactif flex h-10 w-10 items-center justify-center rounded-full text-lg text-stone-500">
-          ✕
+    <div data-sans-balayage className="fixed inset-0 z-30 flex flex-col bg-fond pt-[env(safe-area-inset-top)]">
+      <div className="mx-auto flex w-full max-w-xl items-center gap-3 px-4 py-2">
+        <button
+          type="button"
+          onClick={quitter}
+          aria-label="Quitter la session"
+          className="pressable flex h-11 w-11 items-center justify-center rounded-full"
+        >
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-remplissage text-texte-2">
+            <X className="h-[18px] w-[18px]" strokeWidth={2.6} aria-hidden />
+          </span>
         </button>
-        <div className="verre h-4 flex-1 overflow-hidden rounded-full">
-          <div
-            className="h-full rounded-full bg-gradient-to-r from-orange-400 to-orange-600 transition-[width] duration-500"
-            style={{ width: `${(index / etapes.length) * 100}%` }}
-          />
+        <div
+          className="h-2 flex-1 overflow-hidden rounded-full bg-remplissage"
+          role="progressbar"
+          aria-valuenow={index}
+          aria-valuemax={etapes.length}
+          aria-label="Progression de la session"
+        >
+          <div className="h-full rounded-full bg-accent transition-[width] duration-500" style={{ width: `${(index / etapes.length) * 100}%` }} />
         </div>
       </div>
 
-      <div className="mx-auto w-full max-w-xl flex-1 overflow-y-auto px-4 pb-6 pt-2">
+      <div className="mx-auto w-full max-w-xl flex-1 overflow-y-auto px-4 pb-6 pt-4">
         <div key={index} className="entree-droite">
           {etape.type === 'decouverte' && <Decouverte mot={etape.mot} />}
           {(etape.type === 'ecoute' || etape.type === 'traduis') && (
@@ -94,45 +103,39 @@ export function Session({ etapes: depart, nouveaux, entrainement, onFermer, onEn
         </div>
       </div>
 
-      <div className="px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2">
-        {/* Un seul panneau de verre qui se teinte et s'ouvre pour devenir le retour (façon glassEffectID). */}
-        <div
-          className={`mx-auto max-w-xl rounded-[2rem] p-3 transition-colors duration-300 ${
-            retour === null ? (etape.type === 'decouverte' ? 'verre' : '') : retour.juste ? 'verre-vert' : 'verre-rouge'
-          }`}
-        >
-          <div className={`deplier ${retour ? 'ouvert' : ''}`}>
-            <div>
-              {retour?.juste === true && (
-                <p className="px-2 pb-3 pt-1 text-xl font-bold text-green-700 dark:text-green-300">Bravo !</p>
-              )}
-              {retour?.juste === false && (
-                <div className="px-2 pb-3 pt-1 text-red-700 dark:text-red-200">
-                  <p className="text-xl font-bold">Bonne réponse :</p>
-                  <p className="text-lg">
-                    <span className="font-semibold">{retour.mot.latin}</span> = {retour.mot.fr}
+      {(retour !== null || etape.type === 'decouverte') && (
+        <div className="px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2">
+          {/* Panneau de commandes en Liquid Glass : il s'ouvre pour donner le résultat. */}
+          <div className="verre mx-auto max-w-xl rounded-[2rem] p-3">
+            <div className={`deplier ${retour ? 'ouvert' : ''}`} aria-live="polite">
+              <div>
+                {retour?.juste === true && (
+                  <p className="t-titre-3 flex items-center gap-2 px-2 pb-3 pt-1 text-vert">
+                    <CircleCheck className="h-6 w-6" strokeWidth={2.5} aria-hidden /> Bravo !
                   </p>
-                </div>
-              )}
+                )}
+                {retour?.juste === false && (
+                  <div className="px-2 pb-3 pt-1 text-rouge">
+                    <p className="t-titre-3 flex items-center gap-2">
+                      <CircleX className="h-6 w-6" strokeWidth={2.5} aria-hidden /> Bonne réponse :
+                    </p>
+                    <p className="t-corps mt-1 text-texte">
+                      <span className="font-semibold">{retour.mot.latin}</span> = {retour.mot.fr}
+                    </p>
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-          {(retour !== null || etape.type === 'decouverte') && (
-            <button
-              type="button"
+            <Bouton
+              grand
+              className={`w-full ${retour?.juste === false ? '!bg-rouge' : retour?.juste ? '!bg-vert' : ''}`}
               onClick={() => void suivant()}
-              className={`verre-interactif min-h-14 w-full rounded-2xl text-lg font-bold text-white ${
-                retour?.juste === false
-                  ? 'verre-teinte !bg-red-500/85'
-                  : retour?.juste
-                    ? 'verre-teinte !bg-green-600/85'
-                    : 'verre-teinte'
-              }`}
             >
               Continuer
-            </button>
-          )}
+            </Bouton>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   )
 }

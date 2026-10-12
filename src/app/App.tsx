@@ -5,7 +5,6 @@ import { Profil } from '../features/profil/Profil'
 import { Progres } from '../features/progres/Progres'
 import { Quiz } from '../features/quiz/Quiz'
 import { BarreOnglets } from './BarreOnglets'
-import { EnTete } from './EnTete'
 import { sensDuBalayage } from './glisser'
 import { ONGLETS, type Onglet } from './onglets'
 
@@ -51,9 +50,8 @@ export default function App() {
   }
 
   return (
-    <div className="fond min-h-dvh overflow-x-hidden" onTouchStart={debutToucher} onTouchEnd={finToucher}>
-      <EnTete />
-      <main key={onglet} className={`mx-auto max-w-xl px-4 pb-36 pt-4 ${entree}`}>
+    <div className="min-h-dvh overflow-x-hidden" onTouchStart={debutToucher} onTouchEnd={finToucher}>
+      <main key={onglet} className={`pb-32 ${entree}`}>
         {onglet === 'apprendre' && <Apprendre />}
         {onglet === 'parcours' && <Parcours />}
         {onglet === 'quiz' && <Quiz />}

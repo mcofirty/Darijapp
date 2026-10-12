@@ -1,39 +1,42 @@
+import { CircleCheck } from 'lucide-react'
 import type { Mot } from '../../data/types'
 import { useProfil } from '../../db/useProfil'
 import { useResume } from '../../db/useResume'
+import { Ligne, Section } from '../../ui/Liste'
 import { BoutonAudio } from './BoutonAudio'
 
 interface Props {
   mots: Mot[]
   onChoisir: (mot: Mot) => void
+  titre?: string
 }
 
-export function ListeMots({ mots, onChoisir }: Props) {
+export function ListeMots({ mots, onChoisir, titre }: Props) {
   const { afficherArabe } = useProfil()
   const { motsVus } = useResume()
   return (
-    <ul className="space-y-2">
+    <Section titre={titre}>
       {mots.map((m) => (
-        <li key={m.id} className="verre verre-interactif flex items-center gap-2 rounded-2xl p-2 pl-4">
-          <button type="button" onClick={() => onChoisir(m)} className="min-h-12 flex-1 text-left">
-            <span className="flex items-baseline justify-between gap-3">
-              <span className="font-semibold">
-                {m.latin}
-                {motsVus.has(m.id) && (
-                  <span className="ml-2 text-xs font-bold text-green-600" aria-label="déjà vu">
-                    ✓
-                  </span>
-                )}
-              </span>
-              {afficherArabe && (
-                <span className="arabe text-lg text-stone-500" dir="rtl" lang="ar">{m.arabe}</span>
-              )}
+        <Ligne
+          key={m.id}
+          onClick={() => onChoisir(m)}
+          titre={
+            <span className="flex items-center gap-1.5">
+              <span className="font-semibold">{m.latin}</span>
+              {motsVus.has(m.id) && <CircleCheck className="h-4 w-4 text-vert" strokeWidth={2.5} aria-label="déjà vu" />}
             </span>
-            <span className="block text-sm text-stone-500">{m.fr}</span>
-          </button>
-          <BoutonAudio chemin={m.audio} arabe={m.arabe} libelle="" />
-        </li>
+          }
+          sousTitre={m.fr}
+          valeur={
+            afficherArabe && (
+              <span className="arabe text-[1.15rem]" dir="rtl" lang="ar">
+                {m.arabe}
+              </span>
+            )
+          }
+          fin={<BoutonAudio chemin={m.audio} arabe={m.arabe} libelle="" />}
+        />
       ))}
-    </ul>
+    </Section>
   )
 }

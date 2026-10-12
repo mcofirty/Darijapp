@@ -20,5 +20,4 @@ export interface Mot {
 export interface Theme {
   id: string
   titre: string
-  icone: string
 }

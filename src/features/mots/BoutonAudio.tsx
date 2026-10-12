@@ -1,4 +1,6 @@
+import { Snail, Volume2 } from 'lucide-react'
 import { jouer } from '../../audio/lecteur'
+import { Bouton } from '../../ui/Boutons'
 
 interface Props {
   chemin: string
@@ -8,23 +10,31 @@ interface Props {
   grand?: boolean
 }
 
+/** Bouton de lecture : capsule avec libellé, ou rond compact quand le libellé est vide. */
 export function BoutonAudio({ chemin, arabe, vitesse = 1, libelle, grand = false }: Props) {
+  const Icone = vitesse < 1 ? Snail : Volume2
+  const lire = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    jouer(chemin, arabe, vitesse)
+  }
+  if (!libelle) {
+    return (
+      <button
+        type="button"
+        onClick={lire}
+        aria-label="Écouter"
+        className="pressable flex h-11 w-11 items-center justify-center rounded-full text-accent"
+      >
+        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-doux">
+          <Icone className="h-[18px] w-[18px]" strokeWidth={2.4} aria-hidden />
+        </span>
+      </button>
+    )
+  }
   return (
-    <button
-      type="button"
-      aria-label={libelle || "Écouter"}
-      onClick={(e) => {
-        e.stopPropagation()
-        jouer(chemin, arabe, vitesse)
-      }}
-      className={`verre-interactif flex items-center justify-center gap-2 rounded-2xl font-semibold ${
-        grand
-          ? 'verre-teinte min-h-16 flex-1 px-4 text-lg'
-          : 'verre min-h-11 px-3 text-sm text-orange-800 dark:text-orange-300'
-      }`}
-    >
-      <span aria-hidden>{vitesse < 1 ? '🐢' : '🔊'}</span>
+    <Bouton variante={vitesse < 1 ? 'teinte' : 'plein'} grand={grand} onClick={lire} className={grand ? 'flex-1' : ''}>
+      <Icone className="h-5 w-5" strokeWidth={2.4} aria-hidden />
       {libelle}
-    </button>
+    </Bouton>
   )
 }

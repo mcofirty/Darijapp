@@ -1,10 +1,11 @@
+import { Map as IconeCarte } from 'lucide-react'
+import { Vide } from '../../ui/Boutons'
+import { Page } from '../../ui/Page'
+
 export function Parcours() {
   return (
-    <section className="space-y-4">
-      <h2 className="text-2xl font-bold">Parcours</h2>
-      <p className="rounded-3xl p-6 text-center text-stone-500 verre">
-        Le chemin de leçons arrive au jalon 4.
-      </p>
-    </section>
+    <Page titre="Parcours">
+      <Vide icone={<IconeCarte className="h-12 w-12" strokeWidth={1.6} />} titre="Bientôt disponible" texte="Le chemin de leçons arrive au jalon 4." />
+    </Page>
   )
 }

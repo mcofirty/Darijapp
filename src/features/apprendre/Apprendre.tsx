@@ -1,7 +1,13 @@
+import { Flame } from 'lucide-react'
 import { useState } from 'react'
 import { motsDuTheme } from '../../data'
+import { SONS } from '../../data/sons'
 import { THEMES } from '../../data/themes'
 import type { Mot } from '../../data/types'
+import { useResume } from '../../db/useResume'
+import { Ligne, Section, Tuile } from '../../ui/Liste'
+import { Page } from '../../ui/Page'
+import { VISUELS_THEMES, VISUEL_SONS } from '../../ui/visuels'
 import { FicheMot } from '../mots/FicheMot'
 import { ListeMots } from '../mots/ListeMots'
 import { CarteSessionDuJour } from '../session/CarteSessionDuJour'
@@ -9,13 +15,28 @@ import { preparerSession, type SessionPrete } from '../session/lancer'
 import { Session } from '../session/Session'
 import { GuideSons } from './GuideSons'
 
-type Vue = { type: 'themes' } | { type: 'sons' } | { type: 'theme'; themeId: string }
+type Vue = { type: 'accueil' } | { type: 'sons' } | { type: 'theme'; themeId: string }
+
+/** Pastille de série, à droite du grand titre. */
+function Serie() {
+  const { serie } = useResume()
+  return (
+    <span
+      className={`t-appel inline-flex items-center gap-1 rounded-full bg-carte px-3 py-1 font-semibold ${serie.aujourdhui ? 'text-accent' : 'text-texte-2'}`}
+      aria-label={`Série : ${serie.jours} jours`}
+    >
+      <Flame className="h-4 w-4" strokeWidth={2.5} fill={serie.aujourdhui ? 'currentColor' : 'none'} aria-hidden />
+      {serie.jours}
+    </span>
+  )
+}
 
 export function Apprendre() {
-  const [vue, setVue] = useState<Vue>({ type: 'themes' })
+  const [vue, setVue] = useState<Vue>({ type: 'accueil' })
   const [mot, setMot] = useState<Mot | null>(null)
   const [session, setSession] = useState<SessionPrete | null>(null)
   const [numero, setNumero] = useState(0)
+  const { niveau, xpTotal } = useResume()
 
   async function lancer() {
     setSession(await preparerSession())
@@ -23,67 +44,64 @@ export function Apprendre() {
   }
 
   if (session)
-    return (
-      <Session
-        key={numero}
-        {...session}
-        onFermer={() => setSession(null)}
-        onEncore={() => void lancer()}
-      />
-    )
-
-  if (mot) return <FicheMot mot={mot} onRetour={() => setMot(null)} />
-  if (vue.type === 'sons') return <GuideSons onRetour={() => setVue({ type: 'themes' })} />
+    return <Session key={numero} {...session} onFermer={() => setSession(null)} onEncore={() => void lancer()} />
 
   if (vue.type === 'theme') {
     const theme = THEMES.find((t) => t.id === vue.themeId)!
+    if (mot) return <FicheMot mot={mot} retour={{ libelle: 'Mots', action: () => setMot(null) }} />
     return (
-      <section className="space-y-4">
-        <button
-          type="button"
-          onClick={() => setVue({ type: 'themes' })}
-          className="min-h-11 text-sm font-semibold text-orange-700 dark:text-orange-400"
-        >
-          ← Thèmes
-        </button>
-        <h2 className="text-2xl font-bold">
-          {theme.icone} {theme.titre}
-        </h2>
+      <Page titre={theme.titre} retour={{ libelle: 'Apprendre', action: () => setVue({ type: 'accueil' }) }}>
         <ListeMots mots={motsDuTheme(theme.id)} onChoisir={setMot} />
-      </section>
+      </Page>
     )
   }
 
+  if (vue.type === 'sons') return <GuideSons onRetour={() => setVue({ type: 'accueil' })} />
+
   return (
-    <section className="space-y-4">
+    <Page titre="Apprendre" accessoire={<Serie />}>
       <CarteSessionDuJour onCommencer={() => void lancer()} />
-      <h2 className="pt-2 text-xl font-bold">Explorer</h2>
-      <button
-        type="button"
-        onClick={() => setVue({ type: 'sons' })}
-        className="verre verre-interactif flex w-full items-center gap-4 rounded-3xl p-4 text-left"
-      >
-        <span className="text-3xl" aria-hidden>🗣️</span>
-        <span>
-          <span className="block font-semibold">Les sons du darija</span>
-          <span className="text-sm text-stone-600 dark:text-stone-400">3, 7, 9, kh, gh, ch : comment les prononcer</span>
-        </span>
-      </button>
-      <ul className="grid grid-cols-2 gap-3">
+
+      <Section titre="Ma progression">
+        <Ligne
+          titre={
+            <span className="block">
+              <span className="flex items-baseline justify-between">
+                <span>
+                  Niveau {niveau.niveau} · <span className="font-semibold">{niveau.nom}</span>
+                </span>
+                <span className="t-sous-titre text-texte-2">
+                  {niveau.xp}/{niveau.objectif} XP
+                </span>
+              </span>
+              <span className="mt-2 block h-1.5 overflow-hidden rounded-full bg-remplissage" aria-hidden>
+                <span className="block h-full rounded-full bg-accent transition-[width] duration-700" style={{ width: `${(niveau.xp / niveau.objectif) * 100}%` }} />
+              </span>
+            </span>
+          }
+          sousTitre={`${xpTotal} XP au total`}
+        />
+      </Section>
+
+      <Section titre="Explorer">
+        <Ligne
+          tuile={<Tuile {...VISUEL_SONS} />}
+          titre="Les sons du darija"
+          sousTitre={SONS.map((s) => s.latin).join(', ')}
+          chevron
+          onClick={() => setVue({ type: 'sons' })}
+        />
         {THEMES.map((t) => (
-          <li key={t.id}>
-            <button
-              type="button"
-              onClick={() => setVue({ type: 'theme', themeId: t.id })}
-              className="verre verre-interactif flex h-full w-full flex-col items-start gap-2 rounded-3xl p-4 text-left"
-            >
-              <span className="text-3xl" aria-hidden>{t.icone}</span>
-              <span className="font-semibold leading-tight">{t.titre}</span>
-              <span className="text-sm text-stone-500">{motsDuTheme(t.id).length} mots</span>
-            </button>
-          </li>
+          <Ligne
+            key={t.id}
+            tuile={<Tuile {...VISUELS_THEMES[t.id]} />}
+            titre={t.titre}
+            valeur={motsDuTheme(t.id).length}
+            chevron
+            onClick={() => setVue({ type: 'theme', themeId: t.id })}
+          />
         ))}
-      </ul>
-    </section>
+      </Section>
+    </Page>
   )
 }

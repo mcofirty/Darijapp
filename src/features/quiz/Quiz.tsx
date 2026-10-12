@@ -1,10 +1,11 @@
+import { Brain } from 'lucide-react'
+import { Vide } from '../../ui/Boutons'
+import { Page } from '../../ui/Page'
+
 export function Quiz() {
   return (
-    <section className="space-y-4">
-      <h2 className="text-2xl font-bold">Quiz</h2>
-      <p className="rounded-3xl p-6 text-center text-stone-500 verre">
-        Le quiz de 5 questions arrive au jalon 2.
-      </p>
-    </section>
+    <Page titre="Quiz">
+      <Vide icone={<Brain className="h-12 w-12" strokeWidth={1.6} />} titre="Bientôt disponible" texte="Le quiz de 5 questions arrive bientôt." />
+    </Page>
   )
 }

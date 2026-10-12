@@ -1,5 +1,8 @@
+import { Flame, Sparkles, Target } from 'lucide-react'
 import type { BilanSession } from '../../db/apprentissage'
 import { useResume } from '../../db/useResume'
+import { Bouton } from '../../ui/Boutons'
+import { Ligne, Section, Tuile } from '../../ui/Liste'
 
 interface Props {
   bilan: BilanSession
@@ -8,14 +11,14 @@ interface Props {
   onEncore: () => void
 }
 
-const COULEURS = ['#ea580c', '#f59e0b', '#16a34a', '#0ea5e9', '#e11d48']
+const COULEURS = ['#ff9500', '#ffcc00', '#34c759', '#007aff', '#ff2d55']
 
 /** Écran de fin de session, avec confettis. */
 export function Bilan({ bilan, taux, onFermer, onEncore }: Props) {
   const { serie } = useResume()
   return (
-    <div data-sans-balayage className="fond fixed inset-0 z-30 overflow-hidden">
-      <div aria-hidden className="pointer-events-none absolute inset-0">
+    <div data-sans-balayage className="fixed inset-0 z-30 overflow-y-auto bg-fond">
+      <div aria-hidden className="pointer-events-none fixed inset-0">
         {Array.from({ length: 36 }, (_, i) => (
           <span
             key={i}
@@ -29,41 +32,27 @@ export function Bilan({ bilan, taux, onFermer, onEncore }: Props) {
           />
         ))}
       </div>
-      <div className="relative mx-auto flex h-full max-w-xl flex-col justify-center gap-6 px-6 pb-[env(safe-area-inset-bottom)] text-center">
-        <p className="text-6xl" aria-hidden>🎉</p>
-        <h2 className="text-3xl font-bold">Session terminée !</h2>
-        <div className="grid grid-cols-3 gap-3">
-          <Case valeur={`+${bilan.xp}`} libelle="XP" />
-          <Case valeur={`${Math.round(taux * 100)} %`} libelle="Réussite" />
-          <Case valeur={`🔥 ${serie.jours}`} libelle={serie.jours > 1 ? 'jours de suite' : 'jour'} />
-        </div>
-        {bilan.nouveaux > 0 && (
-          <p className="text-stone-600 dark:text-stone-400">
-            {bilan.nouveaux} nouveau{bilan.nouveaux > 1 ? 'x' : ''} mot{bilan.nouveaux > 1 ? 's' : ''} appris
-          </p>
-        )}
-        <div className="space-y-3">
-          <button
-            type="button"
-            onClick={onEncore}
-            className="verre-teinte verre-interactif min-h-14 w-full rounded-2xl text-lg font-bold"
-          >
+      <div className="relative mx-auto flex min-h-full max-w-xl flex-col justify-center px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-[calc(env(safe-area-inset-top)+2rem)]">
+        <h2 className="t-grand-titre mb-1 text-center">Session terminée</h2>
+        <p className="t-appel mb-8 text-center text-texte-2">
+          {bilan.nouveaux > 0
+            ? `${bilan.nouveaux} nouveau${bilan.nouveaux > 1 ? 'x' : ''} mot${bilan.nouveaux > 1 ? 's' : ''} appris`
+            : 'Révision terminée'}
+        </p>
+        <Section>
+          <Ligne tuile={<Tuile icone={Sparkles} couleur="#af52de" />} titre="XP gagnés" valeur={`+${bilan.xp}`} />
+          <Ligne tuile={<Tuile icone={Target} couleur="#34c759" />} titre="Réussite" valeur={`${Math.round(taux * 100)} %`} />
+          <Ligne tuile={<Tuile icone={Flame} couleur="#ff3b30" />} titre="Série" valeur={`${serie.jours} jour${serie.jours > 1 ? 's' : ''}`} />
+        </Section>
+        <div className="space-y-2">
+          <Bouton grand className="w-full" onClick={onEncore}>
             Encore une session
-          </button>
-          <button type="button" onClick={onFermer} className="min-h-12 w-full font-semibold text-stone-600 dark:text-stone-300">
+          </Bouton>
+          <Bouton grand variante="teinte" className="w-full" onClick={onFermer}>
             Terminer
-          </button>
+          </Bouton>
         </div>
       </div>
-    </div>
-  )
-}
-
-function Case({ valeur, libelle }: { valeur: string; libelle: string }) {
-  return (
-    <div className="rounded-2xl p-3 verre">
-      <p className="text-2xl font-bold">{valeur}</p>
-      <p className="text-xs text-stone-500">{libelle}</p>
     </div>
   )
 }

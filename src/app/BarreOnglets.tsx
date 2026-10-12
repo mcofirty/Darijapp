@@ -84,7 +84,7 @@ export function BarreOnglets({ actif, onChange }: Props) {
     <nav
       aria-label="Navigation principale"
       data-sans-balayage
-      className="verre fixed inset-x-3 bottom-[max(0.75rem,env(safe-area-inset-bottom))] z-20 mx-auto max-w-xl rounded-[2.25rem] p-1.5"
+      className="verre fixed inset-x-4 bottom-[max(0.5rem,env(safe-area-inset-bottom))] z-20 mx-auto max-w-xl rounded-[2.25rem] p-1"
     >
       <ul
         ref={rail}
@@ -99,8 +99,8 @@ export function BarreOnglets({ actif, onChange }: Props) {
           aria-hidden
           className={`lentille pointer-events-none absolute inset-y-0 left-0 rounded-[1.75rem] border ${
             glisse
-              ? 'border-white/80 bg-white/35 shadow-[inset_0_1px_1px_rgba(255,255,255,0.9),0_6px_16px_-6px_rgba(120,53,15,0.4)] backdrop-blur-[2px] dark:border-white/20 dark:bg-white/10'
-              : 'border-white/60 bg-orange-200/60 shadow-[inset_0_1px_1px_rgba(255,255,255,0.8)] dark:border-white/10 dark:bg-white/10'
+              ? 'border-white/80 bg-white/40 shadow-[inset_0_1px_1px_rgba(255,255,255,0.9),0_6px_16px_-6px_rgba(0,0,0,0.25)] dark:border-white/20 dark:bg-white/15'
+              : 'border-transparent bg-remplissage'
           } ${glisse ? '' : 'lentille-ressort'}`}
           style={{
             width: `${100 / N}%`,
@@ -118,8 +118,8 @@ export function BarreOnglets({ actif, onChange }: Props) {
                   if (e.detail === 0) onChange(o.id)
                 }}
                 aria-current={i === indexActif ? 'page' : undefined}
-                className={`flex w-full flex-col items-center gap-0.5 rounded-[1.75rem] py-2 text-[0.72rem] font-semibold transition-colors duration-200 ${
-                  estActif ? 'text-orange-700 dark:text-orange-400' : 'text-stone-900 dark:text-stone-100'
+                className={`t-legende flex min-h-12 w-full flex-col items-center justify-center gap-0.5 rounded-[1.75rem] py-1.5 font-semibold transition-colors duration-200 ${
+                  estActif ? 'text-accent' : 'text-texte'
                 }`}
               >
                 <span

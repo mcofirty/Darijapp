@@ -35,6 +35,7 @@ jobs:
 
       - name: Générer les MP3 (voix marocaine Jamal)
         id: edge
+        timeout-minutes: 20
         if: steps.manquants.outputs.nombre != '0'
         continue-on-error: true
         run: |

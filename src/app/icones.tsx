@@ -1,6 +1,6 @@
 import type { Onglet } from './onglets'
 
-const props = { viewBox: '0 0 24 24', fill: 'currentColor', 'aria-hidden': true, className: 'h-7 w-7' } as const
+const props = { viewBox: '0 0 24 24', fill: 'currentColor', 'aria-hidden': true, className: 'h-6 w-6' } as const
 
 /** Icônes pleines de la barre d'onglets. */
 export function IconeOnglet({ onglet }: { onglet: Onglet }) {

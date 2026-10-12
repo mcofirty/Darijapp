@@ -39,6 +39,7 @@ VOIX = "ar-MA-JamalNeural"
 MODELE_SECOURS = "facebook/mms-tts-ara"
 ESSAIS = 3
 EN_PARALLELE = 4
+DELAI_MAX = 30  # secondes par fichier : une requête bloquée ne fige pas tout
 
 
 def texte_a_lire(arabe: str) -> str:
@@ -77,7 +78,7 @@ async def generer_edge(taches: list[tuple[str, Path]]) -> list[tuple[str, Path]]
                 try:
                     cible.parent.mkdir(parents=True, exist_ok=True)
                     temporaire = cible.with_suffix(".tmp")
-                    await edge_tts.Communicate(texte, VOIX).save(str(temporaire))
+                    await asyncio.wait_for(edge_tts.Communicate(texte, VOIX).save(str(temporaire)), DELAI_MAX)
                     if temporaire.stat().st_size == 0:
                         raise RuntimeError("fichier vide")
                     temporaire.replace(cible)

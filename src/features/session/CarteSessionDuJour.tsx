@@ -1,15 +1,17 @@
 import { useLiveQuery } from 'dexie-react-hooks'
+import { CircleCheck } from 'lucide-react'
 import { MOTS } from '../../data'
 import { planDeSession } from '../../db/apprentissage'
 import { useResume } from '../../db/useResume'
+import { Bouton } from '../../ui/Boutons'
 
 /** Carte d'accueil : la session du jour, toujours accessible et sans limite. */
 export function CarteSessionDuJour({ onCommencer }: { onCommencer: () => void }) {
-  const { serie, sessionsAujourdhui, motsVus, xpAujourdhui } = useResume()
+  const { sessionsAujourdhui, motsVus, xpAujourdhui } = useResume()
   const plan = useLiveQuery(() => planDeSession(), [sessionsAujourdhui])
   const faite = sessionsAujourdhui > 0
 
-  const resume = plan
+  const contenu = plan
     ? [
         plan.nouveaux.length > 0 && `${plan.nouveaux.length} nouveaux mots`,
         plan.revisions.length > 0 && `${plan.revisions.length} à réviser`,
@@ -17,25 +19,18 @@ export function CarteSessionDuJour({ onCommencer }: { onCommencer: () => void })
     : []
 
   return (
-    <section className="verre-teinte rounded-[2rem] p-5">
-      <p className="text-sm font-semibold uppercase tracking-wide text-orange-100">
-        {faite ? `Bravo · +${xpAujourdhui} XP aujourd'hui` : 'Session du jour'}
-      </p>
-      <h2 className="mt-1 text-2xl font-bold">
-        {faite ? '✓ Série sécurisée pour aujourd’hui' : serie.jours > 0 ? `🔥 ${serie.jours} jour${serie.jours > 1 ? 's' : ''} de suite` : 'C’est parti !'}
+    <section className="mb-8 rounded-[10px] bg-carte p-4">
+      <p className="t-note font-semibold uppercase text-accent">{faite ? `Aujourd'hui · +${xpAujourdhui} XP` : 'Session du jour'}</p>
+      <h2 className="t-titre-2 mt-1 flex items-center gap-2">
+        {faite && <CircleCheck className="h-6 w-6 text-vert" strokeWidth={2.5} aria-hidden />}
+        {faite ? 'Série sécurisée' : 'Prêt pour ta session ?'}
       </h2>
-      <p className="mt-2 text-orange-50">
-        {resume.length > 0 ? resume.join(' · ') : 'Entraînement libre sur les mots déjà vus'}
-        {' · '}
-        {motsVus.size}/{MOTS.length} mots vus
+      <p className="t-sous-titre mt-1 text-texte-2">
+        {contenu.length > 0 ? contenu.join(' · ') : 'Entraînement libre sur les mots déjà vus'} · {motsVus.size}/{MOTS.length} mots vus
       </p>
-      <button
-        type="button"
-        onClick={onCommencer}
-        className="verre verre-interactif mt-4 min-h-14 w-full rounded-2xl text-lg font-bold text-orange-700 dark:text-orange-300"
-      >
+      <Bouton grand className="mt-4 w-full" onClick={onCommencer}>
         {faite ? 'Encore une session' : 'Commencer'}
-      </button>
+      </Bouton>
     </section>
   )
 }

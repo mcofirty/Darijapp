@@ -29,7 +29,7 @@ Hors périmètre de la v1 : grammaire détaillée, apprentissage de l'écriture 
 
 ## Écrans et navigation
 
-L'appli s'organise en 5 onglets dans une barre de navigation basse ; chaque écran affiche en haut le niveau, la barre d'XP et la série en cours. Toutes les leçons restent ouvertes : le Parcours met simplement en avant la prochaine leçon conseillée.
+L'appli s'organise en 5 onglets dans une barre de navigation basse et suit les règles de design d'Apple (iOS 26) : grand titre par écran, listes groupées, couleurs et typographie système, Liquid Glass réservé aux barres et commandes. Le niveau, l'XP et la série s'affichent sur l'accueil et dans Progrès. Toutes les leçons restent ouvertes : le Parcours met simplement en avant la prochaine leçon conseillée.
 
 | Onglet | Rôle | Fonctionnalités |
 | --- | --- | --- |
@@ -229,7 +229,8 @@ Interface :
 - 5 onglets en barre basse : Apprendre, Parcours, Quiz, Progrès, Profil (détail dans « Écrans et navigation ») ;
 - gros boutons audio accessibles au pouce, lecture automatique à l'affichage d'un mot ;
 - aucune lecture de l'arabe exigée : l'arabe est affiché par défaut à côté du latin, et se masque dans les réglages ;
-- interface en français, mode clair et sombre.
+- interface en français, mode clair et sombre ;
+- design conforme aux Human Interface Guidelines d'Apple (couleurs sémantiques, police système et taille de texte réglable, zones tactiles de 44 pt, contrastes AA).
 
 Exigences non fonctionnelles :
 

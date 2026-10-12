@@ -24,7 +24,7 @@ Ne modifie jamais cette section sans demande explicite.
 
 | Brique | Choix |
 | --- | --- |
-| Interface | React + Vite + TypeScript, Tailwind CSS |
+| Interface | React + Vite + TypeScript, Tailwind CSS, icônes Lucide (style SF Symbols) |
 | Hors ligne | PWA via vite-plugin-pwa |
 | Stockage | IndexedDB via Dexie |
 | Audio des mots | `scripts/generate_audio.py` avec la voix marocaine Jamal (`ar-MA-JamalNeural`, via edge-tts), secours facebook/mms-tts-ara ; MP3 dans `public/audio/` |
@@ -49,7 +49,8 @@ Publication : chaque push sur `main` lance la GitHub Action « Publier ». Elle 
 
 ```
 src/
-  app/            navigation à 5 onglets (barre « liquid glass », balayage), layout, en-tête
+  app/            navigation à 5 onglets (barre Liquid Glass, balayage)
+  ui/             composants iOS : Page (grand titre), Section/Ligne/Tuile (listes groupées), Bouton, Segmente, Interrupteur, Vide
   audio/          lecture des mots (MP3, sinon synthèse vocale du téléphone)
   features/
     mots/         fiche d'un mot, liste de mots, bouton audio (partagés)
@@ -77,13 +78,13 @@ docs/
 
 | Onglet | Contenu |
 | --- | --- |
-| Apprendre | Écran d'accueil. Carte « Session du jour » (nouveaux mots, révisions, mots vus, « Commencer » puis « Encore une session », sans limite), puis « Explorer » : guide des sons, 8 thèmes, fiches mots |
+| Apprendre | Écran d'accueil. Grand titre avec la série (flamme). Carte « Session du jour » (nouveaux mots, révisions, mots vus, « Commencer » puis « Encore une session », sans limite), section « Ma progression » (niveau, XP), puis « Explorer » : guide des sons et 8 thèmes en liste groupée, fiches mots |
 | Parcours | Leçons groupées par niveau (niveau 1 « Les bases »), prochaine leçon mise en avant, nœuds Trésor, trophées |
 | Quiz | 5 questions mêlant les 5 exercices |
-| Progrès | Niveau, XP, quêtes, coffre, série, statistiques (prévu) ; bascule vers le Dictionnaire (fait : tous les mots, ✓ sur les mots déjà vus, recherche latin/français/arabe) |
+| Progrès | Contrôle segmenté Tableau de bord / Dictionnaire. Tableau : niveau et XP restants, XP total, XP du jour, série, sessions du jour, mots vus (quêtes, coffre et statistiques au jalon 4). Dictionnaire : recherche iOS, tous les mots avec ✓ sur ceux déjà vus |
 | Profil | Prénom, avatar, genre, objectif, rappel, audio, affichage arabe, mode sombre, export/import/remise à zéro |
 
-Style « liquid glass » sur toute l'appli (transposition web des principes SwiftUI `glassEffect`) : fond coloré flouté (`.fond`), surfaces en verre (`.verre`, `.verre-teinte` orange, `.verre-vert`, `.verre-rouge` dans `src/index.css`, couche `components`), boutons `.verre-interactif` qui gonflent au toucher avec un reflet sous le doigt, et panneau de session qui s'ouvre et se teinte pour devenir le retour (`.deplier`). Mode sombre géré.
+Design : règles d'Apple (Human Interface Guidelines, iOS 26). Couleurs sémantiques système en clair et en sombre (`src/index.css` : fond groupé, cartes, libellés primaire/secondaire, séparateurs), accent orange unique (`--accent` pour le texte, `--accent-plein` pour les boutons, contrastes WCAG AA). Typographie système SF Pro avec l'échelle iOS (classes `.t-grand-titre` à `.t-legende`, en rem sur le corps 17 pt, Dynamic Type via `-apple-system-body`). Chaque écran a un grand titre qui laisse place à une barre de navigation compacte en verre au défilement, et un retour « ‹ ». Contenu en listes groupées façon Réglages (cellules de 44 pt minimum, tuiles d'icônes colorées, chevrons). Liquid Glass (`.verre`) réservé aux commandes : barre d'onglets, barre de navigation compacte, panneau « Continuer » de la session ; jamais sur le contenu. Respect de Réduire les animations et Réduire la transparence.
 
 Navigation : barre d'onglets flottante en verre dépoli, icônes SVG ; une lentille marque l'onglet actif et suit le doigt quand on glisse le long de la barre (étirement selon la vitesse, icônes grossies, retour élastique). Un balayage horizontal de la page change aussi d'onglet, sauf sur les zones marquées `data-sans-balayage`.
 
@@ -158,7 +159,8 @@ Progression d'un mot (IndexedDB) :
 - Safari et le service worker gardent les icônes en cache par URL : pour changer une icône, changer aussi son nom de fichier (`logo-*.png`), puis supprimer et réinstaller l'appli sur l'écran d'accueil.
 - mms-tts-ara lit l'arabe sans voyelles (lettres arabes seules) : impossible de lui indiquer les voyelles du darija. Le journal de l'Action « Publier » affiche les textes lus : le vérifier avant de conclure.
 - La voix lit le champ `arabe` : c'est lui qui fixe la prononciation entendue. Quand l'arabe d'un mot change, supprimer ses MP3 pour qu'ils soient régénérés.
-- Les classes de verre doivent rester dans `@layer components` : hors couche, leur `position: relative` écrase `fixed`/`sticky` de Tailwind (la barre du bas avait disparu).
+- Les classes de `src/index.css` vivent dans `@layer components` : hors couche, elles écraseraient les utilitaires Tailwind (une `position: relative` avait fait disparaître la barre du bas).
+- Le texte blanc sur l'orange clair d'iOS (#ff9500) n'atteint pas le contraste AA : les boutons pleins utilisent `--accent-plein` (#cc4a0a, 4,6:1).
 - Après la génération des MP3, mets à jour la liste des fichiers mis en cache par la PWA pour que l'audio marche hors ligne.
 
 ## Façon de travailler
@@ -187,6 +189,7 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 | 2026-10-10 | Socle PWA : 5 onglets, en-tête, base Dexie v1, réglage « afficher l'arabe » | `src/app/`, `src/db/`, `vite.config.ts` |
 | 2026-10-10 | 152 mots en 8 thèmes avec arabe, prononciation et exemple ; fiche mot, guide des sons, dictionnaire avec recherche | `src/data/`, `src/features/mots/`, `src/features/apprendre/`, `src/features/progres/` |
 | 2026-10-10 | Script de génération audio et lecture avec repli sur la synthèse vocale du téléphone | `scripts/generate_audio.py`, `src/audio/lecteur.ts` |
+| 2026-10-12 | Refonte complète selon les règles de design d'Apple : couleurs et typographie système, grands titres, listes groupées, Liquid Glass sur les commandes, tableau de bord Progrès | `src/index.css`, `src/ui/`, `src/features/` |
 | 2026-10-12 | Voix marocaine Jamal pour les 304 sons, avec secours mms-tts-ara dans l'Action | `scripts/generate_audio.py`, `.github/workflows/publier.yml` |
 | 2026-10-12 | Relecture du contenu : 40 mots ou exemples corrigés (ch7al, derhem/drahem, lma, 9ahwa k7la, maticha, articles alignés entre latin et arabe…) et test de cohérence latin/arabe | `src/data/*.json`, `src/data/data.test.ts` |
 | 2026-10-12 | Logo de l'appli (bulles « A » et « ش ») en favicon, icône d'écran d'accueil et icônes PWA | `public/logo-*.png` (copies `favicon.png` et `apple-touch-icon.png` pour les anciennes versions en cache) |
@@ -216,6 +219,8 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 - 2026-10-12 : la série est calculée à partir de l'historique des sessions (table `sessions`), sans compteur stocké, pour qu'elle ne puisse pas se désynchroniser.
 - 2026-10-12 : sons de retour synthétisés par Web Audio, sans fichier à télécharger.
 - 2026-10-12 : voix des mots = Jamal (`ar-MA-JamalNeural`), voix neuronale marocaine de Microsoft, via edge-tts, choisie par l'utilisateur : mms-tts-ara lit l'arabe sans voyelles comme de l'arabe standard et prononçait mal le darija (« salam » méconnaissable), et aucun modèle libre de darija n'existe. Écart accepté aux principes : un service externe sert pendant la préparation (GitHub Action), jamais dans l'appli, qui reste hors ligne. edge-tts est un accès non officiel qui peut cesser : les MP3 déjà générés restent, et mms-tts-ara sert de secours.
+- 2026-10-12 : refonte complète selon les règles d'Apple (demande de l'utilisateur) : Liquid Glass limité à la couche de commandes, fond système gris au lieu du fond coloré, listes groupées, grands titres ; l'en-tête niveau/XP/série devient une section de l'accueil et du tableau de bord Progrès.
+- 2026-10-12 : icônes Lucide au lieu des SF Symbols, dont la licence réserve l'usage aux applis natives Apple.
 - 2026-10-12 : le code SwiftUI d'Apple (`glassEffect`) ne s'applique qu'aux applis natives ; l'appli reste une PWA et reproduit le liquid glass en CSS. Pas de réfraction (filtres SVG dans `backdrop-filter` non pris en charge par Safari).
 - 2026-10-10 : pas de routeur ; navigation par état React, suffisante pour 5 onglets.
 
