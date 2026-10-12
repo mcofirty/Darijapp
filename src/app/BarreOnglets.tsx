@@ -84,11 +84,11 @@ export function BarreOnglets({ actif, onChange }: Props) {
     <nav
       aria-label="Navigation principale"
       data-sans-balayage
-      className="verre fixed inset-x-4 bottom-[max(0.5rem,env(safe-area-inset-bottom))] z-20 mx-auto max-w-xl rounded-[2.25rem] p-1"
+      className="verre fixed inset-x-[21px] bottom-[max(0.5rem,env(safe-area-inset-bottom))] z-20 mx-auto h-[62px] max-w-xl rounded-full px-[9px] py-1"
     >
       <ul
         ref={rail}
-        className="relative flex touch-none select-none"
+        className="relative flex h-full touch-none select-none"
         onPointerDown={debut}
         onPointerMove={deplacement}
         onPointerUp={fin}
@@ -97,18 +97,18 @@ export function BarreOnglets({ actif, onChange }: Props) {
         {/* Lentille de verre */}
         <li
           aria-hidden
-          className={`lentille pointer-events-none absolute inset-y-0 left-0 rounded-[1.75rem] ${
+          className={`lentille pointer-events-none absolute inset-y-0 -left-[5px] rounded-full ${
             glisse ? 'lentille-goutte' : 'bg-remplissage lentille-ressort'
           }`}
           style={{
-            width: `${100 / N}%`,
-            transform: `translateX(${position * 100}%) scale(${etire}, ${glisse ? 1.08 / Math.sqrt(etire) : 1})`,
+            width: `calc(${100 / N}% + 10px)`,
+            transform: `translateX(calc(${position} * (100% - 10px))) scale(${etire}, ${glisse ? 1.08 / Math.sqrt(etire) : 1})`,
           }}
         />
         {ONGLETS.map((o, i) => {
           const estActif = glisse ? ongletLePlusProche(position, N) === i : i === indexActif
           return (
-            <li key={o.id} className="relative flex-1">
+            <li key={o.id} className="relative flex flex-1">
               <button
                 type="button"
                 onClick={(e) => {
@@ -116,7 +116,7 @@ export function BarreOnglets({ actif, onChange }: Props) {
                   if (e.detail === 0) onChange(o.id)
                 }}
                 aria-current={i === indexActif ? 'page' : undefined}
-                className={`flex min-h-[50px] w-full flex-col items-center justify-center gap-[3px] rounded-[1.75rem] py-1.5 text-[0.625rem] font-medium leading-none transition-colors duration-200 ${
+                className={`flex w-full flex-col items-center justify-center gap-[2px] rounded-full text-[11px] font-medium leading-none tracking-[0.01em] transition-colors duration-200 ${
                   estActif ? 'text-accent' : 'text-texte'
                 }`}
               >
@@ -124,7 +124,7 @@ export function BarreOnglets({ actif, onChange }: Props) {
                   className="transition-transform duration-150"
                   style={{ transform: `scale(${glisse ? grossissement(i - position) : 1})` }}
                 >
-                  <IconeOnglet onglet={o.id} actif={estActif} />
+                  <IconeOnglet onglet={o.id} />
                 </span>
                 {o.libelle}
               </button>
