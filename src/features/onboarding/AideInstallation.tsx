@@ -10,9 +10,9 @@ const ETAPES: { icone?: LucideIcon; texte: string; detail?: string }[] = [
   {
     icone: Share,
     texte: 'Touche le bouton Partager',
-    detail: 'Le carré avec une flèche, en bas de Safari. Sur iOS 26, touche d’abord « ⋯ ».',
+    detail: 'En bas de Safari. Sur iOS 26, touche d’abord « ⋯ ».',
   },
-  { icone: SquarePlus, texte: 'Touche « Sur l’écran d’accueil »', detail: 'Fais défiler la liste si tu ne le vois pas.' },
+  { icone: SquarePlus, texte: 'Touche « Sur l’écran d’accueil »', detail: 'Fais défiler si tu ne le vois pas.' },
   { texte: 'Touche « Ajouter »', detail: 'En haut à droite.' },
   { texte: 'Ouvre Darijaapp depuis sa nouvelle icône' },
 ]
@@ -66,15 +66,18 @@ export function AideInstallation() {
       >
         {/* Sur petit écran (iPhone SE), seules les explications défilent : « Compris » reste visible. */}
         <div className="min-h-0 flex-1 overflow-y-auto px-5 pb-2 pt-6">
-          <img src={`${import.meta.env.BASE_URL}logo-180.png`} alt="" className="mx-auto mb-3 h-16 w-16 rounded-[14px] shadow-[0_4px_12px_rgba(0,0,0,0.15)]" />
+          <img src={`${import.meta.env.BASE_URL}logo-180.png`} alt="" className="mx-auto mb-2 h-12 w-12 rounded-[11px] shadow-[0_4px_12px_rgba(0,0,0,0.15)]" />
           <h2 id="installation-titre" className="t-titre-2 text-center">
             Ajoute Darijaapp à ton écran d’accueil
           </h2>
+          <p className="t-corps mt-2 text-center font-semibold text-accent">
+            L’ajout à l’écran d’accueil enregistre ta progression. Dans Safari, elle peut être effacée.
+          </p>
           <p className="t-sous-titre mt-1 text-center text-texte-2">
-            Elle s’ouvrira en plein écran depuis son icône et marchera même sans réseau.
+            Darijaapp s’ouvrira aussi en plein écran et marchera sans réseau.
           </p>
 
-          <ol className="mt-5 space-y-3">
+          <ol className="mt-4 space-y-2.5">
             {ETAPES.map(({ icone: Icone, texte, detail }, i) => (
               <li key={texte} className="flex items-start gap-3">
                 <span className="t-appel flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent-plein font-semibold text-white">
