@@ -75,8 +75,8 @@ export function AjoutMots() {
           note="Les trois champs sont obligatoires. Écris 3 pour ع, 7 pour ح, 9 pour ق, kh pour خ, gh pour غ et ch pour ش."
         >
           <Champ libelle="En français" valeur={champs.fr} erreur={erreurs.fr} onChange={(v) => maj('fr', v)} />
-          <Champ libelle="Avec nos lettres" valeur={champs.latin} erreur={erreurs.latin} onChange={(v) => maj('latin', v)} />
-          <Champ libelle="En arabe" valeur={champs.arabe} erreur={erreurs.arabe} arabe onChange={(v) => maj('arabe', v)} />
+          <Champ libelle="Écriture latine (ex. 3afak)" valeur={champs.latin} erreur={erreurs.latin} onChange={(v) => maj('latin', v)} />
+          <Champ libelle="Écriture arabe (ex. عافاك)" valeur={champs.arabe} erreur={erreurs.arabe} arabe onChange={(v) => maj('arabe', v)} />
         </Section>
         <div className="mb-8 flex gap-3">
           <Bouton type="submit" grand className="flex-1">
