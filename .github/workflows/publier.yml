@@ -1,72 +1,29 @@
-# Génère les MP3 manquants (voix Jamal, Azure Speech), lance les tests, puis publie l'appli sur GitHub Pages.
-# Se déclenche à chaque push sur main, ou à la main depuis l'onglet Actions.
+# Lance les tests, construit l'appli et la publie sur GitHub Pages, en 2 minutes environ.
+# Se déclenche à chaque push sur main, à la fin de chaque génération « Audio » (pour publier les
+# nouveaux MP3, que les commits du bot ne déclenchent pas), ou à la main depuis l'onglet Actions.
 name: Publier
 
 on:
   push:
     branches: [main]
+  workflow_run:
+    workflows: [Audio]
+    types: [completed]
   workflow_dispatch:
 
+# Seule la dernière version compte : une publication en attente ou en cours est remplacée par la suivante.
 concurrency:
-  group: publier
-  cancel-in-progress: false
+  group: pages
+  cancel-in-progress: true
 
 jobs:
-  audio:
-    runs-on: ubuntu-latest
-    timeout-minutes: 170
-    permissions:
-      contents: write
-    outputs:
-      sha: ${{ steps.commit.outputs.sha }}
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Compter les MP3 manquants
-        id: manquants
-        run: |
-          n=$(python3 -c "import sys; sys.path.insert(0, 'scripts'); import generate_audio as g; print(len(g.lister_a_generer(None, False)))")
-          echo "nombre=$n" >> "$GITHUB_OUTPUT"
-          echo "$n fichier(s) audio à générer"
-
-      - uses: actions/setup-python@v5
-        if: steps.manquants.outputs.nombre != '0'
-        with:
-          python-version: '3.12'
-
-      - name: Générer les MP3 (voix marocaine Jamal, Azure Speech)
-        id: azure
-        timeout-minutes: 150
-        if: steps.manquants.outputs.nombre != '0'
-        continue-on-error: true
-        env:
-          AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
-          AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
-        run: python scripts/generate_audio.py
-
-      # Même si la génération s'est arrêtée en route (quota, délai), on garde les MP3 déjà faits :
-      # la prochaine exécution reprend où celle-ci s'est arrêtée.
-      - name: Enregistrer les MP3 dans le repo
-        id: commit
-        if: always()
-        run: |
-          if [ -n "$(git status --porcelain public/audio)" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add public/audio/*.mp3
-            git commit -m "feat: génère les MP3 manquants"
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
-          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-
   build:
-    needs: audio
     runs-on: ubuntu-latest
     steps:
+      # Toujours la dernière version de main (code et MP3).
       - uses: actions/checkout@v4
         with:
-          ref: ${{ needs.audio.outputs.sha }}
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: 22

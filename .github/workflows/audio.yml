@@ -1,0 +1,65 @@
+# Génère les MP3 manquants (voix marocaine Jamal, Azure Speech) et les enregistre dans le repo.
+# Se déclenche quand les mots ou le script audio changent, ou à la main depuis l'onglet Actions.
+# La mise en ligne est faite par « Publier », relancé automatiquement à la fin (workflow_run).
+name: Audio
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/data/**'
+      - 'scripts/generate_audio.py'
+  workflow_dispatch:
+
+# Une seule génération à la fois (même groupe que l'ancienne Action « Publier », qui générait aussi l'audio) :
+# deux générations en parallèle dépasseraient la limite d'Azure et se disputeraient les commits.
+concurrency:
+  group: publier
+  cancel-in-progress: false
+
+jobs:
+  audio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 170
+    permissions:
+      contents: write
+    steps:
+      # Toujours la dernière version de main, avec les MP3 déjà faits par une génération précédente.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Compter les MP3 manquants
+        id: manquants
+        run: |
+          n=$(python3 -c "import sys; sys.path.insert(0, 'scripts'); import generate_audio as g; print(len(g.lister_a_generer(None, False)))")
+          echo "nombre=$n" >> "$GITHUB_OUTPUT"
+          echo "$n fichier(s) audio à générer"
+
+      - uses: actions/setup-python@v5
+        if: steps.manquants.outputs.nombre != '0'
+        with:
+          python-version: '3.12'
+
+      - name: Générer les MP3 (voix marocaine Jamal, Azure Speech)
+        timeout-minutes: 150
+        if: steps.manquants.outputs.nombre != '0'
+        continue-on-error: true
+        env:
+          AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
+          AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
+        run: python scripts/generate_audio.py
+
+      # Même si la génération s'est arrêtée en route (quota, délai), on garde les MP3 déjà faits :
+      # la prochaine exécution reprend où celle-ci s'est arrêtée.
+      - name: Enregistrer les MP3 dans le repo
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain public/audio)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add public/audio/*.mp3
+            git commit -m "feat: génère les MP3 manquants"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi

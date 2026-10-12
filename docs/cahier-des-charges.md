@@ -179,7 +179,7 @@ Progression d'un mot, stockée sur le téléphone :
 }
 ```
 
-Génération de l'audio : un script Python, lancé automatiquement par GitHub Actions à chaque modification des mots, transforme l'écriture arabe de chaque mot et de chaque exemple en fichier MP3 avec la voix neuronale marocaine Jamal de Microsoft (ar-MA-JamalNeural, via edge-tts). Si ce service ne répond pas, le modèle libre [facebook/mms-tts-ara](https://huggingface.co/facebook/mms-tts-ara) prend le relais. Les fichiers sont générés une fois, rangés dans `public/audio/` et embarqués dans l'appli, qui reste hors ligne.
+Génération de l'audio : un script Python, lancé automatiquement par GitHub Actions à chaque modification des mots, transforme l'écriture arabe de chaque mot et de chaque exemple en fichier MP3 avec la voix neuronale marocaine Jamal de Microsoft (ar-MA-JamalNeural, par l'API Azure Speech, offre gratuite). Tant qu'un MP3 manque, la voix arabe de l'iPhone lit le mot. La mise en ligne est une Action séparée, qui publie un changement en 2 minutes environ. Les fichiers sont générés une fois, rangés dans `public/audio/` et embarqués dans l'appli, qui reste hors ligne.
 
 Cette voix a un accent marocain mais reste une synthèse : elle sert de repère, et la fonction « Remplacer l'audio » permet d'y substituer une vraie voix marocaine dès que tu en as une.
 

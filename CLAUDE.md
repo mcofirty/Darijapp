@@ -31,7 +31,7 @@ Ne modifie jamais cette section sans demande explicite.
 | Enregistrement | MediaRecorder |
 | Score de prononciation | MFCC (Meyda) + DTW, dans `src/scoring/` |
 | Tests | Vitest |
-| Publication | GitHub Pages, via la GitHub Action `.github/workflows/publier.yml` |
+| Publication | GitHub Pages, via la GitHub Action « Publier » (`.github/workflows/publier.yml`) ; MP3 par l'Action « Audio » (`.github/workflows/audio.yml`) |
 
 ## Commandes
 
@@ -42,7 +42,7 @@ npm run build                       # build de production dans dist/
 python scripts/generate_audio.py    # génère les MP3 manquants avec Azure (clés en variables d'environnement ; options --theme, --force, --apercu, --moteur mms)
 ```
 
-Publication : chaque push sur `main` lance la GitHub Action « Publier ». Elle génère les MP3 manquants avec la voix Jamal (Azure, environ 20 fichiers par minute, la première fois ~1h30 pour les 1 834 fichiers) et commite ce qui est fait même si elle s'arrête en route (`github-actions[bot]`), la suivante reprenant, lance les tests, construit l'appli et la publie sur https://mcofirty.github.io/Darijapp/. Pense à faire `git pull` avant de travailler, l'Action pouvant avoir ajouté des MP3. Le script Azure n'a pas de dépendance (secours mms : `torch transformers` et ffmpeg). Azure et Hugging Face sont bloqués dans l'environnement cloud de Claude Code, ouverts sur GitHub Actions : la génération se fait toujours par l'Action.
+Publication : chaque push sur `main` lance l'Action « Publier » (tests, build, mise en ligne sur https://mcofirty.github.io/Darijapp/, environ 2 min ; une publication en attente est remplacée par la suivante). Quand `src/data/` ou le script audio changent, l'Action « Audio » génère les MP3 manquants avec la voix Jamal (Azure, environ 20 fichiers par minute) sur la dernière version de `main`, commite ce qui est fait même si elle s'arrête en route (`github-actions[bot]`), la suivante reprenant ; à sa fin, « Publier » se relance seule (`workflow_run`) pour mettre les MP3 en ligne. Pense à faire `git pull` avant de travailler, l'Action pouvant avoir ajouté des MP3. Le script Azure n'a pas de dépendance (secours mms : `torch transformers` et ffmpeg). Azure et Hugging Face sont bloqués dans l'environnement cloud de Claude Code, ouverts sur GitHub Actions : la génération se fait toujours par l'Action.
 
 ## Arborescence cible
 
@@ -182,6 +182,7 @@ Progression d'un mot (IndexedDB) :
 - `overflow-x: hidden` sur un conteneur en fait une zone de défilement : `position: sticky` à l'intérieur ne colle plus à la fenêtre. Utiliser `overflow-x: clip` (racine de `App.tsx`).
 - `opacity` sur un élément `.verre` (ex. `.pressable:active`) en fait une racine d'arrière-plan : le verre devient opaque pendant l'appui. Les commandes en verre grossissent au toucher, sans opacité.
 - Le Chromium de Playwright ne lit pas le H.264 (erreur 4 sur `lancement.mp4`) : pour tester la lecture de la vidéo d'ouverture, servir une copie en VP9 (`ffmpeg -c:v libvpx-vp9`), sans la commiter.
+- Un commit poussé par l'Action (`GITHUB_TOKEN`, `github-actions[bot]`) ne déclenche aucun workflow `push` : « Publier » est relancée par `workflow_run` à la fin d'« Audio ». Les deux Actions font un checkout de `main` et non du commit déclencheur, qui n'a pas les MP3 ajoutés entre-temps par le bot.
 - Après la génération des MP3, mets à jour la liste des fichiers mis en cache par la PWA pour que l'audio marche hors ligne.
 
 ## Façon de travailler
@@ -221,12 +222,12 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 | 2026-10-12 | Nom « Darijaapp » (icône d'écran d'accueil, titre) et feuille d'aide à l'installation sur l'écran d'accueil avec « Ne plus afficher » | `src/features/onboarding/AideInstallation.tsx`, `src/app/installation.ts`, `vite.config.ts`, `index.html` |
 | 2026-10-12 | Liquid Glass d'iOS 26 sur toutes les commandes (verre à bords réfractants, retour rond, bord flou, session, bilan, alertes, recherche, contrôles segmentés et interrupteur en goutte de verre) | `src/ui/`, `src/index.css`, `src/features/session/`, `src/features/progres/Dictionnaire.tsx` |
 | 2026-10-12 | Angles et listes aux mesures des Réglages de l'iPhone : rayons de 26 pt concentriques autour des boutons, marges de 20 pt, cellules de 56 pt, séparateurs en retrait, titres de section en 17 pt | `src/index.css`, `src/ui/Liste.tsx`, `src/ui/Page.tsx` |
+| 2026-10-12 | Mise en ligne en 2 min, séparée de la génération audio ; Dictionnaire affiché progressivement | `.github/workflows/publier.yml`, `.github/workflows/audio.yml`, `src/features/mots/ListeMots.tsx` |
 | 2026-10-12 | Animation d'ouverture : vidéo de 3 s de l'utilisateur sur fond sombre à chaque lancement, passée d'un toucher, image finale avec Réduire les animations ou si la vidéo ne démarre pas | `public/lancement.mp4`, `public/lancement-fin.jpg`, `src/app/lancement.ts`, `index.html` |
 
 ## Décisions
 
 - 2026-10-11 : appli 100 % locale, publiée sur GitHub Pages. Pas de serveur ni de compte à maintenir.
-- 2026-10-11 : audio généré par synthèse vocale (mms-tts-ara), remplaçable mot par mot par une vraie voix. Aucun enregistrement humain n'est nécessaire.
 - 2026-10-11 : score par comparaison acoustique MFCC + DTW sur l'appareil. Hors ligne, et la voix reste privée.
 - 2026-10-11 : rappel quotidien par fichier .ics. Une notification push exigerait un serveur.
 
@@ -237,13 +238,11 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 - 2026-10-11 : publication et génération des MP3 par GitHub Actions, pour que tout se fasse sans ordinateur (l'utilisateur n'utilise que son iPhone).
 - 2026-10-11 : repo public, pour que GitHub Pages soit gratuit ; aucune donnée personnelle dans le repo, le prénom de l'utilisateur a été retiré des exemples.
 - 2026-10-12 : effet « liquid glass » fait en CSS (backdrop-filter, transition élastique) et en Pointer Events, sans bibliothèque d'animation, pour rester léger et fluide sur iPhone ; désactivé avec « Réduire les animations ».
-- 2026-10-12 : l'appli garde ses couleurs orange et crème ; la barre reprend le design fourni par l'utilisateur dans ces couleurs.
 - 2026-10-12 : nouveaux mots illimités (demande de l'utilisateur) : 5 par session, autant de sessions que voulu ; pas de cœurs ni de blocage.
 - 2026-10-12 : la session du jour remplace les « 5 cartes du jour » du cahier des charges ; les exercices Dis-le et Distingue les sons y entreront au jalon 3.
 - 2026-10-12 : les réponses ne sont enregistrées qu'en fin de session ; quitter en cours de route ne change rien, pour garder la répétition espacée cohérente.
 - 2026-10-12 : la série est calculée à partir de l'historique des sessions (table `sessions`), sans compteur stocké, pour qu'elle ne puisse pas se désynchroniser.
 - 2026-10-12 : sons de retour synthétisés par Web Audio, sans fichier à télécharger.
-- 2026-10-12 : voix des mots = Jamal (`ar-MA-JamalNeural`), voix neuronale marocaine de Microsoft, via edge-tts, choisie par l'utilisateur : mms-tts-ara lit l'arabe sans voyelles comme de l'arabe standard et prononçait mal le darija (« salam » méconnaissable), et aucun modèle libre de darija n'existe. Écart accepté aux principes : un service externe sert pendant la préparation (GitHub Action), jamais dans l'appli, qui reste hors ligne. edge-tts est un accès non officiel qui peut cesser : les MP3 déjà générés restent, et mms-tts-ara sert de secours.
 - 2026-10-12 : Safari ne déforme pas l'arrière-plan (pas de filtre SVG dans `backdrop-filter`) : le Liquid Glass est imité par deux couches `backdrop-filter` en pseudo-éléments (centre et bords), liseré et dispersion en ombres internes. Pas de vraie réfraction sur iPhone en web.
 - 2026-10-12 : couleurs principales du drapeau marocain (demande de l'utilisateur), à la place de l'orange ; erreurs en rouge et réussites en vert restent lisibles car toujours accompagnées d'une icône (croix, coche).
 - 2026-10-12 : réglage d'apparence stocké dans le profil Dexie (`apparence`), copié dans localStorage uniquement pour l'appliquer avant le premier affichage (sans flash) ; Dexie reste la référence.
@@ -252,8 +251,6 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 - 2026-10-12 : import du fichier de 1 739 entrées (demande de l'utilisateur) : les 130 mots déjà présents (même latin ou simple variante d'orthographe, comme mr7ba/mar7ba) gardent leur version, avec MP3 et progression ; les doublons du fichier sont fusionnés (sens réunis par « / ») ; les thèmes du fichier qui recoupent un thème existant le complètent, les autres deviennent 23 thèmes ajoutés après les 8 premiers ; niveau 1, 2 ou 3 selon le numéro du thème (1-10, 11-21, 22-31) ; première lettre du français en minuscule comme le reste du programme.
 - 2026-10-12 : retour à de vrais MP3, voix Jamal par l'API officielle Azure Speech (demande de l'utilisateur, qui a créé le compte et les secrets) : edge-tts était bloqué (403) et les voix iPhone / mms lisent de l'arabe standard. Écart assumé à « aucune clé d'API » : la clé ne sert que dans l'Action, jamais dans l'appli ni le repo. Offre F0 : 500 000 caractères par mois (le programme en pèse 13 000) et 20 requêtes par minute, d'où un fichier toutes les 3,2 s et une première génération d'environ 1h30 ; l'Action est prévue pour reprendre où elle s'est arrêtée.
 - 2026-10-12 : MP3 hors du précache de la PWA (cache à l'exécution `CacheFirst` avec `rangeRequests`, indispensable à Safari pour lire l'audio depuis le cache) : le premier chargement reste léger, chaque mot écouté une fois marche ensuite hors ligne. Un mot jamais écouté hors ligne retombe sur la voix de l'iPhone.
-- 2026-10-12 : les 152 premiers mots passent aussi à la voix de l'iPhone (demande de l'utilisateur) : leurs MP3 mms-tts-ara prononçaient mal le darija. Les 304 MP3 sont supprimés (5,4 Mo de moins au premier chargement ; ils restent dans l'historique git) et leurs champs `audio` vidés pour que l'Action ne les régénère pas.
-- 2026-10-12 : mots importés sans MP3, lus par la voix arabe de l'iPhone (choix de l'utilisateur) : pas de voix darija disponible (Jamal bloquée, mms-tts-ara aussi mauvais), et 1 530 MP3 auraient alourdi l'appli d'environ 30 Mo. Champ `audio` vide plutôt qu'un chemin vers un MP3 absent, pour que le script audio les ignore.
 - 2026-10-12 : latin du fichier corrigé seulement quand il contredisait l'arabe (sahb → sa7b, frash → frach, short → chort, hmel → 7mel, qbel → 9bel, lettres doublées 77/99 simplifiées) ; ṭ, ṣ, ə remplacés par t, s, e.
 - 2026-10-12 : l'appli s'appelle « Darijaapp » (demande de l'utilisateur) : nom du manifeste, nom sous l'icône (`apple-mobile-web-app-title`) et titre de la page. L'adresse reste …/Darijapp/ (nom du repo).
 - 2026-10-12 : « Ne plus afficher » de l'aide à l'installation stocké dans le profil Dexie (`masquerAideInstallation`, champ non indexé, sans migration) ; l'aide attend la lecture du profil pour ne pas clignoter.
@@ -266,15 +263,16 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 - 2026-10-12 : angles continus d'Apple par `corner-shape: superellipse(1.5)` sous `@supports` (Chrome), sans imitation par `clip-path` ou `mask`, qui casseraient le flou du verre ; Safari ne le prend pas encore en charge et garde des arcs de cercle aux mêmes rayons. Rayons concentriques en `calc(px + rem)` pour rester justes avec Dynamic Type.
 - 2026-10-12 : marges et hauteurs de liste en px fixes (jetons `--spacing-marge` 20 px et `--spacing-ligne` 56 px), copiées d'une capture des Réglages de l'utilisateur, plutôt qu'en rem (1 rem = 17 px dans l'appli, qui donnait 17 pt de marge).
 - 2026-10-12 : animation d'ouverture = la vidéo de l'utilisateur telle quelle (demande de l'utilisateur, nom complet visible accepté dans le repo public) ; voile sombre écrit dans `index.html` pour éviter un flash blanc avant le JS ; vidéo précachée et lue depuis un blob, car Safari la demande par requêtes Range que le précache de la PWA ne sert pas.
+- 2026-10-12 : génération audio et mise en ligne séparées en deux Actions : une génération de 1h30 bloquait la publication de tout changement de code (et l'exécution suivante, partie d'un commit sans les MP3, aurait tout regénéré).
+- 2026-10-12 : listes de mots affichées par tranches (60, puis 120 à l'approche du bas, `IntersectionObserver`) au lieu des 1 682 lignes d'un coup.
 - 2026-10-10 : pas de routeur ; navigation par état React, suffisante pour 5 onglets.
 
 ## Points en suspens
 
-- Voix : la génération des MP3 Jamal dépend des secrets GitHub `AZURE_SPEECH_KEY` et `AZURE_SPEECH_REGION` (non testée de bout en bout : vérifier le journal de l'Action « Publier » après le premier push). En attendant les MP3, la voix de l'iPhone lit (arabe standard). Si Azure refuse (401/403), vérifier la clé, la région et le niveau F0.
+- Voix : la génération des MP3 Jamal dépend des secrets GitHub `AZURE_SPEECH_KEY` et `AZURE_SPEECH_REGION` (non testée de bout en bout : vérifier le journal de l'Action « Audio »). En attendant les MP3, la voix de l'iPhone lit (arabe standard). Si Azure refuse (401/403), vérifier la clé, la région et le niveau F0.
 - Score de prononciation (jalon 3) : les MP3 Jamal serviront de référence (MFCC + DTW) ; envisagé : ajouter la voix féminine Mouna (`ar-MA-MounaNeural`) et garder la meilleure des deux notes. Enregistrement et auto-évaluation à construire.
 - Le contenu a été relu et corrigé par Claude (cohérence latin/arabe, tournures), mais pas par un locuteur natif : signaler les erreurs pour corriger les JSON. L'arabe des 1 530 mots importés a été écrit par Claude d'après le latin et le français, sans relecture.
 - Mots importés : pas d'explication de prononciation ni d'exemple (la fiche montre seulement les sons 3, 7, 9, kh, gh, ch).
-- Dictionnaire et liste « Mes mots » affichent les 1 682 mots d'un coup : environ 1,5 s de rendu dans Chromium, peut-être plus lent sur iPhone ; prévoir un affichage progressif si c'est gênant. Quand l'arabe d'un mot change, supprimer son MP3 pour que l'Action le régénère.
 - Le Dictionnaire montre tous les mots, avec un ✓ sur ceux déjà vus (le cahier des charges ne prévoyait que les mots vus).
 - Sur iPhone, l'appli installée sur l'écran d'accueil a sa propre mémoire, séparée de Safari (non vérifié sur appareil) : la progression faite dans Safari ne suit pas, et un lien `#mot=…` ouvert dans Safari ajoute sans doute le mot à Safari, pas à l'appli installée. À vérifier, puis prévoir un contournement (copier le lien et l'ouvrir dans l'appli, ou export/import).
 - Mes mots : pas de sauvegarde tant que l'export/import du Profil n'existe pas (effacer les données du site efface les mots ajoutés). Pas de prononciation ni d'exemple pour ces mots.
