@@ -23,12 +23,14 @@ export interface Profil {
 /** Apparence de l'appli : suit l'iPhone, ou forcée en clair ou en sombre. */
 export type Apparence = 'systeme' | 'clair' | 'sombre'
 
+/** Mot ajouté par l'utilisateur depuis la page cachée « #ajout » : les trois champs sont obligatoires. */
 export interface MotPerso {
   id: string
   latin: string
+  arabe: string
   fr: string
-  arabe: string | null
-  audio: Blob | null
+  /** Horodatage de création, pour garder l'ordre d'ajout. */
+  creeLe: number
 }
 
 export interface SessionFaite {
@@ -65,6 +67,10 @@ export class DarijaDB extends Dexie {
     // v2 : historique des sessions (XP, série). Ajout de table seul : rien n'est perdu.
     this.version(2).stores({
       sessions: '++id, date',
+    })
+    // v3 : mots ajoutés par l'utilisateur (index sur la date de création). Aucune donnée existante n'est touchée.
+    this.version(3).stores({
+      motsPerso: 'id, creeLe',
     })
   }
 }

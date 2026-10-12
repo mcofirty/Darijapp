@@ -1,7 +1,7 @@
 import { BookOpen, Flame, Sparkles, Star, Trophy } from 'lucide-react'
 import { useState } from 'react'
-import { MOTS } from '../../data'
 import type { Mot } from '../../data/types'
+import { useMots } from '../../db/motsPerso'
 import { useResume } from '../../db/useResume'
 import { Segmente } from '../../ui/Boutons'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
@@ -13,6 +13,7 @@ export function Progres() {
   const [vue, setVue] = useState<'tableau' | 'dictionnaire'>('tableau')
   const [mot, setMot] = useState<Mot | null>(null)
   const { niveau, xpTotal, xpAujourdhui, serie, sessionsAujourdhui, motsVus } = useResume()
+  const MOTS = useMots()
 
   if (mot) return <FicheMot mot={mot} retour={{ libelle: 'Progrès', action: () => setMot(null) }} />
 

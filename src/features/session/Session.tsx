@@ -2,8 +2,8 @@ import { useRef, useState } from 'react'
 import { jouer } from '../../audio/lecteur'
 import { sonReponse } from '../../audio/effets'
 import { CircleCheck, CircleX, X } from 'lucide-react'
-import { MOTS } from '../../data'
 import type { Mot } from '../../data/types'
+import { useMots } from '../../db/motsPerso'
 import { enregistrerSession, type BilanSession } from '../../db/apprentissage'
 import { Resultats, etapeARefaire, type Etape } from '../../exercices/session'
 import { Bouton } from '../../ui/Boutons'
@@ -29,6 +29,7 @@ export function Session({ etapes: depart, nouveaux, entrainement, onFermer, onEn
   const [retour, setRetour] = useState<Retour | null>(null)
   const [bilan, setBilan] = useState<BilanSession | null>(null)
   const resultats = useRef(new Resultats())
+  const MOTS = useMots()
   const etape = etapes[index]
 
   function repondre(juste: boolean, mot: Mot) {

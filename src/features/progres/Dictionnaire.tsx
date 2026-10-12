@@ -1,13 +1,14 @@
 import { Search } from 'lucide-react'
 import { useState } from 'react'
-import { MOTS, chercherMots } from '../../data'
+import { chercherMots } from '../../data'
 import type { Mot } from '../../data/types'
+import { useMots } from '../../db/motsPerso'
 import { ListeMots } from '../mots/ListeMots'
 
 /** Champ de recherche et liste de tous les mots. */
 export function Dictionnaire({ onChoisir }: { onChoisir: (mot: Mot) => void }) {
   const [requete, setRequete] = useState('')
-  const resultats = chercherMots(MOTS, requete)
+  const resultats = chercherMots(useMots(), requete)
   return (
     <>
       <label className="mb-6 flex h-9 items-center gap-1.5 rounded-[10px] bg-remplissage px-2 text-texte-2">

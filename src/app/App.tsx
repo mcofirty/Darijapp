@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type TouchEvent } from 'react'
 import { useProfil } from '../db/useProfil'
+import { AjoutMots } from '../features/ajout/AjoutMots'
 import { Apprendre } from '../features/apprendre/Apprendre'
 import { Parcours } from '../features/parcours/Parcours'
 import { Profil } from '../features/profil/Profil'
@@ -16,7 +17,17 @@ interface Toucher {
   t: number
 }
 
+/** Page cachée d'ajout de mots : accessible seulement par le lien « …/Darijapp/#ajout ». */
+const LIEN_AJOUT = '#ajout'
+
 export default function App() {
+  const [ajout, setAjout] = useState(window.location.hash === LIEN_AJOUT)
+  useEffect(() => {
+    const suivre = () => setAjout(window.location.hash === LIEN_AJOUT)
+    window.addEventListener('hashchange', suivre)
+    return () => window.removeEventListener('hashchange', suivre)
+  }, [])
+
   const [onglet, setOnglet] = useState<Onglet>('apprendre')
   const [entree, setEntree] = useState<'entree-droite' | 'entree-gauche' | ''>('')
   const depart = useRef<Toucher | null>(null)
@@ -30,6 +41,11 @@ export default function App() {
     media.addEventListener('change', suivre)
     return () => media.removeEventListener('change', suivre)
   }, [apparence])
+
+  function fermerAjout() {
+    history.replaceState(null, '', window.location.pathname + window.location.search)
+    setAjout(false)
+  }
 
   function changer(cible: Onglet) {
     const de = ONGLETS.findIndex((o) => o.id === onglet)
@@ -59,6 +75,14 @@ export default function App() {
     if (sens === 0) return
     const vers = ONGLETS.findIndex((o) => o.id === onglet) + sens
     if (vers >= 0 && vers < ONGLETS.length) changer(ONGLETS[vers].id)
+  }
+
+  if (ajout) {
+    return (
+      <div className="min-h-dvh overflow-x-hidden pb-16">
+        <AjoutMots onFermer={fermerAjout} />
+      </div>
+    )
   }
 
   return (

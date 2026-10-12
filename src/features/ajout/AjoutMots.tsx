@@ -1,0 +1,135 @@
+import { Trash2 } from 'lucide-react'
+import { useLiveQuery } from 'dexie-react-hooks'
+import { useState, type FormEvent } from 'react'
+import { motValide, validerMot, type ChampsMot } from '../../data/motsPerso'
+import { ajouterMot, lireMotsPerso, modifierMot, supprimerMot } from '../../db/motsPerso'
+import { Bouton, Vide } from '../../ui/Boutons'
+import { Ligne, Section } from '../../ui/Liste'
+import { Page } from '../../ui/Page'
+import { BoutonAudio } from '../mots/BoutonAudio'
+
+const VIDE: ChampsMot = { latin: '', arabe: '', fr: '' }
+
+interface ChampProps {
+  libelle: string
+  valeur: string
+  erreur?: string
+  arabe?: boolean
+  onChange: (v: string) => void
+}
+
+function Champ({ libelle, valeur, erreur, arabe = false, onChange }: ChampProps) {
+  return (
+    <label className="block px-4 py-2">
+      <span className="t-note uppercase text-texte-2">{libelle}</span>
+      <input
+        data-sans-balayage
+        value={valeur}
+        onChange={(e) => onChange(e.target.value)}
+        dir={arabe ? 'rtl' : 'ltr'}
+        lang={arabe ? 'ar' : undefined}
+        autoCapitalize="none"
+        autoCorrect="off"
+        spellCheck={false}
+        className={`block min-h-11 w-full bg-transparent outline-none ${arabe ? 'arabe text-[1.4rem]' : 't-corps'}`}
+      />
+      {erreur && <span className="t-note block text-accent">{erreur}</span>}
+    </label>
+  )
+}
+
+/** Page cachée (lien « #ajout ») : ajouter, modifier et supprimer ses propres mots. */
+export function AjoutMots({ onFermer }: { onFermer: () => void }) {
+  const mots = useLiveQuery(() => lireMotsPerso(), [])
+  const [champs, setChamps] = useState<ChampsMot>(VIDE)
+  const [enEdition, setEnEdition] = useState<string | null>(null)
+  const [afficheErreurs, setAfficheErreurs] = useState(false)
+  const erreurs = afficheErreurs ? validerMot(champs) : {}
+
+  function maj(cle: keyof ChampsMot, valeur: string) {
+    setChamps((c) => ({ ...c, [cle]: valeur }))
+  }
+
+  function reinitialiser() {
+    setChamps(VIDE)
+    setEnEdition(null)
+    setAfficheErreurs(false)
+  }
+
+  async function envoyer(e: FormEvent) {
+    e.preventDefault()
+    if (!motValide(champs)) {
+      setAfficheErreurs(true)
+      return
+    }
+    if (enEdition) await modifierMot(enEdition, champs)
+    else await ajouterMot(champs)
+    reinitialiser()
+  }
+
+  return (
+    <Page titre="Mes mots" retour={{ libelle: 'Appli', action: onFermer }}>
+      <form onSubmit={envoyer}>
+        <Section
+          titre={enEdition ? 'Modifier le mot' : 'Nouveau mot'}
+          note="Les trois champs sont obligatoires. Écris 3 pour ع, 7 pour ح, 9 pour ق, kh pour خ, gh pour غ et ch pour ش."
+        >
+          <Champ libelle="En français" valeur={champs.fr} erreur={erreurs.fr} onChange={(v) => maj('fr', v)} />
+          <Champ libelle="Avec nos lettres" valeur={champs.latin} erreur={erreurs.latin} onChange={(v) => maj('latin', v)} />
+          <Champ libelle="En arabe" valeur={champs.arabe} erreur={erreurs.arabe} arabe onChange={(v) => maj('arabe', v)} />
+        </Section>
+        <div className="mb-8 flex gap-3">
+          <Bouton type="submit" grand className="flex-1">
+            {enEdition ? 'Enregistrer' : 'Ajouter'}
+          </Bouton>
+          {enEdition && (
+            <Bouton variante="gris" grand onClick={reinitialiser}>
+              Annuler
+            </Bouton>
+          )}
+        </div>
+      </form>
+
+      {mots && mots.length === 0 && (
+        <Vide icone={null} titre="Aucun mot ajouté" texte="Les mots que tu ajoutes arrivent en tête de tes prochaines sessions." />
+      )}
+      {mots && mots.length > 0 && (
+        <Section titre={`${mots.length} mot${mots.length > 1 ? 's' : ''} ajouté${mots.length > 1 ? 's' : ''}`}>
+          {mots.map((m) => (
+            <Ligne
+              key={m.id}
+              onClick={() => {
+                setEnEdition(m.id)
+                setChamps({ latin: m.latin, arabe: m.arabe, fr: m.fr })
+                setAfficheErreurs(false)
+                window.scrollTo(0, 0)
+              }}
+              titre={<span className="font-semibold">{m.latin}</span>}
+              sousTitre={m.fr}
+              valeur={
+                <span className="arabe text-[1.15rem]" dir="rtl" lang="ar">
+                  {m.arabe}
+                </span>
+              }
+              fin={
+                <span className="flex items-center gap-1">
+                  <BoutonAudio chemin={`audio/${m.id}.mp3`} arabe={m.arabe} libelle="" />
+                  <button
+                    type="button"
+                    aria-label={`Supprimer ${m.latin}`}
+                    className="pressable flex h-11 w-11 items-center justify-center text-accent"
+                    onClick={() => {
+                      if (window.confirm(`Supprimer « ${m.latin} » et sa progression ?`)) void supprimerMot(m.id)
+                    }}
+                  >
+                    <Trash2 className="h-5 w-5" aria-hidden />
+                  </button>
+                </span>
+              }
+            />
+          ))}
+        </Section>
+      )}
+    </Page>
+  )
+}

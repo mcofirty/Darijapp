@@ -37,13 +37,16 @@ export function FicheMot({ mot, retour }: Props) {
         </div>
       </div>
 
+      {(mot.prononciation || sons.length > 0) && (
       <Section titre="Prononciation">
-        <div className="t-corps px-4 py-3">{mot.prononciation}</div>
+        {mot.prononciation && <div className="t-corps px-4 py-3">{mot.prononciation}</div>}
         {sons.map((s) => (
           <Ligne key={s.latin} tuile={<Tuile couleur="#af52de" texte={s.latin} />} titre={`${s.latin} · ${s.arabe}`} sousTitre={s.explication} />
         ))}
       </Section>
+      )}
 
+      {mot.exemple.latin && (
       <Section titre="Exemple">
         <Ligne
           titre={<span className="font-semibold">{mot.exemple.latin}</span>}
@@ -64,6 +67,7 @@ export function FicheMot({ mot, retour }: Props) {
           fin={<BoutonAudio chemin={mot.exemple.audio} arabe={mot.exemple.arabe} vitesse={0.75} libelle="" />}
         />
       </Section>
+      )}
     </Page>
   )
 }

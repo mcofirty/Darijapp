@@ -61,11 +61,12 @@ src/
     progres/      tableau de bord, quêtes, série, statistiques, dictionnaire
     profil/       réglages, export/import, rappel .ics
     onboarding/   premier lancement
+    ajout/        page cachée « Mes mots » (lien #ajout) : ajouter, modifier, supprimer ses mots
   srs/            répétition espacée et dates locales (logique pure)
   exercices/      moteur d'exercices : composition d'une session, leurres, résultats (logique pure)
   scoring/        score de prononciation (logique pure)
   gamification/   XP, niveaux, série (logique pure) ; quêtes au jalon 4
-  db/             schéma Dexie et migrations, plan et enregistrement des sessions, résumé en direct
+  db/             schéma Dexie et migrations, plan et enregistrement des sessions, mots ajoutés, résumé en direct
   data/           un fichier JSON par thème, liste des thèmes, sons du darija
 scripts/
   generate_audio.py
@@ -94,7 +95,9 @@ Session du jour (style Duolingo, plein écran) : jusqu'à 8 révisions dues et 5
 
 Exercices : Écoute et choisis, Associe les paires, Dis-le (avec score), Distingue les sons (paires comme 9elb / kelb), Quiz express (60 s).
 
-Fonctions complémentaires : premier lancement guidé, Mes mots, remplacer l'audio d'un mot, signaler un mot, mots difficiles, favoris, mode écoute, rappel en fichier .ics, mode sans micro.
+Mes mots (page cachée) : ouverte uniquement par le lien `https://mcofirty.github.io/Darijapp/#ajout`, sans entrée dans les onglets ni les menus. Formulaire à trois champs obligatoires (français, latin, arabe), validés par la translittération 3 7 9 kh gh ch ; liste avec modification et suppression. Les mots ajoutés passent en tête des nouveaux mots des sessions, entrent dans la répétition espacée, le dictionnaire et les leurres, et sont lus par la synthèse vocale. Ils restent sur l'appareil.
+
+Fonctions complémentaires : premier lancement guidé, remplacer l'audio d'un mot, signaler un mot, mots difficiles, favoris, mode écoute, rappel en fichier .ics, mode sans micro.
 
 ## Règles métier
 
@@ -132,6 +135,12 @@ Session terminée (IndexedDB, table `sessions`, depuis la v2) :
 
 ```json
 { "id": 1, "date": "2026-10-12", "xp": 27, "bonnes": 12, "mauvaises": 0, "nouveaux": 5 }
+```
+
+Mot ajouté (IndexedDB, table `motsPerso`, depuis la v3) :
+
+```json
+{ "id": "perso-<uuid>", "latin": "khobz", "arabe": "خبز", "fr": "pain", "creeLe": 1760300000000 }
 ```
 
 Progression d'un mot (IndexedDB) :
@@ -199,6 +208,7 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 | 2026-10-12 | Relecture du contenu : 40 mots ou exemples corrigés (ch7al, derhem/drahem, lma, 9ahwa k7la, maticha, articles alignés entre latin et arabe…) et test de cohérence latin/arabe | `src/data/*.json`, `src/data/data.test.ts` |
 | 2026-10-12 | Logo de l'appli (bulles « A » et « ش ») en favicon, icône d'écran d'accueil et icônes PWA | `public/logo-*.png` (copies `favicon.png` et `apple-touch-icon.png` pour les anciennes versions en cache) |
 | 2026-10-12 | Style liquid glass sur toute l'appli : fond coloré, cartes, en-tête, boutons interactifs, panneau de retour qui se transforme | `src/index.css`, `src/main.tsx`, composants de `src/features/` |
+| 2026-10-12 | Page cachée « Mes mots » (`#ajout`) : ajout, modification et suppression de mots (français, latin, arabe), intégrés aux sessions, au dictionnaire et à la répétition espacée ; base v3 | `src/features/ajout/`, `src/db/motsPerso.ts`, `src/data/motsPerso.ts`, `src/app/App.tsx` |
 | 2026-10-12 | Session du jour style Duolingo en écran d'accueil : découverte, Écoute et choisis, Traduis, Associe les paires, bilan ; répétition espacée, XP, niveaux, série ; base v2 | `src/features/session/`, `src/exercices/`, `src/srs/`, `src/gamification/`, `src/db/apprentissage.ts` |
 | 2026-10-12 | Barre d'onglets flottante « liquid glass » avec glissement du doigt, et balayage de page entre onglets | `src/app/BarreOnglets.tsx`, `src/app/glisser.ts`, `src/app/icones.tsx` |
 | 2026-10-11 | GitHub Action qui génère les MP3, teste, construit et publie l'appli sur GitHub Pages | `.github/workflows/publier.yml` |
@@ -230,6 +240,8 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 - 2026-10-12 : refonte complète selon les règles d'Apple (demande de l'utilisateur) : Liquid Glass limité à la couche de commandes, fond système gris au lieu du fond coloré, listes groupées, grands titres ; l'en-tête niveau/XP/série devient une section de l'accueil et du tableau de bord Progrès.
 - 2026-10-12 : icônes Lucide au lieu des SF Symbols, dont la licence réserve l'usage aux applis natives Apple.
 - 2026-10-12 : le code SwiftUI d'Apple (`glassEffect`) ne s'applique qu'aux applis natives ; l'appli reste une PWA et reproduit le liquid glass en CSS. Pas de réfraction (filtres SVG dans `backdrop-filter` non pris en charge par Safari).
+- 2026-10-12 : « Mes mots » n'est joignable que par le lien `#ajout` (hash lu dans `App.tsx`, sans routeur ni onglet) : caché, pas protégé, le repo étant public ; les mots restent sur l'appareil (pas de synchronisation sans serveur).
+- 2026-10-12 : les mots ajoutés ont leurs trois champs obligatoires et sont lus par la synthèse vocale ; ils passent avant le programme dans `tousLesMots()`. Le programme reste `MOTS` (JSON statique) ; la logique asynchrone et les écrans lisent `tousLesMots()` / `useMots()`.
 - 2026-10-10 : pas de routeur ; navigation par état React, suffisante pour 5 onglets.
 
 ## Points en suspens
@@ -237,6 +249,7 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 - Voix : edge-tts est bloqué (403), les sons viennent du secours mms-tts-ara, qui prononce mal le darija. Seule voie officielle vers la voix marocaine Jamal : Azure Speech (offre gratuite, compte Azure et clé en secret GitHub), à proposer à l'utilisateur.
 - Le contenu a été relu et corrigé par Claude (cohérence latin/arabe, tournures), mais pas par un locuteur natif : signaler les erreurs pour corriger les JSON. Quand l'arabe d'un mot change, supprimer son MP3 pour que l'Action le régénère.
 - Le Dictionnaire montre tous les mots, avec un ✓ sur ceux déjà vus (le cahier des charges ne prévoyait que les mots vus).
+- Mes mots : pas de sauvegarde tant que l'export/import du Profil n'existe pas (effacer les données du site efface les mots ajoutés). Pas de prononciation ni d'exemple pour ces mots.
 - Onglet Quiz (5 questions) et Quiz express (60 s) : à faire pour finir le jalon 2, en réutilisant `src/exercices/`.
 
 ## Mise à jour de ce fichier (obligatoire)

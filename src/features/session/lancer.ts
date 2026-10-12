@@ -1,5 +1,5 @@
-import { MOTS } from '../../data'
 import { motsDejaVus, planDeSession } from '../../db/apprentissage'
+import { tousLesMots } from '../../db/motsPerso'
 import { composerSession, melanger, type Etape } from '../../exercices/session'
 
 export interface SessionPrete {
@@ -11,6 +11,7 @@ export interface SessionPrete {
 /** Prépare la prochaine session ; s'il n'y a rien de nouveau ni de dû, propose un entraînement libre. */
 export async function preparerSession(): Promise<SessionPrete> {
   const plan = await planDeSession()
+  const MOTS = await tousLesMots()
   if (plan.nouveaux.length + plan.revisions.length > 0) {
     return {
       etapes: composerSession(plan.nouveaux, plan.revisions, MOTS),

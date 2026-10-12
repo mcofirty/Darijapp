@@ -1,13 +1,14 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import { CircleCheck } from 'lucide-react'
-import { MOTS } from '../../data'
 import { planDeSession } from '../../db/apprentissage'
+import { useMots } from '../../db/motsPerso'
 import { useResume } from '../../db/useResume'
 import { Bouton } from '../../ui/Boutons'
 
 /** Carte d'accueil : la session du jour, toujours accessible et sans limite. */
 export function CarteSessionDuJour({ onCommencer }: { onCommencer: () => void }) {
   const { sessionsAujourdhui, motsVus, xpAujourdhui } = useResume()
+  const MOTS = useMots()
   const plan = useLiveQuery(() => planDeSession(), [sessionsAujourdhui])
   const faite = sessionsAujourdhui > 0
 

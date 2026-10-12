@@ -31,12 +31,14 @@ export function Decouverte({ mot }: { mot: Mot }) {
           <BoutonAudio chemin={mot.audio} arabe={mot.arabe} vitesse={0.75} libelle="Ralenti" grand />
         </div>
       </div>
+      {(mot.prononciation || sons.length > 0) && (
       <Section titre="Prononciation">
-        <div className="t-corps px-4 py-3">{mot.prononciation}</div>
+        {mot.prononciation && <div className="t-corps px-4 py-3">{mot.prononciation}</div>}
         {sons.map((s) => (
           <Ligne key={s.latin} tuile={<Tuile couleur="#af52de" texte={s.latin} />} titre={`${s.latin} · ${s.arabe}`} sousTitre={s.explication} />
         ))}
       </Section>
+      )}
     </div>
   )
 }
