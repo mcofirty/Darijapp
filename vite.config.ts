@@ -26,7 +26,8 @@ export default defineConfig({
       workbox: {
         // Les MP3 (plusieurs dizaines de Mo) ne sont pas téléchargés à l'installation : chacun est gardé
         // sur le téléphone à sa première écoute, puis marche hors ligne.
-        globPatterns: ['**/*.{js,css,html,png,svg}'],
+        // La vidéo d'ouverture (lancement.mp4, 0,6 Mo) et son image finale sont gardées dès l'installation.
+        globPatterns: ['**/*.{js,css,html,png,svg,jpg,mp4}'],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
         runtimeCaching: [
           {

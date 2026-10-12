@@ -16,8 +16,19 @@
         document.documentElement.dataset.theme = localStorage.getItem('darija-apparence') || 'systeme'
       } catch (e) {}
     </script>
+    <style>
+      /* Animation d'ouverture (src/app/lancement.ts) : fond de la couleur de la vidéo, sans attendre le CSS. */
+      #lancement { position: fixed; inset: 0; z-index: 100; background: #0d0c0f; transition: opacity 0.4s ease; }
+      #lancement.efface { opacity: 0; }
+      #lancement video, #lancement img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    </style>
   </head>
   <body>
+    <div id="lancement" aria-hidden="true"><video muted playsinline preload="none"></video></div>
+    <script>
+      // Pas d'animation sur les pages destinées à la personne qui ajoute des mots.
+      if (/^#(ajout|mot=)/.test(location.hash)) document.getElementById('lancement').remove()
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

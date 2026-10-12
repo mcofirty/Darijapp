@@ -48,7 +48,7 @@ Publication : chaque push sur `main` lance la GitHub Action « Publier ». Elle 
 
 ```
 src/
-  app/            navigation à 5 onglets (barre Liquid Glass, balayage)
+  app/            navigation à 5 onglets (barre Liquid Glass, balayage), animation d'ouverture
   ui/             composants iOS : Page (grand titre), Section/Ligne/Tuile (listes groupées), Bouton, Segmente, Interrupteur, Alerte, Vide
   audio/          lecture des mots (MP3, sinon synthèse vocale du téléphone)
   features/
@@ -97,6 +97,8 @@ Exercices : Écoute et choisis, Associe les paires, Dis-le (avec score), Disting
 Mes mots (page cachée) : ouverte uniquement par le lien `https://mcofirty.github.io/Darijapp/#ajout`, sans entrée dans les onglets ni les menus. Formulaire à trois champs obligatoires (français, latin, arabe), validés par la translittération 3 7 9 kh gh ch ; liste de ses mots avec modification et suppression (seuls les mots ajoutés sur l'appareil, jamais ceux du programme), puis liste en lecture seule des mots du programme ; icône d'envoi sur chaque mot ajouté (feuille de partage de l'iPhone, sinon copie du lien), donc après l'avoir vu et corrigé, qui produit un lien `…/Darijapp/#mot=[latin, arabe, français]` : l'ouvrir affiche le mot et ne l'ajoute qu'après confirmation (jamais deux fois) ; pas de bouton de retour vers l'appli ; un message d'accueil s'adresse à la personne qui ajoute les mots (demande de l'utilisateur, prénoms visibles dans le repo public). Les mots ajoutés passent en tête des nouveaux mots des sessions, entrent dans la répétition espacée, le dictionnaire et les leurres, et sont lus par la synthèse vocale. Ils restent sur l'appareil.
 
 Aide à l'installation : à chaque ouverture dans Safari sur iPhone ou iPad (jamais dans l'appli installée, ni sur Android ou ordinateur, ni sur `#ajout` et `#mot=`), une feuille en verre monte du bas : logo, « Ajoute Darijaapp à ton écran d'accueil », phrase mise en avant « L'ajout à l'écran d'accueil enregistre ta progression. Dans Safari, elle peut être effacée. » (Safari efface les données d'un site non installé après 7 jours sans visite), 4 étapes (Partager, ou « ⋯ » d'abord sur iOS 26 ; « Sur l'écran d'accueil » ; « Ajouter » ; ouvrir depuis l'icône), bulle ronde « Ne plus afficher » et bouton « Compris ». Sans la bulle cochée, elle revient à l'ouverture suivante.
+
+Animation d'ouverture : à chaque lancement à froid (pas sur `#ajout` ni `#mot=`), la vidéo de l'utilisateur (`public/lancement.mp4`, 3 s, sombre, sans son : logo, « Darija », « Le marocain, à l'oral d'abord. », « Projet indépendant réalisé par Romain Innocenzi ») joue en plein écran sur fond #0d0c0f, puis s'efface en fondu sur l'appli ; un toucher la passe ; avec Réduire les animations, ou si la vidéo ne démarre pas en 2 s (mode Économie d'énergie), l'image finale s'affiche 1 s. L'aide à l'installation attend sa fin.
 
 Fonctions complémentaires : premier lancement guidé, remplacer l'audio d'un mot, signaler un mot, mots difficiles, favoris, mode écoute, rappel en fichier .ics, mode sans micro.
 
@@ -179,6 +181,7 @@ Progression d'un mot (IndexedDB) :
 - Les couleurs de texte éclaircies du mode sombre (#ff6961, #2fd27f) ne supportent pas de texte blanc : tout bouton plein utilise `--accent-plein` ou `--vert-plein` (couleurs du drapeau, 5,8:1 et 7,5:1).
 - `overflow-x: hidden` sur un conteneur en fait une zone de défilement : `position: sticky` à l'intérieur ne colle plus à la fenêtre. Utiliser `overflow-x: clip` (racine de `App.tsx`).
 - `opacity` sur un élément `.verre` (ex. `.pressable:active`) en fait une racine d'arrière-plan : le verre devient opaque pendant l'appui. Les commandes en verre grossissent au toucher, sans opacité.
+- Le Chromium de Playwright ne lit pas le H.264 (erreur 4 sur `lancement.mp4`) : pour tester la lecture de la vidéo d'ouverture, servir une copie en VP9 (`ffmpeg -c:v libvpx-vp9`), sans la commiter.
 - Après la génération des MP3, mets à jour la liste des fichiers mis en cache par la PWA pour que l'audio marche hors ligne.
 
 ## Façon de travailler
@@ -204,29 +207,21 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 
 | Date | Fonctionnalité | Fichiers clés |
 | --- | --- | --- |
-| 2026-10-10 | Socle PWA : 5 onglets, en-tête, base Dexie v1, réglage « afficher l'arabe » | `src/app/`, `src/db/`, `vite.config.ts` |
-| 2026-10-10 | 152 mots en 8 thèmes avec arabe, prononciation et exemple ; fiche mot, guide des sons, dictionnaire avec recherche | `src/data/`, `src/features/mots/`, `src/features/apprendre/`, `src/features/progres/` |
-| 2026-10-10 | Script de génération audio et lecture avec repli sur la synthèse vocale du téléphone | `scripts/generate_audio.py`, `src/audio/lecteur.ts` |
-| 2026-10-12 | Barre d'onglets aux dimensions et au dessin exacts de la maquette de l'utilisateur (icônes pleines, 62 pt de haut) | `src/app/icones.tsx`, `src/app/BarreOnglets.tsx` |
-| 2026-10-12 | Verre plus réaliste : bande de réfraction sur les bords, liseré lumineux, dispersion colorée, lentille « goutte d'eau » | `src/index.css`, `src/app/BarreOnglets.tsx` |
+| 2026-10-10 | Jalon 1 : socle PWA à 5 onglets, base Dexie, 152 mots en 8 thèmes avec fiche mot, guide des sons et dictionnaire, lecture audio avec repli sur la voix du téléphone, Action qui génère l'audio, teste et publie | `src/app/`, `src/db/`, `src/data/`, `src/features/`, `src/audio/lecteur.ts`, `.github/workflows/publier.yml` |
+| 2026-10-12 | Barre d'onglets flottante en verre d'après la maquette de l'utilisateur (62 pt, icônes pleines, lentille qui suit le doigt) et balayage de page entre onglets | `src/app/BarreOnglets.tsx`, `src/app/glisser.ts`, `src/app/icones.tsx` |
 | 2026-10-12 | Couleurs du drapeau marocain et réglage d'apparence Automatique / Clair / Sombre dans Profil | `src/index.css`, `src/app/apparence.ts`, `src/features/profil/Profil.tsx`, `src/db/db.ts` |
 | 2026-10-12 | Refonte complète selon les règles de design d'Apple : couleurs et typographie système, grands titres, listes groupées, Liquid Glass sur les commandes, tableau de bord Progrès | `src/index.css`, `src/ui/`, `src/features/` |
-| 2026-10-12 | Voix marocaine Jamal pour les 304 sons, avec secours mms-tts-ara dans l'Action | `scripts/generate_audio.py`, `.github/workflows/publier.yml` |
 | 2026-10-12 | Relecture du contenu : 40 mots ou exemples corrigés (ch7al, derhem/drahem, lma, 9ahwa k7la, maticha, articles alignés entre latin et arabe…) et test de cohérence latin/arabe | `src/data/*.json`, `src/data/data.test.ts` |
 | 2026-10-12 | Logo de l'appli (bulles « A » et « ش ») en favicon, icône d'écran d'accueil et icônes PWA | `public/logo-*.png` (copies `favicon.png` et `apple-touch-icon.png` pour les anciennes versions en cache) |
-| 2026-10-12 | Style liquid glass sur toute l'appli : fond coloré, cartes, en-tête, boutons interactifs, panneau de retour qui se transforme | `src/index.css`, `src/main.tsx`, composants de `src/features/` |
 | 2026-10-12 | Page cachée « Mes mots » (`#ajout`) : ajout, modification et suppression de mots (français, latin, arabe), intégrés aux sessions, au dictionnaire et à la répétition espacée ; base v3 | `src/features/ajout/`, `src/db/motsPerso.ts`, `src/data/motsPerso.ts`, `src/app/App.tsx` |
 | 2026-10-12 | Partage d'un mot par lien (`#mot=`) depuis Mes mots, avec écran de confirmation à l'ouverture | `src/features/ajout/Proposition.tsx`, `src/data/motsPerso.ts`, `src/app/App.tsx` |
 | 2026-10-12 | Session du jour style Duolingo en écran d'accueil : découverte, Écoute et choisis, Traduis, Associe les paires, bilan ; répétition espacée, XP, niveaux, série ; base v2 | `src/features/session/`, `src/exercices/`, `src/srs/`, `src/gamification/`, `src/db/apprentissage.ts` |
 | 2026-10-12 | Voix marocaine Jamal par Azure Speech pour les 1 682 mots et 152 exemples (Action, secrets GitHub), MP3 gardés sur le téléphone à la première écoute | `scripts/generate_audio.py`, `.github/workflows/publier.yml`, `vite.config.ts`, `src/data/*.json` |
-| 2026-10-12 | Tous les mots lus par la voix de l'iPhone : MP3 mms-tts-ara supprimés | `src/data/*.json`, `public/audio/`, `src/data/data.test.ts` |
 | 2026-10-12 | Import de 1 530 mots et phrases du fichier de l'utilisateur (1 739 entrées, doublons retirés) en 23 nouveaux thèmes et 7 thèmes existants, arabe écrit par Claude, lus par la voix de l'iPhone ; note d'usage sur la fiche | `src/data/*.json`, `src/data/themes.ts`, `src/ui/visuels.ts`, `src/data/data.test.ts`, `scripts/generate_audio.py` |
 | 2026-10-12 | Nom « Darijaapp » (icône d'écran d'accueil, titre) et feuille d'aide à l'installation sur l'écran d'accueil avec « Ne plus afficher » | `src/features/onboarding/AideInstallation.tsx`, `src/app/installation.ts`, `vite.config.ts`, `index.html` |
-| 2026-10-12 | Contrôles segmentés (Progrès, Profil) en capsule avec curseur en verre au repos | `src/ui/Boutons.tsx`, `src/index.css` |
-| 2026-10-12 | Liquid Glass d'iOS 26 sur toutes les commandes : bouton retour rond, bord de défilement flou, session et bilan, alertes en verre, recherche collante, goutte de verre du contrôle segmenté et de l'interrupteur | `src/ui/`, `src/index.css`, `src/features/session/`, `src/features/progres/Dictionnaire.tsx` |
-| 2026-10-12 | Barre d'onglets flottante « liquid glass » avec glissement du doigt, et balayage de page entre onglets | `src/app/BarreOnglets.tsx`, `src/app/glisser.ts`, `src/app/icones.tsx` |
+| 2026-10-12 | Liquid Glass d'iOS 26 sur toutes les commandes (verre à bords réfractants, retour rond, bord flou, session, bilan, alertes, recherche, contrôles segmentés et interrupteur en goutte de verre) | `src/ui/`, `src/index.css`, `src/features/session/`, `src/features/progres/Dictionnaire.tsx` |
 | 2026-10-12 | Angles et listes aux mesures des Réglages de l'iPhone : rayons de 26 pt concentriques autour des boutons, marges de 20 pt, cellules de 56 pt, séparateurs en retrait, titres de section en 17 pt | `src/index.css`, `src/ui/Liste.tsx`, `src/ui/Page.tsx` |
-| 2026-10-11 | GitHub Action qui génère les MP3, teste, construit et publie l'appli sur GitHub Pages | `.github/workflows/publier.yml` |
+| 2026-10-12 | Animation d'ouverture : vidéo de 3 s de l'utilisateur sur fond sombre à chaque lancement, passée d'un toucher, image finale avec Réduire les animations ou si la vidéo ne démarre pas | `public/lancement.mp4`, `public/lancement-fin.jpg`, `src/app/lancement.ts`, `index.html` |
 
 ## Décisions
 
@@ -270,6 +265,7 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 - 2026-10-12 : les mots d'une autre personne arrivent par un lien partagé (feuille de partage iOS) plutôt que par GitHub : un jeton d'écriture serait public, et un serveur contredit le 100 % local. Le lien contient le mot, rien n'est stocké en ligne ; l'ajout exige une confirmation et un mot valide (translittération vérifiée).
 - 2026-10-12 : angles continus d'Apple par `corner-shape: superellipse(1.5)` sous `@supports` (Chrome), sans imitation par `clip-path` ou `mask`, qui casseraient le flou du verre ; Safari ne le prend pas encore en charge et garde des arcs de cercle aux mêmes rayons. Rayons concentriques en `calc(px + rem)` pour rester justes avec Dynamic Type.
 - 2026-10-12 : marges et hauteurs de liste en px fixes (jetons `--spacing-marge` 20 px et `--spacing-ligne` 56 px), copiées d'une capture des Réglages de l'utilisateur, plutôt qu'en rem (1 rem = 17 px dans l'appli, qui donnait 17 pt de marge).
+- 2026-10-12 : animation d'ouverture = la vidéo de l'utilisateur telle quelle (demande de l'utilisateur, nom complet visible accepté dans le repo public) ; voile sombre écrit dans `index.html` pour éviter un flash blanc avant le JS ; vidéo précachée et lue depuis un blob, car Safari la demande par requêtes Range que le précache de la PWA ne sert pas.
 - 2026-10-10 : pas de routeur ; navigation par état React, suffisante pour 5 onglets.
 
 ## Points en suspens

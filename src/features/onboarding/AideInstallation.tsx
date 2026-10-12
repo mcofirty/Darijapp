@@ -3,6 +3,7 @@ import { Check, Share, SquarePlus, type LucideIcon } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { doitProposerInstallation } from '../../app/installation'
+import { finLancement } from '../../app/lancement'
 import { lireProfil, modifierProfil } from '../../db/db'
 import { Bouton } from '../../ui/Boutons'
 
@@ -29,10 +30,16 @@ function appliInstallee(): boolean {
 export function AideInstallation() {
   const profil = useLiveQuery(() => lireProfil(), [])
   const [fermee, setFermee] = useState(false)
+  // La feuille attend la fin de l'animation d'ouverture pour monter.
+  const [lancementFini, setLancementFini] = useState(false)
+  useEffect(() => {
+    void finLancement.then(() => setLancementFini(true))
+  }, [])
   const [nePlusAfficher, setNePlusAfficher] = useState(false)
 
   const ouverte =
     profil !== undefined &&
+    lancementFini &&
     !fermee &&
     doitProposerInstallation(
       { userAgent: navigator.userAgent, pointsDeContact: navigator.maxTouchPoints, installee: appliInstallee() },
