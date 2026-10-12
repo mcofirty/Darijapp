@@ -19,7 +19,7 @@ export function Decouverte({ mot }: { mot: Mot }) {
     <div>
       <p className="t-note mb-1 font-semibold uppercase text-accent">Nouveau mot</p>
       <h2 className="t-grand-titre mb-4">{mot.latin}</h2>
-      <div className="mb-8 rounded-liste bg-carte px-4 py-6 text-center">
+      <div className="mb-[26px] rounded-liste bg-carte px-marge py-6 text-center">
         {afficherArabe && (
           <p className="arabe text-[2.4rem] leading-tight" dir="rtl" lang="ar">
             {mot.arabe}
@@ -33,7 +33,7 @@ export function Decouverte({ mot }: { mot: Mot }) {
       </div>
       {(mot.prononciation || sons.length > 0) && (
       <Section titre="Prononciation">
-        {mot.prononciation && <div className="t-corps px-4 py-3">{mot.prononciation}</div>}
+        {mot.prononciation && <div className="t-corps px-marge py-3">{mot.prononciation}</div>}
         {sons.map((s) => (
           <Ligne key={s.latin} tuile={<Tuile couleur="#af52de" texte={s.latin} />} titre={`${s.latin} · ${s.arabe}`} sousTitre={s.explication} />
         ))}

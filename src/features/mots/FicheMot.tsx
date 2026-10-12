@@ -24,7 +24,7 @@ export function FicheMot({ mot, retour }: Props) {
 
   return (
     <Page titre={mot.latin} retour={retour}>
-      <div className="mb-8 rounded-liste bg-carte px-4 py-6 text-center">
+      <div className="mb-[26px] rounded-liste bg-carte px-marge py-6 text-center">
         {afficherArabe && (
           <p className="arabe text-[2.4rem] leading-tight" dir="rtl" lang="ar">
             {mot.arabe}
@@ -40,7 +40,7 @@ export function FicheMot({ mot, retour }: Props) {
 
       {(mot.prononciation || sons.length > 0) && (
       <Section titre="Prononciation">
-        {mot.prononciation && <div className="t-corps px-4 py-3">{mot.prononciation}</div>}
+        {mot.prononciation && <div className="t-corps px-marge py-3">{mot.prononciation}</div>}
         {sons.map((s) => (
           <Ligne key={s.latin} tuile={<Tuile couleur="#af52de" texte={s.latin} />} titre={`${s.latin} · ${s.arabe}`} sousTitre={s.explication} />
         ))}

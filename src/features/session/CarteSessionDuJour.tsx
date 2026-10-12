@@ -20,7 +20,7 @@ export function CarteSessionDuJour({ onCommencer }: { onCommencer: () => void })
     : []
 
   return (
-    <section className="mb-8 rounded-carte bg-carte p-4">
+    <section className="mb-[26px] rounded-carte bg-carte p-marge">
       <p className="t-note font-semibold uppercase text-accent">{faite ? `Aujourd'hui · +${xpAujourdhui} XP` : 'Session du jour'}</p>
       <h2 className="t-titre-2 mt-1 flex items-center gap-2">
         {faite && <CircleCheck className="h-6 w-6 text-vert" strokeWidth={2.5} aria-hidden />}

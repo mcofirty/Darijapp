@@ -22,7 +22,7 @@ interface ChampProps {
 
 function Champ({ libelle, valeur, erreur, arabe = false, onChange }: ChampProps) {
   return (
-    <label className="block px-4 py-2">
+    <label className="block px-marge py-2">
       <span className="t-note uppercase text-texte-2">{libelle}</span>
       <input
         data-sans-balayage

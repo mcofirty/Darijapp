@@ -63,7 +63,7 @@ export function Session({ etapes: depart, nouveaux, entrainement, onFermer, onEn
     <div data-sans-balayage className="fixed inset-0 z-30 flex flex-col bg-fond">
       {/* Barre du haut en verre, au-dessus du contenu qui défile dessous (bord flou d'iOS 26). */}
       <div className="bord-flou visible absolute inset-x-0 top-0 z-10 pt-[env(safe-area-inset-top)]">
-        <div className="mx-auto flex w-full max-w-xl items-center gap-2 px-4 py-2">
+        <div className="mx-auto flex w-full max-w-xl items-center gap-2 px-marge py-2">
           <button
             type="button"
             onClick={() => setConfirmer(true)}
@@ -86,7 +86,7 @@ export function Session({ etapes: depart, nouveaux, entrainement, onFermer, onEn
         </div>
       </div>
 
-      <div className="mx-auto w-full max-w-xl flex-1 overflow-y-auto px-4 pb-6 pt-[calc(env(safe-area-inset-top)+4.5rem)]">
+      <div className="mx-auto w-full max-w-xl flex-1 overflow-y-auto px-marge pb-6 pt-[calc(env(safe-area-inset-top)+4.5rem)]">
         <div key={index} className="entree-droite">
           {etape.type === 'decouverte' && <Decouverte mot={etape.mot} />}
           {(etape.type === 'ecoute' || etape.type === 'traduis') && (

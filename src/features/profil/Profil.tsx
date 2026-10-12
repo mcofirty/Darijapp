@@ -17,7 +17,7 @@ export function Profil() {
     <Page titre="Profil">
       <Section titre="Apparence" note="Automatique suit le réglage clair ou sombre de l'iPhone.">
         <Ligne tuile={<Tuile icone={SunMoon} couleur="#5856d6" />} titre="Thème" />
-        <div className="px-4 pb-3">
+        <div className="px-marge pb-3">
           <Segmente options={APPARENCES} valeur={profil.apparence} onChange={(v) => void modifierProfil({ apparence: v })} />
         </div>
       </Section>

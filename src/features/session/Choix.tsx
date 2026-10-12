@@ -49,7 +49,7 @@ export function Choix({ type, mot, choix, onRepondu }: Props) {
           </button>
         </div>
       ) : (
-        <p className="t-titre-1 mb-8 rounded-liste bg-carte px-4 py-6 text-center">{mot.fr}</p>
+        <p className="t-titre-1 mb-[26px] rounded-liste bg-carte px-marge py-6 text-center">{mot.fr}</p>
       )}
       <ul className="space-y-3">
         {choix.map((c) => {

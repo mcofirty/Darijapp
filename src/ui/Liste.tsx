@@ -4,12 +4,12 @@ import type { ReactNode } from 'react'
 /** Section de liste groupée (style Réglages) : en-tête, cellules arrondies, note de bas. */
 export function Section({ titre, note, children }: { titre?: string; note?: string; children: ReactNode }) {
   return (
-    <section className="mb-8">
-      {titre && <h2 className="t-note mb-1.5 px-4 uppercase text-texte-2">{titre}</h2>}
+    <section className="mb-[26px]">
+      {titre && <h2 className="t-gras mb-2 px-marge text-texte-2">{titre}</h2>}
       <div className="liste overflow-hidden rounded-liste bg-carte">
         {children}
       </div>
-      {note && <p className="t-note mt-1.5 px-4 text-texte-2">{note}</p>}
+      {note && <p className="t-note mt-2 px-marge text-texte-2">{note}</p>}
     </section>
   )
 }
@@ -38,7 +38,7 @@ interface LigneProps {
   onClick?: () => void
 }
 
-/** Cellule de liste : 44 pt minimum, retrait du séparateur aligné sur le texte. */
+/** Cellule de liste : 56 pt minimum, texte à 20 pt du bord, séparateur aligné sur le texte. */
 export function Ligne({ titre, sousTitre, tuile, valeur, fin, chevron, onClick }: LigneProps) {
   const contenu = (
     <>
@@ -51,17 +51,17 @@ export function Ligne({ titre, sousTitre, tuile, valeur, fin, chevron, onClick }
       {chevron && <ChevronRight className="h-5 w-5 shrink-0 text-texte-3" strokeWidth={2.4} aria-hidden />}
     </>
   )
-  const style = { '--retrait': tuile ? '3.75rem' : '1rem' } as React.CSSProperties
+  const style = { '--retrait': tuile ? 'calc(20px + 29px + 0.75rem)' : '20px' } as React.CSSProperties
   return (
-    <div className="flex min-h-11 items-center" style={style}>
+    <div className="flex min-h-ligne items-center" style={style}>
       {onClick ? (
-        <button type="button" onClick={onClick} className="ligne-pressable flex min-h-11 min-w-0 flex-1 items-center gap-3 pl-4 pr-3 text-left">
+        <button type="button" onClick={onClick} className={`ligne-pressable flex min-h-ligne min-w-0 flex-1 items-center gap-3 pl-marge ${fin ? 'pr-3' : 'pr-marge'} text-left`}>
           {contenu}
         </button>
       ) : (
-        <div className="flex min-h-11 min-w-0 flex-1 items-center gap-3 pl-4 pr-3">{contenu}</div>
+        <div className={`flex min-h-ligne min-w-0 flex-1 items-center gap-3 pl-marge ${fin ? 'pr-3' : 'pr-marge'}`}>{contenu}</div>
       )}
-      {fin && <div className="shrink-0 pr-3">{fin}</div>}
+      {fin && <div className="shrink-0 pr-marge">{fin}</div>}
     </div>
   )
 }

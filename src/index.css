@@ -135,15 +135,17 @@
 }
 
 /*
- * Rayons d'angle d'iOS 26 (classes rounded-liste, rounded-reponse…). Un conteneur qui entoure
+ * Mesures d'après une capture des Réglages de l'utilisateur (iOS 26, écran de 440 pt). Rayons d'angle (classes rounded-liste, rounded-reponse…). Un conteneur qui entoure
  * un bouton en capsule est concentrique : son rayon = rayon du bouton + marge intérieure.
  */
 @theme {
+  --spacing-marge: 20px; /* marge des pages et retrait du contenu dans les cartes (px-marge, p-marge…) */
+  --spacing-ligne: 56px; /* hauteur minimale d'une cellule de liste (min-h-ligne) */
   --radius-tuile: 8px; /* tuile d'icône de 29 pt, comme dans Réglages */
   --radius-liste: 26px; /* listes groupées et cartes de contenu */
   --radius-reponse: 1.75rem; /* réponses des exercices (min-h-14) : capsule sur une ligne, arrondi doux au-delà */
   --radius-panneau: calc(25px + 0.75rem); /* bouton de 50 pt + marge p-3 */
-  --radius-carte: calc(25px + 1rem); /* bouton de 50 pt + marge p-4 (carte Session du jour, feuille) */
+  --radius-carte: calc(25px + 20px); /* bouton de 50 pt + marge de 20 pt (carte Session du jour, feuille) */
   --radius-alerte: calc(1.375rem + 1rem); /* bouton de 44 pt + marge p-4 */
 }
 
@@ -340,8 +342,8 @@ body {
     content: "";
     position: absolute;
     top: 0;
-    right: 0;
-    left: var(--retrait, 1rem);
+    right: 20px;
+    left: var(--retrait, 20px);
     height: 1px;
     transform: scaleY(0.5);
     transform-origin: top;

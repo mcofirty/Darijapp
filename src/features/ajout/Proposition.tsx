@@ -15,7 +15,7 @@ export function Proposition({ mot, onTermine }: { mot: ChampsMot; onTermine: () 
 
   return (
     <Page titre="Nouveau mot">
-      <div className="mb-8 rounded-liste bg-carte px-4 py-6 text-center">
+      <div className="mb-[26px] rounded-liste bg-carte px-marge py-6 text-center">
         <p className="arabe text-[2.4rem] leading-tight" dir="rtl" lang="ar">
           {mot.arabe}
         </p>

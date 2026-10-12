@@ -30,7 +30,7 @@ export function Page({ titre, retour, accessoire, children }: Props) {
   return (
     <div>
       <header className={`bord-flou fixed inset-x-0 top-0 z-10 pt-[env(safe-area-inset-top)] ${compact ? 'visible' : ''}`}>
-        <div className="mx-auto flex h-[3.25rem] max-w-xl items-center px-4">
+        <div className="mx-auto flex h-[3.25rem] max-w-xl items-center px-marge">
           <div className="flex min-w-0 flex-1">
             {retour && (
               <button
@@ -54,7 +54,7 @@ export function Page({ titre, retour, accessoire, children }: Props) {
           </div>
         </div>
       </header>
-      <div className="mx-auto max-w-xl px-4 pt-[calc(env(safe-area-inset-top)+3.25rem)]">
+      <div className="mx-auto max-w-xl px-marge pt-[calc(env(safe-area-inset-top)+3.25rem)]">
         <div className="flex items-end justify-between gap-3 pb-2 pt-1">
           <h1 ref={repere} className="t-grand-titre">
             {titre}

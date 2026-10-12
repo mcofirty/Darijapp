@@ -32,7 +32,7 @@ export function Bilan({ bilan, taux, onFermer, onEncore }: Props) {
           />
         ))}
       </div>
-      <div className="relative mx-auto flex min-h-full max-w-xl flex-col justify-center px-4 pb-[calc(max(0.75rem,env(safe-area-inset-bottom))+9rem)] pt-[calc(env(safe-area-inset-top)+2rem)]">
+      <div className="relative mx-auto flex min-h-full max-w-xl flex-col justify-center px-marge pb-[calc(max(0.75rem,env(safe-area-inset-bottom))+9rem)] pt-[calc(env(safe-area-inset-top)+2rem)]">
         <h2 className="t-grand-titre mb-1 text-center">Session terminée</h2>
         <p className="t-appel mb-8 text-center text-texte-2">
           {bilan.nouveaux > 0
