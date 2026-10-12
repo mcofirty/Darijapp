@@ -1,9 +1,12 @@
-import { Languages, SunMoon } from 'lucide-react'
+import { Flag, Languages, SunMoon } from 'lucide-react'
+import { useState } from 'react'
 import { modifierProfil, type Apparence } from '../../db/db'
 import { useProfil } from '../../db/useProfil'
 import { Interrupteur, Segmente } from '../../ui/Boutons'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
+import { useMarques } from '../../db/marques'
 import { Page } from '../../ui/Page'
+import { MotsSignales } from './MotsSignales'
 
 const APPARENCES: { id: Apparence; libelle: string }[] = [
   { id: 'systeme', libelle: 'Automatique' },
@@ -13,6 +16,9 @@ const APPARENCES: { id: Apparence; libelle: string }[] = [
 
 export function Profil() {
   const profil = useProfil()
+  const [signales, setSignales] = useState(false)
+  const nbSignales = [...useMarques().values()].filter((m) => m.signale).length
+  if (signales) return <MotsSignales onRetour={() => setSignales(false)} />
   return (
     <Page titre="Profil">
       <Section titre="Apparence" arrondi="rounded-segmente" note="Automatique suit le réglage clair ou sombre de l'iPhone.">
@@ -33,6 +39,15 @@ export function Profil() {
               onChange={(v) => void modifierProfil({ afficherArabe: v })}
             />
           }
+        />
+      </Section>
+      <Section titre="Contenu">
+        <Ligne
+          tuile={<Tuile icone={Flag} couleur="#ff9500" />}
+          titre="Mots signalés"
+          valeur={nbSignales}
+          chevron
+          onClick={() => setSignales(true)}
         />
       </Section>
     </Page>

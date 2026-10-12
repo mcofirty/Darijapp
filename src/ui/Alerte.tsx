@@ -3,8 +3,8 @@ import { createPortal } from 'react-dom'
 
 export interface ActionAlerte {
   libelle: string
-  /** « annuler » : bouton gris qui reçoit le focus ; « destructif » : texte rouge. */
-  role?: 'annuler' | 'destructif'
+  /** « annuler » : bouton gris qui reçoit le focus ; « destructif » : texte rouge ; « choix » : une option parmi plusieurs. */
+  role?: 'annuler' | 'destructif' | 'choix'
   action: () => void
 }
 
@@ -19,6 +19,7 @@ interface Props {
 const STYLES = {
   annuler: 'bg-remplissage text-texte',
   destructif: 'bg-remplissage text-rouge',
+  choix: 'bg-accent-doux text-accent',
   defaut: 'bg-accent-plein text-white',
 }
 

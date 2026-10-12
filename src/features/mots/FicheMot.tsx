@@ -1,8 +1,13 @@
-import { useEffect } from 'react'
+import { Flag, Star } from 'lucide-react'
+import { useEffect, useState } from 'react'
 import { jouer } from '../../audio/lecteur'
 import { sonsDuMot } from '../../data/sons'
 import type { Mot } from '../../data/types'
+import type { MotifSignalement } from '../../db/db'
+import { changerFavori, signaler, useMarques } from '../../db/marques'
 import { useProfil } from '../../db/useProfil'
+import { MOTIFS } from '../../exercices/selections'
+import { Alerte } from '../../ui/Alerte'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
 import { BoutonAudio } from './BoutonAudio'
@@ -15,6 +20,8 @@ interface Props {
 export function FicheMot({ mot, retour }: Props) {
   const { afficherArabe } = useProfil()
   const sons = sonsDuMot(mot.latin)
+  const marque = useMarques().get(mot.id)
+  const [choixMotif, setChoixMotif] = useState(false)
 
   // Lecture automatique à l'ouverture (l'ouverture vient d'un toucher, ce qu'exige iOS).
   useEffect(() => {
@@ -68,6 +75,39 @@ export function FicheMot({ mot, retour }: Props) {
           fin={<BoutonAudio chemin={mot.exemple.audio} arabe={mot.exemple.arabe} vitesse={0.75} libelle="" />}
         />
       </Section>
+      )}
+
+      <Section note={marque?.signale ? 'Merci : retrouve tes signalements dans Profil, pour me les transmettre.' : undefined}>
+        <Ligne
+          tuile={<Tuile icone={Star} couleur="#ffcc00" />}
+          titre={marque?.favori ? 'Retirer des favoris' : 'Ajouter aux favoris'}
+          onClick={() => void changerFavori(mot.id, !marque?.favori)}
+        />
+        <Ligne
+          tuile={<Tuile icone={Flag} couleur="#ff9500" />}
+          titre={marque?.signale ? 'Retirer le signalement' : 'Signaler une erreur'}
+          sousTitre={marque?.signale ? `À vérifier : ${MOTIFS[marque.signale]}` : undefined}
+          onClick={() => (marque?.signale ? void signaler(mot.id, null) : setChoixMotif(true))}
+        />
+      </Section>
+
+      {choixMotif && (
+        <Alerte
+          titre="Qu’est-ce qui ne va pas ?"
+          message={`${mot.latin} · ${mot.fr}`}
+          onAnnuler={() => setChoixMotif(false)}
+          actions={[
+            ...(Object.keys(MOTIFS) as MotifSignalement[]).map((motif) => ({
+              libelle: MOTIFS[motif].replace(/^./, (c) => c.toUpperCase()),
+              role: 'choix' as const,
+              action: () => {
+                void signaler(mot.id, motif)
+                setChoixMotif(false)
+              },
+            })),
+            { libelle: 'Annuler', role: 'annuler' as const, action: () => setChoixMotif(false) },
+          ]}
+        />
       )}
     </Page>
   )

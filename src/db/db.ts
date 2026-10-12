@@ -54,6 +54,21 @@ export interface SessionFaite {
 /** Activité enregistrée dans l'historique : toutes comptent pour l'XP et la série. */
 export type TypeActivite = 'session' | 'quiz' | 'express' | 'sons'
 
+/** Ce qui ne va pas dans un mot signalé. */
+export type MotifSignalement = 'traduction' | 'ecriture' | 'prononciation'
+
+/**
+ * Favori ou signalement d'un mot (table `marques`, depuis la v4). À part de la progression :
+ * marquer un mot jamais vu ne doit pas le compter comme vu ni le retirer des nouveaux mots.
+ */
+export interface Marque {
+  id: string
+  favori: boolean
+  signale: MotifSignalement | null
+  /** Horodatage de la dernière modification. */
+  date: number
+}
+
 export const PROFIL_DEFAUT: Profil = {
   id: 'moi',
   prenom: '',
@@ -70,6 +85,7 @@ export class DarijaDB extends Dexie {
   profil!: Table<Profil, string>
   motsPerso!: Table<MotPerso, string>
   sessions!: Table<SessionFaite, number>
+  marques!: Table<Marque, string>
 
   constructor(nom = 'darijapp') {
     super(nom)
@@ -85,6 +101,10 @@ export class DarijaDB extends Dexie {
     // v3 : mots ajoutés par l'utilisateur (index sur la date de création). Aucune donnée existante n'est touchée.
     this.version(3).stores({
       motsPerso: 'id, creeLe',
+    })
+    // v4 : favoris et mots signalés. Ajout de table seul : rien n'est perdu.
+    this.version(4).stores({
+      marques: 'id',
     })
   }
 }

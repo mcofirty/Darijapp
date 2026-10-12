@@ -1,9 +1,16 @@
-import { Flame, Headphones } from 'lucide-react'
+import { useLiveQuery } from 'dexie-react-hooks'
+import { Flame, Headphones, Star, TriangleAlert } from 'lucide-react'
 import { useState } from 'react'
 import { motsDuTheme } from '../../data'
 import { SONS } from '../../data/sons'
+import { PAIRES_SONS } from '../../data/pairesSons'
 import { THEMES } from '../../data/themes'
 import type { Mot } from '../../data/types'
+import { db } from '../../db/db'
+import { useMarques } from '../../db/marques'
+import { useMots } from '../../db/motsPerso'
+import { composerSession, melanger } from '../../exercices/session'
+import { motsDifficiles } from '../../exercices/selections'
 import { useResume } from '../../db/useResume'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
@@ -15,8 +22,18 @@ import { CarteSessionDuJour } from '../session/CarteSessionDuJour'
 import { preparerSession, type SessionPrete } from '../session/lancer'
 import { Session } from '../session/Session'
 import { GuideSons } from './GuideSons'
+import { ListeSpeciale } from './ListeSpeciale'
 
-type Vue = { type: 'accueil' } | { type: 'sons' } | { type: 'ecoute' } | { type: 'theme'; themeId: string }
+type Vue =
+  | { type: 'accueil' }
+  | { type: 'sons' }
+  | { type: 'ecoute' }
+  | { type: 'favoris' }
+  | { type: 'difficiles' }
+  | { type: 'theme'; themeId: string }
+
+/** Une révision de favoris ou de mots difficiles reprend 8 mots au hasard. */
+const MOTS_PAR_REVISION = 8
 
 /** Pastille de série, à droite du grand titre. */
 function Serie() {
@@ -38,6 +55,11 @@ export function Apprendre() {
   const [session, setSession] = useState<SessionPrete | null>(null)
   const [numero, setNumero] = useState(0)
   const { niveau, xpTotal } = useResume()
+  const MOTS = useMots()
+  const marques = useMarques()
+  const progressions = useLiveQuery(() => db.progression.toArray(), []) ?? []
+  const favoris = MOTS.filter((m) => marques.get(m.id)?.favori)
+  const difficiles = motsDifficiles(progressions, MOTS)
 
   /** Un thème ou le guide des sons s'ouvre en haut de page, même depuis le bas de la liste. */
   function ouvrir(v: Vue) {
@@ -47,6 +69,13 @@ export function Apprendre() {
 
   async function lancer() {
     setSession(await preparerSession())
+    setNumero((n) => n + 1)
+  }
+
+  /** Entraînement libre sur une liste : il ne change pas la répétition espacée. */
+  function reviser(mots: Mot[]) {
+    const choisis = melanger(mots).slice(0, MOTS_PAR_REVISION)
+    setSession({ etapes: composerSession([], choisis, MOTS, Math.random, PAIRES_SONS), nouveaux: 0, entrainement: true })
     setNumero((n) => n + 1)
   }
 
@@ -65,6 +94,26 @@ export function Apprendre() {
 
   if (vue.type === 'sons') return <GuideSons onRetour={() => setVue({ type: 'accueil' })} />
   if (vue.type === 'ecoute') return <ModeEcoute onRetour={() => setVue({ type: 'accueil' })} />
+  if (vue.type === 'favoris')
+    return (
+      <ListeSpeciale
+        titre="Mes favoris"
+        mots={favoris}
+        vide={{ icone: <Star className="h-12 w-12" strokeWidth={1.6} />, titre: 'Aucun favori', texte: 'Touche « Ajouter aux favoris » sur la fiche d’un mot.' }}
+        onRetour={() => setVue({ type: 'accueil' })}
+        onReviser={reviser}
+      />
+    )
+  if (vue.type === 'difficiles')
+    return (
+      <ListeSpeciale
+        titre="Mots difficiles"
+        mots={difficiles}
+        vide={{ icone: <TriangleAlert className="h-12 w-12" strokeWidth={1.6} />, titre: 'Aucun mot difficile', texte: 'Les mots que tu rates en session apparaîtront ici.' }}
+        onRetour={() => setVue({ type: 'accueil' })}
+        onReviser={reviser}
+      />
+    )
 
   return (
     <Page titre="Apprendre" accessoire={<Serie />}>
@@ -98,6 +147,20 @@ export function Apprendre() {
           sousTitre="Tes mots à voix haute, mains libres"
           chevron
           onClick={() => ouvrir({ type: 'ecoute' })}
+        />
+        <Ligne
+          tuile={<Tuile icone={Star} couleur="#ffcc00" />}
+          titre="Mes favoris"
+          valeur={favoris.length}
+          chevron
+          onClick={() => ouvrir({ type: 'favoris' })}
+        />
+        <Ligne
+          tuile={<Tuile icone={TriangleAlert} couleur="#ff9500" />}
+          titre="Mots difficiles"
+          valeur={difficiles.length}
+          chevron
+          onClick={() => ouvrir({ type: 'difficiles' })}
         />
         <Ligne
           tuile={<Tuile {...VISUEL_SONS} />}
