@@ -7,6 +7,7 @@ import { Ligne, Section, Tuile } from '../../ui/Liste'
 import { useMarques } from '../../db/marques'
 import { Page } from '../../ui/Page'
 import { MotsSignales } from './MotsSignales'
+import { RappelEtSauvegarde } from './RappelEtSauvegarde'
 
 const APPARENCES: { id: Apparence; libelle: string }[] = [
   { id: 'systeme', libelle: 'Automatique' },
@@ -27,7 +28,7 @@ export function Profil() {
           <Segmente options={APPARENCES} valeur={profil.apparence} onChange={(v) => void modifierProfil({ apparence: v })} />
         </div>
       </Section>
-      <Section titre="Affichage" note="Les autres réglages (prénom, objectif, rappel, sauvegarde) arrivent aux jalons suivants.">
+      <Section titre="Affichage">
         <Ligne
           tuile={<Tuile icone={Languages} couleur="#006233" />}
           titre="Écriture arabe"
@@ -41,6 +42,7 @@ export function Profil() {
           }
         />
       </Section>
+      <RappelEtSauvegarde />
       <Section titre="Contenu">
         <Ligne
           tuile={<Tuile icone={Flag} couleur="#ff9500" />}

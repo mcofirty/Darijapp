@@ -24,6 +24,8 @@ export interface Profil {
   recordExpress: number
   /** Meilleur score de la Chasse aux sons (points en 60 s, combos compris). */
   recordSons: number
+  /** Heure du rappel quotidien (« 19:00 »), pour le fichier calendrier. */
+  heureRappel: string
 }
 
 /** Apparence de l'appli : suit l'iPhone, ou forcée en clair ou en sombre. */
@@ -69,6 +71,24 @@ export interface Marque {
   date: number
 }
 
+/** Ce qui se passe dans la journée hors activités (table `journal`, depuis la v5). */
+export interface Journal {
+  /** Jour local « AAAA-MM-JJ ». */
+  date: string
+  /** Mots entendus en mode écoute (quête « Écoute 10 mots »). */
+  ecoutes: number
+  /** Théière-coffre ouverte ce jour-là (son XP n'est donné qu'une fois). */
+  coffre: boolean
+}
+
+/** XP gagnés hors activités : théière-coffre, plus tard trésors (table `bonus`, depuis la v5). */
+export interface Bonus {
+  id?: number
+  date: string
+  xp: number
+  raison: 'coffre' | 'tresor'
+}
+
 export const PROFIL_DEFAUT: Profil = {
   id: 'moi',
   prenom: '',
@@ -78,6 +98,7 @@ export const PROFIL_DEFAUT: Profil = {
   masquerAideInstallation: false,
   recordExpress: 0,
   recordSons: 0,
+  heureRappel: '19:00',
 }
 
 export class DarijaDB extends Dexie {
@@ -86,6 +107,8 @@ export class DarijaDB extends Dexie {
   motsPerso!: Table<MotPerso, string>
   sessions!: Table<SessionFaite, number>
   marques!: Table<Marque, string>
+  journal!: Table<Journal, string>
+  bonus!: Table<Bonus, number>
 
   constructor(nom = 'darijapp') {
     super(nom)
@@ -105,6 +128,11 @@ export class DarijaDB extends Dexie {
     // v4 : favoris et mots signalés. Ajout de table seul : rien n'est perdu.
     this.version(4).stores({
       marques: 'id',
+    })
+    // v5 : journal du jour (écoutes, théière) et XP bonus. Ajout de tables seul : rien n'est perdu.
+    this.version(5).stores({
+      journal: 'date',
+      bonus: '++id, date',
     })
   }
 }

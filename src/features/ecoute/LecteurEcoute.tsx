@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 import { arreterLecture, lireEtAttendre, parlerFrancais } from '../../audio/lecteur'
 import type { Mot } from '../../data/types'
 import { programmeDuMot, type OptionsEcoute } from '../../exercices/ecoute'
+import { noterEcoute } from '../../db/journal'
 import { useProfil } from '../../db/useProfil'
 import { Bouton } from '../../ui/Boutons'
 
@@ -65,9 +66,17 @@ export function LecteurEcoute({ titre, mots, options, onFermer }: Props) {
       if ('mediaSession' in navigator) {
         navigator.mediaSession.metadata = new MediaMetadata({ title: m.latin, artist: m.fr, album: `Darijaapp · ${titre}` })
       }
+      let note = false
       for (const pas of programmeDuMot(options)) {
         if (!actif()) return
-        if (pas.type === 'darija') await lireEtAttendre(m.audio, m.arabe, pas.lent ? 0.75 : 1)
+        if (pas.type === 'darija') {
+          await lireEtAttendre(m.audio, m.arabe, pas.lent ? 0.75 : 1)
+          // Un mot entendu compte une fois pour la quête « Écoute 10 mots ».
+          if (!note && actif()) {
+            note = true
+            void noterEcoute()
+          }
+        }
         else if (pas.type === 'francais') await parlerFrancais(m.fr)
         else await attendre(pas.ms)
       }

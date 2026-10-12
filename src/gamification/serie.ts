@@ -32,3 +32,36 @@ export function calculerSerie(joursPratiques: Iterable<string>, aujourdhui: stri
   }
   return { jours, aujourdhui: faitAujourdhui }
 }
+
+/** Plus longue suite de jours consécutifs pratiqués (pour les badges : un record ne se perd pas). */
+export function meilleureSerie(joursPratiques: Iterable<string>): number {
+  const pratiques = new Set(joursPratiques)
+  let meilleure = 0
+  for (const jour of pratiques) {
+    if (pratiques.has(ajouterJours(jour, -1))) continue
+    let n = 1
+    while (pratiques.has(ajouterJours(jour, n))) n++
+    meilleure = Math.max(meilleure, n)
+  }
+  return meilleure
+}
+
+export interface JourSemaine {
+  date: string
+  /** Initiale du jour : L, M, M, J, V, S, D. */
+  lettre: string
+  fait: boolean
+  aujourdhui: boolean
+}
+
+const LETTRES = ['D', 'L', 'M', 'M', 'J', 'V', 'S']
+
+/** Les 7 derniers jours jusqu'à aujourd'hui, pour le calendrier de la série. */
+export function septDerniersJours(joursPratiques: Iterable<string>, aujourdhui: string): JourSemaine[] {
+  const pratiques = new Set(joursPratiques)
+  return Array.from({ length: 7 }, (_, i) => {
+    const date = ajouterJours(aujourdhui, i - 6)
+    const [a, m, j] = date.split('-').map(Number)
+    return { date, lettre: LETTRES[new Date(a, m - 1, j).getDay()], fait: pratiques.has(date), aujourdhui: i === 6 }
+  })
+}

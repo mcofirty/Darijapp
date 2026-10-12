@@ -1,4 +1,4 @@
-import { BookOpen, Flame, Sparkles, Star, Trophy } from 'lucide-react'
+import { BookOpen, Sparkles, Star, Trophy } from 'lucide-react'
 import { useState } from 'react'
 import type { Mot } from '../../data/types'
 import { useMots } from '../../db/motsPerso'
@@ -6,13 +6,15 @@ import { useResume } from '../../db/useResume'
 import { Segmente } from '../../ui/Boutons'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
+import { Badges, Collection, Semaine } from '../jeu/Tableau'
+import { QuetesDuJour } from '../jeu/QuetesDuJour'
 import { FicheMot } from '../mots/FicheMot'
 import { Dictionnaire } from './Dictionnaire'
 
 export function Progres() {
   const [vue, setVue] = useState<'tableau' | 'dictionnaire'>('tableau')
   const [mot, setMot] = useState<Mot | null>(null)
-  const { niveau, xpTotal, xpAujourdhui, serie, sessionsAujourdhui, motsVus } = useResume()
+  const { niveau, xpTotal, xpAujourdhui, sessionsAujourdhui, motsVus } = useResume()
   const MOTS = useMots()
 
   if (mot) return <FicheMot mot={mot} retour={{ libelle: 'Progrès', action: () => setMot(null) }} />
@@ -54,12 +56,15 @@ export function Progres() {
             />
             <Ligne tuile={<Tuile icone={Trophy} couleur="#ffcc00" />} titre="XP au total" valeur={xpTotal} />
           </Section>
+          <Semaine />
           <Section titre="Aujourd'hui">
             <Ligne tuile={<Tuile icone={Sparkles} couleur="#af52de" />} titre="XP du jour" valeur={xpAujourdhui} />
-            <Ligne tuile={<Tuile icone={Flame} couleur="#ff3b30" />} titre="Série" valeur={`${serie.jours} jour${serie.jours > 1 ? 's' : ''}`} />
-            <Ligne tuile={<Tuile icone={BookOpen} couleur="#007aff" />} titre="Sessions terminées" valeur={sessionsAujourdhui} />
+            <Ligne tuile={<Tuile icone={BookOpen} couleur="#007aff" />} titre="Activités terminées" valeur={sessionsAujourdhui} />
           </Section>
-          <Section titre="Vocabulaire" note="Les quêtes, le coffre et les statistiques détaillées arrivent au jalon 4.">
+          <QuetesDuJour />
+          <Collection />
+          <Badges />
+          <Section titre="Vocabulaire">
             <Ligne titre="Mots vus" valeur={`${motsVus.size} / ${MOTS.length}`} />
           </Section>
         </>

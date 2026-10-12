@@ -59,13 +59,15 @@ src/
     parcours/     chemin de leçons, trésors, trophées
     quiz/         quiz de 5 questions, 5 types d'exercices
     progres/      tableau de bord, quêtes, série, statistiques, dictionnaire
-    profil/       réglages, export/import, rappel .ics
+    profil/       réglages, rappel .ics, sauvegarde, mots signalés
+    jeu/          quêtes du jour et théière, semaine, collection, badges
     onboarding/   premier lancement
     ajout/        page cachée « Mes mots » (lien #ajout) : ajouter, modifier, supprimer ses mots
   srs/            répétition espacée et dates locales (logique pure)
   exercices/      moteur d'exercices : composition d'une session, leurres, résultats (logique pure)
   scoring/        score de prononciation (logique pure)
-  gamification/   XP, niveaux, série (logique pure) ; quêtes au jalon 4
+  gamification/   XP, niveaux, série, quêtes, collection, badges (logique pure)
+  sauvegarde/     format du fichier de sauvegarde, rappel .ics (logique pure)
   db/             schéma Dexie et migrations, plan et enregistrement des sessions, mots ajoutés, résumé en direct
   data/           un fichier JSON par thème, liste des thèmes, sons du darija, paires de sons (`sons/paires.json`)
 scripts/
@@ -79,11 +81,11 @@ docs/
 
 | Onglet | Contenu |
 | --- | --- |
-| Apprendre | Écran d'accueil. Grand titre avec la série (flamme). Carte « Session du jour » (nouveaux mots, révisions, mots vus, « Commencer » puis « Encore une session », sans limite), section « Ma progression » (niveau, XP), puis « Explorer » : mode écoute, mes favoris, mots difficiles (ratés et en boîte 1 ou 2 ; listes avec « Réviser » = entraînement libre sur 8 mots, et « Écouter »), guide des sons et 31 thèmes en liste groupée, fiches mots |
+| Apprendre | Écran d'accueil. Grand titre avec la série (flamme). Carte « Session du jour » (nouveaux mots, révisions, mots vus, « Commencer » puis « Encore une session », sans limite), « Quêtes du jour » (3 quêtes, 3 verres de thé, théière +60 XP), section « Ma progression » (niveau, XP), puis « Explorer » : mode écoute, mes favoris, mots difficiles (ratés et en boîte 1 ou 2 ; listes avec « Réviser » = entraînement libre sur 8 mots, et « Écouter »), guide des sons et 31 thèmes en liste groupée, fiches mots |
 | Parcours | Leçons groupées par niveau (niveau 1 « Les bases »), prochaine leçon mise en avant, nœuds Trésor, trophées |
 | Quiz | Trois cartes. « Contrôle tes acquis » : quiz de 5 questions (Écoute et choisis, Traduis, une Distingue les sons et une Associe les paires, jamais en premier) sur les mots les moins sus (boîte, échecs, retard), complétés par le début du programme ; aucune question refaite ; bilan « x sur 5 », « Sans faute ! ». « Quiz express » : 60 s, questions enchaînées sans « Continuer » (réponse affichée 0,45 s), chrono qui rougit à 10 s, score, record gardé dans le profil. « Chasse aux sons » : même chrono avec des questions Distingue les sons, combo (dès la 5e bonne réponse d'affilée, chacune vaut 2 points), record en points. Quiz, Quiz express et Chasse aux sons donnent de l'XP et comptent pour la série, sans toucher à la répétition espacée |
-| Progrès | Contrôle segmenté Tableau de bord / Dictionnaire. Tableau : niveau et XP restants, XP total, XP du jour, série, sessions du jour, mots vus (quêtes, coffre et statistiques au jalon 4). Dictionnaire : recherche iOS, tous les mots avec ✓ sur ceux déjà vus |
-| Profil | Fait : Apparence (Automatique / Clair / Sombre), écriture arabe, « Mots signalés » (liste à envoyer par la feuille de partage ou à copier, pour les corriger avec Claude). Prévu : prénom, avatar, genre, objectif, rappel, audio, export/import/remise à zéro |
+| Progrès | Contrôle segmenté Tableau de bord / Dictionnaire. Tableau : niveau et XP restants, XP total, série avec les 7 derniers jours (flammes) et « Série sécurisée », XP et activités du jour, quêtes du jour, « Ma collection » (or, argent, bronze, vers l'objectif de 300 mots), 12 badges, mots vus. Dictionnaire : recherche iOS, tous les mots avec une pastille bronze / argent / or sur ceux déjà vus |
+| Profil | Fait : Apparence (Automatique / Clair / Sombre), écriture arabe, Rappel (heure, « Ajouter au Calendrier » : fichier .ics quotidien avec alerte), Sauvegarde (exporter la progression en JSON par la feuille de partage, importer après confirmation, tout ou rien), « Mots signalés » (liste à envoyer ou copier, pour les corriger avec Claude). Prévu : prénom, avatar, genre, objectif, rappel, audio, export/import/remise à zéro |
 
 Design : règles d'Apple (Human Interface Guidelines, iOS 26). Couleurs sémantiques système en clair et en sombre (`src/index.css` : fond groupé, cartes, libellés primaire/secondaire, séparateurs), couleurs principales du drapeau marocain : rouge #C1272D pour l'accent et les boutons, vert #006233 pour les réussites (`--accent`/`--vert` pour le texte, éclaircis en sombre ; `--accent-plein`/`--vert-plein` pour les fonds de boutons ; contrastes WCAG AA). Apparence clair/sombre réglable dans Profil (Automatique, Clair, Sombre) : attribut `data-theme` sur `<html>`, variante `dark:` de Tailwind redéfinie en conséquence. Typographie système SF Pro avec l'échelle iOS (classes `.t-grand-titre` à `.t-legende`, en rem sur le corps 17 pt, Dynamic Type via `-apple-system-body`). Chaque écran a un grand titre ; au défilement, le titre passe en petit au centre et le contenu s'efface sous un bord flou (`.bord-flou`, effet de bord d'iOS 26) ; le retour est un chevron seul dans un bouton rond en verre. Contenu en listes groupées façon Réglages, mesurées sur une capture de l'utilisateur (écran de 440 pt) : marge des pages 20 pt (`px-marge`), cellules de 56 pt minimum (`min-h-ligne`), texte à 20 pt du bord de la carte, séparateurs alignés sur le texte et arrêtés à 20 pt du bord droit, titres de section en 17 pt semi-gras gris sans majuscules, tuiles d'icônes colorées, chevrons. Angles d'iOS 26 (jetons `--radius-*` de `src/index.css`, classes `rounded-liste`…) : listes et cartes 26 px, tuiles d'icônes 8 px, réponses des exercices en capsule, logo à 22,37 % ; un conteneur qui entoure un bouton en capsule est concentrique (rayon du bouton + marge : panneaux en verre, carte Session du jour, alertes, aide à l'installation, carte « Thème » du Profil avec son contrôle segmenté, via la prop `arrondi` de `Section`) ; angles continus (`corner-shape: superellipse`) là où le navigateur les dessine, capsules exclues. Liquid Glass (`.verre` : verre clair au centre, bande de bord plus réfractante, liseré lumineux, légère dispersion colorée ; `.verre-fin` pour les petites commandes ; `.verre-epais` pour les alertes et la recherche, plus opaque pour rester lisible ; `.lentille-goutte` pour les curseurs pendant le geste) réservé aux commandes : barre d'onglets, boutons de barre (retour, série), croix et capsule de progression de la session, panneaux « Continuer » et du bilan, champ de recherche collant du Dictionnaire, alertes (composant `Alerte`, à la place de `window.confirm`) ; jamais sur le contenu. Contrôle segmenté façon iOS 26 : capsule grise, curseur en verre clair au repos (`.verre-curseur`) ; pendant l'appui ou le glissement, il devient une goutte de verre qui suit le doigt, puis revient avec un rebond. Interrupteur : la pastille devient une goutte de verre pendant l'appui. Une commande en verre grossit au toucher au lieu de pâlir. Respect de Réduire les animations et Réduire la transparence.
 
@@ -113,7 +115,8 @@ Fonctions complémentaires : premier lancement guidé, remplacer l'audio d'un mo
 - **Calibrage du score** : deux rendus de synthèse du même mot doivent dépasser 80 ; deux mots proches doivent rester sous 60.
 - **XP** : 1 par bonne réponse, 10 par session terminée, 5 de bonus sans faute.
 - **Niveaux** : 120 XP pour le niveau 1, 140 pour le niveau 2, puis 20 XP de plus par niveau. Noms : Terreau, Graine, Germe, Pousse, Tige, Feuilles, Bouton, Fleur, Fruit, puis Arbre.
-- **Quêtes** : 3 par jour, renouvelées à minuit heure locale. Les 3 terminées ouvrent le coffre (+60 XP). Un nœud Trésor rapporte +100 XP.
+- **Quêtes** : 3 par jour, renouvelées à minuit heure locale : toujours « Termine une session du jour », plus deux tirées selon la date parmi 8 (2 sessions, sans faute, quiz, Quiz express, Chasse aux sons, 40 XP, 5 nouveaux mots, 10 mots écoutés). Les 3 faites ouvrent la théière-coffre (+60 XP, une fois par jour). Un nœud Trésor rapporte +100 XP.
+- **Collection et badges** : un mot vu est en bronze, en argent en boîte 3, en or en boîte 4. 12 badges (première activité, sans faute, 50 / 150 / 300 mots, 10 / 50 mots en or, 3 / 7 / 30 jours d'affilée en record, 15 au Quiz express, 20 à la Chasse aux sons).
 - **Série** : jours avec au moins une session. Aujourd'hui non fait ne casse rien. Une journée manquée est pardonnée si aucune autre ne l'a été dans les 7 jours ; deux jours manqués d'affilée cassent la série.
 - **Genre** : sert à accorder les phrases (« toi » = nta au masculin, nti au féminin).
 
@@ -161,6 +164,8 @@ Favori ou signalement (IndexedDB, table `marques`, depuis la v4 ; supprimé quan
 { "id": "salutations-012", "favori": true, "signale": "traduction", "date": 1760300000000 }
 ```
 
+Journal du jour (table `journal`, v5) : `{ "date": "2026-10-13", "ecoutes": 12, "coffre": true }` ; XP bonus (table `bonus`, v5) : `{ "id": 1, "date": "2026-10-13", "xp": 60, "raison": "coffre" }`, ajoutés à l'XP total. Sauvegarde (`darijaapp-AAAA-MM-JJ.json`) : `{ "format": "darijaapp-sauvegarde", "version": 1, "date": "…", "tables": { progression, profil, motsPerso, sessions, marques, journal, bonus } }` (`audioPerso` mis à null).
+
 Progression d'un mot (IndexedDB ; ses champs `favori` et `signale` ne servent pas) :
 
 ```json
@@ -181,7 +186,6 @@ Progression d'un mot (IndexedDB ; ses champs `favori` et `signale` ne servent pa
 - GitHub Pages sert l'appli dans un sous-dossier : il faut régler `base` dans `vite.config.ts` sur le nom du repo.
 - Sur iPhone, le micro exige HTTPS et un geste de l'utilisateur. La lecture audio automatique ne démarre qu'après une première interaction.
 - Sur Safari, MediaRecorder produit de l'`audio/mp4` : décode l'enregistrement avec `AudioContext.decodeAudioData` avant de calculer les MFCC.
-- Tant que GitHub Pages n'est pas activé (Source « GitHub Actions »), le job `deploy` échoue avec une erreur 404 « Failed to create deployment ».
 - L'environnement cloud de Claude Code ne peut pas joindre mcofirty.github.io (proxy) : vérifier la mise en ligne par l'état du job `deploy`, pas par une requête au site.
 - Safari et le service worker gardent les icônes en cache par URL : pour changer une icône, changer aussi son nom de fichier (`logo-*.png`), puis supprimer et réinstaller l'appli sur l'écran d'accueil.
 - mms-tts-ara lit l'arabe sans voyelles (lettres arabes seules) : impossible de lui indiquer les voyelles du darija. Le journal de l'Action « Publier » affiche les textes lus : le vérifier avant de conclure.
@@ -205,14 +209,14 @@ Progression d'un mot (IndexedDB ; ses champs `favori` et `signale` ne servent pa
 
 ## État du projet
 
-Jalon en cours : **3 — Prononciation** (Distingue les sons, mode écoute, puis Dis-le). Les jalons 1 et 2 sont en ligne sur https://mcofirty.github.io/Darijapp/.
+Jalons en cours : **3 — Prononciation** (reste Dis-le) et **4 — Jeu** (reste le voyage du Parcours, le souk, les mini-jeux). Les jalons 1 et 2 sont en ligne sur https://mcofirty.github.io/Darijapp/.
 
 | Jalon | Durée estimée | Contenu | Statut |
 | --- | --- | --- | --- |
 | 1. Socle | Semaine 1 | PWA, 5 onglets, script audio, 1 thème de 10 mots (fait : 8 thèmes, 152 mots, 304 MP3) | Terminé |
 | 2. Exercices | Semaines 2 et 3 | Cartes, quiz, répétition espacée | Terminé |
 | 3. Prononciation | Semaines 4 et 5 | Enregistrement, score sur 100, sons du darija | En cours |
-| 4. Jeu et contenu | Semaines 6 et 7 | Quêtes, séries, parcours complet, 150 mots (fait : 1 682 mots en 31 thèmes) | À faire |
+| 4. Jeu et contenu | Semaines 6 et 7 | Quêtes, séries, parcours complet, 150 mots (fait : 1 682 mots en 31 thèmes, quêtes, théière, collection, badges) | En cours |
 | Ensuite | — | Grammaire, dialogues, 500 mots | Plus tard |
 
 ## Fonctionnalités livrées
@@ -222,22 +226,20 @@ Jalon en cours : **3 — Prononciation** (Distingue les sons, mode écoute, puis
 | 2026-10-10 | Jalon 1 : socle PWA à 5 onglets, base Dexie, 152 mots en 8 thèmes avec fiche mot, guide des sons et dictionnaire, lecture audio avec repli sur la voix du téléphone, Action qui génère l'audio, teste et publie | `src/app/`, `src/db/`, `src/data/`, `src/features/`, `src/audio/lecteur.ts`, `.github/workflows/publier.yml` |
 | 2026-10-12 | Design d'Apple (iOS 26) : couleurs du drapeau et apparence clair / sombre, grands titres, listes groupées et angles aux mesures des Réglages, Liquid Glass sur toutes les commandes, barre d'onglets flottante d'après la maquette de l'utilisateur avec balayage | `src/index.css`, `src/ui/`, `src/app/BarreOnglets.tsx`, `src/app/apparence.ts` |
 | 2026-10-12 | Relecture du contenu : 40 mots ou exemples corrigés (ch7al, derhem/drahem, lma, 9ahwa k7la, maticha, articles alignés entre latin et arabe…) et test de cohérence latin/arabe | `src/data/*.json`, `src/data/data.test.ts` |
-| 2026-10-12 | Logo de l'appli (bulles « A » et « ش ») en favicon, icône d'écran d'accueil et icônes PWA | `public/logo-*.png` (copies `favicon.png` et `apple-touch-icon.png` pour les anciennes versions en cache) |
+| 2026-10-12 | Nom « Darijaapp », logo (bulles « A » et « ش ») en icônes, et feuille d'aide à l'installation sur l'écran d'accueil avec « Ne plus afficher » | `public/logo-*.png`, `src/features/onboarding/AideInstallation.tsx`, `src/app/installation.ts`, `vite.config.ts`, `index.html` |
 | 2026-10-12 | Page cachée « Mes mots » (`#ajout`) : ajout, modification, suppression de mots intégrés aux sessions, et partage d'un mot par lien (`#mot=`) avec confirmation ; base v3 | `src/features/ajout/`, `src/db/motsPerso.ts`, `src/data/motsPerso.ts`, `src/app/App.tsx` |
 | 2026-10-12 | Session du jour style Duolingo en écran d'accueil : découverte, Écoute et choisis, Traduis, Associe les paires, bilan ; répétition espacée, XP, niveaux, série ; base v2 | `src/features/session/`, `src/exercices/`, `src/srs/`, `src/gamification/`, `src/db/apprentissage.ts` |
 | 2026-10-12 | Voix marocaine Jamal par Azure Speech pour les 1 682 mots et 152 exemples (Action, secrets GitHub), MP3 gardés sur le téléphone à la première écoute | `scripts/generate_audio.py`, `.github/workflows/publier.yml`, `vite.config.ts`, `src/data/*.json` |
 | 2026-10-12 | Import de 1 530 mots et phrases du fichier de l'utilisateur (1 739 entrées, doublons retirés) en 23 nouveaux thèmes et 7 thèmes existants, arabe écrit par Claude ; le 2026-10-13, explication de prononciation et exemple pour chacun | `src/data/*.json`, `src/data/themes.ts`, `src/ui/visuels.ts`, `src/data/data.test.ts` |
-| 2026-10-12 | Nom « Darijaapp » (icône d'écran d'accueil, titre) et feuille d'aide à l'installation sur l'écran d'accueil avec « Ne plus afficher » | `src/features/onboarding/AideInstallation.tsx`, `src/app/installation.ts`, `vite.config.ts`, `index.html` |
 | 2026-10-12 | Mise en ligne en 2 min, séparée de la génération audio ; Dictionnaire affiché progressivement | `.github/workflows/publier.yml`, `.github/workflows/audio.yml`, `src/features/mots/ListeMots.tsx` |
-| 2026-10-13 | Onglet Quiz : quiz de 5 questions sur les mots les moins sus et Quiz express de 60 s avec record | `src/features/quiz/`, `src/exercices/quiz.ts`, `src/db/apprentissage.ts`, `src/features/session/` |
-| 2026-10-13 | Distingue les sons : 14 paires (9elb / kelb…) avec voix Jamal, une question par session et par quiz, et mini-jeu Chasse aux sons avec combo et record | `src/data/sons/paires.json`, `src/data/pairesSons.ts`, `src/features/session/Distingue.tsx`, `src/features/quiz/Chrono.tsx`, `src/exercices/` |
-| 2026-10-13 | Mode écoute mains libres : darija, temps pour répéter, darija ralenti, français, sur ses mots à revoir ou un thème | `src/features/ecoute/`, `src/exercices/ecoute.ts`, `src/audio/lecteur.ts` |
-| 2026-10-13 | Favoris, mots difficiles (à réviser ou écouter) et « Signaler une erreur » avec liste à envoyer ; base v4 | `src/db/marques.ts`, `src/exercices/selections.ts`, `src/features/apprendre/ListeSpeciale.tsx`, `src/features/profil/MotsSignales.tsx`, `src/features/mots/FicheMot.tsx` |
+| 2026-10-13 | Onglet Quiz : quiz de 5 questions, Quiz express (60 s, record) et Chasse aux sons ; Distingue les sons (14 paires comme 9elb / kelb, voix Jamal) dans les sessions et les quiz | `src/features/quiz/`, `src/exercices/quiz.ts`, `src/data/sons/paires.json`, `src/data/pairesSons.ts`, `src/features/session/Distingue.tsx` |
+| 2026-10-13 | Mode écoute mains libres ; favoris, mots difficiles et « Signaler une erreur » avec liste à envoyer (base v4) | `src/features/ecoute/`, `src/audio/lecteur.ts`, `src/db/marques.ts`, `src/exercices/selections.ts`, `src/features/apprendre/ListeSpeciale.tsx`, `src/features/profil/MotsSignales.tsx` |
+| 2026-10-13 | Jeu : quêtes du jour et théière (+60 XP), semaine de la série, collection bronze / argent / or, 12 badges ; rappel .ics ; sauvegarde export / import ; base v5 | `src/gamification/`, `src/features/jeu/`, `src/db/journal.ts`, `src/db/sauvegarde.ts`, `src/sauvegarde/`, `src/features/profil/RappelEtSauvegarde.tsx` |
 | 2026-10-12 | Animation d'ouverture : vidéo de 3 s de l'utilisateur sur fond sombre à chaque lancement, passée d'un toucher, image finale avec Réduire les animations ou si la vidéo ne démarre pas | `public/lancement.mp4`, `public/lancement-fin.jpg`, `src/app/lancement.ts`, `index.html` |
 
 ## Décisions
 
-- 2026-10-11 : appli 100 % locale, publiée sur GitHub Pages. Pas de serveur ni de compte à maintenir.
+- 2026-10-11 : appli 100 % locale publiée sur GitHub Pages (pas de serveur ni de compte), repo public pour que Pages soit gratuit (aucune donnée personnelle dans le repo hors demandes de l'utilisateur) ; publication et MP3 par GitHub Actions, pour que tout se fasse sans ordinateur (l'utilisateur n'utilise que son iPhone).
 - 2026-10-11 : score par comparaison acoustique MFCC + DTW sur l'appareil. Hors ligne, et la voix reste privée.
 - 2026-10-11 : rappel quotidien par fichier .ics. Une notification push exigerait un serveur.
 
@@ -245,8 +247,6 @@ Jalon en cours : **3 — Prononciation** (Distingue les sons, mode écoute, puis
 - 2026-10-10 : l'écriture arabe s'affiche par défaut à côté du latin (demande de l'utilisateur) ; le réglage du Profil permet de la masquer.
 - 2026-10-10 : champ `prononciation` obligatoire et `exemple.arabe` ajoutés au format des mots, pour l'explication affichée et pour la synthèse de l'exemple.
 - 2026-10-10 : sans MP3, l'appli lit l'écriture arabe avec la synthèse vocale du téléphone (voix arabe) ; la liste des MP3 présents est fixée au build (`__AUDIOS__` dans `vite.config.ts`).
-- 2026-10-11 : publication et génération des MP3 par GitHub Actions, pour que tout se fasse sans ordinateur (l'utilisateur n'utilise que son iPhone).
-- 2026-10-11 : repo public, pour que GitHub Pages soit gratuit ; aucune donnée personnelle dans le repo, le prénom de l'utilisateur a été retiré des exemples.
 - 2026-10-12 : design d'Apple en PWA (demandes de l'utilisateur) : Liquid Glass en CSS (deux couches `backdrop-filter` en pseudo-éléments, liseré et dispersion en ombres internes, Pointer Events, sans bibliothèque ; Safari n'accepte pas de filtre SVG dans `backdrop-filter`, donc pas de vraie réfraction, et `glassEffect` de SwiftUI ne vaut que pour les applis natives), réservé aux commandes ; fond système gris, listes groupées, grands titres ; retour réduit à un chevron dans un rond en verre (nom de la page précédente gardé pour VoiceOver) ; bord de défilement flou ; icônes Lucide (licence des SF Symbols réservée aux applis Apple) ; animations coupées avec « Réduire les animations ».
 - 2026-10-12 : nouveaux mots illimités (demande de l'utilisateur) : 5 par session, autant de sessions que voulu ; pas de cœurs ni de blocage.
 - 2026-10-12 : la session du jour remplace les « 5 cartes du jour » du cahier des charges ; les exercices Dis-le et Distingue les sons y entreront au jalon 3.
@@ -271,6 +271,7 @@ Jalon en cours : **3 — Prononciation** (Distingue les sons, mode écoute, puis
 - 2026-10-13 : mode écoute avec l'écran gardé allumé (Wake Lock) plutôt qu'en arrière-plan : la synthèse vocale de l'iPhone (voix de secours et français) s'arrête quand l'écran se verrouille.
 - 2026-10-13 : favoris et signalements dans une table à part (`marques`, v4) et non dans la progression : marquer un mot jamais vu l'aurait compté comme vu et retiré des nouveaux mots.
 - 2026-10-13 : exemples des mots importés écrits pour tous les 1 530 (choix de l'utilisateur), une phrase courte et courante par mot ; l'article d'un mot en ش n'est pas doublé en latin (chta = الشتا), sinon le test de translittération compterait deux « ch ».
+- 2026-10-13 : quêtes, semaine, collection et badges calculés à partir des tables existantes (activités, progression, profil), sans état stocké qui pourrait se désynchroniser ; seuls les mots écoutés et l'ouverture de la théière vont dans `journal`, et l'XP de la théière dans `bonus` (pas dans `sessions`, pour ne pas fausser les activités du jour). Badges de série sur le record (plus longue suite de jours), pour qu'un badge obtenu ne se perde pas.
 - 2026-10-10 : pas de routeur ; navigation par état React, suffisante pour 5 onglets.
 
 ## Points en suspens
@@ -279,9 +280,8 @@ Jalon en cours : **3 — Prononciation** (Distingue les sons, mode écoute, puis
 - Score de prononciation (jalon 3) : les MP3 Jamal serviront de référence (MFCC + DTW) ; envisagé : ajouter la voix féminine Mouna (`ar-MA-MounaNeural`) et garder la meilleure des deux notes. Enregistrement et auto-évaluation à construire.
 - Contenu relu par Claude (cohérence latin/arabe), jamais par un locuteur natif : l'arabe, les explications et les exemples des 1 530 mots importés sont de Claude ; signaler les erreurs depuis la fiche mot. Les 1 530 MP3 d'exemple sont générés par l'Action « Audio » (environ 1h20).
 - Mode écoute : vérifier sur iPhone que la lecture continue écran allumé, et si les commandes de l'écran verrouillé apparaissent.
-- Le Dictionnaire montre tous les mots, avec un ✓ sur ceux déjà vus (le cahier des charges ne prévoyait que les mots vus).
-- Sur iPhone, l'appli installée sur l'écran d'accueil a sa propre mémoire, séparée de Safari (non vérifié sur appareil) : la progression faite dans Safari ne suit pas, et un lien `#mot=…` ouvert dans Safari ajoute sans doute le mot à Safari, pas à l'appli installée. À vérifier, puis prévoir un contournement (copier le lien et l'ouvrir dans l'appli, ou export/import).
-- Mes mots : pas de sauvegarde tant que l'export/import du Profil n'existe pas (effacer les données du site efface les mots ajoutés). Pas de prononciation ni d'exemple pour ces mots.
+- Le Dictionnaire montre tous les mots, avec une pastille bronze, argent ou or sur ceux déjà vus (le cahier des charges ne prévoyait que les mots vus).
+- Sur iPhone, l'appli installée et Safari ont chacun leur mémoire (non vérifié) : un lien `#mot=…` ouvert dans Safari ajoute sans doute le mot à Safari ; contournement : Profil > Exporter dans Safari, puis Importer dans l'appli.
 
 ## Mise à jour de ce fichier (obligatoire)
 

@@ -27,12 +27,18 @@ export function useResume(): Resume {
   return (
     useLiveQuery(async () => {
       const aujourdhui = dateLocale()
-      const [sessions, ids] = await Promise.all([db.sessions.toArray(), db.progression.toCollection().primaryKeys()])
-      const xpTotal = sessions.reduce((t, s) => t + s.xp, 0)
+      const [sessions, ids, bonus] = await Promise.all([
+        db.sessions.toArray(),
+        db.progression.toCollection().primaryKeys(),
+        db.bonus.toArray(),
+      ])
+      // XP des activités et des bonus (théière-coffre, trésors).
+      const gains = [...sessions, ...bonus]
+      const xpTotal = gains.reduce((t, s) => t + s.xp, 0)
       const duJour = sessions.filter((s) => s.date === aujourdhui)
       return {
         xpTotal,
-        xpAujourdhui: duJour.reduce((t, s) => t + s.xp, 0),
+        xpAujourdhui: gains.filter((g) => g.date === aujourdhui).reduce((t, s) => t + s.xp, 0),
         niveau: niveauDepuisXp(xpTotal),
         serie: calculerSerie(sessions.map((s) => s.date), aujourdhui),
         sessionsAujourdhui: duJour.length,

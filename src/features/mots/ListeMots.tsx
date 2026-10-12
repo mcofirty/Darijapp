@@ -1,8 +1,8 @@
-import { CircleCheck } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import type { Mot } from '../../data/types'
 import { useProfil } from '../../db/useProfil'
-import { useResume } from '../../db/useResume'
+import { useMaitrises } from '../../db/useJeu'
+import { COULEURS_MAITRISE, NOMS_MAITRISE } from '../../gamification/collection'
 import { Ligne, Section } from '../../ui/Liste'
 import { BoutonAudio } from './BoutonAudio'
 
@@ -18,7 +18,7 @@ const TRANCHE = 120
 
 export function ListeMots({ mots, onChoisir, titre }: Props) {
   const { afficherArabe } = useProfil()
-  const { motsVus } = useResume()
+  const maitrises = useMaitrises()
   const [limite, setLimite] = useState(PREMIERE_TRANCHE)
   const repere = useRef<HTMLDivElement>(null)
 
@@ -49,7 +49,13 @@ export function ListeMots({ mots, onChoisir, titre }: Props) {
             titre={
               <span className="flex items-center gap-1.5">
                 <span className="font-semibold">{m.latin}</span>
-                {motsVus.has(m.id) && <CircleCheck className="h-4 w-4 text-vert" strokeWidth={2.5} aria-label="déjà vu" />}
+                {maitrises.has(m.id) && (
+                  <span
+                    className="inline-block h-2.5 w-2.5 rounded-full"
+                    style={{ background: COULEURS_MAITRISE[maitrises.get(m.id)!] }}
+                    aria-label={`carte ${NOMS_MAITRISE[maitrises.get(m.id)!]}`}
+                  />
+                )}
               </span>
             }
             sousTitre={m.fr}

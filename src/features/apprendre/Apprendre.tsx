@@ -16,6 +16,7 @@ import { Ligne, Section, Tuile } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
 import { VISUELS_THEMES, VISUEL_SONS } from '../../ui/visuels'
 import { ModeEcoute } from '../ecoute/ModeEcoute'
+import { QuetesDuJour } from '../jeu/QuetesDuJour'
 import { FicheMot } from '../mots/FicheMot'
 import { ListeMots } from '../mots/ListeMots'
 import { CarteSessionDuJour } from '../session/CarteSessionDuJour'
@@ -118,6 +119,7 @@ export function Apprendre() {
   return (
     <Page titre="Apprendre" accessoire={<Serie />}>
       <CarteSessionDuJour onCommencer={() => void lancer()} />
+      <QuetesDuJour />
 
       <Section titre="Ma progression">
         <Ligne
