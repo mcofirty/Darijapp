@@ -27,7 +27,7 @@ Ne modifie jamais cette section sans demande explicite.
 | Interface | React + Vite + TypeScript, Tailwind CSS, icônes Lucide (style SF Symbols) |
 | Hors ligne | PWA via vite-plugin-pwa |
 | Stockage | IndexedDB via Dexie |
-| Audio des mots | Voix arabe de l'iPhone, API Web Speech (`speechSynthesis`), pour tous les mots ; aucun MP3 aujourd'hui. `scripts/generate_audio.py` (Jamal via edge-tts, secours mms-tts-ara) reste prêt pour une future vraie voix : il génère `public/audio/<id>.mp3` pour les mots dont le champ `audio` est renseigné |
+| Audio des mots | MP3 de la voix marocaine Jamal (`ar-MA-JamalNeural`) par l'API Azure Speech (offre gratuite F0), générés par `scripts/generate_audio.py` dans l'Action, dans `public/audio/<id>.mp3` ; secours : voix arabe de l'iPhone (`speechSynthesis`) tant qu'un MP3 manque, secours local mms-tts-ara (`--moteur mms`). Clés : secrets GitHub `AZURE_SPEECH_KEY` et `AZURE_SPEECH_REGION`, jamais dans le repo |
 | Enregistrement | MediaRecorder |
 | Score de prononciation | MFCC (Meyda) + DTW, dans `src/scoring/` |
 | Tests | Vitest |
@@ -39,10 +39,10 @@ Ne modifie jamais cette section sans demande explicite.
 npm run dev                         # serveur local (http://localhost:5173/Darijapp/)
 npm test                            # tests Vitest
 npm run build                       # build de production dans dist/
-python scripts/generate_audio.py    # génère les MP3 manquants (options --theme, --force, --apercu, --moteur mms)
+python scripts/generate_audio.py    # génère les MP3 manquants avec Azure (clés en variables d'environnement ; options --theme, --force, --apercu, --moteur mms)
 ```
 
-Publication : chaque push sur `main` lance la GitHub Action « Publier ». Elle génère les MP3 manquants avec la voix Jamal (ou mms-tts-ara si le service ne répond pas) et les commite (`github-actions[bot]`), lance les tests, construit l'appli et la publie sur https://mcofirty.github.io/Darijapp/. Pense à faire `git pull` avant de travailler, l'Action pouvant avoir ajouté des MP3. Le script audio demande `pip install edge-tts` (secours : `torch transformers` et ffmpeg). Les serveurs de la voix et Hugging Face sont bloqués dans l'environnement cloud de Claude Code, ouverts sur GitHub Actions : la génération se fait toujours par l'Action.
+Publication : chaque push sur `main` lance la GitHub Action « Publier ». Elle génère les MP3 manquants avec la voix Jamal (Azure, environ 20 fichiers par minute, la première fois ~1h30 pour les 1 834 fichiers) et commite ce qui est fait même si elle s'arrête en route (`github-actions[bot]`), la suivante reprenant, lance les tests, construit l'appli et la publie sur https://mcofirty.github.io/Darijapp/. Pense à faire `git pull` avant de travailler, l'Action pouvant avoir ajouté des MP3. Le script Azure n'a pas de dépendance (secours mms : `torch transformers` et ffmpeg). Azure et Hugging Face sont bloqués dans l'environnement cloud de Claude Code, ouverts sur GitHub Actions : la génération se fait toujours par l'Action.
 
 ## Arborescence cible
 
@@ -69,7 +69,7 @@ src/
   data/           un fichier JSON par thème, liste des thèmes, sons du darija
 scripts/
   generate_audio.py
-public/audio/     MP3 générés (vide pour l'instant)
+public/audio/     MP3 générés par l'Action (voix Jamal)
 docs/
   cahier-des-charges.md
 ```
@@ -125,16 +125,16 @@ Mot (`src/data/<theme>.json`) :
   "theme": "salutations",
   "niveau": 1,
   "prononciation": "3a-fak : commence par le 3 (ع), un « a » serré au fond de la gorge.",
-  "audio": "",
-  "exemple": { "latin": "3tini atay 3afak", "arabe": "عطيني أتاي عافاك", "fr": "Donne-moi du thé, s'il te plaît", "audio": "" }
+  "audio": "audio/salutations-012.mp3",
+  "exemple": { "latin": "3tini atay 3afak", "arabe": "عطيني أتاي عافاك", "fr": "Donne-moi du thé, s'il te plaît", "audio": "audio/salutations-012-ex.mp3" }
 }
 ```
 
 L'id suit `<theme>-NNN` dans l'ordre du fichier ; `src/data/data.test.ts` vérifie le format, l'unicité (latin + arabe) et la translittération.
 
-`audio` vide : la voix de l'iPhone lit l'arabe et le script audio ignore le mot ; `audio/<id>.mp3` (et `audio/<id>-ex.mp3` pour l'exemple) demande un MP3.
+`audio` = `audio/<id>.mp3` (et `audio/<id>-ex.mp3` pour l'exemple, s'il y en a un) : l'Action génère le MP3 s'il manque. Tant qu'il manque, ou si `audio` est vide, la voix de l'iPhone lit l'arabe.
 
-Mot importé (1 530 entrées) : `"prononciation": ""`, `"audio": ""`, `"exemple"` aux quatre champs vides, et parfois `"note": "Emprunt courant au français"`. Une même graphie latine peut désigner deux mots différents en arabe (7it = حيت « parce que » ou حيط « mur »).
+Mot importé (1 530 entrées) : `"prononciation": ""`, `"exemple"` aux quatre champs vides, et parfois `"note": "Emprunt courant au français"`. Une même graphie latine peut désigner deux mots différents en arabe (7it = حيت « parce que » ou حيط « mur »).
 
 Session terminée (IndexedDB, table `sessions`, depuis la v2) :
 
@@ -172,7 +172,7 @@ Progression d'un mot (IndexedDB) :
 - L'environnement cloud de Claude Code ne peut pas joindre mcofirty.github.io (proxy) : vérifier la mise en ligne par l'état du job `deploy`, pas par une requête au site.
 - Safari et le service worker gardent les icônes en cache par URL : pour changer une icône, changer aussi son nom de fichier (`logo-*.png`), puis supprimer et réinstaller l'appli sur l'écran d'accueil.
 - mms-tts-ara lit l'arabe sans voyelles (lettres arabes seules) : impossible de lui indiquer les voyelles du darija. Le journal de l'Action « Publier » affiche les textes lus : le vérifier avant de conclure.
-- 2026-10-12 : Microsoft refuse edge-tts depuis GitHub Actions (erreur 403 sur speech.platform.bing.com) : la voix Jamal n'est pas disponible par cet accès non officiel. Le script abandonne dès le premier refus et passe au secours mms-tts-ara.
+- 2026-10-12 : Microsoft refuse edge-tts (accès non officiel) depuis GitHub Actions (erreur 403) : remplacé par l API officielle Azure Speech.
 - La voix lit le champ `arabe` : c'est lui qui fixe la prononciation entendue. Quand l'arabe d'un mot change, supprimer ses MP3 pour qu'ils soient régénérés.
 - Un `backdrop-filter` (ou `filter`, `opacity`, `mask`) sur un élément en fait une racine d'arrière-plan : ses enfants ne voient plus la page derrière. Les couches de verre sont donc sur `::before`/`::after`, jamais sur l'élément `.verre` lui-même.
 - Les classes de `src/index.css` vivent dans `@layer components` : hors couche, elles écraseraient les utilitaires Tailwind (une `position: relative` avait fait disparaître la barre du bas).
@@ -218,6 +218,7 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 | 2026-10-12 | Page cachée « Mes mots » (`#ajout`) : ajout, modification et suppression de mots (français, latin, arabe), intégrés aux sessions, au dictionnaire et à la répétition espacée ; base v3 | `src/features/ajout/`, `src/db/motsPerso.ts`, `src/data/motsPerso.ts`, `src/app/App.tsx` |
 | 2026-10-12 | Partage d'un mot par lien (`#mot=`) depuis Mes mots, avec écran de confirmation à l'ouverture | `src/features/ajout/Proposition.tsx`, `src/data/motsPerso.ts`, `src/app/App.tsx` |
 | 2026-10-12 | Session du jour style Duolingo en écran d'accueil : découverte, Écoute et choisis, Traduis, Associe les paires, bilan ; répétition espacée, XP, niveaux, série ; base v2 | `src/features/session/`, `src/exercices/`, `src/srs/`, `src/gamification/`, `src/db/apprentissage.ts` |
+| 2026-10-12 | Voix marocaine Jamal par Azure Speech pour les 1 682 mots et 152 exemples (Action, secrets GitHub), MP3 gardés sur le téléphone à la première écoute | `scripts/generate_audio.py`, `.github/workflows/publier.yml`, `vite.config.ts`, `src/data/*.json` |
 | 2026-10-12 | Tous les mots lus par la voix de l'iPhone : MP3 mms-tts-ara supprimés | `src/data/*.json`, `public/audio/`, `src/data/data.test.ts` |
 | 2026-10-12 | Import de 1 530 mots et phrases du fichier de l'utilisateur (1 739 entrées, doublons retirés) en 23 nouveaux thèmes et 7 thèmes existants, arabe écrit par Claude, lus par la voix de l'iPhone ; note d'usage sur la fiche | `src/data/*.json`, `src/data/themes.ts`, `src/ui/visuels.ts`, `src/data/data.test.ts`, `scripts/generate_audio.py` |
 | 2026-10-12 | Nom « Darijaapp » (icône d'écran d'accueil, titre) et feuille d'aide à l'installation sur l'écran d'accueil avec « Ne plus afficher » | `src/features/onboarding/AideInstallation.tsx`, `src/app/installation.ts`, `vite.config.ts`, `index.html` |
@@ -253,6 +254,8 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 - 2026-10-12 : refonte complète selon les règles d'Apple (demande de l'utilisateur) : Liquid Glass limité à la couche de commandes, fond système gris au lieu du fond coloré, listes groupées, grands titres ; l'en-tête niveau/XP/série devient une section de l'accueil et du tableau de bord Progrès.
 - 2026-10-12 : barre de navigation façon iOS 26 (demande de l'utilisateur, « Liquid Glass sur chaque menu ») : bouton retour réduit au chevron dans un rond en verre, sans le nom de la page précédente (gardé pour VoiceOver) ; la barre compacte n'est plus une bande de verre mais un bord de défilement flou.
 - 2026-10-12 : import du fichier de 1 739 entrées (demande de l'utilisateur) : les 130 mots déjà présents (même latin ou simple variante d'orthographe, comme mr7ba/mar7ba) gardent leur version, avec MP3 et progression ; les doublons du fichier sont fusionnés (sens réunis par « / ») ; les thèmes du fichier qui recoupent un thème existant le complètent, les autres deviennent 23 thèmes ajoutés après les 8 premiers ; niveau 1, 2 ou 3 selon le numéro du thème (1-10, 11-21, 22-31) ; première lettre du français en minuscule comme le reste du programme.
+- 2026-10-12 : retour à de vrais MP3, voix Jamal par l'API officielle Azure Speech (demande de l'utilisateur, qui a créé le compte et les secrets) : edge-tts était bloqué (403) et les voix iPhone / mms lisent de l'arabe standard. Écart assumé à « aucune clé d'API » : la clé ne sert que dans l'Action, jamais dans l'appli ni le repo. Offre F0 : 500 000 caractères par mois (le programme en pèse 13 000) et 20 requêtes par minute, d'où un fichier toutes les 3,2 s et une première génération d'environ 1h30 ; l'Action est prévue pour reprendre où elle s'est arrêtée.
+- 2026-10-12 : MP3 hors du précache de la PWA (cache à l'exécution `CacheFirst` avec `rangeRequests`, indispensable à Safari pour lire l'audio depuis le cache) : le premier chargement reste léger, chaque mot écouté une fois marche ensuite hors ligne. Un mot jamais écouté hors ligne retombe sur la voix de l'iPhone.
 - 2026-10-12 : les 152 premiers mots passent aussi à la voix de l'iPhone (demande de l'utilisateur) : leurs MP3 mms-tts-ara prononçaient mal le darija. Les 304 MP3 sont supprimés (5,4 Mo de moins au premier chargement ; ils restent dans l'historique git) et leurs champs `audio` vidés pour que l'Action ne les régénère pas.
 - 2026-10-12 : mots importés sans MP3, lus par la voix arabe de l'iPhone (choix de l'utilisateur) : pas de voix darija disponible (Jamal bloquée, mms-tts-ara aussi mauvais), et 1 530 MP3 auraient alourdi l'appli d'environ 30 Mo. Champ `audio` vide plutôt qu'un chemin vers un MP3 absent, pour que le script audio les ignore.
 - 2026-10-12 : latin du fichier corrigé seulement quand il contredisait l'arabe (sahb → sa7b, frash → frach, short → chort, hmel → 7mel, qbel → 9bel, lettres doublées 77/99 simplifiées) ; ṭ, ṣ, ə remplacés par t, s, e.
@@ -268,7 +271,8 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 
 ## Points en suspens
 
-- Voix : tous les mots sont lus par la voix arabe de l'iPhone (arabe standard sans voyelles, accent du Golfe), qui prononce mal le darija. Pistes proposées à l'utilisateur : Azure Speech pour la voix marocaine Jamal (compte Azure, clé en secret GitHub ; edge-tts est bloqué en 403), ou un arabe voyellé tiré du latin, réservé à la lecture.
+- Voix : la génération des MP3 Jamal dépend des secrets GitHub `AZURE_SPEECH_KEY` et `AZURE_SPEECH_REGION` (non testée de bout en bout : vérifier le journal de l'Action « Publier » après le premier push). En attendant les MP3, la voix de l'iPhone lit (arabe standard). Si Azure refuse (401/403), vérifier la clé, la région et le niveau F0.
+- Score de prononciation (jalon 3) : les MP3 Jamal serviront de référence (MFCC + DTW) ; envisagé : ajouter la voix féminine Mouna (`ar-MA-MounaNeural`) et garder la meilleure des deux notes. Enregistrement et auto-évaluation à construire.
 - Le contenu a été relu et corrigé par Claude (cohérence latin/arabe, tournures), mais pas par un locuteur natif : signaler les erreurs pour corriger les JSON. L'arabe des 1 530 mots importés a été écrit par Claude d'après le latin et le français, sans relecture.
 - Mots importés : pas d'explication de prononciation ni d'exemple (la fiche montre seulement les sons 3, 7, 9, kh, gh, ch).
 - Dictionnaire et liste « Mes mots » affichent les 1 682 mots d'un coup : environ 1,5 s de rendu dans Chromium, peut-être plus lent sur iPhone ; prévoir un affichage progressif si c'est gênant. Quand l'arabe d'un mot change, supprimer son MP3 pour que l'Action le régénère.

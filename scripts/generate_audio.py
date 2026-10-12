@@ -1,22 +1,21 @@
 """Génère les MP3 manquants des mots et des exemples à partir de src/data/*.json.
 
-Voix par défaut : Jamal (ar-MA-JamalNeural), voix neuronale marocaine de Microsoft,
-via edge-tts (sans clé). Elle lit l'écriture arabe darija (champ « arabe ») avec un accent
-marocain. Les MP3 sont générés une fois puis embarqués dans l'appli, qui reste hors ligne.
+Voix par défaut : Jamal (ar-MA-JamalNeural), voix neuronale marocaine de Microsoft, par l'API
+officielle Azure Speech (offre gratuite F0). Elle lit l'écriture arabe darija (champ « arabe »)
+avec un accent marocain. Les MP3 sont générés une fois puis embarqués dans l'appli.
+Variables d'environnement : AZURE_SPEECH_KEY et AZURE_SPEECH_REGION (secrets GitHub ; ne jamais
+les écrire dans le repo, qui est public).
 
 Secours : facebook/mms-tts-ara (--moteur mms), modèle libre exécuté en local. Il lit l'arabe
 sans voyelles, à la manière de l'arabe standard, et prononce mal une partie du darija.
 
 Seuls les fichiers absents de public/audio/ sont générés, sauf avec --force. Les entrées au champ
 « audio » vide (mots importés) sont ignorées : la voix du téléphone les lit.
-Code de sortie 2 : certains fichiers n'ont pas pu être générés (relancer, ou --moteur mms).
-
-Installation (une seule fois) :
-    pip install edge-tts
-    pour le secours : pip install torch transformers, et ffmpeg
+Code de sortie 2 : certains fichiers n'ont pas pu être générés (relancer : seuls les manquants le sont).
+Aucune dépendance pour Azure. Secours (--moteur mms) : pip install torch transformers, et ffmpeg.
 
 Utilisation :
-    python scripts/generate_audio.py                  # tous les thèmes, voix Jamal
+    python scripts/generate_audio.py                  # tous les thèmes, voix Jamal (Azure)
     python scripts/generate_audio.py --theme chiffres # un seul thème
     python scripts/generate_audio.py --force          # régénère tout
     python scripts/generate_audio.py --apercu         # montre les textes lus
@@ -24,22 +23,27 @@ Utilisation :
 """
 
 import argparse
-import asyncio
 import json
+import os
 import shutil
 import subprocess
 import sys
 import tempfile
+import time
+import urllib.error
+import urllib.request
 import wave
 from pathlib import Path
+from xml.sax.saxutils import escape
 
 RACINE = Path(__file__).resolve().parent.parent
 DONNEES = RACINE / "src" / "data"
 PUBLIC = RACINE / "public"
 VOIX = "ar-MA-JamalNeural"
 MODELE_SECOURS = "facebook/mms-tts-ara"
+FORMAT_MP3 = "audio-24khz-48kbitrate-mono-mp3"
 ESSAIS = 3
-EN_PARALLELE = 4
+INTERVALLE = 3.2  # secondes entre deux requêtes : l'offre gratuite F0 accepte 20 requêtes par minute
 DELAI_MAX = 30  # secondes par fichier : une requête bloquée ne fige pas tout
 
 
@@ -66,41 +70,60 @@ def lister_a_generer(theme: str | None, force: bool) -> list[tuple[str, Path]]:
     return taches
 
 
-async def generer_edge(taches: list[tuple[str, Path]]) -> list[tuple[str, Path]]:
-    """Génère avec la voix marocaine ; renvoie les tâches en échec."""
-    import edge_tts
+def generer_azure(taches: list[tuple[str, Path]]) -> list[tuple[str, Path]]:
+    """Génère avec la voix marocaine Jamal (Azure Speech) ; renvoie les tâches en échec.
 
-    limite = asyncio.Semaphore(EN_PARALLELE)
+    L'offre gratuite F0 limite à 20 requêtes par minute : on espace donc les appels.
+    La clé et la région viennent de AZURE_SPEECH_KEY et AZURE_SPEECH_REGION (secrets GitHub).
+    """
+    cle = os.environ.get("AZURE_SPEECH_KEY", "").strip()
+    region = os.environ.get("AZURE_SPEECH_REGION", "").strip().lower().replace(" ", "")
+    if not cle or not region:
+        print("AZURE_SPEECH_KEY et AZURE_SPEECH_REGION sont absents : rien n'est généré.", file=sys.stderr)
+        return list(taches)
+    url = f"https://{region}.tts.speech.microsoft.com/cognitiveservices/v1"
+    entetes = {
+        "Ocp-Apim-Subscription-Key": cle,
+        "Content-Type": "application/ssml+xml",
+        "X-Microsoft-OutputFormat": FORMAT_MP3,
+        "User-Agent": "darijaapp",
+    }
     echecs: list[tuple[str, Path]] = []
-    faits = 0
-
-    async def une(texte: str, cible: Path) -> None:
-        nonlocal faits
-        async with limite:
-            for essai in range(1, ESSAIS + 1):
-                try:
-                    cible.parent.mkdir(parents=True, exist_ok=True)
-                    temporaire = cible.with_suffix(".tmp")
-                    await asyncio.wait_for(edge_tts.Communicate(texte, VOIX).save(str(temporaire)), DELAI_MAX)
-                    if temporaire.stat().st_size == 0:
-                        raise RuntimeError("fichier vide")
-                    temporaire.replace(cible)
-                    faits += 1
-                    print(f"[{faits}/{len(taches)}] {cible.relative_to(RACINE)} ← {texte}")
-                    return
-                except Exception as erreur:  # réseau, limite de débit…
-                    temporaire.unlink(missing_ok=True)
-                    print(f"  essai {essai}/{ESSAIS} raté pour {cible.name} : {erreur}", file=sys.stderr)
-                    await asyncio.sleep(2 * essai)
+    for i, (texte, cible) in enumerate(taches, 1):
+        ssml = (
+            f"<speak version='1.0' xml:lang='ar-MA'><voice xml:lang='ar-MA' name='{VOIX}'>"
+            f"{escape(texte)}</voice></speak>"
+        ).encode("utf-8")
+        for essai in range(1, ESSAIS + 1):
+            debut = time.monotonic()
+            try:
+                requete = urllib.request.Request(url, data=ssml, headers=entetes, method="POST")
+                with urllib.request.urlopen(requete, timeout=DELAI_MAX) as reponse:
+                    audio = reponse.read()
+                if not audio:
+                    raise RuntimeError("fichier vide")
+                cible.parent.mkdir(parents=True, exist_ok=True)
+                temporaire = cible.with_suffix(".tmp")
+                temporaire.write_bytes(audio)
+                temporaire.replace(cible)
+                print(f"[{i}/{len(taches)}] {cible.relative_to(RACINE)} ← {texte}", flush=True)
+                break
+            except urllib.error.HTTPError as erreur:
+                if erreur.code in (401, 403) or (i == 1 and erreur.code in (400, 404)):
+                    # Clé, région ou quota refusés : inutile d'insister sur les autres fichiers.
+                    print(f"Azure refuse la requête (HTTP {erreur.code}) : {erreur.reason}. Abandon.", file=sys.stderr)
+                    return echecs + list(taches[i - 1 :])
+                attente = int(erreur.headers.get("Retry-After", "30")) if erreur.code == 429 else 5 * essai
+                print(f"  essai {essai}/{ESSAIS} raté pour {cible.name} : HTTP {erreur.code}, pause {attente} s", file=sys.stderr)
+                time.sleep(attente)
+            except Exception as erreur:  # réseau, délai dépassé…
+                print(f"  essai {essai}/{ESSAIS} raté pour {cible.name} : {erreur}", file=sys.stderr)
+                time.sleep(5 * essai)
+        else:
             echecs.append((texte, cible))
-
-    # Essai sur un premier fichier : si le service refuse (ex. 403), inutile d'insister sur les autres.
-    premier, reste = taches[0], taches[1:]
-    await une(*premier)
-    if echecs:
-        print("La voix marocaine ne répond pas : abandon, le secours prendra le relais.", file=sys.stderr)
-        return echecs + list(reste)
-    await asyncio.gather(*(une(t, c) for t, c in reste))
+            continue
+        # Respecte la limite de l'offre gratuite (20 requêtes par minute).
+        time.sleep(max(0.0, INTERVALLE - (time.monotonic() - debut)))
     return echecs
 
 
@@ -138,7 +161,7 @@ def main() -> int:
     parser.add_argument("--theme", help="ne traiter qu'un thème (nom du fichier JSON sans extension)")
     parser.add_argument("--force", action="store_true", help="régénérer même les MP3 existants")
     parser.add_argument("--apercu", action="store_true", help="afficher les textes lus, sans générer")
-    parser.add_argument("--moteur", choices=["edge", "mms"], default="edge", help="voix marocaine (edge) ou secours (mms)")
+    parser.add_argument("--moteur", choices=["azure", "mms"], default="azure", help="voix marocaine Azure ou secours local (mms)")
     args = parser.parse_args()
 
     taches = lister_a_generer(args.theme, args.force)
@@ -156,7 +179,7 @@ def main() -> int:
         return 0
 
     print(f"{len(taches)} fichier(s) à générer avec la voix {VOIX}…")
-    echecs = asyncio.run(generer_edge(taches))
+    echecs = generer_azure(taches)
     if echecs:
         print(f"{len(echecs)} fichier(s) non générés : {', '.join(c.name for _, c in echecs)}", file=sys.stderr)
         return 2

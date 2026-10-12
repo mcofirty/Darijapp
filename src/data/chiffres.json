@@ -7,12 +7,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "wa-7ed : le 7 (ح) est un souffle chaud, sans raclement.",
-    "audio": "",
+    "audio": "audio/chiffres-001.mp3",
     "exemple": {
       "latin": "3tini wa7ed atay",
       "arabe": "عطيني واحد أتاي",
       "fr": "Donne-moi un thé",
-      "audio": ""
+      "audio": "audio/chiffres-001-ex.mp3"
     }
   },
   {
@@ -23,12 +23,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "joj : « j » comme dans « jour », deux fois.",
-    "audio": "",
+    "audio": "audio/chiffres-002.mp3",
     "exemple": {
       "latin": "joj khobzat 3afak",
       "arabe": "جوج خبزات عافاك",
       "fr": "Deux pains, s'il te plaît",
-      "audio": ""
+      "audio": "audio/chiffres-002-ex.mp3"
     }
   },
   {
@@ -39,12 +39,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "tla-ta : « t » et « l » collés au début.",
-    "audio": "",
+    "audio": "audio/chiffres-003.mp3",
     "exemple": {
       "latin": "tlata d drahem",
       "arabe": "تلاتة د الدراهم",
       "fr": "Trois dirhams",
-      "audio": ""
+      "audio": "audio/chiffres-003-ex.mp3"
     }
   },
   {
@@ -55,12 +55,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "reb-3a : le 3 (ع) serré arrive juste après le « b ».",
-    "audio": "",
+    "audio": "audio/chiffres-004.mp3",
     "exemple": {
       "latin": "reb3a d nnas",
       "arabe": "ربعة د الناس",
       "fr": "Quatre personnes",
-      "audio": ""
+      "audio": "audio/chiffres-004-ex.mp3"
     }
   },
   {
@@ -71,12 +71,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "kham-sa : commence par le kh (خ) raclé, comme la jota espagnole.",
-    "audio": "",
+    "audio": "audio/chiffres-005.mp3",
     "exemple": {
       "latin": "khamsa d drahem",
       "arabe": "خمسة د الدراهم",
       "fr": "Cinq dirhams",
-      "audio": ""
+      "audio": "audio/chiffres-005-ex.mp3"
     }
   },
   {
@@ -87,12 +87,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "set-ta : le « t » doublé s'appuie un peu plus longtemps.",
-    "audio": "",
+    "audio": "audio/chiffres-006.mp3",
     "exemple": {
       "latin": "setta d lbid",
       "arabe": "ستة د البيض",
       "fr": "Six œufs",
-      "audio": ""
+      "audio": "audio/chiffres-006-ex.mp3"
     }
   },
   {
@@ -103,12 +103,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "seb-3a : 3 (ع) serré de la gorge après le « b ».",
-    "audio": "",
+    "audio": "audio/chiffres-007.mp3",
     "exemple": {
       "latin": "seb3a d liyam",
       "arabe": "سبعة د الأيام",
       "fr": "Sept jours",
-      "audio": ""
+      "audio": "audio/chiffres-007-ex.mp3"
     }
   },
   {
@@ -119,12 +119,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "tmen-ya : « t » et « m » collés au début.",
-    "audio": "",
+    "audio": "audio/chiffres-008.mp3",
     "exemple": {
       "latin": "tmenya d swaye3",
       "arabe": "تمنية د السوايع",
       "fr": "Huit heures",
-      "audio": ""
+      "audio": "audio/chiffres-008-ex.mp3"
     }
   },
   {
@@ -135,12 +135,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "tes-3a : 3 (ع) serré en fin de mot.",
-    "audio": "",
+    "audio": "audio/chiffres-009.mp3",
     "exemple": {
       "latin": "tes3a d drahem",
       "arabe": "تسعة د الدراهم",
       "fr": "Neuf dirhams",
-      "audio": ""
+      "audio": "audio/chiffres-009-ex.mp3"
     }
   },
   {
@@ -151,12 +151,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "3ach-ra : démarre sur le 3 (ع), un « a » étranglé.",
-    "audio": "",
+    "audio": "audio/chiffres-010.mp3",
     "exemple": {
       "latin": "3achra d drahem",
       "arabe": "عشرة د الدراهم",
       "fr": "Dix dirhams",
-      "audio": ""
+      "audio": "audio/chiffres-010-ex.mp3"
     }
   },
   {
@@ -167,12 +167,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "3ech-rin : 3 (ع) serré, puis « ch » de « chat ».",
-    "audio": "",
+    "audio": "audio/chiffres-011.mp3",
     "exemple": {
       "latin": "3echrin derhem",
       "arabe": "عشرين درهم",
       "fr": "Vingt dirhams",
-      "audio": ""
+      "audio": "audio/chiffres-011-ex.mp3"
     }
   },
   {
@@ -183,12 +183,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "kham-sin : kh (خ) raclé au début.",
-    "audio": "",
+    "audio": "audio/chiffres-012.mp3",
     "exemple": {
       "latin": "khamsin derhem, ghali!",
       "arabe": "خمسين درهم، غالي!",
       "fr": "Cinquante dirhams, c'est cher !",
-      "audio": ""
+      "audio": "audio/chiffres-012-ex.mp3"
     }
   },
   {
@@ -199,12 +199,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "mi-ya : simple, comme « mi-ya ».",
-    "audio": "",
+    "audio": "audio/chiffres-013.mp3",
     "exemple": {
       "latin": "miya derhem",
       "arabe": "مية درهم",
       "fr": "Cent dirhams",
-      "audio": ""
+      "audio": "audio/chiffres-013-ex.mp3"
     }
   },
   {
@@ -215,12 +215,12 @@
     "theme": "chiffres",
     "niveau": 2,
     "prononciation": "alf : « a » ouvert, attaque nette au début.",
-    "audio": "",
+    "audio": "audio/chiffres-014.mp3",
     "exemple": {
       "latin": "alf derhem",
       "arabe": "ألف درهم",
       "fr": "Mille dirhams",
-      "audio": ""
+      "audio": "audio/chiffres-014-ex.mp3"
     }
   },
   {
@@ -231,12 +231,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "nos : « s » appuyé, prononcé avec la langue un peu en arrière.",
-    "audio": "",
+    "audio": "audio/chiffres-015.mp3",
     "exemple": {
       "latin": "nos kilo d lmaticha",
       "arabe": "نص كيلو د الماطيشة",
       "fr": "Un demi-kilo de tomates",
-      "audio": ""
+      "audio": "audio/chiffres-015-ex.mp3"
     }
   },
   {
@@ -247,12 +247,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "der-hem : « r » roulé, « h » légèrement soufflé. Au pluriel (de 3 à 10) : drahem.",
-    "audio": "",
+    "audio": "audio/chiffres-016.mp3",
     "exemple": {
       "latin": "hada b derhem",
       "arabe": "هادا بدرهم",
       "fr": "Ça coûte un dirham",
-      "audio": ""
+      "audio": "audio/chiffres-016-ex.mp3"
     }
   },
   {
@@ -263,12 +263,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "ch-7al : « ch » de « chat », puis le 7 (ح), un souffle chaud venu de la gorge.",
-    "audio": "",
+    "audio": "audio/chiffres-017.mp3",
     "exemple": {
       "latin": "ch7al hada?",
       "arabe": "شحال هادا؟",
       "fr": "C'est combien, ça ?",
-      "audio": ""
+      "audio": "audio/chiffres-017-ex.mp3"
     }
   },
   {
@@ -279,12 +279,12 @@
     "theme": "chiffres",
     "niveau": 2,
     "prononciation": "ch-7al f sa-3a : 7 (ح) soufflé au début, 3 (ع) serré à la fin.",
-    "audio": "",
+    "audio": "audio/chiffres-018.mp3",
     "exemple": {
       "latin": "sme7 lia, ch7al f sa3a?",
       "arabe": "سمح ليا، شحال فالساعة؟",
       "fr": "Excusez-moi, quelle heure est-il ?",
-      "audio": ""
+      "audio": "audio/chiffres-018-ex.mp3"
     }
   },
   {
@@ -295,7 +295,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-019.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -311,7 +311,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-020.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -327,7 +327,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-021.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -343,7 +343,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-022.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -359,7 +359,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-023.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -375,7 +375,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-024.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -391,7 +391,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-025.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -407,7 +407,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-026.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -423,7 +423,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-027.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -439,7 +439,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-028.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -455,7 +455,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-029.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -471,7 +471,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-030.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -487,7 +487,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-031.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -503,7 +503,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-032.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -519,7 +519,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-033.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -535,7 +535,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-034.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -551,7 +551,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-035.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -567,7 +567,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-036.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -583,7 +583,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-037.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -599,7 +599,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-038.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -615,7 +615,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-039.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -631,7 +631,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-040.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -647,7 +647,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-041.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -663,7 +663,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-042.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -679,7 +679,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-043.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -695,7 +695,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-044.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -711,7 +711,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-045.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -727,7 +727,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-046.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -743,7 +743,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-047.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -759,7 +759,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-048.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -775,7 +775,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-049.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -791,7 +791,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-050.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -807,7 +807,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-051.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -823,7 +823,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-052.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -839,7 +839,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-053.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -855,7 +855,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-054.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -871,7 +871,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-055.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -887,7 +887,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-056.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -903,7 +903,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-057.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -919,7 +919,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-058.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -935,7 +935,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-059.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -951,7 +951,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-060.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -967,7 +967,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-061.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -983,7 +983,7 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/chiffres-062.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",

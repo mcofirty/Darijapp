@@ -7,12 +7,12 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "s-mi-ti : simple, comme en français.",
-    "audio": "",
+    "audio": "audio/famille-001.mp3",
     "exemple": {
       "latin": "smiti karim",
       "arabe": "سميتي كريم",
       "fr": "Je m'appelle Karim",
-      "audio": ""
+      "audio": "audio/famille-001-ex.mp3"
     }
   },
   {
@@ -23,12 +23,12 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "ch-nou smi-tek : « ch » de « chat ».",
-    "audio": "",
+    "audio": "audio/famille-002.mp3",
     "exemple": {
       "latin": "salam, chno smitek?",
       "arabe": "سلام، شنو سميتك؟",
       "fr": "Salut, comment tu t'appelles ?",
-      "audio": ""
+      "audio": "audio/famille-002-ex.mp3"
     }
   },
   {
@@ -39,12 +39,12 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "m-nin n-ta : à une femme, on dit mnin nti ?",
-    "audio": "",
+    "audio": "audio/famille-003.mp3",
     "exemple": {
       "latin": "mnin nta? — ana mn fransa",
       "arabe": "منين نتا؟ — أنا من فرانسا",
       "fr": "D'où viens-tu ? — Je viens de France",
-      "audio": ""
+      "audio": "audio/famille-003-ex.mp3"
     }
   },
   {
@@ -55,12 +55,12 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "a-na mn fran-sa : « r » roulé.",
-    "audio": "",
+    "audio": "audio/famille-004.mp3",
     "exemple": {
       "latin": "ana mn fransa, w nta?",
       "arabe": "أنا من فرانسا، ونتا؟",
       "fr": "Je viens de France, et toi ?",
-      "audio": ""
+      "audio": "audio/famille-004-ex.mp3"
     }
   },
   {
@@ -71,12 +71,12 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "a-na : comme le prénom Anna.",
-    "audio": "",
+    "audio": "audio/famille-005.mp3",
     "exemple": {
       "latin": "ana bikhir",
       "arabe": "أنا بخير",
       "fr": "Je vais bien",
-      "audio": ""
+      "audio": "audio/famille-005-ex.mp3"
     }
   },
   {
@@ -87,12 +87,12 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "n-ta pour un homme, n-ti pour une femme.",
-    "audio": "",
+    "audio": "audio/famille-006.mp3",
     "exemple": {
       "latin": "w nta, labas?",
       "arabe": "ونتا، لاباس؟",
       "fr": "Et toi, ça va ?",
-      "audio": ""
+      "audio": "audio/famille-006-ex.mp3"
     }
   },
   {
@@ -103,12 +103,12 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "ho-wa, hi-ya : « h » soufflé.",
-    "audio": "",
+    "audio": "audio/famille-007.mp3",
     "exemple": {
       "latin": "howa khouya",
       "arabe": "هو خويا",
       "fr": "C'est mon frère",
-      "audio": ""
+      "audio": "audio/famille-007-ex.mp3"
     }
   },
   {
@@ -119,12 +119,12 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "ma-ma : comme en français.",
-    "audio": "",
+    "audio": "audio/famille-008.mp3",
     "exemple": {
       "latin": "mama f ddar",
       "arabe": "ماما فالدار",
       "fr": "Maman est à la maison",
-      "audio": ""
+      "audio": "audio/famille-008-ex.mp3"
     }
   },
   {
@@ -135,12 +135,12 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "ba-ba : comme en français.",
-    "audio": "",
+    "audio": "audio/famille-009.mp3",
     "exemple": {
       "latin": "baba kaykhdem",
       "arabe": "بابا كيخدم",
       "fr": "Papa travaille",
-      "audio": ""
+      "audio": "audio/famille-009-ex.mp3"
     }
   },
   {
@@ -151,12 +151,12 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "khou-ya : kh (خ) raclé comme la jota espagnole.",
-    "audio": "",
+    "audio": "audio/famille-010.mp3",
     "exemple": {
       "latin": "hada khouya",
       "arabe": "هادا خويا",
       "fr": "Voici mon frère",
-      "audio": ""
+      "audio": "audio/famille-010-ex.mp3"
     }
   },
   {
@@ -167,12 +167,12 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "kh-ti : kh (خ) raclé, collé au « t ».",
-    "audio": "",
+    "audio": "audio/famille-011.mp3",
     "exemple": {
       "latin": "hadi khti",
       "arabe": "هادي ختي",
       "fr": "Voici ma sœur",
-      "audio": ""
+      "audio": "audio/famille-011-ex.mp3"
     }
   },
   {
@@ -183,12 +183,12 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "m-ra-ti : « m » collé au « r » roulé.",
-    "audio": "",
+    "audio": "audio/famille-012.mp3",
     "exemple": {
       "latin": "hadi mrati",
       "arabe": "هادي مراتي",
       "fr": "Voici ma femme",
-      "audio": ""
+      "audio": "audio/famille-012-ex.mp3"
     }
   },
   {
@@ -199,12 +199,12 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "raj-li : « r » roulé, « j » de « jour ».",
-    "audio": "",
+    "audio": "audio/famille-013.mp3",
     "exemple": {
       "latin": "hada rajli",
       "arabe": "هادا راجلي",
       "fr": "Voici mon mari",
-      "audio": ""
+      "audio": "audio/famille-013-ex.mp3"
     }
   },
   {
@@ -215,12 +215,12 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "wel-di : simple.",
-    "audio": "",
+    "audio": "audio/famille-014.mp3",
     "exemple": {
       "latin": "weldi sghir",
       "arabe": "ولدي صغير",
       "fr": "Mon fils est petit",
-      "audio": ""
+      "audio": "audio/famille-014-ex.mp3"
     }
   },
   {
@@ -231,12 +231,12 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "ben-ti : simple.",
-    "audio": "",
+    "audio": "audio/famille-015.mp3",
     "exemple": {
       "latin": "benti f lmadrasa",
       "arabe": "بنتي فالمدرسة",
       "fr": "Ma fille est à l'école",
-      "audio": ""
+      "audio": "audio/famille-015-ex.mp3"
     }
   },
   {
@@ -247,12 +247,12 @@
     "theme": "famille",
     "niveau": 2,
     "prononciation": "l-3ay-la : 3 (ع) serré juste après le « l ».",
-    "audio": "",
+    "audio": "audio/famille-016.mp3",
     "exemple": {
       "latin": "l3ayla dyali f fransa",
       "arabe": "العايلة ديالي ففرانسا",
       "fr": "Ma famille est en France",
-      "audio": ""
+      "audio": "audio/famille-016-ex.mp3"
     }
   },
   {
@@ -263,12 +263,12 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "sa7-bi : 7 (ح) soufflé entre « sa » et « bi ».",
-    "audio": "",
+    "audio": "audio/famille-017.mp3",
     "exemple": {
       "latin": "hada sa7bi",
       "arabe": "هادا صاحبي",
       "fr": "Voici mon ami",
-      "audio": ""
+      "audio": "audio/famille-017-ex.mp3"
     }
   },
   {
@@ -279,12 +279,12 @@
     "theme": "famille",
     "niveau": 2,
     "prononciation": "3n-di ... 3am : deux 3 (ع) serrés.",
-    "audio": "",
+    "audio": "audio/famille-018.mp3",
     "exemple": {
       "latin": "3ndi tlatin 3am",
       "arabe": "عندي تلاتين عام",
       "fr": "J'ai trente ans",
-      "audio": ""
+      "audio": "audio/famille-018-ex.mp3"
     }
   },
   {
@@ -295,12 +295,12 @@
     "theme": "famille",
     "niveau": 2,
     "prononciation": "fin kat-skon : « k » net, voyelles très brèves.",
-    "audio": "",
+    "audio": "audio/famille-019.mp3",
     "exemple": {
       "latin": "fin katskon? — f lmdina",
       "arabe": "فين كتسكن؟ — فالمدينة",
       "fr": "Où habites-tu ? — Dans la médina",
-      "audio": ""
+      "audio": "audio/famille-019-ex.mp3"
     }
   },
   {
@@ -311,7 +311,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-020.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -327,7 +327,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-021.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -343,7 +343,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-022.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -359,7 +359,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-023.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -375,7 +375,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-024.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -391,7 +391,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-025.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -407,7 +407,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-026.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -423,7 +423,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-027.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -439,7 +439,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-028.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -455,7 +455,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-029.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -471,7 +471,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-030.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -487,7 +487,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-031.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -503,7 +503,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-032.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -519,7 +519,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-033.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -535,7 +535,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-034.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -551,7 +551,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-035.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -567,7 +567,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-036.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -584,7 +584,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-037.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -601,7 +601,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-038.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -617,7 +617,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-039.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -633,7 +633,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-040.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -649,7 +649,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-041.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -665,7 +665,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-042.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -681,7 +681,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-043.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -697,7 +697,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-044.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -713,7 +713,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-045.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -729,7 +729,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-046.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -745,7 +745,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-047.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -761,7 +761,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-048.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -777,7 +777,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-049.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -793,7 +793,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-050.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -809,7 +809,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-051.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -825,7 +825,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-052.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -841,7 +841,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-053.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -857,7 +857,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-054.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -873,7 +873,7 @@
     "theme": "famille",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/famille-055.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",

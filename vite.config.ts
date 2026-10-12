@@ -24,8 +24,23 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['logo-180.png', 'logo-favicon.png'],
       workbox: {
-        globPatterns: ['**/*.{js,css,html,png,svg,mp3}'],
+        // Les MP3 (plusieurs dizaines de Mo) ne sont pas téléchargés à l'installation : chacun est gardé
+        // sur le téléphone à sa première écoute, puis marche hors ligne.
+        globPatterns: ['**/*.{js,css,html,png,svg}'],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
+        runtimeCaching: [
+          {
+            urlPattern: /\/audio\/.*\.mp3$/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'audio',
+              // Safari lit l'audio par morceaux (requêtes Range) : sans cela, le MP3 en cache ne joue pas.
+              rangeRequests: true,
+              cacheableResponse: { statuses: [200] },
+              expiration: { maxEntries: 3000 },
+            },
+          },
+        ],
       },
       manifest: {
         name: 'Darijaapp',

@@ -7,12 +7,12 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "sa-lam : comme en français, avec des « a » bien ouverts.",
-    "audio": "",
+    "audio": "audio/salutations-001.mp3",
     "exemple": {
       "latin": "salam, labas?",
       "arabe": "سلام، لاباس؟",
       "fr": "Salut, ça va ?",
-      "audio": ""
+      "audio": "audio/salutations-001-ex.mp3"
     }
   },
   {
@@ -23,12 +23,12 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "sa-lam 3a-li-koum : le 3 (ع) est un « a » serré au fond de la gorge, comme si on l'étranglait légèrement.",
-    "audio": "",
+    "audio": "audio/salutations-002.mp3",
     "exemple": {
       "latin": "salam 3alikoum a lalla",
       "arabe": "السلام عليكم ألالة",
       "fr": "Bonjour madame",
-      "audio": ""
+      "audio": "audio/salutations-002-ex.mp3"
     }
   },
   {
@@ -39,12 +39,12 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "wa 3a-li-koum sa-lam : même 3 (ع) serré de la gorge que dans salam 3alikoum.",
-    "audio": "",
+    "audio": "audio/salutations-003.mp3",
     "exemple": {
       "latin": "wa 3alikoum salam, mar7ba",
       "arabe": "وعليكم السلام، مرحبا",
       "fr": "Bonjour à vous, bienvenue",
-      "audio": ""
+      "audio": "audio/salutations-003-ex.mp3"
     }
   },
   {
@@ -55,12 +55,12 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "sba7 l-khir : le 7 (ح) est un souffle chaud et sourd, comme pour embuer des lunettes ; le kh (خ) se racle comme la jota espagnole.",
-    "audio": "",
+    "audio": "audio/salutations-004.mp3",
     "exemple": {
       "latin": "sba7 lkhir a khouya",
       "arabe": "صباح الخير أخويا",
       "fr": "Bonjour mon frère",
-      "audio": ""
+      "audio": "audio/salutations-004-ex.mp3"
     }
   },
   {
@@ -71,12 +71,12 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "msa l-khir : « m » et « s » collés sans voyelle entre eux ; kh (خ) raclé au fond de la gorge.",
-    "audio": "",
+    "audio": "audio/salutations-005.mp3",
     "exemple": {
       "latin": "msa lkhir, labas 3lik?",
       "arabe": "مسا الخير، لاباس عليك؟",
       "fr": "Bonsoir, tu vas bien ?",
-      "audio": ""
+      "audio": "audio/salutations-005-ex.mp3"
     }
   },
   {
@@ -87,12 +87,12 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "la-bas : facile, comme « là-bas » en français. Monte la voix à la fin pour en faire une question.",
-    "audio": "",
+    "audio": "audio/salutations-006.mp3",
     "exemple": {
       "latin": "labas 3lik?",
       "arabe": "لاباس عليك؟",
       "fr": "Tu vas bien ?",
-      "audio": ""
+      "audio": "audio/salutations-006-ex.mp3"
     }
   },
   {
@@ -103,12 +103,12 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "l-7am-dou-lil-lah : le 7 (ح) est un souffle chaud venu de la gorge, sans raclement.",
-    "audio": "",
+    "audio": "audio/salutations-007.mp3",
     "exemple": {
       "latin": "labas, l7amdoulillah, w nta?",
       "arabe": "لاباس، الحمد لله، ونتا؟",
       "fr": "Ça va, Dieu merci, et toi ?",
-      "audio": ""
+      "audio": "audio/salutations-007-ex.mp3"
     }
   },
   {
@@ -119,12 +119,12 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "ki-dayr : le « r » est roulé du bout de la langue. À une femme on dit kidayra.",
-    "audio": "",
+    "audio": "audio/salutations-008.mp3",
     "exemple": {
       "latin": "kidayr a sa7bi?",
       "arabe": "كيداير أصاحبي؟",
       "fr": "Comment tu vas, mon ami ?",
-      "audio": ""
+      "audio": "audio/salutations-008-ex.mp3"
     }
   },
   {
@@ -135,12 +135,12 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "bi-khir : le kh (خ) se racle au fond de la gorge, comme dans « Bach » en allemand.",
-    "audio": "",
+    "audio": "audio/salutations-009.mp3",
     "exemple": {
       "latin": "ana bikhir, chokran",
       "arabe": "أنا بخير، شكرا",
       "fr": "Je vais bien, merci",
-      "audio": ""
+      "audio": "audio/salutations-009-ex.mp3"
     }
   },
   {
@@ -151,12 +151,12 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "b-sla-ma : « b » et « s » s'enchaînent sans voyelle, comme « bsla-ma ».",
-    "audio": "",
+    "audio": "audio/salutations-010.mp3",
     "exemple": {
       "latin": "bslama, ntla9aw ghedda",
       "arabe": "بسلامة، نتلاقاو غدا",
       "fr": "Au revoir, on se voit demain",
-      "audio": ""
+      "audio": "audio/salutations-010-ex.mp3"
     }
   },
   {
@@ -167,12 +167,12 @@
     "theme": "salutations",
     "niveau": 2,
     "prononciation": "tsba7 3la khir : trois sons de gorge — 7 (ح) soufflé, 3 (ع) serré, kh (خ) raclé.",
-    "audio": "",
+    "audio": "audio/salutations-011.mp3",
     "exemple": {
       "latin": "safi, tsba7 3la khir",
       "arabe": "صافي، تصبح على خير",
       "fr": "Bon, bonne nuit",
-      "audio": ""
+      "audio": "audio/salutations-011-ex.mp3"
     }
   },
   {
@@ -183,12 +183,12 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "3a-fak : commence par le 3 (ع), un « a » serré au fond de la gorge.",
-    "audio": "",
+    "audio": "audio/salutations-012.mp3",
     "exemple": {
       "latin": "3tini atay 3afak",
       "arabe": "عطيني أتاي عافاك",
       "fr": "Donne-moi du thé, s'il te plaît",
-      "audio": ""
+      "audio": "audio/salutations-012-ex.mp3"
     }
   },
   {
@@ -199,12 +199,12 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "chok-ran : « ch » comme dans « chat », « r » roulé.",
-    "audio": "",
+    "audio": "audio/salutations-013.mp3",
     "exemple": {
       "latin": "chokran bezzaf",
       "arabe": "شكرا بزاف",
       "fr": "Merci beaucoup",
-      "audio": ""
+      "audio": "audio/salutations-013-ex.mp3"
     }
   },
   {
@@ -215,12 +215,12 @@
     "theme": "salutations",
     "niveau": 2,
     "prononciation": "ba-ra-ka lla-hou fik : les deux « l » s'appuient longuement.",
-    "audio": "",
+    "audio": "audio/salutations-014.mp3",
     "exemple": {
       "latin": "baraka llahou fik a khouya",
       "arabe": "بارك الله فيك أخويا",
       "fr": "Merci beaucoup mon frère",
-      "audio": ""
+      "audio": "audio/salutations-014-ex.mp3"
     }
   },
   {
@@ -231,12 +231,12 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "bla j-mil : « j » comme dans « jour », collé au « m ».",
-    "audio": "",
+    "audio": "audio/salutations-015.mp3",
     "exemple": {
       "latin": "chokran! — bla jmil",
       "arabe": "شكرا! — بلا جميل",
       "fr": "Merci ! — De rien",
-      "audio": ""
+      "audio": "audio/salutations-015-ex.mp3"
     }
   },
   {
@@ -247,12 +247,12 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "sme7 li-a : le « e » est très bref ; le 7 (ح) final est un souffle chaud.",
-    "audio": "",
+    "audio": "audio/salutations-016.mp3",
     "exemple": {
       "latin": "sme7 lia, fin kayn taxi?",
       "arabe": "سمح ليا، فين كاين طاكسي؟",
       "fr": "Excusez-moi, où y a-t-il un taxi ?",
-      "audio": ""
+      "audio": "audio/salutations-016-ex.mp3"
     }
   },
   {
@@ -263,12 +263,12 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "mar-7ba : le 7 (ح) souffle juste après le « r » roulé.",
-    "audio": "",
+    "audio": "audio/salutations-017.mp3",
     "exemple": {
       "latin": "mar7ba bik f lmghrib",
       "arabe": "مرحبا بيك فالمغريب",
       "fr": "Bienvenue au Maroc",
-      "audio": ""
+      "audio": "audio/salutations-017-ex.mp3"
     }
   },
   {
@@ -279,12 +279,12 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "i-yeh : « h » final légèrement soufflé.",
-    "audio": "",
+    "audio": "audio/salutations-018.mp3",
     "exemple": {
       "latin": "iyeh, bghit atay",
       "arabe": "إيه، بغيت أتاي",
       "fr": "Oui, je veux du thé",
-      "audio": ""
+      "audio": "audio/salutations-018-ex.mp3"
     }
   },
   {
@@ -295,12 +295,12 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "la : comme en français.",
-    "audio": "",
+    "audio": "audio/salutations-019.mp3",
     "exemple": {
       "latin": "la, chokran",
       "arabe": "لا، شكرا",
       "fr": "Non, merci",
-      "audio": ""
+      "audio": "audio/salutations-019-ex.mp3"
     }
   },
   {
@@ -311,12 +311,12 @@
     "theme": "salutations",
     "niveau": 2,
     "prononciation": "tbar-kel-lah 3lik : le 3 (ع) serré se prononce juste avant « lik ».",
-    "audio": "",
+    "audio": "audio/salutations-020.mp3",
     "exemple": {
       "latin": "tbarkellah 3lik, mzyan bezzaf",
       "arabe": "تبارك الله عليك، مزيان بزاف",
       "fr": "Bravo, c'est très bien",
-      "audio": ""
+      "audio": "audio/salutations-020-ex.mp3"
     }
   },
   {
@@ -327,7 +327,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-021.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -344,7 +344,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-022.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -360,7 +360,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-023.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -376,7 +376,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-024.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -392,7 +392,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-025.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -408,7 +408,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-026.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -424,7 +424,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-027.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -440,7 +440,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-028.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -456,7 +456,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-029.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -472,7 +472,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-030.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -488,7 +488,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-031.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -504,7 +504,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-032.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -520,7 +520,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-033.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -536,7 +536,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-034.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -552,7 +552,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-035.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -568,7 +568,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-036.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -584,7 +584,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-037.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -600,7 +600,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-038.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -616,7 +616,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-039.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -632,7 +632,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-040.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -648,7 +648,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-041.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -664,7 +664,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-042.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -680,7 +680,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-043.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -696,7 +696,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-044.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -712,7 +712,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-045.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -728,7 +728,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-046.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -744,7 +744,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-047.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -760,7 +760,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-048.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -776,7 +776,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-049.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -792,7 +792,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-050.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -808,7 +808,7 @@
     "theme": "salutations",
     "niveau": 1,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/salutations-051.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",

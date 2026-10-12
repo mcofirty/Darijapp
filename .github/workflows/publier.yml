@@ -1,4 +1,4 @@
-# Génère les MP3 manquants, lance les tests, puis publie l'appli sur GitHub Pages.
+# Génère les MP3 manquants (voix Jamal, Azure Speech), lance les tests, puis publie l'appli sur GitHub Pages.
 # Se déclenche à chaque push sur main, ou à la main depuis l'onglet Actions.
 name: Publier
 
@@ -14,6 +14,7 @@ concurrency:
 jobs:
   audio:
     runs-on: ubuntu-latest
+    timeout-minutes: 170
     permissions:
       contents: write
     outputs:
@@ -33,25 +34,21 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Générer les MP3 (voix marocaine Jamal)
-        id: edge
-        timeout-minutes: 10
+      - name: Générer les MP3 (voix marocaine Jamal, Azure Speech)
+        id: azure
+        timeout-minutes: 150
         if: steps.manquants.outputs.nombre != '0'
         continue-on-error: true
-        run: |
-          pip install edge-tts
-          python scripts/generate_audio.py
+        env:
+          AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
+          AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
+        run: python scripts/generate_audio.py
 
-      - name: Secours si la voix marocaine n'a pas répondu (mms-tts-ara)
-        if: steps.manquants.outputs.nombre != '0' && steps.edge.outcome == 'failure'
-        run: |
-          sudo apt-get update && sudo apt-get install -y ffmpeg
-          pip install torch --index-url https://download.pytorch.org/whl/cpu
-          pip install transformers
-          python scripts/generate_audio.py --moteur mms
-
+      # Même si la génération s'est arrêtée en route (quota, délai), on garde les MP3 déjà faits :
+      # la prochaine exécution reprend où celle-ci s'est arrêtée.
       - name: Enregistrer les MP3 dans le repo
         id: commit
+        if: always()
         run: |
           if [ -n "$(git status --porcelain public/audio)" ]; then
             git config user.name "github-actions[bot]"

@@ -7,12 +7,12 @@
     "theme": "nourriture",
     "niveau": 1,
     "prononciation": "khobz : kh (خ) raclé comme la jota espagnole, puis « obz » d'un seul coup.",
-    "audio": "",
+    "audio": "audio/nourriture-001.mp3",
     "exemple": {
       "latin": "3tini khobz 3afak",
       "arabe": "عطيني خبز عافاك",
       "fr": "Donne-moi du pain, s'il te plaît",
-      "audio": ""
+      "audio": "audio/nourriture-001-ex.mp3"
     }
   },
   {
@@ -23,12 +23,12 @@
     "theme": "nourriture",
     "niveau": 1,
     "prononciation": "a-tay : « a » ouvert, rime avec « aïe ».",
-    "audio": "",
+    "audio": "audio/nourriture-002.mp3",
     "exemple": {
       "latin": "bghit atay b na3na3",
       "arabe": "بغيت أتاي بنعناع",
       "fr": "Je veux du thé à la menthe",
-      "audio": ""
+      "audio": "audio/nourriture-002-ex.mp3"
     }
   },
   {
@@ -39,12 +39,12 @@
     "theme": "nourriture",
     "niveau": 1,
     "prononciation": "na3-na3 : deux fois le 3 (ع) serré de la gorge.",
-    "audio": "",
+    "audio": "audio/nourriture-003.mp3",
     "exemple": {
       "latin": "atay bla na3na3",
       "arabe": "أتاي بلا نعناع",
       "fr": "Du thé sans menthe",
-      "audio": ""
+      "audio": "audio/nourriture-003-ex.mp3"
     }
   },
   {
@@ -55,12 +55,12 @@
     "theme": "nourriture",
     "niveau": 1,
     "prononciation": "9ah-wa : le 9 (ق) est un « k » tiré très au fond de la gorge, presque dans la glotte.",
-    "audio": "",
+    "audio": "audio/nourriture-004.mp3",
     "exemple": {
       "latin": "wa7ed 9ahwa k7la",
       "arabe": "واحد قهوة كحلة",
       "fr": "Un café noir",
-      "audio": ""
+      "audio": "audio/nourriture-004-ex.mp3"
     }
   },
   {
@@ -71,12 +71,12 @@
     "theme": "nourriture",
     "niveau": 1,
     "prononciation": "l-ma : le « l » de l'article est collé, on dit toujours lma.",
-    "audio": "",
+    "audio": "audio/nourriture-005.mp3",
     "exemple": {
       "latin": "3tini chwiya d lma",
       "arabe": "عطيني شوية د الما",
       "fr": "Donne-moi un peu d'eau",
-      "audio": ""
+      "audio": "audio/nourriture-005-ex.mp3"
     }
   },
   {
@@ -87,12 +87,12 @@
     "theme": "nourriture",
     "niveau": 1,
     "prononciation": "7lib : commence par le 7 (ح), un souffle chaud et sourd.",
-    "audio": "",
+    "audio": "audio/nourriture-006.mp3",
     "exemple": {
       "latin": "9ahwa b 7lib",
       "arabe": "قهوة بحليب",
       "fr": "Un café au lait",
-      "audio": ""
+      "audio": "audio/nourriture-006-ex.mp3"
     }
   },
   {
@@ -103,12 +103,12 @@
     "theme": "nourriture",
     "niveau": 1,
     "prononciation": "sok-kar : « k » doublé, appuyé.",
-    "audio": "",
+    "audio": "audio/nourriture-007.mp3",
     "exemple": {
       "latin": "bla sokkar 3afak",
       "arabe": "بلا سكر عافاك",
       "fr": "Sans sucre, s'il te plaît",
-      "audio": ""
+      "audio": "audio/nourriture-007-ex.mp3"
     }
   },
   {
@@ -119,12 +119,12 @@
     "theme": "nourriture",
     "niveau": 1,
     "prononciation": "l7em : le 7 (ح) soufflé juste après le « l ».",
-    "audio": "",
+    "audio": "audio/nourriture-008.mp3",
     "exemple": {
       "latin": "ma kanaklch l7em",
       "arabe": "ما كناكلش اللحم",
       "fr": "Je ne mange pas de viande",
-      "audio": ""
+      "audio": "audio/nourriture-008-ex.mp3"
     }
   },
   {
@@ -135,12 +135,12 @@
     "theme": "nourriture",
     "niveau": 1,
     "prononciation": "d-jaj : « d » et « j » collés, comme « dj » de « djembé ».",
-    "audio": "",
+    "audio": "audio/nourriture-009.mp3",
     "exemple": {
       "latin": "tajine b djaj",
       "arabe": "طاجين بدجاج",
       "fr": "Un tajine au poulet",
-      "audio": ""
+      "audio": "audio/nourriture-009-ex.mp3"
     }
   },
   {
@@ -151,12 +151,12 @@
     "theme": "nourriture",
     "niveau": 1,
     "prononciation": "7ut : 7 (ح) soufflé puis « out ».",
-    "audio": "",
+    "audio": "audio/nourriture-010.mp3",
     "exemple": {
       "latin": "7ut tri",
       "arabe": "حوت طري",
       "fr": "Du poisson frais",
-      "audio": ""
+      "audio": "audio/nourriture-010-ex.mp3"
     }
   },
   {
@@ -167,12 +167,12 @@
     "theme": "nourriture",
     "niveau": 1,
     "prononciation": "bid : le « d » est appuyé, langue un peu en arrière.",
-    "audio": "",
+    "audio": "audio/nourriture-011.mp3",
     "exemple": {
       "latin": "bghit joj d lbid",
       "arabe": "بغيت جوج د البيض",
       "fr": "Je veux deux œufs",
-      "audio": ""
+      "audio": "audio/nourriture-011-ex.mp3"
     }
   },
   {
@@ -183,12 +183,12 @@
     "theme": "nourriture",
     "niveau": 1,
     "prononciation": "khod-ra : kh (خ) raclé, « r » roulé.",
-    "audio": "",
+    "audio": "audio/nourriture-012.mp3",
     "exemple": {
       "latin": "tajine b lkhodra",
       "arabe": "طاجين بالخضرة",
       "fr": "Un tajine aux légumes",
-      "audio": ""
+      "audio": "audio/nourriture-012-ex.mp3"
     }
   },
   {
@@ -199,12 +199,12 @@
     "theme": "nourriture",
     "niveau": 1,
     "prononciation": "fak-ya : simple, « k » net.",
-    "audio": "",
+    "audio": "audio/nourriture-013.mp3",
     "exemple": {
       "latin": "fakya triya",
       "arabe": "فاكية طرية",
       "fr": "Des fruits frais",
-      "audio": ""
+      "audio": "audio/nourriture-013-ex.mp3"
     }
   },
   {
@@ -215,12 +215,12 @@
     "theme": "nourriture",
     "niveau": 1,
     "prononciation": "zi-toun : comme en français.",
-    "audio": "",
+    "audio": "audio/nourriture-014.mp3",
     "exemple": {
       "latin": "chwiya d zitoun",
       "arabe": "شوية د الزيتون",
       "fr": "Un peu d'olives",
-      "audio": ""
+      "audio": "audio/nourriture-014-ex.mp3"
     }
   },
   {
@@ -231,12 +231,12 @@
     "theme": "nourriture",
     "niveau": 1,
     "prononciation": "ta-jin : « t » appuyé, langue un peu en arrière.",
-    "audio": "",
+    "audio": "audio/nourriture-015.mp3",
     "exemple": {
       "latin": "tajine bnin bezzaf",
       "arabe": "طاجين بنين بزاف",
       "fr": "Le tajine est très bon",
-      "audio": ""
+      "audio": "audio/nourriture-015-ex.mp3"
     }
   },
   {
@@ -247,12 +247,12 @@
     "theme": "nourriture",
     "niveau": 1,
     "prononciation": "ks-ksou : les voyelles disparaissent presque.",
-    "audio": "",
+    "audio": "audio/nourriture-016.mp3",
     "exemple": {
       "latin": "ksksou nhar jjem3a",
       "arabe": "كسكسو نهار الجمعة",
       "fr": "Couscous le vendredi",
-      "audio": ""
+      "audio": "audio/nourriture-016-ex.mp3"
     }
   },
   {
@@ -263,12 +263,12 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "7ri-ra : 7 (ح) soufflé, « r » roulés.",
-    "audio": "",
+    "audio": "audio/nourriture-017.mp3",
     "exemple": {
       "latin": "7rira skhouna",
       "arabe": "حريرة سخونة",
       "fr": "Une harira chaude",
-      "audio": ""
+      "audio": "audio/nourriture-017-ex.mp3"
     }
   },
   {
@@ -279,12 +279,12 @@
     "theme": "nourriture",
     "niveau": 1,
     "prononciation": "b-nin : « b » collé au « n ».",
-    "audio": "",
+    "audio": "audio/nourriture-018.mp3",
     "exemple": {
       "latin": "had lmakla bnina",
       "arabe": "هاد الماكلة بنينة",
       "fr": "Ce plat est délicieux",
-      "audio": ""
+      "audio": "audio/nourriture-018-ex.mp3"
     }
   },
   {
@@ -295,12 +295,12 @@
     "theme": "nourriture",
     "niveau": 1,
     "prononciation": "b-ghit : le gh (غ) est un « r » grasseyé à la parisienne.",
-    "audio": "",
+    "audio": "audio/nourriture-019.mp3",
     "exemple": {
       "latin": "bghit 9ahwa 3afak",
       "arabe": "بغيت قهوة عافاك",
       "fr": "Je veux un café, s'il te plaît",
-      "audio": ""
+      "audio": "audio/nourriture-019-ex.mp3"
     }
   },
   {
@@ -311,12 +311,12 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "ch-be3t : 3 (ع) serré avant le « t » final.",
-    "audio": "",
+    "audio": "audio/nourriture-020.mp3",
     "exemple": {
       "latin": "chokran, chbe3t",
       "arabe": "شكرا، شبعت",
       "fr": "Merci, j'ai assez mangé",
-      "audio": ""
+      "audio": "audio/nourriture-020-ex.mp3"
     }
   },
   {
@@ -327,7 +327,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-021.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -343,7 +343,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-022.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -359,7 +359,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-023.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -375,7 +375,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-024.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -391,7 +391,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-025.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -407,7 +407,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-026.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -423,7 +423,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-027.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -439,7 +439,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-028.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -455,7 +455,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-029.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -471,7 +471,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-030.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -487,7 +487,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-031.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -503,7 +503,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-032.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -519,7 +519,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-033.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -535,7 +535,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-034.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -551,7 +551,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-035.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -567,7 +567,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-036.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -583,7 +583,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-037.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -599,7 +599,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-038.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -615,7 +615,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-039.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -631,7 +631,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-040.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -647,7 +647,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-041.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -663,7 +663,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-042.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -679,7 +679,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-043.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -695,7 +695,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-044.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -711,7 +711,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-045.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -727,7 +727,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-046.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -743,7 +743,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-047.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -759,7 +759,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-048.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -775,7 +775,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-049.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -791,7 +791,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-050.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -807,7 +807,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-051.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -823,7 +823,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-052.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -839,7 +839,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-053.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -855,7 +855,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-054.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -871,7 +871,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-055.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -887,7 +887,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-056.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -903,7 +903,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-057.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -919,7 +919,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-058.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -935,7 +935,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-059.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -951,7 +951,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-060.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -967,7 +967,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-061.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -983,7 +983,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-062.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -999,7 +999,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-063.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1015,7 +1015,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-064.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1031,7 +1031,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-065.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1047,7 +1047,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-066.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1063,7 +1063,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-067.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1079,7 +1079,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-068.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1095,7 +1095,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-069.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1111,7 +1111,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-070.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1127,7 +1127,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-071.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1143,7 +1143,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-072.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1159,7 +1159,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-073.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1175,7 +1175,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-074.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1191,7 +1191,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-075.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1207,7 +1207,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-076.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1223,7 +1223,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-077.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1239,7 +1239,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-078.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1255,7 +1255,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-079.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1271,7 +1271,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-080.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1287,7 +1287,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-081.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1303,7 +1303,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-082.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1319,7 +1319,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-083.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1335,7 +1335,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-084.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1351,7 +1351,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-085.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1367,7 +1367,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-086.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1383,7 +1383,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-087.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1399,7 +1399,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-088.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1415,7 +1415,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-089.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1431,7 +1431,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-090.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1447,7 +1447,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-091.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1463,7 +1463,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-092.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1479,7 +1479,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-093.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1495,7 +1495,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-094.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1511,7 +1511,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-095.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1527,7 +1527,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-096.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1543,7 +1543,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-097.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1559,7 +1559,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-098.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1575,7 +1575,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-099.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1591,7 +1591,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-100.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1607,7 +1607,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-101.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1623,7 +1623,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-102.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1639,7 +1639,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-103.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1655,7 +1655,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-104.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1671,7 +1671,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-105.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1687,7 +1687,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-106.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1703,7 +1703,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-107.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1719,7 +1719,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-108.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1735,7 +1735,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-109.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1751,7 +1751,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-110.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1767,7 +1767,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-111.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1783,7 +1783,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-112.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1799,7 +1799,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-113.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1815,7 +1815,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-114.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1831,7 +1831,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-115.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1847,7 +1847,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-116.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1863,7 +1863,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-117.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1879,7 +1879,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-118.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1895,7 +1895,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-119.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1911,7 +1911,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-120.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1927,7 +1927,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-121.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
@@ -1943,7 +1943,7 @@
     "theme": "nourriture",
     "niveau": 2,
     "prononciation": "",
-    "audio": "",
+    "audio": "audio/nourriture-122.mp3",
     "exemple": {
       "latin": "",
       "arabe": "",
