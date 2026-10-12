@@ -177,9 +177,9 @@ Progression d'un mot, stockée sur le téléphone :
 }
 ```
 
-Génération de l'audio : un script Python, lancé automatiquement par GitHub Actions à chaque modification des mots, transforme l'écriture arabe de chaque mot et de chaque exemple en fichier MP3 avec le modèle de synthèse vocale arabe [facebook/mms-tts-ara](https://huggingface.co/facebook/mms-tts-ara). Les fichiers sont générés une fois, rangés dans `public/audio/` et embarqués dans l'appli.
+Génération de l'audio : un script Python, lancé automatiquement par GitHub Actions à chaque modification des mots, transforme l'écriture arabe de chaque mot et de chaque exemple en fichier MP3 avec la voix neuronale marocaine Jamal de Microsoft (ar-MA-JamalNeural, via edge-tts). Si ce service ne répond pas, le modèle libre [facebook/mms-tts-ara](https://huggingface.co/facebook/mms-tts-ara) prend le relais. Les fichiers sont générés une fois, rangés dans `public/audio/` et embarqués dans l'appli, qui reste hors ligne.
 
-Cette voix est celle d'un arabe générique : elle sert de repère, et la fonction « Remplacer l'audio » permet d'y substituer une vraie voix marocaine dès que tu en as une.
+Cette voix a un accent marocain mais reste une synthèse : elle sert de repère, et la fonction « Remplacer l'audio » permet d'y substituer une vraie voix marocaine dès que tu en as une.
 
 Tant qu'un MP3 n'a pas été généré, l'appli lit l'écriture arabe avec la synthèse vocale du téléphone.
 
@@ -201,7 +201,7 @@ Tout tourne sur le téléphone, sans serveur ni compte. L'audio est préparé un
   - **Contenu** : mots en JSON et fichiers audio MP3 ;
   - **Stockage local (IndexedDB)** : progression, séries, XP, mots ajoutés et enregistrements de ta voix.
 - **Outils de préparation** :
-  - **Script audio (Python)** : génère les MP3 une fois avec mms-tts-ara ;
+  - **Script audio (Python)** : génère les MP3 une fois avec la voix marocaine Jamal ;
   - **GitHub Pages** : sert l'appli au téléphone, publiée par Claude Code.
 
 Les écrans pilotent le moteur d'exercices, qui puise dans le contenu et transmet chaque résultat à la répétition espacée ; tout est enregistré sur l'appareil. Le script audio et la publication tournent sur GitHub Actions, à chaque modification poussée par Claude Code : aucun ordinateur n'est nécessaire.
@@ -212,7 +212,7 @@ Les écrans pilotent le moteur d'exercices, qui puise dans le contenu et transme
 | Style | Tailwind CSS | Mise en page mobile rapide |
 | Hors ligne | PWA (vite-plugin-pwa) | Installable sur l'écran d'accueil, marche sans réseau |
 | Stockage | IndexedDB via Dexie | Progression, mots ajoutés et enregistrements gardés sur l'appareil |
-| Audio des mots | Script Python + facebook/mms-tts-ara | MP3 générés une fois et embarqués dans l'appli |
+| Audio des mots | Script Python + voix marocaine Jamal (edge-tts), secours mms-tts-ara | MP3 générés une fois et embarqués dans l'appli, accent marocain |
 | Audio des mots ajoutés | API Web Speech du navigateur | Synthèse immédiate, sans fichier à produire |
 | Enregistrement | MediaRecorder | Intégré au navigateur |
 | Score de prononciation | Empreintes MFCC (bibliothèque Meyda) + comparaison DTW | Calcul sur le téléphone, hors ligne |

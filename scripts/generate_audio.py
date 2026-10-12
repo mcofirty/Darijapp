@@ -1,28 +1,30 @@
 """Génère les MP3 manquants des mots et des exemples à partir de src/data/*.json.
 
-Modèle : facebook/mms-tts-ara (synthèse vocale arabe).
+Voix par défaut : Jamal (ar-MA-JamalNeural), voix neuronale marocaine de Microsoft,
+via edge-tts (sans clé). Elle lit l'écriture arabe darija (champ « arabe ») avec un accent
+marocain. Les MP3 sont générés une fois puis embarqués dans l'appli, qui reste hors ligne.
 
-mms-tts-ara lit l'écriture arabe sans voyelles (champ « arabe »). Si un modèle demande du
-texte romanisé (uroman), le script lui donne notre translittération latine convertie
-(3 → ', 7 → h, 9 → q, ch → sh, ou → u), qui porte les voyelles du darija.
+Secours : facebook/mms-tts-ara (--moteur mms), modèle libre exécuté en local. Il lit l'arabe
+sans voyelles, à la manière de l'arabe standard, et prononce mal une partie du darija.
 
 Seuls les fichiers absents de public/audio/ sont générés, sauf avec --force.
---apercu affiche le texte envoyé au modèle, sans rien générer.
+Code de sortie 2 : certains fichiers n'ont pas pu être générés (relancer, ou --moteur mms).
 
 Installation (une seule fois) :
-    pip install torch transformers uroman
-    + ffmpeg installé sur la machine (brew install ffmpeg sur Mac)
+    pip install edge-tts
+    pour le secours : pip install torch transformers, et ffmpeg
 
 Utilisation :
-    python scripts/generate_audio.py                  # tous les thèmes
+    python scripts/generate_audio.py                  # tous les thèmes, voix Jamal
     python scripts/generate_audio.py --theme chiffres # un seul thème
     python scripts/generate_audio.py --force          # régénère tout
     python scripts/generate_audio.py --apercu         # montre les textes lus
+    python scripts/generate_audio.py --moteur mms     # voix de secours
 """
 
 import argparse
+import asyncio
 import json
-import re
 import shutil
 import subprocess
 import sys
@@ -33,87 +35,91 @@ from pathlib import Path
 RACINE = Path(__file__).resolve().parent.parent
 DONNEES = RACINE / "src" / "data"
 PUBLIC = RACINE / "public"
-MODELE = "facebook/mms-tts-ara"
+VOIX = "ar-MA-JamalNeural"
+MODELE_SECOURS = "facebook/mms-tts-ara"
+ESSAIS = 3
+EN_PARALLELE = 4
 
 
-# Lettres de remplacement quand le modèle ne connaît pas une lettre.
-REPLIS = {"e": "a", "o": "u", "g": "k", "p": "b", "v": "f"}
+def texte_a_lire(arabe: str) -> str:
+    """« ... », « / » et « — » servent à l'affichage : on les remplace par des pauses."""
+    texte = arabe.replace("...", "،").replace("/", "،").replace("—", "،")
+    return " ".join(texte.split())
 
 
-def vers_uroman(latin: str, vocabulaire: set[str] | None = None) -> str:
-    """Convertit notre translittération darija en texte romanisé à la manière d'uroman."""
-    texte = latin.lower()
-    # « ... » et « / » servent à l'affichage ; « — » sépare deux répliques.
-    for signe in ("...", "/", "—", "?", "!"):
-        texte = texte.replace(signe, ",")
-    # 7 après k, s, g ou c formerait kh, sh… (une autre lettre) : on intercale une voyelle brève.
-    texte = re.sub(r"([ksgc])7", r"\1a7", texte)
-    texte = texte.replace("ch", "sh").replace("ou", "u")
-    texte = texte.replace("3", "'").replace("7", "h").replace("9", "q")
-    if vocabulaire is None:
-        return " ".join(texte.split()).strip(" ,")
-    lettres = []
-    for c in texte:
-        if c in vocabulaire or c == " ":
-            lettres.append(c)
-        elif REPLIS.get(c) in vocabulaire:
-            lettres.append(REPLIS[c])
-    return " ".join("".join(lettres).split()).strip(" ,")
-
-
-def lister_a_generer(theme: str | None, force: bool) -> list[tuple[str, str, Path]]:
-    """Renvoie les triplets (latin, arabe, chemin du MP3) à produire."""
+def lister_a_generer(theme: str | None, force: bool) -> list[tuple[str, Path]]:
+    """Renvoie les couples (texte arabe à lire, chemin du MP3) à produire."""
     taches = []
     for fichier in sorted(DONNEES.glob("*.json")):
         if theme and fichier.stem != theme:
             continue
         for mot in json.loads(fichier.read_text(encoding="utf-8")):
             ex = mot["exemple"]
-            for latin, arabe, audio in ((mot["latin"], mot["arabe"], mot["audio"]), (ex["latin"], ex["arabe"], ex["audio"])):
+            for arabe, audio in ((mot["arabe"], mot["audio"]), (ex["arabe"], ex["audio"])):
                 cible = PUBLIC / audio
                 if force or not cible.exists():
-                    taches.append((latin, arabe, cible))
+                    taches.append((texte_a_lire(arabe), cible))
     return taches
 
 
-def charger_modele():
-    import torch  # noqa: F401  (importé ici pour un message d'erreur clair s'il manque)
+async def generer_edge(taches: list[tuple[str, Path]]) -> list[tuple[str, Path]]:
+    """Génère avec la voix marocaine ; renvoie les tâches en échec."""
+    import edge_tts
+
+    limite = asyncio.Semaphore(EN_PARALLELE)
+    echecs: list[tuple[str, Path]] = []
+    faits = 0
+
+    async def une(texte: str, cible: Path) -> None:
+        nonlocal faits
+        async with limite:
+            for essai in range(1, ESSAIS + 1):
+                try:
+                    cible.parent.mkdir(parents=True, exist_ok=True)
+                    temporaire = cible.with_suffix(".tmp")
+                    await edge_tts.Communicate(texte, VOIX).save(str(temporaire))
+                    if temporaire.stat().st_size == 0:
+                        raise RuntimeError("fichier vide")
+                    temporaire.replace(cible)
+                    faits += 1
+                    print(f"[{faits}/{len(taches)}] {cible.relative_to(RACINE)} ← {texte}")
+                    return
+                except Exception as erreur:  # réseau, limite de débit…
+                    print(f"  essai {essai}/{ESSAIS} raté pour {cible.name} : {erreur}", file=sys.stderr)
+                    await asyncio.sleep(2 * essai)
+            echecs.append((texte, cible))
+
+    await asyncio.gather(*(une(t, c) for t, c in taches))
+    return echecs
+
+
+def generer_mms(taches: list[tuple[str, Path]]) -> None:
+    """Voix de secours, exécutée en local."""
+    import torch
     from transformers import AutoTokenizer, VitsModel
 
-    tokenizer = AutoTokenizer.from_pretrained(MODELE)
-    modele = VitsModel.from_pretrained(MODELE)
+    if shutil.which("ffmpeg") is None:
+        raise SystemExit("ffmpeg est introuvable : installe-le avant d'utiliser --moteur mms.")
+    tokenizer = AutoTokenizer.from_pretrained(MODELE_SECOURS)
+    modele = VitsModel.from_pretrained(MODELE_SECOURS)
     modele.eval()
-    return tokenizer, modele
-
-
-def texte_a_lire(latin: str, arabe: str, tokenizer) -> str:
-    """Texte donné au modèle : notre latin s'il lit du romanisé, sinon l'écriture arabe."""
-    if getattr(tokenizer, "is_uroman", False):
-        return vers_uroman(latin, set(tokenizer.get_vocab()))
-    return arabe.replace("...", " ").replace("/", "،").replace("—", "،")
-
-
-def synthetiser(texte: str, cible: Path, tokenizer, modele) -> None:
-    import torch
-
-    entrees = tokenizer(texte, return_tensors="pt")
-    with torch.no_grad():
-        onde = modele(**entrees).waveform[0].numpy()
-
-    echantillons = (onde.clip(-1, 1) * 32767).astype("<i2").tobytes()
-    cible.parent.mkdir(parents=True, exist_ok=True)
-    with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as tmp:
-        chemin_wav = Path(tmp.name)
-    with wave.open(str(chemin_wav), "wb") as w:
-        w.setnchannels(1)
-        w.setsampwidth(2)
-        w.setframerate(modele.config.sampling_rate)
-        w.writeframes(echantillons)
-    subprocess.run(
-        ["ffmpeg", "-y", "-loglevel", "error", "-i", str(chemin_wav), "-codec:a", "libmp3lame", "-b:a", "64k", str(cible)],
-        check=True,
-    )
-    chemin_wav.unlink()
+    for i, (texte, cible) in enumerate(taches, 1):
+        with torch.no_grad():
+            onde = modele(**tokenizer(texte, return_tensors="pt")).waveform[0].numpy()
+        cible.parent.mkdir(parents=True, exist_ok=True)
+        with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as tmp:
+            chemin_wav = Path(tmp.name)
+        with wave.open(str(chemin_wav), "wb") as w:
+            w.setnchannels(1)
+            w.setsampwidth(2)
+            w.setframerate(modele.config.sampling_rate)
+            w.writeframes((onde.clip(-1, 1) * 32767).astype("<i2").tobytes())
+        subprocess.run(
+            ["ffmpeg", "-y", "-loglevel", "error", "-i", str(chemin_wav), "-codec:a", "libmp3lame", "-b:a", "64k", str(cible)],
+            check=True,
+        )
+        chemin_wav.unlink()
+        print(f"[{i}/{len(taches)}] {cible.relative_to(RACINE)} ← {texte}")
 
 
 def main() -> int:
@@ -121,29 +127,29 @@ def main() -> int:
     parser.add_argument("--theme", help="ne traiter qu'un thème (nom du fichier JSON sans extension)")
     parser.add_argument("--force", action="store_true", help="régénérer même les MP3 existants")
     parser.add_argument("--apercu", action="store_true", help="afficher les textes lus, sans générer")
+    parser.add_argument("--moteur", choices=["edge", "mms"], default="edge", help="voix marocaine (edge) ou secours (mms)")
     args = parser.parse_args()
 
     taches = lister_a_generer(args.theme, args.force)
     if args.apercu:
-        for latin, _, cible in taches:
-            print(f"{cible.name:28} {latin:35} → {vers_uroman(latin)}")
+        for texte, cible in taches:
+            print(f"{cible.name:28} {texte}")
         return 0
     if not taches:
         print("Tous les MP3 existent déjà.")
         return 0
-    if shutil.which("ffmpeg") is None:
-        print("ffmpeg est introuvable : installe-le avant de lancer ce script.", file=sys.stderr)
-        return 1
 
-    print(f"{len(taches)} fichier(s) à générer avec {MODELE}…")
-    tokenizer, modele = charger_modele()
-    vocabulaire = "".join(sorted(tokenizer.get_vocab()))
-    print(f"Lecture {'du latin romanisé' if getattr(tokenizer, 'is_uroman', False) else 'de l’arabe'} ; lettres connues : {vocabulaire!r}")
-    for i, (latin, arabe, cible) in enumerate(taches, 1):
-        texte = texte_a_lire(latin, arabe, tokenizer)
-        synthetiser(texte, cible, tokenizer, modele)
-        print(f"[{i}/{len(taches)}] {cible.relative_to(RACINE)} ← {texte}")
-    print("Terminé. Relance « npm run build » pour que la PWA mette ces fichiers en cache.")
+    if args.moteur == "mms":
+        print(f"{len(taches)} fichier(s) à générer avec {MODELE_SECOURS}…")
+        generer_mms(taches)
+        return 0
+
+    print(f"{len(taches)} fichier(s) à générer avec la voix {VOIX}…")
+    echecs = asyncio.run(generer_edge(taches))
+    if echecs:
+        print(f"{len(echecs)} fichier(s) non générés : {', '.join(c.name for _, c in echecs)}", file=sys.stderr)
+        return 2
+    print("Terminé.")
     return 0
 
 

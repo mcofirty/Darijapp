@@ -33,16 +33,21 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Installer la synthèse vocale
+      - name: Générer les MP3 (voix marocaine Jamal)
+        id: edge
         if: steps.manquants.outputs.nombre != '0'
+        continue-on-error: true
+        run: |
+          pip install edge-tts
+          python scripts/generate_audio.py || python scripts/generate_audio.py
+
+      - name: Secours si la voix marocaine n'a pas répondu (mms-tts-ara)
+        if: steps.manquants.outputs.nombre != '0' && steps.edge.outcome == 'failure'
         run: |
           sudo apt-get update && sudo apt-get install -y ffmpeg
           pip install torch --index-url https://download.pytorch.org/whl/cpu
-          pip install transformers uroman
-
-      - name: Générer les MP3
-        if: steps.manquants.outputs.nombre != '0'
-        run: python scripts/generate_audio.py
+          pip install transformers
+          python scripts/generate_audio.py --moteur mms
 
       - name: Enregistrer les MP3 dans le repo
         id: commit
