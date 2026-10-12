@@ -20,6 +20,8 @@ export interface Profil {
   apparence: Apparence
   /** « Ne plus afficher » coché sous l'aide à l'installation sur l'écran d'accueil. */
   masquerAideInstallation: boolean
+  /** Meilleur score du Quiz express (bonnes réponses en 60 s). */
+  recordExpress: number
 }
 
 /** Apparence de l'appli : suit l'iPhone, ou forcée en clair ou en sombre. */
@@ -43,7 +45,12 @@ export interface SessionFaite {
   bonnes: number
   mauvaises: number
   nouveaux: number
+  /** Absent pour une session du jour (historique d'avant le Quiz). */
+  type?: TypeActivite
 }
+
+/** Activité enregistrée dans l'historique : toutes comptent pour l'XP et la série. */
+export type TypeActivite = 'session' | 'quiz' | 'express'
 
 export const PROFIL_DEFAUT: Profil = {
   id: 'moi',
@@ -52,6 +59,7 @@ export const PROFIL_DEFAUT: Profil = {
   afficherArabe: true,
   apparence: 'systeme',
   masquerAideInstallation: false,
+  recordExpress: 0,
 }
 
 export class DarijaDB extends Dexie {

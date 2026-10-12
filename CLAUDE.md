@@ -80,7 +80,7 @@ docs/
 | --- | --- |
 | Apprendre | Écran d'accueil. Grand titre avec la série (flamme). Carte « Session du jour » (nouveaux mots, révisions, mots vus, « Commencer » puis « Encore une session », sans limite), section « Ma progression » (niveau, XP), puis « Explorer » : guide des sons et 31 thèmes en liste groupée, fiches mots |
 | Parcours | Leçons groupées par niveau (niveau 1 « Les bases »), prochaine leçon mise en avant, nœuds Trésor, trophées |
-| Quiz | 5 questions mêlant les 5 exercices |
+| Quiz | Deux cartes. « Contrôle tes acquis » : quiz de 5 questions (Écoute et choisis, Traduis, une question Associe les paires jamais en premier) sur les mots les moins sus (boîte, échecs, retard), complétés par le début du programme ; aucune question refaite ; bilan « x sur 5 », « Sans faute ! ». « Quiz express » : 60 s, questions enchaînées sans « Continuer » (réponse affichée 0,45 s), chrono qui rougit à 10 s, score, record gardé dans le profil. Quiz et Quiz express donnent de l'XP et comptent pour la série, sans toucher à la répétition espacée |
 | Progrès | Contrôle segmenté Tableau de bord / Dictionnaire. Tableau : niveau et XP restants, XP total, XP du jour, série, sessions du jour, mots vus (quêtes, coffre et statistiques au jalon 4). Dictionnaire : recherche iOS, tous les mots avec ✓ sur ceux déjà vus |
 | Profil | Fait : Apparence (Automatique / Clair / Sombre), écriture arabe. Prévu : prénom, avatar, genre, objectif, rappel, audio, export/import/remise à zéro |
 
@@ -138,10 +138,10 @@ L'id suit `<theme>-NNN` dans l'ordre du fichier ; `src/data/data.test.ts` vérif
 
 Mot importé (1 530 entrées) : `"prononciation": ""`, `"exemple"` aux quatre champs vides, et parfois `"note": "Emprunt courant au français"`. Une même graphie latine peut désigner deux mots différents en arabe (7it = حيت « parce que » ou حيط « mur »).
 
-Session terminée (IndexedDB, table `sessions`, depuis la v2) :
+Activité terminée (IndexedDB, table `sessions`, depuis la v2 ; `type` = `session`, `quiz` ou `express`, absent sur les sessions d'avant le Quiz) :
 
 ```json
-{ "id": 1, "date": "2026-10-12", "xp": 27, "bonnes": 12, "mauvaises": 0, "nouveaux": 5 }
+{ "id": 1, "date": "2026-10-12", "xp": 27, "bonnes": 12, "mauvaises": 0, "nouveaux": 5, "type": "session" }
 ```
 
 Mot ajouté (IndexedDB, table `motsPerso`, depuis la v3) :
@@ -194,13 +194,13 @@ Progression d'un mot (IndexedDB) :
 
 ## État du projet
 
-Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; restent l'onglet Quiz et le Quiz express. Le jalon 1 est en ligne sur https://mcofirty.github.io/Darijapp/.
+Jalon en cours : **3 — Prononciation** (Distingue les sons, mode écoute, puis Dis-le). Les jalons 1 et 2 sont en ligne sur https://mcofirty.github.io/Darijapp/.
 
 | Jalon | Durée estimée | Contenu | Statut |
 | --- | --- | --- | --- |
 | 1. Socle | Semaine 1 | PWA, 5 onglets, script audio, 1 thème de 10 mots (fait : 8 thèmes, 152 mots, 304 MP3) | Terminé |
-| 2. Exercices | Semaines 2 et 3 | Cartes, quiz, répétition espacée | En cours |
-| 3. Prononciation | Semaines 4 et 5 | Enregistrement, score sur 100, sons du darija | À faire |
+| 2. Exercices | Semaines 2 et 3 | Cartes, quiz, répétition espacée | Terminé |
+| 3. Prononciation | Semaines 4 et 5 | Enregistrement, score sur 100, sons du darija | En cours |
 | 4. Jeu et contenu | Semaines 6 et 7 | Quêtes, séries, parcours complet, 150 mots (fait : 1 682 mots en 31 thèmes) | À faire |
 | Ensuite | — | Grammaire, dialogues, 500 mots | Plus tard |
 
@@ -223,6 +223,7 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 | 2026-10-12 | Liquid Glass d'iOS 26 sur toutes les commandes (verre à bords réfractants, retour rond, bord flou, session, bilan, alertes, recherche, contrôles segmentés et interrupteur en goutte de verre) | `src/ui/`, `src/index.css`, `src/features/session/`, `src/features/progres/Dictionnaire.tsx` |
 | 2026-10-12 | Angles et listes aux mesures des Réglages de l'iPhone : rayons de 26 pt concentriques autour des boutons, marges de 20 pt, cellules de 56 pt, séparateurs en retrait, titres de section en 17 pt | `src/index.css`, `src/ui/Liste.tsx`, `src/ui/Page.tsx` |
 | 2026-10-12 | Mise en ligne en 2 min, séparée de la génération audio ; Dictionnaire affiché progressivement | `.github/workflows/publier.yml`, `.github/workflows/audio.yml`, `src/features/mots/ListeMots.tsx` |
+| 2026-10-13 | Onglet Quiz : quiz de 5 questions sur les mots les moins sus et Quiz express de 60 s avec record | `src/features/quiz/`, `src/exercices/quiz.ts`, `src/db/apprentissage.ts`, `src/features/session/` |
 | 2026-10-12 | Animation d'ouverture : vidéo de 3 s de l'utilisateur sur fond sombre à chaque lancement, passée d'un toucher, image finale avec Réduire les animations ou si la vidéo ne démarre pas | `public/lancement.mp4`, `public/lancement-fin.jpg`, `src/app/lancement.ts`, `index.html` |
 
 ## Décisions
@@ -265,6 +266,7 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 - 2026-10-12 : animation d'ouverture = la vidéo de l'utilisateur telle quelle (demande de l'utilisateur, nom complet visible accepté dans le repo public) ; voile sombre écrit dans `index.html` pour éviter un flash blanc avant le JS ; vidéo précachée et lue depuis un blob, car Safari la demande par requêtes Range que le précache de la PWA ne sert pas.
 - 2026-10-12 : génération audio et mise en ligne séparées en deux Actions : une génération de 1h30 bloquait la publication de tout changement de code (et l'exécution suivante, partie d'un commit sans les MP3, aurait tout regénéré).
 - 2026-10-12 : listes de mots affichées par tranches (60, puis 120 à l'approche du bas, `IntersectionObserver`) au lieu des 1 682 lignes d'un coup.
+- 2026-10-13 : le Quiz contrôle sans réviser : il n'écrit pas dans la répétition espacée (des mots jamais vus peuvent le compléter) mais compte pour l'XP et la série ; il se compte par question, les paires justes seulement sans aucune erreur. Record du Quiz express dans le profil (`recordExpress`, champ non indexé, sans migration).
 - 2026-10-10 : pas de routeur ; navigation par état React, suffisante pour 5 onglets.
 
 ## Points en suspens
@@ -276,7 +278,6 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 - Le Dictionnaire montre tous les mots, avec un ✓ sur ceux déjà vus (le cahier des charges ne prévoyait que les mots vus).
 - Sur iPhone, l'appli installée sur l'écran d'accueil a sa propre mémoire, séparée de Safari (non vérifié sur appareil) : la progression faite dans Safari ne suit pas, et un lien `#mot=…` ouvert dans Safari ajoute sans doute le mot à Safari, pas à l'appli installée. À vérifier, puis prévoir un contournement (copier le lien et l'ouvrir dans l'appli, ou export/import).
 - Mes mots : pas de sauvegarde tant que l'export/import du Profil n'existe pas (effacer les données du site efface les mots ajoutés). Pas de prononciation ni d'exemple pour ces mots.
-- Onglet Quiz (5 questions) et Quiz express (60 s) : à faire pour finir le jalon 2, en réutilisant `src/exercices/`.
 
 ## Mise à jour de ce fichier (obligatoire)
 

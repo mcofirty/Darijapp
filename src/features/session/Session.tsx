@@ -4,7 +4,7 @@ import { sonReponse } from '../../audio/effets'
 import { CircleCheck, CircleX, X } from 'lucide-react'
 import type { Mot } from '../../data/types'
 import { useMots } from '../../db/motsPerso'
-import { enregistrerSession, type BilanSession } from '../../db/apprentissage'
+import { enregistrerActivite, enregistrerSession, type BilanSession } from '../../db/apprentissage'
 import { Resultats, etapeARefaire, type Etape } from '../../exercices/session'
 import { Alerte } from '../../ui/Alerte'
 import { Bouton } from '../../ui/Boutons'
@@ -17,6 +17,8 @@ interface Props {
   etapes: Etape[]
   nouveaux: number
   entrainement: boolean
+  /** Quiz : pas de question refaite, pas de répétition espacée, bilan « Quiz terminé ». */
+  quiz?: boolean
   onFermer: () => void
   onEncore: () => void
 }
@@ -24,21 +26,29 @@ interface Props {
 type Retour = { juste: true } | { juste: false; mot: Mot }
 
 /** Session plein écran : une étape à la fois, retour immédiat, étapes ratées refaites à la fin. */
-export function Session({ etapes: depart, nouveaux, entrainement, onFermer, onEncore }: Props) {
+export function Session({ etapes: depart, nouveaux, entrainement, quiz = false, onFermer, onEncore }: Props) {
   const [etapes, setEtapes] = useState(depart)
   const [index, setIndex] = useState(0)
   const [retour, setRetour] = useState<Retour | null>(null)
   const [bilan, setBilan] = useState<BilanSession | null>(null)
   const [confirmer, setConfirmer] = useState(false)
   const resultats = useRef(new Resultats())
+  // Quiz : chaque question compte une fois (les paires sont justes sans aucune erreur).
+  const questions = useRef({ justes: 0, total: 0, erreurPaires: false })
   const MOTS = useMots()
   const etape = etapes[index]
 
+  function compterQuestion(juste: boolean) {
+    questions.current.total++
+    if (juste) questions.current.justes++
+  }
+
   function repondre(juste: boolean, mot: Mot) {
     resultats.current.noter(mot.id, juste)
+    compterQuestion(juste)
     sonReponse(juste)
     setTimeout(() => jouer(mot.audio, mot.arabe), 350)
-    if (!juste) {
+    if (!juste && !quiz) {
       const refaire = etapeARefaire(etape, MOTS)
       if (refaire) setEtapes((e) => [...e, refaire])
     }
@@ -52,12 +62,43 @@ export function Session({ etapes: depart, nouveaux, entrainement, onFermer, onEn
       return
     }
     const r = resultats.current
+    const q = questions.current
     setBilan(
-      await enregistrerSession(r.parMot(), { bonnes: r.bonnes, mauvaises: r.mauvaises, nouveaux, entrainement }),
+      quiz
+        ? await enregistrerActivite('quiz', { bonnes: q.justes, mauvaises: q.total - q.justes })
+        : await enregistrerSession(r.parMot(), { bonnes: r.bonnes, mauvaises: r.mauvaises, nouveaux, entrainement }),
     )
   }
 
-  if (bilan) return <Bilan bilan={bilan} taux={resultats.current.taux} onFermer={onFermer} onEncore={onEncore} />
+  if (bilan) {
+    const r = resultats.current
+    const q = questions.current
+    return quiz ? (
+      <Bilan
+        titre={q.justes === q.total ? 'Sans faute !' : 'Quiz terminé'}
+        sousTitre={`${q.justes} bonne${q.justes > 1 ? 's' : ''} réponse${q.justes > 1 ? 's' : ''} sur ${q.total}`}
+        xp={bilan.xp}
+        taux={q.total > 0 ? q.justes / q.total : 1}
+        libelleEncore="Nouveau quiz"
+        onFermer={onFermer}
+        onEncore={onEncore}
+      />
+    ) : (
+      <Bilan
+        titre="Session terminée"
+        sousTitre={
+          bilan.nouveaux > 0
+            ? `${bilan.nouveaux} nouveau${bilan.nouveaux > 1 ? 'x' : ''} mot${bilan.nouveaux > 1 ? 's' : ''} appris`
+            : 'Révision terminée'
+        }
+        xp={bilan.xp}
+        taux={r.taux}
+        libelleEncore="Encore une session"
+        onFermer={onFermer}
+        onEncore={onEncore}
+      />
+    )
+  }
 
   return (
     <div data-sans-balayage className="fixed inset-0 z-30 flex flex-col bg-fond">
@@ -67,7 +108,7 @@ export function Session({ etapes: depart, nouveaux, entrainement, onFermer, onEn
           <button
             type="button"
             onClick={() => setConfirmer(true)}
-            aria-label="Quitter la session"
+            aria-label={quiz ? 'Quitter le quiz' : 'Quitter la session'}
             className="verre verre-fin pressable flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
           >
             <X className="h-5 w-5" strokeWidth={2.4} aria-hidden />
@@ -95,9 +136,14 @@ export function Session({ etapes: depart, nouveaux, entrainement, onFermer, onEn
           {etape.type === 'paires' && (
             <Paires
               mots={etape.mots}
-              onErreur={(id) => resultats.current.noter(id, false)}
+              onErreur={(id) => {
+                resultats.current.noter(id, false)
+                questions.current.erreurPaires = true
+              }}
               onTermine={() => {
                 etape.mots.forEach((m) => resultats.current.noter(m.id, true))
+                compterQuestion(!questions.current.erreurPaires)
+                questions.current.erreurPaires = false
                 setRetour({ juste: true })
               }}
             />
@@ -141,8 +187,8 @@ export function Session({ etapes: depart, nouveaux, entrainement, onFermer, onEn
 
       {confirmer && (
         <Alerte
-          titre="Quitter la session ?"
-          message="Les réponses de cette session ne seront pas enregistrées."
+          titre={quiz ? 'Quitter le quiz ?' : 'Quitter la session ?'}
+          message={quiz ? 'Ce quiz ne sera pas compté.' : 'Les réponses de cette session ne seront pas enregistrées.'}
           onAnnuler={() => setConfirmer(false)}
           actions={[
             { libelle: 'Continuer', role: 'annuler', action: () => setConfirmer(false) },

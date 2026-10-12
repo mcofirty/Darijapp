@@ -2,7 +2,7 @@ import 'fake-indexeddb/auto'
 import Dexie from 'dexie'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { MOTS } from '../data'
-import { NOUVEAUX_PAR_SESSION, enregistrerSession, motsDejaVus, planDeSession } from './apprentissage'
+import { NOUVEAUX_PAR_SESSION, enregistrerActivite, enregistrerSession, motsDejaVus, planDeSession } from './apprentissage'
 import { DarijaDB } from './db'
 
 const J = '2026-10-12'
@@ -77,5 +77,20 @@ describe('migration v1 → v2', () => {
     expect(await v2.profil.get('moi')).toMatchObject({ afficherArabe: false })
     expect(await v2.sessions.count()).toBe(0)
     await v2.delete()
+  })
+})
+
+describe('enregistrerActivite', () => {
+  it('compte un quiz dans l’XP et la série sans toucher à la répétition espacée', async () => {
+    const bilan = await enregistrerActivite('quiz', { bonnes: 5, mauvaises: 0 }, J, base)
+    expect(bilan.xp).toBe(5 + 10 + 5)
+    expect(await base.progression.count()).toBe(0)
+    expect(await base.sessions.toArray()).toEqual([
+      { id: 1, date: J, xp: 20, bonnes: 5, mauvaises: 0, nouveaux: 0, type: 'quiz' },
+    ])
+  })
+
+  it('pas de bonus sans faute pour un Quiz express sans aucune réponse', async () => {
+    expect((await enregistrerActivite('express', { bonnes: 0, mauvaises: 0 }, J, base)).xp).toBe(10)
   })
 })

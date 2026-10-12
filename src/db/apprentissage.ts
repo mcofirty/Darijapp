@@ -2,7 +2,7 @@ import type { Mot } from '../data/types'
 import { xpDeSession } from '../gamification/xp'
 import { dateLocale } from '../srs/dates'
 import { apresReponse, motsAReviser, nouveauxMots } from '../srs/leitner'
-import { db, type DarijaDB, type ProgressionMot } from './db'
+import { db, type DarijaDB, type ProgressionMot, type TypeActivite } from './db'
 import { tousLesMots } from './motsPerso'
 
 export const NOUVEAUX_PAR_SESSION = 5
@@ -67,7 +67,22 @@ export async function enregistrerSession(
         await base.progression.put(progression)
       }
     }
-    await base.sessions.add({ date: aujourdhui, xp, bonnes: stats.bonnes, mauvaises: stats.mauvaises, nouveaux: stats.nouveaux })
+    await base.sessions.add({ date: aujourdhui, xp, bonnes: stats.bonnes, mauvaises: stats.mauvaises, nouveaux: stats.nouveaux, type: 'session' })
   })
   return { xp, bonnes: stats.bonnes, mauvaises: stats.mauvaises, nouveaux: stats.nouveaux }
+}
+
+/**
+ * Enregistre un quiz ou un Quiz express terminé : XP et série comme une session,
+ * sans toucher à la répétition espacée (un quiz contrôle, il ne remplace pas les révisions).
+ */
+export async function enregistrerActivite(
+  type: Exclude<TypeActivite, 'session'>,
+  stats: { bonnes: number; mauvaises: number },
+  aujourdhui = dateLocale(),
+  base: DarijaDB = db,
+): Promise<BilanSession> {
+  const xp = xpDeSession(stats.bonnes, stats.mauvaises === 0 && stats.bonnes > 0)
+  await base.sessions.add({ date: aujourdhui, xp, bonnes: stats.bonnes, mauvaises: stats.mauvaises, nouveaux: 0, type })
+  return { xp, bonnes: stats.bonnes, mauvaises: stats.mauvaises, nouveaux: 0 }
 }
