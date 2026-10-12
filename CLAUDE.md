@@ -97,7 +97,7 @@ Fonctions complémentaires : premier lancement guidé, Mes mots, remplacer l'aud
 
 ## Règles métier
 
-- **Translittération** : 3 = ع, 7 = ح, 9 = ق, kh = خ, gh = غ, ch = ش. Appliquée partout, sans exception.
+- **Translittération** : 3 = ع, 7 = ح, 9 = ق, kh = خ, gh = غ, ch = ش. Appliquée partout, sans exception : chaque lettre arabe de cette liste a sa graphie latine dans le mot et l'exemple (vérifié par `data.test.ts`). ق prononcé « g » s'écrit g / ڭ. L'article assimilé se double en latin quand l'arabe l'écrit (ssba7 = الصباح, llil = الليل). Le latin et l'arabe d'un même mot ou exemple disent exactement la même chose.
 - **Répétition espacée** (Leitner, boîtes 1 à 4) : un mot raté revient le lendemain (boîte 1) ; un mot réussi revient après 3, 7, puis 21 jours. Un mot compte comme raté s'il a eu au moins une erreur pendant la session.
 - **Score de prononciation** : de 0 à 100. 80 et plus : « Excellent », 3 étoiles. De 60 à 79 : « Presque », 2 étoiles. Moins de 60 : « À retravailler », 1 étoile. 60 et plus compte comme réussi. Le bouton « Le score se trompe » permet une correction manuelle.
 - **Calibrage du score** : deux rendus de synthèse du même mot doivent dépasser 80 ; deux mots proches doivent rester sous 60.
@@ -185,6 +185,7 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 | 2026-10-10 | Socle PWA : 5 onglets, en-tête, base Dexie v1, réglage « afficher l'arabe » | `src/app/`, `src/db/`, `vite.config.ts` |
 | 2026-10-10 | 152 mots en 8 thèmes avec arabe, prononciation et exemple ; fiche mot, guide des sons, dictionnaire avec recherche | `src/data/`, `src/features/mots/`, `src/features/apprendre/`, `src/features/progres/` |
 | 2026-10-10 | Script de génération audio et lecture avec repli sur la synthèse vocale du téléphone | `scripts/generate_audio.py`, `src/audio/lecteur.ts` |
+| 2026-10-12 | Relecture du contenu : 40 mots ou exemples corrigés (ch7al, derhem/drahem, lma, 9ahwa k7la, maticha, articles alignés entre latin et arabe…) et test de cohérence latin/arabe | `src/data/*.json`, `src/data/data.test.ts` |
 | 2026-10-12 | Logo de l'appli (bulles « A » et « ش ») en favicon, icône d'écran d'accueil et icônes PWA | `public/logo-*.png` (copies `favicon.png` et `apple-touch-icon.png` pour les anciennes versions en cache) |
 | 2026-10-12 | Style liquid glass sur toute l'appli : fond coloré, cartes, en-tête, boutons interactifs, panneau de retour qui se transforme | `src/index.css`, `src/main.tsx`, composants de `src/features/` |
 | 2026-10-12 | Session du jour style Duolingo en écran d'accueil : découverte, Écoute et choisis, Traduis, Associe les paires, bilan ; répétition espacée, XP, niveaux, série ; base v2 | `src/features/session/`, `src/exercices/`, `src/srs/`, `src/gamification/`, `src/db/apprentissage.ts` |
@@ -216,7 +217,7 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 
 ## Points en suspens
 
-- Le contenu (darija, arabe, explications) a été rédigé sans relecture par un locuteur natif : signaler les erreurs pour corriger les JSON.
+- Le contenu a été relu et corrigé par Claude (cohérence latin/arabe, tournures), mais pas par un locuteur natif : signaler les erreurs pour corriger les JSON. Quand l'arabe d'un mot change, supprimer son MP3 pour que l'Action le régénère.
 - Le Dictionnaire montre tous les mots, avec un ✓ sur ceux déjà vus (le cahier des charges ne prévoyait que les mots vus).
 - Onglet Quiz (5 questions) et Quiz express (60 s) : à faire pour finir le jalon 2, en réutilisant `src/exercices/`.
 

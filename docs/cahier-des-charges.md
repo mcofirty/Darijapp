@@ -130,8 +130,8 @@ Le MVP couvre 8 thèmes d'environ 20 mots, rédigés par Claude Code dans un fic
 | Thème | Exemples |
 | --- | --- |
 | Salutations et politesse | salam, labas, bslama, 3afak, chokran |
-| Chiffres et prix | wa7ed, joj, tlata, chhal ? |
-| Nourriture et boissons | khobz, atay, 9ahwa, ma |
+| Chiffres et prix | wa7ed, joj, tlata, ch7al ? |
+| Nourriture et boissons | khobz, atay, 9ahwa, lma |
 | Au souk et marchandage | ghali, bezzaf, n9es chwiya |
 | Transports et directions | taxi, fin ?, limen, liser |
 | Se présenter et famille | smiti, mnin nta ?, mama, baba, khouya |

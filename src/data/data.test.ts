@@ -53,6 +53,18 @@ describe('fichiers de mots', () => {
     expect(m.exemple.audio).toBe(`audio/${m.id}-ex.mp3`)
   })
 
+  it('chaque son de l’arabe a sa graphie latine, et inversement', () => {
+    const correspondances: [string, string][] = [['ح', '7'], ['ع', '3'], ['ق', '9'], ['خ', 'kh'], ['غ', 'gh'], ['ش', 'ch']]
+    const compter = (texte: string, motif: string) => texte.split(motif).length - 1
+    for (const m of tous) {
+      for (const [latin, arabe] of [[m.latin, m.arabe], [m.exemple.latin, m.exemple.arabe]]) {
+        for (const [lettre, code] of correspondances) {
+          expect(compter(latin, code), `${m.id} : ${latin} / ${arabe} (${lettre} = ${code})`).toBe(compter(arabe, lettre))
+        }
+      }
+    }
+  })
+
   it('le guide des sons utilise des mots présents dans les données', () => {
     for (const s of SONS) {
       expect(tous.some((m) => m.latin === s.exemple.latin && m.arabe === s.exemple.arabe)).toBe(true)

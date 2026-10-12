@@ -89,7 +89,7 @@
     "prononciation": "a-khir ta-man : kh (خ) raclé au milieu de akhir.",
     "audio": "audio/souk-006.mp3",
     "exemple": {
-      "latin": "chhal akhir taman?",
+      "latin": "ch7al akhir taman?",
       "arabe": "شحال آخر تمن؟",
       "fr": "C'est quoi ton dernier prix ?",
       "audio": "audio/souk-006-ex.mp3"
@@ -170,7 +170,7 @@
     "audio": "audio/souk-011.mp3",
     "exemple": {
       "latin": "ma 3ndich sarf",
-      "arabe": "ما عنديش الصرف",
+      "arabe": "ما عنديش صرف",
       "fr": "Je n'ai pas de monnaie",
       "audio": "audio/souk-011-ex.mp3"
     }
@@ -186,7 +186,7 @@
     "audio": "audio/souk-012.mp3",
     "exemple": {
       "latin": "3ndek sarf?",
-      "arabe": "عندك الصرف؟",
+      "arabe": "عندك صرف؟",
       "fr": "Tu as de la monnaie ?",
       "audio": "audio/souk-012-ex.mp3"
     }
@@ -233,7 +233,7 @@
     "prononciation": "z-win : « z » collé au « w ».",
     "audio": "audio/souk-015.mp3",
     "exemple": {
-      "latin": "had tapi zwin",
+      "latin": "had ttapi zwin",
       "arabe": "هاد الطابي زوين",
       "fr": "Ce tapis est joli",
       "audio": "audio/souk-015-ex.mp3"

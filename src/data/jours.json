@@ -9,9 +9,9 @@
     "prononciation": "l-youm : « l » collé au « y ».",
     "audio": "audio/jours-001.mp3",
     "exemple": {
-      "latin": "lyoum ja l3id",
-      "arabe": "اليوم جا العيد",
-      "fr": "Aujourd'hui c'est l'Aïd",
+      "latin": "ach ghadi dir lyoum?",
+      "arabe": "أش غادي دير اليوم؟",
+      "fr": "Qu'est-ce que tu vas faire aujourd'hui ?",
       "audio": "audio/jours-001-ex.mp3"
     }
   },
@@ -57,8 +57,8 @@
     "prononciation": "da-ba : simple.",
     "audio": "audio/jours-004.mp3",
     "exemple": {
-      "latin": "ji daba",
-      "arabe": "جي دابا",
+      "latin": "aji daba",
+      "arabe": "أجي دابا",
       "fr": "Viens maintenant",
       "audio": "audio/jours-004-ex.mp3"
     }
@@ -81,15 +81,15 @@
   },
   {
     "id": "jours-006",
-    "latin": "sba7",
+    "latin": "ssba7",
     "arabe": "الصباح",
     "fr": "le matin",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "s-ba7 : finit sur le 7 (ح) soufflé.",
+    "prononciation": "s-ba7 : « s » appuyé et doublé, finit sur le 7 (ح) soufflé.",
     "audio": "audio/jours-006.mp3",
     "exemple": {
-      "latin": "f sba7 kanchreb atay",
+      "latin": "f ssba7 kanchreb atay",
       "arabe": "فالصباح كنشرب أتاي",
       "fr": "Le matin je bois du thé",
       "audio": "audio/jours-006-ex.mp3"
@@ -113,15 +113,15 @@
   },
   {
     "id": "jours-008",
-    "latin": "lil",
+    "latin": "llil",
     "arabe": "الليل",
     "fr": "la nuit",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "lil : « i » long.",
+    "prononciation": "l-lil : « l » doublé, « i » long.",
     "audio": "audio/jours-008.mp3",
     "exemple": {
-      "latin": "f lil kayn lberd",
+      "latin": "f llil kayn lberd",
       "arabe": "فالليل كاين البرد",
       "fr": "La nuit, il fait froid",
       "audio": "audio/jours-008-ex.mp3"
@@ -153,7 +153,7 @@
     "prononciation": "si-ma-na : vient du français « semaine ».",
     "audio": "audio/jours-010.mp3",
     "exemple": {
-      "latin": "simana jaya",
+      "latin": "ssimana jjaya",
       "arabe": "السيمانة الجاية",
       "fr": "La semaine prochaine",
       "audio": "audio/jours-010-ex.mp3"
@@ -209,15 +209,15 @@
   },
   {
     "id": "jours-014",
-    "latin": "tlat",
+    "latin": "ttlat",
     "arabe": "التلات",
     "fr": "mardi",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "t-lat : « t » collé au « l ».",
+    "prononciation": "t-tlat : « t » doublé, collé au « l ».",
     "audio": "audio/jours-014.mp3",
     "exemple": {
-      "latin": "ntla9aw nhar tlat",
+      "latin": "ntla9aw nhar ttlat",
       "arabe": "نتلاقاو نهار التلات",
       "fr": "On se voit mardi",
       "audio": "audio/jours-014-ex.mp3"
@@ -297,8 +297,8 @@
     "prononciation": "l-7ed : 7 (ح) soufflé juste après le « l ».",
     "audio": "audio/jours-019.mp3",
     "exemple": {
-      "latin": "nhar l7ed ma khdamch",
-      "arabe": "نهار الحد ما خدامش",
+      "latin": "nhar l7ed ma kankhdemch",
+      "arabe": "نهار الحد ما كنخدمش",
       "fr": "Le dimanche je ne travaille pas",
       "audio": "audio/jours-019-ex.mp3"
     }

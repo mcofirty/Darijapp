@@ -26,7 +26,7 @@
     "audio": "audio/nourriture-002.mp3",
     "exemple": {
       "latin": "bghit atay b na3na3",
-      "arabe": "بغيت أتاي بالنعناع",
+      "arabe": "بغيت أتاي بنعناع",
       "fr": "Je veux du thé à la menthe",
       "audio": "audio/nourriture-002-ex.mp3"
     }
@@ -57,20 +57,20 @@
     "prononciation": "9ah-wa : le 9 (ق) est un « k » tiré très au fond de la gorge, presque dans la glotte.",
     "audio": "audio/nourriture-004.mp3",
     "exemple": {
-      "latin": "wa7ed 9ahwa n9ia",
-      "arabe": "واحد قهوة نقية",
+      "latin": "wa7ed 9ahwa k7la",
+      "arabe": "واحد قهوة كحلة",
       "fr": "Un café noir",
       "audio": "audio/nourriture-004-ex.mp3"
     }
   },
   {
     "id": "nourriture-005",
-    "latin": "ma",
-    "arabe": "ما",
+    "latin": "lma",
+    "arabe": "الما",
     "fr": "eau",
     "theme": "nourriture",
     "niveau": 1,
-    "prononciation": "ma : comme « ma » en français.",
+    "prononciation": "l-ma : le « l » de l'article est collé, on dit toujours lma.",
     "audio": "audio/nourriture-005.mp3",
     "exemple": {
       "latin": "3tini chwiya d lma",
@@ -138,7 +138,7 @@
     "audio": "audio/nourriture-009.mp3",
     "exemple": {
       "latin": "tajine b djaj",
-      "arabe": "طاجين بالدجاج",
+      "arabe": "طاجين بدجاج",
       "fr": "Un tajine au poulet",
       "audio": "audio/nourriture-009-ex.mp3"
     }
@@ -201,7 +201,7 @@
     "prononciation": "fak-ya : simple, « k » net.",
     "audio": "audio/nourriture-013.mp3",
     "exemple": {
-      "latin": "fakya tria",
+      "latin": "fakya triya",
       "arabe": "فاكية طرية",
       "fr": "Des fruits frais",
       "audio": "audio/nourriture-013-ex.mp3"

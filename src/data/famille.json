@@ -121,7 +121,7 @@
     "prononciation": "ma-ma : comme en français.",
     "audio": "audio/famille-008.mp3",
     "exemple": {
-      "latin": "mama f dar",
+      "latin": "mama f ddar",
       "arabe": "ماما فالدار",
       "fr": "Maman est à la maison",
       "audio": "audio/famille-008-ex.mp3"
@@ -137,8 +137,8 @@
     "prononciation": "ba-ba : comme en français.",
     "audio": "audio/famille-009.mp3",
     "exemple": {
-      "latin": "baba khdam",
-      "arabe": "بابا خدام",
+      "latin": "baba kaykhdem",
+      "arabe": "بابا كيخدم",
       "fr": "Papa travaille",
       "audio": "audio/famille-009-ex.mp3"
     }
@@ -289,15 +289,15 @@
   },
   {
     "id": "famille-019",
-    "latin": "fin kat sken?",
+    "latin": "fin katskon?",
     "arabe": "فين كتسكن؟",
     "fr": "où habites-tu ?",
     "theme": "famille",
     "niveau": 2,
-    "prononciation": "fin kat-sken : « k » net, voyelles brèves.",
+    "prononciation": "fin kat-skon : « k » net, voyelles très brèves.",
     "audio": "audio/famille-019.mp3",
     "exemple": {
-      "latin": "fin kat sken? — f lmdina",
+      "latin": "fin katskon? — f lmdina",
       "arabe": "فين كتسكن؟ — فالمدينة",
       "fr": "Où habites-tu ? — Dans la médina",
       "audio": "audio/famille-019-ex.mp3"

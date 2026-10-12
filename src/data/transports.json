@@ -22,7 +22,7 @@
     "fr": "où ?",
     "theme": "transports",
     "niveau": 1,
-    "prononciation": "fin : comme « fine » en anglais, « i » bien long.",
+    "prononciation": "fin : comme « fine » en français, avec un « i » bien long.",
     "audio": "audio/transports-002.mp3",
     "exemple": {
       "latin": "fin lmdina?",
@@ -169,9 +169,9 @@
     "prononciation": "sir : « r » roulé.",
     "audio": "audio/transports-011.mp3",
     "exemple": {
-      "latin": "sir m3aya",
-      "arabe": "سير معايا",
-      "fr": "Viens avec moi",
+      "latin": "sir m3ah",
+      "arabe": "سير معاه",
+      "fr": "Va avec lui",
       "audio": "audio/transports-011-ex.mp3"
     }
   },
@@ -201,7 +201,7 @@
     "prononciation": "l-ma-tar : « t » appuyé, langue en arrière.",
     "audio": "audio/transports-013.mp3",
     "exemple": {
-      "latin": "chhal l lmatar?",
+      "latin": "ch7al l lmatar?",
       "arabe": "شحال للمطار؟",
       "fr": "C'est combien pour l'aéroport ?",
       "audio": "audio/transports-013-ex.mp3"
@@ -233,7 +233,7 @@
     "prononciation": "to-bis : « t » appuyé.",
     "audio": "audio/transports-015.mp3",
     "exemple": {
-      "latin": "fin kaywe9ef tobis?",
+      "latin": "fin kayw9ef ttobis?",
       "arabe": "فين كيوقف الطوبيس؟",
       "fr": "Où s'arrête le bus ?",
       "audio": "audio/transports-015-ex.mp3"
@@ -249,7 +249,7 @@
     "prononciation": "tran : vient du français, « r » roulé.",
     "audio": "audio/transports-016.mp3",
     "exemple": {
-      "latin": "tran l merrakech",
+      "latin": "ttran l mrrakech",
       "arabe": "التران لمراكش",
       "fr": "Le train pour Marrakech",
       "audio": "audio/transports-016-ex.mp3"
@@ -265,7 +265,7 @@
     "prononciation": "zen-9a : 9 (ق) du fond de la gorge.",
     "audio": "audio/transports-017.mp3",
     "exemple": {
-      "latin": "fin had zen9a?",
+      "latin": "fin had zzen9a?",
       "arabe": "فين هاد الزنقة؟",
       "fr": "Où est cette rue ?",
       "audio": "audio/transports-017-ex.mp3"
