@@ -1,19 +1,28 @@
-import { Timer, Trophy, X, Zap } from 'lucide-react'
+import { Flame, Timer, Trophy, X, Zap } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { sonReponse } from '../../audio/effets'
-import type { Mot } from '../../data/types'
 import { enregistrerActivite, type BilanSession } from '../../db/apprentissage'
 import { lireProfil, modifierProfil } from '../../db/db'
-import { DUREE_EXPRESS, apresExpress, questionExpress } from '../../exercices/quiz'
+import { DUREE_EXPRESS, apresExpress, pointsDeReponse } from '../../exercices/quiz'
 import type { Etape } from '../../exercices/session'
 import { Alerte } from '../../ui/Alerte'
 import { Ligne, Tuile } from '../../ui/Liste'
 import { Bilan } from '../session/Bilan'
 import { Choix } from '../session/Choix'
+import { Distingue } from '../session/Distingue'
+
+/** Jeux contre la montre : Quiz express (vocabulaire) et Chasse aux sons (Distingue les sons, avec combo). */
+export type JeuChrono = 'express' | 'sons'
+
+const JEUX: Record<JeuChrono, { nom: string; record: 'recordExpress' | 'recordSons'; combo: boolean }> = {
+  express: { nom: 'le Quiz express', record: 'recordExpress', combo: false },
+  sons: { nom: 'la Chasse aux sons', record: 'recordSons', combo: true },
+}
 
 interface Props {
-  candidats: Mot[]
-  tous: Mot[]
+  jeu: JeuChrono
+  /** Question suivante, différente de la précédente. */
+  prochaine: (precedente: Etape | null) => Etape
   onFermer: () => void
   onEncore: () => void
 }
@@ -21,17 +30,20 @@ interface Props {
 /** Délai pendant lequel la réponse reste affichée (vert ou rouge) avant la question suivante. */
 const PAUSE_REPONSE = 450
 
-/** Quiz express : 60 secondes pour enchaîner un maximum de bonnes réponses, sans bouton « Continuer ». */
-export function Express({ candidats, tous, onFermer, onEncore }: Props) {
-  const [question, setQuestion] = useState<Etape>(() => questionExpress(candidats, tous, null))
+/** 60 secondes pour enchaîner un maximum de bonnes réponses, sans bouton « Continuer ». */
+export function Chrono({ jeu, prochaine, onFermer, onEncore }: Props) {
+  const { nom, record: champRecord, combo: avecCombo } = JEUX[jeu]
+  const [question, setQuestion] = useState<Etape>(() => prochaine(null))
   const [numero, setNumero] = useState(0)
   const [bonnes, setBonnes] = useState(0)
   const [mauvaises, setMauvaises] = useState(0)
+  const [points, setPoints] = useState(0)
+  const [combo, setCombo] = useState(0)
   const [restant, setRestant] = useState(DUREE_EXPRESS)
   const [confirmer, setConfirmer] = useState(false)
   const [fin, setFin] = useState<{ bilan: BilanSession; record: number; nouveauRecord: boolean } | null>(null)
   const fini = useRef(false)
-  const score = useRef({ bonnes: 0, mauvaises: 0 })
+  const score = useRef({ bonnes: 0, mauvaises: 0, points: 0, combo: 0 })
 
   // Chrono calculé depuis l'heure de départ : il reste juste même si l'iPhone ralentit les minuteries.
   useEffect(() => {
@@ -50,23 +62,28 @@ export function Express({ candidats, tous, onFermer, onEncore }: Props) {
   async function terminer() {
     if (fini.current) return
     fini.current = true
-    const { bonnes: b, mauvaises: m } = score.current
-    const bilan = await enregistrerActivite('express', { bonnes: b, mauvaises: m })
-    const resultat = apresExpress(b, (await lireProfil()).recordExpress)
-    if (resultat.nouveauRecord) await modifierProfil({ recordExpress: resultat.record })
+    const { bonnes: b, mauvaises: m, points: pts } = score.current
+    const bilan = await enregistrerActivite(jeu, { bonnes: b, mauvaises: m })
+    const resultat = apresExpress(pts, (await lireProfil())[champRecord])
+    if (resultat.nouveauRecord) await modifierProfil({ [champRecord]: resultat.record })
     setFin({ bilan, ...resultat })
   }
 
   function repondre(juste: boolean) {
-    if (fini.current || question.type === 'paires' || question.type === 'decouverte') return
+    if (fini.current) return
     sonReponse(juste)
-    score.current[juste ? 'bonnes' : 'mauvaises']++
-    if (juste) setBonnes((n) => n + 1)
-    else setMauvaises((n) => n + 1)
-    const precedent = question.mot.id
+    const s = score.current
+    s[juste ? 'bonnes' : 'mauvaises']++
+    s.combo = juste ? s.combo + 1 : 0
+    s.points += juste ? pointsDeReponse(avecCombo ? s.combo : 0) : 0
+    setBonnes(s.bonnes)
+    setMauvaises(s.mauvaises)
+    setPoints(s.points)
+    setCombo(s.combo)
+    const precedente = question
     window.setTimeout(() => {
       if (fini.current) return
-      setQuestion(questionExpress(candidats, tous, precedent))
+      setQuestion(prochaine(precedente))
       setNumero((n) => n + 1)
     }, PAUSE_REPONSE)
   }
@@ -75,12 +92,14 @@ export function Express({ candidats, tous, onFermer, onEncore }: Props) {
     return (
       <Bilan
         titre={fin.nouveauRecord ? 'Nouveau record !' : 'Temps écoulé'}
-        sousTitre={`${bonnes} bonne${bonnes > 1 ? 's' : ''} réponse${bonnes > 1 ? 's' : ''} en ${DUREE_EXPRESS} secondes`}
+        sousTitre={`${bonnes} bonne${bonnes > 1 ? 's' : ''} réponse${bonnes > 1 ? 's' : ''} en ${DUREE_EXPRESS} secondes${
+          avecCombo && points > bonnes ? `, ${points} points avec les combos` : ''
+        }`}
         xp={fin.bilan.xp}
         taux={bonnes + mauvaises > 0 ? bonnes / (bonnes + mauvaises) : undefined}
         lignes={
           <>
-            <Ligne tuile={<Tuile icone={Zap} couleur="#ff9500" />} titre="Score" valeur={bonnes} />
+            <Ligne tuile={<Tuile icone={Zap} couleur="#ff9500" />} titre="Score" valeur={points} />
             <Ligne tuile={<Tuile icone={Trophy} couleur="#ffcc00" />} titre="Record" valeur={fin.record} />
           </>
         }
@@ -98,7 +117,7 @@ export function Express({ candidats, tous, onFermer, onEncore }: Props) {
           <button
             type="button"
             onClick={() => setConfirmer(true)}
-            aria-label="Quitter le Quiz express"
+            aria-label={`Quitter ${nom}`}
             className="verre verre-fin pressable flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
           >
             <X className="h-5 w-5" strokeWidth={2.4} aria-hidden />
@@ -115,24 +134,31 @@ export function Express({ candidats, tous, onFermer, onEncore }: Props) {
               {secondes}
             </span>
           </div>
-          <div className="verre verre-fin t-gras flex h-11 shrink-0 items-center gap-1 rounded-full px-4 tabular-nums" aria-label={`Score : ${bonnes}`}>
+          <div className="verre verre-fin t-gras flex h-11 shrink-0 items-center gap-1 rounded-full px-4 tabular-nums" aria-label={`Score : ${points}`}>
             <Zap className="h-4 w-4 text-accent" strokeWidth={2.5} fill="currentColor" aria-hidden />
-            {bonnes}
+            {points}
           </div>
         </div>
       </div>
 
       <div className="mx-auto w-full max-w-xl flex-1 overflow-y-auto px-marge pb-6 pt-[calc(env(safe-area-inset-top)+4.5rem)]">
-        {(question.type === 'ecoute' || question.type === 'traduis') && (
-          <div key={numero} className="entree-droite">
-            <Choix type={question.type} mot={question.mot} choix={question.choix} onRepondu={repondre} />
-          </div>
+        {avecCombo && combo >= 2 && (
+          <p className="t-appel mb-3 flex items-center gap-1.5 font-semibold text-accent" aria-live="polite">
+            <Flame className="h-4 w-4" strokeWidth={2.5} fill="currentColor" aria-hidden />
+            {combo} d'affilée{pointsDeReponse(combo + 1) > 1 ? ' · chaque bonne réponse vaut 2 points' : ''}
+          </p>
         )}
+        <div key={numero} className="entree-droite">
+          {(question.type === 'ecoute' || question.type === 'traduis') && (
+            <Choix type={question.type} mot={question.mot} choix={question.choix} onRepondu={repondre} />
+          )}
+          {question.type === 'distingue' && <Distingue paire={question.paire} cible={question.cible} onRepondu={repondre} />}
+        </div>
       </div>
 
       {confirmer && (
         <Alerte
-          titre="Quitter le Quiz express ?"
+          titre={`Quitter ${nom} ?`}
           message="Ce score ne sera pas compté."
           onAnnuler={() => setConfirmer(false)}
           actions={[

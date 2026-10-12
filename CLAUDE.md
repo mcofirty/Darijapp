@@ -66,7 +66,7 @@ src/
   scoring/        score de prononciation (logique pure)
   gamification/   XP, niveaux, série (logique pure) ; quêtes au jalon 4
   db/             schéma Dexie et migrations, plan et enregistrement des sessions, mots ajoutés, résumé en direct
-  data/           un fichier JSON par thème, liste des thèmes, sons du darija
+  data/           un fichier JSON par thème, liste des thèmes, sons du darija, paires de sons (`sons/paires.json`)
 scripts/
   generate_audio.py
 public/audio/     MP3 générés par l'Action (voix Jamal)
@@ -80,7 +80,7 @@ docs/
 | --- | --- |
 | Apprendre | Écran d'accueil. Grand titre avec la série (flamme). Carte « Session du jour » (nouveaux mots, révisions, mots vus, « Commencer » puis « Encore une session », sans limite), section « Ma progression » (niveau, XP), puis « Explorer » : guide des sons et 31 thèmes en liste groupée, fiches mots |
 | Parcours | Leçons groupées par niveau (niveau 1 « Les bases »), prochaine leçon mise en avant, nœuds Trésor, trophées |
-| Quiz | Deux cartes. « Contrôle tes acquis » : quiz de 5 questions (Écoute et choisis, Traduis, une question Associe les paires jamais en premier) sur les mots les moins sus (boîte, échecs, retard), complétés par le début du programme ; aucune question refaite ; bilan « x sur 5 », « Sans faute ! ». « Quiz express » : 60 s, questions enchaînées sans « Continuer » (réponse affichée 0,45 s), chrono qui rougit à 10 s, score, record gardé dans le profil. Quiz et Quiz express donnent de l'XP et comptent pour la série, sans toucher à la répétition espacée |
+| Quiz | Trois cartes. « Contrôle tes acquis » : quiz de 5 questions (Écoute et choisis, Traduis, une Distingue les sons et une Associe les paires, jamais en premier) sur les mots les moins sus (boîte, échecs, retard), complétés par le début du programme ; aucune question refaite ; bilan « x sur 5 », « Sans faute ! ». « Quiz express » : 60 s, questions enchaînées sans « Continuer » (réponse affichée 0,45 s), chrono qui rougit à 10 s, score, record gardé dans le profil. « Chasse aux sons » : même chrono avec des questions Distingue les sons, combo (dès la 5e bonne réponse d'affilée, chacune vaut 2 points), record en points. Quiz, Quiz express et Chasse aux sons donnent de l'XP et comptent pour la série, sans toucher à la répétition espacée |
 | Progrès | Contrôle segmenté Tableau de bord / Dictionnaire. Tableau : niveau et XP restants, XP total, XP du jour, série, sessions du jour, mots vus (quêtes, coffre et statistiques au jalon 4). Dictionnaire : recherche iOS, tous les mots avec ✓ sur ceux déjà vus |
 | Profil | Fait : Apparence (Automatique / Clair / Sombre), écriture arabe. Prévu : prénom, avatar, genre, objectif, rappel, audio, export/import/remise à zéro |
 
@@ -90,9 +90,9 @@ Navigation : barre d'onglets flottante en verre dépoli, reproduite d'après la 
 
 Fiche mot : latin en grand, arabe dessous (affiché par défaut, masquable dans Profil), traduction, note d'usage s'il y en a, boutons « Écouter » et « Ralenti » (0,75×), lecture automatique à l'ouverture, explication de prononciation, explication de chaque son particulier du mot, exemple avec son audio.
 
-Session du jour (style Duolingo, plein écran) : jusqu'à 8 révisions dues et 5 nouveaux mots dans l'ordre du programme. Chaque nouveau mot est présenté (« Nouveau mot ») puis exercé ; les nouveaux mots puis les révisions finissent par « Associe les paires ». Barre de progression, croix pour quitter, retour immédiat (vert « Bravo ! » ou rouge avec la bonne réponse, petit son, mot rejoué). Une question ratée revient en fin de session. Bilan avec confettis : XP, taux de réussite, série. Sans révision ni mot nouveau : entraînement libre sur 8 mots vus, qui ne change pas la répétition espacée. Pas de cœurs ni de vies.
+Session du jour (style Duolingo, plein écran) : jusqu'à 8 révisions dues et 5 nouveaux mots dans l'ordre du programme. Chaque nouveau mot est présenté (« Nouveau mot ») puis exercé ; les nouveaux mots puis les révisions finissent par « Associe les paires » ; entre les deux, une question « Distingue les sons » sur un son présent dans les mots de la session. Barre de progression, croix pour quitter, retour immédiat (vert « Bravo ! » ou rouge avec la bonne réponse, petit son, mot rejoué). Une question ratée revient en fin de session. Bilan avec confettis : XP, taux de réussite, série. Sans révision ni mot nouveau : entraînement libre sur 8 mots vus, qui ne change pas la répétition espacée. Pas de cœurs ni de vies.
 
-Exercices : Écoute et choisis, Associe les paires, Dis-le (avec score), Distingue les sons (paires comme 9elb / kelb), Quiz express (60 s).
+Exercices : Écoute et choisis, Traduis, Associe les paires, Distingue les sons (fait : « Quel mot entends-tu ? », 14 paires comme 9elb / kelb, 7al / khal, ghali / khali ; traduction montrée après la réponse ; hors répétition espacée), Quiz express (60 s), Dis-le (avec score, à faire).
 
 Mes mots (page cachée) : ouverte uniquement par le lien `https://mcofirty.github.io/Darijapp/#ajout`, sans entrée dans les onglets ni les menus. Formulaire à trois champs obligatoires (français, latin, arabe), validés par la translittération 3 7 9 kh gh ch ; liste de ses mots avec modification et suppression (seuls les mots ajoutés sur l'appareil, jamais ceux du programme), puis liste en lecture seule des mots du programme ; icône d'envoi sur chaque mot ajouté (feuille de partage de l'iPhone, sinon copie du lien), donc après l'avoir vu et corrigé, qui produit un lien `…/Darijapp/#mot=[latin, arabe, français]` : l'ouvrir affiche le mot et ne l'ajoute qu'après confirmation (jamais deux fois) ; pas de bouton de retour vers l'appli ; un message d'accueil s'adresse à la personne qui ajoute les mots (demande de l'utilisateur, prénoms visibles dans le repo public). Les mots ajoutés passent en tête des nouveaux mots des sessions, entrent dans la répétition espacée, le dictionnaire et les leurres, et sont lus par la synthèse vocale. Ils restent sur l'appareil.
 
@@ -131,6 +131,8 @@ Mot (`src/data/<theme>.json`) :
   "exemple": { "latin": "3tini atay 3afak", "arabe": "عطيني أتاي عافاك", "fr": "Donne-moi du thé, s'il te plaît", "audio": "audio/salutations-012-ex.mp3" }
 }
 ```
+
+Paires de sons (`src/data/sons/paires.json`, hors des thèmes) : `mots` (`id` = `son-<latin>`, `latin`, `arabe`, `fr`, `audio` = `audio/<id>.mp3`, générés par l'Action) et `paires` (`a`, `b`, `sons` : le son de chacun, « rien » quand le second mot n'a pas de son à la place).
 
 L'id suit `<theme>-NNN` dans l'ordre du fichier ; `src/data/data.test.ts` vérifie le format, l'unicité (latin + arabe) et la translittération.
 
@@ -224,6 +226,7 @@ Jalon en cours : **3 — Prononciation** (Distingue les sons, mode écoute, puis
 | 2026-10-12 | Angles et listes aux mesures des Réglages de l'iPhone : rayons de 26 pt concentriques autour des boutons, marges de 20 pt, cellules de 56 pt, séparateurs en retrait, titres de section en 17 pt | `src/index.css`, `src/ui/Liste.tsx`, `src/ui/Page.tsx` |
 | 2026-10-12 | Mise en ligne en 2 min, séparée de la génération audio ; Dictionnaire affiché progressivement | `.github/workflows/publier.yml`, `.github/workflows/audio.yml`, `src/features/mots/ListeMots.tsx` |
 | 2026-10-13 | Onglet Quiz : quiz de 5 questions sur les mots les moins sus et Quiz express de 60 s avec record | `src/features/quiz/`, `src/exercices/quiz.ts`, `src/db/apprentissage.ts`, `src/features/session/` |
+| 2026-10-13 | Distingue les sons : 14 paires (9elb / kelb…) avec voix Jamal, une question par session et par quiz, et mini-jeu Chasse aux sons avec combo et record | `src/data/sons/paires.json`, `src/data/pairesSons.ts`, `src/features/session/Distingue.tsx`, `src/features/quiz/Chrono.tsx`, `src/exercices/` |
 | 2026-10-12 | Animation d'ouverture : vidéo de 3 s de l'utilisateur sur fond sombre à chaque lancement, passée d'un toucher, image finale avec Réduire les animations ou si la vidéo ne démarre pas | `public/lancement.mp4`, `public/lancement-fin.jpg`, `src/app/lancement.ts`, `index.html` |
 
 ## Décisions
@@ -267,6 +270,7 @@ Jalon en cours : **3 — Prononciation** (Distingue les sons, mode écoute, puis
 - 2026-10-12 : génération audio et mise en ligne séparées en deux Actions : une génération de 1h30 bloquait la publication de tout changement de code (et l'exécution suivante, partie d'un commit sans les MP3, aurait tout regénéré).
 - 2026-10-12 : listes de mots affichées par tranches (60, puis 120 à l'approche du bas, `IntersectionObserver`) au lieu des 1 682 lignes d'un coup.
 - 2026-10-13 : le Quiz contrôle sans réviser : il n'écrit pas dans la répétition espacée (des mots jamais vus peuvent le compléter) mais compte pour l'XP et la série ; il se compte par question, les paires justes seulement sans aucune erreur. Record du Quiz express dans le profil (`recordExpress`, champ non indexé, sans migration).
+- 2026-10-13 : les mots des paires de sons sont à part du programme (fichier hors des thèmes, ids `son-…`) et ne passent jamais par la répétition espacée (`Resultats.compter`) : ce sont des exemples d'écoute, pas du vocabulaire à apprendre. Record de la Chasse aux sons dans le profil (`recordSons`).
 - 2026-10-10 : pas de routeur ; navigation par état React, suffisante pour 5 onglets.
 
 ## Points en suspens

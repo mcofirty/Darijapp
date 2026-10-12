@@ -1,4 +1,4 @@
-"""Génère les MP3 manquants des mots et des exemples à partir de src/data/*.json.
+"""Génère les MP3 manquants des mots et des exemples (src/data/*.json) et des paires de sons (src/data/sons/paires.json).
 
 Voix par défaut : Jamal (ar-MA-JamalNeural), voix neuronale marocaine de Microsoft, par l'API
 officielle Azure Speech (offre gratuite F0). Elle lit l'écriture arabe darija (champ « arabe »)
@@ -67,6 +67,12 @@ def lister_a_generer(theme: str | None, force: bool) -> list[tuple[str, Path]]:
                 cible = PUBLIC / audio
                 if force or not cible.exists():
                     taches.append((texte_a_lire(arabe), cible))
+    # Mots des paires de « Distingue les sons » (9elb / kelb…).
+    if not theme:
+        for mot in json.loads((DONNEES / "sons" / "paires.json").read_text(encoding="utf-8"))["mots"]:
+            cible = PUBLIC / mot["audio"]
+            if force or not cible.exists():
+                taches.append((texte_a_lire(mot["arabe"]), cible))
     return taches
 
 

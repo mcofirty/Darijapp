@@ -1,6 +1,7 @@
+import type { PaireSons } from '../data/pairesSons'
 import type { Mot } from '../data/types'
 import type { EtatSrs } from '../srs/leitner'
-import { melanger, propositions, type Aleatoire, type Etape } from './session'
+import { choisirPaire, melanger, propositions, questionDistingue, type Aleatoire, type Etape } from './session'
 
 /** Quiz de l'onglet Quiz et Quiz express (logique pure). */
 
@@ -24,18 +25,23 @@ export function motsPourQuiz(progressions: EtatSrs[], tous: Mot[], n: number): M
 }
 
 /**
- * 5 questions qui mêlent les exercices : Écoute et choisis, Traduis, Associe les paires.
+ * 5 questions qui mêlent les exercices : Écoute et choisis, Traduis, Distingue les sons (si des paires
+ * de sons sont fournies) et Associe les paires.
  * `candidats` : les mots à interroger, du plus urgent au moins urgent (voir motsPourQuiz).
  */
-export function composerQuiz(candidats: Mot[], tous: Mot[], alea: Aleatoire = Math.random): Etape[] {
-  const mots = candidats.slice(0, QUESTIONS_PAR_QUIZ - 1 + MOTS_PAR_PAIRES)
-  const simples = melanger(mots.slice(0, QUESTIONS_PAR_QUIZ - 1), alea)
-  const pourPaires = mots.length > QUESTIONS_PAR_QUIZ - 1 ? mots.slice(QUESTIONS_PAR_QUIZ - 1) : []
+export function composerQuiz(candidats: Mot[], tous: Mot[], alea: Aleatoire = Math.random, pairesSons: PaireSons[] = []): Etape[] {
+  const nbSimples = QUESTIONS_PAR_QUIZ - 1 - (pairesSons.length > 0 ? 1 : 0)
+  const mots = candidats.slice(0, nbSimples + MOTS_PAR_PAIRES)
+  const simples = melanger(mots.slice(0, nbSimples), alea)
+  const pourPaires = mots.length > nbSimples ? mots.slice(nbSimples) : []
   const etapes: Etape[] = simples.map((mot, i) => ({
     type: i % 2 === 0 ? 'ecoute' : 'traduis',
     mot,
     choix: propositions(mot, tous, alea),
   }))
+  if (pairesSons.length > 0) {
+    etapes.splice(1 + Math.floor(alea() * etapes.length), 0, questionDistingue(choisirPaire(pairesSons, mots, alea), alea))
+  }
   if (pourPaires.length >= 3) {
     // Les paires prennent une place au hasard, jamais en premier.
     const place = 1 + Math.floor(alea() * etapes.length)
@@ -51,7 +57,14 @@ export function questionExpress(candidats: Mot[], tous: Mot[], precedent: string
   return { type: alea() < 0.5 ? 'ecoute' : 'traduis', mot, choix: propositions(mot, tous, alea) }
 }
 
-/** Le meilleur score du Quiz express, et s'il vient d'être battu. */
+/** À partir de la 5e bonne réponse d'affilée (combo de la Chasse aux sons), chaque bonne réponse vaut 2 points. */
+export const COMBO_BONUS = 5
+
+export function pointsDeReponse(combo: number): number {
+  return combo >= COMBO_BONUS ? 2 : 1
+}
+
+/** Le meilleur score d'un jeu contre la montre, et s'il vient d'être battu. */
 export function apresExpress(score: number, record: number): { record: number; nouveauRecord: boolean } {
   return score > record ? { record: score, nouveauRecord: true } : { record, nouveauRecord: false }
 }

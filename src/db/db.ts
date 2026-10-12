@@ -22,6 +22,8 @@ export interface Profil {
   masquerAideInstallation: boolean
   /** Meilleur score du Quiz express (bonnes réponses en 60 s). */
   recordExpress: number
+  /** Meilleur score de la Chasse aux sons (points en 60 s, combos compris). */
+  recordSons: number
 }
 
 /** Apparence de l'appli : suit l'iPhone, ou forcée en clair ou en sombre. */
@@ -50,7 +52,7 @@ export interface SessionFaite {
 }
 
 /** Activité enregistrée dans l'historique : toutes comptent pour l'XP et la série. */
-export type TypeActivite = 'session' | 'quiz' | 'express'
+export type TypeActivite = 'session' | 'quiz' | 'express' | 'sons'
 
 export const PROFIL_DEFAUT: Profil = {
   id: 'moi',
@@ -60,6 +62,7 @@ export const PROFIL_DEFAUT: Profil = {
   apparence: 'systeme',
   masquerAideInstallation: false,
   recordExpress: 0,
+  recordSons: 0,
 }
 
 export class DarijaDB extends Dexie {

@@ -1,0 +1,300 @@
+{
+  "mots": [
+    {
+      "id": "son-9elb",
+      "latin": "9elb",
+      "arabe": "قلب",
+      "fr": "cœur",
+      "audio": "audio/son-9elb.mp3"
+    },
+    {
+      "id": "son-kelb",
+      "latin": "kelb",
+      "arabe": "كلب",
+      "fr": "chien",
+      "audio": "audio/son-kelb.mp3"
+    },
+    {
+      "id": "son-9ima",
+      "latin": "9ima",
+      "arabe": "قيمة",
+      "fr": "valeur",
+      "audio": "audio/son-9ima.mp3"
+    },
+    {
+      "id": "son-kima",
+      "latin": "kima",
+      "arabe": "كيما",
+      "fr": "comme",
+      "audio": "audio/son-kima.mp3"
+    },
+    {
+      "id": "son-9ra",
+      "latin": "9ra",
+      "arabe": "قرا",
+      "fr": "il a étudié",
+      "audio": "audio/son-9ra.mp3"
+    },
+    {
+      "id": "son-kra",
+      "latin": "kra",
+      "arabe": "كرا",
+      "fr": "il a loué",
+      "audio": "audio/son-kra.mp3"
+    },
+    {
+      "id": "son-3la",
+      "latin": "3la",
+      "arabe": "على",
+      "fr": "sur",
+      "audio": "audio/son-3la.mp3"
+    },
+    {
+      "id": "son-la",
+      "latin": "la",
+      "arabe": "لا",
+      "fr": "non",
+      "audio": "audio/son-la.mp3"
+    },
+    {
+      "id": "son-3ali",
+      "latin": "3ali",
+      "arabe": "عالي",
+      "fr": "haut",
+      "audio": "audio/son-3ali.mp3"
+    },
+    {
+      "id": "son-ghali",
+      "latin": "ghali",
+      "arabe": "غالي",
+      "fr": "cher",
+      "audio": "audio/son-ghali.mp3"
+    },
+    {
+      "id": "son-3ar",
+      "latin": "3ar",
+      "arabe": "عار",
+      "fr": "honte",
+      "audio": "audio/son-3ar.mp3"
+    },
+    {
+      "id": "son-7ar",
+      "latin": "7ar",
+      "arabe": "حار",
+      "fr": "piquant",
+      "audio": "audio/son-7ar.mp3"
+    },
+    {
+      "id": "son-7al",
+      "latin": "7al",
+      "arabe": "حال",
+      "fr": "état, situation",
+      "audio": "audio/son-7al.mp3"
+    },
+    {
+      "id": "son-hal",
+      "latin": "hal",
+      "arabe": "هال",
+      "fr": "cardamome",
+      "audio": "audio/son-hal.mp3"
+    },
+    {
+      "id": "son-7bel",
+      "latin": "7bel",
+      "arabe": "حبل",
+      "fr": "corde",
+      "audio": "audio/son-7bel.mp3"
+    },
+    {
+      "id": "son-hbel",
+      "latin": "hbel",
+      "arabe": "هبل",
+      "fr": "il est devenu fou",
+      "audio": "audio/son-hbel.mp3"
+    },
+    {
+      "id": "son-khal",
+      "latin": "khal",
+      "arabe": "خال",
+      "fr": "oncle (frère de la mère)",
+      "audio": "audio/son-khal.mp3"
+    },
+    {
+      "id": "son-7ell",
+      "latin": "7ell",
+      "arabe": "حل",
+      "fr": "il a ouvert",
+      "audio": "audio/son-7ell.mp3"
+    },
+    {
+      "id": "son-khell",
+      "latin": "khell",
+      "arabe": "خل",
+      "fr": "vinaigre",
+      "audio": "audio/son-khell.mp3"
+    },
+    {
+      "id": "son-khass",
+      "latin": "khass",
+      "arabe": "خاص",
+      "fr": "il faut",
+      "audio": "audio/son-khass.mp3"
+    },
+    {
+      "id": "son-kass",
+      "latin": "kass",
+      "arabe": "كاس",
+      "fr": "verre",
+      "audio": "audio/son-kass.mp3"
+    },
+    {
+      "id": "son-khla",
+      "latin": "khla",
+      "arabe": "خلا",
+      "fr": "endroit désert",
+      "audio": "audio/son-khla.mp3"
+    },
+    {
+      "id": "son-kla",
+      "latin": "kla",
+      "arabe": "كلا",
+      "fr": "il a mangé",
+      "audio": "audio/son-kla.mp3"
+    },
+    {
+      "id": "son-khali",
+      "latin": "khali",
+      "arabe": "خالي",
+      "fr": "vide",
+      "audio": "audio/son-khali.mp3"
+    },
+    {
+      "id": "son-ghir",
+      "latin": "ghir",
+      "arabe": "غير",
+      "fr": "seulement",
+      "audio": "audio/son-ghir.mp3"
+    },
+    {
+      "id": "son-khir",
+      "latin": "khir",
+      "arabe": "خير",
+      "fr": "bien, bonté",
+      "audio": "audio/son-khir.mp3"
+    }
+  ],
+  "paires": [
+    {
+      "a": "son-9elb",
+      "b": "son-kelb",
+      "sons": [
+        "9",
+        "k"
+      ]
+    },
+    {
+      "a": "son-9ima",
+      "b": "son-kima",
+      "sons": [
+        "9",
+        "k"
+      ]
+    },
+    {
+      "a": "son-9ra",
+      "b": "son-kra",
+      "sons": [
+        "9",
+        "k"
+      ]
+    },
+    {
+      "a": "son-3la",
+      "b": "son-la",
+      "sons": [
+        "3",
+        "rien"
+      ]
+    },
+    {
+      "a": "son-3ali",
+      "b": "son-ghali",
+      "sons": [
+        "3",
+        "gh"
+      ]
+    },
+    {
+      "a": "son-3ar",
+      "b": "son-7ar",
+      "sons": [
+        "3",
+        "7"
+      ]
+    },
+    {
+      "a": "son-7al",
+      "b": "son-hal",
+      "sons": [
+        "7",
+        "h"
+      ]
+    },
+    {
+      "a": "son-7bel",
+      "b": "son-hbel",
+      "sons": [
+        "7",
+        "h"
+      ]
+    },
+    {
+      "a": "son-7al",
+      "b": "son-khal",
+      "sons": [
+        "7",
+        "kh"
+      ]
+    },
+    {
+      "a": "son-7ell",
+      "b": "son-khell",
+      "sons": [
+        "7",
+        "kh"
+      ]
+    },
+    {
+      "a": "son-khass",
+      "b": "son-kass",
+      "sons": [
+        "kh",
+        "k"
+      ]
+    },
+    {
+      "a": "son-khla",
+      "b": "son-kla",
+      "sons": [
+        "kh",
+        "k"
+      ]
+    },
+    {
+      "a": "son-ghali",
+      "b": "son-khali",
+      "sons": [
+        "gh",
+        "kh"
+      ]
+    },
+    {
+      "a": "son-ghir",
+      "b": "son-khir",
+      "sons": [
+        "gh",
+        "kh"
+      ]
+    }
+  ]
+}

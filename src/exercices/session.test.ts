@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { MOTS } from '../data'
-import { Resultats, composerSession, etapeARefaire, melanger, propositions } from './session'
+import { PAIRES_SONS } from '../data/pairesSons'
+import { Resultats, choisirPaire, composerSession, etapeARefaire, melanger, propositions, questionDistingue } from './session'
 
 /** Générateur pseudo-aléatoire reproductible. */
 function graine(n: number) {
@@ -77,5 +78,43 @@ describe('Resultats', () => {
     expect(r.bonnes).toBe(2)
     expect(r.taux).toBeCloseTo(2 / 3)
     expect(r.sansFaute).toBe(false)
+  })
+})
+
+describe('Distingue les sons', () => {
+  it('une session avec des paires de sons pose une question « Distingue » après les nouveaux mots', () => {
+    const etapes = composerSession(MOTS.slice(0, 5), MOTS.slice(20, 28), MOTS, graine(5), PAIRES_SONS)
+    const i = etapes.findIndex((e) => e.type === 'distingue')
+    expect(etapes.filter((e) => e.type === 'distingue')).toHaveLength(1)
+    expect(etapes[i - 1].type).toBe('paires')
+    expect(etapes.slice(0, i).filter((e) => e.type === 'decouverte')).toHaveLength(5)
+  })
+
+  it('sans paires de sons fournies, la session ne change pas', () => {
+    expect(composerSession(MOTS.slice(0, 5), [], MOTS, graine(5)).some((e) => e.type === 'distingue')).toBe(false)
+  })
+
+  it('choisit une paire sur un son présent dans les mots de la session', () => {
+    const khobz = MOTS.find((m) => m.latin === 'khobz')!
+    for (let g = 1; g < 20; g++) expect(choisirPaire(PAIRES_SONS, [khobz], graine(g)).sons).toContain('kh')
+  })
+
+  it('évite de reposer la paire précédente', () => {
+    for (let g = 1; g < 20; g++) expect(choisirPaire(PAIRES_SONS, [], graine(g), PAIRES_SONS[0])).not.toBe(PAIRES_SONS[0])
+  })
+
+  it('fait entendre l’un des deux mots de la paire, et la question ratée revient', () => {
+    const q = questionDistingue(PAIRES_SONS[0], graine(3))
+    expect(q.type).toBe('distingue')
+    if (q.type === 'distingue') expect([PAIRES_SONS[0].a, PAIRES_SONS[0].b]).toContain(q.cible)
+    expect(etapeARefaire(q, MOTS, graine(4))?.type).toBe('distingue')
+  })
+
+  it('une réponse hors programme compte sans toucher aux résultats par mot', () => {
+    const r = new Resultats()
+    r.compter(false)
+    r.noter(MOTS[0].id, true)
+    expect([r.bonnes, r.mauvaises]).toEqual([1, 1])
+    expect([...r.parMot()]).toEqual([[MOTS[0].id, true]])
   })
 })

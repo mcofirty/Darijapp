@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import { MOTS } from '../data'
+import { PAIRES_SONS } from '../data/pairesSons'
 import type { EtatSrs } from '../srs/leitner'
-import { QUESTIONS_PAR_QUIZ, apresExpress, composerQuiz, motsPourQuiz, questionExpress } from './quiz'
+import { COMBO_BONUS, QUESTIONS_PAR_QUIZ, apresExpress, composerQuiz, motsPourQuiz, pointsDeReponse, questionExpress } from './quiz'
 
 function graine(n: number) {
   return () => {
@@ -48,8 +49,20 @@ describe('composerQuiz', () => {
 
   it('n’interroge jamais deux fois le même mot', () => {
     const etapes = composerQuiz(MOTS.slice(0, 8), MOTS, graine(4))
-    const ids = etapes.flatMap((e) => (e.type === 'paires' ? e.mots.map((m) => m.id) : e.type === 'decouverte' ? [] : [e.mot.id]))
+    const ids = etapes.flatMap((e) =>
+      e.type === 'paires' ? e.mots.map((m) => m.id) : e.type === 'ecoute' || e.type === 'traduis' ? [e.mot.id] : [],
+    )
     expect(new Set(ids).size).toBe(ids.length)
+  })
+
+  it('avec les paires de sons : une question « Distingue », toujours 5 questions', () => {
+    for (let g = 1; g < 30; g++) {
+      const etapes = composerQuiz(MOTS.slice(0, 8), MOTS, graine(g), PAIRES_SONS)
+      expect(etapes).toHaveLength(QUESTIONS_PAR_QUIZ)
+      expect(etapes.filter((e) => e.type === 'distingue')).toHaveLength(1)
+      expect(etapes.filter((e) => e.type === 'paires')).toHaveLength(1)
+      expect(etapes[0].type === 'ecoute' || etapes[0].type === 'traduis').toBe(true)
+    }
   })
 
   it('se passe des paires quand il y a trop peu de mots', () => {
@@ -69,6 +82,15 @@ describe('questionExpress', () => {
         expect(q.choix.map((c) => c.id)).toContain(q.mot.id)
       }
     }
+  })
+})
+
+describe('pointsDeReponse', () => {
+  it('double les points à partir de la 5e bonne réponse d’affilée', () => {
+    expect(pointsDeReponse(1)).toBe(1)
+    expect(pointsDeReponse(COMBO_BONUS - 1)).toBe(1)
+    expect(pointsDeReponse(COMBO_BONUS)).toBe(2)
+    expect(pointsDeReponse(0)).toBe(1)
   })
 })
 

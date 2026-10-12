@@ -11,6 +11,7 @@ import { Bouton } from '../../ui/Boutons'
 import { Bilan } from './Bilan'
 import { Choix } from './Choix'
 import { Decouverte } from './Decouverte'
+import { Distingue } from './Distingue'
 import { Paires } from './Paires'
 
 interface Props {
@@ -23,7 +24,9 @@ interface Props {
   onEncore: () => void
 }
 
-type Retour = { juste: true } | { juste: false; mot: Mot }
+/** Ce qui est rejoué et montré après une réponse : un mot du programme ou un mot d'une paire de sons. */
+type Reponse = Pick<Mot, 'latin' | 'arabe' | 'fr' | 'audio'>
+type Retour = { juste: true } | { juste: false; mot: Reponse }
 
 /** Session plein écran : une étape à la fois, retour immédiat, étapes ratées refaites à la fin. */
 export function Session({ etapes: depart, nouveaux, entrainement, quiz = false, onFermer, onEncore }: Props) {
@@ -43,8 +46,10 @@ export function Session({ etapes: depart, nouveaux, entrainement, quiz = false, 
     if (juste) questions.current.justes++
   }
 
-  function repondre(juste: boolean, mot: Mot) {
-    resultats.current.noter(mot.id, juste)
+  /** `motId` : null pour une réponse hors programme (Distingue les sons), qui ne touche pas la répétition espacée. */
+  function repondre(juste: boolean, mot: Reponse, motId: string | null) {
+    if (motId) resultats.current.noter(motId, juste)
+    else resultats.current.compter(juste)
     compterQuestion(juste)
     sonReponse(juste)
     setTimeout(() => jouer(mot.audio, mot.arabe), 350)
@@ -131,7 +136,10 @@ export function Session({ etapes: depart, nouveaux, entrainement, quiz = false, 
         <div key={index} className="entree-droite">
           {etape.type === 'decouverte' && <Decouverte mot={etape.mot} />}
           {(etape.type === 'ecoute' || etape.type === 'traduis') && (
-            <Choix type={etape.type} mot={etape.mot} choix={etape.choix} onRepondu={(j) => repondre(j, etape.mot)} />
+            <Choix type={etape.type} mot={etape.mot} choix={etape.choix} onRepondu={(j) => repondre(j, etape.mot, etape.mot.id)} />
+          )}
+          {etape.type === 'distingue' && (
+            <Distingue paire={etape.paire} cible={etape.cible} onRepondu={(j) => repondre(j, etape.cible, null)} />
           )}
           {etape.type === 'paires' && (
             <Paires
