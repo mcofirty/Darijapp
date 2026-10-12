@@ -1,6 +1,7 @@
 import { Trash2 } from 'lucide-react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { useState, type FormEvent } from 'react'
+import { MOTS } from '../../data'
 import { motValide, validerMot, type ChampsMot } from '../../data/motsPerso'
 import { ajouterMot, lireMotsPerso, modifierMot, supprimerMot } from '../../db/motsPerso'
 import { Bouton, Vide } from '../../ui/Boutons'
@@ -135,6 +136,23 @@ export function AjoutMots() {
           ))}
         </Section>
       )}
+      <Section
+        titre={`${MOTS.length} mots de l'application`}
+        note="Ces mots font partie du programme : ils ne peuvent pas être modifiés ni supprimés ici."
+      >
+        {MOTS.map((m) => (
+          <Ligne
+            key={m.id}
+            titre={<span className="font-semibold">{m.latin}</span>}
+            sousTitre={m.fr}
+            valeur={
+              <span className="arabe text-[1.15rem]" dir="rtl" lang="ar">
+                {m.arabe}
+              </span>
+            }
+          />
+        ))}
+      </Section>
     </Page>
   )
 }
