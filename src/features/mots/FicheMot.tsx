@@ -24,7 +24,7 @@ export function FicheMot({ mot, retour }: Props) {
 
   return (
     <Page titre={mot.latin} retour={retour}>
-      <div className="mb-8 rounded-[10px] bg-carte px-4 py-6 text-center">
+      <div className="mb-8 rounded-liste bg-carte px-4 py-6 text-center">
         {afficherArabe && (
           <p className="arabe text-[2.4rem] leading-tight" dir="rtl" lang="ar">
             {mot.arabe}

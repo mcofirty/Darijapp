@@ -108,7 +108,7 @@ export function Session({ etapes: depart, nouveaux, entrainement, onFermer, onEn
       {(retour !== null || etape.type === 'decouverte') && (
         <div className="px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2">
           {/* Panneau de commandes en Liquid Glass : il s'ouvre pour donner le résultat. */}
-          <div className="verre mx-auto max-w-xl rounded-[2rem] p-3">
+          <div className="verre mx-auto max-w-xl rounded-panneau p-3">
             <div className={`deplier ${retour ? 'ouvert' : ''}`} aria-live="polite">
               <div>
                 {retour?.juste === true && (

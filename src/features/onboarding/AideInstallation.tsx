@@ -62,11 +62,11 @@ export function AideInstallation() {
         role="dialog"
         aria-modal="true"
         aria-labelledby="installation-titre"
-        className="verre verre-epais feuille-entree mx-2 mb-[max(0.5rem,env(safe-area-inset-bottom))] flex max-h-[calc(100dvh-env(safe-area-inset-top)-env(safe-area-inset-bottom)-1.5rem)] w-full max-w-xl flex-col rounded-[2.25rem]"
+        className="verre verre-epais feuille-entree mx-2 mb-[max(0.5rem,env(safe-area-inset-bottom))] flex max-h-[calc(100dvh-env(safe-area-inset-top)-env(safe-area-inset-bottom)-1.5rem)] w-full max-w-xl flex-col rounded-carte"
       >
         {/* Sur petit écran (iPhone SE), seules les explications défilent : « Compris » reste visible. */}
         <div className="min-h-0 flex-1 overflow-y-auto px-5 pb-2 pt-6">
-          <img src={`${import.meta.env.BASE_URL}logo-180.png`} alt="" className="mx-auto mb-2 h-12 w-12 rounded-[11px] shadow-[0_4px_12px_rgba(0,0,0,0.15)]" />
+          <img src={`${import.meta.env.BASE_URL}logo-180.png`} alt="" className="mx-auto mb-2 h-12 w-12 rounded-[22.37%] shadow-[0_4px_12px_rgba(0,0,0,0.15)]" />
           <h2 id="installation-titre" className="t-titre-2 text-center">
             Ajoute Darijaapp à ton écran d’accueil
           </h2>

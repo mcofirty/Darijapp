@@ -6,7 +6,7 @@ export function Section({ titre, note, children }: { titre?: string; note?: stri
   return (
     <section className="mb-8">
       {titre && <h2 className="t-note mb-1.5 px-4 uppercase text-texte-2">{titre}</h2>}
-      <div className="liste overflow-hidden rounded-[10px] bg-carte">
+      <div className="liste overflow-hidden rounded-liste bg-carte">
         {children}
       </div>
       {note && <p className="t-note mt-1.5 px-4 text-texte-2">{note}</p>}
@@ -18,7 +18,7 @@ export function Section({ titre, note, children }: { titre?: string; note?: stri
 export function Tuile({ icone: Icone, couleur, texte }: { icone?: LucideIcon; couleur: string; texte?: string }) {
   return (
     <span
-      className="flex h-[29px] w-[29px] shrink-0 items-center justify-center rounded-[7px] text-white"
+      className="flex h-[29px] w-[29px] shrink-0 items-center justify-center rounded-tuile text-white"
       style={{ background: couleur }}
       aria-hidden
     >

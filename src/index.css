@@ -135,6 +135,29 @@
 }
 
 /*
+ * Rayons d'angle d'iOS 26 (classes rounded-liste, rounded-reponse…). Un conteneur qui entoure
+ * un bouton en capsule est concentrique : son rayon = rayon du bouton + marge intérieure.
+ */
+@theme {
+  --radius-tuile: 8px; /* tuile d'icône de 29 pt, comme dans Réglages */
+  --radius-liste: 26px; /* listes groupées et cartes de contenu */
+  --radius-reponse: 1.75rem; /* réponses des exercices (min-h-14) : capsule sur une ligne, arrondi doux au-delà */
+  --radius-panneau: calc(25px + 0.75rem); /* bouton de 50 pt + marge p-3 */
+  --radius-carte: calc(25px + 1rem); /* bouton de 50 pt + marge p-4 (carte Session du jour, feuille) */
+  --radius-alerte: calc(1.375rem + 1rem); /* bouton de 44 pt + marge p-4 */
+}
+
+/*
+ * Angles continus d'Apple (la courbe se raccorde en douceur au bord droit) là où le navigateur
+ * sait les dessiner ; ailleurs (Safari à ce jour), arc de cercle classique. Les capsules restent rondes.
+ */
+@supports (corner-shape: superellipse(2)) {
+  :where([class*="rounded-"]:not([class*="rounded-full"], [class*="rounded-reponse"])) {
+    corner-shape: superellipse(1.5);
+  }
+}
+
+/*
  * Typographie : police système (SF Pro sur iPhone) et taille du texte réglée par l'utilisateur
  * (Dynamic Type) via -apple-system-body. Toutes les tailles sont en rem, relatives au corps 17 pt.
  */
@@ -192,6 +215,7 @@ body {
     inset: 0;
     z-index: -2;
     border-radius: inherit;
+    corner-shape: inherit;
     background:
       linear-gradient(180deg, var(--verre-haut) 0%, transparent 45%),
       var(--verre);
@@ -206,6 +230,7 @@ body {
     inset: 0;
     z-index: -1;
     border-radius: inherit;
+    corner-shape: inherit;
     padding: 9px;
     -webkit-backdrop-filter: blur(5px) saturate(260%) brightness(1.15) contrast(1.08);
     backdrop-filter: blur(5px) saturate(260%) brightness(1.15) contrast(1.08);

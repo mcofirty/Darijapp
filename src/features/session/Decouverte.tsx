@@ -19,7 +19,7 @@ export function Decouverte({ mot }: { mot: Mot }) {
     <div>
       <p className="t-note mb-1 font-semibold uppercase text-accent">Nouveau mot</p>
       <h2 className="t-grand-titre mb-4">{mot.latin}</h2>
-      <div className="mb-8 rounded-[10px] bg-carte px-4 py-6 text-center">
+      <div className="mb-8 rounded-liste bg-carte px-4 py-6 text-center">
         {afficherArabe && (
           <p className="arabe text-[2.4rem] leading-tight" dir="rtl" lang="ar">
             {mot.arabe}

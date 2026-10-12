@@ -46,7 +46,7 @@ export function Alerte({ titre, message, actions, onAnnuler }: Props) {
         aria-modal="true"
         aria-labelledby="alerte-titre"
         aria-describedby={message ? 'alerte-message' : undefined}
-        className="verre verre-fin verre-epais alerte-entree w-full max-w-[19rem] rounded-[2rem] p-4 pt-5 text-center"
+        className="verre verre-fin verre-epais alerte-entree w-full max-w-[19rem] rounded-alerte p-4 pt-5 text-center"
       >
         <h2 id="alerte-titre" className="t-gras px-2">
           {titre}

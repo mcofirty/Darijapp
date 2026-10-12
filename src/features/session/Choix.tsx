@@ -49,7 +49,7 @@ export function Choix({ type, mot, choix, onRepondu }: Props) {
           </button>
         </div>
       ) : (
-        <p className="t-titre-1 mb-8 rounded-[10px] bg-carte px-4 py-6 text-center">{mot.fr}</p>
+        <p className="t-titre-1 mb-8 rounded-liste bg-carte px-4 py-6 text-center">{mot.fr}</p>
       )}
       <ul className="space-y-3">
         {choix.map((c) => {
@@ -60,7 +60,7 @@ export function Choix({ type, mot, choix, onRepondu }: Props) {
                 type="button"
                 disabled={choisi !== null}
                 onClick={() => choisir(c)}
-                className={`pressable flex min-h-14 w-full items-center gap-3 rounded-[14px] px-4 py-3 text-left transition-colors ${
+                className={`pressable flex min-h-14 w-full items-center gap-3 rounded-reponse px-5 py-3 text-left transition-colors ${
                   etat === 'juste'
                     ? 'bg-vert-doux text-vert'
                     : etat === 'faux'

@@ -59,7 +59,7 @@ export function Paires({ mots, onErreur, onTermine }: Props) {
                 type="button"
                 disabled={trouves.has(m.id)}
                 onClick={() => toucherGauche(m)}
-                className={`pressable t-gras min-h-14 w-full rounded-[14px] px-3 py-2 transition-colors ${style(m.id, selection === m.id)}`}
+                className={`pressable t-gras min-h-14 w-full rounded-reponse px-4 py-2 transition-colors ${style(m.id, selection === m.id)}`}
               >
                 {m.latin}
               </button>
@@ -73,7 +73,7 @@ export function Paires({ mots, onErreur, onTermine }: Props) {
                 type="button"
                 disabled={trouves.has(m.id)}
                 onClick={() => toucherDroite(m)}
-                className={`pressable t-appel min-h-14 w-full rounded-[14px] px-3 py-2 font-semibold transition-colors ${style(m.id, false)}`}
+                className={`pressable t-appel min-h-14 w-full rounded-reponse px-4 py-2 font-semibold transition-colors ${style(m.id, false)}`}
               >
                 {m.fr}
               </button>

@@ -47,7 +47,7 @@ export function Bilan({ bilan, taux, onFermer, onEncore }: Props) {
       </div>
       {/* Commandes dans un panneau en verre, comme le panneau « Continuer » de la session. */}
       <div className="fixed inset-x-0 bottom-0 px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2">
-        <div className="verre mx-auto flex max-w-xl flex-col gap-2 rounded-[2rem] p-3">
+        <div className="verre mx-auto flex max-w-xl flex-col gap-2 rounded-panneau p-3">
           <Bouton grand className="w-full" onClick={onEncore}>
             Encore une session
           </Bouton>
