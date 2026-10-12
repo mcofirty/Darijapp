@@ -45,6 +45,7 @@
   --verre-bord: rgba(0, 0, 0, 0.08);
   --verre-epais: rgba(255, 255, 255, 0.72);
   --voile: rgba(0, 0, 0, 0.2);
+  --verre-curseur: rgba(255, 255, 255, 0.78);
   color-scheme: light;
   -webkit-tap-highlight-color: transparent;
 }
@@ -76,6 +77,7 @@
   --verre-bord: rgba(255, 255, 255, 0.12);
   --verre-epais: rgba(37, 37, 40, 0.72);
   --voile: rgba(0, 0, 0, 0.45);
+  --verre-curseur: rgba(255, 255, 255, 0.2);
   color-scheme: dark;
 }
 
@@ -107,6 +109,7 @@
     --verre-bord: rgba(255, 255, 255, 0.12);
     --verre-epais: rgba(37, 37, 40, 0.72);
     --voile: rgba(0, 0, 0, 0.45);
+    --verre-curseur: rgba(255, 255, 255, 0.2);
     color-scheme: dark;
   }
 }
@@ -227,6 +230,23 @@ body {
     backdrop-filter: blur(24px) saturate(190%);
   }
 
+  /* Curseur d'un contrôle segmenté au repos : petite pastille de verre clair, ombre légère. */
+  .verre-curseur::before {
+    background:
+      linear-gradient(180deg, var(--verre-haut) 0%, transparent 60%),
+      var(--verre-curseur);
+  }
+  .verre-curseur::after { padding: 3px; }
+  .verre-curseur {
+    box-shadow:
+      inset 0 1px 0.5px var(--verre-reflet),
+      inset 0 -1px 0.5px var(--verre-reflet-bas),
+      inset 1px 0 1px rgba(255, 90, 90, 0.1),
+      inset -1px 0 1px rgba(90, 160, 255, 0.12),
+      0 3px 8px rgba(0, 0, 0, 0.12),
+      0 0 0 0.5px var(--verre-bord);
+  }
+
   /*
    * Bord de défilement d'iOS 26 : sous la barre de navigation, le contenu s'efface dans un flou
    * progressif au lieu d'être coupé net par une barre opaque.
@@ -263,6 +283,7 @@ body {
       backdrop-filter: none;
     }
     .verre::after { display: none; }
+    .verre-curseur::before { background: var(--segment-actif); }
   }
 
   /* Lentille de la barre d'onglets quand on la fait glisser : une goutte d'eau. */

@@ -31,8 +31,8 @@ export function Bouton({ variante = 'plein', grand = false, className = '', chil
 }
 
 /**
- * Contrôle segmenté iOS 26 : on touche un segment ou on fait glisser le curseur. Pendant le geste,
- * le curseur devient une goutte de verre qui suit le doigt, puis se cale avec un rebond.
+ * Contrôle segmenté iOS 26 : curseur en verre ; on touche un segment ou on fait glisser le curseur.
+ * Pendant le geste, il devient une goutte de verre qui suit le doigt, puis se cale avec un rebond.
  */
 export function Segmente<T extends string>({
   options,
@@ -97,7 +97,7 @@ export function Segmente<T extends string>({
         <span
           aria-hidden
           className={`pointer-events-none absolute inset-y-0 left-0 rounded-full ${
-            glisse ? 'lentille-goutte' : 'lentille-ressort bg-[var(--segment-actif)] shadow-[0_3px_8px_rgba(0,0,0,0.12),0_3px_1px_rgba(0,0,0,0.04)]'
+            glisse ? 'lentille-goutte' : 'verre verre-curseur lentille-ressort'
           }`}
           style={{
             width: `${100 / n}%`,
