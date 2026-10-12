@@ -12,3 +12,26 @@ body {
 .arabe {
   font-family: "Geeza Pro", "Noto Naskh Arabic", "Arial", sans-serif;
 }
+
+/* Retour élastique de la lentille de la barre d'onglets. */
+.lentille-ressort {
+  transition:
+    transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background-color 0.3s,
+    border-color 0.3s;
+}
+
+/* Arrivée d'un onglet après un balayage de page. */
+@keyframes depuis-droite {
+  from { transform: translateX(24px); opacity: 0; }
+}
+@keyframes depuis-gauche {
+  from { transform: translateX(-24px); opacity: 0; }
+}
+.entree-droite { animation: depuis-droite 0.25s ease-out; }
+.entree-gauche { animation: depuis-gauche 0.25s ease-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lentille-ressort { transition: none; }
+  .entree-droite, .entree-gauche { animation: none; }
+}

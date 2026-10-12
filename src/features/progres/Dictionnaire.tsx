@@ -14,6 +14,7 @@ export function Dictionnaire() {
   return (
     <section className="space-y-4">
       <input
+        data-sans-balayage
         type="search"
         value={requete}
         onChange={(e) => setRequete(e.target.value)}

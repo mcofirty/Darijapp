@@ -49,7 +49,7 @@ Publication : chaque push sur `main` lance la GitHub Action « Publier ». Elle 
 
 ```
 src/
-  app/            navigation à 5 onglets, layout, en-tête (niveau, XP, série)
+  app/            navigation à 5 onglets (barre « liquid glass », balayage), layout, en-tête
   audio/          lecture des mots (MP3, sinon synthèse vocale du téléphone)
   features/
     mots/         fiche d'un mot, liste de mots, bouton audio (partagés)
@@ -80,6 +80,8 @@ docs/
 | Quiz | 5 questions mêlant les 5 exercices |
 | Progrès | Niveau, XP, quêtes, coffre, série, statistiques (prévu) ; bascule vers le Dictionnaire (fait : tous les mots, recherche latin/français/arabe) |
 | Profil | Prénom, avatar, genre, objectif, rappel, audio, affichage arabe, mode sombre, export/import/remise à zéro |
+
+Navigation : barre d'onglets flottante en verre dépoli, icônes SVG ; une lentille marque l'onglet actif et suit le doigt quand on glisse le long de la barre (étirement selon la vitesse, icônes grossies, retour élastique). Un balayage horizontal de la page change aussi d'onglet, sauf sur les zones marquées `data-sans-balayage`.
 
 Fiche mot : latin en grand, arabe dessous (affiché par défaut, masquable dans Profil), traduction, boutons « Écouter » et « Ralenti » (0,75×), lecture automatique à l'ouverture, explication de prononciation, explication de chaque son particulier du mot, exemple avec son audio.
 
@@ -168,6 +170,7 @@ Jalon en cours : **2 — Exercices**, pas commencé. Le jalon 1 est en ligne sur
 | 2026-10-10 | Socle PWA : 5 onglets, en-tête, base Dexie v1, réglage « afficher l'arabe » | `src/app/`, `src/db/`, `vite.config.ts` |
 | 2026-10-10 | 152 mots en 8 thèmes avec arabe, prononciation et exemple ; fiche mot, guide des sons, dictionnaire avec recherche | `src/data/`, `src/features/mots/`, `src/features/apprendre/`, `src/features/progres/` |
 | 2026-10-10 | Script de génération audio et lecture avec repli sur la synthèse vocale du téléphone | `scripts/generate_audio.py`, `src/audio/lecteur.ts` |
+| 2026-10-12 | Barre d'onglets flottante « liquid glass » avec glissement du doigt, et balayage de page entre onglets | `src/app/BarreOnglets.tsx`, `src/app/glisser.ts`, `src/app/icones.tsx` |
 | 2026-10-11 | GitHub Action qui génère les MP3, teste, construit et publie l'appli sur GitHub Pages | `.github/workflows/publier.yml` |
 
 ## Décisions
@@ -183,6 +186,8 @@ Jalon en cours : **2 — Exercices**, pas commencé. Le jalon 1 est en ligne sur
 - 2026-10-10 : sans MP3, l'appli lit l'écriture arabe avec la synthèse vocale du téléphone (voix arabe) ; la liste des MP3 présents est fixée au build (`__AUDIOS__` dans `vite.config.ts`).
 - 2026-10-11 : publication et génération des MP3 par GitHub Actions, pour que tout se fasse sans ordinateur (l'utilisateur n'utilise que son iPhone).
 - 2026-10-11 : repo public, pour que GitHub Pages soit gratuit ; aucune donnée personnelle dans le repo, le prénom de l'utilisateur a été retiré des exemples.
+- 2026-10-12 : effet « liquid glass » fait en CSS (backdrop-filter, transition élastique) et en Pointer Events, sans bibliothèque d'animation, pour rester léger et fluide sur iPhone ; désactivé avec « Réduire les animations ».
+- 2026-10-12 : l'appli garde ses couleurs orange et crème ; la barre reprend le design fourni par l'utilisateur dans ces couleurs.
 - 2026-10-10 : pas de routeur ; navigation par état React, suffisante pour 5 onglets.
 
 ## Points en suspens
