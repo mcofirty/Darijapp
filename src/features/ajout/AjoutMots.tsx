@@ -69,6 +69,11 @@ export function AjoutMots() {
 
   return (
     <Page titre="Mes mots">
+      <p className="t-corps mb-8">
+        Bonjour Rim, bienvenue sur l’application pour aider Romain à apprendre le darija.
+        <br />
+        Tu veux ajouter un mot ?
+      </p>
       <form onSubmit={envoyer}>
         <Section
           titre={enEdition ? 'Modifier le mot' : 'Nouveau mot'}
