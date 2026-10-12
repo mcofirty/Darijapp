@@ -35,12 +35,12 @@ jobs:
 
       - name: Générer les MP3 (voix marocaine Jamal)
         id: edge
-        timeout-minutes: 20
+        timeout-minutes: 10
         if: steps.manquants.outputs.nombre != '0'
         continue-on-error: true
         run: |
           pip install edge-tts
-          python scripts/generate_audio.py || python scripts/generate_audio.py
+          python scripts/generate_audio.py
 
       - name: Secours si la voix marocaine n'a pas répondu (mms-tts-ara)
         if: steps.manquants.outputs.nombre != '0' && steps.edge.outcome == 'failure'

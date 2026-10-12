@@ -158,6 +158,7 @@ Progression d'un mot (IndexedDB) :
 - L'environnement cloud de Claude Code ne peut pas joindre mcofirty.github.io (proxy) : vérifier la mise en ligne par l'état du job `deploy`, pas par une requête au site.
 - Safari et le service worker gardent les icônes en cache par URL : pour changer une icône, changer aussi son nom de fichier (`logo-*.png`), puis supprimer et réinstaller l'appli sur l'écran d'accueil.
 - mms-tts-ara lit l'arabe sans voyelles (lettres arabes seules) : impossible de lui indiquer les voyelles du darija. Le journal de l'Action « Publier » affiche les textes lus : le vérifier avant de conclure.
+- 2026-10-12 : Microsoft refuse edge-tts depuis GitHub Actions (erreur 403 sur speech.platform.bing.com) : la voix Jamal n'est pas disponible par cet accès non officiel. Le script abandonne dès le premier refus et passe au secours mms-tts-ara.
 - La voix lit le champ `arabe` : c'est lui qui fixe la prononciation entendue. Quand l'arabe d'un mot change, supprimer ses MP3 pour qu'ils soient régénérés.
 - Les classes de `src/index.css` vivent dans `@layer components` : hors couche, elles écraseraient les utilitaires Tailwind (une `position: relative` avait fait disparaître la barre du bas).
 - Les couleurs de texte éclaircies du mode sombre (#ff6961, #2fd27f) ne supportent pas de texte blanc : tout bouton plein utilise `--accent-plein` ou `--vert-plein` (couleurs du drapeau, 5,8:1 et 7,5:1).
@@ -229,7 +230,7 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 
 ## Points en suspens
 
-- Voix Jamal à valider à l'écoute par l'utilisateur ; si un mot sonne faux, ajuster son écriture arabe.
+- Voix : edge-tts est bloqué (403), les sons viennent du secours mms-tts-ara, qui prononce mal le darija. Seule voie officielle vers la voix marocaine Jamal : Azure Speech (offre gratuite, compte Azure et clé en secret GitHub), à proposer à l'utilisateur.
 - Le contenu a été relu et corrigé par Claude (cohérence latin/arabe, tournures), mais pas par un locuteur natif : signaler les erreurs pour corriger les JSON. Quand l'arabe d'un mot change, supprimer son MP3 pour que l'Action le régénère.
 - Le Dictionnaire montre tous les mots, avec un ✓ sur ceux déjà vus (le cahier des charges ne prévoyait que les mots vus).
 - Onglet Quiz (5 questions) et Quiz express (60 s) : à faire pour finir le jalon 2, en réutilisant `src/exercices/`.

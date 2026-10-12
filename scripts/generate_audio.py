@@ -90,7 +90,13 @@ async def generer_edge(taches: list[tuple[str, Path]]) -> list[tuple[str, Path]]
                     await asyncio.sleep(2 * essai)
             echecs.append((texte, cible))
 
-    await asyncio.gather(*(une(t, c) for t, c in taches))
+    # Essai sur un premier fichier : si le service refuse (ex. 403), inutile d'insister sur les autres.
+    premier, reste = taches[0], taches[1:]
+    await une(*premier)
+    if echecs:
+        print("La voix marocaine ne répond pas : abandon, le secours prendra le relais.", file=sys.stderr)
+        return echecs + list(reste)
+    await asyncio.gather(*(une(t, c) for t, c in reste))
     return echecs
 
 
