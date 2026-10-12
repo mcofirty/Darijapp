@@ -72,14 +72,6 @@ export function AjoutMots() {
     }
   }
 
-  function envoyerAuProprietaire() {
-    if (!motValide(champs)) {
-      setAfficheErreurs(true)
-      return
-    }
-    void partager(champs)
-  }
-
   async function envoyer(e: FormEvent) {
     e.preventDefault()
     if (!motValide(champs)) {
@@ -111,10 +103,6 @@ export function AjoutMots() {
           <Bouton type="submit" grand>
             {enEdition ? 'Enregistrer' : 'Ajouter'}
           </Bouton>
-          <Bouton variante="teinte" grand onClick={envoyerAuProprietaire}>
-            <Send className="h-5 w-5" aria-hidden />
-            Envoyer à Romain
-          </Bouton>
           {enEdition && (
             <Bouton variante="gris" grand onClick={reinitialiser}>
               Annuler
@@ -127,7 +115,10 @@ export function AjoutMots() {
         <Vide icone={null} titre="Aucun mot ajouté" texte="Les mots que tu ajoutes arrivent en tête de tes prochaines sessions." />
       )}
       {mots && mots.length > 0 && (
-        <Section titre={`${mots.length} mot${mots.length > 1 ? 's' : ''} ajouté${mots.length > 1 ? 's' : ''}`}>
+        <Section
+          titre={`${mots.length} mot${mots.length > 1 ? 's' : ''} ajouté${mots.length > 1 ? 's' : ''}`}
+          note="Touche un mot pour le corriger. Quand il est bon, touche l’avion en papier pour l’envoyer à Romain."
+        >
           {mots.map((m) => (
             <Ligne
               key={m.id}
