@@ -6,13 +6,13 @@
     "fr": "j'ai une réunion",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3n-di ij-ti-ma3 : deux 3 serrés.",
     "audio": "audio/organisation-001.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma n9derch, 3ndi ijtima3 f l3achra",
+      "arabe": "ما نقدرش، عندي اجتماع ف العشرة",
+      "fr": "Je ne peux pas, j'ai une réunion à dix heures",
+      "audio": "audio/organisation-001-ex.mp3"
     }
   },
   {
@@ -22,13 +22,13 @@
     "fr": "j'ai un rendez-vous",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3n-di mow-3id : deux 3 serrés.",
     "audio": "audio/organisation-002.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndi mow3id m3a ttbib ghedda",
+      "arabe": "عندي موعد مع الطبيب غدا",
+      "fr": "J'ai un rendez-vous chez le médecin demain",
+      "audio": "audio/organisation-002-ex.mp3"
     }
   },
   {
@@ -38,13 +38,13 @@
     "fr": "je travaille demain",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "gha-di nkhdem ghed-da : « gh », « kh », « gh ».",
     "audio": "audio/organisation-003.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghadi nkhdem ghedda 7tta l3chiya",
+      "arabe": "غادي نخدم غدا حتى العشية",
+      "fr": "Je travaille demain jusqu'au soir",
+      "audio": "audio/organisation-003-ex.mp3"
     }
   },
   {
@@ -54,13 +54,13 @@
     "fr": "je cherche du travail",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kan-9el-leb 3la khed-ma : 9, 3 et « kh ».",
     "audio": "audio/organisation-004.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kan9elleb 3la khedma f kaza",
+      "arabe": "كنقلب على خدمة ف كازا",
+      "fr": "Je cherche du travail à Casa",
+      "audio": "audio/organisation-004-ex.mp3"
     }
   },
   {
@@ -70,13 +70,13 @@
     "fr": "je travaille dans une entreprise",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kan-khdem f che-ri-ka : « kh » et « ch ».",
     "audio": "audio/organisation-005.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kankhdem f cherika dyal ttomobilat",
+      "arabe": "كنخدم ف شركة ديال الطوموبيلات",
+      "fr": "Je travaille dans une entreprise automobile",
+      "audio": "audio/organisation-005-ex.mp3"
     }
   },
   {
@@ -86,13 +86,13 @@
     "fr": "je vais au bureau",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "gha-di l bi-ro : « gh » grasseyé.",
     "audio": "audio/organisation-006.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghadi l biro, nchoufek f l3chiya",
+      "arabe": "غادي للبيرو، نشوفك ف العشية",
+      "fr": "Je vais au bureau, je te vois ce soir",
+      "audio": "audio/organisation-006-ex.mp3"
     }
   },
   {
@@ -102,13 +102,13 @@
     "fr": "je commence à neuf heures",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kan-bda m3a t-tes3-oud : 3 serré deux fois.",
     "audio": "audio/organisation-007.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kanbda m3a ttes3oud kol nhar",
+      "arabe": "كنبدا معا التسعود كل نهار",
+      "fr": "Je commence à neuf heures tous les jours",
+      "audio": "audio/organisation-007-ex.mp3"
     }
   },
   {
@@ -118,13 +118,13 @@
     "fr": "je termine à six heures",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kan-sa-li m3a s-set-ta : 3 serré.",
     "audio": "audio/organisation-008.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kansali m3a ssetta w nrje3 l ddar",
+      "arabe": "كنسالي معا الستة و نرجع ل الدار",
+      "fr": "Je termine à six heures et je rentre",
+      "audio": "audio/organisation-008-ex.mp3"
     }
   },
   {
@@ -134,13 +134,13 @@
     "fr": "je suis disponible demain (dit par un homme)",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "a-na fa-regh ghed-da : deux « gh ».",
     "audio": "audio/organisation-009.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana fargh ghedda, aji nchoufek",
+      "arabe": "أنا فارغ غدا، أجي نشوفك",
+      "fr": "Je suis libre demain, viens me voir",
+      "audio": "audio/organisation-009-ex.mp3"
     }
   },
   {
@@ -150,13 +150,13 @@
     "fr": "je ne suis pas disponible (dit par un homme)",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "a-na ma-chi fa-regh : « ch » et « gh ».",
     "audio": "audio/organisation-010.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sme7 lia, ana machi fargh had simana",
+      "arabe": "سمح ليا، أنا ماشي فارغ هاد السيمانة",
+      "fr": "Désolé, je ne suis pas disponible cette semaine",
+      "audio": "audio/organisation-010-ex.mp3"
     }
   },
   {
@@ -166,13 +166,13 @@
     "fr": "je suis en retard (dit par un homme)",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "a-na m3et-tel : 3 serré.",
     "audio": "audio/organisation-011.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sme7 lia, ana m3ettel b 3chr d9aye9",
+      "arabe": "سمح ليا، أنا معطل ب عشر دقايق",
+      "fr": "Désolé, j'ai dix minutes de retard",
+      "audio": "audio/organisation-011-ex.mp3"
     }
   },
   {
@@ -182,13 +182,13 @@
     "fr": "je suis à l'heure",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "a-na f l-wa9t : 9 profond.",
     "audio": "audio/organisation-012.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana f lwa9t, fin ntoma?",
+      "arabe": "أنا ف الوقت، فين نتوما؟",
+      "fr": "Je suis à l'heure, vous êtes où ?",
+      "audio": "audio/organisation-012-ex.mp3"
     }
   },
   {
@@ -198,13 +198,13 @@
     "fr": "on peut déplacer le rendez-vous ?",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "n9-dro nbed-dlo l-mow-3id : 9 profond, 3 serré.",
     "audio": "audio/organisation-013.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "n9dro nbeddlo lmow3id l l2ithnin?",
+      "arabe": "نقدرو نبدلو الموعد ل الإثنين؟",
+      "fr": "On peut déplacer le rendez-vous à lundi ?",
+      "audio": "audio/organisation-013-ex.mp3"
     }
   },
   {
@@ -214,13 +214,13 @@
     "fr": "il faut finir aujourd'hui",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "khas-na nsa-liw l-yom : raclement (kh).",
     "audio": "audio/organisation-014.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khasna nsaliw lyom 9bel ma nkhorjo",
+      "arabe": "خاصنا نساليو اليوم قبل ما نخرجو",
+      "fr": "Il faut finir aujourd'hui avant de sortir",
+      "audio": "audio/organisation-014-ex.mp3"
     }
   },
   {
@@ -230,13 +230,13 @@
     "fr": "je vais envoyer le document",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "gha-di nsift l-wa-ti-9a : « gh » et 9.",
     "audio": "audio/organisation-015.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghadi nsift lwati9a f limil",
+      "arabe": "غادي نصيفط الوثيقة ف الإيميل",
+      "fr": "Je vais envoyer le document par mail",
+      "audio": "audio/organisation-015-ex.mp3"
     }
   },
   {
@@ -246,13 +246,13 @@
     "fr": "j'ai envoyé le mail",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "sift li-mil : un « s » épais.",
     "audio": "audio/organisation-016.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "siftt limil l lmodir",
+      "arabe": "صيفطت الإيميل ل المدير",
+      "fr": "J'ai envoyé le mail au directeur",
+      "audio": "audio/organisation-016-ex.mp3"
     }
   },
   {
@@ -262,13 +262,13 @@
     "fr": "tu as reçu mon message ?",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wach twes-slek l-me-saj dya-li : « ch » de « chat ».",
     "audio": "audio/organisation-017.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach twesslek lmesaj dyali lbare7?",
+      "arabe": "واش توصلك الميساج ديالي البارح؟",
+      "fr": "Tu as reçu mon message d'hier ?",
+      "audio": "audio/organisation-017-ex.mp3"
     }
   },
   {
@@ -278,13 +278,13 @@
     "fr": "peux-tu m'expliquer ?",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "t9-der tcher7 li-a : 9, « ch » et 7.",
     "audio": "audio/organisation-018.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "t9der tcher7 lia had lmochkil?",
+      "arabe": "تقدر تشرح ليا هاد المشكل؟",
+      "fr": "Tu peux m'expliquer ce problème ?",
+      "audio": "audio/organisation-018-ex.mp3"
     }
   },
   {
@@ -294,13 +294,13 @@
     "fr": "je vais vérifier",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "gha-di net2ek-ked : petit arrêt (2).",
     "audio": "audio/organisation-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghadi net2ekked w nrje3 lik",
+      "arabe": "غادي نتأكد و نرجع ليك",
+      "fr": "Je vais vérifier et je te reviens",
+      "audio": "audio/organisation-019-ex.mp3"
     }
   },
   {
@@ -310,13 +310,13 @@
     "fr": "quelle est la priorité ?",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ach hi-ya l-aw-la-wi-ya : « ch » de « chat ».",
     "audio": "audio/organisation-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ach hiya lawlawiya f had simana?",
+      "arabe": "اش هي الأولوية ف هاد السيمانة؟",
+      "fr": "Quelle est la priorité cette semaine ?",
+      "audio": "audio/organisation-020-ex.mp3"
     }
   },
   {
@@ -326,13 +326,13 @@
     "fr": "c'est urgent",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "had-chi mos-ta3-jil : « ch », puis 3 serré.",
     "audio": "audio/organisation-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hadchi mosta3jil, khassni ljawab lyom",
+      "arabe": "هادشي مستعجل، خاصني الجواب اليوم",
+      "fr": "C'est urgent, il me faut la réponse aujourd'hui",
+      "audio": "audio/organisation-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "j'ai terminé",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "sa-lit : l'accent sur « lit ».",
     "audio": "audio/organisation-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "salit lkhedma dyali",
+      "arabe": "ساليت الخدمة ديالي",
+      "fr": "J'ai terminé mon travail",
+      "audio": "audio/organisation-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "je n'ai pas terminé / je n'ai pas encore fini",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma-zal ma sa-lit-ch : « ch » de « chat ».",
     "audio": "audio/organisation-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mazal ma salitch, tsennani chwiya",
+      "arabe": "مازال ما ساليتش، تسناني شوية",
+      "fr": "Je n'ai pas encore fini, attends-moi un peu",
+      "audio": "audio/organisation-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "il reste du travail",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma-zal kay-na l-khed-ma : raclement (kh).",
     "audio": "audio/organisation-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mazal kayna lkhedma bzaf",
+      "arabe": "مازال كاينة الخدمة بزاف",
+      "fr": "Il reste beaucoup de travail",
+      "audio": "audio/organisation-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "j'ai besoin de plus de temps",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "khas-ni l-wa9t kter : « kh » et 9.",
     "audio": "audio/organisation-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khasni lwa9t kter bach nsali",
+      "arabe": "خاصني الوقت كتر باش نسالي",
+      "fr": "J'ai besoin de plus de temps pour finir",
+      "audio": "audio/organisation-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "je n'ai pas le temps / je n'ai pas de temps",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma 3n-dich l-wa9t : 3, « ch » et 9.",
     "audio": "audio/organisation-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma 3ndich lwa9t lyom, ghedda",
+      "arabe": "ما عنديش الوقت اليوم، غدا",
+      "fr": "Je n'ai pas le temps aujourd'hui, demain",
+      "audio": "audio/organisation-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "je suis en train d'apprendre",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kan-t3el-lem : 3 serré.",
     "audio": "audio/organisation-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mazal kant3ellem, sme7 lia",
+      "arabe": "مازال كنتعلم، سمح ليا",
+      "fr": "J'apprends encore, excuse-moi",
+      "audio": "audio/organisation-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "je veux m'améliorer",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bghit nwel-li 7sen : « gh » et 7.",
     "audio": "audio/organisation-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit nwelli 7sen f ddarija",
+      "arabe": "بغيت نولي حسن ف الدارجة",
+      "fr": "Je veux m'améliorer en darija",
+      "audio": "audio/organisation-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "explique-moi encore une fois",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "chre7 li-a mer-ra khra : « ch », 7 et « kh ».",
     "audio": "audio/organisation-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma fhemtch, chre7 lia merra khra",
+      "arabe": "ما فهمتش، شرح ليا مرة اخرى",
+      "fr": "Je n'ai pas compris, explique-moi encore une fois",
+      "audio": "audio/organisation-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "comment ça fonctionne ?",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ki-fach kay-khdem ha-da : « ch » et « kh ».",
     "audio": "audio/organisation-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kifach kaykhdem had lmakina?",
+      "arabe": "كيفاش كيخدم هاد الماكينة؟",
+      "fr": "Comment fonctionne cette machine ?",
+      "audio": "audio/organisation-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "ça fonctionne",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "had-chi kay-khdem : « ch » et « kh ».",
     "audio": "audio/organisation-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "safi, daba hadchi kaykhdem",
+      "arabe": "صافي، دابا هادشي كيخدم",
+      "fr": "Voilà, maintenant ça fonctionne",
+      "audio": "audio/organisation-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "ça ne fonctionne pas",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "had-chi ma kay-khdem-ch : « ch », « kh », « ch ».",
     "audio": "audio/organisation-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hadchi ma kaykhdemch, 3awed chargih",
+      "arabe": "هادشي ما كيخدمش، عاود شارجيه",
+      "fr": "Ça ne fonctionne pas, recharge-le",
+      "audio": "audio/organisation-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "quel est le problème ?",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ach-no ho-wa l-moch-kil : « ch » deux fois.",
     "audio": "audio/organisation-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "achno howa lmochkil m3a lordinateur?",
+      "arabe": "اشنو هو المشكل مع الأورديناتور؟",
+      "fr": "Quel est le problème avec l'ordinateur ?",
+      "audio": "audio/organisation-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "nous avons trouvé une solution",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "l9i-na l7ell : 9 profond, 7 soufflé.",
     "audio": "audio/organisation-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7amdollah, l9ina l7ell",
+      "arabe": "الحمد لله، لقينا الحل",
+      "fr": "Heureusement, nous avons trouvé une solution",
+      "audio": "audio/organisation-034-ex.mp3"
     }
   },
   {
@@ -550,13 +550,13 @@
     "fr": "je vais essayer",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "gha-di njer-reb : « gh » grasseyé.",
     "audio": "audio/organisation-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma 3reftch, walakin ghadi njerreb",
+      "arabe": "ما عرفتش، ولكن غادي نجرب",
+      "fr": "Je ne sais pas, mais je vais essayer",
+      "audio": "audio/organisation-035-ex.mp3"
     }
   },
   {
@@ -566,13 +566,13 @@
     "fr": "c'est une bonne idée",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ha-di fik-ra mzya-na : « h » expiré.",
     "audio": "audio/organisation-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hadi fikra mzyana, yallah ndirouha",
+      "arabe": "هادي فكرة مزيانة، يالله نديروها",
+      "fr": "C'est une bonne idée, faisons-le",
+      "audio": "audio/organisation-036-ex.mp3"
     }
   },
   {
@@ -582,13 +582,13 @@
     "fr": "je suis d'accord avec toi",
     "theme": "organisation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "a-na mta-fe9 m3ak : 9 et 3.",
     "audio": "audio/organisation-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana mtafe9 m3ak f kolchi",
+      "arabe": "أنا متافق معاك ف كلشي",
+      "fr": "Je suis d'accord avec toi sur tout",
+      "audio": "audio/organisation-037-ex.mp3"
     }
   }
 ]

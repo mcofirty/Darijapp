@@ -141,7 +141,7 @@ L'id suit `<theme>-NNN` dans l'ordre du fichier ; `src/data/data.test.ts` vérif
 
 `audio` = `audio/<id>.mp3` (et `audio/<id>-ex.mp3` pour l'exemple, s'il y en a un) : l'Action génère le MP3 s'il manque. Tant qu'il manque, ou si `audio` est vide, la voix de l'iPhone lit l'arabe.
 
-Mot importé (1 530 entrées) : `"prononciation": ""`, `"exemple"` aux quatre champs vides, et parfois `"note": "Emprunt courant au français"`. Une même graphie latine peut désigner deux mots différents en arabe (7it = حيت « parce que » ou حيط « mur »).
+Mot importé (1 530 entrées, thèmes 9 à 31 et fin des 8 premiers) : même format, avec parfois `"note": "Emprunt courant au français"` ; explication et exemple écrits par Claude (2026-10-13). Une même graphie latine peut désigner deux mots différents en arabe (7it = حيت « parce que » ou حيط « mur »). `data.test.ts` exige pour chaque mot une explication et un exemple complets.
 
 Activité terminée (IndexedDB, table `sessions`, depuis la v2 ; `type` = `session`, `quiz` ou `express`, absent sur les sessions d'avant le Quiz) :
 
@@ -226,7 +226,7 @@ Jalon en cours : **3 — Prononciation** (Distingue les sons, mode écoute, puis
 | 2026-10-12 | Page cachée « Mes mots » (`#ajout`) : ajout, modification, suppression de mots intégrés aux sessions, et partage d'un mot par lien (`#mot=`) avec confirmation ; base v3 | `src/features/ajout/`, `src/db/motsPerso.ts`, `src/data/motsPerso.ts`, `src/app/App.tsx` |
 | 2026-10-12 | Session du jour style Duolingo en écran d'accueil : découverte, Écoute et choisis, Traduis, Associe les paires, bilan ; répétition espacée, XP, niveaux, série ; base v2 | `src/features/session/`, `src/exercices/`, `src/srs/`, `src/gamification/`, `src/db/apprentissage.ts` |
 | 2026-10-12 | Voix marocaine Jamal par Azure Speech pour les 1 682 mots et 152 exemples (Action, secrets GitHub), MP3 gardés sur le téléphone à la première écoute | `scripts/generate_audio.py`, `.github/workflows/publier.yml`, `vite.config.ts`, `src/data/*.json` |
-| 2026-10-12 | Import de 1 530 mots et phrases du fichier de l'utilisateur (1 739 entrées, doublons retirés) en 23 nouveaux thèmes et 7 thèmes existants, arabe écrit par Claude, lus par la voix de l'iPhone ; note d'usage sur la fiche | `src/data/*.json`, `src/data/themes.ts`, `src/ui/visuels.ts`, `src/data/data.test.ts`, `scripts/generate_audio.py` |
+| 2026-10-12 | Import de 1 530 mots et phrases du fichier de l'utilisateur (1 739 entrées, doublons retirés) en 23 nouveaux thèmes et 7 thèmes existants, arabe écrit par Claude ; le 2026-10-13, explication de prononciation et exemple pour chacun | `src/data/*.json`, `src/data/themes.ts`, `src/ui/visuels.ts`, `src/data/data.test.ts` |
 | 2026-10-12 | Nom « Darijaapp » (icône d'écran d'accueil, titre) et feuille d'aide à l'installation sur l'écran d'accueil avec « Ne plus afficher » | `src/features/onboarding/AideInstallation.tsx`, `src/app/installation.ts`, `vite.config.ts`, `index.html` |
 | 2026-10-12 | Mise en ligne en 2 min, séparée de la génération audio ; Dictionnaire affiché progressivement | `.github/workflows/publier.yml`, `.github/workflows/audio.yml`, `src/features/mots/ListeMots.tsx` |
 | 2026-10-13 | Onglet Quiz : quiz de 5 questions sur les mots les moins sus et Quiz express de 60 s avec record | `src/features/quiz/`, `src/exercices/quiz.ts`, `src/db/apprentissage.ts`, `src/features/session/` |
@@ -270,14 +270,14 @@ Jalon en cours : **3 — Prononciation** (Distingue les sons, mode écoute, puis
 - 2026-10-13 : les mots des paires de sons sont à part du programme (fichier hors des thèmes, ids `son-…`) et ne passent jamais par la répétition espacée (`Resultats.compter`) : ce sont des exemples d'écoute, pas du vocabulaire à apprendre. Record de la Chasse aux sons dans le profil (`recordSons`).
 - 2026-10-13 : mode écoute avec l'écran gardé allumé (Wake Lock) plutôt qu'en arrière-plan : la synthèse vocale de l'iPhone (voix de secours et français) s'arrête quand l'écran se verrouille.
 - 2026-10-13 : favoris et signalements dans une table à part (`marques`, v4) et non dans la progression : marquer un mot jamais vu l'aurait compté comme vu et retiré des nouveaux mots.
+- 2026-10-13 : exemples des mots importés écrits pour tous les 1 530 (choix de l'utilisateur), une phrase courte et courante par mot ; l'article d'un mot en ش n'est pas doublé en latin (chta = الشتا), sinon le test de translittération compterait deux « ch ».
 - 2026-10-10 : pas de routeur ; navigation par état React, suffisante pour 5 onglets.
 
 ## Points en suspens
 
 - Voix : MP3 Jamal générés par l'Action « Audio » (secrets `AZURE_SPEECH_KEY` et `AZURE_SPEECH_REGION`) ; si Azure refuse (401/403), vérifier la clé, la région et le niveau F0. Tant qu'un MP3 manque, la voix de l'iPhone lit (arabe standard).
 - Score de prononciation (jalon 3) : les MP3 Jamal serviront de référence (MFCC + DTW) ; envisagé : ajouter la voix féminine Mouna (`ar-MA-MounaNeural`) et garder la meilleure des deux notes. Enregistrement et auto-évaluation à construire.
-- Le contenu a été relu et corrigé par Claude (cohérence latin/arabe, tournures), mais pas par un locuteur natif : signaler les erreurs pour corriger les JSON. L'arabe des 1 530 mots importés a été écrit par Claude d'après le latin et le français, sans relecture.
-- Mots importés : explication de prononciation et exemple (latin, arabe, français, MP3 `audio/<id>-ex.mp3`) écrits par Claude, en cours (1 009 sur 1 530) ; arabe et tournures à faire relire.
+- Contenu relu par Claude (cohérence latin/arabe), jamais par un locuteur natif : l'arabe, les explications et les exemples des 1 530 mots importés sont de Claude ; signaler les erreurs depuis la fiche mot. Les 1 530 MP3 d'exemple sont générés par l'Action « Audio » (environ 1h20).
 - Mode écoute : vérifier sur iPhone que la lecture continue écran allumé, et si les commandes de l'écran verrouillé apparaissent.
 - Le Dictionnaire montre tous les mots, avec un ✓ sur ceux déjà vus (le cahier des charges ne prévoyait que les mots vus).
 - Sur iPhone, l'appli installée sur l'écran d'accueil a sa propre mémoire, séparée de Safari (non vérifié sur appareil) : la progression faite dans Safari ne suit pas, et un lien `#mot=…` ouvert dans Safari ajoute sans doute le mot à Safari, pas à l'appli installée. À vérifier, puis prévoir un contournement (copier le lien et l'ouvrir dans l'appli, ou export/import).

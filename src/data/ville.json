@@ -6,13 +6,13 @@
     "fr": "ville",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mdi-na : l'accent sur « di ».",
     "audio": "audio/ville-001.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had lmdina kbira w zwina",
+      "arabe": "هاد المدينة كبيرة و زوينة",
+      "fr": "Cette ville est grande et belle",
+      "audio": "audio/ville-001-ex.mp3"
     }
   },
   {
@@ -22,13 +22,13 @@
     "fr": "village",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "dou-war : le r roulé.",
     "audio": "audio/ville-002.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jeddi saken f wa7ed ddouwar f ljbel",
+      "arabe": "جدي ساكن ف واحد الدوار ف الجبل",
+      "fr": "Mon grand-père vit dans un village de montagne",
+      "audio": "audio/ville-002-ex.mp3"
     }
   },
   {
@@ -38,13 +38,13 @@
     "fr": "quartier",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7ou-ma : souffle chaud (7).",
     "audio": "audio/ville-003.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7ouma dyalna hadya",
+      "arabe": "الحومة ديالنا هادية",
+      "fr": "Notre quartier est calme",
+      "audio": "audio/ville-003-ex.mp3"
     }
   },
   {
@@ -54,13 +54,13 @@
     "fr": "avenue",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "cha-ri3 : « ch » puis 3 serré à la fin.",
     "audio": "audio/ville-004.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbank f chari3 m7ammed lkhamis",
+      "arabe": "البانك ف شارع محمد الخامس",
+      "fr": "La banque est sur l'avenue Mohammed V",
+      "audio": "audio/ville-004-ex.mp3"
     }
   },
   {
@@ -70,13 +70,13 @@
     "fr": "route",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "tri9 : un « t » épais, 9 profond.",
     "audio": "audio/ville-005.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttri9 twila l mrrakech",
+      "arabe": "الطريق طويلة ل مراكش",
+      "fr": "La route est longue jusqu'à Marrakech",
+      "audio": "audio/ville-005-ex.mp3"
     }
   },
   {
@@ -86,13 +86,13 @@
     "fr": "chemin",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ms-lek : un « s » épais.",
     "audio": "audio/ville-006.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tbe3 had lmslek 7tta lwad",
+      "arabe": "تبع هاد المسلك حتى الواد",
+      "fr": "Suis ce chemin jusqu'à la rivière",
+      "audio": "audio/ville-006-ex.mp3"
     }
   },
   {
@@ -102,13 +102,13 @@
     "fr": "place (urbaine)",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sa-7a : un « s » épais, souffle chaud (7).",
     "audio": "audio/ville-007.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ntla9aw f ssa7a l kbira",
+      "arabe": "نتلاقاو ف الساحة الكبيرة",
+      "fr": "On se retrouve sur la grande place",
+      "audio": "audio/ville-007-ex.mp3"
     }
   },
   {
@@ -118,13 +118,13 @@
     "fr": "centre-ville",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "wst l-mdi-na : « wst » d'un trait.",
     "audio": "audio/ville-008.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kanskon f wst lmdina",
+      "arabe": "كنسكن ف وسط المدينة",
+      "fr": "J'habite au centre-ville",
+      "audio": "audio/ville-008-ex.mp3"
     }
   },
   {
@@ -134,13 +134,13 @@
     "fr": "marché / souk / conduire",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sou9 : 9 profond à la fin.",
     "audio": "audio/ville-009.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ssou9 kaykoun nhar l7ed",
+      "arabe": "السوق كيكون نهار الحد",
+      "fr": "Le souk a lieu le dimanche",
+      "audio": "audio/ville-009-ex.mp3"
     }
   },
   {
@@ -150,13 +150,13 @@
     "fr": "magasin",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7a-nout : souffle chaud (7).",
     "audio": "audio/ville-010.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7anout msdouda f lghda",
+      "arabe": "الحانوت مسدودة ف الغدا",
+      "fr": "La boutique est fermée à midi",
+      "audio": "audio/ville-010-ex.mp3"
     }
   },
   {
@@ -166,13 +166,13 @@
     "fr": "épicerie",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "moul l7a-nout : souffle chaud (7).",
     "audio": "audio/ville-011.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "moul l7anout kay3erfni mzyan",
+      "arabe": "مول الحانوت كيعرفني مزيان",
+      "fr": "L'épicier me connaît bien",
+      "audio": "audio/ville-011-ex.mp3"
     }
   },
   {
@@ -182,13 +182,13 @@
     "fr": "supermarché",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "su-per-mar-ché : comme en français.",
     "audio": "audio/ville-012.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrit kolchi men supermarché",
+      "arabe": "شريت كلشي من سوبيرمارشي",
+      "fr": "J'ai tout acheté au supermarché",
+      "audio": "audio/ville-012-ex.mp3"
     }
   },
   {
@@ -198,13 +198,13 @@
     "fr": "boulangerie",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "fe-ran : le r roulé.",
     "audio": "audio/ville-013.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lferan kaybda f ssetta d ssba7",
+      "arabe": "الفران كيبدا ف الستة د الصباح",
+      "fr": "La boulangerie ouvre à six heures du matin",
+      "audio": "audio/ville-013-ex.mp3"
     }
   },
   {
@@ -214,13 +214,13 @@
     "fr": "boucherie",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "gez-zar : « g » dur, « z » doublé.",
     "audio": "audio/ville-014.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrit l7em men 3and lgezzar",
+      "arabe": "شريت اللحم من عند الگزار",
+      "fr": "J'ai acheté la viande chez le boucher",
+      "audio": "audio/ville-014-ex.mp3"
     }
   },
   {
@@ -230,13 +230,13 @@
     "fr": "poissonnerie",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7a-nout d l7out : deux souffles chauds (7).",
     "audio": "audio/ville-015.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7anout d l7out f ttarf dyal zzen9a",
+      "arabe": "حانوت د الحوت ف الطرف ديال الزنقة",
+      "fr": "La poissonnerie est au bout de la rue",
+      "audio": "audio/ville-015-ex.mp3"
     }
   },
   {
@@ -246,13 +246,13 @@
     "fr": "restaurant",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "res-to-ran : comme « restaurant ».",
     "audio": "audio/ville-016.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had restoran mchhour b ttajine",
+      "arabe": "هاد ريسطورون مشهور بالطاجين",
+      "fr": "Ce restaurant est connu pour son tajine",
+      "audio": "audio/ville-016-ex.mp3"
     }
   },
   {
@@ -262,13 +262,13 @@
     "fr": "café (lieu)",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9h-wa : 9 profond.",
     "audio": "audio/ville-017.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ntla9aw f l9hwa lli 7da lbank",
+      "arabe": "نتلاقاو ف القهوة اللي حدا البانك",
+      "fr": "On se retrouve au café près de la banque",
+      "audio": "audio/ville-017-ex.mp3"
     }
   },
   {
@@ -278,13 +278,13 @@
     "fr": "hôtel",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "o-til : comme « hôtel ».",
     "audio": "audio/ville-018.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lotil dyalna fih piscine",
+      "arabe": "الأوطيل ديالنا فيه بيسين",
+      "fr": "Notre hôtel a une piscine",
+      "audio": "audio/ville-018-ex.mp3"
     }
   },
   {
@@ -294,13 +294,13 @@
     "fr": "auberge",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "nozl : comme « nozl ».",
     "audio": "audio/ville-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "n3esna f nozl sghir f ljbel",
+      "arabe": "نعسنا ف نزل صغير ف الجبل",
+      "fr": "Nous avons dormi dans une petite auberge en montagne",
+      "audio": "audio/ville-019-ex.mp3"
     }
   },
   {
@@ -310,13 +310,13 @@
     "fr": "banque",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ban-ka : comme « banque ».",
     "audio": "audio/ville-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbanka ma7loula 7tta rreb3a",
+      "arabe": "البانكة محلولة حتى الربعة",
+      "fr": "La banque est ouverte jusqu'à quatre heures",
+      "audio": "audio/ville-020-ex.mp3"
     }
   },
   {
@@ -326,13 +326,13 @@
     "fr": "distributeur de billets",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "gi-chi o-to-ma-tik : comme en français.",
     "audio": "audio/ville-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fin kayn chi guichet otomatik?",
+      "arabe": "فين كاين شي گيشي أوطوماتيك؟",
+      "fr": "Où y a-t-il un distributeur de billets ?",
+      "audio": "audio/ville-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "poste",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "bos-ta : comme « poste ».",
     "audio": "audio/ville-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "siftt lbra men lbosta",
+      "arabe": "صيفطت البرا من البوسطة",
+      "fr": "J'ai envoyé la lettre depuis la poste",
+      "audio": "audio/ville-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "commissariat",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ko-mi-sa-riya : comme « commissariat ».",
     "audio": "audio/ville-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mchit l lkomisariya 7it daw lia lportfey",
+      "arabe": "مشيت ل الكوميسارية حيت داو ليا البورطفاي",
+      "fr": "Je suis allé au commissariat car on m'a pris mon portefeuille",
+      "audio": "audio/ville-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "police",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "bo-lis : comme « police ».",
     "audio": "audio/ville-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ayet 3la lbolis!",
+      "arabe": "عيط على البوليس!",
+      "fr": "Appelle la police !",
+      "audio": "audio/ville-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "gendarmerie",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "jon-dar-me-ri : comme « gendarmerie ».",
     "audio": "audio/ville-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ljendarmerie f lmdakhel dyal lmdina",
+      "arabe": "الجوندارمري ف المداخل ديال المدينة",
+      "fr": "La gendarmerie est aux entrées de la ville",
+      "audio": "audio/ville-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "mairie",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "jma-3a : le 3 serré.",
     "audio": "audio/ville-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mchit l ljma3a bach nkhrej lwra9",
+      "arabe": "مشيت ل الجماعة باش نخرج الوراق",
+      "fr": "Je suis allé à la mairie pour retirer des papiers",
+      "audio": "audio/ville-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "administration",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l2i-da-ra : petit arrêt (2).",
     "audio": "audio/ville-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l2idara katsedd f ttlata",
+      "arabe": "الإدارة كتسد ف التلاتة",
+      "fr": "L'administration ferme à trois heures",
+      "audio": "audio/ville-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "école",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mdra-sa : un « s » épais.",
     "audio": "audio/ville-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmdrasa 9riba men ddar",
+      "arabe": "المدرسة قريبة من الدار",
+      "fr": "L'école est près de la maison",
+      "audio": "audio/ville-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "université",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ja-mi-3a : le 3 serré.",
     "audio": "audio/ville-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kan9ra f ljami3a f rbat",
+      "arabe": "كنقرا ف الجامعة ف الرباط",
+      "fr": "J'étudie à l'université de Rabat",
+      "audio": "audio/ville-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "bibliothèque",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mek-ta-ba : l'accent sur « ta ».",
     "audio": "audio/ville-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kan9ra f lmektaba f l3chiya",
+      "arabe": "كنقرا ف المكتبة ف العشية",
+      "fr": "J'étudie à la bibliothèque le soir",
+      "audio": "audio/ville-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "musée",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mat-7af : souffle chaud (7).",
     "audio": "audio/ville-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "zorna lmat7af f fes",
+      "arabe": "زرنا المتحف ف فاس",
+      "fr": "Nous avons visité le musée à Fès",
+      "audio": "audio/ville-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "cinéma",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "si-ni-ma : comme « cinéma ».",
     "audio": "audio/ville-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nmchiw l ssinima had l3chiya?",
+      "arabe": "نمشيو ل السينما هاد العشية؟",
+      "fr": "On va au cinéma ce soir ?",
+      "audio": "audio/ville-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "théâtre",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mas-ra7 : souffle chaud (7) à la fin.",
     "audio": "audio/ville-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kan 3erd zwin f lmasra7",
+      "arabe": "كان عرض زوين ف المسرح",
+      "fr": "Il y avait un beau spectacle au théâtre",
+      "audio": "audio/ville-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "stade",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "stad : comme « stade ».",
     "audio": "audio/ville-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mchina l stade nchoufo lmatch",
+      "arabe": "مشينا ل سطاد نشوفو الماتش",
+      "fr": "Nous sommes allés au stade voir le match",
+      "audio": "audio/ville-034-ex.mp3"
     }
   },
   {
@@ -550,13 +550,13 @@
     "fr": "piscine",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "pi-sin : comme « piscine ».",
     "audio": "audio/ville-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddrari f lpiscine",
+      "arabe": "الدراري ف البيسين",
+      "fr": "Les enfants sont à la piscine",
+      "audio": "audio/ville-035-ex.mp3"
     }
   },
   {
@@ -566,13 +566,13 @@
     "fr": "salle de sport",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sa-la d spor : un « s » épais.",
     "audio": "audio/ville-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kanmchi l sala d sport tlata d lmrat",
+      "arabe": "كنمشي ل صالة د سبور تلاتة د المرات",
+      "fr": "Je vais à la salle de sport trois fois",
+      "audio": "audio/ville-036-ex.mp3"
     }
   },
   {
@@ -582,13 +582,13 @@
     "fr": "parc",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "jar-dan : comme « jardin ».",
     "audio": "audio/ville-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tmechina f jardin",
+      "arabe": "تمشينا ف جاردان",
+      "fr": "Nous nous sommes promenés au parc",
+      "audio": "audio/ville-037-ex.mp3"
     }
   },
   {
@@ -598,13 +598,13 @@
     "fr": "jardin public",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "jnan l3am : 3 serré.",
     "audio": "audio/ville-038.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jnan l3am m3emmer b nnas f l7ed",
+      "arabe": "جنان العام معمر بالناس ف الحد",
+      "fr": "Le jardin public est plein de monde le dimanche",
+      "audio": "audio/ville-038-ex.mp3"
     }
   },
   {
@@ -614,13 +614,13 @@
     "fr": "mosquée",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ja-me3 : 3 serré à la fin.",
     "audio": "audio/ville-039.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ljame3 lkbir f wst lmdina",
+      "arabe": "الجامع الكبير ف وسط المدينة",
+      "fr": "La grande mosquée est au centre-ville",
+      "audio": "audio/ville-039-ex.mp3"
     }
   },
   {
@@ -630,13 +630,13 @@
     "fr": "plage",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "pla-ja : comme « plage ».",
     "audio": "audio/ville-040.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lplaja 3amra f ssif",
+      "arabe": "البلاجة عامرة ف الصيف",
+      "fr": "La plage est pleine en été",
+      "audio": "audio/ville-040-ex.mp3"
     }
   },
   {
@@ -646,13 +646,13 @@
     "fr": "port",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mar-sa : le r roulé.",
     "audio": "audio/ville-041.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbato kaykhrej men lmarsa",
+      "arabe": "الباطو كيخرج من المرسى",
+      "fr": "Le bateau part du port",
+      "audio": "audio/ville-041-ex.mp3"
     }
   },
   {
@@ -662,13 +662,13 @@
     "fr": "aéroport",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ma-tar : un « t » épais.",
     "audio": "audio/ville-042.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmatar b3id 3la lmdina",
+      "arabe": "المطار بعيد على المدينة",
+      "fr": "L'aéroport est loin de la ville",
+      "audio": "audio/ville-042-ex.mp3"
     }
   },
   {
@@ -678,13 +678,13 @@
     "fr": "gare",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ma-7at-ta d train : souffle chaud (7).",
     "audio": "audio/ville-043.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma7atta d train 9riba men lotil",
+      "arabe": "محطة د تران قريبة من الأوطيل",
+      "fr": "La gare est près de l'hôtel",
+      "audio": "audio/ville-043-ex.mp3"
     }
   },
   {
@@ -694,13 +694,13 @@
     "fr": "station-service",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sta-syon d les-sans : comme « station d'essence ».",
     "audio": "audio/ville-044.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "w9ef f station d lessans",
+      "arabe": "وقف ف سطاسيون د ليصانص",
+      "fr": "Arrête-toi à la station-service",
+      "audio": "audio/ville-044-ex.mp3"
     }
   },
   {
@@ -710,13 +710,13 @@
     "fr": "parking",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "par-king : comme « parking ».",
     "audio": "audio/ville-045.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma kaynach lblasa f parking",
+      "arabe": "ما كايناش البلاصة ف باركينگ",
+      "fr": "Il n'y a pas de place au parking",
+      "audio": "audio/ville-045-ex.mp3"
     }
   },
   {
@@ -726,13 +726,13 @@
     "fr": "toilettes publiques",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "to-ya-let 3o-mou-miya : 3 serré.",
     "audio": "audio/ville-046.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fin kaynin toyalet 3omoumiya?",
+      "arabe": "فين كاينين تواليت عمومية؟",
+      "fr": "Où sont les toilettes publiques ?",
+      "audio": "audio/ville-046-ex.mp3"
     }
   },
   {
@@ -742,13 +742,13 @@
     "fr": "ambassade",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "si-fa-ra : comme « sifara ».",
     "audio": "audio/ville-047.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mchit l ssifara bach nbeddel lpaspor",
+      "arabe": "مشيت ل السفارة باش نبدل الباسبور",
+      "fr": "Je suis allé à l'ambassade pour changer le passeport",
+      "audio": "audio/ville-047-ex.mp3"
     }
   },
   {
@@ -758,13 +758,13 @@
     "fr": "consulat",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kon-so-liya : comme « consulat ».",
     "audio": "audio/ville-048.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lkonsoliya ma7loula ghir f ssba7",
+      "arabe": "الكونسولية محلولة غير ف الصباح",
+      "fr": "Le consulat est ouvert seulement le matin",
+      "audio": "audio/ville-048-ex.mp3"
     }
   },
   {
@@ -774,13 +774,13 @@
     "fr": "pont",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9an-ta-ra : 9 profond.",
     "audio": "audio/ville-049.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "douz men l9antara",
+      "arabe": "دوز من القنطرة",
+      "fr": "Passe par le pont",
+      "audio": "audio/ville-049-ex.mp3"
     }
   },
   {
@@ -790,13 +790,13 @@
     "fr": "rond-point",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "rond-pwan : comme « rond-point ».",
     "audio": "audio/ville-050.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "men b3d rond-point, dour 3la limen",
+      "arabe": "من بعد روند بوان، دور على ليمن",
+      "fr": "Après le rond-point, tourne à droite",
+      "audio": "audio/ville-050-ex.mp3"
     }
   },
   {
@@ -806,13 +806,13 @@
     "fr": "feu rouge",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "daw l7-mer : « d » épais, souffle chaud (7).",
     "audio": "audio/ville-051.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "w9ef f daw l7mer!",
+      "arabe": "وقف ف ضو الحمر!",
+      "fr": "Arrête-toi au feu rouge !",
+      "audio": "audio/ville-051-ex.mp3"
     }
   },
   {
@@ -822,13 +822,13 @@
     "fr": "passage piéton",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "pa-saj pi-ton : comme « passage piéton ».",
     "audio": "audio/ville-052.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "9te3 men passage piéton",
+      "arabe": "قطع من باساج بيطون",
+      "fr": "Traverse sur le passage piéton",
+      "audio": "audio/ville-052-ex.mp3"
     }
   },
   {
@@ -838,13 +838,13 @@
     "fr": "trottoir",
     "theme": "ville",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "r-sif : un « s » épais.",
     "audio": "audio/ville-053.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mchi 3la rrsif, machi f ttri9",
+      "arabe": "مشي على الرصيف، ماشي ف الطريق",
+      "fr": "Marche sur le trottoir, pas sur la route",
+      "audio": "audio/ville-053-ex.mp3"
     }
   }
 ]

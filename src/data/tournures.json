@@ -6,13 +6,13 @@
     "fr": "je ne veux pas",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma bghit-ch : « gh » et « ch ».",
     "audio": "audio/tournures-001.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma bghitch nmchi lyom",
+      "arabe": "ما بغيتش نمشي اليوم",
+      "fr": "Je ne veux pas y aller aujourd'hui",
+      "audio": "audio/tournures-001-ex.mp3"
     }
   },
   {
@@ -22,13 +22,13 @@
     "fr": "je ne peux pas",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma n9-der-ch : 9 et « ch ».",
     "audio": "audio/tournures-002.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sme7 lia, ma n9derch nji",
+      "arabe": "سمح ليا، ما نقدرش نجي",
+      "fr": "Désolé, je ne peux pas venir",
+      "audio": "audio/tournures-002-ex.mp3"
     }
   },
   {
@@ -38,13 +38,13 @@
     "fr": "je ne vois rien",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma kan-chouf wa-lou : « ch » de « chat ».",
     "audio": "audio/tournures-003.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tfa ddo, ma kanchouf walou",
+      "arabe": "طفا الضو، ما كنشوف والو",
+      "fr": "La lumière s'est éteinte, je ne vois rien",
+      "audio": "audio/tournures-003-ex.mp3"
     }
   },
   {
@@ -54,13 +54,13 @@
     "fr": "je n'entends rien",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma kan-sme3 wa-lou : 3 serré.",
     "audio": "audio/tournures-004.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmousi9a 3alya, ma kansme3 walou",
+      "arabe": "الموسيقى عالية، ما كنسمع والو",
+      "fr": "La musique est forte, je n'entends rien",
+      "audio": "audio/tournures-004-ex.mp3"
     }
   },
   {
@@ -70,13 +70,13 @@
     "fr": "je n'ai rien",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma 3n-di wa-lou : 3 serré.",
     "audio": "audio/tournures-005.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fte7 jibi, ma 3ndi walou",
+      "arabe": "فتح جيبي، ما عندي والو",
+      "fr": "Ouvre ma poche, je n'ai rien",
+      "audio": "audio/tournures-005-ex.mp3"
     }
   },
   {
@@ -86,13 +86,13 @@
     "fr": "je n'ai personne",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma 3n-di 7t-ta wa-7ed : 3 et 7.",
     "audio": "audio/tournures-006.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "f had lmdina, ma 3ndi 7tta wa7ed",
+      "arabe": "ف هاد المدينة، ما عندي حتى واحد",
+      "fr": "Dans cette ville, je n'ai personne",
+      "audio": "audio/tournures-006-ex.mp3"
     }
   },
   {
@@ -102,13 +102,13 @@
     "fr": "je n'ai pas d'argent",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma 3n-dich flous : 3 et « ch ».",
     "audio": "audio/tournures-007.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma 3ndich flous had chher",
+      "arabe": "ما عنديش فلوس هاد الشهر",
+      "fr": "Je n'ai pas d'argent ce mois-ci",
+      "audio": "audio/tournures-007-ex.mp3"
     }
   },
   {
@@ -118,13 +118,13 @@
     "fr": "il n'y a personne",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma kayn 7t-ta wa-7ed : 7 deux fois.",
     "audio": "audio/tournures-008.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "de9it, ma kayn 7tta wa7ed f ddar",
+      "arabe": "دقيت، ما كاين حتى واحد ف الدار",
+      "fr": "J'ai frappé, il n'y a personne à la maison",
+      "audio": "audio/tournures-008-ex.mp3"
     }
   },
   {
@@ -134,13 +134,13 @@
     "fr": "il n'y a rien",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma kayn wa-lou : comme « walou ».",
     "audio": "audio/tournures-009.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7lit ttellaja, ma kayn walou",
+      "arabe": "حليت التلاجة، ما كاين والو",
+      "fr": "J'ai ouvert le frigo, il n'y a rien",
+      "audio": "audio/tournures-009-ex.mp3"
     }
   },
   {
@@ -150,13 +150,13 @@
     "fr": "je ne viens pas",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma gha-dich nji : « gh » et « ch ».",
     "audio": "audio/tournures-010.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma ghadich nji, ana mrid",
+      "arabe": "ما غاديش نجي، أنا مريض",
+      "fr": "Je ne viens pas, je suis malade",
+      "audio": "audio/tournures-010-ex.mp3"
     }
   },
   {
@@ -166,13 +166,13 @@
     "fr": "je ne pars pas",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma gha-dich nmchi : « gh » et deux « ch ».",
     "audio": "audio/tournures-011.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma ghadich nmchi, ghadi nb9a m3akom",
+      "arabe": "ما غاديش نمشي، غادي نبقى معاكم",
+      "fr": "Je ne pars pas, je reste avec vous",
+      "audio": "audio/tournures-011-ex.mp3"
     }
   },
   {
@@ -182,13 +182,13 @@
     "fr": "je n'ai pas mangé",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma klit-ch : « ch » de « chat ».",
     "audio": "audio/tournures-012.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma klitch men ssba7",
+      "arabe": "ما كليتش من الصباح",
+      "fr": "Je n'ai pas mangé depuis ce matin",
+      "audio": "audio/tournures-012-ex.mp3"
     }
   },
   {
@@ -198,13 +198,13 @@
     "fr": "je n'ai pas dormi",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma n3est-ch : 3 et « ch ».",
     "audio": "audio/tournures-013.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma n3estch mzyan lbare7",
+      "arabe": "ما نعستش مزيان البارح",
+      "fr": "Je n'ai pas bien dormi hier",
+      "audio": "audio/tournures-013-ex.mp3"
     }
   },
   {
@@ -214,13 +214,13 @@
     "fr": "je n'ai pas oublié",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma nsit-ch : « ch » de « chat ».",
     "audio": "audio/tournures-014.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "la, ma nsitch l3id milad dyalek",
+      "arabe": "لا، ما نسيتش عيد الميلاد ديالك",
+      "fr": "Non, je n'ai pas oublié ton anniversaire",
+      "audio": "audio/tournures-014-ex.mp3"
     }
   },
   {
@@ -230,13 +230,13 @@
     "fr": "je n'ai pas menti",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma kdebt-ch : « ch » de « chat ».",
     "audio": "audio/tournures-015.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wallah ma kdebtch 3lik",
+      "arabe": "والله ما كدبتش عليك",
+      "fr": "Je te jure que je ne t'ai pas menti",
+      "audio": "audio/tournures-015-ex.mp3"
     }
   },
   {
@@ -246,13 +246,13 @@
     "fr": "je n'ai pas dit ça",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma glt-ch had-chi : « g » dur, « ch » deux fois.",
     "audio": "audio/tournures-016.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana ma gltch hadchi, howa lli gal",
+      "arabe": "أنا ما گلتش هادشي، هو اللي گال",
+      "fr": "Je n'ai pas dit ça, c'est lui qui l'a dit",
+      "audio": "audio/tournures-016-ex.mp3"
     }
   },
   {
@@ -262,13 +262,13 @@
     "fr": "je ne suis pas sûr (dit par un homme)",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma mte2-k-ked-ch : petit arrêt (2), « ch ».",
     "audio": "audio/tournures-017.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma mte2kkedch, ghadi nsowwel",
+      "arabe": "ما متأكدش، غادي نسول",
+      "fr": "Je ne suis pas sûr, je vais demander",
+      "audio": "audio/tournures-017-ex.mp3"
     }
   },
   {
@@ -278,13 +278,13 @@
     "fr": "je suis encore là",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma-zal hna : « h » expiré.",
     "audio": "audio/tournures-018.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mazal hna, ma mchitch",
+      "arabe": "مازال هنا، ما مشيتش",
+      "fr": "Je suis encore là, je ne suis pas parti",
+      "audio": "audio/tournures-018-ex.mp3"
     }
   },
   {
@@ -294,13 +294,13 @@
     "fr": "il est encore là",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma-zal t-ma : le « t » appuyé.",
     "audio": "audio/tournures-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttomobil mazal tma f lgaraj",
+      "arabe": "الطوموبيل مازال تما ف الگاراج",
+      "fr": "La voiture est encore là, au garage",
+      "audio": "audio/tournures-019-ex.mp3"
     }
   },
   {
@@ -310,13 +310,13 @@
     "fr": "je viens juste d'arriver",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3ad wselt : 3 serré.",
     "audio": "audio/tournures-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ad wselt l ddar, ghadi nkellmek",
+      "arabe": "عاد وصلت ل الدار، غادي نكلمك",
+      "fr": "Je viens d'arriver à la maison, je t'appelle",
+      "audio": "audio/tournures-020-ex.mp3"
     }
   },
   {
@@ -326,13 +326,13 @@
     "fr": "je vais bientôt partir",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "gha-di nmchi 3la 9rib : « gh », « ch », 3 et 9.",
     "audio": "audio/tournures-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghadi nmchi 3la 9rib, tsennani",
+      "arabe": "غادي نمشي على قريب، تسناني",
+      "fr": "Je vais bientôt partir, attends-moi",
+      "audio": "audio/tournures-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "moi non plus",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "7t-ta a-na la : souffle chaud (7).",
     "audio": "audio/tournures-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma bghitich? 7tta ana la",
+      "arabe": "ما بغيتيش؟ حتى أنا لا",
+      "fr": "Tu n'en veux pas ? Moi non plus",
+      "audio": "audio/tournures-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "pas du tout",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ga3 la : « g » dur, 3 serré.",
     "audio": "audio/tournures-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach 3jbek lfilm? ga3 la",
+      "arabe": "واش عجبك الفيلم؟ گاع لا",
+      "fr": "Le film t'a plu ? Pas du tout",
+      "audio": "audio/tournures-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "pas toujours",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma-chi di-ma : « ch » de « chat ».",
     "audio": "audio/tournures-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kankhdem f ssebt, walakin machi dima",
+      "arabe": "كنخدم ف السبت، ولكن ماشي ديما",
+      "fr": "Je travaille le samedi, mais pas toujours",
+      "audio": "audio/tournures-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "n'importe quoi !",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ach had l-hed-ra : « ch », « h » expiré.",
     "audio": "audio/tournures-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ach had lhedra! ma tsedd9ouch",
+      "arabe": "اش هاد الهضرة! ما تصدقوش",
+      "fr": "N'importe quoi ! Ne le croyez pas",
+      "audio": "audio/tournures-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "stop !",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "7bes : souffle chaud (7).",
     "audio": "audio/tournures-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7bes! ttomobil jaya",
+      "arabe": "حبس! الطوموبيل جاية",
+      "fr": "Stop ! Une voiture arrive",
+      "audio": "audio/tournures-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "comme tu veux",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kif ma bghi-ti : « gh » grasseyé.",
     "audio": "audio/tournures-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nakol tajine wella seksou? kif ma bghiti",
+      "arabe": "ناكل طاجين ولا سكسو؟ كيف ما بغيتي",
+      "fr": "Tajine ou couscous ? Comme tu veux",
+      "audio": "audio/tournures-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "peu importe",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma kay-hemm-ch : « h » expiré, « ch ».",
     "audio": "audio/tournures-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma kayhemmch, ghedda n3awdo",
+      "arabe": "ما كيهمش، غدا نعاودو",
+      "fr": "Peu importe, on recommence demain",
+      "audio": "audio/tournures-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "tu vois ce que je veux dire ?",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "fhem-ti chno bghit n9-sed : « ch », « gh » et 9.",
     "audio": "audio/tournures-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fhemti chno bghit n9sed wella la?",
+      "arabe": "فهمتي شنو بغيت نقصد ولا لا؟",
+      "fr": "Tu vois ce que je veux dire ou pas ?",
+      "audio": "audio/tournures-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "c'est comme ça",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "hak-da : « h » expiré.",
     "audio": "audio/tournures-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lblad hakda, khassek tsber",
+      "arabe": "البلاد هاكدا، خاصك تصبر",
+      "fr": "Le pays est comme ça, il faut être patient",
+      "audio": "audio/tournures-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "c'est différent",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ha-da mokh-ta-lef : raclement (kh).",
     "audio": "audio/tournures-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hada mokhtalef 3la lli chriti",
+      "arabe": "هادا مختلف على اللي شريتي",
+      "fr": "C'est différent de ce que tu as acheté",
+      "audio": "audio/tournures-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "ce n'est pas pareil",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma-chi b7al b7al : « ch » et 7.",
     "audio": "audio/tournures-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddarija w l3arbiya machi b7al b7al",
+      "arabe": "الدارجة و العربية ماشي بحال بحال",
+      "fr": "Le darija et l'arabe, ce n'est pas pareil",
+      "audio": "audio/tournures-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "au contraire",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bel-3aks : 3 serré.",
     "audio": "audio/tournures-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "la, bel3aks, 3jebni bzaf",
+      "arabe": "لا، بالعكس، عجبني بزاف",
+      "fr": "Non, au contraire, ça m'a beaucoup plu",
+      "audio": "audio/tournures-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "à mon avis",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "f ra2-yi : petit arrêt (2).",
     "audio": "audio/tournures-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "f ra2yi, had lfikra mzyana",
+      "arabe": "ف رأيي، هاد الفكرة مزيانة",
+      "fr": "À mon avis, cette idée est bonne",
+      "audio": "audio/tournures-034-ex.mp3"
     }
   },
   {
@@ -550,13 +550,13 @@
     "fr": "en général",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "b si-fa 3am-ma : 3 serré.",
     "audio": "audio/tournures-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "b sifa 3amma, nnas driyfin hna",
+      "arabe": "بصفة عامة، الناس ضريفين هنا",
+      "fr": "En général, les gens sont gentils ici",
+      "audio": "audio/tournures-035-ex.mp3"
     }
   },
   {
@@ -566,13 +566,13 @@
     "fr": "dans ce cas",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "f had l7a-la : souffle chaud (7).",
     "audio": "audio/tournures-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "f had l7ala, khassna ntsennaw",
+      "arabe": "ف هاد الحالة، خاصنا نتسناو",
+      "fr": "Dans ce cas, il faut attendre",
+      "audio": "audio/tournures-036-ex.mp3"
     }
   },
   {
@@ -582,13 +582,13 @@
     "fr": "d'un côté",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "men ji-ha : comme « djiha ».",
     "audio": "audio/tournures-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "men jiha, lkhedma zwina",
+      "arabe": "من جيهة، الخدمة زوينة",
+      "fr": "D'un côté, le travail est bien",
+      "audio": "audio/tournures-037-ex.mp3"
     }
   },
   {
@@ -598,13 +598,13 @@
     "fr": "de l'autre côté",
     "theme": "tournures",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "men ji-ha khra : raclement (kh).",
     "audio": "audio/tournures-038.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "men jiha khra, lkhlas 9lil",
+      "arabe": "من جيهة اخرى، الخلاص قليل",
+      "fr": "D'un autre côté, le salaire est faible",
+      "audio": "audio/tournures-038-ex.mp3"
     }
   }
 ]

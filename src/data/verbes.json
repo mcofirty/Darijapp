@@ -6,13 +6,13 @@
     "fr": "être (état, contexte)",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "koun : comme « koun ».",
     "audio": "audio/verbes-001.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "koun driyef m3a nnas",
+      "arabe": "كون ضريف مع الناس",
+      "fr": "Sois gentil avec les gens",
+      "audio": "audio/verbes-001-ex.mp3"
     },
     "note": "Souvent absent au présent"
   },
@@ -23,13 +23,13 @@
     "fr": "avoir",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3and : le 3 serré.",
     "audio": "audio/verbes-002.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndi jouj d lkhout",
+      "arabe": "عندي جوج د الخوت",
+      "fr": "J'ai deux frères",
+      "audio": "audio/verbes-002-ex.mp3"
     },
     "note": "Construction avec 3ndi, 3ndek…"
   },
@@ -40,13 +40,13 @@
     "fr": "faire",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "dir : comme « dir ».",
     "audio": "audio/verbes-003.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "achno katdir f lwikand?",
+      "arabe": "اشنو كتدير ف الويكاند؟",
+      "fr": "Que fais-tu le week-end ?",
+      "audio": "audio/verbes-003-ex.mp3"
     }
   },
   {
@@ -56,13 +56,13 @@
     "fr": "venir",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ji : comme « dji ».",
     "audio": "audio/verbes-004.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "aji tchouf hadchi",
+      "arabe": "أجي تشوف هادشي",
+      "fr": "Viens voir ça",
+      "audio": "audio/verbes-004-ex.mp3"
     }
   },
   {
@@ -72,13 +72,13 @@
     "fr": "vouloir / aimer",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bgha : « gh » grasseyé.",
     "audio": "audio/verbes-005.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bgha ychri ddar f lb7ar",
+      "arabe": "بغى يشري الدار ف البحر",
+      "fr": "Il veut acheter la maison au bord de la mer",
+      "audio": "audio/verbes-005-ex.mp3"
     }
   },
   {
@@ -88,13 +88,13 @@
     "fr": "pouvoir",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "9der : 9 profond.",
     "audio": "audio/verbes-006.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma 9derch yji lyom",
+      "arabe": "ما قدرش يجي اليوم",
+      "fr": "Il n'a pas pu venir aujourd'hui",
+      "audio": "audio/verbes-006-ex.mp3"
     }
   },
   {
@@ -104,13 +104,13 @@
     "fr": "devoir / falloir",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "khas : raclement (kh).",
     "audio": "audio/verbes-007.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khassek tchreb lma bzaf",
+      "arabe": "خاصك تشرب الما بزاف",
+      "fr": "Tu dois boire beaucoup d'eau",
+      "audio": "audio/verbes-007-ex.mp3"
     }
   },
   {
@@ -120,13 +120,13 @@
     "fr": "savoir / connaître",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3ref : le 3 serré.",
     "audio": "audio/verbes-008.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3reft lklam dyalek",
+      "arabe": "عرفت الكلام ديالك",
+      "fr": "J'ai su ce que tu as dit",
+      "audio": "audio/verbes-008-ex.mp3"
     }
   },
   {
@@ -136,13 +136,13 @@
     "fr": "comprendre",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "fhem : « h » expiré.",
     "audio": "audio/verbes-009.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fhemti chno 9alt lostada?",
+      "arabe": "فهمتي شنو قالت الأستادة؟",
+      "fr": "Tu as compris ce qu'a dit la prof ?",
+      "audio": "audio/verbes-009-ex.mp3"
     }
   },
   {
@@ -152,13 +152,13 @@
     "fr": "dire",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "gol : « g » dur.",
     "audio": "audio/verbes-010.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "gol lih yji ghedda",
+      "arabe": "گول ليه يجي غدا",
+      "fr": "Dis-lui de venir demain",
+      "audio": "audio/verbes-010-ex.mp3"
     }
   },
   {
@@ -168,13 +168,13 @@
     "fr": "demander",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "swel : un « s » léger.",
     "audio": "audio/verbes-011.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "swel 3la ttri9 l chi wa7ed",
+      "arabe": "سول على الطريق ل شي واحد",
+      "fr": "Demande le chemin à quelqu'un",
+      "audio": "audio/verbes-011-ex.mp3"
     }
   },
   {
@@ -184,13 +184,13 @@
     "fr": "raconter",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "7ki : souffle chaud (7).",
     "audio": "audio/verbes-012.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ki lia chno w9e3",
+      "arabe": "حكي ليا شنو وقع",
+      "fr": "Raconte-moi ce qui s'est passé",
+      "audio": "audio/verbes-012-ex.mp3"
     }
   },
   {
@@ -200,13 +200,13 @@
     "fr": "voir",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "chaf : « ch » de « chat ».",
     "audio": "audio/verbes-013.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chaf lfilm m3a s7abo",
+      "arabe": "شاف الفيلم مع صحابو",
+      "fr": "Il a vu le film avec ses amis",
+      "audio": "audio/verbes-013-ex.mp3"
     }
   },
   {
@@ -216,13 +216,13 @@
     "fr": "regarder",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "chouf : « ch » de « chat ».",
     "audio": "audio/verbes-014.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chouf, ttayyara f ssma!",
+      "arabe": "شوف، الطيارة ف السما!",
+      "fr": "Regarde, l'avion dans le ciel !",
+      "audio": "audio/verbes-014-ex.mp3"
     }
   },
   {
@@ -232,13 +232,13 @@
     "fr": "penser",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "fek-ker : le « k » doublé.",
     "audio": "audio/verbes-015.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fekker mzyan 9bel ma tjaweb",
+      "arabe": "فكر مزيان قبل ما تجاوب",
+      "fr": "Réfléchis bien avant de répondre",
+      "audio": "audio/verbes-015-ex.mp3"
     }
   },
   {
@@ -248,13 +248,13 @@
     "fr": "croire",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3te-9ed : 3 serré, 9 profond.",
     "audio": "audio/verbes-016.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kay3te9ed belli 3ndo l7e9",
+      "arabe": "كيعتقد بلي عندو الحق",
+      "fr": "Il croit qu'il a raison",
+      "audio": "audio/verbes-016-ex.mp3"
     }
   },
   {
@@ -264,13 +264,13 @@
     "fr": "se souvenir",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "tfek-ker : le « k » doublé.",
     "audio": "audio/verbes-017.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tfekkerti smiti?",
+      "arabe": "تفكرتي سميتي؟",
+      "fr": "Tu te souviens de mon nom ?",
+      "audio": "audio/verbes-017-ex.mp3"
     }
   },
   {
@@ -280,13 +280,13 @@
     "fr": "oublier",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "nsa : comme « nsa ».",
     "audio": "audio/verbes-018.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nsa ssarout f ddar",
+      "arabe": "نسى الساروت ف الدار",
+      "fr": "Il a oublié la clé à la maison",
+      "audio": "audio/verbes-018-ex.mp3"
     }
   },
   {
@@ -296,13 +296,13 @@
     "fr": "perdre un objet",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "di-ye3 : « d » épais, 3 serré.",
     "audio": "audio/verbes-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "diye3 ttilifoun dyalo",
+      "arabe": "ضيع التيليفون ديالو",
+      "fr": "Il a perdu son téléphone",
+      "audio": "audio/verbes-019-ex.mp3"
     }
   },
   {
@@ -312,13 +312,13 @@
     "fr": "donner",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3ta : le 3 serré.",
     "audio": "audio/verbes-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ta lflous l lbeyya3",
+      "arabe": "عطى الفلوس ل البياع",
+      "fr": "Il a donné l'argent au vendeur",
+      "audio": "audio/verbes-020-ex.mp3"
     }
   },
   {
@@ -328,13 +328,13 @@
     "fr": "prendre",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "khda : raclement (kh).",
     "audio": "audio/verbes-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khda ttaxi l lmatar",
+      "arabe": "خدا الطاكسي ل المطار",
+      "fr": "Il a pris le taxi pour l'aéroport",
+      "audio": "audio/verbes-021-ex.mp3"
     }
   },
   {
@@ -344,13 +344,13 @@
     "fr": "recevoir",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "twes-sel : le « s » doublé.",
     "audio": "audio/verbes-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "twesselt b lmesaj dyalek",
+      "arabe": "توصلت بالميساج ديالك",
+      "fr": "J'ai reçu ton message",
+      "audio": "audio/verbes-022-ex.mp3"
     }
   },
   {
@@ -360,13 +360,13 @@
     "fr": "porter / transporter",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "7mel : souffle chaud (7).",
     "audio": "audio/verbes-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7mel lvaliza l ttabe9 lfou9ani",
+      "arabe": "حمل الفاليزة ل الطابق الفوقاني",
+      "fr": "Il a porté la valise à l'étage",
+      "audio": "audio/verbes-023-ex.mp3"
     }
   },
   {
@@ -376,13 +376,13 @@
     "fr": "apporter",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "jib : comme « djib ».",
     "audio": "audio/verbes-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jib lkhobz m3ak",
+      "arabe": "جيب الخبز معاك",
+      "fr": "Apporte le pain avec toi",
+      "audio": "audio/verbes-024-ex.mp3"
     }
   },
   {
@@ -392,13 +392,13 @@
     "fr": "mettre",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "7ett : souffle chaud (7), « t » doublé.",
     "audio": "audio/verbes-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ett lkas 3la ttabla",
+      "arabe": "حط الكاس على الطبلة",
+      "fr": "Pose le verre sur la table",
+      "audio": "audio/verbes-025-ex.mp3"
     }
   },
   {
@@ -408,13 +408,13 @@
     "fr": "enlever",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "7iy-yed : souffle chaud (7).",
     "audio": "audio/verbes-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7iyed ssebbat 9bel ma tdkhol",
+      "arabe": "حيد الصباط قبل ما تدخل",
+      "fr": "Enlève tes chaussures avant d'entrer",
+      "audio": "audio/verbes-026-ex.mp3"
     }
   },
   {
@@ -424,13 +424,13 @@
     "fr": "commencer",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bda : comme « bda ».",
     "audio": "audio/verbes-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lfilm bda daba",
+      "arabe": "الفيلم بدا دابا",
+      "fr": "Le film vient de commencer",
+      "audio": "audio/verbes-027-ex.mp3"
     }
   },
   {
@@ -440,13 +440,13 @@
     "fr": "finir / c'est fini",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "sa-la : comme « sala ».",
     "audio": "audio/verbes-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "safi, sala lmatch",
+      "arabe": "صافي، سالا الماتش",
+      "fr": "Voilà, le match est fini",
+      "audio": "audio/verbes-028-ex.mp3"
     }
   },
   {
@@ -456,13 +456,13 @@
     "fr": "essayer / tester",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "jer-reb : le r doublé.",
     "audio": "audio/verbes-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jerreb had lmakla, bnina",
+      "arabe": "جرب هاد الماكلة، بنينة",
+      "fr": "Goûte ce plat, il est bon",
+      "audio": "audio/verbes-029-ex.mp3"
     }
   },
   {
@@ -472,13 +472,13 @@
     "fr": "changer",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bed-del : le « d » doublé.",
     "audio": "audio/verbes-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "beddel 7wayjek, mbellin",
+      "arabe": "بدل حوايجك، مبلين",
+      "fr": "Change tes vêtements, ils sont mouillés",
+      "audio": "audio/verbes-030-ex.mp3"
     }
   },
   {
@@ -488,13 +488,13 @@
     "fr": "utiliser",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "st3-mel : 3 serré.",
     "audio": "audio/verbes-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "st3mel had laplikasyon bach tt3ellem",
+      "arabe": "ستعمل هاد الأبليكاسيون باش تتعلم",
+      "fr": "Utilise cette application pour apprendre",
+      "audio": "audio/verbes-031-ex.mp3"
     }
   },
   {
@@ -504,13 +504,13 @@
     "fr": "aider",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3a-wen : le 3 serré.",
     "audio": "audio/verbes-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3awen mmak f lkuzina",
+      "arabe": "عاون مك ف الكوزينة",
+      "fr": "Aide ta mère à la cuisine",
+      "audio": "audio/verbes-032-ex.mp3"
     }
   },
   {
@@ -520,13 +520,13 @@
     "fr": "attendre",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "tsen-na : le « n » doublé.",
     "audio": "audio/verbes-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tsenna chwiya, ja ttobis",
+      "arabe": "تسنى شوية، جا الطوبيس",
+      "fr": "Attends un peu, le bus arrive",
+      "audio": "audio/verbes-033-ex.mp3"
     }
   },
   {
@@ -536,13 +536,13 @@
     "fr": "rester",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "b9a : 9 profond.",
     "audio": "audio/verbes-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "b9a f ddar 7it mrid",
+      "arabe": "بقى ف الدار حيت مريض",
+      "fr": "Il est resté à la maison car il est malade",
+      "audio": "audio/verbes-034-ex.mp3"
     }
   },
   {
@@ -552,13 +552,13 @@
     "fr": "habiter",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "sken : comme « sken ».",
     "audio": "audio/verbes-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kanskon f kaza men 3amayn",
+      "arabe": "كنسكن ف كازا من عامين",
+      "fr": "J'habite à Casa depuis deux ans",
+      "audio": "audio/verbes-035-ex.mp3"
     }
   },
   {
@@ -568,13 +568,13 @@
     "fr": "vivre",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3ach : 3 serré, « ch » de « chat ».",
     "audio": "audio/verbes-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ach f fransa 3chr snin",
+      "arabe": "عاش ف فرنسا عشر سنين",
+      "fr": "Il a vécu en France dix ans",
+      "audio": "audio/verbes-036-ex.mp3"
     }
   },
   {
@@ -584,13 +584,13 @@
     "fr": "naître",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "tzad : comme « tzad ».",
     "audio": "audio/verbes-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tzad f tanja",
+      "arabe": "تزاد ف طنجة",
+      "fr": "Il est né à Tanger",
+      "audio": "audio/verbes-037-ex.mp3"
     }
   },
   {
@@ -600,13 +600,13 @@
     "fr": "mourir",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "mat : comme « mat ».",
     "audio": "audio/verbes-038.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lkelb dyalna mat lbare7",
+      "arabe": "الكلب ديالنا مات البارح",
+      "fr": "Notre chien est mort hier",
+      "audio": "audio/verbes-038-ex.mp3"
     }
   },
   {
@@ -616,13 +616,13 @@
     "fr": "grandir",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kber : comme « kber ».",
     "audio": "audio/verbes-039.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddrri kber bzaf",
+      "arabe": "الدري كبر بزاف",
+      "fr": "L'enfant a beaucoup grandi",
+      "audio": "audio/verbes-039-ex.mp3"
     }
   },
   {
@@ -632,13 +632,13 @@
     "fr": "devenir",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wel-la : le « l » doublé.",
     "audio": "audio/verbes-040.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wella kayhder ddarija mzyan",
+      "arabe": "ولى كيهضر الدارجة مزيان",
+      "fr": "Il s'est mis à bien parler darija",
+      "audio": "audio/verbes-040-ex.mp3"
     }
   },
   {
@@ -648,13 +648,13 @@
     "fr": "arriver",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wsel : comme « wsel ».",
     "audio": "audio/verbes-041.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wsel ttran f lwa9t",
+      "arabe": "وصل التران ف الوقت",
+      "fr": "Le train est arrivé à l'heure",
+      "audio": "audio/verbes-041-ex.mp3"
     }
   },
   {
@@ -664,13 +664,13 @@
     "fr": "sauter",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "n9ez : 9 profond.",
     "audio": "audio/verbes-042.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "n9ez men l7it l lb7ar",
+      "arabe": "نقز من الحيط ل البحر",
+      "fr": "Il a sauté du mur dans la mer",
+      "audio": "audio/verbes-042-ex.mp3"
     }
   },
   {
@@ -680,13 +680,13 @@
     "fr": "tomber",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ta7 : un « t » épais, souffle chaud (7).",
     "audio": "audio/verbes-043.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ta7 men lbisklet",
+      "arabe": "طاح من البيسكليت",
+      "fr": "Il est tombé du vélo",
+      "audio": "audio/verbes-043-ex.mp3"
     }
   },
   {
@@ -696,13 +696,13 @@
     "fr": "s'asseoir",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "gles : « g » dur.",
     "audio": "audio/verbes-044.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "gles hna 7daya",
+      "arabe": "گلس هنا حدايا",
+      "fr": "Assieds-toi ici à côté de moi",
+      "audio": "audio/verbes-044-ex.mp3"
     }
   },
   {
@@ -712,13 +712,13 @@
     "fr": "se lever",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "noud : un « d » épais.",
     "audio": "audio/verbes-045.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "noud, rak m3ettel!",
+      "arabe": "نوض، راك معطل!",
+      "fr": "Lève-toi, tu es en retard !",
+      "audio": "audio/verbes-045-ex.mp3"
     }
   },
   {
@@ -728,13 +728,13 @@
     "fr": "dormir",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "n3es : 3 serré.",
     "audio": "audio/verbes-046.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "n3es bekri lyom",
+      "arabe": "نعس بكري اليوم",
+      "fr": "Dors tôt aujourd'hui",
+      "audio": "audio/verbes-046-ex.mp3"
     }
   },
   {
@@ -744,13 +744,13 @@
     "fr": "se réveiller",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "fi9 : 9 profond.",
     "audio": "audio/verbes-047.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fi9 bekri bach ma tfoutekch ttran",
+      "arabe": "فيق بكري باش ما تفوتكش التران",
+      "fr": "Réveille-toi tôt pour ne pas rater le train",
+      "audio": "audio/verbes-047-ex.mp3"
     }
   },
   {
@@ -760,13 +760,13 @@
     "fr": "se doucher",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "dou-wech : « ch » de « chat ».",
     "audio": "audio/verbes-048.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "douwech w lbes 7wayjek",
+      "arabe": "دوش و لبس حوايجك",
+      "fr": "Douche-toi et habille-toi",
+      "audio": "audio/verbes-048-ex.mp3"
     }
   },
   {
@@ -776,13 +776,13 @@
     "fr": "se brosser les dents",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ghsel sna-no : « gh » grasseyé.",
     "audio": "audio/verbes-049.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddrri ghsel snano 9bel n3as",
+      "arabe": "الدري غسل سنانو قبل النعاس",
+      "fr": "L'enfant s'est brossé les dents avant de dormir",
+      "audio": "audio/verbes-049-ex.mp3"
     }
   },
   {
@@ -792,13 +792,13 @@
     "fr": "s'habiller",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "lbes : comme « lbes ».",
     "audio": "audio/verbes-050.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbes 7wayej skhounin",
+      "arabe": "لبس حوايج سخونين",
+      "fr": "Mets des vêtements chauds",
+      "audio": "audio/verbes-050-ex.mp3"
     }
   },
   {
@@ -808,13 +808,13 @@
     "fr": "se déshabiller",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "7iy-yed l7wa-yej : souffle chaud (7).",
     "audio": "audio/verbes-051.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7iyed l7wayej w douwech",
+      "arabe": "حيد الحوايج و دوش",
+      "fr": "Déshabille-toi et douche-toi",
+      "audio": "audio/verbes-051-ex.mp3"
     }
   },
   {
@@ -824,13 +824,13 @@
     "fr": "manger",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kla : comme « kla ».",
     "audio": "audio/verbes-052.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kla kolchi w ma khella walou",
+      "arabe": "كلا كلشي و ما خلى والو",
+      "fr": "Il a tout mangé et n'a rien laissé",
+      "audio": "audio/verbes-052-ex.mp3"
     }
   },
   {
@@ -840,13 +840,13 @@
     "fr": "boire",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "chreb : « ch » de « chat ».",
     "audio": "audio/verbes-053.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chreb kas d atay",
+      "arabe": "شرب كاس د أتاي",
+      "fr": "Il a bu un verre de thé",
+      "audio": "audio/verbes-053-ex.mp3"
     }
   },
   {
@@ -856,13 +856,13 @@
     "fr": "cuisiner",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "tey-yeb : un « t » épais, « y » doublé.",
     "audio": "audio/verbes-054.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mama teyybat lkouskous",
+      "arabe": "ماما طيبات الكسكسو",
+      "fr": "Maman a cuisiné le couscous",
+      "audio": "audio/verbes-054-ex.mp3"
     }
   },
   {
@@ -872,13 +872,13 @@
     "fr": "préparer",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wjed : comme « wdjed ».",
     "audio": "audio/verbes-055.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wjed rasek, ghadi nkhorjo",
+      "arabe": "وجد راسك، غادي نخرجو",
+      "fr": "Prépare-toi, on va sortir",
+      "audio": "audio/verbes-055-ex.mp3"
     }
   },
   {
@@ -888,13 +888,13 @@
     "fr": "rire",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "d7ek : « d » épais, souffle chaud (7).",
     "audio": "audio/verbes-056.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "d7ek bzaf 3la nnokta",
+      "arabe": "ضحك بزاف على النكتة",
+      "fr": "Il a beaucoup ri à la blague",
+      "audio": "audio/verbes-056-ex.mp3"
     }
   },
   {
@@ -904,13 +904,13 @@
     "fr": "pleurer",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bka : comme « bka ».",
     "audio": "audio/verbes-057.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddrri bka 7it ta7",
+      "arabe": "الدري بكى حيت طاح",
+      "fr": "L'enfant a pleuré car il est tombé",
+      "audio": "audio/verbes-057-ex.mp3"
     }
   },
   {
@@ -920,13 +920,13 @@
     "fr": "sourire",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "tbes-sem : un « s » épais.",
     "audio": "audio/verbes-058.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tbessem, ttswira ghadi tkoun zwina",
+      "arabe": "تبسم، التصويرة غادي تكون زوينة",
+      "fr": "Souris, la photo sera belle",
+      "audio": "audio/verbes-058-ex.mp3"
     }
   },
   {
@@ -936,13 +936,13 @@
     "fr": "détester",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kreh : « h » expiré à la fin.",
     "audio": "audio/verbes-059.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kaykreh lmakla l7arra",
+      "arabe": "كيكره الماكلة الحارة",
+      "fr": "Il déteste la nourriture épicée",
+      "audio": "audio/verbes-059-ex.mp3"
     }
   },
   {
@@ -952,13 +952,13 @@
     "fr": "préférer",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "fed-del : un « d » épais et doublé.",
     "audio": "audio/verbes-060.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kanfeddel atay 3la l9hwa",
+      "arabe": "كنفضل أتاي على القهوة",
+      "fr": "Je préfère le thé au café",
+      "audio": "audio/verbes-060-ex.mp3"
     }
   },
   {
@@ -968,13 +968,13 @@
     "fr": "espérer",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "tmen-na : le « n » doublé.",
     "audio": "audio/verbes-061.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kantmenna nzour lmeghrib merra khra",
+      "arabe": "كنتمنى نزور المغرب مرة اخرى",
+      "fr": "J'espère visiter le Maroc encore une fois",
+      "audio": "audio/verbes-061-ex.mp3"
     }
   },
   {
@@ -984,13 +984,13 @@
     "fr": "avoir peur",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "khaf : raclement (kh).",
     "audio": "audio/verbes-062.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khaf men lkelb",
+      "arabe": "خاف من الكلب",
+      "fr": "Il a eu peur du chien",
+      "audio": "audio/verbes-062-ex.mp3"
     }
   },
   {
@@ -1000,13 +1000,13 @@
     "fr": "se fâcher",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "t3es-seb : 3 serré.",
     "audio": "audio/verbes-063.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma tt3essebch, kolchi mzyan",
+      "arabe": "ما تتعصبش، كلشي مزيان",
+      "fr": "Ne te fâche pas, tout va bien",
+      "audio": "audio/verbes-063-ex.mp3"
     }
   },
   {
@@ -1016,13 +1016,13 @@
     "fr": "se calmer",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "hda : « h » expiré.",
     "audio": "audio/verbes-064.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hda chwiya w tneffes",
+      "arabe": "هدا شوية و تنفس",
+      "fr": "Calme-toi un peu et respire",
+      "audio": "audio/verbes-064-ex.mp3"
     }
   },
   {
@@ -1032,13 +1032,13 @@
     "fr": "remercier",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "chker : « ch » de « chat ».",
     "audio": "audio/verbes-065.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chker lmodir 3la lmosa3ada",
+      "arabe": "شكر المدير على المساعدة",
+      "fr": "Il a remercié le directeur pour l'aide",
+      "audio": "audio/verbes-065-ex.mp3"
     }
   },
   {
@@ -1048,13 +1048,13 @@
     "fr": "excuser / pardonner",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "sme7 : souffle chaud (7).",
     "audio": "audio/verbes-066.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sme7 lia, ma 9setch",
+      "arabe": "سمح ليا، ما قصدتش",
+      "fr": "Pardonne-moi, je ne l'ai pas fait exprès",
+      "audio": "audio/verbes-066-ex.mp3"
     }
   },
   {
@@ -1064,13 +1064,13 @@
     "fr": "demander pardon",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "tleb s-sma-7a : souffle chaud (7).",
     "audio": "audio/verbes-067.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tleb ssma7a men khtek",
+      "arabe": "طلب السماحة من ختك",
+      "fr": "Demande pardon à ta sœur",
+      "audio": "audio/verbes-067-ex.mp3"
     }
   },
   {
@@ -1080,13 +1080,13 @@
     "fr": "promettre",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "w3ed : 3 serré.",
     "audio": "audio/verbes-068.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "w3edtek belli ghadi nji",
+      "arabe": "وعدتك بلي غادي نجي",
+      "fr": "Je t'ai promis que je viendrais",
+      "audio": "audio/verbes-068-ex.mp3"
     }
   },
   {
@@ -1096,13 +1096,13 @@
     "fr": "refuser",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "rfed : un « d » épais.",
     "audio": "audio/verbes-069.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "rfed lkhedma f kaza",
+      "arabe": "رفض الخدمة ف كازا",
+      "fr": "Il a refusé le travail à Casa",
+      "audio": "audio/verbes-069-ex.mp3"
     }
   },
   {
@@ -1112,13 +1112,13 @@
     "fr": "choisir",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "khtar : raclement (kh).",
     "audio": "audio/verbes-070.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khtar lloun lli 3jbek",
+      "arabe": "ختار اللون اللي عجبك",
+      "fr": "Choisis la couleur qui te plaît",
+      "audio": "audio/verbes-070-ex.mp3"
     }
   },
   {
@@ -1128,13 +1128,13 @@
     "fr": "décider",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "9er-rer : 9 profond, r doublé.",
     "audio": "audio/verbes-071.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "9errert nt3ellem ddarija",
+      "arabe": "قررت نتعلم الدارجة",
+      "fr": "J'ai décidé d'apprendre le darija",
+      "audio": "audio/verbes-071-ex.mp3"
     }
   },
   {
@@ -1144,13 +1144,13 @@
     "fr": "organiser",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ned-dem : « d » épais et doublé.",
     "audio": "audio/verbes-072.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "neddem l7efla dyal 3id lmilad",
+      "arabe": "نضم الحفلة ديال عيد الميلاد",
+      "fr": "Il a organisé la fête d'anniversaire",
+      "audio": "audio/verbes-072-ex.mp3"
     }
   },
   {
@@ -1160,13 +1160,13 @@
     "fr": "expliquer",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "chre7 : « ch » et 7.",
     "audio": "audio/verbes-073.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chre7 lia kifach nmchi",
+      "arabe": "شرح ليا كيفاش نمشي",
+      "fr": "Explique-moi comment y aller",
+      "audio": "audio/verbes-073-ex.mp3"
     }
   },
   {
@@ -1176,13 +1176,13 @@
     "fr": "montrer",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wer-ri : le r doublé.",
     "audio": "audio/verbes-074.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "werrini ttsawer dyal l3otla",
+      "arabe": "وريني التصاور ديال العطلة",
+      "fr": "Montre-moi les photos des vacances",
+      "audio": "audio/verbes-074-ex.mp3"
     }
   },
   {
@@ -1192,13 +1192,13 @@
     "fr": "vérifier",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "t2ek-ked : petit arrêt (2).",
     "audio": "audio/verbes-075.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "t2ekked men lbab 9bel ma tkhrej",
+      "arabe": "تأكد من الباب قبل ما تخرج",
+      "fr": "Vérifie la porte avant de sortir",
+      "audio": "audio/verbes-075-ex.mp3"
     }
   },
   {
@@ -1208,13 +1208,13 @@
     "fr": "construire",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bna : comme « bna ».",
     "audio": "audio/verbes-076.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bna ddar b yeddih",
+      "arabe": "بنى الدار بيديه",
+      "fr": "Il a construit la maison de ses mains",
+      "audio": "audio/verbes-076-ex.mp3"
     }
   },
   {
@@ -1224,13 +1224,13 @@
     "fr": "casser",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kes-ser : le « s » doublé.",
     "audio": "audio/verbes-077.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ksser lkas bla ma y9sed",
+      "arabe": "كسر الكاس بلا ما يقصد",
+      "fr": "Il a cassé le verre sans faire exprès",
+      "audio": "audio/verbes-077-ex.mp3"
     }
   },
   {
@@ -1240,13 +1240,13 @@
     "fr": "réparer",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "sel-le7 : un « s » épais, souffle chaud (7).",
     "audio": "audio/verbes-078.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "selle7 lia ttomobil 3afak",
+      "arabe": "صلح ليا الطوموبيل عافاك",
+      "fr": "Répare-moi la voiture, s'il te plaît",
+      "audio": "audio/verbes-078-ex.mp3"
     }
   },
   {
@@ -1256,13 +1256,13 @@
     "fr": "nettoyer",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "n9a : 9 profond.",
     "audio": "audio/verbes-079.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "n9a lbit 9bel ma yjiw ddyaf",
+      "arabe": "نقى البيت قبل ما يجيو الضياف",
+      "fr": "Nettoie la chambre avant que les invités arrivent",
+      "audio": "audio/verbes-079-ex.mp3"
     }
   },
   {
@@ -1272,13 +1272,13 @@
     "fr": "sécher",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ne-chef : « ch » de « chat ».",
     "audio": "audio/verbes-080.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nechef yeddik b lfouta",
+      "arabe": "نشف يديك بالفوطة",
+      "fr": "Sèche-toi les mains avec la serviette",
+      "audio": "audio/verbes-080-ex.mp3"
     }
   },
   {
@@ -1288,13 +1288,13 @@
     "fr": "ouvrir les yeux",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "7ell 3i-nik : 7 et 3.",
     "audio": "audio/verbes-081.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ell 3inik, wselna",
+      "arabe": "حل عينيك، وصلنا",
+      "fr": "Ouvre les yeux, nous sommes arrivés",
+      "audio": "audio/verbes-081-ex.mp3"
     }
   },
   {
@@ -1304,13 +1304,13 @@
     "fr": "fermer les yeux",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "sedd 3i-nik : 3 serré.",
     "audio": "audio/verbes-082.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sedd 3inik w n3es",
+      "arabe": "سد عينيك و نعس",
+      "fr": "Ferme les yeux et dors",
+      "audio": "audio/verbes-082-ex.mp3"
     }
   },
   {
@@ -1320,13 +1320,13 @@
     "fr": "réserver",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "re-zer-vi : comme « réserver ».",
     "audio": "audio/verbes-083.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khassna nrezerviw lotil",
+      "arabe": "خاصنا نريزيرفيو الأوطيل",
+      "fr": "Il faut qu'on réserve l'hôtel",
+      "audio": "audio/verbes-083-ex.mp3"
     }
   },
   {
@@ -1336,13 +1336,13 @@
     "fr": "annuler",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "lgha : « gh » grasseyé.",
     "audio": "audio/verbes-084.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lgha rrendez-vous dyalo",
+      "arabe": "لغى الروندي ڤو ديالو",
+      "fr": "Il a annulé son rendez-vous",
+      "audio": "audio/verbes-084-ex.mp3"
     }
   },
   {
@@ -1352,13 +1352,13 @@
     "fr": "signer",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "we-9e3 : 9 et 3.",
     "audio": "audio/verbes-085.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "we9e3 hna 3afak",
+      "arabe": "وقع هنا عافاك",
+      "fr": "Signez ici, s'il vous plaît",
+      "audio": "audio/verbes-085-ex.mp3"
     }
   },
   {
@@ -1368,13 +1368,13 @@
     "fr": "voter",
     "theme": "verbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "sow-wet : un « s » épais.",
     "audio": "audio/verbes-086.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sowwetna f lintikhabat",
+      "arabe": "صوتنا ف الانتخابات",
+      "fr": "Nous avons voté aux élections",
+      "audio": "audio/verbes-086-ex.mp3"
     }
   }
 ]

@@ -6,13 +6,13 @@
     "fr": "téléphone",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ti-li-foun : comme « téléphone ».",
     "audio": "audio/numerique-001.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttilifoun dyali tfa",
+      "arabe": "التيليفون ديالي طفا",
+      "fr": "Mon téléphone s'est éteint",
+      "audio": "audio/numerique-001-ex.mp3"
     }
   },
   {
@@ -22,13 +22,13 @@
     "fr": "téléphone portable",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "por-tabl : comme « portable ».",
     "audio": "audio/numerique-002.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nsit lportable f ttaxi",
+      "arabe": "نسيت البورطابل ف الطاكسي",
+      "fr": "J'ai oublié mon portable dans le taxi",
+      "audio": "audio/numerique-002-ex.mp3"
     }
   },
   {
@@ -38,13 +38,13 @@
     "fr": "smartphone",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "smart-fon : comme « smartphone ».",
     "audio": "audio/numerique-003.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrit smartfon jdid",
+      "arabe": "شريت سمارتفون جديد",
+      "fr": "J'ai acheté un nouveau smartphone",
+      "audio": "audio/numerique-003-ex.mp3"
     }
   },
   {
@@ -54,13 +54,13 @@
     "fr": "ordinateur",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "or-di-na-tor : comme « ordinateur ».",
     "audio": "audio/numerique-004.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lordinateur dyali bti2 bzaf",
+      "arabe": "الأورديناتور ديالي بطيء بزاف",
+      "fr": "Mon ordinateur est très lent",
+      "audio": "audio/numerique-004-ex.mp3"
     }
   },
   {
@@ -70,13 +70,13 @@
     "fr": "ordinateur portable",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "por-tabl pi-si : comme en français.",
     "audio": "audio/numerique-005.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kankhdem b portable PC f ddar",
+      "arabe": "كنخدم ب بورطابل بي سي ف الدار",
+      "fr": "Je travaille sur un ordinateur portable à la maison",
+      "audio": "audio/numerique-005-ex.mp3"
     }
   },
   {
@@ -86,13 +86,13 @@
     "fr": "tablette (numérique)",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ta-blet : comme « tablette ».",
     "audio": "audio/numerique-006.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddrari kaychoufo rsoum f ttablet",
+      "arabe": "الدراري كيشوفو رسوم ف الطابليت",
+      "fr": "Les enfants regardent des dessins animés sur la tablette",
+      "audio": "audio/numerique-006-ex.mp3"
     }
   },
   {
@@ -102,13 +102,13 @@
     "fr": "écran",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "e-kran : comme « écran ».",
     "audio": "audio/numerique-007.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lécran therres",
+      "arabe": "الإيكران تهرس",
+      "fr": "L'écran s'est cassé",
+      "audio": "audio/numerique-007-ex.mp3"
     }
   },
   {
@@ -118,13 +118,13 @@
     "fr": "clavier",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kla-vi : comme « clavier ».",
     "audio": "audio/numerique-008.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lklavi ma khddamch",
+      "arabe": "الكلافي ما خدامش",
+      "fr": "Le clavier ne marche pas",
+      "audio": "audio/numerique-008-ex.mp3"
     }
   },
   {
@@ -134,13 +134,13 @@
     "fr": "souris (informatique)",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sou-ri : comme « souris ».",
     "audio": "audio/numerique-009.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tfaddal, khdem b ssouris",
+      "arabe": "تفضل، خدم بالسوري",
+      "fr": "Tiens, utilise la souris",
+      "audio": "audio/numerique-009-ex.mp3"
     }
   },
   {
@@ -150,13 +150,13 @@
     "fr": "batterie",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ba-tri : comme « batterie ».",
     "audio": "audio/numerique-010.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbatri tsalat",
+      "arabe": "الباطري تسالات",
+      "fr": "La batterie est vide",
+      "audio": "audio/numerique-010-ex.mp3"
     }
   },
   {
@@ -166,13 +166,13 @@
     "fr": "chargeur",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "char-jor : « ch » de « chat ».",
     "audio": "audio/numerique-011.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndek chi chargeur?",
+      "arabe": "عندك شي شارجور؟",
+      "fr": "Tu as un chargeur ?",
+      "audio": "audio/numerique-011-ex.mp3"
     }
   },
   {
@@ -182,13 +182,13 @@
     "fr": "câble",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kabl : comme « câble ».",
     "audio": "audio/numerique-012.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lkabl 9sir bzaf",
+      "arabe": "الكابل قصير بزاف",
+      "fr": "Le câble est trop court",
+      "audio": "audio/numerique-012-ex.mp3"
     }
   },
   {
@@ -198,13 +198,13 @@
     "fr": "écouteurs",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kit d l-wed-nin : comme « kit ».",
     "audio": "audio/numerique-013.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nsit lkit d lwednin f ddar",
+      "arabe": "نسيت الكيت د الودنين ف الدار",
+      "fr": "J'ai oublié mes écouteurs à la maison",
+      "audio": "audio/numerique-013-ex.mp3"
     }
   },
   {
@@ -214,13 +214,13 @@
     "fr": "casque audio",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kask : comme « casque ».",
     "audio": "audio/numerique-014.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbes lcasque w sme3",
+      "arabe": "لبس الكاسك و سمع",
+      "fr": "Mets le casque et écoute",
+      "audio": "audio/numerique-014-ex.mp3"
     }
   },
   {
@@ -230,13 +230,13 @@
     "fr": "microphone",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mi-kro : comme « micro ».",
     "audio": "audio/numerique-015.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmikro ma khddamch f lvideo",
+      "arabe": "الميكرو ما خدامش ف الڤيديو",
+      "fr": "Le micro ne marche pas dans la vidéo",
+      "audio": "audio/numerique-015-ex.mp3"
     }
   },
   {
@@ -246,13 +246,13 @@
     "fr": "caméra",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ka-me-ra : comme « caméra ».",
     "audio": "audio/numerique-016.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayna kamera f lbab",
+      "arabe": "كاينة كاميرا ف الباب",
+      "fr": "Il y a une caméra à la porte",
+      "audio": "audio/numerique-016-ex.mp3"
     }
   },
   {
@@ -262,13 +262,13 @@
     "fr": "photo",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "tsw-i-ra : un « s » épais.",
     "audio": "audio/numerique-017.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sowwer lia tswira m3a lbe7r",
+      "arabe": "صور ليا تصويرة مع البحر",
+      "fr": "Prends-moi en photo avec la mer",
+      "audio": "audio/numerique-017-ex.mp3"
     }
   },
   {
@@ -278,13 +278,13 @@
     "fr": "vidéo",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "vi-de-o : comme « vidéo ».",
     "audio": "audio/numerique-018.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chouf had lvideo, mod7ik bzaf",
+      "arabe": "شوف هاد الڤيديو، مضحك بزاف",
+      "fr": "Regarde cette vidéo, elle est très drôle",
+      "audio": "audio/numerique-018-ex.mp3"
     }
   },
   {
@@ -294,13 +294,13 @@
     "fr": "musique",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mou-si-9a : 9 profond.",
     "audio": "audio/numerique-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kansme3 lmousi9a f ttri9",
+      "arabe": "كنسمع الموسيقى ف الطريق",
+      "fr": "J'écoute de la musique en route",
+      "audio": "audio/numerique-019-ex.mp3"
     }
   },
   {
@@ -310,13 +310,13 @@
     "fr": "chanson",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ghni-ya : « gh » grasseyé.",
     "audio": "audio/numerique-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had lghniya zwina bzaf",
+      "arabe": "هاد الغنية زوينة بزاف",
+      "fr": "Cette chanson est très belle",
+      "audio": "audio/numerique-020-ex.mp3"
     }
   },
   {
@@ -326,13 +326,13 @@
     "fr": "application",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "a-pli-ka-syon : comme « application ».",
     "audio": "audio/numerique-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nzzel had laplikasyon",
+      "arabe": "نزل هاد الأبليكاسيون",
+      "fr": "Télécharge cette application",
+      "audio": "audio/numerique-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "site internet",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sit : comme « site ».",
     "audio": "audio/numerique-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chouf ssit dyal lmetro",
+      "arabe": "شوف السيت ديال الميطرو",
+      "fr": "Regarde le site du métro",
+      "audio": "audio/numerique-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "internet",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "in-ter-net : comme « internet ».",
     "audio": "audio/numerique-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma kaynch l2internet f had lblasa",
+      "arabe": "ما كاينش الأنترنيت ف هاد البلاصة",
+      "fr": "Il n'y a pas internet à cet endroit",
+      "audio": "audio/numerique-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "réseau",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "re-zo : comme « réseau ».",
     "audio": "audio/numerique-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma kaynch rrézo hna",
+      "arabe": "ما كاينش الريزو هنا",
+      "fr": "Il n'y a pas de réseau ici",
+      "audio": "audio/numerique-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "wi-fi",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "wi-fi : comme « wifi ».",
     "audio": "audio/numerique-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ch7al lcode dyal lwifi?",
+      "arabe": "شحال الكود ديال الويفي؟",
+      "fr": "C'est quoi le code du wifi ?",
+      "audio": "audio/numerique-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "mot de passe",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kod si-kri : comme « code secret ».",
     "audio": "audio/numerique-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nsit lcode secret dyali",
+      "arabe": "نسيت الكود سيكري ديالي",
+      "fr": "J'ai oublié mon mot de passe",
+      "audio": "audio/numerique-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "compte (numérique)",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kont : comme « compte ».",
     "audio": "audio/numerique-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ell compte jdid",
+      "arabe": "حل كونط جديد",
+      "fr": "Ouvre un nouveau compte",
+      "audio": "audio/numerique-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "connexion",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ko-nek-syon : comme « connexion ».",
     "audio": "audio/numerique-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lconnexion d3ifa bzaf",
+      "arabe": "الكونيكسيون ضعيفة بزاف",
+      "fr": "La connexion est très faible",
+      "audio": "audio/numerique-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "fichier",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "fi-chi : « ch » de « chat ».",
     "audio": "audio/numerique-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sift lia lfichiy f limil",
+      "arabe": "صيفط ليا الفيشي ف الإيميل",
+      "fr": "Envoie-moi le fichier par mail",
+      "audio": "audio/numerique-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "dossier informatique",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "dos-si : comme « dossier ».",
     "audio": "audio/numerique-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ett ttsawer f wa7ed ddossi",
+      "arabe": "حط التصاور ف واحد الدوسي",
+      "fr": "Mets les photos dans un dossier",
+      "audio": "audio/numerique-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "lien",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "lyan : comme « lien ».",
     "audio": "audio/numerique-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sift lia llien f lwhatsapp",
+      "arabe": "صيفط ليا الليان ف الواتساب",
+      "fr": "Envoie-moi le lien sur WhatsApp",
+      "audio": "audio/numerique-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "télécharger",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "te-le-char-ji : « ch » de « chat ».",
     "audio": "audio/numerique-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghadi ntelecharger lfilm",
+      "arabe": "غادي نتيليشارجي الفيلم",
+      "fr": "Je vais télécharger le film",
+      "audio": "audio/numerique-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "envoyer",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sift : un « s » épais.",
     "audio": "audio/numerique-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sift lia lmesaj daba",
+      "arabe": "صيفط ليا الميساج دابا",
+      "fr": "Envoie-moi le message maintenant",
+      "audio": "audio/numerique-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "recevoir",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "tous-sel : le « s » doublé.",
     "audio": "audio/numerique-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "twesselt b lflous?",
+      "arabe": "توصلت بالفلوس؟",
+      "fr": "Tu as reçu l'argent ?",
+      "audio": "audio/numerique-034-ex.mp3"
     }
   },
   {
@@ -550,13 +550,13 @@
     "fr": "partager",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "par-ta-ji : comme « partager ».",
     "audio": "audio/numerique-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "partaji had ttswira m3a l3a2ila",
+      "arabe": "بارطاجي هاد التصويرة مع العائلة",
+      "fr": "Partage cette photo avec la famille",
+      "audio": "audio/numerique-035-ex.mp3"
     }
   },
   {
@@ -566,13 +566,13 @@
     "fr": "copier",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ko-pi-ye : comme « copier ».",
     "audio": "audio/numerique-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "copier ladresse w sifteha",
+      "arabe": "كوبيي لادريس و صيفطها",
+      "fr": "Copie l'adresse et envoie-la",
+      "audio": "audio/numerique-036-ex.mp3"
     }
   },
   {
@@ -582,13 +582,13 @@
     "fr": "coller",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ko-li : comme « coller ».",
     "audio": "audio/numerique-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "coller lmessage hna",
+      "arabe": "كولي الميساج هنا",
+      "fr": "Colle le message ici",
+      "audio": "audio/numerique-037-ex.mp3"
     }
   },
   {
@@ -598,13 +598,13 @@
     "fr": "cliquer",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kli-ki : comme « cliquer ».",
     "audio": "audio/numerique-038.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kliki 3la had lbouton",
+      "arabe": "كليكي على هاد البوطون",
+      "fr": "Clique sur ce bouton",
+      "audio": "audio/numerique-038-ex.mp3"
     }
   },
   {
@@ -614,13 +614,13 @@
     "fr": "ouvrir",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7ell : souffle chaud (7), « l » doublé.",
     "audio": "audio/numerique-039.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ell lfichiy lli siftt lik",
+      "arabe": "حل الفيشي اللي صيفطت ليك",
+      "fr": "Ouvre le fichier que je t'ai envoyé",
+      "audio": "audio/numerique-039-ex.mp3"
     }
   },
   {
@@ -630,13 +630,13 @@
     "fr": "fermer",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sedd : un « s » épais, « d » doublé.",
     "audio": "audio/numerique-040.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sedd laplikasyon w 3awed",
+      "arabe": "سد الأبليكاسيون و عاود",
+      "fr": "Ferme l'application et recommence",
+      "audio": "audio/numerique-040-ex.mp3"
     }
   },
   {
@@ -646,13 +646,13 @@
     "fr": "effacer",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mse7 : souffle chaud (7) à la fin.",
     "audio": "audio/numerique-041.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mse7 had ttswira 3afak",
+      "arabe": "مسح هاد التصويرة عافاك",
+      "fr": "Efface cette photo, s'il te plaît",
+      "audio": "audio/numerique-041-ex.mp3"
     }
   },
   {
@@ -662,13 +662,13 @@
     "fr": "supprimer",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sou-pri-mi : comme « supprimer ».",
     "audio": "audio/numerique-042.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "supprimer lmesaj l9dim",
+      "arabe": "سوبريمي الميساج القديم",
+      "fr": "Supprime l'ancien message",
+      "audio": "audio/numerique-042-ex.mp3"
     }
   },
   {
@@ -678,13 +678,13 @@
     "fr": "enregistrer",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "saj-jel : le « j » doublé.",
     "audio": "audio/numerique-043.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sajjel nnmra dyali",
+      "arabe": "سجل النمرة ديالي",
+      "fr": "Enregistre mon numéro",
+      "audio": "audio/numerique-043-ex.mp3"
     }
   },
   {
@@ -694,13 +694,13 @@
     "fr": "chercher",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9el-leb : 9 profond, « l » doublé.",
     "audio": "audio/numerique-044.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "9elleb 3la lkharita f google",
+      "arabe": "قلب على الخريطة ف گوگل",
+      "fr": "Cherche la carte sur Google",
+      "audio": "audio/numerique-044-ex.mp3"
     }
   },
   {
@@ -710,13 +710,13 @@
     "fr": "trouver",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l9a : 9 profond.",
     "audio": "audio/numerique-045.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l9a ttilifoun dyalo f lkornich",
+      "arabe": "لقى التيليفون ديالو ف الكورنيش",
+      "fr": "Il a trouvé son téléphone sur la corniche",
+      "audio": "audio/numerique-045-ex.mp3"
     }
   },
   {
@@ -726,13 +726,13 @@
     "fr": "appeler / téléphoner",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "3a-yet : le 3 serré.",
     "audio": "audio/numerique-046.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ayet lia mlli twsel",
+      "arabe": "عيط ليا ملي توصل",
+      "fr": "Appelle-moi quand tu arrives",
+      "audio": "audio/numerique-046-ex.mp3"
     }
   },
   {
@@ -742,13 +742,13 @@
     "fr": "répondre",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "jawb : comme « djawb ».",
     "audio": "audio/numerique-047.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ayett lih walakin ma jawbch",
+      "arabe": "عيطت ليه ولكن ما جاوبش",
+      "fr": "Je l'ai appelé mais il n'a pas répondu",
+      "audio": "audio/numerique-047-ex.mp3"
     }
   },
   {
@@ -758,13 +758,13 @@
     "fr": "écouter / entendre",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sme3 : le 3 serré à la fin.",
     "audio": "audio/numerique-048.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sme3 had lvokal",
+      "arabe": "سمع هاد الڤوكال",
+      "fr": "Écoute ce message vocal",
+      "audio": "audio/numerique-048-ex.mp3"
     }
   },
   {
@@ -774,13 +774,13 @@
     "fr": "parler",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "hder : « h » expiré.",
     "audio": "audio/numerique-049.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hder m3a lwalida f ttilifoun",
+      "arabe": "هضر مع الوالدة ف التيليفون",
+      "fr": "Il a parlé avec sa mère au téléphone",
+      "audio": "audio/numerique-049-ex.mp3"
     }
   },
   {
@@ -790,13 +790,13 @@
     "fr": "discussion",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "hed-ra : « h » expiré.",
     "audio": "audio/numerique-050.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lhedra m3ak zwina",
+      "arabe": "الهضرة معاك زوينة",
+      "fr": "C'est agréable de discuter avec toi",
+      "audio": "audio/numerique-050-ex.mp3"
     }
   },
   {
@@ -806,13 +806,13 @@
     "fr": "information",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ma3-lou-ma : le 3 serré.",
     "audio": "audio/numerique-051.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndi wa7ed lma3louma mohima",
+      "arabe": "عندي واحد المعلومة مهمة",
+      "fr": "J'ai une information importante",
+      "audio": "audio/numerique-051-ex.mp3"
     }
   },
   {
@@ -822,13 +822,13 @@
     "fr": "nouvelle (information)",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kha-bar : raclement (kh).",
     "audio": "audio/numerique-052.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sme3ti lkhabar?",
+      "arabe": "سمعتي الخبر؟",
+      "fr": "Tu as entendu la nouvelle ?",
+      "audio": "audio/numerique-052-ex.mp3"
     }
   },
   {
@@ -838,13 +838,13 @@
     "fr": "réseaux sociaux",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "re-zo sos-yo : comme « réseaux sociaux ».",
     "audio": "audio/numerique-053.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kaydouz lw9t f rrézo sosyo",
+      "arabe": "كيدوز الوقت ف الريزو سوسيو",
+      "fr": "Il passe son temps sur les réseaux sociaux",
+      "audio": "audio/numerique-053-ex.mp3"
     }
   },
   {
@@ -854,13 +854,13 @@
     "fr": "message vocal",
     "theme": "numerique",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "vo-kal : comme « vocal ».",
     "audio": "audio/numerique-054.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sift lia vokal, ma kan9derch nkteb",
+      "arabe": "صيفط ليا ڤوكال، ما كنقدرش نكتب",
+      "fr": "Envoie-moi un vocal, je ne peux pas écrire",
+      "audio": "audio/numerique-054-ex.mp3"
     }
   }
 ]

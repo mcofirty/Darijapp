@@ -6,13 +6,13 @@
     "fr": "santé",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "s-se-7a : un « s » épais, souffle chaud (7).",
     "audio": "audio/sante-001.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sse7a hiya kolchi",
+      "arabe": "الصحة هي كلشي",
+      "fr": "La santé, c'est tout",
+      "audio": "audio/sante-001-ex.mp3"
     }
   },
   {
@@ -22,13 +22,13 @@
     "fr": "maladie",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l-merd : un « d » épais.",
     "audio": "audio/sante-002.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmerd ma kaykhtarch lwa9t",
+      "arabe": "المرض ما كيختارش الوقت",
+      "fr": "La maladie ne choisit pas son moment",
+      "audio": "audio/sante-002-ex.mp3"
     }
   },
   {
@@ -38,13 +38,13 @@
     "fr": "malade (homme)",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "mrid : le r roulé.",
     "audio": "audio/sante-003.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana mrid lyom, ma ghadich nkhdem",
+      "arabe": "أنا مريض اليوم، ما غاديش نخدم",
+      "fr": "Je suis malade aujourd'hui, je ne travaille pas",
+      "audio": "audio/sante-003-ex.mp3"
     }
   },
   {
@@ -54,13 +54,13 @@
     "fr": "malade (femme)",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "mri-da : le r roulé.",
     "audio": "audio/sante-004.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khti mrida, khassha tbib",
+      "arabe": "ختي مريضة، خاصها طبيب",
+      "fr": "Ma sœur est malade, il lui faut un médecin",
+      "audio": "audio/sante-004-ex.mp3"
     }
   },
   {
@@ -70,13 +70,13 @@
     "fr": "médecin",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "tbib : un « t » épais.",
     "audio": "audio/sante-005.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mchit l ttbib lbare7",
+      "arabe": "مشيت ل الطبيب البارح",
+      "fr": "Je suis allé chez le médecin hier",
+      "audio": "audio/sante-005-ex.mp3"
     }
   },
   {
@@ -86,13 +86,13 @@
     "fr": "médecin (femme)",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "tbi-ba : un « t » épais.",
     "audio": "audio/sante-006.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttbiba driyfa bzaf",
+      "arabe": "الطبيبة ضريفة بزاف",
+      "fr": "La médecin est très gentille",
+      "audio": "audio/sante-006-ex.mp3"
     }
   },
   {
@@ -102,13 +102,13 @@
     "fr": "hôpital",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "sbi-tar : un « s » épais.",
     "audio": "audio/sante-007.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddawh l ssbitar f lambulans",
+      "arabe": "داوه ل السبيطار ف لامبولانس",
+      "fr": "Ils l'ont emmené à l'hôpital en ambulance",
+      "audio": "audio/sante-007-ex.mp3"
     }
   },
   {
@@ -118,13 +118,13 @@
     "fr": "pharmacie",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "far-ma-siya : comme « pharmacie ».",
     "audio": "audio/sante-008.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fin kayna chi farmasiya ma7loula?",
+      "arabe": "فين كاينة شي فارماسيا محلولة؟",
+      "fr": "Où y a-t-il une pharmacie ouverte ?",
+      "audio": "audio/sante-008-ex.mp3"
     }
   },
   {
@@ -134,13 +134,13 @@
     "fr": "médicament",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "dwa : comme « doua ».",
     "audio": "audio/sante-009.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chreb had ddwa jouj mrat f nhar",
+      "arabe": "شرب هاد الدوا جوج مرات ف النهار",
+      "fr": "Prends ce médicament deux fois par jour",
+      "audio": "audio/sante-009-ex.mp3"
     }
   },
   {
@@ -150,13 +150,13 @@
     "fr": "douleur",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l-wej3 : le 3 serré à la fin.",
     "audio": "audio/sante-010.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lwej3 ma bghach ytsala",
+      "arabe": "الوجع ما بغاش يتسالا",
+      "fr": "La douleur ne veut pas partir",
+      "audio": "audio/sante-010-ex.mp3"
     }
   },
   {
@@ -166,13 +166,13 @@
     "fr": "j'ai mal",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "kay-wje3-ni : le 3 serré.",
     "audio": "audio/sante-011.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kaywje3ni hna",
+      "arabe": "كيوجعني هنا",
+      "fr": "J'ai mal ici",
+      "audio": "audio/sante-011-ex.mp3"
     }
   },
   {
@@ -182,13 +182,13 @@
     "fr": "j'ai mal à la tête",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "kay-wje3-ni ra-si : le 3 serré.",
     "audio": "audio/sante-012.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kaywje3ni rasi men ssba7",
+      "arabe": "كيوجعني راسي من الصباح",
+      "fr": "J'ai mal à la tête depuis ce matin",
+      "audio": "audio/sante-012-ex.mp3"
     }
   },
   {
@@ -198,13 +198,13 @@
     "fr": "j'ai mal au ventre",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "kat-wje3-ni ker-chi : 3 et « ch ».",
     "audio": "audio/sante-013.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "katwje3ni kerchi men lmakla",
+      "arabe": "كتوجعني كرشي من الماكلة",
+      "fr": "J'ai mal au ventre à cause de la nourriture",
+      "audio": "audio/sante-013-ex.mp3"
     }
   },
   {
@@ -214,13 +214,13 @@
     "fr": "j'ai de la fièvre",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3n-di s-skha-na : 3 et « kh ».",
     "audio": "audio/sante-014.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndi sskhana, ghadi nb9a f ddar",
+      "arabe": "عندي السخانة، غادي نبقى ف الدار",
+      "fr": "J'ai de la fièvre, je vais rester à la maison",
+      "audio": "audio/sante-014-ex.mp3"
     }
   },
   {
@@ -230,13 +230,13 @@
     "fr": "fièvre / chaleur",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "skha-na : raclement (kh).",
     "audio": "audio/sante-015.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "skhana dyal lweld tal3a",
+      "arabe": "سخانة ديال الولد طالعة",
+      "fr": "La fièvre du petit monte",
+      "audio": "audio/sante-015-ex.mp3"
     }
   },
   {
@@ -246,13 +246,13 @@
     "fr": "rhume",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "zek-kam : le « k » doublé.",
     "audio": "audio/sante-016.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chedditi zzekkam men lberd",
+      "arabe": "شديتي الزكام من البرد",
+      "fr": "Tu as attrapé un rhume à cause du froid",
+      "audio": "audio/sante-016-ex.mp3"
     }
   },
   {
@@ -262,13 +262,13 @@
     "fr": "toux",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ke-7a : souffle chaud (7).",
     "audio": "audio/sante-017.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndi ke7a w sskhana",
+      "arabe": "عندي كحة و السخانة",
+      "fr": "J'ai de la toux et de la fièvre",
+      "audio": "audio/sante-017-ex.mp3"
     }
   },
   {
@@ -278,13 +278,13 @@
     "fr": "allergie",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "7as-sa-siya : souffle chaud (7).",
     "audio": "audio/sante-018.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndi 7assasiya f rrbi3",
+      "arabe": "عندي حساسية ف الربيع",
+      "fr": "J'ai des allergies au printemps",
+      "audio": "audio/sante-018-ex.mp3"
     }
   },
   {
@@ -294,13 +294,13 @@
     "fr": "blessure",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "jer7 : souffle chaud (7) à la fin.",
     "audio": "audio/sante-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ljer7 sghir, ma t9le9ch",
+      "arabe": "الجرح صغير، ما تقلقش",
+      "fr": "La blessure est petite, ne t'inquiète pas",
+      "audio": "audio/sante-019-ex.mp3"
     }
   },
   {
@@ -310,13 +310,13 @@
     "fr": "pansement",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ban-se-man : comme « pansement ».",
     "audio": "audio/sante-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ett bansman 3la ljer7",
+      "arabe": "حط بانسمان على الجرح",
+      "fr": "Mets un pansement sur la blessure",
+      "audio": "audio/sante-020-ex.mp3"
     },
     "note": "Emprunt courant"
   },
@@ -327,13 +327,13 @@
     "fr": "fatigue",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l3-ya : le 3 serré.",
     "audio": "audio/sante-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l3ya mn lkhedma bzaf",
+      "arabe": "العيا من الخدمة بزاف",
+      "fr": "Beaucoup de fatigue à cause du travail",
+      "audio": "audio/sante-021-ex.mp3"
     }
   },
   {
@@ -343,13 +343,13 @@
     "fr": "fatigué",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3yan : le 3 serré.",
     "audio": "audio/sante-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana 3yan bzaf, bghit n3es",
+      "arabe": "أنا عيان بزاف، بغيت نعس",
+      "fr": "Je suis très fatigué, je veux dormir",
+      "audio": "audio/sante-022-ex.mp3"
     }
   },
   {
@@ -359,13 +359,13 @@
     "fr": "urgence / urgent",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "mos-ta3-jil : 3 serré.",
     "audio": "audio/sante-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hadchi mosta3jil, 3ayet l ttbib",
+      "arabe": "هادشي مستعجل، عيط ل الطبيب",
+      "fr": "C'est urgent, appelle le médecin",
+      "audio": "audio/sante-023-ex.mp3"
     }
   },
   {
@@ -375,13 +375,13 @@
     "fr": "ambulance",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "am-bou-lans : comme « ambulance ».",
     "audio": "audio/sante-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ayet 3la ambulans daba!",
+      "arabe": "عيط على أمبولانس دابا!",
+      "fr": "Appelle une ambulance maintenant !",
+      "audio": "audio/sante-024-ex.mp3"
     }
   },
   {
@@ -391,13 +391,13 @@
     "fr": "aide",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l3awn : 3 serré.",
     "audio": "audio/sante-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khassna l3awn hna!",
+      "arabe": "خاصنا العون هنا!",
+      "fr": "Nous avons besoin d'aide ici !",
+      "audio": "audio/sante-025-ex.mp3"
     }
   },
   {
@@ -407,13 +407,13 @@
     "fr": "au secours !",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3aw-nou-ni : 3 serré.",
     "audio": "audio/sante-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3awnouni, 3afakom!",
+      "arabe": "عاونوني، عافاكم!",
+      "fr": "Au secours, s'il vous plaît !",
+      "audio": "audio/sante-026-ex.mp3"
     }
   },
   {
@@ -423,13 +423,13 @@
     "fr": "j'ai faim",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "fi-ya jou3 : 3 serré à la fin.",
     "audio": "audio/sante-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fiya jou3, ma kliti walou",
+      "arabe": "فيا جوع، ما كليت والو",
+      "fr": "J'ai faim, je n'ai rien mangé",
+      "audio": "audio/sante-027-ex.mp3"
     }
   },
   {
@@ -439,13 +439,13 @@
     "fr": "j'ai soif",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "fi-ya l3-tech : 3 et « ch ».",
     "audio": "audio/sante-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fiya l3tech, 3tini lma",
+      "arabe": "فيا العطش، عطيني الما",
+      "fr": "J'ai soif, donne-moi de l'eau",
+      "audio": "audio/sante-028-ex.mp3"
     }
   },
   {
@@ -455,13 +455,13 @@
     "fr": "j'ai sommeil",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "fi-ya n3as : 3 serré.",
     "audio": "audio/sante-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fiya n3as, ghadi n3es",
+      "arabe": "فيا النعاس، غادي نعس",
+      "fr": "J'ai sommeil, je vais dormir",
+      "audio": "audio/sante-029-ex.mp3"
     }
   },
   {
@@ -471,13 +471,13 @@
     "fr": "je suis malade (dit par un homme)",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "a-na mrid : le r roulé.",
     "audio": "audio/sante-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana mrid, ma n9derch nji",
+      "arabe": "أنا مريض، ما نقدرش نجي",
+      "fr": "Je suis malade, je ne peux pas venir",
+      "audio": "audio/sante-030-ex.mp3"
     }
   },
   {
@@ -487,13 +487,13 @@
     "fr": "je vais mieux",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "wel-lit 7sen : souffle chaud (7).",
     "audio": "audio/sante-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7amdollah, wellit 7sen lyom",
+      "arabe": "الحمد لله، وليت حسن اليوم",
+      "fr": "Dieu merci, je vais mieux aujourd'hui",
+      "audio": "audio/sante-031-ex.mp3"
     }
   },
   {
@@ -503,13 +503,13 @@
     "fr": "repose-toi / se reposer",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "rta7 : souffle chaud (7).",
     "audio": "audio/sante-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "rta7 chwiya, nta 3yan",
+      "arabe": "رتاح شوية، نتا عيان",
+      "fr": "Repose-toi un peu, tu es fatigué",
+      "audio": "audio/sante-032-ex.mp3"
     }
   },
   {
@@ -519,13 +519,13 @@
     "fr": "prends soin de toi",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "redd ba-lek 3la ra-sek : 3 serré.",
     "audio": "audio/sante-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bslama, redd balek 3la rasek",
+      "arabe": "بسلامة، رد بالك على راسك",
+      "fr": "Au revoir, prends soin de toi",
+      "audio": "audio/sante-033-ex.mp3"
     }
   },
   {
@@ -535,13 +535,13 @@
     "fr": "je suis allergique à...",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3n-di l7as-sa-siya men : 3 et 7.",
     "audio": "audio/sante-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndi l7assasiya men l7lib",
+      "arabe": "عندي الحساسية من الحليب",
+      "fr": "Je suis allergique au lait",
+      "audio": "audio/sante-034-ex.mp3"
     }
   },
   {
@@ -551,13 +551,13 @@
     "fr": "où est l'hôpital ?",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "fin kayn sbi-tar : un « s » épais.",
     "audio": "audio/sante-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fin kayn sbitar 9rib men hna?",
+      "arabe": "فين كاين سبيطار قريب من هنا؟",
+      "fr": "Où y a-t-il un hôpital près d'ici ?",
+      "audio": "audio/sante-035-ex.mp3"
     }
   },
   {
@@ -567,13 +567,13 @@
     "fr": "il me faut un médecin",
     "theme": "sante",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "khas-ni tbib : raclement (kh).",
     "audio": "audio/sante-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khasni tbib daba, kaywje3ni sderi",
+      "arabe": "خاصني طبيب دابا، كيوجعني صدري",
+      "fr": "Il me faut un médecin maintenant, j'ai mal à la poitrine",
+      "audio": "audio/sante-036-ex.mp3"
     }
   }
 ]

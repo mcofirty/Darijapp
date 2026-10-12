@@ -6,13 +6,13 @@
     "fr": "travail / emploi",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "khed-ma : raclement (kh) au début.",
     "audio": "audio/travail-001.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l9it khedma jdida f rbat",
+      "arabe": "لقيت خدمة جديدة ف الرباط",
+      "fr": "J'ai trouvé un nouveau travail à Rabat",
+      "audio": "audio/travail-001-ex.mp3"
     }
   },
   {
@@ -22,13 +22,13 @@
     "fr": "travailler",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "khdem : raclement (kh) au début.",
     "audio": "audio/travail-002.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khdem bzaf had simana",
+      "arabe": "خدم بزاف هاد السيمانة",
+      "fr": "Il a beaucoup travaillé cette semaine",
+      "audio": "audio/travail-002-ex.mp3"
     }
   },
   {
@@ -38,13 +38,13 @@
     "fr": "métier",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7er-fa : souffle chaud (7).",
     "audio": "audio/travail-003.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lnjara 7erfa zwina",
+      "arabe": "النجارة حرفة زوينة",
+      "fr": "La menuiserie est un beau métier",
+      "audio": "audio/travail-003-ex.mp3"
     }
   },
   {
@@ -54,13 +54,13 @@
     "fr": "entreprise",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "che-ri-ka : « ch » de « chat ».",
     "audio": "audio/travail-004.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lcherika dyalna kbira",
+      "arabe": "الشركة ديالنا كبيرة",
+      "fr": "Notre entreprise est grande",
+      "audio": "audio/travail-004-ex.mp3"
     }
   },
   {
@@ -70,13 +70,13 @@
     "fr": "bureau",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "bi-ro : comme « bureau ».",
     "audio": "audio/travail-005.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbiro f ttabe9 ttalet",
+      "arabe": "البيرو ف الطابق التالت",
+      "fr": "Le bureau est au troisième étage",
+      "audio": "audio/travail-005-ex.mp3"
     }
   },
   {
@@ -86,13 +86,13 @@
     "fr": "employé",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mo-wad-daf : le « d » épais et doublé.",
     "audio": "audio/travail-006.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "howa mowaddaf f lbank",
+      "arabe": "هو موظف ف البانك",
+      "fr": "Il est employé à la banque",
+      "audio": "audio/travail-006-ex.mp3"
     }
   },
   {
@@ -102,13 +102,13 @@
     "fr": "patron",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "moul che-ri-ka : « ch » de « chat ».",
     "audio": "audio/travail-007.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "moul cherika ja lyom",
+      "arabe": "مول الشركة جا اليوم",
+      "fr": "Le patron est venu aujourd'hui",
+      "audio": "audio/travail-007-ex.mp3"
     }
   },
   {
@@ -118,13 +118,13 @@
     "fr": "responsable",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mas2-oul : petit arrêt (2).",
     "audio": "audio/travail-008.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chkon lmas2oul hna?",
+      "arabe": "شكون المسؤول هنا؟",
+      "fr": "Qui est le responsable ici ?",
+      "audio": "audio/travail-008-ex.mp3"
     }
   },
   {
@@ -134,13 +134,13 @@
     "fr": "collègue",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "zmil : comme « zmil ».",
     "audio": "audio/travail-009.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "zmili f lkhedma driyef",
+      "arabe": "زميلي ف الخدمة ضريف",
+      "fr": "Mon collègue au travail est gentil",
+      "audio": "audio/travail-009-ex.mp3"
     }
   },
   {
@@ -150,13 +150,13 @@
     "fr": "équipe",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "fa-ri9 : 9 profond à la fin.",
     "audio": "audio/travail-010.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lfari9 dyalna khdem mzyan",
+      "arabe": "الفريق ديالنا خدم مزيان",
+      "fr": "Notre équipe a bien travaillé",
+      "audio": "audio/travail-010-ex.mp3"
     }
   },
   {
@@ -166,13 +166,13 @@
     "fr": "réunion",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ij-ti-ma3 : le 3 serré à la fin.",
     "audio": "audio/travail-011.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lijtima3 ghadi ybda f l3achra",
+      "arabe": "الاجتماع غادي يبدا ف العشرة",
+      "fr": "La réunion commence à dix heures",
+      "audio": "audio/travail-011-ex.mp3"
     }
   },
   {
@@ -182,13 +182,13 @@
     "fr": "rendez-vous",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mow-3id : le 3 serré.",
     "audio": "audio/travail-012.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndi mow3id m3a lmodir",
+      "arabe": "عندي موعد مع المدير",
+      "fr": "J'ai rendez-vous avec le directeur",
+      "audio": "audio/travail-012-ex.mp3"
     }
   },
   {
@@ -198,13 +198,13 @@
     "fr": "projet",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mach-rou3 : « ch » puis 3 serré.",
     "audio": "audio/travail-013.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bdina wa7ed lmachrou3 jdid",
+      "arabe": "بدينا واحد المشروع جديد",
+      "fr": "Nous avons commencé un nouveau projet",
+      "audio": "audio/travail-013-ex.mp3"
     }
   },
   {
@@ -214,13 +214,13 @@
     "fr": "objectif",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ha-daf : « h » expiré.",
     "audio": "audio/travail-014.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lhadaf dyali n9ra f lkharij",
+      "arabe": "الهدف ديالي نقرا ف الخارج",
+      "fr": "Mon objectif est d'étudier à l'étranger",
+      "audio": "audio/travail-014-ex.mp3"
     }
   },
   {
@@ -230,13 +230,13 @@
     "fr": "résultat",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "na-ti-ja : comme « natidja ».",
     "audio": "audio/travail-015.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nnatija dyal lemti7an kharja ghedda",
+      "arabe": "النتيجة ديال الامتحان خارجة غدا",
+      "fr": "Le résultat de l'examen sort demain",
+      "audio": "audio/travail-015-ex.mp3"
     }
   },
   {
@@ -246,13 +246,13 @@
     "fr": "vente",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l-bi3 : le 3 serré à la fin.",
     "audio": "audio/travail-016.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbi3 tla3 had chher",
+      "arabe": "البيع طلع هاد الشهر",
+      "fr": "Les ventes ont augmenté ce mois-ci",
+      "audio": "audio/travail-016-ex.mp3"
     }
   },
   {
@@ -262,13 +262,13 @@
     "fr": "contrat",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "3a9d : 3 serré, 9 profond.",
     "audio": "audio/travail-017.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sennit l3a9d lbare7",
+      "arabe": "سنيت العقد البارح",
+      "fr": "J'ai signé le contrat hier",
+      "audio": "audio/travail-017-ex.mp3"
     }
   },
   {
@@ -278,13 +278,13 @@
     "fr": "salaire",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "khol-sa : raclement (kh).",
     "audio": "audio/travail-018.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lkholsa katji f lekher d chher",
+      "arabe": "الخلصة كتجي ف اللخر د الشهر",
+      "fr": "Le salaire arrive à la fin du mois",
+      "audio": "audio/travail-018-ex.mp3"
     }
   },
   {
@@ -294,13 +294,13 @@
     "fr": "formation",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "tak-win : l'accent sur « win ».",
     "audio": "audio/travail-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndi takwin f lanformatik",
+      "arabe": "عندي تكوين ف لانفورماتيك",
+      "fr": "J'ai une formation en informatique",
+      "audio": "audio/travail-019-ex.mp3"
     }
   },
   {
@@ -310,13 +310,13 @@
     "fr": "compétence",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ma-ha-rat : « h » expiré.",
     "audio": "audio/travail-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khassek tzid f lmaharat dyalek",
+      "arabe": "خاصك تزيد ف المهارات ديالك",
+      "fr": "Tu dois développer tes compétences",
+      "audio": "audio/travail-020-ex.mp3"
     }
   },
   {
@@ -326,13 +326,13 @@
     "fr": "expérience",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "taj-ri-ba : comme « tadjriba ».",
     "audio": "audio/travail-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndi tajriba dyal khems snin",
+      "arabe": "عندي تجربة ديال خمس سنين",
+      "fr": "J'ai cinq ans d'expérience",
+      "audio": "audio/travail-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "recrutement",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "taw-dif : un « d » épais.",
     "audio": "audio/travail-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayn tawdif f lcherika",
+      "arabe": "كاين توظيف ف الشركة",
+      "fr": "Il y a du recrutement dans l'entreprise",
+      "audio": "audio/travail-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "entretien d'embauche",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mo-9a-ba-la d l-khed-ma : 9 et « kh ».",
     "audio": "audio/travail-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndi mo9abala d lkhedma ghedda",
+      "arabe": "عندي مقابلة د الخدمة غدا",
+      "fr": "J'ai un entretien d'embauche demain",
+      "audio": "audio/travail-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "vacances",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "3ot-la : le 3 serré.",
     "audio": "audio/travail-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l3otla dyali f ghocht",
+      "arabe": "العطلة ديالي ف غشت",
+      "fr": "Mes vacances sont en août",
+      "audio": "audio/travail-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "congé",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kon-ji : comme « congé ».",
     "audio": "audio/travail-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khdit congé dyal simana",
+      "arabe": "خديت كونجي ديال سيمانة",
+      "fr": "J'ai pris une semaine de congé",
+      "audio": "audio/travail-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "pause",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ra-7a : souffle chaud (7).",
     "audio": "audio/travail-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khdina ra7a dyal noss sa3a",
+      "arabe": "خدينا راحة ديال نص ساعة",
+      "fr": "Nous avons fait une pause d'une demi-heure",
+      "audio": "audio/travail-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "planning",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "bar-na-maj : comme « barnamadj ».",
     "audio": "audio/travail-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chnou lbarnamaj dyal ghedda?",
+      "arabe": "شنو البرنامج ديال غدا؟",
+      "fr": "Quel est le planning de demain ?",
+      "audio": "audio/travail-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "document",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "wa-ti-9a : 9 profond.",
     "audio": "audio/travail-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sift lia lwati9a 9bel ljem3a",
+      "arabe": "صيفط ليا الوثيقة قبل الجمعة",
+      "fr": "Envoie-moi le document avant vendredi",
+      "audio": "audio/travail-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "signature",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "taw-9i3 : 9 et 3.",
     "audio": "audio/travail-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khassni ttaw9i3 dyalek hna",
+      "arabe": "خاصني التوقيع ديالك هنا",
+      "fr": "J'ai besoin de ta signature ici",
+      "audio": "audio/travail-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "mail",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "i-mil : comme « mail ».",
     "audio": "audio/travail-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chouf limil dyalek",
+      "arabe": "شوف الإيميل ديالك",
+      "fr": "Regarde ton mail",
+      "audio": "audio/travail-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "message",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "me-saj : comme « message ».",
     "audio": "audio/travail-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khelli lia mesaj",
+      "arabe": "خلي ليا ميساج",
+      "fr": "Laisse-moi un message",
+      "audio": "audio/travail-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "téléphone professionnel",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ti-li-foun d l-khed-ma : raclement (kh).",
     "audio": "audio/travail-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had nnmra dyal tilifoun d lkhedma",
+      "arabe": "هاد النمرة ديال تيليفون د الخدمة",
+      "fr": "Ce numéro est celui du téléphone professionnel",
+      "audio": "audio/travail-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "étudiant",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ta-leb : un « t » épais.",
     "audio": "audio/travail-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana taleb f jami3a",
+      "arabe": "أنا طالب ف جامعة",
+      "fr": "Je suis étudiant à l'université",
+      "audio": "audio/travail-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "étudiante",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ta-li-ba : un « t » épais.",
     "audio": "audio/travail-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khti taliba f ttebb",
+      "arabe": "ختي طالبة ف الطب",
+      "fr": "Ma sœur est étudiante en médecine",
+      "audio": "audio/travail-034-ex.mp3"
     }
   },
   {
@@ -550,13 +550,13 @@
     "fr": "élève",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "til-mid : comme « tilmid ».",
     "audio": "audio/travail-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had ttilmid mjtahed",
+      "arabe": "هاد التلميد مجتهد",
+      "fr": "Cet élève est travailleur",
+      "audio": "audio/travail-035-ex.mp3"
     }
   },
   {
@@ -566,13 +566,13 @@
     "fr": "professeur",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "os-tad : comme « oustad ».",
     "audio": "audio/travail-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lostad chre7 ddars mzyan",
+      "arabe": "الأستاد شرح الدرس مزيان",
+      "fr": "Le professeur a bien expliqué la leçon",
+      "audio": "audio/travail-036-ex.mp3"
     }
   },
   {
@@ -582,13 +582,13 @@
     "fr": "professeure",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "os-ta-da : comme « ostad », au féminin.",
     "audio": "audio/travail-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lostada dyal lfransawiya driyfa",
+      "arabe": "الأستادة ديال الفرنساوية ضريفة",
+      "fr": "La professeure de français est gentille",
+      "audio": "audio/travail-037-ex.mp3"
     }
   },
   {
@@ -598,13 +598,13 @@
     "fr": "leçon / cours",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ders : comme « ders ».",
     "audio": "audio/travail-038.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddars dyal lyom s3ib",
+      "arabe": "الدرس ديال اليوم صعيب",
+      "fr": "La leçon d'aujourd'hui est difficile",
+      "audio": "audio/travail-038-ex.mp3"
     }
   },
   {
@@ -614,13 +614,13 @@
     "fr": "devoir",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "wa-jib : comme « wadjib ».",
     "audio": "audio/travail-039.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma deritch lwajib",
+      "arabe": "ما درتش الواجب",
+      "fr": "Je n'ai pas fait les devoirs",
+      "audio": "audio/travail-039-ex.mp3"
     }
   },
   {
@@ -630,13 +630,13 @@
     "fr": "examen",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "im-ti-7an : souffle chaud (7).",
     "audio": "audio/travail-040.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nje7t f limti7an",
+      "arabe": "نجحت ف الامتحان",
+      "fr": "J'ai réussi l'examen",
+      "audio": "audio/travail-040-ex.mp3"
     }
   },
   {
@@ -646,13 +646,13 @@
     "fr": "diplôme",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "di-blom : comme « diplôme ».",
     "audio": "audio/travail-041.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khdit ddiblom had l3am",
+      "arabe": "خديت الديبلوم هاد العام",
+      "fr": "J'ai obtenu le diplôme cette année",
+      "audio": "audio/travail-041-ex.mp3"
     }
   },
   {
@@ -662,13 +662,13 @@
     "fr": "livre",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ktab : comme « ktab ».",
     "audio": "audio/travail-042.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "9rit wa7ed lktab zwin",
+      "arabe": "قريت واحد الكتاب زوين",
+      "fr": "J'ai lu un beau livre",
+      "audio": "audio/travail-042-ex.mp3"
     }
   },
   {
@@ -678,13 +678,13 @@
     "fr": "cahier",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "def-tar : l'accent sur « tar ».",
     "audio": "audio/travail-043.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kteb f ddeftar dyalek",
+      "arabe": "كتب ف الدفتر ديالك",
+      "fr": "Écris dans ton cahier",
+      "audio": "audio/travail-043-ex.mp3"
     }
   },
   {
@@ -694,13 +694,13 @@
     "fr": "feuille / feuille (arbre)",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "war-9a : 9 profond.",
     "audio": "audio/travail-044.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3tini war9a w stilo",
+      "arabe": "عطيني ورقة و ستيلو",
+      "fr": "Donne-moi une feuille et un stylo",
+      "audio": "audio/travail-044-ex.mp3"
     }
   },
   {
@@ -710,13 +710,13 @@
     "fr": "stylo",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sti-lo : comme « stylo ».",
     "audio": "audio/travail-045.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "slefni stilo 3afak",
+      "arabe": "سلفني ستيلو عافاك",
+      "fr": "Prête-moi un stylo, s'il te plaît",
+      "audio": "audio/travail-045-ex.mp3"
     }
   },
   {
@@ -726,13 +726,13 @@
     "fr": "crayon",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9lem r-sas : 9 profond.",
     "audio": "audio/travail-046.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "rsem b 9lem rsas",
+      "arabe": "رسم ب قلم رصاص",
+      "fr": "Dessine au crayon",
+      "audio": "audio/travail-046-ex.mp3"
     }
   },
   {
@@ -742,13 +742,13 @@
     "fr": "gomme",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "go-ma : « g » dur.",
     "audio": "audio/travail-047.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mse7 lghlat b lgoma",
+      "arabe": "مسح الغلط ب الگومة",
+      "fr": "Efface l'erreur avec la gomme",
+      "audio": "audio/travail-047-ex.mp3"
     }
   },
   {
@@ -758,13 +758,13 @@
     "fr": "tableau (classe)",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sbou-ra : un « s » épais.",
     "audio": "audio/travail-048.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lostad kteb 3la ssboura",
+      "arabe": "الأستاد كتب على السبورة",
+      "fr": "Le professeur a écrit au tableau",
+      "audio": "audio/travail-048-ex.mp3"
     }
   },
   {
@@ -774,13 +774,13 @@
     "fr": "question",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sou2-al : petit arrêt (2).",
     "audio": "audio/travail-049.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndi sou2al 3la ddars",
+      "arabe": "عندي سؤال على الدرس",
+      "fr": "J'ai une question sur la leçon",
+      "audio": "audio/travail-049-ex.mp3"
     }
   },
   {
@@ -790,13 +790,13 @@
     "fr": "réponse",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ja-wab : comme « djawab ».",
     "audio": "audio/travail-050.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ljawab s7i7",
+      "arabe": "الجواب صحيح",
+      "fr": "La réponse est juste",
+      "audio": "audio/travail-050-ex.mp3"
     }
   },
   {
@@ -806,13 +806,13 @@
     "fr": "apprendre",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "t3el-lem : le 3 serré.",
     "audio": "audio/travail-051.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "t3ellem ddarija f setta chhour",
+      "arabe": "تعلم الدارجة ف ستة شهور",
+      "fr": "Il a appris le darija en six mois",
+      "audio": "audio/travail-051-ex.mp3"
     }
   },
   {
@@ -822,13 +822,13 @@
     "fr": "enseigner",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "3el-lem : le 3 serré.",
     "audio": "audio/travail-052.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ellemni nteyyeb ttajine",
+      "arabe": "علمني نطيب الطاجين",
+      "fr": "Il m'a appris à cuisiner le tajine",
+      "audio": "audio/travail-052-ex.mp3"
     }
   },
   {
@@ -838,13 +838,13 @@
     "fr": "étudier / lire",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9ra : 9 profond.",
     "audio": "audio/travail-053.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "9ra f fransa 3amayn",
+      "arabe": "قرا ف فرنسا عامين",
+      "fr": "Il a étudié en France pendant deux ans",
+      "audio": "audio/travail-053-ex.mp3"
     }
   },
   {
@@ -854,13 +854,13 @@
     "fr": "écrire",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kteb : comme « kteb ».",
     "audio": "audio/travail-054.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kteb smitek hna",
+      "arabe": "كتب سميتك هنا",
+      "fr": "Écris ton nom ici",
+      "audio": "audio/travail-054-ex.mp3"
     }
   },
   {
@@ -870,13 +870,13 @@
     "fr": "compter / calculer",
     "theme": "travail",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7seb : souffle chaud (7).",
     "audio": "audio/travail-055.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7seb lflous mzyan",
+      "arabe": "حسب الفلوس مزيان",
+      "fr": "Compte bien l'argent",
+      "audio": "audio/travail-055-ex.mp3"
     }
   }
 ]

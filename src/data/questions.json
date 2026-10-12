@@ -6,13 +6,13 @@
     "fr": "quoi ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ach : « ch » de « chat ».",
     "audio": "audio/questions-001.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ach? ma sme3tch",
+      "arabe": "اش؟ ما سمعتش",
+      "fr": "Quoi ? Je n'ai pas entendu",
+      "audio": "audio/questions-001-ex.mp3"
     }
   },
   {
@@ -22,13 +22,13 @@
     "fr": "qu'est-ce que ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ach-no : « ch » de « chat ».",
     "audio": "audio/questions-002.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "achno kliti f lghda?",
+      "arabe": "اشنو كليتي ف الغدا؟",
+      "fr": "Qu'est-ce que tu as mangé au déjeuner ?",
+      "audio": "audio/questions-002-ex.mp3"
     }
   },
   {
@@ -38,13 +38,13 @@
     "fr": "quand ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "fo-9ach : 9 profond, « ch » de « chat ».",
     "audio": "audio/questions-003.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fo9ach ghadi tsafer?",
+      "arabe": "فوقاش غادي تسافر؟",
+      "fr": "Quand vas-tu partir en voyage ?",
+      "audio": "audio/questions-003-ex.mp3"
     }
   },
   {
@@ -54,13 +54,13 @@
     "fr": "combien de temps ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ch7al men l-wa9t : « ch », 7 et 9.",
     "audio": "audio/questions-004.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ch7al men lwa9t bach nwslo?",
+      "arabe": "شحال من الوقت باش نوصلو؟",
+      "fr": "Combien de temps pour arriver ?",
+      "audio": "audio/questions-004-ex.mp3"
     }
   },
   {
@@ -70,13 +70,13 @@
     "fr": "lequel ? (masculin)",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ach-men wa-7ed : « ch » et 7.",
     "audio": "audio/questions-005.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "achmen wa7ed bghiti, lk7el wella lbyed?",
+      "arabe": "اشمن واحد بغيتي، الكحل ولا البيض؟",
+      "fr": "Lequel veux-tu, le noir ou le blanc ?",
+      "audio": "audio/questions-005-ex.mp3"
     }
   },
   {
@@ -86,13 +86,13 @@
     "fr": "laquelle ? (féminin)",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ach-men wa7-da : « ch » et 7.",
     "audio": "audio/questions-006.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "achmen wa7da fihom khtek?",
+      "arabe": "اشمن وحدة فيهم ختك؟",
+      "fr": "Laquelle d'entre elles est ta sœur ?",
+      "audio": "audio/questions-006-ex.mp3"
     }
   },
   {
@@ -102,13 +102,13 @@
     "fr": "quel ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ach-men : « ch » de « chat ».",
     "audio": "audio/questions-007.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "achmen tobis kaymchi l lmdina?",
+      "arabe": "اشمن طوبيس كيمشي ل المدينة؟",
+      "fr": "Quel bus va en ville ?",
+      "audio": "audio/questions-007-ex.mp3"
     }
   },
   {
@@ -118,13 +118,13 @@
     "fr": "de qui ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "dyal men : comme « dial men ».",
     "audio": "audio/questions-008.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had ssak dyal men?",
+      "arabe": "هاد الصاك ديال من؟",
+      "fr": "À qui est ce sac ?",
+      "audio": "audio/questions-008-ex.mp3"
     }
   },
   {
@@ -134,13 +134,13 @@
     "fr": "avec qui ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "m3a men : 3 serré.",
     "audio": "audio/questions-009.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "m3a men ghadi tmchi?",
+      "arabe": "معا من غادي تمشي؟",
+      "fr": "Avec qui vas-tu y aller ?",
+      "audio": "audio/questions-009-ex.mp3"
     }
   },
   {
@@ -150,13 +150,13 @@
     "fr": "pour qui ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l-men : comme « lmen ».",
     "audio": "audio/questions-010.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had lhdiya lmen?",
+      "arabe": "هاد الهدية لمن؟",
+      "fr": "Ce cadeau est pour qui ?",
+      "audio": "audio/questions-010-ex.mp3"
     }
   },
   {
@@ -166,13 +166,13 @@
     "fr": "d'où ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "men fin : comme « men fine ».",
     "audio": "audio/questions-011.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "men fin chriti had ttswira?",
+      "arabe": "من فين شريتي هاد التصويرة؟",
+      "fr": "D'où as-tu acheté ce tableau ?",
+      "audio": "audio/questions-011-ex.mp3"
     }
   },
   {
@@ -182,13 +182,13 @@
     "fr": "vers où ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l-fin : comme « lfine ».",
     "audio": "audio/questions-012.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lfin ghadi had ttobis?",
+      "arabe": "لفين غادي هاد الطوبيس؟",
+      "fr": "Où va ce bus ?",
+      "audio": "audio/questions-012-ex.mp3"
     }
   },
   {
@@ -198,13 +198,13 @@
     "fr": "à quelle heure ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "m3a ch7al : 3, « ch » et 7.",
     "audio": "audio/questions-013.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "m3a ch7al ntla9aw?",
+      "arabe": "معا شحال نتلاقاو؟",
+      "fr": "À quelle heure on se retrouve ?",
+      "audio": "audio/questions-013-ex.mp3"
     }
   },
   {
@@ -214,13 +214,13 @@
     "fr": "combien ça coûte ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "bch7al ha-da : « ch » et 7.",
     "audio": "audio/questions-014.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bch7al hada, 3afak?",
+      "arabe": "بشحال هادا، عافاك؟",
+      "fr": "Combien ça coûte, s'il vous plaît ?",
+      "audio": "audio/questions-014-ex.mp3"
     }
   },
   {
@@ -230,13 +230,13 @@
     "fr": "qu'est-ce qui se passe ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ach wa-9e3 : « ch », 9 et 3.",
     "audio": "audio/questions-015.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ach wa9e3 f zzen9a?",
+      "arabe": "اش واقع ف الزنقة؟",
+      "fr": "Qu'est-ce qui se passe dans la rue ?",
+      "audio": "audio/questions-015-ex.mp3"
     }
   },
   {
@@ -246,13 +246,13 @@
     "fr": "qu'est-ce qu'il y a ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ach kayn : « ch » de « chat ».",
     "audio": "audio/questions-016.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ach kayn f l3cha lyom?",
+      "arabe": "اش كاين ف العشا اليوم؟",
+      "fr": "Qu'est-ce qu'il y a au dîner aujourd'hui ?",
+      "audio": "audio/questions-016-ex.mp3"
     }
   },
   {
@@ -262,13 +262,13 @@
     "fr": "que veux-tu ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ach bghi-ti : « ch » et « gh ».",
     "audio": "audio/questions-017.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ach bghiti tchreb?",
+      "arabe": "اش بغيتي تشرب؟",
+      "fr": "Que veux-tu boire ?",
+      "audio": "audio/questions-017-ex.mp3"
     }
   },
   {
@@ -278,13 +278,13 @@
     "fr": "tu es sûr ? (homme)",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "wach mte2k-ked : « ch », petit arrêt (2).",
     "audio": "audio/questions-018.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach mte2kked belli lyom l7ed?",
+      "arabe": "واش متأكد بلي اليوم الحد؟",
+      "fr": "Tu es sûr qu'aujourd'hui c'est dimanche ?",
+      "audio": "audio/questions-018-ex.mp3"
     }
   },
   {
@@ -294,13 +294,13 @@
     "fr": "tu es sûre ? (femme)",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "wach mte2k-da : « ch », petit arrêt (2).",
     "audio": "audio/questions-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach mte2kkda belli ssedditi lbab?",
+      "arabe": "واش متأكدة بلي سديتي الباب؟",
+      "fr": "Tu es sûre d'avoir fermé la porte ?",
+      "audio": "audio/questions-019-ex.mp3"
     }
   },
   {
@@ -310,13 +310,13 @@
     "fr": "qui est-ce ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "chkon ha-da : « ch » de « chat ».",
     "audio": "audio/questions-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chkon hada lli m3ak f ttswira?",
+      "arabe": "شكون هادا اللي معاك ف التصويرة؟",
+      "fr": "Qui est-ce avec toi sur la photo ?",
+      "audio": "audio/questions-020-ex.mp3"
     }
   },
   {
@@ -326,13 +326,13 @@
     "fr": "c'est quoi ça ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ach-no ha-da : « ch » de « chat ».",
     "audio": "audio/questions-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "achno hada? 3mri ma chefto",
+      "arabe": "اشنو هادا؟ عمري ما شفتو",
+      "fr": "C'est quoi ça ? Je n'en ai jamais vu",
+      "audio": "audio/questions-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "où vas-tu ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "fin gha-di : « gh » grasseyé.",
     "audio": "audio/questions-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fin ghadi b had zzerba?",
+      "arabe": "فين غادي بهاد الزربة؟",
+      "fr": "Où vas-tu si vite ?",
+      "audio": "audio/questions-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "tu viens d'où ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "men fin jay : comme « djay ».",
     "audio": "audio/questions-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "men fin jay, men fransa?",
+      "arabe": "من فين جاي، من فرانسا؟",
+      "fr": "Tu viens d'où, de France ?",
+      "audio": "audio/questions-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "quel âge as-tu ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ch7al f 3om-rek : « ch », 7, puis 3.",
     "audio": "audio/questions-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ch7al f 3omrek? 3ndi tlatin",
+      "arabe": "شحال ف عمرك؟ عندي تلاتين",
+      "fr": "Quel âge as-tu ? J'ai trente ans",
+      "audio": "audio/questions-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "tu habites où ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "fin sa-ken : comme « saken ».",
     "audio": "audio/questions-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fin saken f rbat?",
+      "arabe": "فين ساكن ف الرباط؟",
+      "fr": "Tu habites où à Rabat ?",
+      "audio": "audio/questions-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "tu parles français ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "kat-hder b l-fran-sa-wiya : « h » expiré.",
     "audio": "audio/questions-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kathder b lfransawiya? ana chwiya",
+      "arabe": "كتهضر بالفرنساوية؟ أنا شوية",
+      "fr": "Tu parles français ? Moi un peu",
+      "audio": "audio/questions-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "tu parles darija ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "kat-hder b d-da-ri-ja : « h » expiré.",
     "audio": "audio/questions-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kathder b ddarija? mzyan bzaf!",
+      "arabe": "كتهضر بالدارجة؟ مزيان بزاف!",
+      "fr": "Tu parles darija ? Très bien !",
+      "audio": "audio/questions-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "pourquoi pas ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3lach la : 3 serré, « ch » de « chat ».",
     "audio": "audio/questions-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nmchiw l lb7ar? 3lach la!",
+      "arabe": "نمشيو ل البحر؟ علاش لا!",
+      "fr": "On va à la mer ? Pourquoi pas !",
+      "audio": "audio/questions-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "c'est vrai ? / vraiment ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "bs-sa7 : souffle chaud (7) à la fin.",
     "audio": "audio/questions-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bssa7? ma 3reftch",
+      "arabe": "بالصح؟ ما عرفتش",
+      "fr": "C'est vrai ? Je ne savais pas",
+      "audio": "audio/questions-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "pour de vrai ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "bs-s7 : souffle chaud (7) à la fin.",
     "audio": "audio/questions-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "rbe7ti? bss7?",
+      "arabe": "ربحتي؟ بالصح؟",
+      "fr": "Tu as gagné ? Pour de vrai ?",
+      "audio": "audio/questions-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "qu'est-ce que tu veux dire ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ach bghi-ti t9-sed : « ch », « gh », 9.",
     "audio": "audio/questions-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma fhemtch, ach bghiti t9sed?",
+      "arabe": "ما فهمتش، اش بغيتي تقصد؟",
+      "fr": "Je n'ai pas compris, que veux-tu dire ?",
+      "audio": "audio/questions-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "ça veut dire quoi ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ach kat3-ni : « ch » et 3.",
     "audio": "audio/questions-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ach kat3ni had lkelma?",
+      "arabe": "اش كتعني هاد الكلمة؟",
+      "fr": "Que veut dire ce mot ?",
+      "audio": "audio/questions-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "où est le problème ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "fin kayn l-moch-kil : « ch » de « chat ».",
     "audio": "audio/questions-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fin kayn lmochkil? kolchi mzyan",
+      "arabe": "فين كاين المشكل؟ كلشي مزيان",
+      "fr": "Où est le problème ? Tout va bien",
+      "audio": "audio/questions-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "qu'en penses-tu ?",
     "theme": "questions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ach ban lik : « ch » de « chat ».",
     "audio": "audio/questions-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ach ban lik f had lfikra?",
+      "arabe": "اش بان ليك ف هاد الفكرة؟",
+      "fr": "Que penses-tu de cette idée ?",
+      "audio": "audio/questions-034-ex.mp3"
     }
   }
 ]

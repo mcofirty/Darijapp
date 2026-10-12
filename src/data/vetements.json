@@ -6,13 +6,13 @@
     "fr": "vêtement",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7wa-yej : souffle chaud (7).",
     "audio": "audio/vetements-001.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrit chi 7wayej l l3id",
+      "arabe": "شريت شي حوايج ل العيد",
+      "fr": "J'ai acheté des vêtements pour l'Aïd",
+      "audio": "audio/vetements-001-ex.mp3"
     }
   },
   {
@@ -22,13 +22,13 @@
     "fr": "vêtements",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l7wa-yej : souffle chaud (7).",
     "audio": "audio/vetements-002.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7wayej mbellin, ma tlbeshomch",
+      "arabe": "الحوايج مبلين، ما تلبسهومش",
+      "fr": "Les vêtements sont mouillés, ne les mets pas",
+      "audio": "audio/vetements-002-ex.mp3"
     }
   },
   {
@@ -38,13 +38,13 @@
     "fr": "chemise",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9mi-ja : 9 profond.",
     "audio": "audio/vetements-003.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbes 9mija byda l lkhedma",
+      "arabe": "لبس قميجة بيضا ل الخدمة",
+      "fr": "Mets une chemise blanche pour le travail",
+      "audio": "audio/vetements-003-ex.mp3"
     }
   },
   {
@@ -54,13 +54,13 @@
     "fr": "t-shirt",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ti-chirt : « ch » de « chat ».",
     "audio": "audio/vetements-004.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had ttichirt wase3 3liya",
+      "arabe": "هاد التيشيرت واسع عليا",
+      "fr": "Ce t-shirt est trop large pour moi",
+      "audio": "audio/vetements-004-ex.mp3"
     }
   },
   {
@@ -70,13 +70,13 @@
     "fr": "polo",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "po-lo : comme « polo ».",
     "audio": "audio/vetements-005.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrit polo zre9",
+      "arabe": "شريت بولو زرق",
+      "fr": "J'ai acheté un polo bleu",
+      "audio": "audio/vetements-005-ex.mp3"
     }
   },
   {
@@ -86,13 +86,13 @@
     "fr": "pull",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "tri-ko : comme « tricot ».",
     "audio": "audio/vetements-006.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbes triko, kayn lberd",
+      "arabe": "لبس تريكو، كاين البرد",
+      "fr": "Mets un pull, il fait froid",
+      "audio": "audio/vetements-006-ex.mp3"
     }
   },
   {
@@ -102,13 +102,13 @@
     "fr": "sweat-shirt",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "swit : comme « sweat ».",
     "audio": "audio/vetements-007.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had sweat skhoun bzaf",
+      "arabe": "هاد سويت سخون بزاف",
+      "fr": "Ce sweat est très chaud",
+      "audio": "audio/vetements-007-ex.mp3"
     }
   },
   {
@@ -118,13 +118,13 @@
     "fr": "veste",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ja-kit : comme « jaquette ».",
     "audio": "audio/vetements-008.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nsit ljakit f lmet3am",
+      "arabe": "نسيت الجاكيط ف المطعم",
+      "fr": "J'ai oublié ma veste au restaurant",
+      "audio": "audio/vetements-008-ex.mp3"
     }
   },
   {
@@ -134,13 +134,13 @@
     "fr": "manteau",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mon-to : comme « manteau ».",
     "audio": "audio/vetements-009.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmonto dyali twil w ke7el",
+      "arabe": "المونطو ديالي طويل و كحل",
+      "fr": "Mon manteau est long et noir",
+      "audio": "audio/vetements-009-ex.mp3"
     }
   },
   {
@@ -150,13 +150,13 @@
     "fr": "blouson",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "blou-zon : comme « blouson ».",
     "audio": "audio/vetements-010.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbes lblouson dyal ljeld",
+      "arabe": "لبس البلوزون ديال الجلد",
+      "fr": "Mets le blouson en cuir",
+      "audio": "audio/vetements-010-ex.mp3"
     }
   },
   {
@@ -166,13 +166,13 @@
     "fr": "costume",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kos-tim : comme « costume ».",
     "audio": "audio/vetements-011.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbes kostim f l3ers",
+      "arabe": "لبس كوستيم ف العرس",
+      "fr": "Il a mis un costume au mariage",
+      "audio": "audio/vetements-011-ex.mp3"
     }
   },
   {
@@ -182,13 +182,13 @@
     "fr": "cravate",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kra-va-ta : comme « cravate ».",
     "audio": "audio/vetements-012.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma kanbghich lkravata",
+      "arabe": "ما كنبغيش الكراڤاطة",
+      "fr": "Je n'aime pas la cravate",
+      "audio": "audio/vetements-012-ex.mp3"
     }
   },
   {
@@ -198,13 +198,13 @@
     "fr": "pantalon",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ser-wal : le r roulé.",
     "audio": "audio/vetements-013.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sserwal 9sir chwiya",
+      "arabe": "السروال قصير شوية",
+      "fr": "Le pantalon est un peu court",
+      "audio": "audio/vetements-013-ex.mp3"
     }
   },
   {
@@ -214,13 +214,13 @@
     "fr": "jean",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "jin : comme « djin ».",
     "audio": "audio/vetements-014.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kanlbes jin kol nhar",
+      "arabe": "كنلبس جين كل نهار",
+      "fr": "Je porte un jean tous les jours",
+      "audio": "audio/vetements-014-ex.mp3"
     }
   },
   {
@@ -230,13 +230,13 @@
     "fr": "short",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "chort : « ch » de « chat ».",
     "audio": "audio/vetements-015.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "f ssif kanlbes chort",
+      "arabe": "ف الصيف كنلبس شورط",
+      "fr": "En été je porte un short",
+      "audio": "audio/vetements-015-ex.mp3"
     }
   },
   {
@@ -246,13 +246,13 @@
     "fr": "jupe",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "jou-pa : comme « jupe ».",
     "audio": "audio/vetements-016.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrat jupa jdida",
+      "arabe": "شرات جوبا جديدة",
+      "fr": "Elle a acheté une nouvelle jupe",
+      "audio": "audio/vetements-016-ex.mp3"
     }
   },
   {
@@ -262,13 +262,13 @@
     "fr": "robe",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "rou-ba : le r roulé.",
     "audio": "audio/vetements-017.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "rrouba zwina 3liha",
+      "arabe": "الروبة زوينة عليها",
+      "fr": "La robe lui va bien",
+      "audio": "audio/vetements-017-ex.mp3"
     }
   },
   {
@@ -278,13 +278,13 @@
     "fr": "chaussure",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sbbat : un « s » épais.",
     "audio": "audio/vetements-018.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ssebbat dyali tkhesser",
+      "arabe": "الصباط ديالي تخسر",
+      "fr": "Ma chaussure s'est abîmée",
+      "audio": "audio/vetements-018-ex.mp3"
     }
   },
   {
@@ -294,13 +294,13 @@
     "fr": "chaussures",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sba-bet : un « s » épais.",
     "audio": "audio/vetements-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "n7i sbabtek 9bel ma tdkhol",
+      "arabe": "نحي صبابطك قبل ما تدخل",
+      "fr": "Enlève tes chaussures avant d'entrer",
+      "audio": "audio/vetements-019-ex.mp3"
     }
   },
   {
@@ -310,13 +310,13 @@
     "fr": "basket (chaussure)",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sba-bet spor : comme « sport ».",
     "audio": "audio/vetements-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit sbabet sport l ljri",
+      "arabe": "بغيت صبابط سبور ل الجري",
+      "fr": "Je veux des baskets pour courir",
+      "audio": "audio/vetements-020-ex.mp3"
     }
   },
   {
@@ -326,13 +326,13 @@
     "fr": "sandale",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "san-dal : comme « sandale ».",
     "audio": "audio/vetements-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "f lb7ar kanlbes sandal",
+      "arabe": "ف البحر كنلبس صندال",
+      "fr": "À la mer je porte des sandales",
+      "audio": "audio/vetements-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "chaussette",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "t9a-cher : 9 et « ch ».",
     "audio": "audio/vetements-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "t9acher mbellin b lma",
+      "arabe": "تقاشر مبلين بالما",
+      "fr": "Des chaussettes mouillées",
+      "audio": "audio/vetements-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "sous-vêtement",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7wa-yej dakh-la-niya : 7 et « kh ».",
     "audio": "audio/vetements-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrit 7wayej dakhlaniya jdad",
+      "arabe": "شريت حوايج داخلانية جداد",
+      "fr": "J'ai acheté des sous-vêtements neufs",
+      "audio": "audio/vetements-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "culotte",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ki-lot : comme « culotte ».",
     "audio": "audio/vetements-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kilot dyal ddrri",
+      "arabe": "كيلوط ديال الدري",
+      "fr": "La culotte de l'enfant",
+      "audio": "audio/vetements-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "soutien-gorge",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sou-tian : comme « soutien ».",
     "audio": "audio/vetements-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrat soutian men l7anout",
+      "arabe": "شرات سوتيان من الحانوت",
+      "fr": "Elle a acheté un soutien-gorge à la boutique",
+      "audio": "audio/vetements-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "pyjama",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "pi-ja-ma : comme « pyjama ».",
     "audio": "audio/vetements-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbes lpijama w n3es",
+      "arabe": "لبس البيجامة و نعس",
+      "fr": "Mets ton pyjama et dors",
+      "audio": "audio/vetements-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "bonnet",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "bo-ni : comme « bonnet ».",
     "audio": "audio/vetements-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbes boné, kayn ttelj",
+      "arabe": "لبس بوني، كاين التلج",
+      "fr": "Mets un bonnet, il neige",
+      "audio": "audio/vetements-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "casquette",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kas-ki-ta : comme « casquette ».",
     "audio": "audio/vetements-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kaskita ghadi t7mik men chmes",
+      "arabe": "كاسكيطة غادي تحميك من الشمس",
+      "fr": "Une casquette te protégera du soleil",
+      "audio": "audio/vetements-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "chapeau",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9ob-be3a : 9 et 3.",
     "audio": "audio/vetements-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jeddi kaylbes 9obbe3a",
+      "arabe": "جدي كيلبس قبعة",
+      "fr": "Mon grand-père porte un chapeau",
+      "audio": "audio/vetements-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "écharpe",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ka-cha : « ch » de « chat ».",
     "audio": "audio/vetements-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "dir lkacha 3la 3on9ek",
+      "arabe": "دير الكاشة على عنقك",
+      "fr": "Mets l'écharpe autour de ton cou",
+      "audio": "audio/vetements-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "gant",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "gant : comme « gant ».",
     "audio": "audio/vetements-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbes lgant f lberd",
+      "arabe": "لبس الگانت ف البرد",
+      "fr": "Mets les gants quand il fait froid",
+      "audio": "audio/vetements-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "ceinture",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sem-ta : un « s » épais.",
     "audio": "audio/vetements-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sserwal wase3, khassni semta",
+      "arabe": "السروال واسع، خاصني سمطة",
+      "fr": "Le pantalon est large, il me faut une ceinture",
+      "audio": "audio/vetements-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "sac",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sak : comme « sac ».",
     "audio": "audio/vetements-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fin 7etiti ssak dyali?",
+      "arabe": "فين حطيتي الصاك ديالي؟",
+      "fr": "Où as-tu mis mon sac ?",
+      "audio": "audio/vetements-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "sac à dos",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sak d dher : « d » épais.",
     "audio": "audio/vetements-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ssak d dher t9il bzaf",
+      "arabe": "الصاك د الضهر تقيل بزاف",
+      "fr": "Le sac à dos est très lourd",
+      "audio": "audio/vetements-034-ex.mp3"
     }
   },
   {
@@ -550,13 +550,13 @@
     "fr": "portefeuille",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "port-fay : comme « portefeuille ».",
     "audio": "audio/vetements-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "diye3t lportfey f ttobis",
+      "arabe": "ضيعت البورطفاي ف الطوبيس",
+      "fr": "J'ai perdu mon portefeuille dans le bus",
+      "audio": "audio/vetements-035-ex.mp3"
     }
   },
   {
@@ -566,13 +566,13 @@
     "fr": "lunettes",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ned-da-rat : « d » épais et doublé.",
     "audio": "audio/vetements-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma kanchoufch mzyan bla neddarat",
+      "arabe": "ما كنشوفش مزيان بلا نضارات",
+      "fr": "Je ne vois pas bien sans lunettes",
+      "audio": "audio/vetements-036-ex.mp3"
     }
   },
   {
@@ -582,13 +582,13 @@
     "fr": "lunettes de soleil",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ned-da-rat chems : « d » épais, « ch ».",
     "audio": "audio/vetements-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma tnsach neddarat chms",
+      "arabe": "ما تنساش نضارات الشمس",
+      "fr": "N'oublie pas les lunettes de soleil",
+      "audio": "audio/vetements-037-ex.mp3"
     }
   },
   {
@@ -598,13 +598,13 @@
     "fr": "bague",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kha-tem : raclement (kh).",
     "audio": "audio/vetements-038.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3tatha khatem dyal dhab",
+      "arabe": "عطاتها خاتم ديال الدهب",
+      "fr": "Il lui a offert une bague en or",
+      "audio": "audio/vetements-038-ex.mp3"
     }
   },
   {
@@ -614,13 +614,13 @@
     "fr": "collier",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sel-sla : un « s » épais.",
     "audio": "audio/vetements-039.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "slsla dyal lfedda",
+      "arabe": "سلسلة ديال الفضة",
+      "fr": "Un collier en argent",
+      "audio": "audio/vetements-039-ex.mp3"
     }
   },
   {
@@ -630,13 +630,13 @@
     "fr": "bracelet",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "swar : un « s » épais.",
     "audio": "audio/vetements-040.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrat swar men ssou9",
+      "arabe": "شرات سوار من السوق",
+      "fr": "Elle a acheté un bracelet au souk",
+      "audio": "audio/vetements-040-ex.mp3"
     }
   },
   {
@@ -646,13 +646,13 @@
     "fr": "boucle d'oreille",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7el-9a : 7 et 9.",
     "audio": "audio/vetements-041.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tti7at lia 7el9a",
+      "arabe": "طاحت ليا حلقة",
+      "fr": "J'ai perdu une boucle d'oreille",
+      "audio": "audio/vetements-041-ex.mp3"
     }
   },
   {
@@ -662,13 +662,13 @@
     "fr": "parfum",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "3ter : le 3 serré.",
     "audio": "audio/vetements-042.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3trek zwin, men fin chritih?",
+      "arabe": "عطرك زوين، من فين شريتيه؟",
+      "fr": "Ton parfum sent bon, où l'as-tu acheté ?",
+      "audio": "audio/vetements-042-ex.mp3"
     }
   },
   {
@@ -678,13 +678,13 @@
     "fr": "maquillage",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ma-ki-yaj : comme « maquillage ».",
     "audio": "audio/vetements-043.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hiya ma katdirch lmakiyaj",
+      "arabe": "هي ما كتديرش الماكياج",
+      "fr": "Elle ne se maquille pas",
+      "audio": "audio/vetements-043-ex.mp3"
     }
   },
   {
@@ -694,13 +694,13 @@
     "fr": "rouge à lèvres",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "rouj : comme « rouge ».",
     "audio": "audio/vetements-044.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrat rouj 7mer",
+      "arabe": "شرات روج حمر",
+      "fr": "Elle a acheté un rouge à lèvres rouge",
+      "audio": "audio/vetements-044-ex.mp3"
     }
   },
   {
@@ -710,13 +710,13 @@
     "fr": "peigne",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mech-ta : « ch » de « chat ».",
     "audio": "audio/vetements-045.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fin lmechta? bghit nmchet ch3ri",
+      "arabe": "فين المشطة؟ بغيت نمشط شعري",
+      "fr": "Où est le peigne ? Je veux me coiffer",
+      "audio": "audio/vetements-045-ex.mp3"
     }
   },
   {
@@ -726,13 +726,13 @@
     "fr": "brosse",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "bross : comme « brosse ».",
     "audio": "audio/vetements-046.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghsel snanek b lbross",
+      "arabe": "غسل سنانك بالبروس",
+      "fr": "Brosse-toi les dents avec la brosse",
+      "audio": "audio/vetements-046-ex.mp3"
     }
   },
   {
@@ -742,13 +742,13 @@
     "fr": "rasoir",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mous l7-la-9a : 7 et 9.",
     "audio": "audio/vetements-047.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mous l7la9a tsala",
+      "arabe": "موس الحلاقة تسالا",
+      "fr": "Le rasoir est usé",
+      "audio": "audio/vetements-047-ex.mp3"
     }
   },
   {
@@ -758,13 +758,13 @@
     "fr": "fer à repasser",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mek-wa : comme « mekwa ».",
     "audio": "audio/vetements-048.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "douwez lmekwa 3la l9mija",
+      "arabe": "دوز المكوة على القميجة",
+      "fr": "Passe le fer sur la chemise",
+      "audio": "audio/vetements-048-ex.mp3"
     }
   },
   {
@@ -774,13 +774,13 @@
     "fr": "taille (de vêtement)",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "tay : comme « taille ».",
     "audio": "audio/vetements-049.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chmen taille kat9iss?",
+      "arabe": "شمن طاي كتقيس؟",
+      "fr": "Quelle taille fais-tu ?",
+      "audio": "audio/vetements-049-ex.mp3"
     }
   },
   {
@@ -790,13 +790,13 @@
     "fr": "moyen (taille M)",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mtwas-set : un « s » épais.",
     "audio": "audio/vetements-050.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit taille mtwasset",
+      "arabe": "بغيت طاي متوسط",
+      "fr": "Je voudrais une taille M",
+      "audio": "audio/vetements-050-ex.mp3"
     }
   },
   {
@@ -806,13 +806,13 @@
     "fr": "essayer un vêtement",
     "theme": "vetements",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "jer-reb l7wa-yej : 7.",
     "audio": "audio/vetements-051.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "n9der njerreb l7wayej hna?",
+      "arabe": "نقدر نجرب الحوايج هنا؟",
+      "fr": "Je peux essayer les vêtements ici ?",
+      "audio": "audio/vetements-051-ex.mp3"
     }
   }
 ]

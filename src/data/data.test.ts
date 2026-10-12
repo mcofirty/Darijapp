@@ -53,20 +53,15 @@ describe('fichiers de mots', () => {
     expect(m.arabe).not.toMatch(LETTRE_LATINE)
     expect(m.fr.trim()).not.toBe('')
     expect([1, 2, 3]).toContain(m.niveau)
-    // Tous les mots sont lus par la voix de l'iPhone ; un MP3 éventuel suit le nom <id>.mp3.
+    // Voix Jamal : le MP3 suit le nom <id>.mp3 (vide : la voix de l'iPhone lit l'arabe).
     expect(['', `audio/${m.id}.mp3`]).toContain(m.audio)
-    if (m.exemple.latin) {
-      // Mot du programme d'origine : explication et exemple complets.
-      expect(m.prononciation.trim()).not.toBe('')
-      expect(m.exemple.latin).toMatch(LATIN_AUTORISE)
-      expect(m.exemple.arabe).toMatch(ARABE)
-      expect(m.exemple.arabe).not.toMatch(LETTRE_LATINE)
-      expect(m.exemple.fr.trim()).not.toBe('')
-      expect(['', `audio/${m.id}-ex.mp3`]).toContain(m.exemple.audio)
-    } else {
-      // Entrée importée : sans exemple.
-      expect(m.exemple).toEqual({ latin: '', arabe: '', fr: '', audio: '' })
-    }
+    // Chaque mot a son explication de prononciation et son exemple complet.
+    expect(m.prononciation.trim()).not.toBe('')
+    expect(m.exemple.latin).toMatch(LATIN_AUTORISE)
+    expect(m.exemple.arabe).toMatch(ARABE)
+    expect(m.exemple.arabe).not.toMatch(LETTRE_LATINE)
+    expect(m.exemple.fr.trim()).not.toBe('')
+    expect(['', `audio/${m.id}-ex.mp3`]).toContain(m.exemple.audio)
     if (m.note !== undefined) expect(m.note.trim()).not.toBe('')
   })
 

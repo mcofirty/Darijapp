@@ -6,13 +6,13 @@
     "fr": "on mange ?",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "nak-lo : l'accent sur « nak ».",
     "audio": "audio/restaurant-001.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana ji3an, naklo?",
+      "arabe": "أنا جيعان، ناكلو؟",
+      "fr": "J'ai faim, on mange ?",
+      "audio": "audio/restaurant-001-ex.mp3"
     }
   },
   {
@@ -22,13 +22,13 @@
     "fr": "on va au restaurant ?",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "nmchiw l res-to-ran : « ch » de « chat ».",
     "audio": "audio/restaurant-002.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nmchiw l restoran l3chiya?",
+      "arabe": "نمشيو لريسطورون العشية؟",
+      "fr": "On va au restaurant ce soir ?",
+      "audio": "audio/restaurant-002-ex.mp3"
     }
   },
   {
@@ -38,13 +38,13 @@
     "fr": "une table pour deux, s'il vous plaît",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "tab-la l jouj, 3a-fak : 3 serré.",
     "audio": "audio/restaurant-003.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ssalam, tabla l jouj, 3afak",
+      "arabe": "السلام، طبلة لجوج، عافاك",
+      "fr": "Bonsoir, une table pour deux, s'il vous plaît",
+      "audio": "audio/restaurant-003-ex.mp3"
     }
   },
   {
@@ -54,13 +54,13 @@
     "fr": "avez-vous une table libre ?",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wach 3nd-kom chi tab-la kha-wya : 3, « ch », « kh ».",
     "audio": "audio/restaurant-004.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach 3ndkom chi tabla khawya f lberra?",
+      "arabe": "واش عندكم شي طبلة خاوية ف البرا؟",
+      "fr": "Vous avez une table libre dehors ?",
+      "audio": "audio/restaurant-004-ex.mp3"
     }
   },
   {
@@ -70,13 +70,13 @@
     "fr": "je voudrais le menu",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bghit l-me-nu : « gh » grasseyé.",
     "audio": "audio/restaurant-005.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit lmenu, chokran",
+      "arabe": "بغيت المينو، شكرا",
+      "fr": "Je voudrais le menu, merci",
+      "audio": "audio/restaurant-005-ex.mp3"
     }
   },
   {
@@ -86,13 +86,13 @@
     "fr": "vous avez un menu ?",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wach 3nd-kom l-me-nu : 3 serré.",
     "audio": "audio/restaurant-006.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach 3ndkom lmenu b lfransawiya?",
+      "arabe": "واش عندكم المينو بالفرنساوية؟",
+      "fr": "Vous avez un menu en français ?",
+      "audio": "audio/restaurant-006-ex.mp3"
     }
   },
   {
@@ -102,13 +102,13 @@
     "fr": "qu'est-ce que vous conseillez ?",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ach kat-nse7-ou-ni bih : « ch » et 7.",
     "audio": "audio/restaurant-007.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ach katnse7ouni bih men lmakla lmghribiya?",
+      "arabe": "اش كتنصحوني بيه من الماكلة المغربية؟",
+      "fr": "Que me conseillez-vous en cuisine marocaine ?",
+      "audio": "audio/restaurant-007-ex.mp3"
     }
   },
   {
@@ -118,13 +118,13 @@
     "fr": "quel est le plat du jour ?",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ach-no l-pla d l-yom : « ch » de « chat ».",
     "audio": "audio/restaurant-008.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "achno lplat d lyom? ljem3a kayn lkouskous",
+      "arabe": "اشنو البلا د اليوم؟ الجمعة كاين الكسكسو",
+      "fr": "Quel est le plat du jour ? Le vendredi, c'est couscous",
+      "audio": "audio/restaurant-008-ex.mp3"
     }
   },
   {
@@ -134,13 +134,13 @@
     "fr": "je voudrais un tajine",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bghit ta-jin : « gh » grasseyé.",
     "audio": "audio/restaurant-009.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit tajin d djaj b l7amed",
+      "arabe": "بغيت طاجين د الدجاج بالحامض",
+      "fr": "Je voudrais un tajine de poulet au citron",
+      "audio": "audio/restaurant-009-ex.mp3"
     }
   },
   {
@@ -150,13 +150,13 @@
     "fr": "je voudrais du couscous",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bghit sek-sou : « gh » grasseyé.",
     "audio": "audio/restaurant-010.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit seksou b lkhodra",
+      "arabe": "بغيت سكسو بالخضرة",
+      "fr": "Je voudrais du couscous aux légumes",
+      "audio": "audio/restaurant-010-ex.mp3"
     }
   },
   {
@@ -166,13 +166,13 @@
     "fr": "je voudrais un café",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bghit 9h-wa : « gh » et 9.",
     "audio": "audio/restaurant-011.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit 9hwa ness ness",
+      "arabe": "بغيت قهوة نص نص",
+      "fr": "Je voudrais un café noisette",
+      "audio": "audio/restaurant-011-ex.mp3"
     }
   },
   {
@@ -182,13 +182,13 @@
     "fr": "je voudrais un thé à la menthe",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bghit a-tay b na3-na3 : « gh » et deux 3.",
     "audio": "audio/restaurant-012.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit atay b na3na3 w chwiya d sokkar",
+      "arabe": "بغيت أتاي بالنعناع و شوية د السكر",
+      "fr": "Je voudrais un thé à la menthe avec un peu de sucre",
+      "audio": "audio/restaurant-012-ex.mp3"
     }
   },
   {
@@ -198,13 +198,13 @@
     "fr": "je voudrais de l'eau",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bghit lma : « gh » grasseyé.",
     "audio": "audio/restaurant-013.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit lma bared 3afak",
+      "arabe": "بغيت الما بارد عافاك",
+      "fr": "Je voudrais de l'eau fraîche, s'il vous plaît",
+      "audio": "audio/restaurant-013-ex.mp3"
     }
   },
   {
@@ -214,13 +214,13 @@
     "fr": "une bouteille d'eau, s'il vous plaît",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "9er-3a d lma, 3a-fak : 9 et 3.",
     "audio": "audio/restaurant-014.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "9er3a d lma kbira, 3afak",
+      "arabe": "قرعة د الما كبيرة، عافاك",
+      "fr": "Une grande bouteille d'eau, s'il vous plaît",
+      "audio": "audio/restaurant-014-ex.mp3"
     }
   },
   {
@@ -230,13 +230,13 @@
     "fr": "sans sucre, s'il vous plaît",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bla sker, 3a-fak : 3 serré.",
     "audio": "audio/restaurant-015.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "atay bla sker, 3afak",
+      "arabe": "أتاي بلا سكر، عافاك",
+      "fr": "Le thé sans sucre, s'il vous plaît",
+      "audio": "audio/restaurant-015-ex.mp3"
     }
   },
   {
@@ -246,13 +246,13 @@
     "fr": "sans sel",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bla mel7 : souffle chaud (7).",
     "audio": "audio/restaurant-016.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana mrid, bghit lmakla bla mel7",
+      "arabe": "أنا مريض، بغيت الماكلة بلا ملح",
+      "fr": "Je suis malade, je veux la nourriture sans sel",
+      "audio": "audio/restaurant-016-ex.mp3"
     }
   },
   {
@@ -262,13 +262,13 @@
     "fr": "sans piment",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bla 7arr : souffle chaud (7).",
     "audio": "audio/restaurant-017.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddrari bghaw lmakla bla 7arr",
+      "arabe": "الدراري بغاو الماكلة بلا حار",
+      "fr": "Les enfants veulent le plat sans piment",
+      "audio": "audio/restaurant-017-ex.mp3"
     }
   },
   {
@@ -278,13 +278,13 @@
     "fr": "avec beaucoup de sauce",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "b sos-sa bzaf : un « s » épais.",
     "audio": "audio/restaurant-018.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit lfrit b sossa bzaf",
+      "arabe": "بغيت الفريت بصوصة بزاف",
+      "fr": "Je veux des frites avec beaucoup de sauce",
+      "audio": "audio/restaurant-018-ex.mp3"
     }
   },
   {
@@ -294,13 +294,13 @@
     "fr": "pas trop épicé",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma ykoun-ch 7arr bzaf : « ch » et 7.",
     "audio": "audio/restaurant-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3afak, ma ykounch 7arr bzaf",
+      "arabe": "عافاك، ما يكونش حار بزاف",
+      "fr": "S'il vous plaît, pas trop épicé",
+      "audio": "audio/restaurant-019-ex.mp3"
     }
   },
   {
@@ -310,13 +310,13 @@
     "fr": "je ne mange pas de viande",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma kan-a-kol-ch l7em : « ch » et 7.",
     "audio": "audio/restaurant-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sme7 lia, ma kanakolch l7em",
+      "arabe": "سمح ليا، ما كناكلش اللحم",
+      "fr": "Pardon, je ne mange pas de viande",
+      "audio": "audio/restaurant-020-ex.mp3"
     }
   },
   {
@@ -326,13 +326,13 @@
     "fr": "je ne mange pas de poisson",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma kan-a-kol-ch l7out : « ch » et 7.",
     "audio": "audio/restaurant-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma kanakolch l7out, 3ndi l7assasiya",
+      "arabe": "ما كناكلش الحوت، عندي الحساسية",
+      "fr": "Je ne mange pas de poisson, j'y suis allergique",
+      "audio": "audio/restaurant-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "je suis végétarien (dit par un homme)",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "a-na na-ba-ti : l'accent sur « ba ».",
     "audio": "audio/restaurant-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana nabati, wach kayn chi tajine d lkhodra?",
+      "arabe": "أنا نباتي، واش كاين شي طاجين د الخضرة؟",
+      "fr": "Je suis végétarien, il y a un tajine de légumes ?",
+      "audio": "audio/restaurant-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "je suis allergique aux cacahuètes",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3n-di l7as-sa-siya men l-kaw-kaw : 3 et 7.",
     "audio": "audio/restaurant-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndi l7assasiya men lkawkaw, rred balek",
+      "arabe": "عندي الحساسية من الكاوكاو، رد بالك",
+      "fr": "Je suis allergique aux cacahuètes, attention",
+      "audio": "audio/restaurant-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "c'est halal ?",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wach ha-da 7lal : « ch » et 7.",
     "audio": "audio/restaurant-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach had l7em 7lal?",
+      "arabe": "واش هاد اللحم حلال؟",
+      "fr": "Cette viande est halal ?",
+      "audio": "audio/restaurant-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "c'est très bon !",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bnin bzaf : comme « bnine ».",
     "audio": "audio/restaurant-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttajine bnin bzaf, chokran!",
+      "arabe": "الطاجين بنين بزاف، شكرا!",
+      "fr": "Le tajine est très bon, merci !",
+      "audio": "audio/restaurant-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "c'est délicieux",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "had-chi bnin : « ch » de « chat ».",
     "audio": "audio/restaurant-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hadchi bnin, chkon tteyybo?",
+      "arabe": "هادشي بنين، شكون طيبو؟",
+      "fr": "C'est délicieux, qui l'a cuisiné ?",
+      "audio": "audio/restaurant-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "c'est trop salé",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "had-chi ma-le7 bzaf : « ch » et 7.",
     "audio": "audio/restaurant-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sme7 lia, hadchi male7 bzaf",
+      "arabe": "سمح ليا، هادشي مالح بزاف",
+      "fr": "Pardon, c'est trop salé",
+      "audio": "audio/restaurant-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "c'est trop chaud",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "had-chi skhoun bzaf : « ch » et « kh ».",
     "audio": "audio/restaurant-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tsenna, hadchi skhoun bzaf",
+      "arabe": "تسنى، هادشي سخون بزاف",
+      "fr": "Attends, c'est trop chaud",
+      "audio": "audio/restaurant-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "c'est froid",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "had-chi ba-red : « ch » de « chat ».",
     "audio": "audio/restaurant-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmakla jat, walakin hadchi bared",
+      "arabe": "الماكلة جات، ولكن هادشي بارد",
+      "fr": "Le plat est arrivé, mais c'est froid",
+      "audio": "audio/restaurant-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "le plat est prêt ?",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wach l-wak-la waj-da : « ch » de « chat ».",
     "audio": "audio/restaurant-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach lwakla wajda? ana ji3an",
+      "arabe": "واش الواكلة واجدة؟ أنا جيعان",
+      "fr": "Le plat est prêt ? J'ai faim",
+      "audio": "audio/restaurant-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "encore un peu, s'il vous plaît",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "zid chwi-ya, 3a-fak : « ch » et 3.",
     "audio": "audio/restaurant-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "zid chwiya d lkhobz, 3afak",
+      "arabe": "زيد شوية د الخبز، عافاك",
+      "fr": "Encore un peu de pain, s'il vous plaît",
+      "audio": "audio/restaurant-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "je n'en veux plus",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma bghit-ch nzid : « gh » et « ch ».",
     "audio": "audio/restaurant-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chokran, ma bghitch nzid",
+      "arabe": "شكرا، ما بغيتش نزيد",
+      "fr": "Merci, je n'en veux plus",
+      "audio": "audio/restaurant-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "j'ai assez mangé",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "klit bzaf : comme « klit bzaf ».",
     "audio": "audio/restaurant-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7amdollah, klit bzaf",
+      "arabe": "الحمد لله، كليت بزاف",
+      "fr": "Merci, j'ai assez mangé",
+      "audio": "audio/restaurant-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "l'addition, s'il vous plaît",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "l7-sab, 3a-fak : 7 et 3.",
     "audio": "audio/restaurant-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7sab, 3afak, ghadi nmchiw",
+      "arabe": "الحساب، عافاك، غادي نمشيو",
+      "fr": "L'addition, s'il vous plaît, nous partons",
+      "audio": "audio/restaurant-034-ex.mp3"
     }
   },
   {
@@ -550,13 +550,13 @@
     "fr": "on paie séparément",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kol wa-7ed ykhel-les bo7-do : 7, « kh », 7.",
     "audio": "audio/restaurant-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lyom kol wa7ed ykhelles bo7do",
+      "arabe": "اليوم كل واحد يخلص بوحدو",
+      "fr": "Aujourd'hui, chacun paie pour soi",
+      "audio": "audio/restaurant-035-ex.mp3"
     }
   },
   {
@@ -566,13 +566,13 @@
     "fr": "je paie tout",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "a-na nkhel-les kol-chi : « kh » et « ch ».",
     "audio": "audio/restaurant-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "la, khelli, ana nkhelles kolchi",
+      "arabe": "لا، خلي، أنا نخلص كلشي",
+      "fr": "Non, laisse, je paie tout",
+      "audio": "audio/restaurant-036-ex.mp3"
     }
   },
   {
@@ -582,13 +582,13 @@
     "fr": "vous acceptez la carte ?",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wach kat9-eblo l-kart : « ch » et 9.",
     "audio": "audio/restaurant-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach kat9eblo lkart wella ghir lflous?",
+      "arabe": "واش كتقبلو الكارط ولا غير الفلوس؟",
+      "fr": "Vous acceptez la carte ou seulement les espèces ?",
+      "audio": "audio/restaurant-037-ex.mp3"
     }
   },
   {
@@ -598,13 +598,13 @@
     "fr": "je paie en espèces",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "nkhel-les b flous : raclement (kh).",
     "audio": "audio/restaurant-038.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nkhelles b flous, ma 3ndich lkart",
+      "arabe": "نخلص بالفلوس، ما عنديش الكارط",
+      "fr": "Je paie en espèces, je n'ai pas de carte",
+      "audio": "audio/restaurant-038-ex.mp3"
     }
   },
   {
@@ -614,13 +614,13 @@
     "fr": "vous avez de la monnaie ?",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wach 3n-dek srf : « ch » et 3.",
     "audio": "audio/restaurant-039.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach 3ndek srf dyal mitayn?",
+      "arabe": "واش عندك صرف ديال ميتين؟",
+      "fr": "Vous avez la monnaie sur deux cents ?",
+      "audio": "audio/restaurant-039-ex.mp3"
     }
   },
   {
@@ -630,13 +630,13 @@
     "fr": "à emporter, s'il vous plaît",
     "theme": "restaurant",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bach na-khod m3a-ya, 3a-fak : « kh » et 3.",
     "audio": "audio/restaurant-040.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jouj sandwich, bach nakhod m3aya, 3afak",
+      "arabe": "جوج ساندويتش، باش ناخد معايا، عافاك",
+      "fr": "Deux sandwichs à emporter, s'il vous plaît",
+      "audio": "audio/restaurant-040-ex.mp3"
     }
   }
 ]
