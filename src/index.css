@@ -35,3 +35,19 @@ body {
   .lentille-ressort { transition: none; }
   .entree-droite, .entree-gauche { animation: none; }
 }
+
+/* Confettis du bilan de session. */
+.confetti {
+  position: absolute;
+  top: -12px;
+  width: 8px;
+  height: 14px;
+  border-radius: 2px;
+  animation: chute linear forwards;
+}
+@keyframes chute {
+  to { transform: translateY(105vh) rotate(720deg); opacity: 0.6; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .confetti { display: none; }
+}

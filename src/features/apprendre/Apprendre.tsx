@@ -4,6 +4,9 @@ import { THEMES } from '../../data/themes'
 import type { Mot } from '../../data/types'
 import { FicheMot } from '../mots/FicheMot'
 import { ListeMots } from '../mots/ListeMots'
+import { CarteSessionDuJour } from '../session/CarteSessionDuJour'
+import { preparerSession, type SessionPrete } from '../session/lancer'
+import { Session } from '../session/Session'
 import { GuideSons } from './GuideSons'
 
 type Vue = { type: 'themes' } | { type: 'sons' } | { type: 'theme'; themeId: string }
@@ -11,6 +14,23 @@ type Vue = { type: 'themes' } | { type: 'sons' } | { type: 'theme'; themeId: str
 export function Apprendre() {
   const [vue, setVue] = useState<Vue>({ type: 'themes' })
   const [mot, setMot] = useState<Mot | null>(null)
+  const [session, setSession] = useState<SessionPrete | null>(null)
+  const [numero, setNumero] = useState(0)
+
+  async function lancer() {
+    setSession(await preparerSession())
+    setNumero((n) => n + 1)
+  }
+
+  if (session)
+    return (
+      <Session
+        key={numero}
+        {...session}
+        onFermer={() => setSession(null)}
+        onEncore={() => void lancer()}
+      />
+    )
 
   if (mot) return <FicheMot mot={mot} onRetour={() => setMot(null)} />
   if (vue.type === 'sons') return <GuideSons onRetour={() => setVue({ type: 'themes' })} />
@@ -36,7 +56,8 @@ export function Apprendre() {
 
   return (
     <section className="space-y-4">
-      <h2 className="text-2xl font-bold">Apprendre</h2>
+      <CarteSessionDuJour onCommencer={() => void lancer()} />
+      <h2 className="pt-2 text-xl font-bold">Explorer</h2>
       <button
         type="button"
         onClick={() => setVue({ type: 'sons' })}

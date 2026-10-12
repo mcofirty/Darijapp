@@ -53,16 +53,18 @@ src/
   audio/          lecture des mots (MP3, sinon synthèse vocale du téléphone)
   features/
     mots/         fiche d'un mot, liste de mots, bouton audio (partagés)
-    apprendre/    thèmes, guide des sons, puis cartes du jour, mots difficiles, mode écoute
+    session/      session du jour : carte d'accueil, étapes, retour, bilan
+    apprendre/    accueil (session du jour, guide des sons, thèmes), puis mots difficiles, mode écoute
     parcours/     chemin de leçons, trésors, trophées
     quiz/         quiz de 5 questions, 5 types d'exercices
     progres/      tableau de bord, quêtes, série, statistiques, dictionnaire
     profil/       réglages, export/import, rappel .ics
     onboarding/   premier lancement
-  srs/            répétition espacée (logique pure)
+  srs/            répétition espacée et dates locales (logique pure)
+  exercices/      moteur d'exercices : composition d'une session, leurres, résultats (logique pure)
   scoring/        score de prononciation (logique pure)
-  gamification/   XP, niveaux, quêtes, série (logique pure)
-  db/             schéma Dexie et migrations
+  gamification/   XP, niveaux, série (logique pure) ; quêtes au jalon 4
+  db/             schéma Dexie et migrations, plan et enregistrement des sessions, résumé en direct
   data/           un fichier JSON par thème, liste des thèmes, sons du darija
 scripts/
   generate_audio.py
@@ -75,15 +77,17 @@ docs/
 
 | Onglet | Contenu |
 | --- | --- |
-| Apprendre | Aujourd'hui : guide « Les sons du darija », 8 thèmes, liste des mots, fiche mot. Prévu : session de 5 cartes du jour, dans les deux sens ; toucher pour retourner ; « À réviser » / « Je connais » |
+| Apprendre | Écran d'accueil. Carte « Session du jour » (nouveaux mots, révisions, mots vus, « Commencer » puis « Encore une session », sans limite), puis « Explorer » : guide des sons, 8 thèmes, fiches mots |
 | Parcours | Leçons groupées par niveau (niveau 1 « Les bases »), prochaine leçon mise en avant, nœuds Trésor, trophées |
 | Quiz | 5 questions mêlant les 5 exercices |
-| Progrès | Niveau, XP, quêtes, coffre, série, statistiques (prévu) ; bascule vers le Dictionnaire (fait : tous les mots, recherche latin/français/arabe) |
+| Progrès | Niveau, XP, quêtes, coffre, série, statistiques (prévu) ; bascule vers le Dictionnaire (fait : tous les mots, ✓ sur les mots déjà vus, recherche latin/français/arabe) |
 | Profil | Prénom, avatar, genre, objectif, rappel, audio, affichage arabe, mode sombre, export/import/remise à zéro |
 
 Navigation : barre d'onglets flottante en verre dépoli, icônes SVG ; une lentille marque l'onglet actif et suit le doigt quand on glisse le long de la barre (étirement selon la vitesse, icônes grossies, retour élastique). Un balayage horizontal de la page change aussi d'onglet, sauf sur les zones marquées `data-sans-balayage`.
 
 Fiche mot : latin en grand, arabe dessous (affiché par défaut, masquable dans Profil), traduction, boutons « Écouter » et « Ralenti » (0,75×), lecture automatique à l'ouverture, explication de prononciation, explication de chaque son particulier du mot, exemple avec son audio.
+
+Session du jour (style Duolingo, plein écran) : jusqu'à 8 révisions dues et 5 nouveaux mots dans l'ordre du programme. Chaque nouveau mot est présenté (« Nouveau mot ») puis exercé ; les nouveaux mots puis les révisions finissent par « Associe les paires ». Barre de progression, croix pour quitter, retour immédiat (vert « Bravo ! » ou rouge avec la bonne réponse, petit son, mot rejoué). Une question ratée revient en fin de session. Bilan avec confettis : XP, taux de réussite, série. Sans révision ni mot nouveau : entraînement libre sur 8 mots vus, qui ne change pas la répétition espacée. Pas de cœurs ni de vies.
 
 Exercices : Écoute et choisis, Associe les paires, Dis-le (avec score), Distingue les sons (paires comme 9elb / kelb), Quiz express (60 s).
 
@@ -92,12 +96,13 @@ Fonctions complémentaires : premier lancement guidé, Mes mots, remplacer l'aud
 ## Règles métier
 
 - **Translittération** : 3 = ع, 7 = ح, 9 = ق, kh = خ, gh = غ, ch = ش. Appliquée partout, sans exception.
-- **Répétition espacée** (Leitner) : un mot raté revient le lendemain ; un mot réussi revient après 3, 7, puis 21 jours.
+- **Répétition espacée** (Leitner, boîtes 1 à 4) : un mot raté revient le lendemain (boîte 1) ; un mot réussi revient après 3, 7, puis 21 jours. Un mot compte comme raté s'il a eu au moins une erreur pendant la session.
 - **Score de prononciation** : de 0 à 100. 80 et plus : « Excellent », 3 étoiles. De 60 à 79 : « Presque », 2 étoiles. Moins de 60 : « À retravailler », 1 étoile. 60 et plus compte comme réussi. Le bouton « Le score se trompe » permet une correction manuelle.
 - **Calibrage du score** : deux rendus de synthèse du même mot doivent dépasser 80 ; deux mots proches doivent rester sous 60.
-- **Niveaux** : 120 XP pour le niveau 1, 140 pour le niveau 2, puis 20 XP de plus par niveau. Les niveaux portent des noms de plante (niveau 2 : « Graine »).
+- **XP** : 1 par bonne réponse, 10 par session terminée, 5 de bonus sans faute.
+- **Niveaux** : 120 XP pour le niveau 1, 140 pour le niveau 2, puis 20 XP de plus par niveau. Noms : Terreau, Graine, Germe, Pousse, Tige, Feuilles, Bouton, Fleur, Fruit, puis Arbre.
 - **Quêtes** : 3 par jour, renouvelées à minuit heure locale. Les 3 terminées ouvrent le coffre (+60 XP). Un nœud Trésor rapporte +100 XP.
-- **Série** : une journée manquée par semaine ne casse pas la série.
+- **Série** : jours avec au moins une session. Aujourd'hui non fait ne casse rien. Une journée manquée est pardonnée si aucune autre ne l'a été dans les 7 jours ; deux jours manqués d'affilée cassent la série.
 - **Genre** : sert à accorder les phrases (« toi » = nta au masculin, nti au féminin).
 
 ## Formats de données
@@ -119,6 +124,12 @@ Mot (`src/data/<theme>.json`) :
 ```
 
 L'id suit `<theme>-NNN` dans l'ordre du fichier ; `src/data/data.test.ts` vérifie le format, l'unicité et la translittération.
+
+Session terminée (IndexedDB, table `sessions`, depuis la v2) :
+
+```json
+{ "id": 1, "date": "2026-10-12", "xp": 27, "bonnes": 12, "mauvaises": 0, "nouveaux": 5 }
+```
 
 Progression d'un mot (IndexedDB) :
 
@@ -153,12 +164,12 @@ Progression d'un mot (IndexedDB) :
 
 ## État du projet
 
-Jalon en cours : **2 — Exercices**, pas commencé. Le jalon 1 est en ligne sur https://mcofirty.github.io/Darijapp/.
+Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; restent l'onglet Quiz et le Quiz express. Le jalon 1 est en ligne sur https://mcofirty.github.io/Darijapp/.
 
 | Jalon | Durée estimée | Contenu | Statut |
 | --- | --- | --- | --- |
 | 1. Socle | Semaine 1 | PWA, 5 onglets, script audio, 1 thème de 10 mots (fait : 8 thèmes, 152 mots, 304 MP3) | Terminé |
-| 2. Exercices | Semaines 2 et 3 | Cartes, quiz, répétition espacée | À faire |
+| 2. Exercices | Semaines 2 et 3 | Cartes, quiz, répétition espacée | En cours |
 | 3. Prononciation | Semaines 4 et 5 | Enregistrement, score sur 100, sons du darija | À faire |
 | 4. Jeu et contenu | Semaines 6 et 7 | Quêtes, séries, parcours complet, 150 mots | À faire |
 | Ensuite | — | Grammaire, dialogues, 500 mots | Plus tard |
@@ -170,6 +181,7 @@ Jalon en cours : **2 — Exercices**, pas commencé. Le jalon 1 est en ligne sur
 | 2026-10-10 | Socle PWA : 5 onglets, en-tête, base Dexie v1, réglage « afficher l'arabe » | `src/app/`, `src/db/`, `vite.config.ts` |
 | 2026-10-10 | 152 mots en 8 thèmes avec arabe, prononciation et exemple ; fiche mot, guide des sons, dictionnaire avec recherche | `src/data/`, `src/features/mots/`, `src/features/apprendre/`, `src/features/progres/` |
 | 2026-10-10 | Script de génération audio et lecture avec repli sur la synthèse vocale du téléphone | `scripts/generate_audio.py`, `src/audio/lecteur.ts` |
+| 2026-10-12 | Session du jour style Duolingo en écran d'accueil : découverte, Écoute et choisis, Traduis, Associe les paires, bilan ; répétition espacée, XP, niveaux, série ; base v2 | `src/features/session/`, `src/exercices/`, `src/srs/`, `src/gamification/`, `src/db/apprentissage.ts` |
 | 2026-10-12 | Barre d'onglets flottante « liquid glass » avec glissement du doigt, et balayage de page entre onglets | `src/app/BarreOnglets.tsx`, `src/app/glisser.ts`, `src/app/icones.tsx` |
 | 2026-10-11 | GitHub Action qui génère les MP3, teste, construit et publie l'appli sur GitHub Pages | `.github/workflows/publier.yml` |
 
@@ -188,12 +200,18 @@ Jalon en cours : **2 — Exercices**, pas commencé. Le jalon 1 est en ligne sur
 - 2026-10-11 : repo public, pour que GitHub Pages soit gratuit ; aucune donnée personnelle dans le repo, le prénom de l'utilisateur a été retiré des exemples.
 - 2026-10-12 : effet « liquid glass » fait en CSS (backdrop-filter, transition élastique) et en Pointer Events, sans bibliothèque d'animation, pour rester léger et fluide sur iPhone ; désactivé avec « Réduire les animations ».
 - 2026-10-12 : l'appli garde ses couleurs orange et crème ; la barre reprend le design fourni par l'utilisateur dans ces couleurs.
+- 2026-10-12 : nouveaux mots illimités (demande de l'utilisateur) : 5 par session, autant de sessions que voulu ; pas de cœurs ni de blocage.
+- 2026-10-12 : la session du jour remplace les « 5 cartes du jour » du cahier des charges ; les exercices Dis-le et Distingue les sons y entreront au jalon 3.
+- 2026-10-12 : les réponses ne sont enregistrées qu'en fin de session ; quitter en cours de route ne change rien, pour garder la répétition espacée cohérente.
+- 2026-10-12 : la série est calculée à partir de l'historique des sessions (table `sessions`), sans compteur stocké, pour qu'elle ne puisse pas se désynchroniser.
+- 2026-10-12 : sons de retour synthétisés par Web Audio, sans fichier à télécharger.
 - 2026-10-10 : pas de routeur ; navigation par état React, suffisante pour 5 onglets.
 
 ## Points en suspens
 
 - Le contenu (darija, arabe, explications) a été rédigé sans relecture par un locuteur natif : signaler les erreurs pour corriger les JSON.
-- Le Dictionnaire montre tous les mots ; il devra ne montrer que les mots déjà vus quand la progression existera (jalon 2).
+- Le Dictionnaire montre tous les mots, avec un ✓ sur ceux déjà vus (le cahier des charges ne prévoyait que les mots vus).
+- Onglet Quiz (5 questions) et Quiz express (60 s) : à faire pour finir le jalon 2, en réutilisant `src/exercices/`.
 
 ## Mise à jour de ce fichier (obligatoire)
 

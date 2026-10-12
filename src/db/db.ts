@@ -27,6 +27,16 @@ export interface MotPerso {
   audio: Blob | null
 }
 
+export interface SessionFaite {
+  id?: number
+  /** Jour local « AAAA-MM-JJ ». */
+  date: string
+  xp: number
+  bonnes: number
+  mauvaises: number
+  nouveaux: number
+}
+
 export const PROFIL_DEFAUT: Profil = {
   id: 'moi',
   prenom: '',
@@ -38,6 +48,7 @@ export class DarijaDB extends Dexie {
   progression!: Table<ProgressionMot, string>
   profil!: Table<Profil, string>
   motsPerso!: Table<MotPerso, string>
+  sessions!: Table<SessionFaite, number>
 
   constructor(nom = 'darijapp') {
     super(nom)
@@ -45,6 +56,10 @@ export class DarijaDB extends Dexie {
       progression: 'id, prochaineRevision',
       profil: 'id',
       motsPerso: 'id',
+    })
+    // v2 : historique des sessions (XP, série). Ajout de table seul : rien n'est perdu.
+    this.version(2).stores({
+      sessions: '++id, date',
     })
   }
 }

@@ -33,13 +33,13 @@ L'appli s'organise en 5 onglets dans une barre de navigation basse ; chaque écr
 
 | Onglet | Rôle | Fonctionnalités |
 | --- | --- | --- |
-| Apprendre | Les mots du jour | Session de 5 cartes avec compteur (2/5) ; cartes dans les deux sens (français vers darija et darija vers français) ; toucher la carte pour la retourner et entendre le mot ; boutons « À réviser » et « Je connais » reliés à la répétition espacée |
+| Apprendre | La session du jour (écran d'accueil) | Session façon Duolingo : révisions dues et 5 nouveaux mots, présentés puis exercés (Écoute et choisis, Traduis, Associe les paires), barre de progression, retour immédiat, questions ratées refaites en fin de session, bilan avec XP et série ; « Encore une session » sans limite de mots ; en dessous, le guide des sons et les thèmes |
 | Parcours | La progression guidée | Chemin de leçons groupées par niveau (niveau 1 « Les bases » : Salutations, Qui suis-je ?) ; prochaine leçon conseillée mise en avant ; nœuds « Trésor » à +100 XP ; compteur de trophées |
 | Quiz | Le contrôle des acquis | Quiz de 5 questions mêlant les 5 exercices ; bonus de quête si aucune faute |
 | Progrès | Le tableau de bord | Accueil « Salut + prénom » ; niveau, XP total, XP du jour et XP restants avant le niveau suivant ; quêtes du jour et coffre ; série avec calendrier de la semaine ; statistiques (mots maîtrisés par thème, taux de réussite, courbe du score par son) ; bascule vers le Dictionnaire |
 | Profil | Les réglages | Prénom et avatar ; genre, pour accorder les phrases (« toi » se dit nta au masculin, nti au féminin) ; objectif quotidien ; heure du rappel ; vitesse audio et lecture automatique ; affichage de l'arabe ; langue de l'interface ; mode sombre ; export, import et remise à zéro de la progression |
 
-Le Dictionnaire liste tous les mots déjà vus, avec recherche, audio et niveau de maîtrise de chaque mot.
+Le Dictionnaire liste tous les mots, en marquant ceux déjà vus, avec recherche, audio et niveau de maîtrise de chaque mot.
 
 Rappel quotidien : l'appli génère un événement récurrent au format .ics, avec une alerte à l'heure choisie (par exemple 19 h), à ajouter une fois au Calendrier de l'iPhone.
 
@@ -115,7 +115,7 @@ Répétition espacée : chaque mot a un intervalle de révision (algorithme type
 
 Mécaniques de motivation :
 
-- niveaux nommés comme les étapes d'une plante (niveau 2 : « Graine »), avec une mascotte pot de fleurs ; progression proposée : 120 XP pour le niveau 1, 140 pour le niveau 2, puis 20 XP de plus par niveau ;
+- niveaux nommés comme les étapes d'une plante (Terreau, Graine, Germe, Pousse, Tige, Feuilles, Bouton, Fleur, Fruit, Arbre), avec une mascotte pot de fleurs ; progression proposée : 120 XP pour le niveau 1, 140 pour le niveau 2, puis 20 XP de plus par niveau ;
 - 3 quêtes du jour, renouvelées à minuit : écouter 5 mots, terminer une session de cartes, réussir une session ou un quiz sans faute ; une quête de prononciation peut s'y ajouter (3 mots notés 80 ou plus) ;
 - coffre du jour : les 3 quêtes terminées rapportent +60 XP ;
 - série de jours consécutifs avec calendrier de la semaine et mention « Série sécurisée pour aujourd'hui » ; une journée manquée par semaine ne casse pas la série ;
