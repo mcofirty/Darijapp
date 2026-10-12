@@ -97,11 +97,9 @@ export function BarreOnglets({ actif, onChange }: Props) {
         {/* Lentille de verre */}
         <li
           aria-hidden
-          className={`lentille pointer-events-none absolute inset-y-0 left-0 rounded-[1.75rem] border ${
-            glisse
-              ? 'border-white/80 bg-white/40 shadow-[inset_0_1px_1px_rgba(255,255,255,0.9),0_6px_16px_-6px_rgba(0,0,0,0.25)] dark:border-white/20 dark:bg-white/15'
-              : 'border-transparent bg-remplissage'
-          } ${glisse ? '' : 'lentille-ressort'}`}
+          className={`lentille pointer-events-none absolute inset-y-0 left-0 rounded-[1.75rem] ${
+            glisse ? 'lentille-goutte' : 'bg-remplissage lentille-ressort'
+          }`}
           style={{
             width: `${100 / N}%`,
             transform: `translateX(${position * 100}%) scale(${etire}, ${glisse ? 1.08 / Math.sqrt(etire) : 1})`,

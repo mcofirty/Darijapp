@@ -30,7 +30,7 @@ export function Page({ titre, retour, accessoire, children }: Props) {
     <div>
       <header
         className={`fixed inset-x-0 top-0 z-10 pt-[env(safe-area-inset-top)] transition-[background-color,border-color] duration-200 ${
-          compact ? 'verre !border-x-0 !border-t-0 !shadow-none' : 'border-b border-transparent'
+          compact ? 'verre verre-barre' : ''
         }`}
       >
         <div className="mx-auto flex h-11 max-w-xl items-center px-2">

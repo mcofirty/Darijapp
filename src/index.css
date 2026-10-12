@@ -38,8 +38,11 @@
   --vert-doux: rgba(0, 98, 51, 0.12);
   --rouge: #c1272d;
   --rouge-doux: rgba(193, 39, 45, 0.1);
-  --verre: rgba(255, 255, 255, 0.62);
-  --verre-bord: rgba(255, 255, 255, 0.7);
+  --verre: rgba(255, 255, 255, 0.5);
+  --verre-haut: rgba(255, 255, 255, 0.45);
+  --verre-reflet: rgba(255, 255, 255, 0.95);
+  --verre-reflet-bas: rgba(255, 255, 255, 0.35);
+  --verre-bord: rgba(0, 0, 0, 0.08);
   color-scheme: light;
   -webkit-tap-highlight-color: transparent;
 }
@@ -64,7 +67,10 @@
   --vert-doux: rgba(47, 210, 127, 0.18);
   --rouge: #ff6961;
   --rouge-doux: rgba(255, 105, 97, 0.18);
-  --verre: rgba(30, 30, 32, 0.6);
+  --verre: rgba(40, 40, 44, 0.45);
+  --verre-haut: rgba(255, 255, 255, 0.1);
+  --verre-reflet: rgba(255, 255, 255, 0.35);
+  --verre-reflet-bas: rgba(255, 255, 255, 0.1);
   --verre-bord: rgba(255, 255, 255, 0.12);
   color-scheme: dark;
 }
@@ -91,7 +97,10 @@
     --vert-doux: rgba(47, 210, 127, 0.18);
     --rouge: #ff6961;
     --rouge-doux: rgba(255, 105, 97, 0.18);
-    --verre: rgba(30, 30, 32, 0.6);
+    --verre: rgba(40, 40, 44, 0.45);
+    --verre-haut: rgba(255, 255, 255, 0.1);
+    --verre-reflet: rgba(255, 255, 255, 0.35);
+    --verre-reflet-bas: rgba(255, 255, 255, 0.1);
     --verre-bord: rgba(255, 255, 255, 0.12);
     color-scheme: dark;
   }
@@ -149,22 +158,84 @@ body {
   /*
    * Liquid Glass, réservé à la couche de commandes (barres, boutons flottants, panneaux),
    * jamais au contenu, comme le demandent les règles d'Apple.
+   * Safari ne sait pas déformer l'arrière-plan (pas de filtre SVG dans backdrop-filter) :
+   * on imite la lentille avec deux couches de verre (centre clair, bords plus réfractants),
+   * un liseré lumineux directionnel et une légère dispersion colorée sur les bords.
+   * Les couches sont des pseudo-éléments : un backdrop-filter sur l'élément lui-même
+   * empêcherait la bande des bords de voir la page.
    */
   .verre {
-    background: var(--verre);
-    -webkit-backdrop-filter: blur(24px) saturate(180%);
-    backdrop-filter: blur(24px) saturate(180%);
-    border: 0.5px solid var(--verre-bord);
+    position: relative;
+    isolation: isolate;
+    background: transparent;
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.5),
-      0 8px 24px -10px rgba(0, 0, 0, 0.25);
+      inset 0 1px 0.5px var(--verre-reflet),
+      inset 0 -1px 0.5px var(--verre-reflet-bas),
+      inset 1.5px 0 1px rgba(255, 90, 90, 0.12),
+      inset -1.5px 0 1px rgba(90, 160, 255, 0.14),
+      inset 0 0 12px rgba(255, 255, 255, 0.12),
+      0 10px 30px -10px rgba(0, 0, 0, 0.28),
+      0 0 0 0.5px var(--verre-bord);
   }
+  /* Couche principale : verre clair, peu flouté, très saturé. */
+  .verre::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    border-radius: inherit;
+    background:
+      linear-gradient(180deg, var(--verre-haut) 0%, transparent 45%),
+      var(--verre);
+    -webkit-backdrop-filter: blur(10px) saturate(200%) brightness(1.04);
+    backdrop-filter: blur(10px) saturate(200%) brightness(1.04);
+    pointer-events: none;
+  }
+  /* Bande des bords : plus floutée et plus contrastée, comme l'épaisseur d'une lentille. */
+  .verre::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    padding: 9px;
+    -webkit-backdrop-filter: blur(5px) saturate(260%) brightness(1.15) contrast(1.08);
+    backdrop-filter: blur(5px) saturate(260%) brightness(1.15) contrast(1.08);
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+      linear-gradient(#000 0 0) content-box exclude,
+      linear-gradient(#000 0 0);
+    pointer-events: none;
+  }
+  /* Variante pour les barres pleine largeur : sans bande de bord ni dispersion. */
+  .verre-barre::after { display: none; }
+  .verre-barre { box-shadow: 0 0.5px 0 var(--separateur); }
+
   @media (prefers-reduced-transparency: reduce) {
-    .verre {
+    .verre::before {
       background: var(--carte);
       -webkit-backdrop-filter: none;
       backdrop-filter: none;
     }
+    .verre::after { display: none; }
+  }
+
+  /* Lentille de la barre d'onglets quand on la fait glisser : une goutte d'eau. */
+  .lentille-goutte {
+    background:
+      radial-gradient(120% 90% at 30% 20%, rgba(255, 255, 255, 0.55), transparent 55%),
+      rgba(255, 255, 255, 0.18);
+    -webkit-backdrop-filter: blur(0.6px) saturate(170%) brightness(1.08);
+    backdrop-filter: blur(0.6px) saturate(170%) brightness(1.08);
+    box-shadow:
+      inset 0 1.5px 1px rgba(255, 255, 255, 0.95),
+      inset 0 -2px 4px rgba(255, 255, 255, 0.35),
+      inset 3px 0 4px rgba(255, 90, 90, 0.18),
+      inset -3px 0 4px rgba(90, 160, 255, 0.2),
+      0 6px 18px -6px rgba(0, 0, 0, 0.35);
   }
 
   /* Séparateurs fins entre cellules, alignés sur le texte (variable --retrait). */
