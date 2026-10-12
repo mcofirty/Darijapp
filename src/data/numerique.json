@@ -1,0 +1,866 @@
+[
+  {
+    "id": "numerique-001",
+    "latin": "tilifoun",
+    "arabe": "تيليفون",
+    "fr": "téléphone",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-002",
+    "latin": "portable",
+    "arabe": "بورطابل",
+    "fr": "téléphone portable",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-003",
+    "latin": "smartfon",
+    "arabe": "سمارتفون",
+    "fr": "smartphone",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-004",
+    "latin": "ordinateur",
+    "arabe": "أورديناتور",
+    "fr": "ordinateur",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-005",
+    "latin": "portable PC",
+    "arabe": "بورطابل بي سي",
+    "fr": "ordinateur portable",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-006",
+    "latin": "tablet",
+    "arabe": "طابليت",
+    "fr": "tablette (numérique)",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-007",
+    "latin": "écran",
+    "arabe": "إيكران",
+    "fr": "écran",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-008",
+    "latin": "klavi",
+    "arabe": "كلافي",
+    "fr": "clavier",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-009",
+    "latin": "souris",
+    "arabe": "سوري",
+    "fr": "souris (informatique)",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-010",
+    "latin": "batri",
+    "arabe": "باطري",
+    "fr": "batterie",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-011",
+    "latin": "chargeur",
+    "arabe": "شارجور",
+    "fr": "chargeur",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-012",
+    "latin": "kabl",
+    "arabe": "كابل",
+    "fr": "câble",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-013",
+    "latin": "kit d lwdnin",
+    "arabe": "كيت د الودنين",
+    "fr": "écouteurs",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-014",
+    "latin": "casque",
+    "arabe": "كاسك",
+    "fr": "casque audio",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-015",
+    "latin": "mikro",
+    "arabe": "ميكرو",
+    "fr": "microphone",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-016",
+    "latin": "kamera",
+    "arabe": "كاميرا",
+    "fr": "caméra",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-017",
+    "latin": "tswira",
+    "arabe": "تصويرة",
+    "fr": "photo",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-018",
+    "latin": "video",
+    "arabe": "ڤيديو",
+    "fr": "vidéo",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-019",
+    "latin": "mousi9a",
+    "arabe": "موسيقى",
+    "fr": "musique",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-020",
+    "latin": "ghniya",
+    "arabe": "غنية",
+    "fr": "chanson",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-021",
+    "latin": "aplikasyon",
+    "arabe": "أبليكاسيون",
+    "fr": "application",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-022",
+    "latin": "site",
+    "arabe": "سيت",
+    "fr": "site internet",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-023",
+    "latin": "internet",
+    "arabe": "أنترنيت",
+    "fr": "internet",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-024",
+    "latin": "rézo",
+    "arabe": "ريزو",
+    "fr": "réseau",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-025",
+    "latin": "wifi",
+    "arabe": "ويفي",
+    "fr": "wi-fi",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-026",
+    "latin": "code secret",
+    "arabe": "كود سيكري",
+    "fr": "mot de passe",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-027",
+    "latin": "compte",
+    "arabe": "كونط",
+    "fr": "compte (numérique)",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-028",
+    "latin": "connexion",
+    "arabe": "كونيكسيون",
+    "fr": "connexion",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-029",
+    "latin": "fichiy",
+    "arabe": "فيشي",
+    "fr": "fichier",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-030",
+    "latin": "dossi",
+    "arabe": "دوسي",
+    "fr": "dossier informatique",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-031",
+    "latin": "lien",
+    "arabe": "ليان",
+    "fr": "lien",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-032",
+    "latin": "telecharger",
+    "arabe": "تيليشارجي",
+    "fr": "télécharger",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-033",
+    "latin": "sift",
+    "arabe": "صيفط",
+    "fr": "envoyer",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-034",
+    "latin": "toussel",
+    "arabe": "توصل",
+    "fr": "recevoir",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-035",
+    "latin": "partaji",
+    "arabe": "بارطاجي",
+    "fr": "partager",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-036",
+    "latin": "copier",
+    "arabe": "كوبيي",
+    "fr": "copier",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-037",
+    "latin": "coller",
+    "arabe": "كولي",
+    "fr": "coller",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-038",
+    "latin": "kliki",
+    "arabe": "كليكي",
+    "fr": "cliquer",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-039",
+    "latin": "7ell",
+    "arabe": "حل",
+    "fr": "ouvrir",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-040",
+    "latin": "sedd",
+    "arabe": "سد",
+    "fr": "fermer",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-041",
+    "latin": "mse7",
+    "arabe": "مسح",
+    "fr": "effacer",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-042",
+    "latin": "supprimer",
+    "arabe": "سوبريمي",
+    "fr": "supprimer",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-043",
+    "latin": "sajjel",
+    "arabe": "سجل",
+    "fr": "enregistrer",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-044",
+    "latin": "9elleb",
+    "arabe": "قلب",
+    "fr": "chercher",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-045",
+    "latin": "l9a",
+    "arabe": "لقى",
+    "fr": "trouver",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-046",
+    "latin": "3ayet",
+    "arabe": "عيط",
+    "fr": "appeler / téléphoner",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-047",
+    "latin": "jawb",
+    "arabe": "جاوب",
+    "fr": "répondre",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-048",
+    "latin": "sme3",
+    "arabe": "سمع",
+    "fr": "écouter / entendre",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-049",
+    "latin": "hder",
+    "arabe": "هضر",
+    "fr": "parler",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-050",
+    "latin": "hdra",
+    "arabe": "هضرة",
+    "fr": "discussion",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-051",
+    "latin": "ma3louma",
+    "arabe": "معلومة",
+    "fr": "information",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-052",
+    "latin": "khabar",
+    "arabe": "خبر",
+    "fr": "nouvelle (information)",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-053",
+    "latin": "rézo sosyo",
+    "arabe": "ريزو سوسيو",
+    "fr": "réseaux sociaux",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "numerique-054",
+    "latin": "vokal",
+    "arabe": "ڤوكال",
+    "fr": "message vocal",
+    "theme": "numerique",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  }
+]

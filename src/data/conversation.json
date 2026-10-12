@@ -1,0 +1,1043 @@
+[
+  {
+    "id": "conversation-001",
+    "latin": "w nta, chno smitek?",
+    "arabe": "و نتا، شنو سميتك؟",
+    "fr": "et vous, comment vous appelez-vous ?",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    },
+    "note": "Tutoiement usuel ; adapter au genre"
+  },
+  {
+    "id": "conversation-002",
+    "latin": "ana saken f Bariz",
+    "arabe": "انا ساكن ف باريز",
+    "fr": "j'habite à Paris (dit par un homme)",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-003",
+    "latin": "ana fransawi",
+    "arabe": "انا فرنساوي",
+    "fr": "je suis français (dit par un homme)",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-004",
+    "latin": "ana fransawiya",
+    "arabe": "انا فرنساوية",
+    "fr": "je suis française",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-005",
+    "latin": "ana jay men Fransa",
+    "arabe": "انا جاي من فرانسا",
+    "fr": "je viens de France (dit par un homme)",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-006",
+    "latin": "ana f l3otla",
+    "arabe": "انا ف العطلة",
+    "fr": "je suis en vacances",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-007",
+    "latin": "jit bach nkhdem",
+    "arabe": "جيت باش نخدم",
+    "fr": "je viens pour travailler",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-008",
+    "latin": "kan-t3ellem ddarija",
+    "arabe": "كنتعلم الدارجة",
+    "fr": "j'apprends la darija",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-009",
+    "latin": "kan-hder chwiya ddarija",
+    "arabe": "كنهضر شوية الدارجة",
+    "fr": "je parle un peu darija",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-010",
+    "latin": "ma kan-hderch ddarija mzyan",
+    "arabe": "ما كنهضرش الدارجة مزيان",
+    "fr": "je ne parle pas bien darija",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-011",
+    "latin": "fhemt",
+    "arabe": "فهمت",
+    "fr": "j'ai compris",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-012",
+    "latin": "3reft",
+    "arabe": "عرفت",
+    "fr": "je sais",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-013",
+    "latin": "kan-3ref had lblasa",
+    "arabe": "كنعرف هاد البلاصة",
+    "fr": "je connais cet endroit",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-014",
+    "latin": "ma kan-3refch",
+    "arabe": "ما كنعرفش",
+    "fr": "je ne connais pas",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-015",
+    "latin": "t9der t3awed?",
+    "arabe": "تقدر تعاود؟",
+    "fr": "peux-tu répéter ? (à un homme)",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-016",
+    "latin": "hder b chwiya",
+    "arabe": "هضر بشوية",
+    "fr": "parle plus lentement",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-017",
+    "latin": "hder b sout 3ali",
+    "arabe": "هضر بصوت عالي",
+    "fr": "parle plus fort",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-018",
+    "latin": "ma sme3tch",
+    "arabe": "ما سمعتش",
+    "fr": "je n'ai pas entendu",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-019",
+    "latin": "ach glti?",
+    "arabe": "اش گلتي؟",
+    "fr": "qu'est-ce que tu as dit ?",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-020",
+    "latin": "kifach kan-golo hadi b ddarija?",
+    "arabe": "كيفاش كنگولو هادي بالدارجة؟",
+    "fr": "comment on dit ça en darija ?",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-021",
+    "latin": "kifach kat-tkteb?",
+    "arabe": "كيفاش كتتكتب؟",
+    "fr": "comment ça s'écrit ?",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-022",
+    "latin": "t9der t3aweni?",
+    "arabe": "تقدر تعاوني؟",
+    "fr": "peux-tu m'aider ?",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-023",
+    "latin": "khasni l3awn",
+    "arabe": "خاصني العون",
+    "fr": "j'ai besoin d'aide",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-024",
+    "latin": "chokran 3la lmosa3ada",
+    "arabe": "شكرا على المساعدة",
+    "fr": "merci pour ton aide",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-025",
+    "latin": "ana mtaf9",
+    "arabe": "انا متافق",
+    "fr": "je suis d'accord",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-026",
+    "latin": "ana machi mtaf9",
+    "arabe": "انا ماشي متافق",
+    "fr": "je ne suis pas d'accord",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-027",
+    "latin": "3ndek l7e9",
+    "arabe": "عندك الحق",
+    "fr": "tu as raison",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-028",
+    "latin": "ma 3ndekch l7e9",
+    "arabe": "ما عندكش الحق",
+    "fr": "tu as tort",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-029",
+    "latin": "kan-den belli iyyeh",
+    "arabe": "كنضن بلي ايه",
+    "fr": "je pense que oui",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-030",
+    "latin": "kan-den belli la",
+    "arabe": "كنضن بلي لا",
+    "fr": "je pense que non",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-031",
+    "latin": "kan-den belli...",
+    "arabe": "كنضن بلي...",
+    "fr": "je crois que…",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-032",
+    "latin": "machi momkin",
+    "arabe": "ماشي ممكن",
+    "fr": "ce n'est pas possible",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-033",
+    "latin": "machi darori",
+    "arabe": "ماشي ضروري",
+    "fr": "ce n'est pas nécessaire / pas forcément",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-034",
+    "latin": "hadchi mohim",
+    "arabe": "هادشي مهم",
+    "fr": "c'est important",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-035",
+    "latin": "ana mcheghoul",
+    "arabe": "انا مشغول",
+    "fr": "je suis occupé (dit par un homme)",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-036",
+    "latin": "ana fargh daba",
+    "arabe": "انا فارغ دابا",
+    "fr": "je suis libre maintenant (dit par un homme)",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-037",
+    "latin": "ana wajed",
+    "arabe": "انا واجد",
+    "fr": "je suis prêt (dit par un homme)",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-038",
+    "latin": "ana wajda",
+    "arabe": "انا واجدة",
+    "fr": "je suis prête",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-039",
+    "latin": "tsenna chwiya",
+    "arabe": "تسنى شوية",
+    "fr": "attends un peu",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-040",
+    "latin": "tsennani",
+    "arabe": "تسناني",
+    "fr": "attends-moi",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-041",
+    "latin": "aji l-hna",
+    "arabe": "أجي لهنا",
+    "fr": "viens ici",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-042",
+    "latin": "sir l-temma",
+    "arabe": "سير لتما",
+    "fr": "va là-bas",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-043",
+    "latin": "sme3 lia",
+    "arabe": "سمع ليا",
+    "fr": "écoute-moi",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-044",
+    "latin": "chouf hada",
+    "arabe": "شوف هادا",
+    "fr": "regarde ça",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-045",
+    "latin": "khellini nchouf",
+    "arabe": "خليني نشوف",
+    "fr": "laisse-moi voir",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-046",
+    "latin": "3tini hada",
+    "arabe": "عطيني هادا",
+    "fr": "donne-moi ça",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-047",
+    "latin": "khod hada",
+    "arabe": "خود هادا",
+    "fr": "prends ça",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-048",
+    "latin": "jib lia lma",
+    "arabe": "جيب ليا الما",
+    "fr": "apporte-moi de l'eau",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-049",
+    "latin": "khlliha",
+    "arabe": "خليها",
+    "fr": "laisse tomber",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-050",
+    "latin": "machi daba",
+    "arabe": "ماشي دابا",
+    "fr": "pas maintenant",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-051",
+    "latin": "wakha, mzyan",
+    "arabe": "واخا، مزيان",
+    "fr": "ça marche !",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-052",
+    "latin": "mzyan bzaf",
+    "arabe": "مزيان بزاف",
+    "fr": "très bien !",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-053",
+    "latin": "ma kayn bass",
+    "arabe": "ما كاين باس",
+    "fr": "pas de souci",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-054",
+    "latin": "kan-de7ek",
+    "arabe": "كنضحك",
+    "fr": "je rigole",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-055",
+    "latin": "kan-hder b jedd",
+    "arabe": "كنهضر بالجد",
+    "fr": "je suis sérieux",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-056",
+    "latin": "kat-de7ek?",
+    "arabe": "كتضحك؟",
+    "fr": "tu plaisantes ?",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-057",
+    "latin": "hadchi ghir nokta",
+    "arabe": "هادشي غير نكتة",
+    "fr": "c'est une blague",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-058",
+    "latin": "ach khbarek?",
+    "arabe": "اش خبارك؟",
+    "fr": "quoi de neuf ?",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-059",
+    "latin": "walu jdid",
+    "arabe": "والو جديد",
+    "fr": "rien de nouveau",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-060",
+    "latin": "kolchi mzyan",
+    "arabe": "كلشي مزيان",
+    "fr": "tout va bien",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-061",
+    "latin": "machi chi 7aja",
+    "arabe": "ماشي شي حاجة",
+    "fr": "ce n'est rien",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-062",
+    "latin": "hadi hiya ddnya",
+    "arabe": "هادي هي الدنيا",
+    "fr": "c'est la vie",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-063",
+    "latin": "3la 7sab",
+    "arabe": "على حساب",
+    "fr": "ça dépend",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-064",
+    "latin": "3ndi sou2al",
+    "arabe": "عندي سؤال",
+    "fr": "j'ai une question",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "conversation-065",
+    "latin": "3ndek chi sou2al?",
+    "arabe": "عندك شي سؤال؟",
+    "fr": "tu as une question ?",
+    "theme": "conversation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  }
+]

@@ -1,0 +1,594 @@
+[
+  {
+    "id": "organisation-001",
+    "latin": "3ndi ijtima3",
+    "arabe": "عندي اجتماع",
+    "fr": "j'ai une réunion",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-002",
+    "latin": "3ndi mow3id",
+    "arabe": "عندي موعد",
+    "fr": "j'ai un rendez-vous",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-003",
+    "latin": "ghadi nkhdem ghedda",
+    "arabe": "غادي نخدم غدا",
+    "fr": "je travaille demain",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-004",
+    "latin": "kan-9elleb 3la khdma",
+    "arabe": "كنقلب على خدمة",
+    "fr": "je cherche du travail",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-005",
+    "latin": "kan-khdem f cherika",
+    "arabe": "كنخدم ف شركة",
+    "fr": "je travaille dans une entreprise",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-006",
+    "latin": "ghadi l biro",
+    "arabe": "غادي للبيرو",
+    "fr": "je vais au bureau",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-007",
+    "latin": "kan-bda m3a tss3oud",
+    "arabe": "كنبدا معا التسعود",
+    "fr": "je commence à neuf heures",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-008",
+    "latin": "kan-sali m3a ssetta",
+    "arabe": "كنسالي معا الستة",
+    "fr": "je termine à six heures",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-009",
+    "latin": "ana fargh ghedda",
+    "arabe": "انا فارغ غدا",
+    "fr": "je suis disponible demain (dit par un homme)",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-010",
+    "latin": "ana machi fargh",
+    "arabe": "انا ماشي فارغ",
+    "fr": "je ne suis pas disponible (dit par un homme)",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-011",
+    "latin": "ana m3ettel",
+    "arabe": "انا معطل",
+    "fr": "je suis en retard (dit par un homme)",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-012",
+    "latin": "ana f lwa9t",
+    "arabe": "انا ف الوقت",
+    "fr": "je suis à l'heure",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-013",
+    "latin": "n9dro nbeddlo lmow3id?",
+    "arabe": "نقدرو نبدلو الموعد؟",
+    "fr": "on peut déplacer le rendez-vous ?",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-014",
+    "latin": "khasna nsaliw lyom",
+    "arabe": "خاصنا نساليو اليوم",
+    "fr": "il faut finir aujourd'hui",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-015",
+    "latin": "ghadi nsift lwati9a",
+    "arabe": "غادي نصيفط الوثيقة",
+    "fr": "je vais envoyer le document",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-016",
+    "latin": "sift limil",
+    "arabe": "صيفط الإيميل",
+    "fr": "j'ai envoyé le mail",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-017",
+    "latin": "wach twesslek lmesaj dyali?",
+    "arabe": "واش توصلك الميساج ديالي؟",
+    "fr": "tu as reçu mon message ?",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-018",
+    "latin": "t9der tcher7 lia?",
+    "arabe": "تقدر تشرح ليا؟",
+    "fr": "peux-tu m'expliquer ?",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-019",
+    "latin": "ghadi net2ekked",
+    "arabe": "غادي نتأكد",
+    "fr": "je vais vérifier",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-020",
+    "latin": "ach hiya lawlawiya?",
+    "arabe": "اش هي الأولوية؟",
+    "fr": "quelle est la priorité ?",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-021",
+    "latin": "hadchi mosta3jil",
+    "arabe": "هادشي مستعجل",
+    "fr": "c'est urgent",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-022",
+    "latin": "salit",
+    "arabe": "ساليت",
+    "fr": "j'ai terminé",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-023",
+    "latin": "mazal ma salitch",
+    "arabe": "مازال ما ساليتش",
+    "fr": "je n'ai pas terminé / je n'ai pas encore fini",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-024",
+    "latin": "mazal kayna lkhdma",
+    "arabe": "مازال كاينة الخدمة",
+    "fr": "il reste du travail",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-025",
+    "latin": "khasni lwa9t kter",
+    "arabe": "خاصني الوقت كتر",
+    "fr": "j'ai besoin de plus de temps",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-026",
+    "latin": "ma 3ndich lwa9t",
+    "arabe": "ما عنديش الوقت",
+    "fr": "je n'ai pas le temps / je n'ai pas de temps",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-027",
+    "latin": "kan-t3ellem",
+    "arabe": "كنتعلم",
+    "fr": "je suis en train d'apprendre",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-028",
+    "latin": "bghit nwlli 7sen",
+    "arabe": "بغيت نولي حسن",
+    "fr": "je veux m'améliorer",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-029",
+    "latin": "chre7 lia merra khra",
+    "arabe": "شرح ليا مرة اخرى",
+    "fr": "explique-moi encore une fois",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-030",
+    "latin": "kifach kaykhdem hada?",
+    "arabe": "كيفاش كيخدم هادا؟",
+    "fr": "comment ça fonctionne ?",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-031",
+    "latin": "hadchi kaykhdem",
+    "arabe": "هادشي كيخدم",
+    "fr": "ça fonctionne",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-032",
+    "latin": "hadchi ma kaykhdemch",
+    "arabe": "هادشي ما كيخدمش",
+    "fr": "ça ne fonctionne pas",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-033",
+    "latin": "achno howa lmochkil?",
+    "arabe": "اشنو هو المشكل؟",
+    "fr": "quel est le problème ?",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-034",
+    "latin": "l9ina l7ell",
+    "arabe": "لقينا الحل",
+    "fr": "nous avons trouvé une solution",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-035",
+    "latin": "ghadi njerrb",
+    "arabe": "غادي نجرب",
+    "fr": "je vais essayer",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-036",
+    "latin": "hadi fikra mzyana",
+    "arabe": "هادي فكرة مزيانة",
+    "fr": "c'est une bonne idée",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "organisation-037",
+    "latin": "ana mtaf9 m3ak",
+    "arabe": "انا متافق معاك",
+    "fr": "je suis d'accord avec toi",
+    "theme": "organisation",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  }
+]

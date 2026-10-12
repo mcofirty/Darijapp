@@ -1,0 +1,706 @@
+[
+  {
+    "id": "loisirs-001",
+    "latin": "sport",
+    "arabe": "سبور",
+    "fr": "sport",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-002",
+    "latin": "kora",
+    "arabe": "كورة",
+    "fr": "football / ballon",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-003",
+    "latin": "match",
+    "arabe": "ماتش",
+    "fr": "match",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-004",
+    "latin": "le3eb",
+    "arabe": "لاعب",
+    "fr": "joueur",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-005",
+    "latin": "le3ba",
+    "arabe": "لاعبة",
+    "fr": "joueuse",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-006",
+    "latin": "modarrib",
+    "arabe": "مدرب",
+    "fr": "entraîneur",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-007",
+    "latin": "7ekem",
+    "arabe": "حكم",
+    "fr": "arbitre",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-008",
+    "latin": "but",
+    "arabe": "بي",
+    "fr": "but (football)",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-009",
+    "latin": "terrain",
+    "arabe": "تيران",
+    "fr": "terrain",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-010",
+    "latin": "rb7",
+    "arabe": "ربح",
+    "fr": "victoire",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-011",
+    "latin": "khsara",
+    "arabe": "خسارة",
+    "fr": "défaite",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-012",
+    "latin": "ta3adol",
+    "arabe": "تعادل",
+    "fr": "égalité (match)",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-013",
+    "latin": "rbe7",
+    "arabe": "ربح",
+    "fr": "gagner",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-014",
+    "latin": "khser",
+    "arabe": "خسر",
+    "fr": "perdre",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-015",
+    "latin": "l3eb",
+    "arabe": "لعب",
+    "fr": "jouer",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-016",
+    "latin": "3oum",
+    "arabe": "عوم",
+    "fr": "nager",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-017",
+    "latin": "r9es",
+    "arabe": "رقص",
+    "fr": "danser",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-018",
+    "latin": "ghnni",
+    "arabe": "غنى",
+    "fr": "chanter",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-019",
+    "latin": "rsem",
+    "arabe": "رسم",
+    "fr": "dessiner",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-020",
+    "latin": "sbbeg",
+    "arabe": "صبگ",
+    "fr": "peindre",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-021",
+    "latin": "swwer",
+    "arabe": "صور",
+    "fr": "photographier",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-022",
+    "latin": "safr",
+    "arabe": "سافر",
+    "fr": "voyager",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-023",
+    "latin": "tmecha",
+    "arabe": "تمشى",
+    "fr": "se promener",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-024",
+    "latin": "sou9 bisklet",
+    "arabe": "سوق بيسكليت",
+    "fr": "faire du vélo",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-025",
+    "latin": "ljri",
+    "arabe": "الجري",
+    "fr": "course à pied",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-026",
+    "latin": "musculation",
+    "arabe": "موسكولاسيون",
+    "fr": "musculation",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-027",
+    "latin": "fitness",
+    "arabe": "فيتنس",
+    "fr": "fitness",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-028",
+    "latin": "basket",
+    "arabe": "باسكيط",
+    "fr": "basketball",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-029",
+    "latin": "tennis",
+    "arabe": "تينيس",
+    "fr": "tennis",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-030",
+    "latin": "padel",
+    "arabe": "باديل",
+    "fr": "padel",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-031",
+    "latin": "volley",
+    "arabe": "ڤولي",
+    "fr": "volley",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-032",
+    "latin": "boxe",
+    "arabe": "بوكس",
+    "fr": "boxe",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-033",
+    "latin": "fonoun 7arbiya",
+    "arabe": "فنون حربية",
+    "fr": "arts martiaux",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-034",
+    "latin": "yoga",
+    "arabe": "يوگا",
+    "fr": "yoga",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-035",
+    "latin": "film",
+    "arabe": "فيلم",
+    "fr": "film",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-036",
+    "latin": "serie",
+    "arabe": "سيري",
+    "fr": "série",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-037",
+    "latin": "l3ba",
+    "arabe": "لعبة",
+    "fr": "jeu",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-038",
+    "latin": "jeu video",
+    "arabe": "جو ڤيديو",
+    "fr": "jeu vidéo",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-039",
+    "latin": "l9raya",
+    "arabe": "القراية",
+    "fr": "lecture",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-040",
+    "latin": "3erd",
+    "arabe": "عرض",
+    "fr": "spectacle",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-041",
+    "latin": "7efla",
+    "arabe": "حفلة",
+    "fr": "fête",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-042",
+    "latin": "sohriya",
+    "arabe": "سهرية",
+    "fr": "soirée",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-043",
+    "latin": "siya7a",
+    "arabe": "سياحة",
+    "fr": "tourisme",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "loisirs-044",
+    "latin": "lmer7",
+    "arabe": "المرح",
+    "fr": "amusement",
+    "theme": "loisirs",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  }
+]

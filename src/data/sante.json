@@ -1,0 +1,579 @@
+[
+  {
+    "id": "sante-001",
+    "latin": "sse7a",
+    "arabe": "الصحة",
+    "fr": "santé",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-002",
+    "latin": "lmerd",
+    "arabe": "المرض",
+    "fr": "maladie",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-003",
+    "latin": "mrid",
+    "arabe": "مريض",
+    "fr": "malade (homme)",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-004",
+    "latin": "mrida",
+    "arabe": "مريضة",
+    "fr": "malade (femme)",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-005",
+    "latin": "tbib",
+    "arabe": "طبيب",
+    "fr": "médecin",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-006",
+    "latin": "tbiba",
+    "arabe": "طبيبة",
+    "fr": "médecin (femme)",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-007",
+    "latin": "sbitar",
+    "arabe": "سبيطار",
+    "fr": "hôpital",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-008",
+    "latin": "farmasiya",
+    "arabe": "فارماسيا",
+    "fr": "pharmacie",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-009",
+    "latin": "dwa",
+    "arabe": "دوا",
+    "fr": "médicament",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-010",
+    "latin": "lwej3",
+    "arabe": "الوجع",
+    "fr": "douleur",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-011",
+    "latin": "kaywje3ni",
+    "arabe": "كيوجعني",
+    "fr": "j'ai mal",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-012",
+    "latin": "kaywje3ni rasi",
+    "arabe": "كيوجعني راسي",
+    "fr": "j'ai mal à la tête",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-013",
+    "latin": "katwje3ni kerchi",
+    "arabe": "كتوجعني كرشي",
+    "fr": "j'ai mal au ventre",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-014",
+    "latin": "3ndi sskhana",
+    "arabe": "عندي السخانة",
+    "fr": "j'ai de la fièvre",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-015",
+    "latin": "skhana",
+    "arabe": "سخانة",
+    "fr": "fièvre / chaleur",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-016",
+    "latin": "zkkam",
+    "arabe": "زكام",
+    "fr": "rhume",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-017",
+    "latin": "ke7a",
+    "arabe": "كحة",
+    "fr": "toux",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-018",
+    "latin": "7assasiya",
+    "arabe": "حساسية",
+    "fr": "allergie",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-019",
+    "latin": "jer7",
+    "arabe": "جرح",
+    "fr": "blessure",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-020",
+    "latin": "bansman",
+    "arabe": "بانسمان",
+    "fr": "pansement",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    },
+    "note": "Emprunt courant"
+  },
+  {
+    "id": "sante-021",
+    "latin": "l3ya",
+    "arabe": "العيا",
+    "fr": "fatigue",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-022",
+    "latin": "3yan",
+    "arabe": "عيان",
+    "fr": "fatigué",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-023",
+    "latin": "mosta3jil",
+    "arabe": "مستعجل",
+    "fr": "urgence / urgent",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-024",
+    "latin": "ambulans",
+    "arabe": "أمبولانس",
+    "fr": "ambulance",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-025",
+    "latin": "l3awn",
+    "arabe": "العون",
+    "fr": "aide",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-026",
+    "latin": "3awnouni!",
+    "arabe": "عاونوني!",
+    "fr": "au secours !",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-027",
+    "latin": "fiya jou3",
+    "arabe": "فيا جوع",
+    "fr": "j'ai faim",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-028",
+    "latin": "fiya l3tech",
+    "arabe": "فيا العطش",
+    "fr": "j'ai soif",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-029",
+    "latin": "fiya n3as",
+    "arabe": "فيا النعاس",
+    "fr": "j'ai sommeil",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-030",
+    "latin": "ana mrid",
+    "arabe": "انا مريض",
+    "fr": "je suis malade (dit par un homme)",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-031",
+    "latin": "wllit 7sen",
+    "arabe": "وليت حسن",
+    "fr": "je vais mieux",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-032",
+    "latin": "rta7",
+    "arabe": "رتاح",
+    "fr": "repose-toi / se reposer",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-033",
+    "latin": "rdd balek 3la rasek",
+    "arabe": "رد بالك على راسك",
+    "fr": "prends soin de toi",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-034",
+    "latin": "3ndi l7assasiya men...",
+    "arabe": "عندي الحساسية من...",
+    "fr": "je suis allergique à...",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-035",
+    "latin": "fin kayn sbitar?",
+    "arabe": "فين كاين سبيطار؟",
+    "fr": "où est l'hôpital ?",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "sante-036",
+    "latin": "khasni tbib",
+    "arabe": "خاصني طبيب",
+    "fr": "il me faut un médecin",
+    "theme": "sante",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  }
+]

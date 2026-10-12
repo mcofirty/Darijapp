@@ -20,7 +20,7 @@ La version 1 vise un seul profil : un francophone débutant, sans connaissance d
 
 | Domaine | v1 | Évolutions |
 | --- | --- | --- |
-| Vocabulaire | 150 mots en 8 thèmes, plus tes propres mots | 500 mots et phrases complètes |
+| Vocabulaire | 1 682 mots et phrases en 31 thèmes (152 avec voix, explication et exemple ; 1 530 importés d'un fichier fourni par l'utilisateur, lus par la voix de l'iPhone), plus tes propres mots | Relecture par un locuteur natif, exemples pour les mots importés |
 | Audio | Synthèse vocale générée par script, remplaçable par tes enregistrements | Dialogues audio |
 | Prononciation | Score sur 100 calculé sur l'appareil, paires de sons proches | Notation de phrases entières |
 | Jeux | Cartes du jour, quiz, parcours, quêtes, séries, niveaux | Leçons de grammaire, dialogues, défis chronométrés |
@@ -126,7 +126,7 @@ Mécaniques de motivation :
 
 ## Contenu
 
-Le MVP couvre 8 thèmes d'environ 20 mots, rédigés par Claude Code dans un fichier JSON par thème, avec leur audio généré automatiquement.
+Le MVP couvrait 8 thèmes d'environ 20 mots, rédigés par Claude Code dans un fichier JSON par thème, avec leur audio généré automatiquement. S'y ajoutent 1 530 mots et phrases importés d'un fichier de 1 739 entrées fourni par l'utilisateur (français et latin), dont Claude Code a écrit l'arabe ; ils n'ont ni explication ni exemple et sont lus par la voix arabe de l'iPhone.
 
 | Thème | Exemples |
 | --- | --- |

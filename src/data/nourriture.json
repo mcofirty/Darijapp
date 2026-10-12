@@ -318,5 +318,1637 @@
       "fr": "Merci, j'ai assez mangé",
       "audio": "audio/nourriture-020-ex.mp3"
     }
+  },
+  {
+    "id": "nourriture-021",
+    "latin": "makla",
+    "arabe": "ماكلة",
+    "fr": "nourriture",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-022",
+    "latin": "wakla",
+    "arabe": "واكلة",
+    "fr": "repas",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-023",
+    "latin": "ftor",
+    "arabe": "فطور",
+    "fr": "petit-déjeuner",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-024",
+    "latin": "ghda",
+    "arabe": "غدا",
+    "fr": "déjeuner",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-025",
+    "latin": "3cha",
+    "arabe": "عشا",
+    "fr": "dîner",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-026",
+    "latin": "khobz mdowwer",
+    "arabe": "خبز مدور",
+    "fr": "pain rond",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-027",
+    "latin": "baghit",
+    "arabe": "باغيت",
+    "fr": "baguette",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-028",
+    "latin": "smida",
+    "arabe": "سميدة",
+    "fr": "semoule",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-029",
+    "latin": "rfissa",
+    "arabe": "رفيسة",
+    "fr": "rfissa",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-030",
+    "latin": "bastila",
+    "arabe": "بسطيلة",
+    "fr": "pastilla",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-031",
+    "latin": "msemen",
+    "arabe": "مسمن",
+    "fr": "msemen",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-032",
+    "latin": "baghrir",
+    "arabe": "بغرير",
+    "fr": "baghrir",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-033",
+    "latin": "7ercha",
+    "arabe": "حرشة",
+    "fr": "harcha",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-034",
+    "latin": "briwat",
+    "arabe": "بريوات",
+    "fr": "briouate",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-035",
+    "latin": "chebbakiya",
+    "arabe": "شباكية",
+    "fr": "chebakia",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-036",
+    "latin": "bida",
+    "arabe": "بيضة",
+    "fr": "œuf",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-037",
+    "latin": "omlet",
+    "arabe": "أومليط",
+    "fr": "omelette",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-038",
+    "latin": "jben",
+    "arabe": "جبن",
+    "fr": "fromage",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-039",
+    "latin": "zebda",
+    "arabe": "زبدة",
+    "fr": "beurre",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-040",
+    "latin": "raïb",
+    "arabe": "رايب",
+    "fr": "yaourt",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-041",
+    "latin": "krima",
+    "arabe": "كريمة",
+    "fr": "crème",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-042",
+    "latin": "rroz",
+    "arabe": "الروز",
+    "fr": "riz",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-043",
+    "latin": "lmakarouna",
+    "arabe": "الماكارونة",
+    "fr": "pâtes",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-044",
+    "latin": "7ssoua",
+    "arabe": "حسوة",
+    "fr": "soupe",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-045",
+    "latin": "salata",
+    "arabe": "صلاطة",
+    "fr": "salade",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-046",
+    "latin": "sandwich",
+    "arabe": "ساندويتش",
+    "fr": "sandwich",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-047",
+    "latin": "pizza",
+    "arabe": "بيتزا",
+    "fr": "pizza",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-048",
+    "latin": "l7em lbe9ri",
+    "arabe": "اللحم البقري",
+    "fr": "bœuf",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-049",
+    "latin": "l7em l3jel",
+    "arabe": "اللحم العجل",
+    "fr": "veau",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-050",
+    "latin": "l7em lghenmi",
+    "arabe": "اللحم الغنمي",
+    "fr": "agneau",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-051",
+    "latin": "dinde",
+    "arabe": "ديند",
+    "fr": "dinde",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-052",
+    "latin": "serdil",
+    "arabe": "سرديل",
+    "fr": "sardine",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-053",
+    "latin": "9emron",
+    "arabe": "قمرون",
+    "fr": "crevette",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-054",
+    "latin": "ton",
+    "arabe": "طون",
+    "fr": "thon",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-055",
+    "latin": "7out lbe7r",
+    "arabe": "حوت البحر",
+    "fr": "fruit de mer",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-056",
+    "latin": "merguez",
+    "arabe": "ميرگيز",
+    "fr": "saucisse",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-057",
+    "latin": "9tiban",
+    "arabe": "قطبان",
+    "fr": "brochette",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-058",
+    "latin": "kefta",
+    "arabe": "كفتة",
+    "fr": "kefta",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-059",
+    "latin": "kebda",
+    "arabe": "كبدة",
+    "fr": "foie",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-060",
+    "latin": "btata",
+    "arabe": "بطاطا",
+    "fr": "pomme de terre",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-061",
+    "latin": "maticha",
+    "arabe": "ماطيشة",
+    "fr": "tomate",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-062",
+    "latin": "bsla",
+    "arabe": "بصلة",
+    "fr": "oignon",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-063",
+    "latin": "toum",
+    "arabe": "توم",
+    "fr": "ail",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-064",
+    "latin": "khizzo",
+    "arabe": "خيزو",
+    "fr": "carotte",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-065",
+    "latin": "lgra3a sghira",
+    "arabe": "الگرعة صغيرة",
+    "fr": "courgette",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-066",
+    "latin": "denjal",
+    "arabe": "دنجال",
+    "fr": "aubergine",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-067",
+    "latin": "felfla",
+    "arabe": "فلفلة",
+    "fr": "poivron",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-068",
+    "latin": "felfla 7arra",
+    "arabe": "فلفلة حارة",
+    "fr": "piment",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-069",
+    "latin": "khyar",
+    "arabe": "خيار",
+    "fr": "concombre",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-070",
+    "latin": "khess",
+    "arabe": "خص",
+    "fr": "laitue",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-071",
+    "latin": "kronb",
+    "arabe": "كرنب",
+    "fr": "chou",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-072",
+    "latin": "chouflor",
+    "arabe": "شوفلور",
+    "fr": "chou-fleur",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-073",
+    "latin": "loubya khadra",
+    "arabe": "لوبيا خضرا",
+    "fr": "haricot vert",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-074",
+    "latin": "loubya bayda",
+    "arabe": "لوبيا بيضا",
+    "fr": "haricot blanc",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-075",
+    "latin": "jelbana",
+    "arabe": "جلبانة",
+    "fr": "petits pois",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-076",
+    "latin": "3des",
+    "arabe": "عدس",
+    "fr": "lentille",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-077",
+    "latin": "7ommes",
+    "arabe": "حمص",
+    "fr": "pois chiche",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-078",
+    "latin": "dra",
+    "arabe": "درة",
+    "fr": "maïs",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-079",
+    "latin": "zitouna",
+    "arabe": "زيتونة",
+    "fr": "olive",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-080",
+    "latin": "7amed",
+    "arabe": "حامض",
+    "fr": "citron",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-081",
+    "latin": "limoun",
+    "arabe": "ليمون",
+    "fr": "orange",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-082",
+    "latin": "mandarina",
+    "arabe": "مندرينة",
+    "fr": "mandarine",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-083",
+    "latin": "tfa7a",
+    "arabe": "تفاحة",
+    "fr": "pomme",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-084",
+    "latin": "ngasa",
+    "arabe": "نگاصة",
+    "fr": "poire",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-085",
+    "latin": "banan",
+    "arabe": "بنان",
+    "fr": "banane",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-086",
+    "latin": "frez",
+    "arabe": "فريز",
+    "fr": "fraise",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-087",
+    "latin": "framboaz",
+    "arabe": "فرامبواز",
+    "fr": "framboise",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-088",
+    "latin": "3neb",
+    "arabe": "عنب",
+    "fr": "raisin",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-089",
+    "latin": "della7",
+    "arabe": "دلاح",
+    "fr": "pastèque",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-090",
+    "latin": "btikh",
+    "arabe": "بطيخ",
+    "fr": "melon",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-091",
+    "latin": "khokh",
+    "arabe": "خوخ",
+    "fr": "pêche",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-092",
+    "latin": "mechmach",
+    "arabe": "مشماش",
+    "fr": "abricot",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-093",
+    "latin": "karmous",
+    "arabe": "كرموس",
+    "fr": "figue",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-094",
+    "latin": "tmer",
+    "arabe": "تمر",
+    "fr": "datte",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-095",
+    "latin": "rman",
+    "arabe": "رمان",
+    "fr": "grenade",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-096",
+    "latin": "garga3",
+    "arabe": "گرگاع",
+    "fr": "noix",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-097",
+    "latin": "louz",
+    "arabe": "لوز",
+    "fr": "amande",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-098",
+    "latin": "kawkaw",
+    "arabe": "كاوكاو",
+    "fr": "cacahuète",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-099",
+    "latin": "3sel",
+    "arabe": "عسل",
+    "fr": "miel",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-100",
+    "latin": "konfitir",
+    "arabe": "كونفيتور",
+    "fr": "confiture",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-101",
+    "latin": "chokola",
+    "arabe": "شوكولا",
+    "fr": "chocolat",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-102",
+    "latin": "gateau",
+    "arabe": "گاطو",
+    "fr": "gâteau",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-103",
+    "latin": "7elwa",
+    "arabe": "حلوة",
+    "fr": "bonbon",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-104",
+    "latin": "glace",
+    "arabe": "گلاص",
+    "fr": "glace",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-105",
+    "latin": "dessert",
+    "arabe": "ديسير",
+    "fr": "dessert",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-106",
+    "latin": "lma ma3dani",
+    "arabe": "الما المعدني",
+    "fr": "eau minérale",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-107",
+    "latin": "lma b lgaz",
+    "arabe": "الما بالگاز",
+    "fr": "eau gazeuse",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-108",
+    "latin": "atay b na3na3",
+    "arabe": "أتاي بالنعناع",
+    "fr": "thé à la menthe",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-109",
+    "latin": "9hwa ke7la",
+    "arabe": "قهوة كحلة",
+    "fr": "café noir",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-110",
+    "latin": "9hwa b l7lib",
+    "arabe": "قهوة بالحليب",
+    "fr": "café au lait",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-111",
+    "latin": "3asir",
+    "arabe": "عصير",
+    "fr": "jus",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-112",
+    "latin": "3asir limoun",
+    "arabe": "عصير ليمون",
+    "fr": "jus d'orange",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-113",
+    "latin": "soda",
+    "arabe": "صودا",
+    "fr": "soda",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-114",
+    "latin": "limonad",
+    "arabe": "ليموناد",
+    "fr": "limonade",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-115",
+    "latin": "chrab",
+    "arabe": "شراب",
+    "fr": "boisson",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-116",
+    "latin": "bared",
+    "arabe": "بارد",
+    "fr": "frais / fraîche",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-117",
+    "latin": "skhoun",
+    "arabe": "سخون",
+    "fr": "chaud / chaude",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-118",
+    "latin": "7lou",
+    "arabe": "حلو",
+    "fr": "sucré",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-119",
+    "latin": "male7",
+    "arabe": "مالح",
+    "fr": "salé",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-120",
+    "latin": "7arr",
+    "arabe": "حار",
+    "fr": "épicé / piquant",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-121",
+    "latin": "ni",
+    "arabe": "ني",
+    "fr": "cru",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "nourriture-122",
+    "latin": "tayeb",
+    "arabe": "طايب",
+    "fr": "cuit",
+    "theme": "nourriture",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
   }
 ]

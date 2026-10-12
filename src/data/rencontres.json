@@ -1,0 +1,594 @@
+[
+  {
+    "id": "rencontres-001",
+    "latin": "kifach daz nharek?",
+    "arabe": "كيفاش داز نهارك؟",
+    "fr": "comment s'est passée ta journée ?",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-002",
+    "latin": "wach daz lik nhar mzyan?",
+    "arabe": "واش داز ليك نهار مزيان؟",
+    "fr": "tu as passé une bonne journée ?",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-003",
+    "latin": "fin nta?",
+    "arabe": "فين نتا؟",
+    "fr": "tu es où ? (à un homme)",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-004",
+    "latin": "fin nti?",
+    "arabe": "فين نتي؟",
+    "fr": "tu es où ? (femme)",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-005",
+    "latin": "ach katdir?",
+    "arabe": "اش كتدير؟",
+    "fr": "tu fais quoi ?",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-006",
+    "latin": "ach ghadi tdir had l3chiya?",
+    "arabe": "اش غادي تدير هاد العشية؟",
+    "fr": "qu'est-ce que tu fais ce soir ?",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-007",
+    "latin": "wach nta fargh had l3chiya?",
+    "arabe": "واش نتا فارغ هاد العشية؟",
+    "fr": "tu es libre ce soir ? (à un homme)",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-008",
+    "latin": "ntla9aw ghedda?",
+    "arabe": "نتلاقاو غدا؟",
+    "fr": "on se voit demain ?",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-009",
+    "latin": "bghiti tji m3ana?",
+    "arabe": "بغيتي تجي معانا؟",
+    "fr": "tu veux venir avec nous ?",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-010",
+    "latin": "bghiti nmchiw nchrbou 9hwa?",
+    "arabe": "بغيتي نمشيو نشربو قهوة؟",
+    "fr": "ça te dit un café ?",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-011",
+    "latin": "ana f dari",
+    "arabe": "انا ف داري",
+    "fr": "je suis chez moi",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-012",
+    "latin": "ana f lkhdma",
+    "arabe": "انا ف الخدمة",
+    "fr": "je suis au travail",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-013",
+    "latin": "ana lberra",
+    "arabe": "انا البرا",
+    "fr": "je suis dehors",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-014",
+    "latin": "ghadi nwsel 3la 9rib",
+    "arabe": "غادي نوصل على قريب",
+    "fr": "j'arrive bientôt",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-015",
+    "latin": "ana f ttri9",
+    "arabe": "انا ف الطريق",
+    "fr": "je suis en route",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-016",
+    "latin": "ghadi n3ayet lik",
+    "arabe": "غادي نعيط ليك",
+    "fr": "je vais t'appeler",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-017",
+    "latin": "3ayet lia",
+    "arabe": "عيط ليا",
+    "fr": "appelle-moi",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-018",
+    "latin": "sift lia mesaj",
+    "arabe": "صيفط ليا ميساج",
+    "fr": "envoie-moi un message",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-019",
+    "latin": "ghadi nsift lik tswira",
+    "arabe": "غادي نصيفط ليك تصويرة",
+    "fr": "je vais t'envoyer une photo",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-020",
+    "latin": "kan-fekker fik",
+    "arabe": "كنفكر فيك",
+    "fr": "je pense à toi",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-021",
+    "latin": "twe7echtk bzaf",
+    "arabe": "توحشتك بزاف",
+    "fr": "tu me manques beaucoup",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-022",
+    "latin": "kan-3zzek",
+    "arabe": "كنعزك",
+    "fr": "je t'apprécie",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-023",
+    "latin": "nta zwin",
+    "arabe": "نتا زوين",
+    "fr": "tu es beau",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-024",
+    "latin": "nti zwina",
+    "arabe": "نتي زوينة",
+    "fr": "tu es belle",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-025",
+    "latin": "nta drif",
+    "arabe": "نتا ضريف",
+    "fr": "tu es gentil",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-026",
+    "latin": "nti drifa",
+    "arabe": "نتي ضريفة",
+    "fr": "tu es gentille",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-027",
+    "latin": "bghit nchoufek",
+    "arabe": "بغيت نشوفك",
+    "fr": "je veux te voir",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-028",
+    "latin": "bghit nhder m3ak",
+    "arabe": "بغيت نهضر معاك",
+    "fr": "j'ai envie de te parler",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-029",
+    "latin": "fer7an bach chftk",
+    "arabe": "فرحان باش شفتك",
+    "fr": "je suis content de te voir (dit par un homme)",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-030",
+    "latin": "fer7ana bach chftk",
+    "arabe": "فرحانة باش شفتك",
+    "fr": "je suis contente de te voir",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-031",
+    "latin": "ma ghadi-ch nensak",
+    "arabe": "ما غاديش ننساك",
+    "fr": "je ne t'oublierai pas",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-032",
+    "latin": "kan-ti9 fik",
+    "arabe": "كنتيق فيك",
+    "fr": "je te fais confiance",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-033",
+    "latin": "ana machi ghayour",
+    "arabe": "انا ماشي غيور",
+    "fr": "je ne suis pas jaloux (dit par un homme)",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-034",
+    "latin": "3lach nta m3sseb?",
+    "arabe": "علاش نتا معصب؟",
+    "fr": "pourquoi tu es fâché ? (à un homme)",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-035",
+    "latin": "mat7zench",
+    "arabe": "ماتحزنش",
+    "fr": "ne sois pas triste (à un homme)",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-036",
+    "latin": "kolchi ghadi ykoun mzyan",
+    "arabe": "كلشي غادي يكون مزيان",
+    "fr": "tout ira bien",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "rencontres-037",
+    "latin": "sellem lia 3la l3a2ila dyalek",
+    "arabe": "سلم ليا على العائلة ديالك",
+    "fr": "passe le bonjour à ta famille",
+    "theme": "rencontres",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  }
+]

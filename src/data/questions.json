@@ -1,0 +1,546 @@
+[
+  {
+    "id": "questions-001",
+    "latin": "ach?",
+    "arabe": "اش؟",
+    "fr": "quoi ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-002",
+    "latin": "achno?",
+    "arabe": "اشنو؟",
+    "fr": "qu'est-ce que ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-003",
+    "latin": "fo9ach?",
+    "arabe": "فوقاش؟",
+    "fr": "quand ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-004",
+    "latin": "ch7al men lwa9t?",
+    "arabe": "شحال من الوقت؟",
+    "fr": "combien de temps ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-005",
+    "latin": "achmen wa7ed?",
+    "arabe": "اشمن واحد؟",
+    "fr": "lequel ? (masculin)",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-006",
+    "latin": "achmen wa7da?",
+    "arabe": "اشمن واحدة؟",
+    "fr": "laquelle ? (féminin)",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-007",
+    "latin": "achmen?",
+    "arabe": "اشمن؟",
+    "fr": "quel ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-008",
+    "latin": "dyal men?",
+    "arabe": "ديال من؟",
+    "fr": "de qui ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-009",
+    "latin": "m3a men?",
+    "arabe": "معا من؟",
+    "fr": "avec qui ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-010",
+    "latin": "lmen?",
+    "arabe": "لمن؟",
+    "fr": "pour qui ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-011",
+    "latin": "men fin?",
+    "arabe": "من فين؟",
+    "fr": "d'où ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-012",
+    "latin": "lfin?",
+    "arabe": "لفين؟",
+    "fr": "vers où ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-013",
+    "latin": "m3a ch7al?",
+    "arabe": "معا شحال؟",
+    "fr": "à quelle heure ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-014",
+    "latin": "bch7al hada?",
+    "arabe": "بشحال هادا؟",
+    "fr": "combien ça coûte ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-015",
+    "latin": "ach wa9e3?",
+    "arabe": "اش واقع؟",
+    "fr": "qu'est-ce qui se passe ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-016",
+    "latin": "ach kayn?",
+    "arabe": "اش كاين؟",
+    "fr": "qu'est-ce qu'il y a ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-017",
+    "latin": "ach bghiti?",
+    "arabe": "اش بغيتي؟",
+    "fr": "que veux-tu ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-018",
+    "latin": "wach mte2kked?",
+    "arabe": "واش متأكد؟",
+    "fr": "tu es sûr ? (homme)",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-019",
+    "latin": "wach mte2kkda?",
+    "arabe": "واش متأكدة؟",
+    "fr": "tu es sûre ? (femme)",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-020",
+    "latin": "chkon hada?",
+    "arabe": "شكون هادا؟",
+    "fr": "qui est-ce ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-021",
+    "latin": "achno hada?",
+    "arabe": "اشنو هادا؟",
+    "fr": "c'est quoi ça ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-022",
+    "latin": "fin ghadi?",
+    "arabe": "فين غادي؟",
+    "fr": "où vas-tu ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-023",
+    "latin": "men fin jay?",
+    "arabe": "من فين جاي؟",
+    "fr": "tu viens d'où ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-024",
+    "latin": "ch7al f 3mrek?",
+    "arabe": "شحال ف عمرك؟",
+    "fr": "quel âge as-tu ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-025",
+    "latin": "fin saken?",
+    "arabe": "فين ساكن؟",
+    "fr": "tu habites où ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-026",
+    "latin": "kat-hder b lfransawiya?",
+    "arabe": "كتهضر بالفرنساوية؟",
+    "fr": "tu parles français ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-027",
+    "latin": "kat-hder b ddarija?",
+    "arabe": "كتهضر بالدارجة؟",
+    "fr": "tu parles darija ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-028",
+    "latin": "3lach la?",
+    "arabe": "علاش لا؟",
+    "fr": "pourquoi pas ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-029",
+    "latin": "bssa7?",
+    "arabe": "بالصح؟",
+    "fr": "c'est vrai ? / vraiment ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-030",
+    "latin": "bss7?",
+    "arabe": "بالصح؟",
+    "fr": "pour de vrai ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-031",
+    "latin": "ach bghiti t9sed?",
+    "arabe": "اش بغيتي تقصد؟",
+    "fr": "qu'est-ce que tu veux dire ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-032",
+    "latin": "ach kat3ni?",
+    "arabe": "اش كتعني؟",
+    "fr": "ça veut dire quoi ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-033",
+    "latin": "fin kayn lmochkil?",
+    "arabe": "فين كاين المشكل؟",
+    "fr": "où est le problème ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "questions-034",
+    "latin": "ach ban lik?",
+    "arabe": "اش بان ليك؟",
+    "fr": "qu'en penses-tu ?",
+    "theme": "questions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  }
+]

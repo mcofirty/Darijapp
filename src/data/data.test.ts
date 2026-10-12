@@ -14,8 +14,9 @@ const parFichier = fichiers.map((f) => ({
 }))
 const tous = parFichier.flatMap((p) => p.mots)
 
-// Lettres latines, chiffres de la translittération et ponctuation simple.
-const LATIN_AUTORISE = /^[a-z379 ?!.,'’—/-]+$/i
+// Lettres latines (accents des mots empruntés au français), chiffres de la translittération (2 = hamza)
+// et ponctuation simple.
+const LATIN_AUTORISE = /^[a-z2379 éèçï?!.,'’—/-]+$/i
 const ARABE = /[؀-ۿ]/
 const LETTRE_LATINE = /[a-z]/i
 
@@ -34,23 +35,38 @@ describe('fichiers de mots', () => {
     }
   })
 
-  it('aucun mot en double', () => {
-    expect(new Set(tous.map((m) => m.latin)).size).toBe(tous.length)
+  it('aucun mot en double (même latin et même arabe)', () => {
+    expect(new Set(tous.map((m) => `${m.latin}|${m.arabe}`)).size).toBe(tous.length)
+  })
+
+  it('une même graphie latine ne sert qu’à des mots différents en arabe (7it = حيت ou حيط)', () => {
+    const parLatin = new Map<string, Mot[]>()
+    for (const m of tous) parLatin.set(m.latin, [...(parLatin.get(m.latin) ?? []), m])
+    const homographes = [...parLatin.values()].filter((l) => l.length > 1)
+    expect(homographes.length).toBeLessThan(10)
+    for (const l of homographes) expect(new Set(l.map((m) => m.arabe)).size).toBe(l.length)
   })
 
   it.each(tous.map((m) => [m.id, m] as const))('%s respecte le format', (_, m) => {
     expect(m.latin).toMatch(LATIN_AUTORISE)
-    expect(m.exemple.latin).toMatch(LATIN_AUTORISE)
     expect(m.arabe).toMatch(ARABE)
     expect(m.arabe).not.toMatch(LETTRE_LATINE)
-    expect(m.exemple.arabe).toMatch(ARABE)
-    expect(m.exemple.arabe).not.toMatch(LETTRE_LATINE)
     expect(m.fr.trim()).not.toBe('')
-    expect(m.exemple.fr.trim()).not.toBe('')
-    expect(m.prononciation.trim()).not.toBe('')
     expect([1, 2, 3]).toContain(m.niveau)
-    expect(m.audio).toBe(`audio/${m.id}.mp3`)
-    expect(m.exemple.audio).toBe(`audio/${m.id}-ex.mp3`)
+    if (m.audio) {
+      // Mot du programme d'origine : MP3, explication et exemple complets.
+      expect(m.audio).toBe(`audio/${m.id}.mp3`)
+      expect(m.prononciation.trim()).not.toBe('')
+      expect(m.exemple.latin).toMatch(LATIN_AUTORISE)
+      expect(m.exemple.arabe).toMatch(ARABE)
+      expect(m.exemple.arabe).not.toMatch(LETTRE_LATINE)
+      expect(m.exemple.fr.trim()).not.toBe('')
+      expect(m.exemple.audio).toBe(`audio/${m.id}-ex.mp3`)
+    } else {
+      // Entrée importée : lue par la voix de l'iPhone, sans exemple.
+      expect(m.exemple).toEqual({ latin: '', arabe: '', fr: '', audio: '' })
+    }
+    if (m.note !== undefined) expect(m.note.trim()).not.toBe('')
   })
 
   it('chaque son de l’arabe a sa graphie latine, et inversement', () => {

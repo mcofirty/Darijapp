@@ -302,5 +302,583 @@
       "fr": "Où habites-tu ? — Dans la médina",
       "audio": "audio/famille-019-ex.mp3"
     }
+  },
+  {
+    "id": "famille-020",
+    "latin": "l3a2ila",
+    "arabe": "العائلة",
+    "fr": "famille",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-021",
+    "latin": "lwalid",
+    "arabe": "الوالد",
+    "fr": "père",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-022",
+    "latin": "lwalida",
+    "arabe": "الوالدة",
+    "fr": "mère",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-023",
+    "latin": "weld",
+    "arabe": "ولد",
+    "fr": "fils / garçon",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-024",
+    "latin": "bent",
+    "arabe": "بنت",
+    "fr": "fille / fille (jeune)",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-025",
+    "latin": "drri",
+    "arabe": "دري",
+    "fr": "enfant",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-026",
+    "latin": "drari",
+    "arabe": "دراري",
+    "fr": "enfants",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-027",
+    "latin": "rdi3",
+    "arabe": "رضيع",
+    "fr": "bébé",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-028",
+    "latin": "khou",
+    "arabe": "خو",
+    "fr": "frère",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-029",
+    "latin": "kht",
+    "arabe": "خت",
+    "fr": "sœur",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-030",
+    "latin": "jed",
+    "arabe": "جد",
+    "fr": "grand-père",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-031",
+    "latin": "jedda",
+    "arabe": "جدة",
+    "fr": "grand-mère",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-032",
+    "latin": "3em",
+    "arabe": "عم",
+    "fr": "oncle paternel",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-033",
+    "latin": "3emma",
+    "arabe": "عمة",
+    "fr": "tante paternelle",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-034",
+    "latin": "khal",
+    "arabe": "خال",
+    "fr": "oncle maternel",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-035",
+    "latin": "khala",
+    "arabe": "خالة",
+    "fr": "tante maternelle",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-036",
+    "latin": "weld 3emmi",
+    "arabe": "ولد عمي",
+    "fr": "cousin",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    },
+    "note": "Le terme varie selon le lien"
+  },
+  {
+    "id": "famille-037",
+    "latin": "bent 3emmi",
+    "arabe": "بنت عمي",
+    "fr": "cousine",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    },
+    "note": "Le terme varie selon le lien"
+  },
+  {
+    "id": "famille-038",
+    "latin": "rajl",
+    "arabe": "راجل",
+    "fr": "mari / homme",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-039",
+    "latin": "mra",
+    "arabe": "مرا",
+    "fr": "épouse / femme",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-040",
+    "latin": "zwaj",
+    "arabe": "زواج",
+    "fr": "mariage",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-041",
+    "latin": "mzowwej",
+    "arabe": "مزوج",
+    "fr": "marié",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-042",
+    "latin": "3azeb",
+    "arabe": "عازب",
+    "fr": "célibataire",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-043",
+    "latin": "mtelle9",
+    "arabe": "مطلق",
+    "fr": "divorcé",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-044",
+    "latin": "sa7b",
+    "arabe": "صاحب",
+    "fr": "ami",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-045",
+    "latin": "sa7ba",
+    "arabe": "صاحبة",
+    "fr": "amie",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-046",
+    "latin": "sa7bti",
+    "arabe": "صاحبتي",
+    "fr": "mon amie",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-047",
+    "latin": "jar",
+    "arabe": "جار",
+    "fr": "voisin",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-048",
+    "latin": "jara",
+    "arabe": "جارة",
+    "fr": "voisine",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-049",
+    "latin": "dif",
+    "arabe": "ضيف",
+    "fr": "invité",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-050",
+    "latin": "chab",
+    "arabe": "شاب",
+    "fr": "jeune homme",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-051",
+    "latin": "chabba",
+    "arabe": "شابة",
+    "fr": "jeune femme",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-052",
+    "latin": "chayeb",
+    "arabe": "شايب",
+    "fr": "vieillard",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-053",
+    "latin": "berrani",
+    "arabe": "براني",
+    "fr": "étranger",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-054",
+    "latin": "m3refa",
+    "arabe": "معرفة",
+    "fr": "connaissance",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "famille-055",
+    "latin": "majmou3a",
+    "arabe": "مجموعة",
+    "fr": "groupe",
+    "theme": "famille",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
   }
 ]

@@ -1,6 +1,6 @@
 import type { Theme } from './types'
 
-/** Ordre d'affichage des thèmes ; chaque id correspond à src/data/<id>.json. */
+/** Ordre d'affichage des thèmes et du programme ; chaque id correspond à src/data/<id>.json. */
 export const THEMES: Theme[] = [
   { id: 'salutations', titre: 'Salutations et politesse' },
   { id: 'chiffres', titre: 'Chiffres et prix' },
@@ -10,4 +10,28 @@ export const THEMES: Theme[] = [
   { id: 'famille', titre: 'Se présenter et famille' },
   { id: 'jours', titre: 'Jours et moments' },
   { id: 'expressions', titre: 'Expressions utiles' },
+  // Thèmes importés du fichier de 1 739 entrées (sans MP3 : voix de l'iPhone).
+  { id: 'questions', titre: 'Questions essentielles' },
+  { id: 'grammaire', titre: 'Pronoms, liens et grammaire' },
+  { id: 'corps', titre: 'Corps et apparence' },
+  { id: 'sante', titre: 'Santé et besoins' },
+  { id: 'emotions', titre: 'Sentiments et émotions' },
+  { id: 'maison', titre: 'Maison et mobilier' },
+  { id: 'cuisine', titre: 'Cuisine et vaisselle' },
+  { id: 'vetements', titre: 'Vêtements et accessoires' },
+  { id: 'couleurs', titre: 'Couleurs et formes' },
+  { id: 'ville', titre: 'Ville et services' },
+  { id: 'travail', titre: 'Travail et études' },
+  { id: 'numerique', titre: 'Numérique et communication' },
+  { id: 'nature', titre: 'Nature, météo et animaux' },
+  { id: 'loisirs', titre: 'Sports et loisirs' },
+  { id: 'verbes', titre: 'Verbes indispensables' },
+  { id: 'adjectifs', titre: 'Adjectifs et descriptions' },
+  { id: 'adverbes', titre: 'Adverbes et directions' },
+  { id: 'conversation', titre: 'Conversation courante' },
+  { id: 'restaurant', titre: 'Au restaurant' },
+  { id: 'chemin', titre: 'Demander son chemin' },
+  { id: 'rencontres', titre: 'Amitié et rencontres' },
+  { id: 'organisation', titre: 'Organisation et apprentissage' },
+  { id: 'tournures', titre: 'Négations et tournures' },
 ]

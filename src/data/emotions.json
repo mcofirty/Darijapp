@@ -1,0 +1,658 @@
+[
+  {
+    "id": "emotions-001",
+    "latin": "fer7an",
+    "arabe": "فرحان",
+    "fr": "heureux (homme)",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-002",
+    "latin": "fer7ana",
+    "arabe": "فرحانة",
+    "fr": "heureuse (femme)",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-003",
+    "latin": "7zin",
+    "arabe": "حزين",
+    "fr": "triste",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-004",
+    "latin": "m3sseb",
+    "arabe": "معصب",
+    "fr": "en colère / nerveux",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-005",
+    "latin": "mtwetter",
+    "arabe": "متوتر",
+    "fr": "stressé",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-006",
+    "latin": "9ale9",
+    "arabe": "قالق",
+    "fr": "inquiet",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-007",
+    "latin": "lkhof",
+    "arabe": "الخوف",
+    "fr": "peur",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-008",
+    "latin": "khayef",
+    "arabe": "خايف",
+    "fr": "j'ai peur",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-009",
+    "latin": "mtefaje2",
+    "arabe": "متفاجئ",
+    "fr": "surpris",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-010",
+    "latin": "l7chouma",
+    "arabe": "الحشومة",
+    "fr": "honte",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-011",
+    "latin": "7chemt",
+    "arabe": "حشمت",
+    "fr": "j'ai honte",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-012",
+    "latin": "m3che9",
+    "arabe": "معشق",
+    "fr": "amoureux",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-013",
+    "latin": "l7ob",
+    "arabe": "الحب",
+    "fr": "amour",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-014",
+    "latin": "ssda9a",
+    "arabe": "الصداقة",
+    "fr": "amitié",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-015",
+    "latin": "tti9a",
+    "arabe": "الثقة",
+    "fr": "confiance",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-016",
+    "latin": "l2amal",
+    "arabe": "الأمل",
+    "fr": "espoir",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-017",
+    "latin": "lfer7a",
+    "arabe": "الفرحة",
+    "fr": "joie",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-018",
+    "latin": "l7ozn",
+    "arabe": "الحزن",
+    "fr": "chagrin",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-019",
+    "latin": "l3asab",
+    "arabe": "العصب",
+    "fr": "colère",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-020",
+    "latin": "lghira",
+    "arabe": "الغيرة",
+    "fr": "jalousie",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-021",
+    "latin": "lmelal",
+    "arabe": "الملل",
+    "fr": "ennui",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-022",
+    "latin": "mllit",
+    "arabe": "مليت",
+    "fr": "je m'ennuie",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-023",
+    "latin": "ana fer7an",
+    "arabe": "انا فرحان",
+    "fr": "je suis content (dit par un homme)",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-024",
+    "latin": "ana fer7ana",
+    "arabe": "انا فرحانة",
+    "fr": "je suis contente",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-025",
+    "latin": "ana 7zin",
+    "arabe": "انا حزين",
+    "fr": "je suis triste",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-026",
+    "latin": "ana 9ale9",
+    "arabe": "انا قالق",
+    "fr": "je suis inquiet",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-027",
+    "latin": "ana mrta7",
+    "arabe": "انا مرتاح",
+    "fr": "je suis tranquille",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-028",
+    "latin": "3jebni",
+    "arabe": "عجبني",
+    "fr": "ça me plaît",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-029",
+    "latin": "ma 3jebnich",
+    "arabe": "ما عجبنيش",
+    "fr": "ça ne me plaît pas",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-030",
+    "latin": "twe7echt hadchi",
+    "arabe": "توحشت هادشي",
+    "fr": "ça me manque",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-031",
+    "latin": "twe7echtk",
+    "arabe": "توحشتك",
+    "fr": "tu me manques",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-032",
+    "latin": "kanbghik",
+    "arabe": "كنبغيك",
+    "fr": "je t'aime",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-033",
+    "latin": "kanbghik bzaf",
+    "arabe": "كنبغيك بزاف",
+    "fr": "je t'aime beaucoup",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-034",
+    "latin": "kankrhek",
+    "arabe": "كنكرهك",
+    "fr": "je te déteste",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-035",
+    "latin": "ana fakhour bik",
+    "arabe": "انا فخور بيك",
+    "fr": "je suis fier de toi",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-036",
+    "latin": "d7ektini",
+    "arabe": "ضحكتيني",
+    "fr": "tu m'as fait rire",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-037",
+    "latin": "chje3 rasek",
+    "arabe": "شجع راسك",
+    "fr": "courage !",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-038",
+    "latin": "ana mtefaje2",
+    "arabe": "انا متفاجئ",
+    "fr": "je suis surpris",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-039",
+    "latin": "hadchi kay7chem",
+    "arabe": "هادشي كيحشم",
+    "fr": "c'est gênant",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-040",
+    "latin": "hadchi kay3ssebni",
+    "arabe": "هادشي كيعصبني",
+    "fr": "ça m'énerve",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "emotions-041",
+    "latin": "mat9le9ch",
+    "arabe": "ماتقلقش",
+    "fr": "ne t'inquiète pas (à un homme) / ne t'en fais pas",
+    "theme": "emotions",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  }
+]

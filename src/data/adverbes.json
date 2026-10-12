@@ -1,0 +1,546 @@
+[
+  {
+    "id": "adverbes-001",
+    "latin": "tma",
+    "arabe": "تما",
+    "fr": "là / c'est là-bas",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-002",
+    "latin": "lfou9",
+    "arabe": "الفوق",
+    "fr": "là-haut",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-003",
+    "latin": "lte7t",
+    "arabe": "التحت",
+    "fr": "en bas",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-004",
+    "latin": "ldakhel",
+    "arabe": "الداخل",
+    "fr": "dedans",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-005",
+    "latin": "lberra",
+    "arabe": "البرا",
+    "fr": "dehors",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-006",
+    "latin": "l9ddam",
+    "arabe": "القدام",
+    "fr": "devant",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-007",
+    "latin": "llor",
+    "arabe": "اللور",
+    "fr": "derrière",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-008",
+    "latin": "f lwest",
+    "arabe": "ف الوسط",
+    "fr": "au milieu",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-009",
+    "latin": "7da",
+    "arabe": "حدا",
+    "fr": "à côté",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-010",
+    "latin": "m9abel",
+    "arabe": "مقابل",
+    "fr": "en face",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-011",
+    "latin": "dayer",
+    "arabe": "داير",
+    "fr": "autour",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-012",
+    "latin": "f kol blasa",
+    "arabe": "ف كل بلاصة",
+    "fr": "partout",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-013",
+    "latin": "f 7tta blasa",
+    "arabe": "ف حتى بلاصة",
+    "fr": "nulle part",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-014",
+    "latin": "b chwiya",
+    "arabe": "بشوية",
+    "fr": "partiellement / lentement",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-015",
+    "latin": "b lkamel",
+    "arabe": "بالكامل",
+    "fr": "complètement",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-016",
+    "latin": "mjmou3in",
+    "arabe": "مجموعين",
+    "fr": "ensemble",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-017",
+    "latin": "bo7di",
+    "arabe": "بوحدي",
+    "fr": "seul / seule",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-018",
+    "latin": "b zerba",
+    "arabe": "بزربة",
+    "fr": "rapidement",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-019",
+    "latin": "bddabt",
+    "arabe": "بالضبط",
+    "fr": "exactement",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-020",
+    "latin": "ta9riban",
+    "arabe": "تقريبا",
+    "fr": "presque / à peu près",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-021",
+    "latin": "7wali",
+    "arabe": "حوالي",
+    "fr": "environ",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-022",
+    "latin": "7tta",
+    "arabe": "حتى",
+    "fr": "également",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-023",
+    "latin": "merra khra",
+    "arabe": "مرة اخرى",
+    "fr": "encore une fois / une autre fois",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-024",
+    "latin": "men jdid",
+    "arabe": "من جديد",
+    "fr": "à nouveau",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-025",
+    "latin": "f lbedaya",
+    "arabe": "ف البداية",
+    "fr": "au début",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-026",
+    "latin": "f llkher",
+    "arabe": "ف اللخر",
+    "fr": "à la fin / enfin",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-027",
+    "latin": "3adi",
+    "arabe": "عادي",
+    "fr": "normalement",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-028",
+    "latin": "f l3ada",
+    "arabe": "ف العادة",
+    "fr": "habituellement",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-029",
+    "latin": "l7amdollah",
+    "arabe": "الحمد لله",
+    "fr": "heureusement",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-030",
+    "latin": "l2asaf",
+    "arabe": "للأسف",
+    "fr": "malheureusement",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-031",
+    "latin": "ghaliban",
+    "arabe": "غالبا",
+    "fr": "probablement",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-032",
+    "latin": "bsra7a",
+    "arabe": "بصراحة",
+    "fr": "franchement",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-033",
+    "latin": "b jedd",
+    "arabe": "بالجد",
+    "fr": "sérieusement",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adverbes-034",
+    "latin": "bssa7",
+    "arabe": "بالصح",
+    "fr": "vraiment",
+    "theme": "adverbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  }
+]

@@ -38,6 +38,12 @@ export function Apprendre() {
   const [numero, setNumero] = useState(0)
   const { niveau, xpTotal } = useResume()
 
+  /** Un thème ou le guide des sons s'ouvre en haut de page, même depuis le bas de la liste. */
+  function ouvrir(v: Vue) {
+    setVue(v)
+    window.scrollTo(0, 0)
+  }
+
   async function lancer() {
     setSession(await preparerSession())
     setNumero((n) => n + 1)
@@ -89,7 +95,7 @@ export function Apprendre() {
           titre="Les sons du darija"
           sousTitre={SONS.map((s) => s.latin).join(', ')}
           chevron
-          onClick={() => setVue({ type: 'sons' })}
+          onClick={() => ouvrir({ type: 'sons' })}
         />
         {THEMES.map((t) => (
           <Ligne
@@ -98,7 +104,7 @@ export function Apprendre() {
             titre={t.titre}
             valeur={motsDuTheme(t.id).length}
             chevron
-            onClick={() => setVue({ type: 'theme', themeId: t.id })}
+            onClick={() => ouvrir({ type: 'theme', themeId: t.id })}
           />
         ))}
       </Section>

@@ -1,0 +1,882 @@
+[
+  {
+    "id": "travail-001",
+    "latin": "khdma",
+    "arabe": "خدمة",
+    "fr": "travail / emploi",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-002",
+    "latin": "khdem",
+    "arabe": "خدم",
+    "fr": "travailler",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-003",
+    "latin": "7erfa",
+    "arabe": "حرفة",
+    "fr": "métier",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-004",
+    "latin": "cherika",
+    "arabe": "شركة",
+    "fr": "entreprise",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-005",
+    "latin": "biro",
+    "arabe": "بيرو",
+    "fr": "bureau",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-006",
+    "latin": "mowaddaf",
+    "arabe": "موظف",
+    "fr": "employé",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-007",
+    "latin": "moul cherika",
+    "arabe": "مول الشركة",
+    "fr": "patron",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-008",
+    "latin": "mas2oul",
+    "arabe": "مسؤول",
+    "fr": "responsable",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-009",
+    "latin": "zmil",
+    "arabe": "زميل",
+    "fr": "collègue",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-010",
+    "latin": "fari9",
+    "arabe": "فريق",
+    "fr": "équipe",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-011",
+    "latin": "ijtima3",
+    "arabe": "اجتماع",
+    "fr": "réunion",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-012",
+    "latin": "mow3id",
+    "arabe": "موعد",
+    "fr": "rendez-vous",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-013",
+    "latin": "machrou3",
+    "arabe": "مشروع",
+    "fr": "projet",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-014",
+    "latin": "hadaf",
+    "arabe": "هدف",
+    "fr": "objectif",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-015",
+    "latin": "natija",
+    "arabe": "نتيجة",
+    "fr": "résultat",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-016",
+    "latin": "lbi3",
+    "arabe": "البيع",
+    "fr": "vente",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-017",
+    "latin": "3a9d",
+    "arabe": "عقد",
+    "fr": "contrat",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-018",
+    "latin": "kholsa",
+    "arabe": "خلصة",
+    "fr": "salaire",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-019",
+    "latin": "takwin",
+    "arabe": "تكوين",
+    "fr": "formation",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-020",
+    "latin": "maharat",
+    "arabe": "مهارات",
+    "fr": "compétence",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-021",
+    "latin": "tajriba",
+    "arabe": "تجربة",
+    "fr": "expérience",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-022",
+    "latin": "tawdif",
+    "arabe": "توظيف",
+    "fr": "recrutement",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-023",
+    "latin": "mo9abala d lkhdma",
+    "arabe": "مقابلة د الخدمة",
+    "fr": "entretien d'embauche",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-024",
+    "latin": "3otla",
+    "arabe": "عطلة",
+    "fr": "vacances",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-025",
+    "latin": "congé",
+    "arabe": "كونجي",
+    "fr": "congé",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-026",
+    "latin": "ra7a",
+    "arabe": "راحة",
+    "fr": "pause",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-027",
+    "latin": "barnamaj",
+    "arabe": "برنامج",
+    "fr": "planning",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-028",
+    "latin": "wati9a",
+    "arabe": "وثيقة",
+    "fr": "document",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-029",
+    "latin": "taw9i3",
+    "arabe": "توقيع",
+    "fr": "signature",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-030",
+    "latin": "imil",
+    "arabe": "إيميل",
+    "fr": "mail",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-031",
+    "latin": "mesaj",
+    "arabe": "ميساج",
+    "fr": "message",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-032",
+    "latin": "tilifoun d lkhdma",
+    "arabe": "تيليفون د الخدمة",
+    "fr": "téléphone professionnel",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-033",
+    "latin": "taleb",
+    "arabe": "طالب",
+    "fr": "étudiant",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-034",
+    "latin": "taliba",
+    "arabe": "طالبة",
+    "fr": "étudiante",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-035",
+    "latin": "tilmid",
+    "arabe": "تلميذ",
+    "fr": "élève",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-036",
+    "latin": "ostad",
+    "arabe": "أستاد",
+    "fr": "professeur",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-037",
+    "latin": "ostada",
+    "arabe": "أستادة",
+    "fr": "professeure",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-038",
+    "latin": "ders",
+    "arabe": "درس",
+    "fr": "leçon / cours",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-039",
+    "latin": "wajib",
+    "arabe": "واجب",
+    "fr": "devoir",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-040",
+    "latin": "imti7an",
+    "arabe": "امتحان",
+    "fr": "examen",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-041",
+    "latin": "diblom",
+    "arabe": "ديبلوم",
+    "fr": "diplôme",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-042",
+    "latin": "ktab",
+    "arabe": "كتاب",
+    "fr": "livre",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-043",
+    "latin": "deftar",
+    "arabe": "دفتر",
+    "fr": "cahier",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-044",
+    "latin": "war9a",
+    "arabe": "ورقة",
+    "fr": "feuille / feuille (arbre)",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-045",
+    "latin": "stilo",
+    "arabe": "ستيلو",
+    "fr": "stylo",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-046",
+    "latin": "9lem rsas",
+    "arabe": "قلم رصاص",
+    "fr": "crayon",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-047",
+    "latin": "goma",
+    "arabe": "گومة",
+    "fr": "gomme",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-048",
+    "latin": "sboura",
+    "arabe": "سبورة",
+    "fr": "tableau (classe)",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-049",
+    "latin": "sou2al",
+    "arabe": "سؤال",
+    "fr": "question",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-050",
+    "latin": "jawab",
+    "arabe": "جواب",
+    "fr": "réponse",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-051",
+    "latin": "t3ellem",
+    "arabe": "تعلم",
+    "fr": "apprendre",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-052",
+    "latin": "3ellem",
+    "arabe": "علم",
+    "fr": "enseigner",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-053",
+    "latin": "9ra",
+    "arabe": "قرا",
+    "fr": "étudier / lire",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-054",
+    "latin": "kteb",
+    "arabe": "كتب",
+    "fr": "écrire",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "travail-055",
+    "latin": "7seb",
+    "arabe": "حسب",
+    "fr": "compter / calculer",
+    "theme": "travail",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  }
+]

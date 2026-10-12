@@ -1,0 +1,818 @@
+[
+  {
+    "id": "vetements-001",
+    "latin": "7wayej",
+    "arabe": "حوايج",
+    "fr": "vêtement",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-002",
+    "latin": "l7wayej",
+    "arabe": "الحوايج",
+    "fr": "vêtements",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-003",
+    "latin": "9mija",
+    "arabe": "قميجة",
+    "fr": "chemise",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-004",
+    "latin": "tichirt",
+    "arabe": "تيشيرت",
+    "fr": "t-shirt",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-005",
+    "latin": "polo",
+    "arabe": "بولو",
+    "fr": "polo",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-006",
+    "latin": "triko",
+    "arabe": "تريكو",
+    "fr": "pull",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-007",
+    "latin": "sweat",
+    "arabe": "سويت",
+    "fr": "sweat-shirt",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-008",
+    "latin": "jakit",
+    "arabe": "جاكيط",
+    "fr": "veste",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-009",
+    "latin": "monto",
+    "arabe": "مونطو",
+    "fr": "manteau",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-010",
+    "latin": "blouson",
+    "arabe": "بلوزون",
+    "fr": "blouson",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-011",
+    "latin": "kostim",
+    "arabe": "كوستيم",
+    "fr": "costume",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-012",
+    "latin": "kravata",
+    "arabe": "كراڤاطة",
+    "fr": "cravate",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-013",
+    "latin": "serwal",
+    "arabe": "سروال",
+    "fr": "pantalon",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-014",
+    "latin": "jin",
+    "arabe": "جين",
+    "fr": "jean",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-015",
+    "latin": "chort",
+    "arabe": "شورط",
+    "fr": "short",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-016",
+    "latin": "jupa",
+    "arabe": "جوبا",
+    "fr": "jupe",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-017",
+    "latin": "rouba",
+    "arabe": "روبة",
+    "fr": "robe",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-018",
+    "latin": "sbbat",
+    "arabe": "صباط",
+    "fr": "chaussure",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-019",
+    "latin": "sbabet",
+    "arabe": "صبابط",
+    "fr": "chaussures",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-020",
+    "latin": "sbabat sport",
+    "arabe": "صبابط سبور",
+    "fr": "basket (chaussure)",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-021",
+    "latin": "sandal",
+    "arabe": "صندال",
+    "fr": "sandale",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-022",
+    "latin": "t9acher",
+    "arabe": "تقاشر",
+    "fr": "chaussette",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-023",
+    "latin": "7wayej dakhlaniya",
+    "arabe": "حوايج داخلانية",
+    "fr": "sous-vêtement",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-024",
+    "latin": "kilot",
+    "arabe": "كيلوط",
+    "fr": "culotte",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-025",
+    "latin": "soutian",
+    "arabe": "سوتيان",
+    "fr": "soutien-gorge",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-026",
+    "latin": "pijama",
+    "arabe": "بيجامة",
+    "fr": "pyjama",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-027",
+    "latin": "boné",
+    "arabe": "بوني",
+    "fr": "bonnet",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-028",
+    "latin": "kaskita",
+    "arabe": "كاسكيطة",
+    "fr": "casquette",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-029",
+    "latin": "9obbe3a",
+    "arabe": "قبعة",
+    "fr": "chapeau",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-030",
+    "latin": "kacha",
+    "arabe": "كاشة",
+    "fr": "écharpe",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-031",
+    "latin": "gant",
+    "arabe": "گانت",
+    "fr": "gant",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-032",
+    "latin": "semta",
+    "arabe": "سمطة",
+    "fr": "ceinture",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-033",
+    "latin": "sac",
+    "arabe": "صاك",
+    "fr": "sac",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-034",
+    "latin": "sac d dher",
+    "arabe": "صاك د الضهر",
+    "fr": "sac à dos",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-035",
+    "latin": "portfey",
+    "arabe": "بورطفاي",
+    "fr": "portefeuille",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-036",
+    "latin": "neddarat",
+    "arabe": "نضارات",
+    "fr": "lunettes",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-037",
+    "latin": "neddarat chms",
+    "arabe": "نضارات الشمس",
+    "fr": "lunettes de soleil",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-038",
+    "latin": "khatem",
+    "arabe": "خاتم",
+    "fr": "bague",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-039",
+    "latin": "slsla",
+    "arabe": "سلسلة",
+    "fr": "collier",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-040",
+    "latin": "swar",
+    "arabe": "سوار",
+    "fr": "bracelet",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-041",
+    "latin": "7el9a",
+    "arabe": "حلقة",
+    "fr": "boucle d'oreille",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-042",
+    "latin": "3ter",
+    "arabe": "عطر",
+    "fr": "parfum",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-043",
+    "latin": "makiyaj",
+    "arabe": "ماكياج",
+    "fr": "maquillage",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-044",
+    "latin": "rouj",
+    "arabe": "روج",
+    "fr": "rouge à lèvres",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-045",
+    "latin": "mechta",
+    "arabe": "مشطة",
+    "fr": "peigne",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-046",
+    "latin": "bross",
+    "arabe": "بروس",
+    "fr": "brosse",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-047",
+    "latin": "mous l7la9a",
+    "arabe": "موس الحلاقة",
+    "fr": "rasoir",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-048",
+    "latin": "mkwa",
+    "arabe": "مكوة",
+    "fr": "fer à repasser",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-049",
+    "latin": "taille",
+    "arabe": "طاي",
+    "fr": "taille (de vêtement)",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-050",
+    "latin": "mtwasset",
+    "arabe": "متوسط",
+    "fr": "moyen (taille M)",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "vetements-051",
+    "latin": "jerrb l7wayej",
+    "arabe": "جرب الحوايج",
+    "fr": "essayer un vêtement",
+    "theme": "vetements",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  }
+]

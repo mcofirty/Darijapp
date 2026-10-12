@@ -1,0 +1,594 @@
+[
+  {
+    "id": "chemin-001",
+    "latin": "fin kayna lma7atta d train?",
+    "arabe": "فين كاينة المحطة د تران؟",
+    "fr": "où est la gare ?",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-002",
+    "latin": "fin kayn lmatar?",
+    "arabe": "فين كاين المطار؟",
+    "fr": "où est l'aéroport ?",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-003",
+    "latin": "fin kayn lotil?",
+    "arabe": "فين كاين الأوطيل؟",
+    "fr": "où est l'hôtel ?",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-004",
+    "latin": "fin kaynin toyalet?",
+    "arabe": "فين كاينين التواليت؟",
+    "fr": "où sont les toilettes ?",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-005",
+    "latin": "fin kayn wst lmdina?",
+    "arabe": "فين كاين وسط المدينة؟",
+    "fr": "où est le centre-ville ?",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-006",
+    "latin": "wach b3id?",
+    "arabe": "واش بعيد؟",
+    "fr": "c'est loin ?",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-007",
+    "latin": "wach 9rib?",
+    "arabe": "واش قريب؟",
+    "fr": "c'est près ?",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-008",
+    "latin": "ch7al men d9i9a?",
+    "arabe": "شحال من دقيقة؟",
+    "fr": "c'est à combien de minutes ?",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-009",
+    "latin": "ana talef",
+    "arabe": "انا تالف",
+    "fr": "je suis perdu (dit par un homme)",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-010",
+    "latin": "ana talfa",
+    "arabe": "انا تالفة",
+    "fr": "je suis perdue",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-011",
+    "latin": "bghit nmchi lmdina",
+    "arabe": "بغيت نمشي المدينة",
+    "fr": "je veux aller à la médina",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-012",
+    "latin": "bghit nmchi l plaja",
+    "arabe": "بغيت نمشي للبلاجة",
+    "fr": "je veux aller à la plage",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-013",
+    "latin": "kifach nmchi l sou9?",
+    "arabe": "كيفاش نمشي للسوق؟",
+    "fr": "comment aller au souk ?",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-014",
+    "latin": "dour 3la limen",
+    "arabe": "دور على ليمن",
+    "fr": "tournez à droite",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-015",
+    "latin": "dour 3la lisser",
+    "arabe": "دور على ليسر",
+    "fr": "tournez à gauche",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-016",
+    "latin": "sir nichan",
+    "arabe": "سير نيشان",
+    "fr": "allez tout droit",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-017",
+    "latin": "7bes hna",
+    "arabe": "حبس هنا",
+    "fr": "arrêtez ici",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-018",
+    "latin": "kmmel nichan",
+    "arabe": "كمل نيشان",
+    "fr": "continuez tout droit",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-019",
+    "latin": "kan-9elleb 3la taxi",
+    "arabe": "كنقلب على طاكسي",
+    "fr": "je cherche un taxi",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-020",
+    "latin": "ch7al bach nmchi ltemma?",
+    "arabe": "شحال باش نمشي لتما؟",
+    "fr": "il faut combien pour aller là-bas ?",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-021",
+    "latin": "ch3el lcompteur, 3afak",
+    "arabe": "شعل الكونطور، عافاك",
+    "fr": "mettez le compteur, s'il vous plaît",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-022",
+    "latin": "ghadi nhbet hna",
+    "arabe": "غادي نهبط هنا",
+    "fr": "je descends ici",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-023",
+    "latin": "bghit tiki",
+    "arabe": "بغيت تيكي",
+    "fr": "je voudrais un billet",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-024",
+    "latin": "tiki dyal l'aller",
+    "arabe": "تيكي ديال لالي",
+    "fr": "un billet aller simple",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-025",
+    "latin": "tiki aller-retour",
+    "arabe": "تيكي ألي روتور",
+    "fr": "un billet aller-retour",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-026",
+    "latin": "fo9ach kaykherrej train?",
+    "arabe": "فوقاش كيخرج تران؟",
+    "fr": "quand part le train ?",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-027",
+    "latin": "m3a ch7al kaywsel tobis?",
+    "arabe": "معا شحال كيوصل طوبيس؟",
+    "fr": "à quelle heure arrive le bus ?",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-028",
+    "latin": "fin kayna ma7atta d tobis?",
+    "arabe": "فين كاينة محطة د طوبيس؟",
+    "fr": "où est l'arrêt de bus ?",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-029",
+    "latin": "bghit nrezerver",
+    "arabe": "بغيت نريزيرفي",
+    "fr": "je veux réserver",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-030",
+    "latin": "3ndi reservation",
+    "arabe": "عندي ريزيرفاسيون",
+    "fr": "j'ai une réservation",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-031",
+    "latin": "diye3t lpaspor dyali",
+    "arabe": "ضيعت الباسبور ديالي",
+    "fr": "j'ai perdu mon passeport",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-032",
+    "latin": "kayn z7am bzaf",
+    "arabe": "كاين زحام بزاف",
+    "fr": "il y a beaucoup de circulation",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-033",
+    "latin": "kayn z7am",
+    "arabe": "كاين زحام",
+    "fr": "il y a un embouteillage",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-034",
+    "latin": "7na m3etlin",
+    "arabe": "حنا معطلين",
+    "fr": "nous sommes en retard",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-035",
+    "latin": "wselt",
+    "arabe": "وصلت",
+    "fr": "je suis arrivé",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-036",
+    "latin": "ghadi nmchi ghedda",
+    "arabe": "غادي نمشي غدا",
+    "fr": "je pars demain",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chemin-037",
+    "latin": "ghadi nrje3 ghedda",
+    "arabe": "غادي نرجع غدا",
+    "fr": "je reviens demain",
+    "theme": "chemin",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  }
+]

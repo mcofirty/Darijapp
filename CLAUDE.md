@@ -79,7 +79,7 @@ docs/
 
 | Onglet | Contenu |
 | --- | --- |
-| Apprendre | Écran d'accueil. Grand titre avec la série (flamme). Carte « Session du jour » (nouveaux mots, révisions, mots vus, « Commencer » puis « Encore une session », sans limite), section « Ma progression » (niveau, XP), puis « Explorer » : guide des sons et 8 thèmes en liste groupée, fiches mots |
+| Apprendre | Écran d'accueil. Grand titre avec la série (flamme). Carte « Session du jour » (nouveaux mots, révisions, mots vus, « Commencer » puis « Encore une session », sans limite), section « Ma progression » (niveau, XP), puis « Explorer » : guide des sons et 31 thèmes en liste groupée, fiches mots |
 | Parcours | Leçons groupées par niveau (niveau 1 « Les bases »), prochaine leçon mise en avant, nœuds Trésor, trophées |
 | Quiz | 5 questions mêlant les 5 exercices |
 | Progrès | Contrôle segmenté Tableau de bord / Dictionnaire. Tableau : niveau et XP restants, XP total, XP du jour, série, sessions du jour, mots vus (quêtes, coffre et statistiques au jalon 4). Dictionnaire : recherche iOS, tous les mots avec ✓ sur ceux déjà vus |
@@ -89,7 +89,7 @@ Design : règles d'Apple (Human Interface Guidelines, iOS 26). Couleurs sémanti
 
 Navigation : barre d'onglets flottante en verre dépoli, reproduite d'après la maquette de l'utilisateur (mesures sur un écran de 440 pt) : 62 pt de haut, marges de 21 pt, rail en retrait de 9 pt, lentille 10 pt plus large que l'onglet et en retrait de 4 pt, icônes pleines dessinées en SVG (boîte de 28 pt), libellés de 11 pt ; une lentille marque l'onglet actif et suit le doigt quand on glisse le long de la barre (étirement selon la vitesse, icônes grossies, retour élastique). Un balayage horizontal de la page change aussi d'onglet, sauf sur les zones marquées `data-sans-balayage`.
 
-Fiche mot : latin en grand, arabe dessous (affiché par défaut, masquable dans Profil), traduction, boutons « Écouter » et « Ralenti » (0,75×), lecture automatique à l'ouverture, explication de prononciation, explication de chaque son particulier du mot, exemple avec son audio.
+Fiche mot : latin en grand, arabe dessous (affiché par défaut, masquable dans Profil), traduction, note d'usage s'il y en a, boutons « Écouter » et « Ralenti » (0,75×), lecture automatique à l'ouverture, explication de prononciation, explication de chaque son particulier du mot, exemple avec son audio.
 
 Session du jour (style Duolingo, plein écran) : jusqu'à 8 révisions dues et 5 nouveaux mots dans l'ordre du programme. Chaque nouveau mot est présenté (« Nouveau mot ») puis exercé ; les nouveaux mots puis les révisions finissent par « Associe les paires ». Barre de progression, croix pour quitter, retour immédiat (vert « Bravo ! » ou rouge avec la bonne réponse, petit son, mot rejoué). Une question ratée revient en fin de session. Bilan avec confettis : XP, taux de réussite, série. Sans révision ni mot nouveau : entraînement libre sur 8 mots vus, qui ne change pas la répétition espacée. Pas de cœurs ni de vies.
 
@@ -103,7 +103,7 @@ Fonctions complémentaires : premier lancement guidé, remplacer l'audio d'un mo
 
 ## Règles métier
 
-- **Translittération** : 3 = ع, 7 = ح, 9 = ق, kh = خ, gh = غ, ch = ش. Appliquée partout, sans exception : chaque lettre arabe de cette liste a sa graphie latine dans le mot et l'exemple (vérifié par `data.test.ts`). ق prononcé « g » s'écrit g / ڭ. L'article assimilé se double en latin quand l'arabe l'écrit (ssba7 = الصباح, llil = الليل). Le latin et l'arabe d'un même mot ou exemple disent exactement la même chose.
+- **Translittération** : 3 = ع, 7 = ح, 9 = ق, kh = خ, gh = غ, ch = ش ; 2 = ء (hamza, mots importés, non vérifié) ; accents permis dans les mots empruntés au français (supermarché, reçu). Appliquée partout, sans exception : chaque lettre arabe de cette liste a sa graphie latine dans le mot et l'exemple (vérifié par `data.test.ts`). ق prononcé « g » s'écrit g / ڭ. L'article assimilé se double en latin quand l'arabe l'écrit (ssba7 = الصباح, llil = الليل). Le latin et l'arabe d'un même mot ou exemple disent exactement la même chose.
 - **Répétition espacée** (Leitner, boîtes 1 à 4) : un mot raté revient le lendemain (boîte 1) ; un mot réussi revient après 3, 7, puis 21 jours. Un mot compte comme raté s'il a eu au moins une erreur pendant la session.
 - **Score de prononciation** : de 0 à 100. 80 et plus : « Excellent », 3 étoiles. De 60 à 79 : « Presque », 2 étoiles. Moins de 60 : « À retravailler », 1 étoile. 60 et plus compte comme réussi. Le bouton « Le score se trompe » permet une correction manuelle.
 - **Calibrage du score** : deux rendus de synthèse du même mot doivent dépasser 80 ; deux mots proches doivent rester sous 60.
@@ -131,7 +131,9 @@ Mot (`src/data/<theme>.json`) :
 }
 ```
 
-L'id suit `<theme>-NNN` dans l'ordre du fichier ; `src/data/data.test.ts` vérifie le format, l'unicité et la translittération.
+L'id suit `<theme>-NNN` dans l'ordre du fichier ; `src/data/data.test.ts` vérifie le format, l'unicité (latin + arabe) et la translittération.
+
+Mot importé (1 530 entrées, sans MP3) : `"prononciation": ""`, `"audio": ""` (la voix de l'iPhone lit l'arabe ; le script audio l'ignore), `"exemple"` aux quatre champs vides, et parfois `"note": "Emprunt courant au français"`. Une même graphie latine peut désigner deux mots différents en arabe (7it = حيت « parce que » ou حيط « mur »).
 
 Session terminée (IndexedDB, table `sessions`, depuis la v2) :
 
@@ -194,7 +196,7 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 | 1. Socle | Semaine 1 | PWA, 5 onglets, script audio, 1 thème de 10 mots (fait : 8 thèmes, 152 mots, 304 MP3) | Terminé |
 | 2. Exercices | Semaines 2 et 3 | Cartes, quiz, répétition espacée | En cours |
 | 3. Prononciation | Semaines 4 et 5 | Enregistrement, score sur 100, sons du darija | À faire |
-| 4. Jeu et contenu | Semaines 6 et 7 | Quêtes, séries, parcours complet, 150 mots | À faire |
+| 4. Jeu et contenu | Semaines 6 et 7 | Quêtes, séries, parcours complet, 150 mots (fait : 1 682 mots en 31 thèmes) | À faire |
 | Ensuite | — | Grammaire, dialogues, 500 mots | Plus tard |
 
 ## Fonctionnalités livrées
@@ -215,6 +217,7 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 | 2026-10-12 | Page cachée « Mes mots » (`#ajout`) : ajout, modification et suppression de mots (français, latin, arabe), intégrés aux sessions, au dictionnaire et à la répétition espacée ; base v3 | `src/features/ajout/`, `src/db/motsPerso.ts`, `src/data/motsPerso.ts`, `src/app/App.tsx` |
 | 2026-10-12 | Partage d'un mot par lien (`#mot=`) depuis Mes mots, avec écran de confirmation à l'ouverture | `src/features/ajout/Proposition.tsx`, `src/data/motsPerso.ts`, `src/app/App.tsx` |
 | 2026-10-12 | Session du jour style Duolingo en écran d'accueil : découverte, Écoute et choisis, Traduis, Associe les paires, bilan ; répétition espacée, XP, niveaux, série ; base v2 | `src/features/session/`, `src/exercices/`, `src/srs/`, `src/gamification/`, `src/db/apprentissage.ts` |
+| 2026-10-12 | Import de 1 530 mots et phrases du fichier de l'utilisateur (1 739 entrées, doublons retirés) en 23 nouveaux thèmes et 7 thèmes existants, arabe écrit par Claude, lus par la voix de l'iPhone ; note d'usage sur la fiche | `src/data/*.json`, `src/data/themes.ts`, `src/ui/visuels.ts`, `src/data/data.test.ts`, `scripts/generate_audio.py` |
 | 2026-10-12 | Nom « Darijaapp » (icône d'écran d'accueil, titre) et feuille d'aide à l'installation sur l'écran d'accueil avec « Ne plus afficher » | `src/features/onboarding/AideInstallation.tsx`, `src/app/installation.ts`, `vite.config.ts`, `index.html` |
 | 2026-10-12 | Contrôles segmentés (Progrès, Profil) en capsule avec curseur en verre au repos | `src/ui/Boutons.tsx`, `src/index.css` |
 | 2026-10-12 | Liquid Glass d'iOS 26 sur toutes les commandes : bouton retour rond, bord de défilement flou, session et bilan, alertes en verre, recherche collante, goutte de verre du contrôle segmenté et de l'interrupteur | `src/ui/`, `src/index.css`, `src/features/session/`, `src/features/progres/Dictionnaire.tsx` |
@@ -247,6 +250,9 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 - 2026-10-12 : réglage d'apparence stocké dans le profil Dexie (`apparence`), copié dans localStorage uniquement pour l'appliquer avant le premier affichage (sans flash) ; Dexie reste la référence.
 - 2026-10-12 : refonte complète selon les règles d'Apple (demande de l'utilisateur) : Liquid Glass limité à la couche de commandes, fond système gris au lieu du fond coloré, listes groupées, grands titres ; l'en-tête niveau/XP/série devient une section de l'accueil et du tableau de bord Progrès.
 - 2026-10-12 : barre de navigation façon iOS 26 (demande de l'utilisateur, « Liquid Glass sur chaque menu ») : bouton retour réduit au chevron dans un rond en verre, sans le nom de la page précédente (gardé pour VoiceOver) ; la barre compacte n'est plus une bande de verre mais un bord de défilement flou.
+- 2026-10-12 : import du fichier de 1 739 entrées (demande de l'utilisateur) : les 130 mots déjà présents (même latin ou simple variante d'orthographe, comme mr7ba/mar7ba) gardent leur version, avec MP3 et progression ; les doublons du fichier sont fusionnés (sens réunis par « / ») ; les thèmes du fichier qui recoupent un thème existant le complètent, les autres deviennent 23 thèmes ajoutés après les 8 premiers ; niveau 1, 2 ou 3 selon le numéro du thème (1-10, 11-21, 22-31) ; première lettre du français en minuscule comme le reste du programme.
+- 2026-10-12 : mots importés sans MP3, lus par la voix arabe de l'iPhone (choix de l'utilisateur) : pas de voix darija disponible (Jamal bloquée, mms-tts-ara aussi mauvais), et 1 530 MP3 auraient alourdi l'appli d'environ 30 Mo. Champ `audio` vide plutôt qu'un chemin vers un MP3 absent, pour que le script audio les ignore.
+- 2026-10-12 : latin du fichier corrigé seulement quand il contredisait l'arabe (sahb → sa7b, frash → frach, short → chort, hmel → 7mel, qbel → 9bel, lettres doublées 77/99 simplifiées) ; ṭ, ṣ, ə remplacés par t, s, e.
 - 2026-10-12 : l'appli s'appelle « Darijaapp » (demande de l'utilisateur) : nom du manifeste, nom sous l'icône (`apple-mobile-web-app-title`) et titre de la page. L'adresse reste …/Darijapp/ (nom du repo).
 - 2026-10-12 : « Ne plus afficher » de l'aide à l'installation stocké dans le profil Dexie (`masquerAideInstallation`, champ non indexé, sans migration) ; l'aide attend la lecture du profil pour ne pas clignoter.
 - 2026-10-12 : alertes de l'appli (composant `Alerte`, rendu dans `document.body`) au lieu de `window.confirm`, qui affiche une boîte Safari impossible à styler.
@@ -260,7 +266,9 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 ## Points en suspens
 
 - Voix : edge-tts est bloqué (403), les sons viennent du secours mms-tts-ara, qui prononce mal le darija. Seule voie officielle vers la voix marocaine Jamal : Azure Speech (offre gratuite, compte Azure et clé en secret GitHub), à proposer à l'utilisateur.
-- Le contenu a été relu et corrigé par Claude (cohérence latin/arabe, tournures), mais pas par un locuteur natif : signaler les erreurs pour corriger les JSON. Quand l'arabe d'un mot change, supprimer son MP3 pour que l'Action le régénère.
+- Le contenu a été relu et corrigé par Claude (cohérence latin/arabe, tournures), mais pas par un locuteur natif : signaler les erreurs pour corriger les JSON. L'arabe des 1 530 mots importés a été écrit par Claude d'après le latin et le français, sans relecture.
+- Mots importés : pas d'explication de prononciation ni d'exemple (la fiche montre seulement les sons 3, 7, 9, kh, gh, ch) ; lus par la voix arabe de l'iPhone (arabe standard, pas du darija). Pour une vraie voix marocaine : Azure Speech (Jamal), puis renseigner `audio` et générer les MP3.
+- Dictionnaire et liste « Mes mots » affichent les 1 682 mots d'un coup : environ 1,5 s de rendu dans Chromium, peut-être plus lent sur iPhone ; prévoir un affichage progressif si c'est gênant. Quand l'arabe d'un mot change, supprimer son MP3 pour que l'Action le régénère.
 - Le Dictionnaire montre tous les mots, avec un ✓ sur ceux déjà vus (le cahier des charges ne prévoyait que les mots vus).
 - Sur iPhone, l'appli installée sur l'écran d'accueil a sa propre mémoire, séparée de Safari (non vérifié sur appareil) : la progression faite dans Safari ne suit pas, et un lien `#mot=…` ouvert dans Safari ajoute sans doute le mot à Safari, pas à l'appli installée. À vérifier, puis prévoir un contournement (copier le lien et l'ouvrir dans l'appli, ou export/import).
 - Mes mots : pas de sauvegarde tant que l'export/import du Profil n'existe pas (effacer les données du site efface les mots ajoutés). Pas de prononciation ni d'exemple pour ces mots.

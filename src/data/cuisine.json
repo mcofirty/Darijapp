@@ -1,0 +1,834 @@
+[
+  {
+    "id": "cuisine-001",
+    "latin": "tbsil",
+    "arabe": "طبسيل",
+    "fr": "assiette",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-002",
+    "latin": "zlaf",
+    "arabe": "زلاف",
+    "fr": "bol",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-003",
+    "latin": "kas",
+    "arabe": "كاس",
+    "fr": "verre",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-004",
+    "latin": "finjan",
+    "arabe": "فنجان",
+    "fr": "tasse",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-005",
+    "latin": "kas kbir",
+    "arabe": "كاس كبير",
+    "fr": "mug",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-006",
+    "latin": "forchetta",
+    "arabe": "فورشيطة",
+    "fr": "fourchette",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-007",
+    "latin": "m3el9a",
+    "arabe": "معلقة",
+    "fr": "cuillère",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-008",
+    "latin": "mous",
+    "arabe": "موس",
+    "fr": "couteau",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-009",
+    "latin": "m3el9a kbira",
+    "arabe": "معلقة كبيرة",
+    "fr": "grande cuillère",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-010",
+    "latin": "m3el9a sghira",
+    "arabe": "معلقة صغيرة",
+    "fr": "petite cuillère",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-011",
+    "latin": "9er3a",
+    "arabe": "قرعة",
+    "fr": "bouteille",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-012",
+    "latin": "9er3a d lma",
+    "arabe": "قرعة د الما",
+    "fr": "carafe",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-013",
+    "latin": "kasrona",
+    "arabe": "كاسرونة",
+    "fr": "casserole",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-014",
+    "latin": "me9la",
+    "arabe": "مقلة",
+    "fr": "poêle",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-015",
+    "latin": "berma",
+    "arabe": "برمة",
+    "fr": "marmite",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-016",
+    "latin": "ghta",
+    "arabe": "غطا",
+    "fr": "couvercle",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-017",
+    "latin": "siniya",
+    "arabe": "صينية",
+    "fr": "plateau",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-018",
+    "latin": "tabla d tt9ti3",
+    "arabe": "طبلة د التقطيع",
+    "fr": "planche à découper",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-019",
+    "latin": "msfa",
+    "arabe": "مصفاة",
+    "fr": "passoire",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-020",
+    "latin": "7ekkaka",
+    "arabe": "حكاكة",
+    "fr": "râpe",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-021",
+    "latin": "lmaghsel",
+    "arabe": "المغسل",
+    "fr": "évier",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-022",
+    "latin": "kanoun",
+    "arabe": "كانون",
+    "fr": "réchaud",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-023",
+    "latin": "lf7em",
+    "arabe": "الفحم",
+    "fr": "charbon",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-024",
+    "latin": "lgaz",
+    "arabe": "الگاز",
+    "fr": "gaz",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-025",
+    "latin": "zit",
+    "arabe": "زيت",
+    "fr": "huile",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-026",
+    "latin": "zit zitoun",
+    "arabe": "زيت زيتون",
+    "fr": "huile d'olive",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-027",
+    "latin": "mel7",
+    "arabe": "ملح",
+    "fr": "sel",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-028",
+    "latin": "lbzar",
+    "arabe": "البزار",
+    "fr": "poivre",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-029",
+    "latin": "d9i9",
+    "arabe": "دقيق",
+    "fr": "farine",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-030",
+    "latin": "khmira",
+    "arabe": "خميرة",
+    "fr": "levure",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-031",
+    "latin": "khell",
+    "arabe": "خل",
+    "fr": "vinaigre",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-032",
+    "latin": "sossa",
+    "arabe": "صوصة",
+    "fr": "sauce",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-033",
+    "latin": "3tria",
+    "arabe": "عطرية",
+    "fr": "épice",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-034",
+    "latin": "9erfa",
+    "arabe": "قرفة",
+    "fr": "cannelle",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-035",
+    "latin": "kamoun",
+    "arabe": "كامون",
+    "fr": "cumin",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-036",
+    "latin": "ta7mira",
+    "arabe": "تحميرة",
+    "fr": "paprika",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-037",
+    "latin": "skinjbir",
+    "arabe": "سكينجبير",
+    "fr": "gingembre",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-038",
+    "latin": "kher9oum",
+    "arabe": "خرقوم",
+    "fr": "curcuma",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-039",
+    "latin": "ma3dnous",
+    "arabe": "معدنوس",
+    "fr": "persil",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-040",
+    "latin": "9ezbor",
+    "arabe": "قزبور",
+    "fr": "coriandre",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-041",
+    "latin": "l7be9",
+    "arabe": "الحبق",
+    "fr": "basilic",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-042",
+    "latin": "z3tar",
+    "arabe": "زعتر",
+    "fr": "thym",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-043",
+    "latin": "ghla",
+    "arabe": "غلى",
+    "fr": "bouillir",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-044",
+    "latin": "9la",
+    "arabe": "قلى",
+    "fr": "frire",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-045",
+    "latin": "chwa",
+    "arabe": "شوا",
+    "fr": "griller",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-046",
+    "latin": "9te3",
+    "arabe": "قطع",
+    "fr": "couper",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-047",
+    "latin": "khlet",
+    "arabe": "خلط",
+    "fr": "mélanger",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-048",
+    "latin": "9cher",
+    "arabe": "قشر",
+    "fr": "éplucher",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-049",
+    "latin": "dou9",
+    "arabe": "دوق",
+    "fr": "goûter",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-050",
+    "latin": "9ddem",
+    "arabe": "قدم",
+    "fr": "servir",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-051",
+    "latin": "zid",
+    "arabe": "زيد",
+    "fr": "ajouter",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "cuisine-052",
+    "latin": "ghsel",
+    "arabe": "غسل",
+    "fr": "laver / se laver",
+    "theme": "cuisine",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  }
+]

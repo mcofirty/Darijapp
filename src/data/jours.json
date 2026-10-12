@@ -302,5 +302,742 @@
       "fr": "Le dimanche je ne travaille pas",
       "audio": "audio/jours-019-ex.mp3"
     }
+  },
+  {
+    "id": "jours-020",
+    "latin": "9bel lbare7",
+    "arabe": "قبل البارح",
+    "fr": "avant-hier",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-021",
+    "latin": "men b3d ghedda",
+    "arabe": "من بعد غدا",
+    "fr": "après-demain",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-022",
+    "latin": "had ssba7",
+    "arabe": "هاد الصباح",
+    "fr": "ce matin",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-023",
+    "latin": "had l3chiya",
+    "arabe": "هاد العشية",
+    "fr": "ce soir",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-024",
+    "latin": "had llila",
+    "arabe": "هاد الليلة",
+    "fr": "cette nuit",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-025",
+    "latin": "daba daba",
+    "arabe": "دابا دابا",
+    "fr": "tout de suite",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-026",
+    "latin": "3la 9rib",
+    "arabe": "على قريب",
+    "fr": "bientôt",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-027",
+    "latin": "mora chwiyya",
+    "arabe": "مورا شوية",
+    "fr": "tout à l'heure",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-028",
+    "latin": "dima",
+    "arabe": "ديما",
+    "fr": "toujours",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-029",
+    "latin": "3mer",
+    "arabe": "عمر",
+    "fr": "jamais",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-030",
+    "latin": "bzaf d lmerat",
+    "arabe": "بزاف د المرات",
+    "fr": "souvent",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-031",
+    "latin": "merra merra",
+    "arabe": "مرة مرة",
+    "fr": "parfois",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-032",
+    "latin": "9lil",
+    "arabe": "قليل",
+    "fr": "rarement",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-033",
+    "latin": "kol nhar",
+    "arabe": "كل نهار",
+    "fr": "chaque jour / tous les jours",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-034",
+    "latin": "merra wa7da",
+    "arabe": "مرة وحدة",
+    "fr": "une fois",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-035",
+    "latin": "jouj mrat",
+    "arabe": "جوج مرات",
+    "fr": "deux fois",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-036",
+    "latin": "mazal",
+    "arabe": "مازال",
+    "fr": "encore / pas encore",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-037",
+    "latin": "deja",
+    "arabe": "ديجا",
+    "fr": "déjà",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    },
+    "note": "Emprunt courant"
+  },
+  {
+    "id": "jours-038",
+    "latin": "bekri",
+    "arabe": "بكري",
+    "fr": "tôt",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-039",
+    "latin": "m3ettel",
+    "arabe": "معطل",
+    "fr": "tard / en retard",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-040",
+    "latin": "f lwa9t",
+    "arabe": "ف الوقت",
+    "fr": "à l'heure",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-041",
+    "latin": "d9i9a",
+    "arabe": "دقيقة",
+    "fr": "une minute",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-042",
+    "latin": "sa3a",
+    "arabe": "ساعة",
+    "fr": "une heure / montre",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-043",
+    "latin": "taniya",
+    "arabe": "ثانية",
+    "fr": "une seconde",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-044",
+    "latin": "chher",
+    "arabe": "شهر",
+    "fr": "un mois",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-045",
+    "latin": "9ern",
+    "arabe": "قرن",
+    "fr": "un siècle",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-046",
+    "latin": "noss nhar",
+    "arabe": "نص نهار",
+    "fr": "midi",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-047",
+    "latin": "men b3d ddohr",
+    "arabe": "من بعد الظهر",
+    "fr": "l'après-midi",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-048",
+    "latin": "noss llil",
+    "arabe": "نص الليل",
+    "fr": "minuit",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-049",
+    "latin": "nihayat simana",
+    "arabe": "نهاية السيمانة",
+    "fr": "le week-end",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-050",
+    "latin": "yanayer",
+    "arabe": "يناير",
+    "fr": "janvier",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-051",
+    "latin": "febrayer",
+    "arabe": "فبراير",
+    "fr": "février",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-052",
+    "latin": "mars",
+    "arabe": "مارس",
+    "fr": "mars",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-053",
+    "latin": "abril",
+    "arabe": "أبريل",
+    "fr": "avril",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-054",
+    "latin": "may",
+    "arabe": "ماي",
+    "fr": "mai",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-055",
+    "latin": "yonyo",
+    "arabe": "يونيو",
+    "fr": "juin",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-056",
+    "latin": "yolyoz",
+    "arabe": "يوليوز",
+    "fr": "juillet",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-057",
+    "latin": "ghocht",
+    "arabe": "غشت",
+    "fr": "août",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-058",
+    "latin": "chtanber",
+    "arabe": "شتنبر",
+    "fr": "septembre",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-059",
+    "latin": "oktober",
+    "arabe": "أكتوبر",
+    "fr": "octobre",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-060",
+    "latin": "nwanber",
+    "arabe": "نونبر",
+    "fr": "novembre",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-061",
+    "latin": "dojanber",
+    "arabe": "دجنبر",
+    "fr": "décembre",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-062",
+    "latin": "rrbi3",
+    "arabe": "الربيع",
+    "fr": "printemps",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-063",
+    "latin": "ssif",
+    "arabe": "الصيف",
+    "fr": "été",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-064",
+    "latin": "lkhrif",
+    "arabe": "الخريف",
+    "fr": "automne",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "jours-065",
+    "latin": "chta",
+    "arabe": "الشتا",
+    "fr": "hiver / pluie",
+    "theme": "jours",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
   }
 ]

@@ -286,5 +286,709 @@
       "fr": "Excusez-moi, quelle heure est-il ?",
       "audio": "audio/chiffres-018-ex.mp3"
     }
+  },
+  {
+    "id": "chiffres-019",
+    "latin": "sifr",
+    "arabe": "صفر",
+    "fr": "zéro",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-020",
+    "latin": "7dach",
+    "arabe": "حداش",
+    "fr": "onze",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-021",
+    "latin": "tnach",
+    "arabe": "طناش",
+    "fr": "douze",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-022",
+    "latin": "tlettach",
+    "arabe": "تلطاش",
+    "fr": "treize",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-023",
+    "latin": "reb3tach",
+    "arabe": "ربعطاش",
+    "fr": "quatorze",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-024",
+    "latin": "khmestach",
+    "arabe": "خمسطاش",
+    "fr": "quinze",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-025",
+    "latin": "settach",
+    "arabe": "سطاش",
+    "fr": "seize",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-026",
+    "latin": "seb3tach",
+    "arabe": "سبعطاش",
+    "fr": "dix-sept",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-027",
+    "latin": "tmntach",
+    "arabe": "تمنطاش",
+    "fr": "dix-huit",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-028",
+    "latin": "tes3tach",
+    "arabe": "تسعطاش",
+    "fr": "dix-neuf",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-029",
+    "latin": "wa7ed w 3chrin",
+    "arabe": "واحد و عشرين",
+    "fr": "vingt et un",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-030",
+    "latin": "jouj w 3chrin",
+    "arabe": "جوج و عشرين",
+    "fr": "vingt-deux",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-031",
+    "latin": "tlata w 3chrin",
+    "arabe": "تلاتة و عشرين",
+    "fr": "vingt-trois",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-032",
+    "latin": "reb3a w 3chrin",
+    "arabe": "ربعة و عشرين",
+    "fr": "vingt-quatre",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-033",
+    "latin": "khmsa w 3chrin",
+    "arabe": "خمسة و عشرين",
+    "fr": "vingt-cinq",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-034",
+    "latin": "tlatin",
+    "arabe": "تلاتين",
+    "fr": "trente",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-035",
+    "latin": "reb3in",
+    "arabe": "ربعين",
+    "fr": "quarante",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-036",
+    "latin": "settin",
+    "arabe": "ستين",
+    "fr": "soixante",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-037",
+    "latin": "seb3in",
+    "arabe": "سبعين",
+    "fr": "soixante-dix",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-038",
+    "latin": "tmanin",
+    "arabe": "تمانين",
+    "fr": "quatre-vingts",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-039",
+    "latin": "tes3in",
+    "arabe": "تسعين",
+    "fr": "quatre-vingt-dix",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-040",
+    "latin": "jouj myat",
+    "arabe": "جوج مية",
+    "fr": "deux cents",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-041",
+    "latin": "alfayn",
+    "arabe": "ألفين",
+    "fr": "deux mille",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-042",
+    "latin": "3chra laf",
+    "arabe": "عشرة آلاف",
+    "fr": "dix mille",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-043",
+    "latin": "mlyon",
+    "arabe": "مليون",
+    "fr": "un million",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-044",
+    "latin": "llewwel",
+    "arabe": "اللول",
+    "fr": "premier / d'abord",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-045",
+    "latin": "ttani",
+    "arabe": "التاني",
+    "fr": "deuxième",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-046",
+    "latin": "ttalet",
+    "arabe": "التالت",
+    "fr": "troisième",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-047",
+    "latin": "rrabe3",
+    "arabe": "الرابع",
+    "fr": "quatrième",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-048",
+    "latin": "llekher",
+    "arabe": "اللخر",
+    "fr": "dernier",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-049",
+    "latin": "noss",
+    "arabe": "نص",
+    "fr": "la moitié",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-050",
+    "latin": "rbe3",
+    "arabe": "ربع",
+    "fr": "un quart",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-051",
+    "latin": "tolt",
+    "arabe": "تلت",
+    "fr": "un tiers",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-052",
+    "latin": "bzaf",
+    "arabe": "بزاف",
+    "fr": "beaucoup / trop",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-053",
+    "latin": "chwiya bzaf",
+    "arabe": "شوية بزاف",
+    "fr": "très peu",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-054",
+    "latin": "kafi",
+    "arabe": "كافي",
+    "fr": "assez",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-055",
+    "latin": "kter",
+    "arabe": "كتر",
+    "fr": "plus",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-056",
+    "latin": "9ell",
+    "arabe": "قل",
+    "fr": "moins",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-057",
+    "latin": "chi we7din",
+    "arabe": "شي وحدين",
+    "fr": "quelques-uns",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-058",
+    "latin": "jouj",
+    "arabe": "جوج",
+    "fr": "une paire / couple",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-059",
+    "latin": "chi 3chra",
+    "arabe": "شي عشرة",
+    "fr": "une dizaine",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-060",
+    "latin": "chi mya",
+    "arabe": "شي مية",
+    "fr": "une centaine",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-061",
+    "latin": "ch7al men wa7ed?",
+    "arabe": "شحال من واحد؟",
+    "fr": "combien de personnes ?",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "chiffres-062",
+    "latin": "wa7ed bo7do",
+    "arabe": "واحد بوحدو",
+    "fr": "une seule personne",
+    "theme": "chiffres",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
   }
 ]

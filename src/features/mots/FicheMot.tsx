@@ -31,6 +31,7 @@ export function FicheMot({ mot, retour }: Props) {
           </p>
         )}
         <p className="t-titre-3 mt-2 text-texte-2">{mot.fr}</p>
+        {mot.note && <p className="t-sous-titre mt-1 italic text-texte-2">{mot.note}</p>}
         <div className="mt-6 flex gap-3">
           <BoutonAudio chemin={mot.audio} arabe={mot.arabe} libelle="Écouter" grand />
           <BoutonAudio chemin={mot.audio} arabe={mot.arabe} vitesse={0.75} libelle="Ralenti" grand />

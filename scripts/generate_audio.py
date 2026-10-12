@@ -7,7 +7,8 @@ marocain. Les MP3 sont générés une fois puis embarqués dans l'appli, qui res
 Secours : facebook/mms-tts-ara (--moteur mms), modèle libre exécuté en local. Il lit l'arabe
 sans voyelles, à la manière de l'arabe standard, et prononce mal une partie du darija.
 
-Seuls les fichiers absents de public/audio/ sont générés, sauf avec --force.
+Seuls les fichiers absents de public/audio/ sont générés, sauf avec --force. Les entrées au champ
+« audio » vide (mots importés) sont ignorées : la voix du téléphone les lit.
 Code de sortie 2 : certains fichiers n'ont pas pu être générés (relancer, ou --moteur mms).
 
 Installation (une seule fois) :
@@ -57,6 +58,8 @@ def lister_a_generer(theme: str | None, force: bool) -> list[tuple[str, Path]]:
         for mot in json.loads(fichier.read_text(encoding="utf-8")):
             ex = mot["exemple"]
             for arabe, audio in ((mot["arabe"], mot["audio"]), (ex["arabe"], ex["audio"])):
+                if not audio:  # entrée sans MP3 : lue par la voix du téléphone
+                    continue
                 cible = PUBLIC / audio
                 if force or not cible.exists():
                     taches.append((texte_a_lire(arabe), cible))

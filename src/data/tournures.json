@@ -1,0 +1,610 @@
+[
+  {
+    "id": "tournures-001",
+    "latin": "ma bghitch",
+    "arabe": "ما بغيتش",
+    "fr": "je ne veux pas",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-002",
+    "latin": "ma n9derch",
+    "arabe": "ما نقدرش",
+    "fr": "je ne peux pas",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-003",
+    "latin": "ma kan-chouf walu",
+    "arabe": "ما كنشوف والو",
+    "fr": "je ne vois rien",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-004",
+    "latin": "ma kan-sme3 walu",
+    "arabe": "ما كنسمع والو",
+    "fr": "je n'entends rien",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-005",
+    "latin": "ma 3ndi walu",
+    "arabe": "ما عندي والو",
+    "fr": "je n'ai rien",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-006",
+    "latin": "ma 3ndi 7tta wa7ed",
+    "arabe": "ما عندي حتى واحد",
+    "fr": "je n'ai personne",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-007",
+    "latin": "ma 3ndich flous",
+    "arabe": "ما عنديش فلوس",
+    "fr": "je n'ai pas d'argent",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-008",
+    "latin": "ma kayn 7tta wa7ed",
+    "arabe": "ما كاين حتى واحد",
+    "fr": "il n'y a personne",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-009",
+    "latin": "ma kayn walu",
+    "arabe": "ما كاين والو",
+    "fr": "il n'y a rien",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-010",
+    "latin": "ma ghadi-ch nji",
+    "arabe": "ما غاديش نجي",
+    "fr": "je ne viens pas",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-011",
+    "latin": "ma ghadi-ch nmchi",
+    "arabe": "ما غاديش نمشي",
+    "fr": "je ne pars pas",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-012",
+    "latin": "ma klitch",
+    "arabe": "ما كليتش",
+    "fr": "je n'ai pas mangé",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-013",
+    "latin": "ma n3estch",
+    "arabe": "ما نعستش",
+    "fr": "je n'ai pas dormi",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-014",
+    "latin": "ma nsitch",
+    "arabe": "ما نسيتش",
+    "fr": "je n'ai pas oublié",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-015",
+    "latin": "ma kdebtch",
+    "arabe": "ما كدبتش",
+    "fr": "je n'ai pas menti",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-016",
+    "latin": "ma gltch hadchi",
+    "arabe": "ما گلتش هادشي",
+    "fr": "je n'ai pas dit ça",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-017",
+    "latin": "ma mte2kkedch",
+    "arabe": "ما متأكدش",
+    "fr": "je ne suis pas sûr (dit par un homme)",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-018",
+    "latin": "mazal hna",
+    "arabe": "مازال هنا",
+    "fr": "je suis encore là",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-019",
+    "latin": "mazal tma",
+    "arabe": "مازال تما",
+    "fr": "il est encore là",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-020",
+    "latin": "3ad wselt",
+    "arabe": "عاد وصلت",
+    "fr": "je viens juste d'arriver",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-021",
+    "latin": "ghadi nmchi 3la 9rib",
+    "arabe": "غادي نمشي على قريب",
+    "fr": "je vais bientôt partir",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-022",
+    "latin": "7tta ana la",
+    "arabe": "حتى انا لا",
+    "fr": "moi non plus",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-023",
+    "latin": "ga3 la",
+    "arabe": "گاع لا",
+    "fr": "pas du tout",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-024",
+    "latin": "machi dima",
+    "arabe": "ماشي ديما",
+    "fr": "pas toujours",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-025",
+    "latin": "ach had lhdra!",
+    "arabe": "اش هاد الهضرة!",
+    "fr": "n'importe quoi !",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-026",
+    "latin": "7bes!",
+    "arabe": "حبس!",
+    "fr": "stop !",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-027",
+    "latin": "kif ma bghiti",
+    "arabe": "كيف ما بغيتي",
+    "fr": "comme tu veux",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-028",
+    "latin": "ma kayhemmch",
+    "arabe": "ما كيهمش",
+    "fr": "peu importe",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-029",
+    "latin": "fhemti chno bghit n9sed?",
+    "arabe": "فهمتي شنو بغيت نقصد؟",
+    "fr": "tu vois ce que je veux dire ?",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-030",
+    "latin": "hakda",
+    "arabe": "هاكدا",
+    "fr": "c'est comme ça",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-031",
+    "latin": "hada mokhtalef",
+    "arabe": "هادا مختلف",
+    "fr": "c'est différent",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-032",
+    "latin": "machi b7al b7al",
+    "arabe": "ماشي بحال بحال",
+    "fr": "ce n'est pas pareil",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-033",
+    "latin": "bel3aks",
+    "arabe": "بالعكس",
+    "fr": "au contraire",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-034",
+    "latin": "f ra2yi",
+    "arabe": "ف رأيي",
+    "fr": "à mon avis",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-035",
+    "latin": "b sifa 3amma",
+    "arabe": "بصفة عامة",
+    "fr": "en général",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-036",
+    "latin": "f had l7ala",
+    "arabe": "ف هاد الحالة",
+    "fr": "dans ce cas",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-037",
+    "latin": "men jiha",
+    "arabe": "من جيهة",
+    "fr": "d'un côté",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "tournures-038",
+    "latin": "men jiha khra",
+    "arabe": "من جيهة اخرى",
+    "fr": "de l'autre côté",
+    "theme": "tournures",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  }
+]

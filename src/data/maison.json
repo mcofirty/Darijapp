@@ -1,0 +1,995 @@
+[
+  {
+    "id": "maison-001",
+    "latin": "dar",
+    "arabe": "دار",
+    "fr": "maison",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-002",
+    "latin": "appartman",
+    "arabe": "أبارطمان",
+    "fr": "appartement",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    },
+    "note": "Emprunt courant"
+  },
+  {
+    "id": "maison-003",
+    "latin": "3imara",
+    "arabe": "عمارة",
+    "fr": "immeuble",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-004",
+    "latin": "bit",
+    "arabe": "بيت",
+    "fr": "chambre",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-005",
+    "latin": "salon",
+    "arabe": "صالون",
+    "fr": "salon",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-006",
+    "latin": "kuzina",
+    "arabe": "كوزينة",
+    "fr": "cuisine",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-007",
+    "latin": "7emmam",
+    "arabe": "حمام",
+    "fr": "salle de bain",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-008",
+    "latin": "toyalet",
+    "arabe": "تواليت",
+    "fr": "toilettes",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-009",
+    "latin": "couloir",
+    "arabe": "كولوار",
+    "fr": "couloir",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-010",
+    "latin": "balcon",
+    "arabe": "بالكون",
+    "fr": "balcon",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-011",
+    "latin": "sta7",
+    "arabe": "سطح",
+    "fr": "terrasse",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-012",
+    "latin": "jnan",
+    "arabe": "جنان",
+    "fr": "jardin",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-013",
+    "latin": "7ouch",
+    "arabe": "حوش",
+    "fr": "cour",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-014",
+    "latin": "bab",
+    "arabe": "باب",
+    "fr": "porte",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-015",
+    "latin": "cherjem",
+    "arabe": "شرجم",
+    "fr": "fenêtre",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-016",
+    "latin": "7it",
+    "arabe": "حيط",
+    "fr": "mur",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-017",
+    "latin": "se9f",
+    "arabe": "سقف",
+    "fr": "plafond",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-018",
+    "latin": "lard",
+    "arabe": "الأرض",
+    "fr": "sol / terre",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-019",
+    "latin": "drouj",
+    "arabe": "دروج",
+    "fr": "escalier",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-020",
+    "latin": "asansor",
+    "arabe": "أسانسور",
+    "fr": "ascenseur",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-021",
+    "latin": "mfta7",
+    "arabe": "مفتاح",
+    "fr": "clé",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-022",
+    "latin": "serrura",
+    "arabe": "سرورة",
+    "fr": "serrure",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-023",
+    "latin": "lampa",
+    "arabe": "لامبة",
+    "fr": "lampe",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-024",
+    "latin": "ddaw",
+    "arabe": "الضو",
+    "fr": "lumière",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-025",
+    "latin": "ddo",
+    "arabe": "الضو",
+    "fr": "électricité",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-026",
+    "latin": "briza",
+    "arabe": "بريزة",
+    "fr": "prise électrique",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-027",
+    "latin": "interiptor",
+    "arabe": "أنتيريبتور",
+    "fr": "interrupteur",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-028",
+    "latin": "frach",
+    "arabe": "فراش",
+    "fr": "lit",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-029",
+    "latin": "matla",
+    "arabe": "ماطلا",
+    "fr": "matelas",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-030",
+    "latin": "mkhedda",
+    "arabe": "مخدة",
+    "fr": "oreiller",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-031",
+    "latin": "kouverta",
+    "arabe": "كوفيرطة",
+    "fr": "couverture",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-032",
+    "latin": "charchaf",
+    "arabe": "شرشف",
+    "fr": "drap",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-033",
+    "latin": "mariou",
+    "arabe": "ماريو",
+    "fr": "armoire / placard",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-034",
+    "latin": "placar",
+    "arabe": "بلاكار",
+    "fr": "placard",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-035",
+    "latin": "tabla",
+    "arabe": "طبلة",
+    "fr": "table",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-036",
+    "latin": "korsi",
+    "arabe": "كرسي",
+    "fr": "chaise",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-037",
+    "latin": "kanaba",
+    "arabe": "كنابة",
+    "fr": "canapé",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-038",
+    "latin": "fotoy",
+    "arabe": "فوطوي",
+    "fr": "fauteuil",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-039",
+    "latin": "mraya",
+    "arabe": "مراية",
+    "fr": "miroir",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-040",
+    "latin": "stara",
+    "arabe": "ستارة",
+    "fr": "rideau",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-041",
+    "latin": "zrbia",
+    "arabe": "زربية",
+    "fr": "tapis",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-042",
+    "latin": "tallaja",
+    "arabe": "تلاجة",
+    "fr": "réfrigérateur",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-043",
+    "latin": "kongelator",
+    "arabe": "كونجيلاتور",
+    "fr": "congélateur",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-044",
+    "latin": "ferran",
+    "arabe": "فران",
+    "fr": "four",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-045",
+    "latin": "botagaz",
+    "arabe": "بوطاگاز",
+    "fr": "cuisinière",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-046",
+    "latin": "machina d ssbon",
+    "arabe": "ماشينة د الصابون",
+    "fr": "machine à laver",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-047",
+    "latin": "machina d lma3en",
+    "arabe": "ماشينة د الماعن",
+    "fr": "lave-vaisselle",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-048",
+    "latin": "tilfaza",
+    "arabe": "تلفازة",
+    "fr": "télévision",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-049",
+    "latin": "telekomand",
+    "arabe": "تيليكوموند",
+    "fr": "télécommande",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-050",
+    "latin": "ventilateur",
+    "arabe": "ڤانتيلاتور",
+    "fr": "ventilateur",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-051",
+    "latin": "klimatizasyoun",
+    "arabe": "كليماتيزاسيون",
+    "fr": "climatisation",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-052",
+    "latin": "chauffage",
+    "arabe": "شوفاج",
+    "fr": "chauffage",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-053",
+    "latin": "mkensa",
+    "arabe": "مكنسة",
+    "fr": "balai",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-054",
+    "latin": "zbala",
+    "arabe": "زبالة",
+    "fr": "poubelle",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-055",
+    "latin": "saché d zbala",
+    "arabe": "ساشي د زبالة",
+    "fr": "sac-poubelle",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-056",
+    "latin": "stl",
+    "arabe": "سطل",
+    "fr": "seau",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-057",
+    "latin": "sfonja",
+    "arabe": "سفنجة",
+    "fr": "éponge",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-058",
+    "latin": "ssaboun",
+    "arabe": "الصابون",
+    "fr": "savon",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-059",
+    "latin": "fouta",
+    "arabe": "فوطة",
+    "fr": "serviette",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-060",
+    "latin": "robine",
+    "arabe": "روبيني",
+    "fr": "robinet",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-061",
+    "latin": "lma skhoun",
+    "arabe": "الما سخون",
+    "fr": "eau chaude",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "maison-062",
+    "latin": "lma bared",
+    "arabe": "الما بارد",
+    "fr": "eau froide",
+    "theme": "maison",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  }
+]

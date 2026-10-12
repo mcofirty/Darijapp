@@ -1,0 +1,642 @@
+[
+  {
+    "id": "restaurant-001",
+    "latin": "naklo?",
+    "arabe": "ناكلو؟",
+    "fr": "on mange ?",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-002",
+    "latin": "nmchiw l restoran?",
+    "arabe": "نمشيو لريسطورون؟",
+    "fr": "on va au restaurant ?",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-003",
+    "latin": "tabla l jouj, 3afak",
+    "arabe": "طبلة لجوج، عافاك",
+    "fr": "une table pour deux, s'il vous plaît",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-004",
+    "latin": "wach 3ndkom chi tabla khawya?",
+    "arabe": "واش عندكم شي طبلة خاوية؟",
+    "fr": "avez-vous une table libre ?",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-005",
+    "latin": "bghit lmenu",
+    "arabe": "بغيت المينو",
+    "fr": "je voudrais le menu",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-006",
+    "latin": "wach 3ndkom lmenu?",
+    "arabe": "واش عندكم المينو؟",
+    "fr": "vous avez un menu ?",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-007",
+    "latin": "ach katnse7ouni bih?",
+    "arabe": "اش كتنصحوني بيه؟",
+    "fr": "qu'est-ce que vous conseillez ?",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-008",
+    "latin": "achno lplat d lyom?",
+    "arabe": "اشنو البلا د اليوم؟",
+    "fr": "quel est le plat du jour ?",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-009",
+    "latin": "bghit tajin",
+    "arabe": "بغيت طاجين",
+    "fr": "je voudrais un tajine",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-010",
+    "latin": "bghit seksou",
+    "arabe": "بغيت سكسو",
+    "fr": "je voudrais du couscous",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-011",
+    "latin": "bghit 9hwa",
+    "arabe": "بغيت قهوة",
+    "fr": "je voudrais un café",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-012",
+    "latin": "bghit atay b na3na3",
+    "arabe": "بغيت أتاي بالنعناع",
+    "fr": "je voudrais un thé à la menthe",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-013",
+    "latin": "bghit lma",
+    "arabe": "بغيت الما",
+    "fr": "je voudrais de l'eau",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-014",
+    "latin": "9er3a d lma, 3afak",
+    "arabe": "قرعة د الما، عافاك",
+    "fr": "une bouteille d'eau, s'il vous plaît",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-015",
+    "latin": "bla sker, 3afak",
+    "arabe": "بلا سكر، عافاك",
+    "fr": "sans sucre, s'il vous plaît",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-016",
+    "latin": "bla mel7",
+    "arabe": "بلا ملح",
+    "fr": "sans sel",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-017",
+    "latin": "bla 7arr",
+    "arabe": "بلا حار",
+    "fr": "sans piment",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-018",
+    "latin": "b sossa bzaf",
+    "arabe": "بصوصة بزاف",
+    "fr": "avec beaucoup de sauce",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-019",
+    "latin": "ma ykounch 7arr bzaf",
+    "arabe": "ما يكونش حار بزاف",
+    "fr": "pas trop épicé",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-020",
+    "latin": "ma kan-akolch l7em",
+    "arabe": "ما كناكلش اللحم",
+    "fr": "je ne mange pas de viande",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-021",
+    "latin": "ma kan-akolch l7out",
+    "arabe": "ما كناكلش الحوت",
+    "fr": "je ne mange pas de poisson",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-022",
+    "latin": "ana nabati",
+    "arabe": "انا نباتي",
+    "fr": "je suis végétarien (dit par un homme)",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-023",
+    "latin": "3ndi l7assasiya men lkawkaw",
+    "arabe": "عندي الحساسية من الكاوكاو",
+    "fr": "je suis allergique aux cacahuètes",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-024",
+    "latin": "wach hada 7lal?",
+    "arabe": "واش هادا حلال؟",
+    "fr": "c'est halal ?",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-025",
+    "latin": "bnin bzaf!",
+    "arabe": "بنين بزاف!",
+    "fr": "c'est très bon !",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-026",
+    "latin": "hadchi bnin",
+    "arabe": "هادشي بنين",
+    "fr": "c'est délicieux",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-027",
+    "latin": "hadchi male7 bzaf",
+    "arabe": "هادشي مالح بزاف",
+    "fr": "c'est trop salé",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-028",
+    "latin": "hadchi skhoun bzaf",
+    "arabe": "هادشي سخون بزاف",
+    "fr": "c'est trop chaud",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-029",
+    "latin": "hadchi bared",
+    "arabe": "هادشي بارد",
+    "fr": "c'est froid",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-030",
+    "latin": "wach lwakla wajda?",
+    "arabe": "واش الواكلة واجدة؟",
+    "fr": "le plat est prêt ?",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-031",
+    "latin": "zid chwiya, 3afak",
+    "arabe": "زيد شوية، عافاك",
+    "fr": "encore un peu, s'il vous plaît",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-032",
+    "latin": "ma bghitch nzid",
+    "arabe": "ما بغيتش نزيد",
+    "fr": "je n'en veux plus",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-033",
+    "latin": "klit bzzaf",
+    "arabe": "كليت بزاف",
+    "fr": "j'ai assez mangé",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-034",
+    "latin": "l7sab, 3afak",
+    "arabe": "الحساب، عافاك",
+    "fr": "l'addition, s'il vous plaît",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-035",
+    "latin": "kol wa7ed ykhlles bo7do",
+    "arabe": "كل واحد يخلص بوحدو",
+    "fr": "on paie séparément",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-036",
+    "latin": "ana nkhlles kolchi",
+    "arabe": "انا نخلص كلشي",
+    "fr": "je paie tout",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-037",
+    "latin": "wach kat9eblo lkart?",
+    "arabe": "واش كتقبلو الكارط؟",
+    "fr": "vous acceptez la carte ?",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-038",
+    "latin": "nkhlles b flous",
+    "arabe": "نخلص بالفلوس",
+    "fr": "je paie en espèces",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-039",
+    "latin": "wach 3ndek srf?",
+    "arabe": "واش عندك صرف؟",
+    "fr": "vous avez de la monnaie ?",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "restaurant-040",
+    "latin": "bach nakhod m3aya, 3afak",
+    "arabe": "باش ناخد معايا، عافاك",
+    "fr": "à emporter, s'il vous plaît",
+    "theme": "restaurant",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  }
+]

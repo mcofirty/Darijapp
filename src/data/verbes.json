@@ -1,0 +1,1380 @@
+[
+  {
+    "id": "verbes-001",
+    "latin": "koun",
+    "arabe": "كون",
+    "fr": "être (état, contexte)",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    },
+    "note": "Souvent absent au présent"
+  },
+  {
+    "id": "verbes-002",
+    "latin": "3and",
+    "arabe": "عند",
+    "fr": "avoir",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    },
+    "note": "Construction avec 3ndi, 3ndek…"
+  },
+  {
+    "id": "verbes-003",
+    "latin": "dir",
+    "arabe": "دير",
+    "fr": "faire",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-004",
+    "latin": "ji",
+    "arabe": "جي",
+    "fr": "venir",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-005",
+    "latin": "bgha",
+    "arabe": "بغى",
+    "fr": "vouloir / aimer",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-006",
+    "latin": "9der",
+    "arabe": "قدر",
+    "fr": "pouvoir",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-007",
+    "latin": "khas",
+    "arabe": "خاص",
+    "fr": "devoir / falloir",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-008",
+    "latin": "3ref",
+    "arabe": "عرف",
+    "fr": "savoir / connaître",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-009",
+    "latin": "fhem",
+    "arabe": "فهم",
+    "fr": "comprendre",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-010",
+    "latin": "gol",
+    "arabe": "گول",
+    "fr": "dire",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-011",
+    "latin": "swel",
+    "arabe": "سول",
+    "fr": "demander",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-012",
+    "latin": "7ki",
+    "arabe": "حكي",
+    "fr": "raconter",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-013",
+    "latin": "chaf",
+    "arabe": "شاف",
+    "fr": "voir",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-014",
+    "latin": "chouf",
+    "arabe": "شوف",
+    "fr": "regarder",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-015",
+    "latin": "fkker",
+    "arabe": "فكر",
+    "fr": "penser",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-016",
+    "latin": "3te9ed",
+    "arabe": "عتقد",
+    "fr": "croire",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-017",
+    "latin": "tfekker",
+    "arabe": "تفكر",
+    "fr": "se souvenir",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-018",
+    "latin": "nsa",
+    "arabe": "نسى",
+    "fr": "oublier",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-019",
+    "latin": "diye3",
+    "arabe": "ضيع",
+    "fr": "perdre un objet",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-020",
+    "latin": "3ta",
+    "arabe": "عطى",
+    "fr": "donner",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-021",
+    "latin": "khda",
+    "arabe": "خدا",
+    "fr": "prendre",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-022",
+    "latin": "twssel",
+    "arabe": "توصل",
+    "fr": "recevoir",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-023",
+    "latin": "7mel",
+    "arabe": "حمل",
+    "fr": "porter / transporter",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-024",
+    "latin": "jib",
+    "arabe": "جيب",
+    "fr": "apporter",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-025",
+    "latin": "7ett",
+    "arabe": "حط",
+    "fr": "mettre",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-026",
+    "latin": "7iyed",
+    "arabe": "حيد",
+    "fr": "enlever",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-027",
+    "latin": "bda",
+    "arabe": "بدا",
+    "fr": "commencer",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-028",
+    "latin": "sala",
+    "arabe": "سالا",
+    "fr": "finir / c'est fini",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-029",
+    "latin": "jerrb",
+    "arabe": "جرب",
+    "fr": "essayer / tester",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-030",
+    "latin": "beddel",
+    "arabe": "بدل",
+    "fr": "changer",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-031",
+    "latin": "st3mel",
+    "arabe": "ستعمل",
+    "fr": "utiliser",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-032",
+    "latin": "3awen",
+    "arabe": "عاون",
+    "fr": "aider",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-033",
+    "latin": "tsenna",
+    "arabe": "تسنى",
+    "fr": "attendre",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-034",
+    "latin": "b9a",
+    "arabe": "بقى",
+    "fr": "rester",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-035",
+    "latin": "sken",
+    "arabe": "سكن",
+    "fr": "habiter",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-036",
+    "latin": "3ach",
+    "arabe": "عاش",
+    "fr": "vivre",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-037",
+    "latin": "tzad",
+    "arabe": "تزاد",
+    "fr": "naître",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-038",
+    "latin": "mat",
+    "arabe": "مات",
+    "fr": "mourir",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-039",
+    "latin": "kber",
+    "arabe": "كبر",
+    "fr": "grandir",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-040",
+    "latin": "wlla",
+    "arabe": "ولى",
+    "fr": "devenir",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-041",
+    "latin": "wsel",
+    "arabe": "وصل",
+    "fr": "arriver",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-042",
+    "latin": "n9ez",
+    "arabe": "نقز",
+    "fr": "sauter",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-043",
+    "latin": "ta7",
+    "arabe": "طاح",
+    "fr": "tomber",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-044",
+    "latin": "gles",
+    "arabe": "گلس",
+    "fr": "s'asseoir",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-045",
+    "latin": "noud",
+    "arabe": "نوض",
+    "fr": "se lever",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-046",
+    "latin": "n3es",
+    "arabe": "نعس",
+    "fr": "dormir",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-047",
+    "latin": "fi9",
+    "arabe": "فيق",
+    "fr": "se réveiller",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-048",
+    "latin": "douwech",
+    "arabe": "دوش",
+    "fr": "se doucher",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-049",
+    "latin": "ghsel snano",
+    "arabe": "غسل سنانو",
+    "fr": "se brosser les dents",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-050",
+    "latin": "lbes",
+    "arabe": "لبس",
+    "fr": "s'habiller",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-051",
+    "latin": "7iyed l7wayej",
+    "arabe": "حيد الحوايج",
+    "fr": "se déshabiller",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-052",
+    "latin": "kla",
+    "arabe": "كلا",
+    "fr": "manger",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-053",
+    "latin": "chreb",
+    "arabe": "شرب",
+    "fr": "boire",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-054",
+    "latin": "tieb",
+    "arabe": "طيب",
+    "fr": "cuisiner",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-055",
+    "latin": "wjed",
+    "arabe": "وجد",
+    "fr": "préparer",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-056",
+    "latin": "d7ek",
+    "arabe": "ضحك",
+    "fr": "rire",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-057",
+    "latin": "bka",
+    "arabe": "بكى",
+    "fr": "pleurer",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-058",
+    "latin": "tbssm",
+    "arabe": "تبسم",
+    "fr": "sourire",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-059",
+    "latin": "kreh",
+    "arabe": "كره",
+    "fr": "détester",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-060",
+    "latin": "fddel",
+    "arabe": "فضل",
+    "fr": "préférer",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-061",
+    "latin": "tmnna",
+    "arabe": "تمنى",
+    "fr": "espérer",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-062",
+    "latin": "khaf",
+    "arabe": "خاف",
+    "fr": "avoir peur",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-063",
+    "latin": "t3sseb",
+    "arabe": "تعصب",
+    "fr": "se fâcher",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-064",
+    "latin": "hda",
+    "arabe": "هدا",
+    "fr": "se calmer",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-065",
+    "latin": "chker",
+    "arabe": "شكر",
+    "fr": "remercier",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-066",
+    "latin": "sme7",
+    "arabe": "سمح",
+    "fr": "excuser / pardonner",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-067",
+    "latin": "tleb ssma7a",
+    "arabe": "طلب السماحة",
+    "fr": "demander pardon",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-068",
+    "latin": "w3ed",
+    "arabe": "وعد",
+    "fr": "promettre",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-069",
+    "latin": "rfed",
+    "arabe": "رفض",
+    "fr": "refuser",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-070",
+    "latin": "khtar",
+    "arabe": "ختار",
+    "fr": "choisir",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-071",
+    "latin": "9rrer",
+    "arabe": "قرر",
+    "fr": "décider",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-072",
+    "latin": "neddem",
+    "arabe": "نضم",
+    "fr": "organiser",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-073",
+    "latin": "chre7",
+    "arabe": "شرح",
+    "fr": "expliquer",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-074",
+    "latin": "werri",
+    "arabe": "وري",
+    "fr": "montrer",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-075",
+    "latin": "t2ekked",
+    "arabe": "تأكد",
+    "fr": "vérifier",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-076",
+    "latin": "bna",
+    "arabe": "بنى",
+    "fr": "construire",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-077",
+    "latin": "ksser",
+    "arabe": "كسر",
+    "fr": "casser",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-078",
+    "latin": "selle7",
+    "arabe": "صلح",
+    "fr": "réparer",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-079",
+    "latin": "n9a",
+    "arabe": "نقى",
+    "fr": "nettoyer",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-080",
+    "latin": "nechef",
+    "arabe": "نشف",
+    "fr": "sécher",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-081",
+    "latin": "7ell 3inik",
+    "arabe": "حل عينيك",
+    "fr": "ouvrir les yeux",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-082",
+    "latin": "sedd 3inik",
+    "arabe": "سد عينيك",
+    "fr": "fermer les yeux",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-083",
+    "latin": "rezerver",
+    "arabe": "ريزيرفي",
+    "fr": "réserver",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-084",
+    "latin": "lgha",
+    "arabe": "لغى",
+    "fr": "annuler",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-085",
+    "latin": "we9e3",
+    "arabe": "وقع",
+    "fr": "signer",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "verbes-086",
+    "latin": "swwet",
+    "arabe": "صوت",
+    "fr": "voter",
+    "theme": "verbes",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  }
+]

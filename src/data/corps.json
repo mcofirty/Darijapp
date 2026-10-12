@@ -1,0 +1,818 @@
+[
+  {
+    "id": "corps-001",
+    "latin": "jsem",
+    "arabe": "جسم",
+    "fr": "corps",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-002",
+    "latin": "ras",
+    "arabe": "راس",
+    "fr": "tête",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-003",
+    "latin": "ch3er",
+    "arabe": "شعر",
+    "fr": "cheveux",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-004",
+    "latin": "wejh",
+    "arabe": "وجه",
+    "fr": "visage",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-005",
+    "latin": "jebha",
+    "arabe": "جبهة",
+    "fr": "front",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-006",
+    "latin": "3in",
+    "arabe": "عين",
+    "fr": "œil / source (d'eau)",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-007",
+    "latin": "3inin",
+    "arabe": "عينين",
+    "fr": "yeux",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-008",
+    "latin": "7ajeb",
+    "arabe": "حاجب",
+    "fr": "sourcil",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-009",
+    "latin": "rmech",
+    "arabe": "رمش",
+    "fr": "cil",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-010",
+    "latin": "wedn",
+    "arabe": "ودن",
+    "fr": "oreille",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-011",
+    "latin": "nif",
+    "arabe": "نيف",
+    "fr": "nez",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-012",
+    "latin": "fomm",
+    "arabe": "فم",
+    "fr": "bouche",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-013",
+    "latin": "cheffa",
+    "arabe": "شفة",
+    "fr": "lèvre",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-014",
+    "latin": "lsan",
+    "arabe": "لسان",
+    "fr": "langue (organe)",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-015",
+    "latin": "ders",
+    "arabe": "ضرس",
+    "fr": "dent",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-016",
+    "latin": "snan",
+    "arabe": "سنان",
+    "fr": "dents",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-017",
+    "latin": "khedd",
+    "arabe": "خد",
+    "fr": "joue",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-018",
+    "latin": "d9en",
+    "arabe": "دقن",
+    "fr": "menton",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-019",
+    "latin": "3on9",
+    "arabe": "عنق",
+    "fr": "cou",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-020",
+    "latin": "7el9",
+    "arabe": "حلق",
+    "fr": "gorge",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-021",
+    "latin": "ktef",
+    "arabe": "كتف",
+    "fr": "épaule",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-022",
+    "latin": "dra3",
+    "arabe": "دراع",
+    "fr": "bras",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-023",
+    "latin": "merfe9",
+    "arabe": "مرفق",
+    "fr": "coude",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-024",
+    "latin": "yed",
+    "arabe": "يد",
+    "fr": "main",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-025",
+    "latin": "yeddin",
+    "arabe": "يدين",
+    "fr": "mains",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-026",
+    "latin": "sbe3",
+    "arabe": "صبع",
+    "fr": "doigt",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-027",
+    "latin": "dfer",
+    "arabe": "ضفر",
+    "fr": "ongle",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-028",
+    "latin": "sder",
+    "arabe": "صدر",
+    "fr": "poitrine",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-029",
+    "latin": "dher",
+    "arabe": "ضهر",
+    "fr": "dos",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-030",
+    "latin": "kerch",
+    "arabe": "كرش",
+    "fr": "ventre",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-031",
+    "latin": "lkhser",
+    "arabe": "الخصر",
+    "fr": "taille (corps)",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-032",
+    "latin": "werk",
+    "arabe": "ورك",
+    "fr": "hanche",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-033",
+    "latin": "rjel",
+    "arabe": "رجل",
+    "fr": "jambe / pied",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-034",
+    "latin": "rekba",
+    "arabe": "ركبة",
+    "fr": "genou",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-035",
+    "latin": "sbe3 rjel",
+    "arabe": "صبع رجل",
+    "fr": "orteil",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-036",
+    "latin": "l3e9b",
+    "arabe": "العقب",
+    "fr": "talon",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-037",
+    "latin": "jeld",
+    "arabe": "جلد",
+    "fr": "peau",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-038",
+    "latin": "3dem",
+    "arabe": "عضم",
+    "fr": "os",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-039",
+    "latin": "3adla",
+    "arabe": "عضلة",
+    "fr": "muscle",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-040",
+    "latin": "dem",
+    "arabe": "دم",
+    "fr": "sang",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-041",
+    "latin": "9elb",
+    "arabe": "قلب",
+    "fr": "cœur",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-042",
+    "latin": "mokh",
+    "arabe": "مخ",
+    "fr": "cerveau",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-043",
+    "latin": "sout",
+    "arabe": "صوت",
+    "fr": "voix / haut-parleur",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-044",
+    "latin": "tneffos",
+    "arabe": "تنفس",
+    "fr": "respiration",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-045",
+    "latin": "le7ya",
+    "arabe": "لحية",
+    "fr": "barbe",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-046",
+    "latin": "chnab",
+    "arabe": "شنب",
+    "fr": "moustache",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-047",
+    "latin": "twil",
+    "arabe": "طويل",
+    "fr": "grand (taille) / long",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-048",
+    "latin": "9sir",
+    "arabe": "قصير",
+    "fr": "petit (taille) / court",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-049",
+    "latin": "r9i9",
+    "arabe": "رقيق",
+    "fr": "mince / fin",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-050",
+    "latin": "ghlid",
+    "arabe": "غليظ",
+    "fr": "gros / épais",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "corps-051",
+    "latin": "zwina",
+    "arabe": "زوينة",
+    "fr": "belle (femme)",
+    "theme": "corps",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  }
+]

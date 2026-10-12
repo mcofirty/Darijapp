@@ -286,5 +286,1253 @@
       "fr": "Non, c'est trop pour moi",
       "audio": "audio/souk-018-ex.mp3"
     }
+  },
+  {
+    "id": "souk-019",
+    "latin": "chra",
+    "arabe": "شرا",
+    "fr": "acheter / achat",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-020",
+    "latin": "ba3",
+    "arabe": "باع",
+    "fr": "vendre",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-021",
+    "latin": "khlles",
+    "arabe": "خلص",
+    "fr": "payer",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-022",
+    "latin": "tmen",
+    "arabe": "تمن",
+    "fr": "prix",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-023",
+    "latin": "srf",
+    "arabe": "صرف",
+    "fr": "monnaie",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-024",
+    "latin": "war9a d flous",
+    "arabe": "ورقة د الفلوس",
+    "fr": "billet de banque",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-025",
+    "latin": "9et3a d flous",
+    "arabe": "قطعة د الفلوس",
+    "fr": "pièce (monnaie)",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-026",
+    "latin": "oro",
+    "arabe": "أورو",
+    "fr": "euro",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-027",
+    "latin": "dolar",
+    "arabe": "دولار",
+    "fr": "dollar",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-028",
+    "latin": "sentim",
+    "arabe": "سنتيم",
+    "fr": "centime",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-029",
+    "latin": "mizaniya",
+    "arabe": "ميزانية",
+    "fr": "budget",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-030",
+    "latin": "fatoura",
+    "arabe": "فاتورة",
+    "fr": "facture",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-031",
+    "latin": "reçu",
+    "arabe": "روسي",
+    "fr": "reçu",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-032",
+    "latin": "tiki d caisse",
+    "arabe": "تيكي د الكيس",
+    "fr": "ticket de caisse",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-033",
+    "latin": "l7sab",
+    "arabe": "الحساب",
+    "fr": "addition (restaurant)",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-034",
+    "latin": "takhfid",
+    "arabe": "تخفيض",
+    "fr": "réduction",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-035",
+    "latin": "sold",
+    "arabe": "صولد",
+    "fr": "solde (promotion)",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-036",
+    "latin": "promotion",
+    "arabe": "بروموسيون",
+    "fr": "promotion",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-037",
+    "latin": "fabor",
+    "arabe": "فابور",
+    "fr": "gratuit",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-038",
+    "latin": "jouda",
+    "arabe": "جودة",
+    "fr": "qualité",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-039",
+    "latin": "kmiya",
+    "arabe": "كمية",
+    "fr": "quantité",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-040",
+    "latin": "9yas",
+    "arabe": "قياس",
+    "fr": "taille (article)",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-041",
+    "latin": "marka",
+    "arabe": "ماركة",
+    "fr": "marque",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-042",
+    "latin": "model",
+    "arabe": "موديل",
+    "fr": "modèle",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-043",
+    "latin": "asli",
+    "arabe": "أصلي",
+    "fr": "original",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-044",
+    "latin": "ta9lid",
+    "arabe": "تقليد",
+    "fr": "copie",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-045",
+    "latin": "jdid",
+    "arabe": "جديد",
+    "fr": "neuf / nouveau",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-046",
+    "latin": "mosta3mel",
+    "arabe": "مستعمل",
+    "fr": "d'occasion",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-047",
+    "latin": "ma7loul",
+    "arabe": "محلول",
+    "fr": "ouvert (magasin) / ouvert",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-048",
+    "latin": "msdoud",
+    "arabe": "مسدود",
+    "fr": "fermé (magasin) / fermé",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-049",
+    "latin": "talab",
+    "arabe": "طلب",
+    "fr": "commande",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-050",
+    "latin": "tawsil",
+    "arabe": "توصيل",
+    "fr": "livraison",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-051",
+    "latin": "rje3 ssel3a",
+    "arabe": "رجع السلعة",
+    "fr": "retour (article)",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-052",
+    "latin": "dman",
+    "arabe": "ضمان",
+    "fr": "garantie",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-053",
+    "latin": "montouj",
+    "arabe": "منتوج",
+    "fr": "produit",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-054",
+    "latin": "zbon",
+    "arabe": "زبون",
+    "fr": "client",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-055",
+    "latin": "beyya3",
+    "arabe": "بياع",
+    "fr": "vendeur",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-056",
+    "latin": "caisse",
+    "arabe": "كيس",
+    "fr": "caisse",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-057",
+    "latin": "9offa",
+    "arabe": "قفة",
+    "fr": "panier",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-058",
+    "latin": "mika",
+    "arabe": "ميكة",
+    "fr": "sac plastique",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-059",
+    "latin": "wzen",
+    "arabe": "وزن",
+    "fr": "peser",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-060",
+    "latin": "lwzen",
+    "arabe": "الوزن",
+    "fr": "poids",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-061",
+    "latin": "kilo",
+    "arabe": "كيلو",
+    "fr": "un kilo",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-062",
+    "latin": "noss kilo",
+    "arabe": "نص كيلو",
+    "fr": "un demi-kilo",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-063",
+    "latin": "liter",
+    "arabe": "ليتر",
+    "fr": "un litre",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-064",
+    "latin": "noss liter",
+    "arabe": "نص ليتر",
+    "fr": "un demi-litre",
+    "theme": "souk",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-065",
+    "latin": "kan-9elleb 3la 7anout",
+    "arabe": "كنقلب على حانوت",
+    "fr": "je cherche un magasin",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-066",
+    "latin": "bch7al hadi rrouba?",
+    "arabe": "بشحال هادي الروبة؟",
+    "fr": "combien coûte cette robe ?",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-067",
+    "latin": "ghali bzaf",
+    "arabe": "غالي بزاف",
+    "fr": "c'est trop cher",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-068",
+    "latin": "n9es chwiya f tmen",
+    "arabe": "نقص شوية ف التمن",
+    "fr": "baisse un peu le prix",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-069",
+    "latin": "ch7al akher tmen?",
+    "arabe": "شحال آخر تمن؟",
+    "fr": "quel est ton dernier prix ?",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-070",
+    "latin": "ma 3ndich flous kafyin",
+    "arabe": "ما عنديش فلوس كافيين",
+    "fr": "je n'ai pas assez d'argent",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-071",
+    "latin": "ghadi nakhod hada",
+    "arabe": "غادي ناخد هادا",
+    "fr": "je prends ça",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-072",
+    "latin": "ma ghadi-ch nakhod hada",
+    "arabe": "ما غاديش ناخد هادا",
+    "fr": "je ne prends pas ça",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-073",
+    "latin": "bghit ghir nchouf",
+    "arabe": "بغيت غير نشوف",
+    "fr": "je veux regarder seulement / je veux seulement regarder",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-074",
+    "latin": "bghit 9yas akhor",
+    "arabe": "بغيت قياس اخور",
+    "fr": "je voudrais une autre taille",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-075",
+    "latin": "wach 3ndek kber men hada?",
+    "arabe": "واش عندك كبر من هادا؟",
+    "fr": "avez-vous plus grand ?",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-076",
+    "latin": "wach 3ndek sgher men hada?",
+    "arabe": "واش عندك صغر من هادا؟",
+    "fr": "avez-vous plus petit ?",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-077",
+    "latin": "wach 3ndek loun akhor?",
+    "arabe": "واش عندك لون اخور؟",
+    "fr": "vous avez une autre couleur ?",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-078",
+    "latin": "n9der njerrb?",
+    "arabe": "نقدر نجرب؟",
+    "fr": "je peux essayer ?",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-079",
+    "latin": "fin kaynin kabinat dyal l'essayage?",
+    "arabe": "فين كاينين كابينات ديال ليساياج؟",
+    "fr": "où sont les cabines d'essayage ?",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-080",
+    "latin": "hadchi jouda mzyana",
+    "arabe": "هادشي جودة مزيانة",
+    "fr": "c'est de bonne qualité",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-081",
+    "latin": "hada machi asli",
+    "arabe": "هادا ماشي أصلي",
+    "fr": "ce n'est pas original",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-082",
+    "latin": "wach hada jdid?",
+    "arabe": "واش هادا جديد؟",
+    "fr": "c'est neuf ?",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-083",
+    "latin": "wach hada mosta3mel?",
+    "arabe": "واش هادا مستعمل؟",
+    "fr": "c'est d'occasion ?",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-084",
+    "latin": "wach kayn dman?",
+    "arabe": "واش كاين ضمان؟",
+    "fr": "vous avez une garantie ?",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-085",
+    "latin": "bghit reçu",
+    "arabe": "بغيت روسي",
+    "fr": "je veux un reçu",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-086",
+    "latin": "bghit lfatoura",
+    "arabe": "بغيت الفاتورة",
+    "fr": "je veux la facture",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-087",
+    "latin": "n9der nrje3 had ssel3a?",
+    "arabe": "نقدر نرجع هاد السلعة؟",
+    "fr": "je peux rendre cet article ?",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-088",
+    "latin": "ghadi nfekker",
+    "arabe": "غادي نفكر",
+    "fr": "je vais réfléchir",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-089",
+    "latin": "ghadi nrje3 men b3d",
+    "arabe": "غادي نرجع من بعد",
+    "fr": "je reviens plus tard",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-090",
+    "latin": "hada howa akher tmen?",
+    "arabe": "هادا هو آخر تمن؟",
+    "fr": "c'est le prix final ?",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-091",
+    "latin": "3tini kilo",
+    "arabe": "عطيني كيلو",
+    "fr": "donnez-moi un kilo",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-092",
+    "latin": "3tini noss kilo",
+    "arabe": "عطيني نص كيلو",
+    "fr": "donnez-moi un demi-kilo",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-093",
+    "latin": "bghit jouj 9ra3i",
+    "arabe": "بغيت جوج قراعي",
+    "fr": "je veux deux bouteilles",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-094",
+    "latin": "wach 3ndek sac?",
+    "arabe": "واش عندك صاك؟",
+    "fr": "avez-vous un sac ?",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-095",
+    "latin": "ghadi nkhlles b lkart",
+    "arabe": "غادي نخلص بالكارط",
+    "fr": "je paie par carte",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "souk-096",
+    "latin": "ghadi nkhlles b flous",
+    "arabe": "غادي نخلص بالفلوس",
+    "fr": "je paie en liquide",
+    "theme": "souk",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
   }
 ]

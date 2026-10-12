@@ -318,5 +318,502 @@
       "fr": "Bravo, c'est très bien",
       "audio": "audio/salutations-020-ex.mp3"
     }
+  },
+  {
+    "id": "salutations-021",
+    "latin": "salam 3likom",
+    "arabe": "السلام عليكم",
+    "fr": "bonjour (salutation)",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    },
+    "note": "Salutation très courante"
+  },
+  {
+    "id": "salutations-022",
+    "latin": "sba7 nnor",
+    "arabe": "صباح النور",
+    "fr": "réponse au bonjour du matin",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-023",
+    "latin": "msa nnor",
+    "arabe": "مسا النور",
+    "fr": "réponse au bonsoir",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-024",
+    "latin": "tsba7i 3la khir",
+    "arabe": "تصبحي على خير",
+    "fr": "bonne nuit (à une femme)",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-025",
+    "latin": "7tta mn b3d",
+    "arabe": "حتى من بعد",
+    "fr": "à bientôt",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-026",
+    "latin": "7tta lghdda",
+    "arabe": "حتى لغدا",
+    "fr": "à demain",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-027",
+    "latin": "mr7ba bik 3ndna",
+    "arabe": "مرحبا بيك عندنا",
+    "fr": "bienvenue chez nous",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-028",
+    "latin": "mtcherrfin",
+    "arabe": "متشرفين",
+    "fr": "enchanté",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-029",
+    "latin": "labas?",
+    "arabe": "لاباس؟",
+    "fr": "comment ça va ?",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-030",
+    "latin": "kidayra?",
+    "arabe": "كيدايرة؟",
+    "fr": "ça va ? (à une femme)",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-031",
+    "latin": "labas, l7amdollah",
+    "arabe": "لاباس، الحمد لله",
+    "fr": "ça va bien",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-032",
+    "latin": "w nta?",
+    "arabe": "و نتا؟",
+    "fr": "et toi ? (homme)",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-033",
+    "latin": "w nti?",
+    "arabe": "و نتي؟",
+    "fr": "et toi ? (femme)",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-034",
+    "latin": "chokran bzaf",
+    "arabe": "شكرا بزاف",
+    "fr": "merci beaucoup",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-035",
+    "latin": "lah yjazik bikhir",
+    "arabe": "الله يجازيك بخير",
+    "fr": "que Dieu te récompense",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-036",
+    "latin": "la chokran 3la wajib",
+    "arabe": "لا شكرا على واجب",
+    "fr": "de rien",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-037",
+    "latin": "sme7i lia",
+    "arabe": "سمحي ليا",
+    "fr": "désolée (femme)",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-038",
+    "latin": "ma kayn mochkil",
+    "arabe": "ما كاين مشكل",
+    "fr": "aucun problème",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-039",
+    "latin": "bravo",
+    "arabe": "براڤو",
+    "fr": "bravo",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-040",
+    "latin": "lah y3awnek",
+    "arabe": "الله يعاونك",
+    "fr": "bon courage",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-041",
+    "latin": "bttawfi9",
+    "arabe": "بالتوفيق",
+    "fr": "bonne chance",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-042",
+    "latin": "bssa7a",
+    "arabe": "بالصحة",
+    "fr": "à ta santé / bon appétit / santé ! (toast)",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-043",
+    "latin": "b kol sorour",
+    "arabe": "بكل سرور",
+    "fr": "avec plaisir",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-044",
+    "latin": "tfaddal",
+    "arabe": "تفضل",
+    "fr": "je t'en prie (à un homme)",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-045",
+    "latin": "tfaddli",
+    "arabe": "تفضلي",
+    "fr": "je t'en prie (à une femme)",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-046",
+    "latin": "chokran lik",
+    "arabe": "شكرا ليك",
+    "fr": "merci à toi",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-047",
+    "latin": "chraf lia",
+    "arabe": "الشرف ليا",
+    "fr": "tout le plaisir est pour moi",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-048",
+    "latin": "ssalam 3likom",
+    "arabe": "السلام عليكم",
+    "fr": "que la paix soit sur vous",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-049",
+    "latin": "w 3likom ssalam",
+    "arabe": "و عليكم السلام",
+    "fr": "et sur vous la paix",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-050",
+    "latin": "kidayr lyom?",
+    "arabe": "كيداير اليوم؟",
+    "fr": "comment vas-tu aujourd'hui ?",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "salutations-051",
+    "latin": "kolchi mzyan, chokran",
+    "arabe": "كلشي مزيان، شكرا",
+    "fr": "tout va bien, merci",
+    "theme": "salutations",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
   }
 ]

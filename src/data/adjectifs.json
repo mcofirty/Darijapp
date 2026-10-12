@@ -1,0 +1,1090 @@
+[
+  {
+    "id": "adjectifs-001",
+    "latin": "mzyana",
+    "arabe": "مزيانة",
+    "fr": "bonne",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-002",
+    "latin": "khayeb",
+    "arabe": "خايب",
+    "fr": "mauvais / laid / moche / mal",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-003",
+    "latin": "khayba",
+    "arabe": "خايبة",
+    "fr": "mauvaise",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-004",
+    "latin": "shel",
+    "arabe": "سهل",
+    "fr": "facile",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-005",
+    "latin": "s3ib",
+    "arabe": "صعيب",
+    "fr": "difficile",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-006",
+    "latin": "bsit",
+    "arabe": "بسيط",
+    "fr": "simple",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-007",
+    "latin": "m3e9ed",
+    "arabe": "معقد",
+    "fr": "compliqué",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-008",
+    "latin": "momkin",
+    "arabe": "ممكن",
+    "fr": "possible / c'est possible",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-009",
+    "latin": "mosta7il",
+    "arabe": "مستحيل",
+    "fr": "impossible",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-010",
+    "latin": "mohim",
+    "arabe": "مهم",
+    "fr": "important",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-011",
+    "latin": "darori",
+    "arabe": "ضروري",
+    "fr": "nécessaire",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-012",
+    "latin": "mofid",
+    "arabe": "مفيد",
+    "fr": "utile",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-013",
+    "latin": "bla fayda",
+    "arabe": "بلا فايدة",
+    "fr": "inutile",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-014",
+    "latin": "s7i7",
+    "arabe": "صحيح",
+    "fr": "vrai / correct",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-015",
+    "latin": "ghalet",
+    "arabe": "غالط",
+    "fr": "faux",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-016",
+    "latin": "machi s7i7",
+    "arabe": "ماشي صحيح",
+    "fr": "incorrect",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-017",
+    "latin": "mte2kked",
+    "arabe": "متأكد",
+    "fr": "sûr / certain",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-018",
+    "latin": "khater",
+    "arabe": "خطير",
+    "fr": "dangereux",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-019",
+    "latin": "amn",
+    "arabe": "أمن",
+    "fr": "sûr (sans danger)",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-020",
+    "latin": "n9i",
+    "arabe": "نقي",
+    "fr": "propre",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-021",
+    "latin": "mwessekh",
+    "arabe": "موسخ",
+    "fr": "sale",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-022",
+    "latin": "9dim",
+    "arabe": "قديم",
+    "fr": "ancien",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-023",
+    "latin": "3asri",
+    "arabe": "عصري",
+    "fr": "moderne",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-024",
+    "latin": "ta9lidi",
+    "arabe": "تقليدي",
+    "fr": "traditionnel",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-025",
+    "latin": "kbir bzaf",
+    "arabe": "كبير بزاف",
+    "fr": "immense",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-026",
+    "latin": "sghir bzaf",
+    "arabe": "صغير بزاف",
+    "fr": "minuscule",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-027",
+    "latin": "khfif",
+    "arabe": "خفيف",
+    "fr": "léger",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-028",
+    "latin": "t9il",
+    "arabe": "تقيل",
+    "fr": "lourd",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-029",
+    "latin": "3amer",
+    "arabe": "عامر",
+    "fr": "plein",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-030",
+    "latin": "khawi",
+    "arabe": "خاوي",
+    "fr": "vide",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-031",
+    "latin": "nachef",
+    "arabe": "ناشف",
+    "fr": "sec",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-032",
+    "latin": "mbellel",
+    "arabe": "مبلل",
+    "fr": "mouillé",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-033",
+    "latin": "9ase7",
+    "arabe": "قاصح",
+    "fr": "dur",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-034",
+    "latin": "rtib",
+    "arabe": "رطب",
+    "fr": "mou",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-035",
+    "latin": "9wi",
+    "arabe": "قوي",
+    "fr": "solide / fort",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-036",
+    "latin": "shel ytksser",
+    "arabe": "سهل يتكسر",
+    "fr": "fragile",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-037",
+    "latin": "d3if",
+    "arabe": "ضعيف",
+    "fr": "faible",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-038",
+    "latin": "sri3",
+    "arabe": "سريع",
+    "fr": "rapide",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-039",
+    "latin": "bti2",
+    "arabe": "بطيء",
+    "fr": "lent",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-040",
+    "latin": "3ali",
+    "arabe": "عالي",
+    "fr": "haut",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-041",
+    "latin": "habet",
+    "arabe": "هابط",
+    "fr": "bas",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-042",
+    "latin": "ghni",
+    "arabe": "غني",
+    "fr": "riche",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-043",
+    "latin": "f9ir",
+    "arabe": "فقير",
+    "fr": "pauvre",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-044",
+    "latin": "kbir f ssen",
+    "arabe": "كبير ف السن",
+    "fr": "vieux",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-045",
+    "latin": "mcheghoul",
+    "arabe": "مشغول",
+    "fr": "occupé",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-046",
+    "latin": "fargh",
+    "arabe": "فارغ",
+    "fr": "libre / disponible",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-047",
+    "latin": "wajed",
+    "arabe": "واجد",
+    "fr": "prêt",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-048",
+    "latin": "mrta7",
+    "arabe": "مرتاح",
+    "fr": "reposé",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-049",
+    "latin": "faye9",
+    "arabe": "فايق",
+    "fr": "éveillé",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-050",
+    "latin": "na3es",
+    "arabe": "ناعس",
+    "fr": "endormi",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-051",
+    "latin": "ji3an",
+    "arabe": "جيعان",
+    "fr": "affamé",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-052",
+    "latin": "3tchan",
+    "arabe": "عطشان",
+    "fr": "assoiffé",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-053",
+    "latin": "drif",
+    "arabe": "ضريف",
+    "fr": "gentil",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-054",
+    "latin": "chrir",
+    "arabe": "شرير",
+    "fr": "méchant",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-055",
+    "latin": "krim",
+    "arabe": "كريم",
+    "fr": "généreux",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-056",
+    "latin": "anani",
+    "arabe": "أناني",
+    "fr": "égoïste",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-057",
+    "latin": "sari7",
+    "arabe": "صريح",
+    "fr": "honnête",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-058",
+    "latin": "keddab",
+    "arabe": "كداب",
+    "fr": "menteur",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-059",
+    "latin": "da7ek",
+    "arabe": "ضاحك",
+    "fr": "drôle",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-060",
+    "latin": "jaddi",
+    "arabe": "جدي",
+    "fr": "sérieux",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-061",
+    "latin": "7choumi",
+    "arabe": "حشومي",
+    "fr": "timide",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-062",
+    "latin": "chja3",
+    "arabe": "شجاع",
+    "fr": "courageux",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-063",
+    "latin": "kslan",
+    "arabe": "كسلان",
+    "fr": "paresseux",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-064",
+    "latin": "dki",
+    "arabe": "دكي",
+    "fr": "intelligent",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-065",
+    "latin": "mo2addab",
+    "arabe": "مؤدب",
+    "fr": "poli",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-066",
+    "latin": "9lil tterbya",
+    "arabe": "قليل التربية",
+    "fr": "impoli",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-067",
+    "latin": "sabour",
+    "arabe": "صبور",
+    "fr": "patient",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "adjectifs-068",
+    "latin": "ma 3ndouch sber",
+    "arabe": "ما عندوش صبر",
+    "fr": "impatient",
+    "theme": "adjectifs",
+    "niveau": 3,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  }
+]

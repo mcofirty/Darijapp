@@ -1,0 +1,850 @@
+[
+  {
+    "id": "ville-001",
+    "latin": "mdina",
+    "arabe": "مدينة",
+    "fr": "ville",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-002",
+    "latin": "douwar",
+    "arabe": "دوار",
+    "fr": "village",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-003",
+    "latin": "7ouma",
+    "arabe": "حومة",
+    "fr": "quartier",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-004",
+    "latin": "chari3",
+    "arabe": "شارع",
+    "fr": "avenue",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-005",
+    "latin": "tri9",
+    "arabe": "طريق",
+    "fr": "route",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-006",
+    "latin": "mslek",
+    "arabe": "مسلك",
+    "fr": "chemin",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-007",
+    "latin": "sa7a",
+    "arabe": "ساحة",
+    "fr": "place (urbaine)",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-008",
+    "latin": "wst lmdina",
+    "arabe": "وسط المدينة",
+    "fr": "centre-ville",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-009",
+    "latin": "sou9",
+    "arabe": "سوق",
+    "fr": "marché / souk / conduire",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-010",
+    "latin": "7anout",
+    "arabe": "حانوت",
+    "fr": "magasin",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-011",
+    "latin": "moul l7anout",
+    "arabe": "مول الحانوت",
+    "fr": "épicerie",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-012",
+    "latin": "supermarché",
+    "arabe": "سوبيرمارشي",
+    "fr": "supermarché",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-013",
+    "latin": "feran",
+    "arabe": "فران",
+    "fr": "boulangerie",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-014",
+    "latin": "gezzar",
+    "arabe": "گزار",
+    "fr": "boucherie",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-015",
+    "latin": "7anout d l7out",
+    "arabe": "حانوت د الحوت",
+    "fr": "poissonnerie",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-016",
+    "latin": "restoran",
+    "arabe": "ريسطورون",
+    "fr": "restaurant",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-017",
+    "latin": "9hwa",
+    "arabe": "قهوة",
+    "fr": "café (lieu)",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-018",
+    "latin": "otil",
+    "arabe": "أوطيل",
+    "fr": "hôtel",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-019",
+    "latin": "nozl",
+    "arabe": "نزل",
+    "fr": "auberge",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-020",
+    "latin": "banka",
+    "arabe": "بانكة",
+    "fr": "banque",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-021",
+    "latin": "guichet otomatik",
+    "arabe": "گيشي أوطوماتيك",
+    "fr": "distributeur de billets",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-022",
+    "latin": "bosta",
+    "arabe": "بوسطة",
+    "fr": "poste",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-023",
+    "latin": "komisariya",
+    "arabe": "كوميسارية",
+    "fr": "commissariat",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-024",
+    "latin": "bolis",
+    "arabe": "بوليس",
+    "fr": "police",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-025",
+    "latin": "jendarmerie",
+    "arabe": "جوندارمري",
+    "fr": "gendarmerie",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-026",
+    "latin": "jma3a",
+    "arabe": "جماعة",
+    "fr": "mairie",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-027",
+    "latin": "l2idara",
+    "arabe": "الإدارة",
+    "fr": "administration",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-028",
+    "latin": "mdrasa",
+    "arabe": "مدرسة",
+    "fr": "école",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-029",
+    "latin": "jami3a",
+    "arabe": "جامعة",
+    "fr": "université",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-030",
+    "latin": "mektaba",
+    "arabe": "مكتبة",
+    "fr": "bibliothèque",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-031",
+    "latin": "mat7af",
+    "arabe": "متحف",
+    "fr": "musée",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-032",
+    "latin": "sinima",
+    "arabe": "سينما",
+    "fr": "cinéma",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-033",
+    "latin": "masra7",
+    "arabe": "مسرح",
+    "fr": "théâtre",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-034",
+    "latin": "stade",
+    "arabe": "سطاد",
+    "fr": "stade",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-035",
+    "latin": "pissin",
+    "arabe": "بيسين",
+    "fr": "piscine",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-036",
+    "latin": "sala d sport",
+    "arabe": "صالة د سبور",
+    "fr": "salle de sport",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-037",
+    "latin": "jardin",
+    "arabe": "جاردان",
+    "fr": "parc",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-038",
+    "latin": "jnan l3am",
+    "arabe": "جنان العام",
+    "fr": "jardin public",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-039",
+    "latin": "jame3",
+    "arabe": "جامع",
+    "fr": "mosquée",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-040",
+    "latin": "plaja",
+    "arabe": "بلاجة",
+    "fr": "plage",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-041",
+    "latin": "marsa",
+    "arabe": "مرسى",
+    "fr": "port",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-042",
+    "latin": "matar",
+    "arabe": "مطار",
+    "fr": "aéroport",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-043",
+    "latin": "ma7atta d train",
+    "arabe": "محطة د تران",
+    "fr": "gare",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-044",
+    "latin": "station d lessans",
+    "arabe": "سطاسيون د ليصانص",
+    "fr": "station-service",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-045",
+    "latin": "parking",
+    "arabe": "باركينگ",
+    "fr": "parking",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-046",
+    "latin": "toyalet 3omoumiya",
+    "arabe": "تواليت عمومية",
+    "fr": "toilettes publiques",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-047",
+    "latin": "sifara",
+    "arabe": "سفارة",
+    "fr": "ambassade",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-048",
+    "latin": "konsoliya",
+    "arabe": "كونسولية",
+    "fr": "consulat",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-049",
+    "latin": "9antara",
+    "arabe": "قنطرة",
+    "fr": "pont",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-050",
+    "latin": "rond-point",
+    "arabe": "روند بوان",
+    "fr": "rond-point",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-051",
+    "latin": "daw l7mer",
+    "arabe": "ضو الحمر",
+    "fr": "feu rouge",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-052",
+    "latin": "passage piéton",
+    "arabe": "باساج بيطون",
+    "fr": "passage piéton",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "ville-053",
+    "latin": "rsif",
+    "arabe": "رصيف",
+    "fr": "trottoir",
+    "theme": "ville",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  }
+]

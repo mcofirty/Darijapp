@@ -1,0 +1,1028 @@
+[
+  {
+    "id": "grammaire-001",
+    "latin": "nta",
+    "arabe": "نتا",
+    "fr": "tu (masculin)",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-002",
+    "latin": "nti",
+    "arabe": "نتي",
+    "fr": "tu (féminin)",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-003",
+    "latin": "howa",
+    "arabe": "هو",
+    "fr": "il",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-004",
+    "latin": "hiya",
+    "arabe": "هي",
+    "fr": "elle",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-005",
+    "latin": "7na",
+    "arabe": "حنا",
+    "fr": "nous",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-006",
+    "latin": "ntoma",
+    "arabe": "نتوما",
+    "fr": "vous (pluriel)",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-007",
+    "latin": "homa",
+    "arabe": "هوما",
+    "fr": "ils / elles",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-008",
+    "latin": "hadi",
+    "arabe": "هادي",
+    "fr": "ceci (féminin) / calme",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-009",
+    "latin": "hadok",
+    "arabe": "هادوك",
+    "fr": "ceux-là",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-010",
+    "latin": "hadik",
+    "arabe": "هاديك",
+    "fr": "celle-ci",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-011",
+    "latin": "ana 7tta ana",
+    "arabe": "انا حتى انا",
+    "fr": "moi aussi",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-012",
+    "latin": "nta 7tta nta",
+    "arabe": "نتا حتى نتا",
+    "fr": "toi aussi",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-013",
+    "latin": "7na 7tta 7na",
+    "arabe": "حنا حتى حنا",
+    "fr": "nous aussi",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-014",
+    "latin": "dyali",
+    "arabe": "ديالي",
+    "fr": "à moi / mon",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-015",
+    "latin": "dyalek",
+    "arabe": "ديالك",
+    "fr": "à toi / ton",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-016",
+    "latin": "dyalo",
+    "arabe": "ديالو",
+    "fr": "à lui / son",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-017",
+    "latin": "dyalha",
+    "arabe": "ديالها",
+    "fr": "à elle / son",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-018",
+    "latin": "dyalna",
+    "arabe": "ديالنا",
+    "fr": "à nous / notre",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-019",
+    "latin": "dyalkom",
+    "arabe": "ديالكم",
+    "fr": "à vous / votre",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-020",
+    "latin": "dyalhom",
+    "arabe": "ديالهم",
+    "fr": "à eux / leur",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-021",
+    "latin": "m3aya",
+    "arabe": "معايا",
+    "fr": "avec moi",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-022",
+    "latin": "m3ak",
+    "arabe": "معاك",
+    "fr": "avec toi",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-023",
+    "latin": "m3ah",
+    "arabe": "معاه",
+    "fr": "avec lui",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-024",
+    "latin": "m3aha",
+    "arabe": "معاها",
+    "fr": "avec elle",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-025",
+    "latin": "m3ana",
+    "arabe": "معانا",
+    "fr": "avec nous",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-026",
+    "latin": "m3akom",
+    "arabe": "معاكم",
+    "fr": "avec vous",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-027",
+    "latin": "m3ahom",
+    "arabe": "معاهم",
+    "fr": "avec eux",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-028",
+    "latin": "3ndi",
+    "arabe": "عندي",
+    "fr": "chez moi / je possède / j'ai",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-029",
+    "latin": "3ndek",
+    "arabe": "عندك",
+    "fr": "chez toi",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-030",
+    "latin": "3ndo",
+    "arabe": "عندو",
+    "fr": "chez lui",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-031",
+    "latin": "3ndha",
+    "arabe": "عندها",
+    "fr": "chez elle",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-032",
+    "latin": "3ndna",
+    "arabe": "عندنا",
+    "fr": "chez nous",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-033",
+    "latin": "3ndkom",
+    "arabe": "عندكم",
+    "fr": "chez vous",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-034",
+    "latin": "3ndhom",
+    "arabe": "عندهم",
+    "fr": "chez eux",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-035",
+    "latin": "w",
+    "arabe": "و",
+    "fr": "et",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-036",
+    "latin": "wlla",
+    "arabe": "ولا",
+    "fr": "ou",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-037",
+    "latin": "walakin",
+    "arabe": "ولكن",
+    "fr": "mais",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-038",
+    "latin": "7it",
+    "arabe": "حيت",
+    "fr": "parce que",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-039",
+    "latin": "donk",
+    "arabe": "دونك",
+    "fr": "donc",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    },
+    "note": "Emprunt courant au français"
+  },
+  {
+    "id": "grammaire-040",
+    "latin": "ila",
+    "arabe": "إلا",
+    "fr": "si (condition)",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-041",
+    "latin": "belli",
+    "arabe": "بلي",
+    "fr": "que (conjonction)",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-042",
+    "latin": "m3a",
+    "arabe": "مع",
+    "fr": "avec",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-043",
+    "latin": "bla",
+    "arabe": "بلا",
+    "fr": "sans",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-044",
+    "latin": "bach",
+    "arabe": "باش",
+    "fr": "pour",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-045",
+    "latin": "dyal",
+    "arabe": "ديال",
+    "fr": "de / appartenant à",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-046",
+    "latin": "f",
+    "arabe": "ف",
+    "fr": "dans",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-047",
+    "latin": "fo9",
+    "arabe": "فوق",
+    "fr": "sur",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-048",
+    "latin": "t7t",
+    "arabe": "تحت",
+    "fr": "sous",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-049",
+    "latin": "bin",
+    "arabe": "بين",
+    "fr": "entre",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-050",
+    "latin": "9bel",
+    "arabe": "قبل",
+    "fr": "avant / accepter",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-051",
+    "latin": "men b3d",
+    "arabe": "من بعد",
+    "fr": "après / plus tard / ensuite",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-052",
+    "latin": "b7al",
+    "arabe": "بحال",
+    "fr": "comme",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-053",
+    "latin": "iwa",
+    "arabe": "إيوا",
+    "fr": "alors",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-054",
+    "latin": "ghir",
+    "arabe": "غير",
+    "fr": "seulement / juste",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-055",
+    "latin": "kolchi",
+    "arabe": "كلشي",
+    "fr": "tout",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-056",
+    "latin": "chi 7aja",
+    "arabe": "شي حاجة",
+    "fr": "quelque chose",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-057",
+    "latin": "chi wa7ed",
+    "arabe": "شي واحد",
+    "fr": "quelqu'un",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-058",
+    "latin": "7tta wa7ed",
+    "arabe": "حتى واحد",
+    "fr": "personne (négation)",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-059",
+    "latin": "walu",
+    "arabe": "والو",
+    "fr": "rien",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-060",
+    "latin": "ma kaynch",
+    "arabe": "ما كاينش",
+    "fr": "il n'y a pas",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-061",
+    "latin": "hada howa",
+    "arabe": "هادا هو",
+    "fr": "c'est",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    },
+    "note": "Selon le contexte"
+  },
+  {
+    "id": "grammaire-062",
+    "latin": "machi",
+    "arabe": "ماشي",
+    "fr": "ce n'est pas",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-063",
+    "latin": "ymken",
+    "arabe": "يمكن",
+    "fr": "peut-être",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "grammaire-064",
+    "latin": "tab3an",
+    "arabe": "طبعا",
+    "fr": "bien sûr / évidemment",
+    "theme": "grammaire",
+    "niveau": 1,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  }
+]

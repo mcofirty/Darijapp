@@ -286,5 +286,805 @@
       "fr": "Je veux aller à la médina",
       "audio": "audio/transports-018-ex.mp3"
     }
+  },
+  {
+    "id": "transports-019",
+    "latin": "na9l",
+    "arabe": "نقل",
+    "fr": "transport",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-020",
+    "latin": "tomobil",
+    "arabe": "طوموبيل",
+    "fr": "voiture",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-021",
+    "latin": "petit taxi",
+    "arabe": "بوتي طاكسي",
+    "fr": "petit taxi",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-022",
+    "latin": "grand taxi",
+    "arabe": "گراند طاكسي",
+    "fr": "grand taxi",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-023",
+    "latin": "tram",
+    "arabe": "طرام",
+    "fr": "tramway",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-024",
+    "latin": "tayyara",
+    "arabe": "طيارة",
+    "fr": "avion",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-025",
+    "latin": "bato",
+    "arabe": "باطو",
+    "fr": "bateau",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-026",
+    "latin": "bisklet",
+    "arabe": "بيسكليت",
+    "fr": "vélo",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-027",
+    "latin": "moto",
+    "arabe": "موطو",
+    "fr": "moto",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-028",
+    "latin": "scooter",
+    "arabe": "سكوتر",
+    "fr": "scooter",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-029",
+    "latin": "kamiyou",
+    "arabe": "كاميو",
+    "fr": "camion",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-030",
+    "latin": "trottinette",
+    "arabe": "تروتينيت",
+    "fr": "trottinette",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-031",
+    "latin": "chauffeur",
+    "arabe": "شيفور",
+    "fr": "conducteur",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-032",
+    "latin": "mosafir",
+    "arabe": "مسافر",
+    "fr": "passager",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-033",
+    "latin": "tiki",
+    "arabe": "تيكي",
+    "fr": "billet / ticket",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-034",
+    "latin": "reservation",
+    "arabe": "ريزيرفاسيون",
+    "fr": "réservation",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-035",
+    "latin": "paspor",
+    "arabe": "باسبور",
+    "fr": "passeport",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-036",
+    "latin": "bita9a wataniya",
+    "arabe": "بطاقة وطنية",
+    "fr": "carte d'identité",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-037",
+    "latin": "permi",
+    "arabe": "بيرمي",
+    "fr": "permis de conduire",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-038",
+    "latin": "valiza",
+    "arabe": "فاليزة",
+    "fr": "valise",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-039",
+    "latin": "bagaj",
+    "arabe": "باگاج",
+    "fr": "bagage",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-040",
+    "latin": "lmchi",
+    "arabe": "المشي",
+    "fr": "départ / marche",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-041",
+    "latin": "lwsoul",
+    "arabe": "الوصول",
+    "fr": "arrivée",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-042",
+    "latin": "ta2khir",
+    "arabe": "تأخير",
+    "fr": "retard",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-043",
+    "latin": "safar",
+    "arabe": "سفر",
+    "fr": "trajet / voyage",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-044",
+    "latin": "safer",
+    "arabe": "سافر",
+    "fr": "voyager",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-045",
+    "latin": "ma7atta",
+    "arabe": "محطة",
+    "fr": "station",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-046",
+    "latin": "ma7atta d tobis",
+    "arabe": "محطة د طوبيس",
+    "fr": "arrêt de bus",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-047",
+    "latin": "z7am",
+    "arabe": "زحام",
+    "fr": "embouteillage",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-048",
+    "latin": "sirkolasyon",
+    "arabe": "سيركولاسيون",
+    "fr": "circulation",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-049",
+    "latin": "sor3a",
+    "arabe": "سرعة",
+    "fr": "vitesse",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-050",
+    "latin": "lessans",
+    "arabe": "ليصانص",
+    "fr": "essence",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-051",
+    "latin": "mazot",
+    "arabe": "مازوط",
+    "fr": "diesel",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-052",
+    "latin": "rwida",
+    "arabe": "رويدة",
+    "fr": "pneu / roue",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-053",
+    "latin": "volan",
+    "arabe": "ڤولان",
+    "fr": "volant",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-054",
+    "latin": "fran",
+    "arabe": "فران",
+    "fr": "frein",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-055",
+    "latin": "7adita",
+    "arabe": "حادثة",
+    "fr": "accident",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-056",
+    "latin": "mchi",
+    "arabe": "مشى",
+    "fr": "marcher / partir / aller",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-057",
+    "latin": "jri",
+    "arabe": "جرى",
+    "fr": "courir",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-058",
+    "latin": "dour",
+    "arabe": "دور",
+    "fr": "tourner",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-059",
+    "latin": "7bes",
+    "arabe": "حبس",
+    "fr": "arrêter",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-060",
+    "latin": "tle3",
+    "arabe": "طلع",
+    "fr": "monter",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-061",
+    "latin": "hbet",
+    "arabe": "هبط",
+    "fr": "descendre",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-062",
+    "latin": "dkhol",
+    "arabe": "دخل",
+    "fr": "entrer",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-063",
+    "latin": "khrej",
+    "arabe": "خرج",
+    "fr": "sortir",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-064",
+    "latin": "rje3",
+    "arabe": "رجع",
+    "fr": "revenir",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-065",
+    "latin": "9te3 ttri9",
+    "arabe": "قطع الطريق",
+    "fr": "traverser",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-066",
+    "latin": "kmmel",
+    "arabe": "كمل",
+    "fr": "continuer",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-067",
+    "latin": "tbe3",
+    "arabe": "تبع",
+    "fr": "suivre",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
+  },
+  {
+    "id": "transports-068",
+    "latin": "tlef",
+    "arabe": "تلف",
+    "fr": "se perdre",
+    "theme": "transports",
+    "niveau": 2,
+    "prononciation": "",
+    "audio": "",
+    "exemple": {
+      "latin": "",
+      "arabe": "",
+      "fr": "",
+      "audio": ""
+    }
   }
 ]
