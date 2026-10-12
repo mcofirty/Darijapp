@@ -116,7 +116,7 @@ export function BarreOnglets({ actif, onChange }: Props) {
                   if (e.detail === 0) onChange(o.id)
                 }}
                 aria-current={i === indexActif ? 'page' : undefined}
-                className={`t-legende flex min-h-12 w-full flex-col items-center justify-center gap-0.5 rounded-[1.75rem] py-1.5 font-semibold transition-colors duration-200 ${
+                className={`flex min-h-[50px] w-full flex-col items-center justify-center gap-[3px] rounded-[1.75rem] py-1.5 text-[0.625rem] font-medium leading-none transition-colors duration-200 ${
                   estActif ? 'text-accent' : 'text-texte'
                 }`}
               >
@@ -124,7 +124,7 @@ export function BarreOnglets({ actif, onChange }: Props) {
                   className="transition-transform duration-150"
                   style={{ transform: `scale(${glisse ? grossissement(i - position) : 1})` }}
                 >
-                  <IconeOnglet onglet={o.id} />
+                  <IconeOnglet onglet={o.id} actif={estActif} />
                 </span>
                 {o.libelle}
               </button>

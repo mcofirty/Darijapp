@@ -19,7 +19,7 @@ export function etirement(vitesse: number): number {
 
 /** Grossissement d'une icône selon sa distance à la lentille. */
 export function grossissement(distance: number): number {
-  return 1 + 0.15 * Math.max(0, 1 - Math.abs(distance))
+  return 1 + 0.1 * Math.max(0, 1 - Math.abs(distance))
 }
 
 /**

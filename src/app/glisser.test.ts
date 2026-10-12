@@ -31,8 +31,8 @@ describe('effets de la lentille', () => {
   })
 
   it('grossit l’icône sous la lentille et pas les autres', () => {
-    expect(grossissement(0)).toBeCloseTo(1.15)
-    expect(grossissement(0.5)).toBeCloseTo(1.075)
+    expect(grossissement(0)).toBeCloseTo(1.1)
+    expect(grossissement(0.5)).toBeCloseTo(1.05)
     expect(grossissement(2)).toBe(1)
   })
 })
