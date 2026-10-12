@@ -225,8 +225,7 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 | 2026-10-12 | Contrôles segmentés (Progrès, Profil) en capsule avec curseur en verre au repos | `src/ui/Boutons.tsx`, `src/index.css` |
 | 2026-10-12 | Liquid Glass d'iOS 26 sur toutes les commandes : bouton retour rond, bord de défilement flou, session et bilan, alertes en verre, recherche collante, goutte de verre du contrôle segmenté et de l'interrupteur | `src/ui/`, `src/index.css`, `src/features/session/`, `src/features/progres/Dictionnaire.tsx` |
 | 2026-10-12 | Barre d'onglets flottante « liquid glass » avec glissement du doigt, et balayage de page entre onglets | `src/app/BarreOnglets.tsx`, `src/app/glisser.ts`, `src/app/icones.tsx` |
-| 2026-10-12 | Listes groupées aux mesures des Réglages de l'iPhone de l'utilisateur : marges de 20 pt, cellules de 56 pt, séparateurs en retrait des deux côtés, titres de section en 17 pt | `src/ui/Liste.tsx`, `src/ui/Page.tsx`, `src/index.css` |
-| 2026-10-12 | Angles arrondis façon iOS 26 : rayons plus grands, concentriques autour des boutons, angles continus quand le navigateur le permet | `src/index.css`, `src/ui/`, `src/features/session/` |
+| 2026-10-12 | Angles et listes aux mesures des Réglages de l'iPhone : rayons de 26 pt concentriques autour des boutons, marges de 20 pt, cellules de 56 pt, séparateurs en retrait, titres de section en 17 pt | `src/index.css`, `src/ui/Liste.tsx`, `src/ui/Page.tsx` |
 | 2026-10-11 | GitHub Action qui génère les MP3, teste, construit et publie l'appli sur GitHub Pages | `.github/workflows/publier.yml` |
 
 ## Décisions
