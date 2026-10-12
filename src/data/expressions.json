@@ -7,12 +7,12 @@
     "theme": "expressions",
     "niveau": 1,
     "prononciation": "wa-kha : kh (خ) raclé comme la jota espagnole.",
-    "audio": "audio/expressions-001.mp3",
+    "audio": "",
     "exemple": {
       "latin": "wakha, ntla9aw ghedda",
       "arabe": "واخا، نتلاقاو غدا",
       "fr": "D'accord, on se voit demain",
-      "audio": "audio/expressions-001-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -23,12 +23,12 @@
     "theme": "expressions",
     "niveau": 1,
     "prononciation": "sa-fi : « s » appuyé, langue un peu en arrière.",
-    "audio": "audio/expressions-002.mp3",
+    "audio": "",
     "exemple": {
       "latin": "safi, chokran",
       "arabe": "صافي، شكرا",
       "fr": "C'est bon, merci",
-      "audio": "audio/expressions-002-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -39,12 +39,12 @@
     "theme": "expressions",
     "niveau": 1,
     "prononciation": "in-chal-lah : « ch » de « chat », « l » doublé.",
-    "audio": "audio/expressions-003.mp3",
+    "audio": "",
     "exemple": {
       "latin": "ntla9aw ghedda inchallah",
       "arabe": "نتلاقاو غدا إن شاء الله",
       "fr": "On se voit demain, si Dieu le veut",
-      "audio": "audio/expressions-003-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -55,12 +55,12 @@
     "theme": "expressions",
     "niveau": 1,
     "prononciation": "m-zyan : « m » collé au « z ».",
-    "audio": "audio/expressions-004.mp3",
+    "audio": "",
     "exemple": {
       "latin": "had atay mzyan",
       "arabe": "هاد أتاي مزيان",
       "fr": "Ce thé est bon",
-      "audio": "audio/expressions-004-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -71,12 +71,12 @@
     "theme": "expressions",
     "niveau": 1,
     "prononciation": "ma-chi moch-kil : deux « ch » de « chat ».",
-    "audio": "audio/expressions-005.mp3",
+    "audio": "",
     "exemple": {
       "latin": "machi mochkil, a khouya",
       "arabe": "ماشي مشكل، أخويا",
       "fr": "Pas de problème, mon frère",
-      "audio": "audio/expressions-005-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -87,12 +87,12 @@
     "theme": "expressions",
     "niveau": 1,
     "prononciation": "ma3-lich : 3 (ع) serré au milieu.",
-    "audio": "audio/expressions-006.mp3",
+    "audio": "",
     "exemple": {
       "latin": "ma3lich, machi mochkil",
       "arabe": "معليش، ماشي مشكل",
       "fr": "Ce n'est pas grave, pas de problème",
-      "audio": "audio/expressions-006-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -103,12 +103,12 @@
     "theme": "expressions",
     "niveau": 1,
     "prononciation": "b-chwi-ya : « b » collé au « ch ».",
-    "audio": "audio/expressions-007.mp3",
+    "audio": "",
     "exemple": {
       "latin": "bchwiya 3afak",
       "arabe": "بشوية عافاك",
       "fr": "Doucement, s'il te plaît",
-      "audio": "audio/expressions-007-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -119,12 +119,12 @@
     "theme": "expressions",
     "niveau": 1,
     "prononciation": "yal-lah : « l » doublé.",
-    "audio": "audio/expressions-008.mp3",
+    "audio": "",
     "exemple": {
       "latin": "yallah nmchiw",
       "arabe": "يالله نمشيو",
       "fr": "Allez, on y va",
-      "audio": "audio/expressions-008-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -135,12 +135,12 @@
     "theme": "expressions",
     "niveau": 1,
     "prononciation": "f-hem-ti : « f » collé au « h » soufflé.",
-    "audio": "audio/expressions-009.mp3",
+    "audio": "",
     "exemple": {
       "latin": "fhemti chno galt?",
       "arabe": "فهمتي شنو ڭلت؟",
       "fr": "Tu as compris ce que j'ai dit ?",
-      "audio": "audio/expressions-009-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -151,12 +151,12 @@
     "theme": "expressions",
     "niveau": 1,
     "prononciation": "ma f-hemt-ch : le « ch » final marque la négation.",
-    "audio": "audio/expressions-010.mp3",
+    "audio": "",
     "exemple": {
       "latin": "sme7 lia, ma fhemtch",
       "arabe": "سمح ليا، ما فهمتش",
       "fr": "Désolé, je n'ai pas compris",
-      "audio": "audio/expressions-010-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -167,12 +167,12 @@
     "theme": "expressions",
     "niveau": 1,
     "prononciation": "3a-wed 3a-fak : deux 3 (ع) serrés.",
-    "audio": "audio/expressions-011.mp3",
+    "audio": "",
     "exemple": {
       "latin": "bchwiya, 3awed 3afak",
       "arabe": "بشوية، عاود عافاك",
       "fr": "Doucement, répète s'il te plaît",
-      "audio": "audio/expressions-011-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -183,12 +183,12 @@
     "theme": "expressions",
     "niveau": 1,
     "prononciation": "ma 3reft-ch : 3 (ع) serré, « ch » de négation à la fin.",
-    "audio": "audio/expressions-012.mp3",
+    "audio": "",
     "exemple": {
       "latin": "ma 3reftch fin kayn",
       "arabe": "ما عرفتش فين كاين",
       "fr": "Je ne sais pas où c'est",
-      "audio": "audio/expressions-012-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -199,12 +199,12 @@
     "theme": "expressions",
     "niveau": 1,
     "prononciation": "wach : « ch » de « chat ». Se place en début de question.",
-    "audio": "audio/expressions-013.mp3",
+    "audio": "",
     "exemple": {
       "latin": "wach kayn atay?",
       "arabe": "واش كاين أتاي؟",
       "fr": "Est-ce qu'il y a du thé ?",
-      "audio": "audio/expressions-013-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -215,12 +215,12 @@
     "theme": "expressions",
     "niveau": 1,
     "prononciation": "ch-nou : « ch » collé au « n ».",
-    "audio": "audio/expressions-014.mp3",
+    "audio": "",
     "exemple": {
       "latin": "chno hada?",
       "arabe": "شنو هادا؟",
       "fr": "C'est quoi, ça ?",
-      "audio": "audio/expressions-014-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -231,12 +231,12 @@
     "theme": "expressions",
     "niveau": 1,
     "prononciation": "3lach : 3 (ع) serré au début.",
-    "audio": "audio/expressions-015.mp3",
+    "audio": "",
     "exemple": {
       "latin": "3lach ghali?",
       "arabe": "علاش غالي؟",
       "fr": "Pourquoi c'est cher ?",
-      "audio": "audio/expressions-015-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -247,12 +247,12 @@
     "theme": "expressions",
     "niveau": 1,
     "prononciation": "ki-fach : « ch » de « chat ».",
-    "audio": "audio/expressions-016.mp3",
+    "audio": "",
     "exemple": {
       "latin": "kifach ngoul ... b ddarija?",
       "arabe": "كيفاش نڭول ... بالدارجة؟",
       "fr": "Comment on dit ... en darija ?",
-      "audio": "audio/expressions-016-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -263,12 +263,12 @@
     "theme": "expressions",
     "niveau": 1,
     "prononciation": "ch-koun : « ch » collé au « k ».",
-    "audio": "audio/expressions-017.mp3",
+    "audio": "",
     "exemple": {
       "latin": "chkoun hada?",
       "arabe": "شكون هادا؟",
       "fr": "Qui est-ce ?",
-      "audio": "audio/expressions-017-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -279,12 +279,12 @@
     "theme": "expressions",
     "niveau": 1,
     "prononciation": "kayn : rime avec « Caïn ».",
-    "audio": "audio/expressions-018.mp3",
+    "audio": "",
     "exemple": {
       "latin": "kayn chi taxi?",
       "arabe": "كاين شي طاكسي؟",
       "fr": "Il y a un taxi ?",
-      "audio": "audio/expressions-018-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -295,12 +295,12 @@
     "theme": "expressions",
     "niveau": 1,
     "prononciation": "mab-rouk : « r » roulé.",
-    "audio": "audio/expressions-019.mp3",
+    "audio": "",
     "exemple": {
       "latin": "mabrouk 3lik",
       "arabe": "مبروك عليك",
       "fr": "Félicitations à toi",
-      "audio": "audio/expressions-019-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -311,12 +311,12 @@
     "theme": "expressions",
     "niveau": 2,
     "prononciation": "b-ss7-tek : « s » appuyé puis 7 (ح) soufflé.",
-    "audio": "audio/expressions-020.mp3",
+    "audio": "",
     "exemple": {
       "latin": "bss7tek, kol mzyan",
       "arabe": "بصحتك، كول مزيان",
       "fr": "Bon appétit, mange bien",
-      "audio": "audio/expressions-020-ex.mp3"
+      "audio": ""
     }
   }
 ]

@@ -53,17 +53,18 @@ describe('fichiers de mots', () => {
     expect(m.arabe).not.toMatch(LETTRE_LATINE)
     expect(m.fr.trim()).not.toBe('')
     expect([1, 2, 3]).toContain(m.niveau)
-    if (m.audio) {
-      // Mot du programme d'origine : MP3, explication et exemple complets.
-      expect(m.audio).toBe(`audio/${m.id}.mp3`)
+    // Tous les mots sont lus par la voix de l'iPhone ; un MP3 éventuel suit le nom <id>.mp3.
+    expect(['', `audio/${m.id}.mp3`]).toContain(m.audio)
+    if (m.exemple.latin) {
+      // Mot du programme d'origine : explication et exemple complets.
       expect(m.prononciation.trim()).not.toBe('')
       expect(m.exemple.latin).toMatch(LATIN_AUTORISE)
       expect(m.exemple.arabe).toMatch(ARABE)
       expect(m.exemple.arabe).not.toMatch(LETTRE_LATINE)
       expect(m.exemple.fr.trim()).not.toBe('')
-      expect(m.exemple.audio).toBe(`audio/${m.id}-ex.mp3`)
+      expect(['', `audio/${m.id}-ex.mp3`]).toContain(m.exemple.audio)
     } else {
-      // Entrée importée : lue par la voix de l'iPhone, sans exemple.
+      // Entrée importée : sans exemple.
       expect(m.exemple).toEqual({ latin: '', arabe: '', fr: '', audio: '' })
     }
     if (m.note !== undefined) expect(m.note.trim()).not.toBe('')

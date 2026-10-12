@@ -7,12 +7,12 @@
     "theme": "souk",
     "niveau": 1,
     "prononciation": "gha-li : le gh (غ) est un « r » grasseyé, comme le « r » parisien.",
-    "audio": "audio/souk-001.mp3",
+    "audio": "",
     "exemple": {
       "latin": "hada ghali bezzaf",
       "arabe": "هادا غالي بزاف",
       "fr": "C'est trop cher",
-      "audio": "audio/souk-001-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -23,12 +23,12 @@
     "theme": "souk",
     "niveau": 1,
     "prononciation": "r-khis : « r » roulé puis kh (خ) raclé.",
-    "audio": "audio/souk-002.mp3",
+    "audio": "",
     "exemple": {
       "latin": "hada rkhis",
       "arabe": "هادا رخيص",
       "fr": "Ça, c'est pas cher",
-      "audio": "audio/souk-002-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -39,12 +39,12 @@
     "theme": "souk",
     "niveau": 1,
     "prononciation": "bez-zaf : « z » doublé, appuyé.",
-    "audio": "audio/souk-003.mp3",
+    "audio": "",
     "exemple": {
       "latin": "chokran bezzaf",
       "arabe": "شكرا بزاف",
       "fr": "Merci beaucoup",
-      "audio": "audio/souk-003-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -55,12 +55,12 @@
     "theme": "souk",
     "niveau": 1,
     "prononciation": "chwi-ya : « ch » de « chat ».",
-    "audio": "audio/souk-004.mp3",
+    "audio": "",
     "exemple": {
       "latin": "chwiya d sokkar",
       "arabe": "شوية د السكر",
       "fr": "Un peu de sucre",
-      "audio": "audio/souk-004-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -71,12 +71,12 @@
     "theme": "souk",
     "niveau": 1,
     "prononciation": "n9es chwi-ya : le 9 (ق) est un « k » tiré du fond de la gorge.",
-    "audio": "audio/souk-005.mp3",
+    "audio": "",
     "exemple": {
       "latin": "ghali, n9es chwiya 3afak",
       "arabe": "غالي، نقص شوية عافاك",
       "fr": "C'est cher, baisse un peu s'il te plaît",
-      "audio": "audio/souk-005-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -87,12 +87,12 @@
     "theme": "souk",
     "niveau": 2,
     "prononciation": "a-khir ta-man : kh (خ) raclé au milieu de akhir.",
-    "audio": "audio/souk-006.mp3",
+    "audio": "",
     "exemple": {
       "latin": "ch7al akhir taman?",
       "arabe": "شحال آخر تمن؟",
       "fr": "C'est quoi ton dernier prix ?",
-      "audio": "audio/souk-006-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -103,12 +103,12 @@
     "theme": "souk",
     "niveau": 1,
     "prononciation": "ha-da : « h » soufflé au début.",
-    "audio": "audio/souk-007.mp3",
+    "audio": "",
     "exemple": {
       "latin": "bghit hada",
       "arabe": "بغيت هادا",
       "fr": "Je veux celui-ci",
-      "audio": "audio/souk-007-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -119,12 +119,12 @@
     "theme": "souk",
     "niveau": 1,
     "prononciation": "ha-dak : « h » soufflé, « k » net.",
-    "audio": "audio/souk-008.mp3",
+    "audio": "",
     "exemple": {
       "latin": "la, bghit hadak",
       "arabe": "لا، بغيت هداك",
       "fr": "Non, je veux celui-là",
-      "audio": "audio/souk-008-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -135,12 +135,12 @@
     "theme": "souk",
     "niveau": 1,
     "prononciation": "f-lous : « f » collé au « l ».",
-    "audio": "audio/souk-009.mp3",
+    "audio": "",
     "exemple": {
       "latin": "ma 3ndich lflous",
       "arabe": "ما عنديش الفلوس",
       "fr": "Je n'ai pas d'argent",
-      "audio": "audio/souk-009-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -151,12 +151,12 @@
     "theme": "souk",
     "niveau": 1,
     "prononciation": "3n-dek : démarre sur le 3 (ع) serré, sans voyelle avant le « n ».",
-    "audio": "audio/souk-010.mp3",
+    "audio": "",
     "exemple": {
       "latin": "3ndek atay?",
       "arabe": "عندك أتاي؟",
       "fr": "Tu as du thé ?",
-      "audio": "audio/souk-010-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -167,12 +167,12 @@
     "theme": "souk",
     "niveau": 1,
     "prononciation": "ma 3n-dich : 3 (ع) serré au début de 3ndich.",
-    "audio": "audio/souk-011.mp3",
+    "audio": "",
     "exemple": {
       "latin": "ma 3ndich sarf",
       "arabe": "ما عنديش صرف",
       "fr": "Je n'ai pas de monnaie",
-      "audio": "audio/souk-011-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -183,12 +183,12 @@
     "theme": "souk",
     "niveau": 2,
     "prononciation": "sarf : « s » appuyé, langue en arrière.",
-    "audio": "audio/souk-012.mp3",
+    "audio": "",
     "exemple": {
       "latin": "3ndek sarf?",
       "arabe": "عندك صرف؟",
       "fr": "Tu as de la monnaie ?",
-      "audio": "audio/souk-012-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -199,12 +199,12 @@
     "theme": "souk",
     "niveau": 1,
     "prononciation": "k-bir : « k » et « b » collés.",
-    "audio": "audio/souk-013.mp3",
+    "audio": "",
     "exemple": {
       "latin": "bghit wa7ed kbir",
       "arabe": "بغيت واحد كبير",
       "fr": "Je veux un grand",
-      "audio": "audio/souk-013-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -215,12 +215,12 @@
     "theme": "souk",
     "niveau": 1,
     "prononciation": "s-ghir : le gh (غ) est un « r » grasseyé.",
-    "audio": "audio/souk-014.mp3",
+    "audio": "",
     "exemple": {
       "latin": "hada sghir bezzaf",
       "arabe": "هادا صغير بزاف",
       "fr": "Celui-ci est trop petit",
-      "audio": "audio/souk-014-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -231,12 +231,12 @@
     "theme": "souk",
     "niveau": 1,
     "prononciation": "z-win : « z » collé au « w ».",
-    "audio": "audio/souk-015.mp3",
+    "audio": "",
     "exemple": {
       "latin": "had ttapi zwin",
       "arabe": "هاد الطابي زوين",
       "fr": "Ce tapis est joli",
-      "audio": "audio/souk-015-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -247,12 +247,12 @@
     "theme": "souk",
     "niveau": 1,
     "prononciation": "n-chri : « n » puis « ch » de « chat ».",
-    "audio": "audio/souk-016.mp3",
+    "audio": "",
     "exemple": {
       "latin": "bghit nchri hada",
       "arabe": "بغيت نشري هادا",
       "fr": "Je veux acheter ça",
-      "audio": "audio/souk-016-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -263,12 +263,12 @@
     "theme": "souk",
     "niveau": 2,
     "prononciation": "sa-fi, gha-di nakh-dou : gh (غ) grasseyé, kh (خ) raclé.",
-    "audio": "audio/souk-017.mp3",
+    "audio": "",
     "exemple": {
       "latin": "mzyan, safi, ghadi nakhdou",
       "arabe": "مزيان، صافي، غادي ناخدو",
       "fr": "Bien, c'est bon, je le prends",
-      "audio": "audio/souk-017-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -279,12 +279,12 @@
     "theme": "souk",
     "niveau": 2,
     "prononciation": "bez-zaf 3li-ya : 3 (ع) serré au début de 3liya.",
-    "audio": "audio/souk-018.mp3",
+    "audio": "",
     "exemple": {
       "latin": "la, bezzaf 3liya",
       "arabe": "لا، بزاف عليا",
       "fr": "Non, c'est trop pour moi",
-      "audio": "audio/souk-018-ex.mp3"
+      "audio": ""
     }
   },
   {

@@ -27,8 +27,7 @@ Ne modifie jamais cette section sans demande explicite.
 | Interface | React + Vite + TypeScript, Tailwind CSS, icônes Lucide (style SF Symbols) |
 | Hors ligne | PWA via vite-plugin-pwa |
 | Stockage | IndexedDB via Dexie |
-| Audio des mots | `scripts/generate_audio.py` avec la voix marocaine Jamal (`ar-MA-JamalNeural`, via edge-tts), secours facebook/mms-tts-ara ; MP3 dans `public/audio/` |
-| Audio des mots ajoutés | API Web Speech (`speechSynthesis`) |
+| Audio des mots | Voix arabe de l'iPhone, API Web Speech (`speechSynthesis`), pour tous les mots ; aucun MP3 aujourd'hui. `scripts/generate_audio.py` (Jamal via edge-tts, secours mms-tts-ara) reste prêt pour une future vraie voix : il génère `public/audio/<id>.mp3` pour les mots dont le champ `audio` est renseigné |
 | Enregistrement | MediaRecorder |
 | Score de prononciation | MFCC (Meyda) + DTW, dans `src/scoring/` |
 | Tests | Vitest |
@@ -70,7 +69,7 @@ src/
   data/           un fichier JSON par thème, liste des thèmes, sons du darija
 scripts/
   generate_audio.py
-public/audio/     MP3 générés
+public/audio/     MP3 générés (vide pour l'instant)
 docs/
   cahier-des-charges.md
 ```
@@ -126,14 +125,16 @@ Mot (`src/data/<theme>.json`) :
   "theme": "salutations",
   "niveau": 1,
   "prononciation": "3a-fak : commence par le 3 (ع), un « a » serré au fond de la gorge.",
-  "audio": "audio/salutations-012.mp3",
-  "exemple": { "latin": "3tini atay 3afak", "arabe": "عطيني أتاي عافاك", "fr": "Donne-moi du thé, s'il te plaît", "audio": "audio/salutations-012-ex.mp3" }
+  "audio": "",
+  "exemple": { "latin": "3tini atay 3afak", "arabe": "عطيني أتاي عافاك", "fr": "Donne-moi du thé, s'il te plaît", "audio": "" }
 }
 ```
 
 L'id suit `<theme>-NNN` dans l'ordre du fichier ; `src/data/data.test.ts` vérifie le format, l'unicité (latin + arabe) et la translittération.
 
-Mot importé (1 530 entrées, sans MP3) : `"prononciation": ""`, `"audio": ""` (la voix de l'iPhone lit l'arabe ; le script audio l'ignore), `"exemple"` aux quatre champs vides, et parfois `"note": "Emprunt courant au français"`. Une même graphie latine peut désigner deux mots différents en arabe (7it = حيت « parce que » ou حيط « mur »).
+`audio` vide : la voix de l'iPhone lit l'arabe et le script audio ignore le mot ; `audio/<id>.mp3` (et `audio/<id>-ex.mp3` pour l'exemple) demande un MP3.
+
+Mot importé (1 530 entrées) : `"prononciation": ""`, `"audio": ""`, `"exemple"` aux quatre champs vides, et parfois `"note": "Emprunt courant au français"`. Une même graphie latine peut désigner deux mots différents en arabe (7it = حيت « parce que » ou حيط « mur »).
 
 Session terminée (IndexedDB, table `sessions`, depuis la v2) :
 
@@ -217,6 +218,7 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 | 2026-10-12 | Page cachée « Mes mots » (`#ajout`) : ajout, modification et suppression de mots (français, latin, arabe), intégrés aux sessions, au dictionnaire et à la répétition espacée ; base v3 | `src/features/ajout/`, `src/db/motsPerso.ts`, `src/data/motsPerso.ts`, `src/app/App.tsx` |
 | 2026-10-12 | Partage d'un mot par lien (`#mot=`) depuis Mes mots, avec écran de confirmation à l'ouverture | `src/features/ajout/Proposition.tsx`, `src/data/motsPerso.ts`, `src/app/App.tsx` |
 | 2026-10-12 | Session du jour style Duolingo en écran d'accueil : découverte, Écoute et choisis, Traduis, Associe les paires, bilan ; répétition espacée, XP, niveaux, série ; base v2 | `src/features/session/`, `src/exercices/`, `src/srs/`, `src/gamification/`, `src/db/apprentissage.ts` |
+| 2026-10-12 | Tous les mots lus par la voix de l'iPhone : MP3 mms-tts-ara supprimés | `src/data/*.json`, `public/audio/`, `src/data/data.test.ts` |
 | 2026-10-12 | Import de 1 530 mots et phrases du fichier de l'utilisateur (1 739 entrées, doublons retirés) en 23 nouveaux thèmes et 7 thèmes existants, arabe écrit par Claude, lus par la voix de l'iPhone ; note d'usage sur la fiche | `src/data/*.json`, `src/data/themes.ts`, `src/ui/visuels.ts`, `src/data/data.test.ts`, `scripts/generate_audio.py` |
 | 2026-10-12 | Nom « Darijaapp » (icône d'écran d'accueil, titre) et feuille d'aide à l'installation sur l'écran d'accueil avec « Ne plus afficher » | `src/features/onboarding/AideInstallation.tsx`, `src/app/installation.ts`, `vite.config.ts`, `index.html` |
 | 2026-10-12 | Contrôles segmentés (Progrès, Profil) en capsule avec curseur en verre au repos | `src/ui/Boutons.tsx`, `src/index.css` |
@@ -251,6 +253,7 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 - 2026-10-12 : refonte complète selon les règles d'Apple (demande de l'utilisateur) : Liquid Glass limité à la couche de commandes, fond système gris au lieu du fond coloré, listes groupées, grands titres ; l'en-tête niveau/XP/série devient une section de l'accueil et du tableau de bord Progrès.
 - 2026-10-12 : barre de navigation façon iOS 26 (demande de l'utilisateur, « Liquid Glass sur chaque menu ») : bouton retour réduit au chevron dans un rond en verre, sans le nom de la page précédente (gardé pour VoiceOver) ; la barre compacte n'est plus une bande de verre mais un bord de défilement flou.
 - 2026-10-12 : import du fichier de 1 739 entrées (demande de l'utilisateur) : les 130 mots déjà présents (même latin ou simple variante d'orthographe, comme mr7ba/mar7ba) gardent leur version, avec MP3 et progression ; les doublons du fichier sont fusionnés (sens réunis par « / ») ; les thèmes du fichier qui recoupent un thème existant le complètent, les autres deviennent 23 thèmes ajoutés après les 8 premiers ; niveau 1, 2 ou 3 selon le numéro du thème (1-10, 11-21, 22-31) ; première lettre du français en minuscule comme le reste du programme.
+- 2026-10-12 : les 152 premiers mots passent aussi à la voix de l'iPhone (demande de l'utilisateur) : leurs MP3 mms-tts-ara prononçaient mal le darija. Les 304 MP3 sont supprimés (5,4 Mo de moins au premier chargement ; ils restent dans l'historique git) et leurs champs `audio` vidés pour que l'Action ne les régénère pas.
 - 2026-10-12 : mots importés sans MP3, lus par la voix arabe de l'iPhone (choix de l'utilisateur) : pas de voix darija disponible (Jamal bloquée, mms-tts-ara aussi mauvais), et 1 530 MP3 auraient alourdi l'appli d'environ 30 Mo. Champ `audio` vide plutôt qu'un chemin vers un MP3 absent, pour que le script audio les ignore.
 - 2026-10-12 : latin du fichier corrigé seulement quand il contredisait l'arabe (sahb → sa7b, frash → frach, short → chort, hmel → 7mel, qbel → 9bel, lettres doublées 77/99 simplifiées) ; ṭ, ṣ, ə remplacés par t, s, e.
 - 2026-10-12 : l'appli s'appelle « Darijaapp » (demande de l'utilisateur) : nom du manifeste, nom sous l'icône (`apple-mobile-web-app-title`) et titre de la page. L'adresse reste …/Darijapp/ (nom du repo).
@@ -265,9 +268,9 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 
 ## Points en suspens
 
-- Voix : edge-tts est bloqué (403), les sons viennent du secours mms-tts-ara, qui prononce mal le darija. Seule voie officielle vers la voix marocaine Jamal : Azure Speech (offre gratuite, compte Azure et clé en secret GitHub), à proposer à l'utilisateur.
+- Voix : tous les mots sont lus par la voix arabe de l'iPhone (arabe standard sans voyelles, accent du Golfe), qui prononce mal le darija. Pistes proposées à l'utilisateur : Azure Speech pour la voix marocaine Jamal (compte Azure, clé en secret GitHub ; edge-tts est bloqué en 403), ou un arabe voyellé tiré du latin, réservé à la lecture.
 - Le contenu a été relu et corrigé par Claude (cohérence latin/arabe, tournures), mais pas par un locuteur natif : signaler les erreurs pour corriger les JSON. L'arabe des 1 530 mots importés a été écrit par Claude d'après le latin et le français, sans relecture.
-- Mots importés : pas d'explication de prononciation ni d'exemple (la fiche montre seulement les sons 3, 7, 9, kh, gh, ch) ; lus par la voix arabe de l'iPhone (arabe standard, pas du darija). Pour une vraie voix marocaine : Azure Speech (Jamal), puis renseigner `audio` et générer les MP3.
+- Mots importés : pas d'explication de prononciation ni d'exemple (la fiche montre seulement les sons 3, 7, 9, kh, gh, ch).
 - Dictionnaire et liste « Mes mots » affichent les 1 682 mots d'un coup : environ 1,5 s de rendu dans Chromium, peut-être plus lent sur iPhone ; prévoir un affichage progressif si c'est gênant. Quand l'arabe d'un mot change, supprimer son MP3 pour que l'Action le régénère.
 - Le Dictionnaire montre tous les mots, avec un ✓ sur ceux déjà vus (le cahier des charges ne prévoyait que les mots vus).
 - Sur iPhone, l'appli installée sur l'écran d'accueil a sa propre mémoire, séparée de Safari (non vérifié sur appareil) : la progression faite dans Safari ne suit pas, et un lien `#mot=…` ouvert dans Safari ajoute sans doute le mot à Safari, pas à l'appli installée. À vérifier, puis prévoir un contournement (copier le lien et l'ouvrir dans l'appli, ou export/import).

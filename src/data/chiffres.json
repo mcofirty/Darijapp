@@ -7,12 +7,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "wa-7ed : le 7 (ح) est un souffle chaud, sans raclement.",
-    "audio": "audio/chiffres-001.mp3",
+    "audio": "",
     "exemple": {
       "latin": "3tini wa7ed atay",
       "arabe": "عطيني واحد أتاي",
       "fr": "Donne-moi un thé",
-      "audio": "audio/chiffres-001-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -23,12 +23,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "joj : « j » comme dans « jour », deux fois.",
-    "audio": "audio/chiffres-002.mp3",
+    "audio": "",
     "exemple": {
       "latin": "joj khobzat 3afak",
       "arabe": "جوج خبزات عافاك",
       "fr": "Deux pains, s'il te plaît",
-      "audio": "audio/chiffres-002-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -39,12 +39,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "tla-ta : « t » et « l » collés au début.",
-    "audio": "audio/chiffres-003.mp3",
+    "audio": "",
     "exemple": {
       "latin": "tlata d drahem",
       "arabe": "تلاتة د الدراهم",
       "fr": "Trois dirhams",
-      "audio": "audio/chiffres-003-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -55,12 +55,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "reb-3a : le 3 (ع) serré arrive juste après le « b ».",
-    "audio": "audio/chiffres-004.mp3",
+    "audio": "",
     "exemple": {
       "latin": "reb3a d nnas",
       "arabe": "ربعة د الناس",
       "fr": "Quatre personnes",
-      "audio": "audio/chiffres-004-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -71,12 +71,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "kham-sa : commence par le kh (خ) raclé, comme la jota espagnole.",
-    "audio": "audio/chiffres-005.mp3",
+    "audio": "",
     "exemple": {
       "latin": "khamsa d drahem",
       "arabe": "خمسة د الدراهم",
       "fr": "Cinq dirhams",
-      "audio": "audio/chiffres-005-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -87,12 +87,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "set-ta : le « t » doublé s'appuie un peu plus longtemps.",
-    "audio": "audio/chiffres-006.mp3",
+    "audio": "",
     "exemple": {
       "latin": "setta d lbid",
       "arabe": "ستة د البيض",
       "fr": "Six œufs",
-      "audio": "audio/chiffres-006-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -103,12 +103,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "seb-3a : 3 (ع) serré de la gorge après le « b ».",
-    "audio": "audio/chiffres-007.mp3",
+    "audio": "",
     "exemple": {
       "latin": "seb3a d liyam",
       "arabe": "سبعة د الأيام",
       "fr": "Sept jours",
-      "audio": "audio/chiffres-007-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -119,12 +119,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "tmen-ya : « t » et « m » collés au début.",
-    "audio": "audio/chiffres-008.mp3",
+    "audio": "",
     "exemple": {
       "latin": "tmenya d swaye3",
       "arabe": "تمنية د السوايع",
       "fr": "Huit heures",
-      "audio": "audio/chiffres-008-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -135,12 +135,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "tes-3a : 3 (ع) serré en fin de mot.",
-    "audio": "audio/chiffres-009.mp3",
+    "audio": "",
     "exemple": {
       "latin": "tes3a d drahem",
       "arabe": "تسعة د الدراهم",
       "fr": "Neuf dirhams",
-      "audio": "audio/chiffres-009-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -151,12 +151,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "3ach-ra : démarre sur le 3 (ع), un « a » étranglé.",
-    "audio": "audio/chiffres-010.mp3",
+    "audio": "",
     "exemple": {
       "latin": "3achra d drahem",
       "arabe": "عشرة د الدراهم",
       "fr": "Dix dirhams",
-      "audio": "audio/chiffres-010-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -167,12 +167,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "3ech-rin : 3 (ع) serré, puis « ch » de « chat ».",
-    "audio": "audio/chiffres-011.mp3",
+    "audio": "",
     "exemple": {
       "latin": "3echrin derhem",
       "arabe": "عشرين درهم",
       "fr": "Vingt dirhams",
-      "audio": "audio/chiffres-011-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -183,12 +183,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "kham-sin : kh (خ) raclé au début.",
-    "audio": "audio/chiffres-012.mp3",
+    "audio": "",
     "exemple": {
       "latin": "khamsin derhem, ghali!",
       "arabe": "خمسين درهم، غالي!",
       "fr": "Cinquante dirhams, c'est cher !",
-      "audio": "audio/chiffres-012-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -199,12 +199,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "mi-ya : simple, comme « mi-ya ».",
-    "audio": "audio/chiffres-013.mp3",
+    "audio": "",
     "exemple": {
       "latin": "miya derhem",
       "arabe": "مية درهم",
       "fr": "Cent dirhams",
-      "audio": "audio/chiffres-013-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -215,12 +215,12 @@
     "theme": "chiffres",
     "niveau": 2,
     "prononciation": "alf : « a » ouvert, attaque nette au début.",
-    "audio": "audio/chiffres-014.mp3",
+    "audio": "",
     "exemple": {
       "latin": "alf derhem",
       "arabe": "ألف درهم",
       "fr": "Mille dirhams",
-      "audio": "audio/chiffres-014-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -231,12 +231,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "nos : « s » appuyé, prononcé avec la langue un peu en arrière.",
-    "audio": "audio/chiffres-015.mp3",
+    "audio": "",
     "exemple": {
       "latin": "nos kilo d lmaticha",
       "arabe": "نص كيلو د الماطيشة",
       "fr": "Un demi-kilo de tomates",
-      "audio": "audio/chiffres-015-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -247,12 +247,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "der-hem : « r » roulé, « h » légèrement soufflé. Au pluriel (de 3 à 10) : drahem.",
-    "audio": "audio/chiffres-016.mp3",
+    "audio": "",
     "exemple": {
       "latin": "hada b derhem",
       "arabe": "هادا بدرهم",
       "fr": "Ça coûte un dirham",
-      "audio": "audio/chiffres-016-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -263,12 +263,12 @@
     "theme": "chiffres",
     "niveau": 1,
     "prononciation": "ch-7al : « ch » de « chat », puis le 7 (ح), un souffle chaud venu de la gorge.",
-    "audio": "audio/chiffres-017.mp3",
+    "audio": "",
     "exemple": {
       "latin": "ch7al hada?",
       "arabe": "شحال هادا؟",
       "fr": "C'est combien, ça ?",
-      "audio": "audio/chiffres-017-ex.mp3"
+      "audio": ""
     }
   },
   {
@@ -279,12 +279,12 @@
     "theme": "chiffres",
     "niveau": 2,
     "prononciation": "ch-7al f sa-3a : 7 (ح) soufflé au début, 3 (ع) serré à la fin.",
-    "audio": "audio/chiffres-018.mp3",
+    "audio": "",
     "exemple": {
       "latin": "sme7 lia, ch7al f sa3a?",
       "arabe": "سمح ليا، شحال فالساعة؟",
       "fr": "Excusez-moi, quelle heure est-il ?",
-      "audio": "audio/chiffres-018-ex.mp3"
+      "audio": ""
     }
   },
   {
