@@ -86,6 +86,7 @@ async def generer_edge(taches: list[tuple[str, Path]]) -> list[tuple[str, Path]]
                     print(f"[{faits}/{len(taches)}] {cible.relative_to(RACINE)} ← {texte}")
                     return
                 except Exception as erreur:  # réseau, limite de débit…
+                    temporaire.unlink(missing_ok=True)
                     print(f"  essai {essai}/{ESSAIS} raté pour {cible.name} : {erreur}", file=sys.stderr)
                     await asyncio.sleep(2 * essai)
             echecs.append((texte, cible))
