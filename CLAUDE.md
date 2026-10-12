@@ -40,7 +40,7 @@ Ne modifie jamais cette section sans demande explicite.
 npm run dev                         # serveur local (http://localhost:5173/Darijapp/)
 npm test                            # tests Vitest
 npm run build                       # build de production dans dist/
-python scripts/generate_audio.py    # génère les MP3 manquants (options --theme, --force)
+python scripts/generate_audio.py    # génère les MP3 manquants (options --theme, --force, --apercu)
 ```
 
 Publication : chaque push sur `main` lance la GitHub Action « Publier ». Elle génère les MP3 manquants et les commite (`github-actions[bot]`), lance les tests, construit l'appli et la publie sur https://mcofirty.github.io/Darijapp/. Pense à faire `git pull` avant de travailler, l'Action pouvant avoir ajouté des MP3. Le script audio demande `pip install torch transformers uroman` et ffmpeg, et un accès à Hugging Face (bloqué dans l'environnement cloud de Claude Code, ouvert sur GitHub Actions).
@@ -156,6 +156,7 @@ Progression d'un mot (IndexedDB) :
 - Tant que GitHub Pages n'est pas activé (Source « GitHub Actions »), le job `deploy` échoue avec une erreur 404 « Failed to create deployment ».
 - L'environnement cloud de Claude Code ne peut pas joindre mcofirty.github.io (proxy) : vérifier la mise en ligne par l'état du job `deploy`, pas par une requête au site.
 - Safari et le service worker gardent les icônes en cache par URL : pour changer une icône, changer aussi son nom de fichier (`logo-*.png`), puis supprimer et réinstaller l'appli sur l'écran d'accueil.
+- mms-tts-ara attend du texte romanisé (uroman) : romaniser l'arabe perd les voyelles (« alslam 'lykm »). Toujours partir du latin, et vérifier avec `--apercu`. Un 7 après k, s, g ou c reçoit une voyelle (k7la → kahla) pour ne pas devenir kh ou sh.
 - Les classes de verre doivent rester dans `@layer components` : hors couche, leur `position: relative` écrase `fixed`/`sticky` de Tailwind (la barre du bas avait disparu).
 - Après la génération des MP3, mets à jour la liste des fichiers mis en cache par la PWA pour que l'audio marche hors ligne.
 
@@ -185,6 +186,7 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 | 2026-10-10 | Socle PWA : 5 onglets, en-tête, base Dexie v1, réglage « afficher l'arabe » | `src/app/`, `src/db/`, `vite.config.ts` |
 | 2026-10-10 | 152 mots en 8 thèmes avec arabe, prononciation et exemple ; fiche mot, guide des sons, dictionnaire avec recherche | `src/data/`, `src/features/mots/`, `src/features/apprendre/`, `src/features/progres/` |
 | 2026-10-10 | Script de génération audio et lecture avec repli sur la synthèse vocale du téléphone | `scripts/generate_audio.py`, `src/audio/lecteur.ts` |
+| 2026-10-12 | Audio régénéré à partir de la translittération latine (avec voyelles) au lieu de l'arabe sans voyelles | `scripts/generate_audio.py`, `public/audio/` |
 | 2026-10-12 | Relecture du contenu : 40 mots ou exemples corrigés (ch7al, derhem/drahem, lma, 9ahwa k7la, maticha, articles alignés entre latin et arabe…) et test de cohérence latin/arabe | `src/data/*.json`, `src/data/data.test.ts` |
 | 2026-10-12 | Logo de l'appli (bulles « A » et « ش ») en favicon, icône d'écran d'accueil et icônes PWA | `public/logo-*.png` (copies `favicon.png` et `apple-touch-icon.png` pour les anciennes versions en cache) |
 | 2026-10-12 | Style liquid glass sur toute l'appli : fond coloré, cartes, en-tête, boutons interactifs, panneau de retour qui se transforme | `src/index.css`, `src/main.tsx`, composants de `src/features/` |
@@ -212,6 +214,7 @@ Jalon en cours : **2 — Exercices**, en cours : session du jour livrée ; reste
 - 2026-10-12 : les réponses ne sont enregistrées qu'en fin de session ; quitter en cours de route ne change rien, pour garder la répétition espacée cohérente.
 - 2026-10-12 : la série est calculée à partir de l'historique des sessions (table `sessions`), sans compteur stocké, pour qu'elle ne puisse pas se désynchroniser.
 - 2026-10-12 : sons de retour synthétisés par Web Audio, sans fichier à télécharger.
+- 2026-10-12 : la synthèse lit le champ `latin` converti en romanisation uroman (3 → ', 7 → h, 9 → q, ch → sh, ou → u), et non l'arabe : mms-tts-ara lit du romanisé, et l'arabe sans voyelles donnait des mots faux (سلام lu « slam »). Tous les MP3 ont été régénérés.
 - 2026-10-12 : le code SwiftUI d'Apple (`glassEffect`) ne s'applique qu'aux applis natives ; l'appli reste une PWA et reproduit le liquid glass en CSS. Pas de réfraction (filtres SVG dans `backdrop-filter` non pris en charge par Safari).
 - 2026-10-10 : pas de routeur ; navigation par état React, suffisante pour 5 onglets.
 
