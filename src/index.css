@@ -350,6 +350,8 @@ body {
     transform-origin: top;
     background: var(--separateur);
   }
+  /* Commande qui prolonge la cellule du dessus (contrôle segmenté sous « Thème ») : pas de séparateur. */
+  .liste > .sans-separateur::before { content: none; }
 
   /* Retour au toucher : léger enfoncement, comme les commandes iOS. */
   .pressable {
