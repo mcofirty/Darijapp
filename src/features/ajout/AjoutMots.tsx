@@ -39,7 +39,7 @@ function Champ({ libelle, valeur, erreur, arabe = false, onChange }: ChampProps)
 }
 
 /** Page cachée (lien « #ajout ») : ajouter, modifier et supprimer ses propres mots. */
-export function AjoutMots({ onFermer }: { onFermer: () => void }) {
+export function AjoutMots() {
   const mots = useLiveQuery(() => lireMotsPerso(), [])
   const [champs, setChamps] = useState<ChampsMot>(VIDE)
   const [enEdition, setEnEdition] = useState<string | null>(null)
@@ -68,7 +68,7 @@ export function AjoutMots({ onFermer }: { onFermer: () => void }) {
   }
 
   return (
-    <Page titre="Mes mots" retour={{ libelle: 'Appli', action: onFermer }}>
+    <Page titre="Mes mots">
       <form onSubmit={envoyer}>
         <Section
           titre={enEdition ? 'Modifier le mot' : 'Nouveau mot'}

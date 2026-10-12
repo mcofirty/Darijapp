@@ -42,11 +42,6 @@ export default function App() {
     return () => media.removeEventListener('change', suivre)
   }, [apparence])
 
-  function fermerAjout() {
-    history.replaceState(null, '', window.location.pathname + window.location.search)
-    setAjout(false)
-  }
-
   function changer(cible: Onglet) {
     const de = ONGLETS.findIndex((o) => o.id === onglet)
     const vers = ONGLETS.findIndex((o) => o.id === cible)
@@ -80,7 +75,7 @@ export default function App() {
   if (ajout) {
     return (
       <div className="min-h-dvh overflow-x-hidden pb-16">
-        <AjoutMots onFermer={fermerAjout} />
+        <AjoutMots />
       </div>
     )
   }
