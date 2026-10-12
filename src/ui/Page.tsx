@@ -11,8 +11,9 @@ interface Props {
 }
 
 /**
- * Écran avec grand titre iOS : le titre s'affiche en grand, puis une barre de navigation
- * compacte en verre apparaît quand il sort de l'écran au défilement.
+ * Écran avec grand titre iOS 26 : le titre s'affiche en grand ; au défilement, le contenu s'efface
+ * sous un bord flou et le titre passe en petit au centre. Les commandes de la barre (retour,
+ * accessoire) flottent dans des boutons en verre.
  */
 export function Page({ titre, retour, accessoire, children }: Props) {
   const repere = useRef<HTMLHeadingElement>(null)
@@ -21,28 +22,24 @@ export function Page({ titre, retour, accessoire, children }: Props) {
   useEffect(() => {
     const el = repere.current
     if (!el) return
-    const obs = new IntersectionObserver(([e]) => setCompact(!e.isIntersecting), { rootMargin: '-44px 0px 0px 0px' })
+    const obs = new IntersectionObserver(([e]) => setCompact(!e.isIntersecting), { rootMargin: '-52px 0px 0px 0px' })
     obs.observe(el)
     return () => obs.disconnect()
   }, [])
 
   return (
     <div>
-      <header
-        className={`fixed inset-x-0 top-0 z-10 pt-[env(safe-area-inset-top)] transition-[background-color,border-color] duration-200 ${
-          compact ? 'verre verre-barre' : ''
-        }`}
-      >
-        <div className="mx-auto flex h-11 max-w-xl items-center px-2">
+      <header className={`bord-flou fixed inset-x-0 top-0 z-10 pt-[env(safe-area-inset-top)] ${compact ? 'visible' : ''}`}>
+        <div className="mx-auto flex h-[3.25rem] max-w-xl items-center px-4">
           <div className="flex min-w-0 flex-1">
             {retour && (
               <button
                 type="button"
                 onClick={retour.action}
-                className="pressable flex min-h-11 items-center gap-0.5 pr-2 text-accent"
+                aria-label={`Retour : ${retour.libelle}`}
+                className="verre verre-fin pressable flex h-11 w-11 items-center justify-center rounded-full"
               >
-                <ChevronLeft className="h-7 w-7" strokeWidth={2.4} aria-hidden />
-                <span className="t-corps truncate">{retour.libelle}</span>
+                <ChevronLeft className="h-6 w-6 -translate-x-px" strokeWidth={2.4} aria-hidden />
               </button>
             )}
           </div>
@@ -52,15 +49,17 @@ export function Page({ titre, retour, accessoire, children }: Props) {
           >
             {titre}
           </p>
-          <div className="flex flex-1 justify-end pr-2">{compact && accessoire}</div>
+          <div className="flex flex-1 justify-end">
+            {compact && accessoire && <div className="verre verre-fin flex h-11 items-center rounded-full px-1">{accessoire}</div>}
+          </div>
         </div>
       </header>
-      <div className="mx-auto max-w-xl px-4 pt-[calc(env(safe-area-inset-top)+2.75rem)]">
+      <div className="mx-auto max-w-xl px-4 pt-[calc(env(safe-area-inset-top)+3.25rem)]">
         <div className="flex items-end justify-between gap-3 pb-2 pt-1">
           <h1 ref={repere} className="t-grand-titre">
             {titre}
           </h1>
-          {accessoire && <div className="pb-1.5">{accessoire}</div>}
+          {accessoire && <div className="mb-1.5 rounded-full bg-carte">{accessoire}</div>}
         </div>
         {children}
       </div>

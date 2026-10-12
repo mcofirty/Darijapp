@@ -4,6 +4,7 @@ import { useState, type FormEvent } from 'react'
 import { MOTS } from '../../data'
 import { lienDeMot, motValide, validerMot, type ChampsMot } from '../../data/motsPerso'
 import { ajouterMot, lireMotsPerso, modifierMot, supprimerMot } from '../../db/motsPerso'
+import { Alerte } from '../../ui/Alerte'
 import { Bouton, Vide } from '../../ui/Boutons'
 import { Ligne, Section } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
@@ -45,6 +46,7 @@ export function AjoutMots() {
   const [champs, setChamps] = useState<ChampsMot>(VIDE)
   const [enEdition, setEnEdition] = useState<string | null>(null)
   const [afficheErreurs, setAfficheErreurs] = useState(false)
+  const [aSupprimer, setASupprimer] = useState<{ id: string; latin: string } | null>(null)
   const erreurs = afficheErreurs ? validerMot(champs) : {}
 
   function maj(cle: keyof ChampsMot, valeur: string) {
@@ -150,9 +152,7 @@ export function AjoutMots() {
                     type="button"
                     aria-label={`Supprimer ${m.latin}`}
                     className="pressable flex h-11 w-11 items-center justify-center text-accent"
-                    onClick={() => {
-                      if (window.confirm(`Supprimer « ${m.latin} » et sa progression ?`)) void supprimerMot(m.id)
-                    }}
+                    onClick={() => setASupprimer(m)}
                   >
                     <Trash2 className="h-5 w-5" aria-hidden />
                   </button>
@@ -179,6 +179,24 @@ export function AjoutMots() {
           />
         ))}
       </Section>
+      {aSupprimer && (
+        <Alerte
+          titre={`Supprimer « ${aSupprimer.latin} » ?`}
+          message="Le mot et sa progression seront effacés."
+          onAnnuler={() => setASupprimer(null)}
+          actions={[
+            { libelle: 'Annuler', role: 'annuler', action: () => setASupprimer(null) },
+            {
+              libelle: 'Supprimer',
+              role: 'destructif',
+              action: () => {
+                void supprimerMot(aSupprimer.id)
+                setASupprimer(null)
+              },
+            },
+          ]}
+        />
+      )}
     </Page>
   )
 }

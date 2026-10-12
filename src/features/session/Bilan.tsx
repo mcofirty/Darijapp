@@ -32,7 +32,7 @@ export function Bilan({ bilan, taux, onFermer, onEncore }: Props) {
           />
         ))}
       </div>
-      <div className="relative mx-auto flex min-h-full max-w-xl flex-col justify-center px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-[calc(env(safe-area-inset-top)+2rem)]">
+      <div className="relative mx-auto flex min-h-full max-w-xl flex-col justify-center px-4 pb-[calc(max(0.75rem,env(safe-area-inset-bottom))+9rem)] pt-[calc(env(safe-area-inset-top)+2rem)]">
         <h2 className="t-grand-titre mb-1 text-center">Session terminée</h2>
         <p className="t-appel mb-8 text-center text-texte-2">
           {bilan.nouveaux > 0
@@ -44,11 +44,14 @@ export function Bilan({ bilan, taux, onFermer, onEncore }: Props) {
           <Ligne tuile={<Tuile icone={Target} couleur="#34c759" />} titre="Réussite" valeur={`${Math.round(taux * 100)} %`} />
           <Ligne tuile={<Tuile icone={Flame} couleur="#ff3b30" />} titre="Série" valeur={`${serie.jours} jour${serie.jours > 1 ? 's' : ''}`} />
         </Section>
-        <div className="space-y-2">
+      </div>
+      {/* Commandes dans un panneau en verre, comme le panneau « Continuer » de la session. */}
+      <div className="fixed inset-x-0 bottom-0 px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2">
+        <div className="verre mx-auto flex max-w-xl flex-col gap-2 rounded-[2rem] p-3">
           <Bouton grand className="w-full" onClick={onEncore}>
             Encore une session
           </Bouton>
-          <Bouton grand variante="teinte" className="w-full" onClick={onFermer}>
+          <Bouton grand variante="gris" className="w-full" onClick={onFermer}>
             Terminer
           </Bouton>
         </div>

@@ -6,6 +6,7 @@ import type { Mot } from '../../data/types'
 import { useMots } from '../../db/motsPerso'
 import { enregistrerSession, type BilanSession } from '../../db/apprentissage'
 import { Resultats, etapeARefaire, type Etape } from '../../exercices/session'
+import { Alerte } from '../../ui/Alerte'
 import { Bouton } from '../../ui/Boutons'
 import { Bilan } from './Bilan'
 import { Choix } from './Choix'
@@ -28,6 +29,7 @@ export function Session({ etapes: depart, nouveaux, entrainement, onFermer, onEn
   const [index, setIndex] = useState(0)
   const [retour, setRetour] = useState<Retour | null>(null)
   const [bilan, setBilan] = useState<BilanSession | null>(null)
+  const [confirmer, setConfirmer] = useState(false)
   const resultats = useRef(new Resultats())
   const MOTS = useMots()
   const etape = etapes[index]
@@ -55,37 +57,36 @@ export function Session({ etapes: depart, nouveaux, entrainement, onFermer, onEn
     )
   }
 
-  function quitter() {
-    if (window.confirm('Quitter la session ? Les réponses de cette session ne seront pas enregistrées.')) onFermer()
-  }
-
   if (bilan) return <Bilan bilan={bilan} taux={resultats.current.taux} onFermer={onFermer} onEncore={onEncore} />
 
   return (
-    <div data-sans-balayage className="fixed inset-0 z-30 flex flex-col bg-fond pt-[env(safe-area-inset-top)]">
-      <div className="mx-auto flex w-full max-w-xl items-center gap-3 px-4 py-2">
-        <button
-          type="button"
-          onClick={quitter}
-          aria-label="Quitter la session"
-          className="pressable flex h-11 w-11 items-center justify-center rounded-full"
-        >
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-remplissage text-texte-2">
-            <X className="h-[18px] w-[18px]" strokeWidth={2.6} aria-hidden />
-          </span>
-        </button>
-        <div
-          className="h-2 flex-1 overflow-hidden rounded-full bg-remplissage"
-          role="progressbar"
-          aria-valuenow={index}
-          aria-valuemax={etapes.length}
-          aria-label="Progression de la session"
-        >
-          <div className="h-full rounded-full bg-accent transition-[width] duration-500" style={{ width: `${(index / etapes.length) * 100}%` }} />
+    <div data-sans-balayage className="fixed inset-0 z-30 flex flex-col bg-fond">
+      {/* Barre du haut en verre, au-dessus du contenu qui défile dessous (bord flou d'iOS 26). */}
+      <div className="bord-flou visible absolute inset-x-0 top-0 z-10 pt-[env(safe-area-inset-top)]">
+        <div className="mx-auto flex w-full max-w-xl items-center gap-2 px-4 py-2">
+          <button
+            type="button"
+            onClick={() => setConfirmer(true)}
+            aria-label="Quitter la session"
+            className="verre verre-fin pressable flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
+          >
+            <X className="h-5 w-5" strokeWidth={2.4} aria-hidden />
+          </button>
+          <div className="verre verre-fin flex h-11 flex-1 items-center rounded-full px-4">
+            <div
+              className="h-2 flex-1 overflow-hidden rounded-full bg-remplissage"
+              role="progressbar"
+              aria-valuenow={index}
+              aria-valuemax={etapes.length}
+              aria-label="Progression de la session"
+            >
+              <div className="h-full rounded-full bg-accent transition-[width] duration-500" style={{ width: `${(index / etapes.length) * 100}%` }} />
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="mx-auto w-full max-w-xl flex-1 overflow-y-auto px-4 pb-6 pt-4">
+      <div className="mx-auto w-full max-w-xl flex-1 overflow-y-auto px-4 pb-6 pt-[calc(env(safe-area-inset-top)+4.5rem)]">
         <div key={index} className="entree-droite">
           {etape.type === 'decouverte' && <Decouverte mot={etape.mot} />}
           {(etape.type === 'ecoute' || etape.type === 'traduis') && (
@@ -136,6 +137,18 @@ export function Session({ etapes: depart, nouveaux, entrainement, onFermer, onEn
             </Bouton>
           </div>
         </div>
+      )}
+
+      {confirmer && (
+        <Alerte
+          titre="Quitter la session ?"
+          message="Les réponses de cette session ne seront pas enregistrées."
+          onAnnuler={() => setConfirmer(false)}
+          actions={[
+            { libelle: 'Continuer', role: 'annuler', action: () => setConfirmer(false) },
+            { libelle: 'Quitter', role: 'destructif', action: onFermer },
+          ]}
+        />
       )}
     </div>
   )

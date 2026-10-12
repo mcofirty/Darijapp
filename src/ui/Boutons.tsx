@@ -1,4 +1,5 @@
-import type { ButtonHTMLAttributes, ReactNode } from 'react'
+import { useRef, useState, type ButtonHTMLAttributes, type PointerEvent, type ReactNode } from 'react'
+import { ongletLePlusProche, positionSousLeDoigt } from '../app/glisser'
 
 type Variante = 'plein' | 'teinte' | 'gris'
 
@@ -29,7 +30,10 @@ export function Bouton({ variante = 'plein', grand = false, className = '', chil
   )
 }
 
-/** Contrôle segmenté iOS. */
+/**
+ * Contrôle segmenté iOS 26 : on touche un segment ou on fait glisser le curseur. Pendant le geste,
+ * le curseur devient une goutte de verre qui suit le doigt, puis se cale avec un rebond.
+ */
 export function Segmente<T extends string>({
   options,
   valeur,
@@ -39,28 +43,95 @@ export function Segmente<T extends string>({
   valeur: T
   onChange: (id: T) => void
 }) {
+  const n = options.length
+  const indexActif = Math.max(options.findIndex((o) => o.id === valeur), 0)
+  const rail = useRef<HTMLDivElement>(null)
+  const departX = useRef<number | null>(null)
+  const [position, setPosition] = useState<number | null>(null)
+
+  function positionDe(x: number) {
+    const r = rail.current!.getBoundingClientRect()
+    return positionSousLeDoigt(x, r.left, r.width, n)
+  }
+
+  function debut(e: PointerEvent<HTMLDivElement>) {
+    e.currentTarget.setPointerCapture(e.pointerId)
+    departX.current = e.clientX
+    // Appui sur le segment actif : le curseur devient tout de suite une goutte de verre.
+    if (ongletLePlusProche(positionDe(e.clientX), n) === indexActif) setPosition(indexActif)
+  }
+
+  function deplacement(e: PointerEvent<HTMLDivElement>) {
+    if (departX.current === null) return
+    if (position === null && Math.abs(e.clientX - departX.current) < 6) return
+    setPosition(positionDe(e.clientX))
+  }
+
+  function fin(e: PointerEvent<HTMLDivElement>) {
+    if (departX.current === null) return
+    departX.current = null
+    const cible = ongletLePlusProche(positionDe(e.clientX), n)
+    setPosition(null)
+    if (cible !== indexActif) onChange(options[cible].id)
+  }
+
+  function annulation() {
+    departX.current = null
+    setPosition(null)
+  }
+
+  const glisse = position !== null
+  const affiche = glisse ? ongletLePlusProche(position, n) : indexActif
   return (
-    <div role="tablist" className="flex rounded-[9px] bg-remplissage p-0.5">
-      {options.map((o) => (
-        <button
-          key={o.id}
-          type="button"
-          role="tab"
-          aria-selected={valeur === o.id}
-          onClick={() => onChange(o.id)}
-          className={`t-sous-titre min-h-8 flex-1 rounded-[7px] font-semibold transition-colors ${
-            valeur === o.id ? 'bg-[var(--segment-actif)] shadow-[0_3px_8px_rgba(0,0,0,0.12),0_3px_1px_rgba(0,0,0,0.04)]' : ''
+    <div className="rounded-full bg-remplissage p-0.5">
+      <div
+        ref={rail}
+        role="tablist"
+        data-sans-balayage
+        className="relative flex touch-pan-y select-none"
+        onPointerDown={debut}
+        onPointerMove={deplacement}
+        onPointerUp={fin}
+        onPointerCancel={annulation}
+      >
+        <span
+          aria-hidden
+          className={`pointer-events-none absolute inset-y-0 left-0 rounded-full ${
+            glisse ? 'lentille-goutte' : 'lentille-ressort bg-[var(--segment-actif)] shadow-[0_3px_8px_rgba(0,0,0,0.12),0_3px_1px_rgba(0,0,0,0.04)]'
           }`}
-        >
-          {o.libelle}
-        </button>
-      ))}
+          style={{
+            width: `${100 / n}%`,
+            transform: `translateX(${(position ?? indexActif) * 100}%) scale(${glisse ? '1.06, 1.25' : '1'})`,
+          }}
+        />
+        {options.map((o, i) => (
+          <button
+            key={o.id}
+            type="button"
+            role="tab"
+            aria-selected={valeur === o.id}
+            onClick={(e) => {
+              // Clavier ou lecteur d'écran (sans pointeur) : changement direct.
+              if (e.detail === 0) onChange(o.id)
+            }}
+            className={`t-sous-titre relative min-h-8 flex-1 rounded-full font-semibold transition-transform duration-150 ${
+              glisse && affiche === i ? 'scale-105' : ''
+            }`}
+          >
+            {o.libelle}
+          </button>
+        ))}
+      </div>
     </div>
   )
 }
 
-/** Interrupteur iOS (51 × 31 pt). */
+/**
+ * Interrupteur iOS 26 (64 × 28 pt, pastille en capsule). Pendant l'appui, la pastille grossit et
+ * devient une goutte de verre.
+ */
 export function Interrupteur({ actif, onChange, libelle }: { actif: boolean; onChange: (v: boolean) => void; libelle: string }) {
+  const [appui, setAppui] = useState(false)
   return (
     <button
       type="button"
@@ -68,12 +139,17 @@ export function Interrupteur({ actif, onChange, libelle }: { actif: boolean; onC
       aria-checked={actif}
       aria-label={libelle}
       onClick={() => onChange(!actif)}
-      className={`relative h-[31px] w-[51px] shrink-0 rounded-full transition-colors duration-200 ${actif ? 'bg-vert-vif' : 'bg-remplissage'}`}
+      onPointerDown={() => setAppui(true)}
+      onPointerUp={() => setAppui(false)}
+      onPointerLeave={() => setAppui(false)}
+      onPointerCancel={() => setAppui(false)}
+      className={`relative h-[28px] w-[64px] shrink-0 rounded-full transition-colors duration-200 ${actif ? 'bg-vert-vif' : 'bg-remplissage'}`}
     >
       <span
-        className={`absolute left-[2px] top-[2px] h-[27px] w-[27px] rounded-full bg-white shadow-[0_3px_8px_rgba(0,0,0,0.15),0_3px_1px_rgba(0,0,0,0.06)] transition-transform duration-200 ${
-          actif ? 'translate-x-5' : ''
+        className={`lentille-ressort absolute left-[2px] top-[2px] h-[24px] w-[38px] rounded-full ${
+          appui ? 'lentille-goutte' : 'bg-white shadow-[0_3px_8px_rgba(0,0,0,0.15),0_3px_1px_rgba(0,0,0,0.06)]'
         }`}
+        style={{ transform: `translateX(${actif ? 22 : 0}px) scale(${appui ? '1.3, 1.45' : '1'})` }}
       />
     </button>
   )

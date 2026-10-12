@@ -22,7 +22,7 @@ function Serie() {
   const { serie } = useResume()
   return (
     <span
-      className={`t-appel inline-flex items-center gap-1 rounded-full bg-carte px-3 py-1 font-semibold ${serie.aujourdhui ? 'text-accent' : 'text-texte-2'}`}
+      className={`t-appel inline-flex items-center gap-1 px-3 py-1 font-semibold ${serie.aujourdhui ? 'text-accent' : 'text-texte-2'}`}
       aria-label={`Série : ${serie.jours} jours`}
     >
       <Flame className="h-4 w-4" strokeWidth={2.5} fill={serie.aujourdhui ? 'currentColor' : 'none'} aria-hidden />

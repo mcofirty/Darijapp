@@ -83,7 +83,7 @@ export default function App() {
 
   if (proposition) {
     return (
-      <div className="min-h-dvh overflow-x-hidden pb-16">
+      <div className="min-h-dvh overflow-x-clip pb-16">
         <Proposition mot={proposition} onTermine={quitterLien} />
       </div>
     )
@@ -91,14 +91,14 @@ export default function App() {
 
   if (ajout) {
     return (
-      <div className="min-h-dvh overflow-x-hidden pb-16">
+      <div className="min-h-dvh overflow-x-clip pb-16">
         <AjoutMots />
       </div>
     )
   }
 
   return (
-    <div className="min-h-dvh overflow-x-hidden" onTouchStart={debutToucher} onTouchEnd={finToucher}>
+    <div className="min-h-dvh overflow-x-clip" onTouchStart={debutToucher} onTouchEnd={finToucher}>
       <main key={onglet} className={`pb-32 ${entree}`}>
         {onglet === 'apprendre' && <Apprendre />}
         {onglet === 'parcours' && <Parcours />}
