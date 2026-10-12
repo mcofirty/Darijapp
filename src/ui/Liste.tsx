@@ -1,12 +1,25 @@
 import { ChevronRight, type LucideIcon } from 'lucide-react'
 import type { ReactNode } from 'react'
 
-/** Section de liste groupée (style Réglages) : en-tête, cellules arrondies, note de bas. */
-export function Section({ titre, note, children }: { titre?: string; note?: string; children: ReactNode }) {
+/**
+ * Section de liste groupée (style Réglages) : en-tête, cellules arrondies, note de bas.
+ * `arrondi` remplace le rayon quand la carte se termine par une commande en capsule (rayon concentrique).
+ */
+export function Section({
+  titre,
+  note,
+  arrondi = 'rounded-liste',
+  children,
+}: {
+  titre?: string
+  note?: string
+  arrondi?: string
+  children: ReactNode
+}) {
   return (
     <section className="mb-[26px]">
       {titre && <h2 className="t-gras mb-2 px-marge text-texte-2">{titre}</h2>}
-      <div className="liste overflow-hidden rounded-liste bg-carte">
+      <div className={`liste overflow-hidden bg-carte ${arrondi}`}>
         {children}
       </div>
       {note && <p className="t-note mt-2 px-marge text-texte-2">{note}</p>}
