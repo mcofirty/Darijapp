@@ -6,13 +6,13 @@
     "fr": "bonne",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "mzya-na : « mzyana » d'un trait, l'accent sur « ya ».",
     "audio": "audio/adjectifs-001.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had lmakla mzyana bzaf",
+      "arabe": "هاد الماكلة مزيانة بزاف",
+      "fr": "Cette nourriture est très bonne",
+      "audio": "audio/adjectifs-001-ex.mp3"
     }
   },
   {
@@ -22,13 +22,13 @@
     "fr": "mauvais / laid / moche / mal",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kha-yeb : raclement (kh) au début.",
     "audio": "audio/adjectifs-002.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ljaw khayeb lyom",
+      "arabe": "الجو خايب اليوم",
+      "fr": "Il fait mauvais aujourd'hui",
+      "audio": "audio/adjectifs-002-ex.mp3"
     }
   },
   {
@@ -38,13 +38,13 @@
     "fr": "mauvaise",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "khay-ba : raclement (kh) au début.",
     "audio": "audio/adjectifs-003.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had lfikra khayba",
+      "arabe": "هاد الفكرة خايبة",
+      "fr": "Cette idée est mauvaise",
+      "audio": "audio/adjectifs-003-ex.mp3"
     }
   },
   {
@@ -54,13 +54,13 @@
     "fr": "facile",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "s-hel : « s » puis « hel » avec un « h » expiré.",
     "audio": "audio/adjectifs-004.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had ttamrin shel",
+      "arabe": "هاد التمرين سهل",
+      "fr": "Cet exercice est facile",
+      "audio": "audio/adjectifs-004-ex.mp3"
     }
   },
   {
@@ -70,13 +70,13 @@
     "fr": "difficile",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "s3ib : un « s » épais, le 3 serré.",
     "audio": "audio/adjectifs-005.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddarija machi s3iba",
+      "arabe": "الدارجة ماشي صعيبة",
+      "fr": "Le darija n'est pas difficile",
+      "audio": "audio/adjectifs-005-ex.mp3"
     }
   },
   {
@@ -86,13 +86,13 @@
     "fr": "simple",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bsit : un « s » épais, le « t » final épais aussi.",
     "audio": "audio/adjectifs-006.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmakla dyalo bsita",
+      "arabe": "الماكلة ديالو بسيطة",
+      "fr": "Sa cuisine est simple",
+      "audio": "audio/adjectifs-006-ex.mp3"
     }
   },
   {
@@ -102,13 +102,13 @@
     "fr": "compliqué",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "m3e-9ed : le 3 serré, le 9 du fond de la gorge.",
     "audio": "audio/adjectifs-007.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmochkil m3e9ed",
+      "arabe": "المشكل معقد",
+      "fr": "Le problème est compliqué",
+      "audio": "audio/adjectifs-007-ex.mp3"
     }
   },
   {
@@ -118,13 +118,13 @@
     "fr": "possible / c'est possible",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "mom-kin : le « m » doublé.",
     "audio": "audio/adjectifs-008.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "momkin nji m3ak?",
+      "arabe": "ممكن نجي معاك؟",
+      "fr": "Je peux venir avec toi ?",
+      "audio": "audio/adjectifs-008-ex.mp3"
     }
   },
   {
@@ -134,13 +134,13 @@
     "fr": "impossible",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "mos-ta-7il : souffle chaud (7) au milieu.",
     "audio": "audio/adjectifs-009.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hadchi mosta7il",
+      "arabe": "هادشي مستحيل",
+      "fr": "C'est impossible",
+      "audio": "audio/adjectifs-009-ex.mp3"
     }
   },
   {
@@ -150,13 +150,13 @@
     "fr": "important",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "mo-him : « h » expiré.",
     "audio": "audio/adjectifs-010.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had lmaw9i3 mohim bzaf",
+      "arabe": "هاد الموقع مهم بزاف",
+      "fr": "Ce site est très important",
+      "audio": "audio/adjectifs-010-ex.mp3"
     }
   },
   {
@@ -166,13 +166,13 @@
     "fr": "nécessaire",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "da-ro-ri : un « d » épais.",
     "audio": "audio/adjectifs-011.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "darori tji ghedda",
+      "arabe": "ضروري تجي غدا",
+      "fr": "Il faut absolument que tu viennes demain",
+      "audio": "audio/adjectifs-011-ex.mp3"
     }
   },
   {
@@ -182,13 +182,13 @@
     "fr": "utile",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "mo-fid : l'accent sur « fid ».",
     "audio": "audio/adjectifs-012.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had lktab mofid bzaf",
+      "arabe": "هاد الكتاب مفيد بزاف",
+      "fr": "Ce livre est très utile",
+      "audio": "audio/adjectifs-012-ex.mp3"
     }
   },
   {
@@ -198,13 +198,13 @@
     "fr": "inutile",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bla fay-da : « fayda » en deux syllabes.",
     "audio": "audio/adjectifs-013.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lhedra bla fayda",
+      "arabe": "الهضرة بلا فايدة",
+      "fr": "Parler ne sert à rien",
+      "audio": "audio/adjectifs-013-ex.mp3"
     }
   },
   {
@@ -214,13 +214,13 @@
     "fr": "vrai / correct",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "s7i7 : deux souffles chauds (7).",
     "audio": "audio/adjectifs-014.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hadchi s7i7, 3ndek l7e9",
+      "arabe": "هادشي صحيح، عندك الحق",
+      "fr": "C'est vrai, tu as raison",
+      "audio": "audio/adjectifs-014-ex.mp3"
     }
   },
   {
@@ -230,13 +230,13 @@
     "fr": "faux",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "gha-let : « gh » grasseyé.",
     "audio": "audio/adjectifs-015.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nta ghalet f l7sab",
+      "arabe": "نتا غالط ف الحساب",
+      "fr": "Tu t'es trompé dans le calcul",
+      "audio": "audio/adjectifs-015-ex.mp3"
     }
   },
   {
@@ -246,13 +246,13 @@
     "fr": "incorrect",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma-chi s7i7 : « ch » de « chat », deux souffles chauds.",
     "audio": "audio/adjectifs-016.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had lkhbar machi s7i7",
+      "arabe": "هاد الخبار ماشي صحيح",
+      "fr": "Cette nouvelle n'est pas vraie",
+      "audio": "audio/adjectifs-016-ex.mp3"
     }
   },
   {
@@ -262,13 +262,13 @@
     "fr": "sûr / certain",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "mte2-k-ked : petit arrêt (2), le « k » doublé.",
     "audio": "audio/adjectifs-017.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nta mte2kked?",
+      "arabe": "نتا متأكد؟",
+      "fr": "Tu es sûr ?",
+      "audio": "audio/adjectifs-017-ex.mp3"
     }
   },
   {
@@ -278,13 +278,13 @@
     "fr": "dangereux",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kha-ter : raclement (kh) au début.",
     "audio": "audio/adjectifs-018.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had ttri9 khatera f llil",
+      "arabe": "هاد الطريق خطيرة ف الليل",
+      "fr": "Cette route est dangereuse la nuit",
+      "audio": "audio/adjectifs-018-ex.mp3"
     }
   },
   {
@@ -294,13 +294,13 @@
     "fr": "sûr (sans danger)",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "amn : « a » puis « mn » d'un trait.",
     "audio": "audio/adjectifs-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7ouma amna",
+      "arabe": "الحومة أمنة",
+      "fr": "Le quartier est sûr",
+      "audio": "audio/adjectifs-019-ex.mp3"
     }
   },
   {
@@ -310,13 +310,13 @@
     "fr": "propre",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "n9i : le 9 tiré du fond de la gorge.",
     "audio": "audio/adjectifs-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbit n9i daba",
+      "arabe": "البيت نقي دابا",
+      "fr": "La chambre est propre maintenant",
+      "audio": "audio/adjectifs-020-ex.mp3"
     }
   },
   {
@@ -326,13 +326,13 @@
     "fr": "sale",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "mwes-sekh : le « s » doublé, raclement (kh) à la fin.",
     "audio": "audio/adjectifs-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7wayjek mwessekhin",
+      "arabe": "حوايجك موسخين",
+      "fr": "Tes vêtements sont sales",
+      "audio": "audio/adjectifs-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "ancien",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "9dim : le 9 tiré du fond de la gorge.",
     "audio": "audio/adjectifs-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmdina l9dima zwina",
+      "arabe": "المدينة القديمة زوينة",
+      "fr": "La médina est belle",
+      "audio": "audio/adjectifs-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "moderne",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3as-ri : le 3 serré au début.",
     "audio": "audio/adjectifs-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrina ddar 3asriya",
+      "arabe": "شرينا دار عصرية",
+      "fr": "Nous avons acheté une maison moderne",
+      "audio": "audio/adjectifs-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "traditionnel",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ta9-li-di : le 9 du fond de la gorge.",
     "audio": "audio/adjectifs-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "llbsa ta9lidiya f l3ers",
+      "arabe": "اللبسة تقليدية ف العرس",
+      "fr": "La tenue traditionnelle au mariage",
+      "audio": "audio/adjectifs-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "immense",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kbir bzaf : deux mots, le « z » appuyé.",
     "audio": "audio/adjectifs-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ssou9 kbir bzaf",
+      "arabe": "السوق كبير بزاف",
+      "fr": "Le souk est immense",
+      "audio": "audio/adjectifs-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "minuscule",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "sghir bzaf : « gh » grasseyé.",
     "audio": "audio/adjectifs-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbit sghir bzaf",
+      "arabe": "البيت صغير بزاف",
+      "fr": "La chambre est minuscule",
+      "audio": "audio/adjectifs-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "léger",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "khfif : raclement (kh) au début.",
     "audio": "audio/adjectifs-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l3cha khfif",
+      "arabe": "العشا خفيف",
+      "fr": "Le dîner est léger",
+      "audio": "audio/adjectifs-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "lourd",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "t9il : le 9 du fond de la gorge.",
     "audio": "audio/adjectifs-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lvaliza t9ila",
+      "arabe": "الفاليزة تقيلة",
+      "fr": "La valise est lourde",
+      "audio": "audio/adjectifs-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "plein",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3a-mer : le 3 serré au début.",
     "audio": "audio/adjectifs-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttobis 3amer",
+      "arabe": "الطوبيس عامر",
+      "fr": "Le bus est plein",
+      "audio": "audio/adjectifs-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "vide",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kha-wi : raclement (kh) au début.",
     "audio": "audio/adjectifs-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lfrigo khawi",
+      "arabe": "الفريگو خاوي",
+      "fr": "Le frigo est vide",
+      "audio": "audio/adjectifs-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "sec",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "na-chef : « ch » de « chat ».",
     "audio": "audio/adjectifs-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ssabon nachef",
+      "arabe": "الصابون ناشف",
+      "fr": "Le savon est sec",
+      "audio": "audio/adjectifs-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "mouillé",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "mbel-lel : le « l » doublé.",
     "audio": "audio/adjectifs-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ssebbat mbellel b lma",
+      "arabe": "الصباط مبلل بالما",
+      "fr": "La chaussure est mouillée",
+      "audio": "audio/adjectifs-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "dur",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "9a-se7 : 9 du fond de la gorge, souffle chaud (7) à la fin.",
     "audio": "audio/adjectifs-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lkhobz 9ase7",
+      "arabe": "الخبز قاصح",
+      "fr": "Le pain est dur",
+      "audio": "audio/adjectifs-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "mou",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "rtib : le r roulé.",
     "audio": "audio/adjectifs-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lkhobz mazal rtib",
+      "arabe": "الخبز مازال رطب",
+      "fr": "Le pain est encore mou",
+      "audio": "audio/adjectifs-034-ex.mp3"
     }
   },
   {
@@ -550,13 +550,13 @@
     "fr": "solide / fort",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "9wi : le 9 du fond de la gorge.",
     "audio": "audio/adjectifs-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "atay 9wi bzaf",
+      "arabe": "أتاي قوي بزاف",
+      "fr": "Le thé est très fort",
+      "audio": "audio/adjectifs-035-ex.mp3"
     }
   },
   {
@@ -566,13 +566,13 @@
     "fr": "fragile",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "s-hel ytek-ser : « sh » sans « ch », le « k » doublé.",
     "audio": "audio/adjectifs-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7di, had lkas shel ytkesser",
+      "arabe": "حضي، هاد الكاس سهل يتكسر",
+      "fr": "Attention, ce verre est fragile",
+      "audio": "audio/adjectifs-036-ex.mp3"
     }
   },
   {
@@ -582,13 +582,13 @@
     "fr": "faible",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "d3if : un « d » épais, le 3 serré.",
     "audio": "audio/adjectifs-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lwifi d3if hna",
+      "arabe": "الويفي ضعيف هنا",
+      "fr": "Le wifi est faible ici",
+      "audio": "audio/adjectifs-037-ex.mp3"
     }
   },
   {
@@ -598,13 +598,13 @@
     "fr": "rapide",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "sri3 : le 3 serré à la fin.",
     "audio": "audio/adjectifs-038.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttran sri3 men ttobis",
+      "arabe": "التران سريع من الطوبيس",
+      "fr": "Le train est plus rapide que le bus",
+      "audio": "audio/adjectifs-038-ex.mp3"
     }
   },
   {
@@ -614,13 +614,13 @@
     "fr": "lent",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bti2 : petit arrêt (2) à la fin.",
     "audio": "audio/adjectifs-039.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l2internet bti2 lyom",
+      "arabe": "الأنترنيت بطيء اليوم",
+      "fr": "Internet est lent aujourd'hui",
+      "audio": "audio/adjectifs-039-ex.mp3"
     }
   },
   {
@@ -630,13 +630,13 @@
     "fr": "haut",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3a-li : le 3 serré au début.",
     "audio": "audio/adjectifs-040.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had ljbel 3ali bzaf",
+      "arabe": "هاد الجبل عالي بزاف",
+      "fr": "Cette montagne est très haute",
+      "audio": "audio/adjectifs-040-ex.mp3"
     }
   },
   {
@@ -646,13 +646,13 @@
     "fr": "bas",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ha-bet : « h » expiré.",
     "audio": "audio/adjectifs-041.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ssot habet bzaf",
+      "arabe": "الصوت هابط بزاف",
+      "fr": "Le son est trop bas",
+      "audio": "audio/adjectifs-041-ex.mp3"
     }
   },
   {
@@ -662,13 +662,13 @@
     "fr": "riche",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ghni : « gh » grasseyé.",
     "audio": "audio/adjectifs-042.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "howa ghni walakin bkhil",
+      "arabe": "هو غني ولكن بخيل",
+      "fr": "Il est riche mais avare",
+      "audio": "audio/adjectifs-042-ex.mp3"
     }
   },
   {
@@ -678,13 +678,13 @@
     "fr": "pauvre",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "f9ir : le 9 du fond de la gorge.",
     "audio": "audio/adjectifs-043.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3awen nnas lf9ara",
+      "arabe": "عاون الناس الفقرا",
+      "fr": "Aide les gens pauvres",
+      "audio": "audio/adjectifs-043-ex.mp3"
     }
   },
   {
@@ -694,13 +694,13 @@
     "fr": "vieux",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kbir f s-sen : le « s » doublé.",
     "audio": "audio/adjectifs-044.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jari kbir f ssen",
+      "arabe": "جاري كبير ف السن",
+      "fr": "Mon voisin est âgé",
+      "audio": "audio/adjectifs-044-ex.mp3"
     }
   },
   {
@@ -710,13 +710,13 @@
     "fr": "occupé",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "mche-ghoul : « ch » de « chat », « gh » grasseyé.",
     "audio": "audio/adjectifs-045.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sme7 lia, ana mcheghoul daba",
+      "arabe": "سمح ليا، أنا مشغول دابا",
+      "fr": "Pardon, je suis occupé maintenant",
+      "audio": "audio/adjectifs-045-ex.mp3"
     }
   },
   {
@@ -726,13 +726,13 @@
     "fr": "libre / disponible",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "fa-regh : « gh » grasseyé à la fin.",
     "audio": "audio/adjectifs-046.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach nta fargh had l3chiya?",
+      "arabe": "واش نتا فارغ هاد العشية؟",
+      "fr": "Tu es libre ce soir ?",
+      "audio": "audio/adjectifs-046-ex.mp3"
     }
   },
   {
@@ -742,13 +742,13 @@
     "fr": "prêt",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wa-jed : comme « wadjed ».",
     "audio": "audio/adjectifs-047.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana wajed, yallah",
+      "arabe": "أنا واجد، يالله",
+      "fr": "Je suis prêt, allons-y",
+      "audio": "audio/adjectifs-047-ex.mp3"
     }
   },
   {
@@ -758,13 +758,13 @@
     "fr": "reposé",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "mer-ta7 : souffle chaud (7) à la fin.",
     "audio": "audio/adjectifs-048.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana merta7 hna",
+      "arabe": "أنا مرتاح هنا",
+      "fr": "Je suis bien ici",
+      "audio": "audio/adjectifs-048-ex.mp3"
     }
   },
   {
@@ -774,13 +774,13 @@
     "fr": "éveillé",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "fa-ye9 : le 9 du fond de la gorge à la fin.",
     "audio": "audio/adjectifs-049.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana faye9 men ssta",
+      "arabe": "أنا فايق من الستة",
+      "fr": "Je suis réveillé depuis six heures",
+      "audio": "audio/adjectifs-049-ex.mp3"
     }
   },
   {
@@ -790,13 +790,13 @@
     "fr": "endormi",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "na-3es : le 3 serré.",
     "audio": "audio/adjectifs-050.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddrri na3es, hder b chwiya",
+      "arabe": "الدري ناعس، هضر بشوية",
+      "fr": "L'enfant dort, parle doucement",
+      "audio": "audio/adjectifs-050-ex.mp3"
     }
   },
   {
@@ -806,13 +806,13 @@
     "fr": "affamé",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ji-3an : le 3 serré.",
     "audio": "audio/adjectifs-051.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana ji3an bzaf",
+      "arabe": "أنا جيعان بزاف",
+      "fr": "J'ai très faim",
+      "audio": "audio/adjectifs-051-ex.mp3"
     }
   },
   {
@@ -822,13 +822,13 @@
     "fr": "assoiffé",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3ech-tan : le 3 serré, « ch » de « chat ».",
     "audio": "audio/adjectifs-052.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana 3echtan, 3tini lma",
+      "arabe": "أنا عطشان، عطيني الما",
+      "fr": "J'ai soif, donne-moi de l'eau",
+      "audio": "audio/adjectifs-052-ex.mp3"
     }
   },
   {
@@ -838,13 +838,13 @@
     "fr": "gentil",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "drif : un « d » épais.",
     "audio": "audio/adjectifs-053.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmo3allim dyalna drif",
+      "arabe": "المعلم ديالنا ضريف",
+      "fr": "Notre professeur est gentil",
+      "audio": "audio/adjectifs-053-ex.mp3"
     }
   },
   {
@@ -854,13 +854,13 @@
     "fr": "méchant",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "chrir : « ch » de « chat ».",
     "audio": "audio/adjectifs-054.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had rrajel chrir f lfilm",
+      "arabe": "هاد الراجل شرير ف الفيلم",
+      "fr": "Cet homme est méchant dans le film",
+      "audio": "audio/adjectifs-054-ex.mp3"
     }
   },
   {
@@ -870,13 +870,13 @@
     "fr": "généreux",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "krim : le r roulé.",
     "audio": "audio/adjectifs-055.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jedda krima m3a kolchi",
+      "arabe": "جدة كريمة مع كلشي",
+      "fr": "Grand-mère est généreuse avec tout le monde",
+      "audio": "audio/adjectifs-055-ex.mp3"
     }
   },
   {
@@ -886,13 +886,13 @@
     "fr": "égoïste",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "a-na-ni : l'accent sur « na ».",
     "audio": "audio/adjectifs-056.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma tkonch anani",
+      "arabe": "ما تكونش أناني",
+      "fr": "Ne sois pas égoïste",
+      "audio": "audio/adjectifs-056-ex.mp3"
     }
   },
   {
@@ -902,13 +902,13 @@
     "fr": "honnête",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "sa-ri7 : souffle chaud (7) à la fin.",
     "audio": "audio/adjectifs-057.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghadi nkoun sari7 m3ak",
+      "arabe": "غادي نكون صريح معاك",
+      "fr": "Je vais être honnête avec toi",
+      "audio": "audio/adjectifs-057-ex.mp3"
     }
   },
   {
@@ -918,13 +918,13 @@
     "fr": "menteur",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ked-dab : le « d » doublé.",
     "audio": "audio/adjectifs-058.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma tsedd9och, howa keddab",
+      "arabe": "ما تصدقوش، هو كداب",
+      "fr": "Ne le crois pas, c'est un menteur",
+      "audio": "audio/adjectifs-058-ex.mp3"
     }
   },
   {
@@ -934,13 +934,13 @@
     "fr": "drôle",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "da-7ek : un « d » épais, souffle chaud (7).",
     "audio": "audio/adjectifs-059.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khalid da7ek bzaf",
+      "arabe": "خالد ضاحك بزاف",
+      "fr": "Khalid est très drôle",
+      "audio": "audio/adjectifs-059-ex.mp3"
     }
   },
   {
@@ -950,13 +950,13 @@
     "fr": "sérieux",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "jad-di : le « d » doublé.",
     "audio": "audio/adjectifs-060.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kon jaddi chwiya",
+      "arabe": "كون جدي شوية",
+      "fr": "Sois un peu sérieux",
+      "audio": "audio/adjectifs-060-ex.mp3"
     }
   },
   {
@@ -966,13 +966,13 @@
     "fr": "timide",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "7chou-mi : souffle chaud (7), « ch » de « chat ».",
     "audio": "audio/adjectifs-061.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bent khti 7choumiya bzaf",
+      "arabe": "بنت ختي حشومية بزاف",
+      "fr": "Ma nièce est très timide",
+      "audio": "audio/adjectifs-061-ex.mp3"
     }
   },
   {
@@ -982,13 +982,13 @@
     "fr": "courageux",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "chja3 : « ch » de « chat », 3 serré à la fin.",
     "audio": "audio/adjectifs-062.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lpompier chja3 bzaf",
+      "arabe": "البومبيي شجاع بزاف",
+      "fr": "Le pompier est très courageux",
+      "audio": "audio/adjectifs-062-ex.mp3"
     }
   },
   {
@@ -998,13 +998,13 @@
     "fr": "paresseux",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kes-lan : l'accent sur « lan ».",
     "audio": "audio/adjectifs-063.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lyom ana keslan",
+      "arabe": "اليوم أنا كسلان",
+      "fr": "Aujourd'hui je suis paresseux",
+      "audio": "audio/adjectifs-063-ex.mp3"
     }
   },
   {
@@ -1014,13 +1014,13 @@
     "fr": "intelligent",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "dki : un « d » épais.",
     "audio": "audio/adjectifs-064.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had ttalib dki bzaf",
+      "arabe": "هاد الطالب دكي بزاف",
+      "fr": "Cet étudiant est très intelligent",
+      "audio": "audio/adjectifs-064-ex.mp3"
     }
   },
   {
@@ -1030,13 +1030,13 @@
     "fr": "poli",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "mo2ad-dab : petit arrêt (2), le « d » doublé.",
     "audio": "audio/adjectifs-065.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "weldek mo2addab bzaf",
+      "arabe": "ولدك مؤدب بزاف",
+      "fr": "Ton fils est très poli",
+      "audio": "audio/adjectifs-065-ex.mp3"
     }
   },
   {
@@ -1046,13 +1046,13 @@
     "fr": "impoli",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "9lil t-ter-bya : 9 du fond de la gorge.",
     "audio": "audio/adjectifs-066.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma tkonch 9lil tterbya",
+      "arabe": "ما تكونش قليل التربية",
+      "fr": "Ne sois pas impoli",
+      "audio": "audio/adjectifs-066-ex.mp3"
     }
   },
   {
@@ -1062,13 +1062,13 @@
     "fr": "patient",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "sa-bour : un « s » épais.",
     "audio": "audio/adjectifs-067.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khassek tkoun sabour",
+      "arabe": "خاصك تكون صبور",
+      "fr": "Tu dois être patient",
+      "audio": "audio/adjectifs-067-ex.mp3"
     }
   },
   {
@@ -1078,13 +1078,13 @@
     "fr": "impatient",
     "theme": "adjectifs",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma 3ndouch sber : 3 serré, « ch » de « chat ».",
     "audio": "audio/adjectifs-068.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddrri ma 3ndouch sber",
+      "arabe": "الدري ما عندوش صبر",
+      "fr": "L'enfant est impatient",
+      "audio": "audio/adjectifs-068-ex.mp3"
     }
   }
 ]

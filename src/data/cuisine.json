@@ -6,13 +6,13 @@
     "fr": "assiette",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "tb-sil : « tbsil » d'un trait.",
     "audio": "audio/cuisine-001.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ett tbsil 3la ttabla",
+      "arabe": "حط طبسيل على الطابلة",
+      "fr": "Pose une assiette sur la table",
+      "audio": "audio/cuisine-001-ex.mp3"
     }
   },
   {
@@ -22,13 +22,13 @@
     "fr": "bol",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "zlaf : comme « zlaf ».",
     "audio": "audio/cuisine-002.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "zlaf d l7rira skhoun",
+      "arabe": "زلاف د الحريرة سخون",
+      "fr": "Un bol de harira chaude",
+      "audio": "audio/cuisine-002-ex.mp3"
     }
   },
   {
@@ -38,13 +38,13 @@
     "fr": "verre",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kas : comme « kass ».",
     "audio": "audio/cuisine-003.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3tini kas d lma",
+      "arabe": "عطيني كاس د الما",
+      "fr": "Donne-moi un verre d'eau",
+      "audio": "audio/cuisine-003-ex.mp3"
     }
   },
   {
@@ -54,13 +54,13 @@
     "fr": "tasse",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "fin-jan : comme « findjan ».",
     "audio": "audio/cuisine-004.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "finjan d 9hwa 3afak",
+      "arabe": "فنجان د القهوة عافاك",
+      "fr": "Une tasse de café, s'il te plaît",
+      "audio": "audio/cuisine-004-ex.mp3"
     }
   },
   {
@@ -70,13 +70,13 @@
     "fr": "mug",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kas kbir : deux mots.",
     "audio": "audio/cuisine-005.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chreb atay f kas kbir",
+      "arabe": "شرب أتاي ف كاس كبير",
+      "fr": "Il boit le thé dans un grand verre",
+      "audio": "audio/cuisine-005-ex.mp3"
     }
   },
   {
@@ -86,13 +86,13 @@
     "fr": "fourchette",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "for-chet-ta : « ch » de « chat ».",
     "audio": "audio/cuisine-006.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jib lia forchetta",
+      "arabe": "جيب ليا فورشيطة",
+      "fr": "Apporte-moi une fourchette",
+      "audio": "audio/cuisine-006-ex.mp3"
     }
   },
   {
@@ -102,13 +102,13 @@
     "fr": "cuillère",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "m3el-9a : 3 serré, 9 profond.",
     "audio": "audio/cuisine-007.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kol b lm3el9a",
+      "arabe": "كول بالمعلقة",
+      "fr": "Mange avec la cuillère",
+      "audio": "audio/cuisine-007-ex.mp3"
     }
   },
   {
@@ -118,13 +118,13 @@
     "fr": "couteau",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mous : comme « mousse ».",
     "audio": "audio/cuisine-008.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmous ma ka9te3ch",
+      "arabe": "الموس ما كيقطعش",
+      "fr": "Le couteau ne coupe pas",
+      "audio": "audio/cuisine-008-ex.mp3"
     }
   },
   {
@@ -134,13 +134,13 @@
     "fr": "grande cuillère",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "m3el-9a kbi-ra : 3 serré, 9 profond.",
     "audio": "audio/cuisine-009.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ett jouj m3el9at kbar d sokkar",
+      "arabe": "حط جوج معلقات كبار د السكر",
+      "fr": "Mets deux grandes cuillères de sucre",
+      "audio": "audio/cuisine-009-ex.mp3"
     }
   },
   {
@@ -150,13 +150,13 @@
     "fr": "petite cuillère",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "m3el-9a sghi-ra : 3, 9 et « gh ».",
     "audio": "audio/cuisine-010.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "zid m3el9a sghira d lmel7",
+      "arabe": "زيد معلقة صغيرة د الملح",
+      "fr": "Ajoute une petite cuillère de sel",
+      "audio": "audio/cuisine-010-ex.mp3"
     }
   },
   {
@@ -166,13 +166,13 @@
     "fr": "bouteille",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9er-3a : 9 profond, 3 serré.",
     "audio": "audio/cuisine-011.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "9er3a d zzit khawya",
+      "arabe": "قرعة د الزيت خاوية",
+      "fr": "La bouteille d'huile est vide",
+      "audio": "audio/cuisine-011-ex.mp3"
     }
   },
   {
@@ -182,13 +182,13 @@
     "fr": "carafe",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9er-3a d lma : 9 profond, 3 serré.",
     "audio": "audio/cuisine-012.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jib 9er3a d lma bared",
+      "arabe": "جيب قرعة د الما بارد",
+      "fr": "Apporte une carafe d'eau fraîche",
+      "audio": "audio/cuisine-012-ex.mp3"
     }
   },
   {
@@ -198,13 +198,13 @@
     "fr": "casserole",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kas-ro-na : l'accent sur « ro ».",
     "audio": "audio/cuisine-013.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ett lkasrona 3la lkanoun",
+      "arabe": "حط الكاسرونة على الكانون",
+      "fr": "Mets la casserole sur le réchaud",
+      "audio": "audio/cuisine-013-ex.mp3"
     }
   },
   {
@@ -214,13 +214,13 @@
     "fr": "poêle",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "me9-la : 9 profond.",
     "audio": "audio/cuisine-014.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "9li lbid f lme9la",
+      "arabe": "قلي البيض ف المقلة",
+      "fr": "Fais frire les œufs dans la poêle",
+      "audio": "audio/cuisine-014-ex.mp3"
     }
   },
   {
@@ -230,13 +230,13 @@
     "fr": "marmite",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ber-ma : le r roulé.",
     "audio": "audio/cuisine-015.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lberma kbira 3la lkouskous",
+      "arabe": "البرمة كبيرة على الكسكسو",
+      "fr": "La marmite est grande pour le couscous",
+      "audio": "audio/cuisine-015-ex.mp3"
     }
   },
   {
@@ -246,13 +246,13 @@
     "fr": "couvercle",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ghta : « gh » grasseyé.",
     "audio": "audio/cuisine-016.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghetti lberma b lghta",
+      "arabe": "غطي البرمة بالغطا",
+      "fr": "Couvre la marmite avec le couvercle",
+      "audio": "audio/cuisine-016-ex.mp3"
     }
   },
   {
@@ -262,13 +262,13 @@
     "fr": "plateau",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "si-ni-ya : un « s » épais.",
     "audio": "audio/cuisine-017.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jib siniya d atay",
+      "arabe": "جيب صينية د أتاي",
+      "fr": "Apporte le plateau du thé",
+      "audio": "audio/cuisine-017-ex.mp3"
     }
   },
   {
@@ -278,13 +278,13 @@
     "fr": "planche à découper",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "tab-la d t-te9-ti3 : 9 profond, 3 serré.",
     "audio": "audio/cuisine-018.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "9te3 lkhodra 3la tabla d tt9ti3",
+      "arabe": "قطع الخضرة على طبلة د التقطيع",
+      "fr": "Coupe les légumes sur la planche",
+      "audio": "audio/cuisine-018-ex.mp3"
     }
   },
   {
@@ -294,13 +294,13 @@
     "fr": "passoire",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ms-fa : un « s » épais.",
     "audio": "audio/cuisine-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sfi lmakarouna f lmsfa",
+      "arabe": "صفي الماكارونة ف المصفاة",
+      "fr": "Égoutte les pâtes dans la passoire",
+      "audio": "audio/cuisine-019-ex.mp3"
     }
   },
   {
@@ -310,13 +310,13 @@
     "fr": "râpe",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7ek-ka-ka : souffle chaud (7), « k » doublé.",
     "audio": "audio/cuisine-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ekk lkhizzo b l7ekkaka",
+      "arabe": "حك الخيزو بالحكاكة",
+      "fr": "Râpe la carotte avec la râpe",
+      "audio": "audio/cuisine-020-ex.mp3"
     }
   },
   {
@@ -326,13 +326,13 @@
     "fr": "évier",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l-magh-sel : « gh » grasseyé.",
     "audio": "audio/cuisine-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmaghsel 3amer b ttbasel",
+      "arabe": "المغسل عامر بالطباسل",
+      "fr": "L'évier est plein d'assiettes",
+      "audio": "audio/cuisine-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "réchaud",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ka-noun : comme « kanoun ».",
     "audio": "audio/cuisine-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "cha3el lkanoun",
+      "arabe": "شعل الكانون",
+      "fr": "Allume le réchaud",
+      "audio": "audio/cuisine-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "charbon",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l-f7em : souffle chaud (7).",
     "audio": "audio/cuisine-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chwi l7em 3la lf7em",
+      "arabe": "شوي اللحم على الفحم",
+      "fr": "Grille la viande sur le charbon",
+      "audio": "audio/cuisine-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "gaz",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l-gaz : comme « gaz ».",
     "audio": "audio/cuisine-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tsala lgaz",
+      "arabe": "تسالا الگاز",
+      "fr": "Il n'y a plus de gaz",
+      "audio": "audio/cuisine-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "huile",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "zit : comme « zit ».",
     "audio": "audio/cuisine-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "zid chwiya d zzit",
+      "arabe": "زيد شوية د الزيت",
+      "fr": "Ajoute un peu d'huile",
+      "audio": "audio/cuisine-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "huile d'olive",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "zit zi-toun : deux fois « zit ».",
     "audio": "audio/cuisine-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "zit zitoun dyal lbeldi",
+      "arabe": "زيت زيتون ديال البلدي",
+      "fr": "De l'huile d'olive du pays",
+      "audio": "audio/cuisine-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "sel",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mel7 : souffle chaud (7) à la fin.",
     "audio": "audio/cuisine-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma kaynch lmel7 f lmakla",
+      "arabe": "ما كاينش الملح ف الماكلة",
+      "fr": "Il n'y a pas de sel dans la nourriture",
+      "audio": "audio/cuisine-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "poivre",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l-bzar : comme « bzar ».",
     "audio": "audio/cuisine-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "zid lbzar w lmel7",
+      "arabe": "زيد البزار و الملح",
+      "fr": "Ajoute le poivre et le sel",
+      "audio": "audio/cuisine-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "farine",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "d9i9 : deux 9 profonds.",
     "audio": "audio/cuisine-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lkhobz kaytsowweb b dd9i9",
+      "arabe": "الخبز كيتصوب بالدقيق",
+      "fr": "Le pain se fait avec de la farine",
+      "audio": "audio/cuisine-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "levure",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "khmi-ra : raclement (kh).",
     "audio": "audio/cuisine-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ett lkhmira f l3jina",
+      "arabe": "حط الخميرة ف العجينة",
+      "fr": "Mets la levure dans la pâte",
+      "audio": "audio/cuisine-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "vinaigre",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "khell : raclement (kh), « l » doublé.",
     "audio": "audio/cuisine-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ssalata b zzit w lkhell",
+      "arabe": "الصلاطة بالزيت و الخل",
+      "fr": "La salade à l'huile et au vinaigre",
+      "audio": "audio/cuisine-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "sauce",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sos-sa : un « s » épais.",
     "audio": "audio/cuisine-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ssossa 7arra chwiya",
+      "arabe": "الصوصة حارة شوية",
+      "fr": "La sauce est un peu piquante",
+      "audio": "audio/cuisine-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "épice",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "3at-riya : le 3 serré.",
     "audio": "audio/cuisine-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l3atriya katzyen ttbikh",
+      "arabe": "العطرية كتزين الطبيخ",
+      "fr": "Les épices relèvent la cuisine",
+      "audio": "audio/cuisine-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "cannelle",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9er-fa : 9 profond.",
     "audio": "audio/cuisine-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "atay b l9erfa f lberd",
+      "arabe": "أتاي بالقرفة ف البرد",
+      "fr": "Du thé à la cannelle quand il fait froid",
+      "audio": "audio/cuisine-034-ex.mp3"
     }
   },
   {
@@ -550,13 +550,13 @@
     "fr": "cumin",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ka-moun : comme « kamoun ».",
     "audio": "audio/cuisine-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbid b lkamoun w lmel7",
+      "arabe": "البيض بالكامون و الملح",
+      "fr": "Les œufs au cumin et au sel",
+      "audio": "audio/cuisine-035-ex.mp3"
     }
   },
   {
@@ -566,13 +566,13 @@
     "fr": "paprika",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ta7-mi-ra : souffle chaud (7).",
     "audio": "audio/cuisine-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "zid ta7mira l ttajine",
+      "arabe": "زيد تحميرة ل الطاجين",
+      "fr": "Ajoute du paprika au tajine",
+      "audio": "audio/cuisine-036-ex.mp3"
     }
   },
   {
@@ -582,13 +582,13 @@
     "fr": "gingembre",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "skin-jbir : comme « skindjbir ».",
     "audio": "audio/cuisine-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "skinjbir f l7rira",
+      "arabe": "سكينجبير ف الحريرة",
+      "fr": "Du gingembre dans la harira",
+      "audio": "audio/cuisine-037-ex.mp3"
     }
   },
   {
@@ -598,13 +598,13 @@
     "fr": "curcuma",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kher-9oum : raclement (kh), 9 profond.",
     "audio": "audio/cuisine-038.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lkher9oum kayreddi lmakla sefra",
+      "arabe": "الخرقوم كيردي الماكلة صفرا",
+      "fr": "Le curcuma rend la nourriture jaune",
+      "audio": "audio/cuisine-038-ex.mp3"
     }
   },
   {
@@ -614,13 +614,13 @@
     "fr": "persil",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ma3-dnous : le 3 serré.",
     "audio": "audio/cuisine-039.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "9te3 lma3dnous r9i9",
+      "arabe": "قطع المعدنوس رقيق",
+      "fr": "Coupe le persil finement",
+      "audio": "audio/cuisine-039-ex.mp3"
     }
   },
   {
@@ -630,13 +630,13 @@
     "fr": "coriandre",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9ez-bor : 9 profond.",
     "audio": "audio/cuisine-040.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttajine bla 9ezbor machi bnin",
+      "arabe": "الطاجين بلا قزبور ماشي بنين",
+      "fr": "Le tajine sans coriandre n'est pas bon",
+      "audio": "audio/cuisine-040-ex.mp3"
     }
   },
   {
@@ -646,13 +646,13 @@
     "fr": "basilic",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l7-be9 : souffle chaud (7), 9 profond.",
     "audio": "audio/cuisine-041.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7be9 ri7to zwina",
+      "arabe": "الحبق ريحتو زوينة",
+      "fr": "Le basilic sent bon",
+      "audio": "audio/cuisine-041-ex.mp3"
     }
   },
   {
@@ -662,13 +662,13 @@
     "fr": "thym",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "z3-tar : le 3 serré.",
     "audio": "audio/cuisine-042.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "atay b z3tar f ssba7",
+      "arabe": "أتاي بالزعتر ف الصباح",
+      "fr": "Du thé au thym le matin",
+      "audio": "audio/cuisine-042-ex.mp3"
     }
   },
   {
@@ -678,13 +678,13 @@
     "fr": "bouillir",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ghla : « gh » grasseyé.",
     "audio": "audio/cuisine-043.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lma ghla, 7ett atay",
+      "arabe": "الما غلى، حط أتاي",
+      "fr": "L'eau a bouilli, mets le thé",
+      "audio": "audio/cuisine-043-ex.mp3"
     }
   },
   {
@@ -694,13 +694,13 @@
     "fr": "frire",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9la : 9 profond.",
     "audio": "audio/cuisine-044.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "9la l7out f zzit",
+      "arabe": "قلى الحوت ف الزيت",
+      "fr": "Il a frit le poisson dans l'huile",
+      "audio": "audio/cuisine-044-ex.mp3"
     }
   },
   {
@@ -710,13 +710,13 @@
     "fr": "griller",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "chwa : « ch » de « chat ».",
     "audio": "audio/cuisine-045.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chwa l7em 3la lf7em",
+      "arabe": "شوا اللحم على الفحم",
+      "fr": "Il a grillé la viande sur le charbon",
+      "audio": "audio/cuisine-045-ex.mp3"
     }
   },
   {
@@ -726,13 +726,13 @@
     "fr": "couper",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9te3 : 9 profond, 3 serré.",
     "audio": "audio/cuisine-046.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "9te3 lbsla w ttoum",
+      "arabe": "قطع البصلة و التوم",
+      "fr": "Coupe l'oignon et l'ail",
+      "audio": "audio/cuisine-046-ex.mp3"
     }
   },
   {
@@ -742,13 +742,13 @@
     "fr": "mélanger",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "khlet : raclement (kh).",
     "audio": "audio/cuisine-047.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khlet d9i9 m3a lma",
+      "arabe": "خلط الدقيق مع الما",
+      "fr": "Mélange la farine avec l'eau",
+      "audio": "audio/cuisine-047-ex.mp3"
     }
   },
   {
@@ -758,13 +758,13 @@
     "fr": "éplucher",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9cher : 9 profond, « ch » de « chat ».",
     "audio": "audio/cuisine-048.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "9cher lbtata 3afak",
+      "arabe": "قشر البطاطا عافاك",
+      "fr": "Épluche les pommes de terre, s'il te plaît",
+      "audio": "audio/cuisine-048-ex.mp3"
     }
   },
   {
@@ -774,13 +774,13 @@
     "fr": "goûter",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "dou9 : 9 profond à la fin.",
     "audio": "audio/cuisine-049.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "dou9 had ssossa",
+      "arabe": "دوق هاد الصوصة",
+      "fr": "Goûte cette sauce",
+      "audio": "audio/cuisine-049-ex.mp3"
     }
   },
   {
@@ -790,13 +790,13 @@
     "fr": "servir",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9ed-dem : 9 profond, « d » doublé.",
     "audio": "audio/cuisine-050.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "9eddem atay l dyaf",
+      "arabe": "قدم أتاي ل الضياف",
+      "fr": "Sers le thé aux invités",
+      "audio": "audio/cuisine-050-ex.mp3"
     }
   },
   {
@@ -806,13 +806,13 @@
     "fr": "ajouter",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "zid : comme « zid ».",
     "audio": "audio/cuisine-051.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "zid chwiya d lma",
+      "arabe": "زيد شوية د الما",
+      "fr": "Ajoute un peu d'eau",
+      "audio": "audio/cuisine-051-ex.mp3"
     }
   },
   {
@@ -822,13 +822,13 @@
     "fr": "laver / se laver",
     "theme": "cuisine",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ghsel : « gh » grasseyé.",
     "audio": "audio/cuisine-052.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghsel ttbasel men b3d lmakla",
+      "arabe": "غسل الطباسل من بعد الماكلة",
+      "fr": "Lave les assiettes après le repas",
+      "audio": "audio/cuisine-052-ex.mp3"
     }
   }
 ]

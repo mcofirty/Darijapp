@@ -6,13 +6,13 @@
     "fr": "couleur",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "loun : comme « loun ».",
     "audio": "audio/couleurs-001.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chmen loun bghiti?",
+      "arabe": "شمن لون بغيتي؟",
+      "fr": "Quelle couleur veux-tu ?",
+      "audio": "audio/couleurs-001-ex.mp3"
     }
   },
   {
@@ -22,13 +22,13 @@
     "fr": "blanc",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "byed : comme « bied ».",
     "audio": "audio/couleurs-002.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ch3ro byed",
+      "arabe": "شعرو بيض",
+      "fr": "Ses cheveux sont blancs",
+      "audio": "audio/couleurs-002-ex.mp3"
     }
   },
   {
@@ -38,13 +38,13 @@
     "fr": "blanche",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "by-da : un « d » épais.",
     "audio": "audio/couleurs-003.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddar dyalna byda",
+      "arabe": "الدار ديالنا بيضا",
+      "fr": "Notre maison est blanche",
+      "audio": "audio/couleurs-003-ex.mp3"
     }
   },
   {
@@ -54,13 +54,13 @@
     "fr": "noir",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ke7el : souffle chaud (7) au milieu.",
     "audio": "audio/couleurs-004.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sserwal ke7el",
+      "arabe": "السروال كحل",
+      "fr": "Le pantalon est noir",
+      "audio": "audio/couleurs-004-ex.mp3"
     }
   },
   {
@@ -70,13 +70,13 @@
     "fr": "noire",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ke7-la : souffle chaud (7) au milieu.",
     "audio": "audio/couleurs-005.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttomobil dyali ke7la",
+      "arabe": "الطوموبيل ديالي كحلة",
+      "fr": "Ma voiture est noire",
+      "audio": "audio/couleurs-005-ex.mp3"
     }
   },
   {
@@ -86,13 +86,13 @@
     "fr": "rouge",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7mer : souffle chaud (7) au début.",
     "audio": "audio/couleurs-006.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lkebbout 7mer",
+      "arabe": "الكبوط حمر",
+      "fr": "Le manteau est rouge",
+      "audio": "audio/couleurs-006-ex.mp3"
     }
   },
   {
@@ -102,13 +102,13 @@
     "fr": "rouge (féminin)",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7em-ra : souffle chaud (7) au début.",
     "audio": "audio/couleurs-007.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit rouba 7emra",
+      "arabe": "بغيت روبة حمرا",
+      "fr": "Je veux une robe rouge",
+      "audio": "audio/couleurs-007-ex.mp3"
     }
   },
   {
@@ -118,13 +118,13 @@
     "fr": "bleu",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "zre9 : le 9 profond à la fin.",
     "audio": "audio/couleurs-008.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lb7ar zre9 lyom",
+      "arabe": "البحر زرق اليوم",
+      "fr": "La mer est bleue aujourd'hui",
+      "audio": "audio/couleurs-008-ex.mp3"
     }
   },
   {
@@ -134,13 +134,13 @@
     "fr": "bleue",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "zer9a : le 9 profond.",
     "audio": "audio/couleurs-009.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chefchaouen zer9a",
+      "arabe": "شفشاون زرقا",
+      "fr": "Chefchaouen est bleue",
+      "audio": "audio/couleurs-009-ex.mp3"
     }
   },
   {
@@ -150,13 +150,13 @@
     "fr": "vert",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "khder : raclement (kh) au début.",
     "audio": "audio/couleurs-010.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrit kas khder",
+      "arabe": "شريت كاس خضر",
+      "fr": "J'ai acheté un verre vert",
+      "audio": "audio/couleurs-010-ex.mp3"
     }
   },
   {
@@ -166,13 +166,13 @@
     "fr": "verte",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "khed-ra : raclement (kh) au début.",
     "audio": "audio/couleurs-011.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbab khedra",
+      "arabe": "الباب خضرا",
+      "fr": "La porte est verte",
+      "audio": "audio/couleurs-011-ex.mp3"
     }
   },
   {
@@ -182,13 +182,13 @@
     "fr": "jaune",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sfer : un « s » épais.",
     "audio": "audio/couleurs-012.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttaxi sfer f had lmdina",
+      "arabe": "الطاكسي صفر ف هاد المدينة",
+      "fr": "Le taxi est jaune dans cette ville",
+      "audio": "audio/couleurs-012-ex.mp3"
     }
   },
   {
@@ -198,13 +198,13 @@
     "fr": "jaune (féminin)",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sef-ra : un « s » épais.",
     "audio": "audio/couleurs-013.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbanana sefra",
+      "arabe": "البنانة صفرا",
+      "fr": "La banane est jaune",
+      "audio": "audio/couleurs-013-ex.mp3"
     }
   },
   {
@@ -214,13 +214,13 @@
     "fr": "orange (couleur)",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "li-mou-ni : comme « limoun ».",
     "audio": "audio/couleurs-014.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tichort limouni",
+      "arabe": "تيشورت ليموني",
+      "fr": "Un tee-shirt orange",
+      "audio": "audio/couleurs-014-ex.mp3"
     }
   },
   {
@@ -230,13 +230,13 @@
     "fr": "rose (couleur)",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "wer-di : le r roulé.",
     "audio": "audio/couleurs-015.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bent khti kat7ebb lwerdi",
+      "arabe": "بنت ختي كتحب الوردي",
+      "fr": "Ma nièce aime le rose",
+      "audio": "audio/couleurs-015-ex.mp3"
     }
   },
   {
@@ -246,13 +246,13 @@
     "fr": "violet",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ba-naf-sa-ji : l'accent sur « sa ».",
     "audio": "audio/couleurs-016.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sebbatha banafsaji",
+      "arabe": "صباطها بنفسجي",
+      "fr": "Ses chaussures sont violettes",
+      "audio": "audio/couleurs-016-ex.mp3"
     }
   },
   {
@@ -262,13 +262,13 @@
     "fr": "marron",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9eh-wi : 9 profond, « h » expiré.",
     "audio": "audio/couleurs-017.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ssak dyalo 9ehwi",
+      "arabe": "الصاك ديالو قهوي",
+      "fr": "Son sac est marron",
+      "audio": "audio/couleurs-017-ex.mp3"
     }
   },
   {
@@ -278,13 +278,13 @@
     "fr": "gris",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "r-ma-di : le r roulé.",
     "audio": "audio/couleurs-018.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ssma rmadiya lyom",
+      "arabe": "السما رمادية اليوم",
+      "fr": "Le ciel est gris aujourd'hui",
+      "audio": "audio/couleurs-018-ex.mp3"
     }
   },
   {
@@ -294,13 +294,13 @@
     "fr": "doré",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "deh-bi : « h » expiré.",
     "audio": "audio/couleurs-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrat khatem dehbi",
+      "arabe": "شرات خاتم دهبي",
+      "fr": "Elle a acheté une bague dorée",
+      "audio": "audio/couleurs-019-ex.mp3"
     }
   },
   {
@@ -310,13 +310,13 @@
     "fr": "argenté",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "fid-di : un « d » épais et doublé.",
     "audio": "audio/couleurs-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmonter fiddiya",
+      "arabe": "المونطر فضية",
+      "fr": "La montre est argentée",
+      "audio": "audio/couleurs-020-ex.mp3"
     }
   },
   {
@@ -326,13 +326,13 @@
     "fr": "clair",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "fa-te7 : souffle chaud (7) à la fin.",
     "audio": "audio/couleurs-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit zre9 fate7",
+      "arabe": "بغيت زرق فاتح",
+      "fr": "Je veux un bleu clair",
+      "audio": "audio/couleurs-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "foncé",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "gha-me9 : « gh » grasseyé, 9 profond.",
     "audio": "audio/couleurs-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7mer ghame9 zwin",
+      "arabe": "حمر غامق زوين",
+      "fr": "Un rouge foncé, c'est joli",
+      "audio": "audio/couleurs-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "transparent",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "chef-faf : « ch » de « chat », le « f » doublé.",
     "audio": "audio/couleurs-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lma chffaf f had lb7ar",
+      "arabe": "الما شفاف ف هاد البحر",
+      "fr": "L'eau est transparente dans cette mer",
+      "audio": "audio/couleurs-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "coloré",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mlow-wen : le « w » doublé.",
     "audio": "audio/couleurs-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "zerbiya mlowna",
+      "arabe": "زربية ملونة",
+      "fr": "Un tapis coloré",
+      "audio": "audio/couleurs-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "forme",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "chekl : « ch » de « chat ».",
     "audio": "audio/couleurs-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chekl dyal had ddar ghrib",
+      "arabe": "الشكل ديال هاد الدار غريب",
+      "fr": "La forme de cette maison est bizarre",
+      "audio": "audio/couleurs-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "rond",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mdow-wer : le « w » doublé.",
     "audio": "audio/couleurs-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttabla mdowra",
+      "arabe": "الطابلة مدورة",
+      "fr": "La table est ronde",
+      "audio": "audio/couleurs-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "carré",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mreb-be3 : le 3 serré à la fin.",
     "audio": "audio/couleurs-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbit mrebbe3",
+      "arabe": "البيت مربع",
+      "fr": "La chambre est carrée",
+      "audio": "audio/couleurs-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "rectangle",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mos-ta-til : l'accent sur « til ».",
     "audio": "audio/couleurs-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttelfaza mostatila",
+      "arabe": "التلفازة مستطيلة",
+      "fr": "La télé est rectangulaire",
+      "audio": "audio/couleurs-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "triangle",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mtel-let : le « l » doublé.",
     "audio": "audio/couleurs-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "rsem mtellet f lwer9a",
+      "arabe": "رسم مثلث ف الورقة",
+      "fr": "Dessine un triangle sur la feuille",
+      "audio": "audio/couleurs-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "ligne",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "khatt : raclement (kh), le « t » doublé.",
     "audio": "audio/couleurs-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kteb 3la lkhatt",
+      "arabe": "كتب على الخط",
+      "fr": "Écris sur la ligne",
+      "audio": "audio/couleurs-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "point / note (examen)",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "no9-ta : 9 profond.",
     "audio": "audio/couleurs-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khdit no9ta mzyana f lemti7an",
+      "arabe": "خديت نقطة مزيانة ف الامتحان",
+      "fr": "J'ai eu une bonne note à l'examen",
+      "audio": "audio/couleurs-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "cercle",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "da2i-ra : petit arrêt (2) au milieu.",
     "audio": "audio/couleurs-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "gelsu f da2ira",
+      "arabe": "گلسو ف دائرة",
+      "fr": "Ils se sont assis en cercle",
+      "audio": "audio/couleurs-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "large",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "3rid : le 3 serré au début.",
     "audio": "audio/couleurs-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttri9 3rida hna",
+      "arabe": "الطريق عريضة هنا",
+      "fr": "La route est large ici",
+      "audio": "audio/couleurs-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "étroit",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "diy-ye9 : « d » épais, 9 profond.",
     "audio": "audio/couleurs-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "zzen9a diy9a bzaf",
+      "arabe": "الزنقة ضيقة بزاف",
+      "fr": "La ruelle est très étroite",
+      "audio": "audio/couleurs-034-ex.mp3"
     }
   },
   {
@@ -550,13 +550,13 @@
     "fr": "plat",
     "theme": "couleurs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mes-ta-wi : l'accent sur « ta ».",
     "audio": "audio/couleurs-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l2ard mestawya hna",
+      "arabe": "الأرض مستاوية هنا",
+      "fr": "Le terrain est plat ici",
+      "audio": "audio/couleurs-035-ex.mp3"
     }
   }
 ]

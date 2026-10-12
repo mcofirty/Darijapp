@@ -6,13 +6,13 @@
     "fr": "tu (masculin)",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "n-ta : le « n » accroché au « t ».",
     "audio": "audio/grammaire-001.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nta men fin?",
+      "arabe": "نتا من فين؟",
+      "fr": "Toi, tu viens d'où ?",
+      "audio": "audio/grammaire-001-ex.mp3"
     }
   },
   {
@@ -22,13 +22,13 @@
     "fr": "tu (féminin)",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "n-ti : comme « nta », avec « i ».",
     "audio": "audio/grammaire-002.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nti mghribiya?",
+      "arabe": "نتي مغربية؟",
+      "fr": "Tu es marocaine ?",
+      "audio": "audio/grammaire-002-ex.mp3"
     }
   },
   {
@@ -38,13 +38,13 @@
     "fr": "il",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ho-wa : « h » expiré.",
     "audio": "audio/grammaire-003.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "howa khoya ssghir",
+      "arabe": "هو خويا الصغير",
+      "fr": "C'est mon petit frère",
+      "audio": "audio/grammaire-003-ex.mp3"
     }
   },
   {
@@ -54,13 +54,13 @@
     "fr": "elle",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "hi-ya : « h » expiré.",
     "audio": "audio/grammaire-004.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hiya lli 3llmatni ddarija",
+      "arabe": "هي اللي علماتني الدارجة",
+      "fr": "C'est elle qui m'a appris la darija",
+      "audio": "audio/grammaire-004-ex.mp3"
     }
   },
   {
@@ -70,13 +70,13 @@
     "fr": "nous",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "7na : souffle chaud (7) au début.",
     "audio": "audio/grammaire-005.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7na men kaza",
+      "arabe": "حنا من كازا",
+      "fr": "Nous sommes de Casa",
+      "audio": "audio/grammaire-005-ex.mp3"
     }
   },
   {
@@ -86,13 +86,13 @@
     "fr": "vous (pluriel)",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "nto-ma : l'accent sur « to ».",
     "audio": "audio/grammaire-006.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ntoma mnin jitou?",
+      "arabe": "نتوما منين جيتو؟",
+      "fr": "Vous, vous venez d'où ?",
+      "audio": "audio/grammaire-006-ex.mp3"
     }
   },
   {
@@ -102,13 +102,13 @@
     "fr": "ils / elles",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ho-ma : « h » expiré.",
     "audio": "audio/grammaire-007.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "homa saknin 7dana",
+      "arabe": "هوما ساكنين حدانا",
+      "fr": "Ils habitent à côté de chez nous",
+      "audio": "audio/grammaire-007-ex.mp3"
     }
   },
   {
@@ -118,13 +118,13 @@
     "fr": "ceci (féminin) / calme",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ha-di : « h » expiré.",
     "audio": "audio/grammaire-008.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hadi khti karima",
+      "arabe": "هادي ختي كريمة",
+      "fr": "C'est ma sœur Karima",
+      "audio": "audio/grammaire-008-ex.mp3"
     }
   },
   {
@@ -134,13 +134,13 @@
     "fr": "ceux-là",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ha-dok : « h » expiré.",
     "audio": "audio/grammaire-009.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hadok ddrari dyal jari",
+      "arabe": "هادوك الدراري ديال جاري",
+      "fr": "Ces enfants-là sont ceux de mon voisin",
+      "audio": "audio/grammaire-009-ex.mp3"
     }
   },
   {
@@ -150,13 +150,13 @@
     "fr": "celle-ci",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ha-dik : « h » expiré.",
     "audio": "audio/grammaire-010.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hadik ddar dyal jeddi",
+      "arabe": "هاديك الدار ديال جدي",
+      "fr": "Cette maison-là est celle de mon grand-père",
+      "audio": "audio/grammaire-010-ex.mp3"
     }
   },
   {
@@ -166,13 +166,13 @@
     "fr": "moi aussi",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "a-na 7t-ta a-na : souffle chaud (7).",
     "audio": "audio/grammaire-011.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghiti atay? ana 7tta ana",
+      "arabe": "بغيتي أتاي؟ أنا حتى أنا",
+      "fr": "Tu veux du thé ? Moi aussi",
+      "audio": "audio/grammaire-011-ex.mp3"
     }
   },
   {
@@ -182,13 +182,13 @@
     "fr": "toi aussi",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "n-ta 7t-ta n-ta : souffle chaud (7).",
     "audio": "audio/grammaire-012.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana ji3an, w nta 7tta nta?",
+      "arabe": "أنا جيعان، و نتا حتى نتا؟",
+      "fr": "J'ai faim, et toi aussi ?",
+      "audio": "audio/grammaire-012-ex.mp3"
     }
   },
   {
@@ -198,13 +198,13 @@
     "fr": "nous aussi",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "7na 7t-ta 7na : souffle chaud (7) trois fois.",
     "audio": "audio/grammaire-013.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7na 7tta 7na ghadi nmchiw",
+      "arabe": "حنا حتى حنا غادي نمشيو",
+      "fr": "Nous aussi, nous allons y aller",
+      "audio": "audio/grammaire-013-ex.mp3"
     }
   },
   {
@@ -214,13 +214,13 @@
     "fr": "à moi / mon",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "dya-li : l'accent sur « ya ».",
     "audio": "audio/grammaire-014.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hada ttilifon dyali",
+      "arabe": "هادا التيليفون ديالي",
+      "fr": "C'est mon téléphone",
+      "audio": "audio/grammaire-014-ex.mp3"
     }
   },
   {
@@ -230,13 +230,13 @@
     "fr": "à toi / ton",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "dya-lek : l'accent sur « ya ».",
     "audio": "audio/grammaire-015.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fin ssak dyalek?",
+      "arabe": "فين الصاك ديالك؟",
+      "fr": "Où est ton sac ?",
+      "audio": "audio/grammaire-015-ex.mp3"
     }
   },
   {
@@ -246,13 +246,13 @@
     "fr": "à lui / son",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "dya-lo : l'accent sur « ya ».",
     "audio": "audio/grammaire-016.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttomobil dyalo jdida",
+      "arabe": "الطوموبيل ديالو جديدة",
+      "fr": "Sa voiture est neuve",
+      "audio": "audio/grammaire-016-ex.mp3"
     }
   },
   {
@@ -262,13 +262,13 @@
     "fr": "à elle / son",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "dyal-ha : « h » expiré.",
     "audio": "audio/grammaire-017.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddar dyalha kbira",
+      "arabe": "الدار ديالها كبيرة",
+      "fr": "Sa maison à elle est grande",
+      "audio": "audio/grammaire-017-ex.mp3"
     }
   },
   {
@@ -278,13 +278,13 @@
     "fr": "à nous / notre",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "dyal-na : l'accent sur « ya ».",
     "audio": "audio/grammaire-018.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lblad dyalna zwina",
+      "arabe": "البلاد ديالنا زوينة",
+      "fr": "Notre pays est beau",
+      "audio": "audio/grammaire-018-ex.mp3"
     }
   },
   {
@@ -294,13 +294,13 @@
     "fr": "à vous / votre",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "dyal-kom : l'accent sur « kom ».",
     "audio": "audio/grammaire-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fin lvalizat dyalkom?",
+      "arabe": "فين الفاليزات ديالكم؟",
+      "fr": "Où sont vos valises ?",
+      "audio": "audio/grammaire-019-ex.mp3"
     }
   },
   {
@@ -310,13 +310,13 @@
     "fr": "à eux / leur",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "dyal-hom : « h » expiré.",
     "audio": "audio/grammaire-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddrari dyalhom kaybghiw lkoura",
+      "arabe": "الدراري ديالهم كيبغيو الكورة",
+      "fr": "Leurs enfants aiment le football",
+      "audio": "audio/grammaire-020-ex.mp3"
     }
   },
   {
@@ -326,13 +326,13 @@
     "fr": "avec moi",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "m3a-ya : le 3 serré.",
     "audio": "audio/grammaire-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "aji m3aya l ssou9",
+      "arabe": "أجي معايا ل السوق",
+      "fr": "Viens avec moi au souk",
+      "audio": "audio/grammaire-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "avec toi",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "m3ak : le 3 serré.",
     "audio": "audio/grammaire-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghadi nmchi m3ak",
+      "arabe": "غادي نمشي معاك",
+      "fr": "Je vais avec toi",
+      "audio": "audio/grammaire-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "avec lui",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "m3ah : 3 serré, « h » final expiré.",
     "audio": "audio/grammaire-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hder m3ah f ttilifon",
+      "arabe": "هضر معاه ف التيليفون",
+      "fr": "Parle avec lui au téléphone",
+      "audio": "audio/grammaire-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "avec elle",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "m3a-ha : le 3 serré.",
     "audio": "audio/grammaire-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mchat m3aha l ssbitar",
+      "arabe": "مشات معاها ل السبيطار",
+      "fr": "Elle est allée avec elle à l'hôpital",
+      "audio": "audio/grammaire-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "avec nous",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "m3a-na : le 3 serré.",
     "audio": "audio/grammaire-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach ghadi tji m3ana?",
+      "arabe": "واش غادي تجي معانا؟",
+      "fr": "Tu viens avec nous ?",
+      "audio": "audio/grammaire-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "avec vous",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "m3a-kom : le 3 serré.",
     "audio": "audio/grammaire-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghadi nakol m3akom lyom",
+      "arabe": "غادي ناكل معاكم اليوم",
+      "fr": "Je mange avec vous aujourd'hui",
+      "audio": "audio/grammaire-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "avec eux",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "m3a-hom : le 3 serré.",
     "audio": "audio/grammaire-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "safer m3ahom l agadir",
+      "arabe": "سافر معاهم ل أگادير",
+      "fr": "Il est parti avec eux à Agadir",
+      "audio": "audio/grammaire-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "chez moi / je possède / j'ai",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3n-di : le 3 serré au début.",
     "audio": "audio/grammaire-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndi jouj d ddrari",
+      "arabe": "عندي جوج د الدراري",
+      "fr": "J'ai deux enfants",
+      "audio": "audio/grammaire-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "chez toi",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3n-dek : le 3 serré au début.",
     "audio": "audio/grammaire-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndek chi 9lam?",
+      "arabe": "عندك شي قلم؟",
+      "fr": "Tu as un stylo ?",
+      "audio": "audio/grammaire-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "chez lui",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3n-do : le 3 serré au début.",
     "audio": "audio/grammaire-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndo tomobil 9dima",
+      "arabe": "عندو طوموبيل قديمة",
+      "fr": "Il a une vieille voiture",
+      "audio": "audio/grammaire-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "chez elle",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3nd-ha : 3 serré, « h » expiré.",
     "audio": "audio/grammaire-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndha bent wa7da",
+      "arabe": "عندها بنت وحدة",
+      "fr": "Elle a une fille",
+      "audio": "audio/grammaire-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "chez nous",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3nd-na : le 3 serré au début.",
     "audio": "audio/grammaire-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndna dif lyom",
+      "arabe": "عندنا ضيف اليوم",
+      "fr": "Nous avons un invité aujourd'hui",
+      "audio": "audio/grammaire-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "chez vous",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3nd-kom : le 3 serré au début.",
     "audio": "audio/grammaire-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach 3ndkom lwifi?",
+      "arabe": "واش عندكم الويفي؟",
+      "fr": "Vous avez le wifi ?",
+      "audio": "audio/grammaire-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "chez eux",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3nd-hom : 3 serré, « h » expiré.",
     "audio": "audio/grammaire-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndhom ddar f lb7ar",
+      "arabe": "عندهم الدار ف البحر",
+      "fr": "Ils ont une maison au bord de la mer",
+      "audio": "audio/grammaire-034-ex.mp3"
     }
   },
   {
@@ -550,13 +550,13 @@
     "fr": "et",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "w : un « ou » très bref.",
     "audio": "audio/grammaire-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khobz w atay",
+      "arabe": "خبز و أتاي",
+      "fr": "Du pain et du thé",
+      "audio": "audio/grammaire-035-ex.mp3"
     }
   },
   {
@@ -566,13 +566,13 @@
     "fr": "ou",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "wel-la : le « l » doublé.",
     "audio": "audio/grammaire-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "atay wella 9hwa?",
+      "arabe": "أتاي ولا قهوة؟",
+      "fr": "Thé ou café ?",
+      "audio": "audio/grammaire-036-ex.mp3"
     }
   },
   {
@@ -582,13 +582,13 @@
     "fr": "mais",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "wa-la-kin : l'accent sur « kin ».",
     "audio": "audio/grammaire-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit nji walakin ma 3ndich lw9t",
+      "arabe": "بغيت نجي ولكن ما عنديش الوقت",
+      "fr": "Je veux venir mais je n'ai pas le temps",
+      "audio": "audio/grammaire-037-ex.mp3"
     }
   },
   {
@@ -598,13 +598,13 @@
     "fr": "parce que",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "7it : souffle chaud (7) au début.",
     "audio": "audio/grammaire-038.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma jitch 7it kont mrid",
+      "arabe": "ما جيتش حيت كنت مريض",
+      "fr": "Je ne suis pas venu parce que j'étais malade",
+      "audio": "audio/grammaire-038-ex.mp3"
     }
   },
   {
@@ -614,13 +614,13 @@
     "fr": "donc",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "donk : comme « donc ».",
     "audio": "audio/grammaire-039.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayn chta, donk ma ghadich nkhrej",
+      "arabe": "كاين الشتا، دونك ما غاديش نخرج",
+      "fr": "Il pleut, donc je ne sors pas",
+      "audio": "audio/grammaire-039-ex.mp3"
     },
     "note": "Emprunt courant au français"
   },
@@ -631,13 +631,13 @@
     "fr": "si (condition)",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "i-la : l'accent sur « i ».",
     "audio": "audio/grammaire-040.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ila jiti, nchoufok",
+      "arabe": "إلا جيتي، نشوفك",
+      "fr": "Si tu viens, je te verrai",
+      "audio": "audio/grammaire-040-ex.mp3"
     }
   },
   {
@@ -647,13 +647,13 @@
     "fr": "que (conjonction)",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "bel-li : le « l » doublé.",
     "audio": "audio/grammaire-041.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "gal lia belli ghadi yji",
+      "arabe": "گال ليا بلي غادي يجي",
+      "fr": "Il m'a dit qu'il viendrait",
+      "audio": "audio/grammaire-041-ex.mp3"
     }
   },
   {
@@ -663,13 +663,13 @@
     "fr": "avec",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "m3a : le 3 serré.",
     "audio": "audio/grammaire-042.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tajine m3a lkhobz",
+      "arabe": "طاجين مع الخبز",
+      "fr": "Un tajine avec du pain",
+      "audio": "audio/grammaire-042-ex.mp3"
     }
   },
   {
@@ -679,13 +679,13 @@
     "fr": "sans",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "bla : comme « bla ».",
     "audio": "audio/grammaire-043.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "atay bla sokkar 3afak",
+      "arabe": "أتاي بلا سكر عافاك",
+      "fr": "Du thé sans sucre, s'il te plaît",
+      "audio": "audio/grammaire-043-ex.mp3"
     }
   },
   {
@@ -695,13 +695,13 @@
     "fr": "pour",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "bach : « ch » de « chat ».",
     "audio": "audio/grammaire-044.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jit bach nchoufek",
+      "arabe": "جيت باش نشوفك",
+      "fr": "Je suis venu pour te voir",
+      "audio": "audio/grammaire-044-ex.mp3"
     }
   },
   {
@@ -711,13 +711,13 @@
     "fr": "de / appartenant à",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "dyal : l'accent sur « yal ».",
     "audio": "audio/grammaire-045.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lktab dyal l9raya",
+      "arabe": "الكتاب ديال القراية",
+      "fr": "Le livre de l'école",
+      "audio": "audio/grammaire-045-ex.mp3"
     }
   },
   {
@@ -727,13 +727,13 @@
     "fr": "dans",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "f : un « f » très bref.",
     "audio": "audio/grammaire-046.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana f ddar",
+      "arabe": "أنا ف الدار",
+      "fr": "Je suis à la maison",
+      "audio": "audio/grammaire-046-ex.mp3"
     }
   },
   {
@@ -743,13 +743,13 @@
     "fr": "sur",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "fo9 : 9 profond à la fin.",
     "audio": "audio/grammaire-047.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ssarout fo9 ttabla",
+      "arabe": "الساروت فوق الطابلة",
+      "fr": "La clé est sur la table",
+      "audio": "audio/grammaire-047-ex.mp3"
     }
   },
   {
@@ -759,13 +759,13 @@
     "fr": "sous",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "te7t : souffle chaud (7).",
     "audio": "audio/grammaire-048.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmech te7t ttabla",
+      "arabe": "المش تحت الطابلة",
+      "fr": "Le chat est sous la table",
+      "audio": "audio/grammaire-048-ex.mp3"
     }
   },
   {
@@ -775,13 +775,13 @@
     "fr": "entre",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "bin : comme « bine ».",
     "audio": "audio/grammaire-049.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddar bin ljame3 w lmadrasa",
+      "arabe": "الدار بين الجامع و المدرسة",
+      "fr": "La maison est entre la mosquée et l'école",
+      "audio": "audio/grammaire-049-ex.mp3"
     }
   },
   {
@@ -791,13 +791,13 @@
     "fr": "avant / accepter",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "9bel : 9 profond au début.",
     "audio": "audio/grammaire-050.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghsel yeddik 9bel lmakla",
+      "arabe": "غسل يديك قبل الماكلة",
+      "fr": "Lave-toi les mains avant le repas",
+      "audio": "audio/grammaire-050-ex.mp3"
     }
   },
   {
@@ -807,13 +807,13 @@
     "fr": "après / plus tard / ensuite",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "men b3d : le 3 serré.",
     "audio": "audio/grammaire-051.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nkellmek men b3d",
+      "arabe": "نكلمك من بعد",
+      "fr": "Je t'appelle plus tard",
+      "audio": "audio/grammaire-051-ex.mp3"
     }
   },
   {
@@ -823,13 +823,13 @@
     "fr": "comme",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "b7al : souffle chaud (7).",
     "audio": "audio/grammaire-052.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nta b7al khoya",
+      "arabe": "نتا بحال خويا",
+      "fr": "Tu es comme mon frère",
+      "audio": "audio/grammaire-052-ex.mp3"
     }
   },
   {
@@ -839,13 +839,13 @@
     "fr": "alors",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "i-wa : comme « iwa ».",
     "audio": "audio/grammaire-053.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "iwa, fin wselti?",
+      "arabe": "إيوا، فين وصلتي؟",
+      "fr": "Alors, tu en es où ?",
+      "audio": "audio/grammaire-053-ex.mp3"
     }
   },
   {
@@ -855,13 +855,13 @@
     "fr": "seulement / juste",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ghir : « gh » grasseyé.",
     "audio": "audio/grammaire-054.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit ghir lma",
+      "arabe": "بغيت غير الما",
+      "fr": "Je veux juste de l'eau",
+      "audio": "audio/grammaire-054-ex.mp3"
     }
   },
   {
@@ -871,13 +871,13 @@
     "fr": "tout",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "kol-chi : « ch » de « chat ».",
     "audio": "audio/grammaire-055.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kolchi wajed?",
+      "arabe": "كلشي واجد؟",
+      "fr": "Tout est prêt ?",
+      "audio": "audio/grammaire-055-ex.mp3"
     }
   },
   {
@@ -887,13 +887,13 @@
     "fr": "quelque chose",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "chi 7a-ja : « ch » et 7.",
     "audio": "audio/grammaire-056.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghiti chi 7aja?",
+      "arabe": "بغيتي شي حاجة؟",
+      "fr": "Tu veux quelque chose ?",
+      "audio": "audio/grammaire-056-ex.mp3"
     }
   },
   {
@@ -903,13 +903,13 @@
     "fr": "quelqu'un",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "chi wa-7ed : « ch » et 7.",
     "audio": "audio/grammaire-057.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chi wa7ed kaydo9 f lbab",
+      "arabe": "شي واحد كيدق ف الباب",
+      "fr": "Quelqu'un frappe à la porte",
+      "audio": "audio/grammaire-057-ex.mp3"
     }
   },
   {
@@ -919,13 +919,13 @@
     "fr": "personne (négation)",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "7t-ta wa-7ed : deux souffles chauds (7).",
     "audio": "audio/grammaire-058.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7tta wa7ed ma ja",
+      "arabe": "حتى واحد ما جا",
+      "fr": "Personne n'est venu",
+      "audio": "audio/grammaire-058-ex.mp3"
     }
   },
   {
@@ -935,13 +935,13 @@
     "fr": "rien",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "wa-lou : comme « walou ».",
     "audio": "audio/grammaire-059.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma fhemt walou",
+      "arabe": "ما فهمت والو",
+      "fr": "Je n'ai rien compris",
+      "audio": "audio/grammaire-059-ex.mp3"
     }
   },
   {
@@ -951,13 +951,13 @@
     "fr": "il n'y a pas",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ma kayn-ch : « ch » de « chat ».",
     "audio": "audio/grammaire-060.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma kaynch lkhobz f ddar",
+      "arabe": "ما كاينش الخبز ف الدار",
+      "fr": "Il n'y a pas de pain à la maison",
+      "audio": "audio/grammaire-060-ex.mp3"
     }
   },
   {
@@ -967,13 +967,13 @@
     "fr": "c'est",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ha-da ho-wa : « h » expiré.",
     "audio": "audio/grammaire-061.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hada howa lbab dyal ddar",
+      "arabe": "هادا هو الباب ديال الدار",
+      "fr": "C'est la porte de la maison",
+      "audio": "audio/grammaire-061-ex.mp3"
     },
     "note": "Selon le contexte"
   },
@@ -984,13 +984,13 @@
     "fr": "ce n'est pas",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ma-chi : « ch » de « chat ».",
     "audio": "audio/grammaire-062.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hada machi dyali",
+      "arabe": "هادا ماشي ديالي",
+      "fr": "Ce n'est pas à moi",
+      "audio": "audio/grammaire-062-ex.mp3"
     }
   },
   {
@@ -1000,13 +1000,13 @@
     "fr": "peut-être",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ym-ken : l'accent sur « ken ».",
     "audio": "audio/grammaire-063.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ymken ghadi tti7 chta",
+      "arabe": "يمكن غادي تطيح الشتا",
+      "fr": "Il va peut-être pleuvoir",
+      "audio": "audio/grammaire-063-ex.mp3"
     }
   },
   {
@@ -1016,13 +1016,13 @@
     "fr": "bien sûr / évidemment",
     "theme": "grammaire",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "tab-3an : un « t » épais, 3 serré.",
     "audio": "audio/grammaire-064.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tab3an ghadi nji!",
+      "arabe": "طبعا غادي نجي!",
+      "fr": "Bien sûr que je viendrai !",
+      "audio": "audio/grammaire-064-ex.mp3"
     }
   }
 ]

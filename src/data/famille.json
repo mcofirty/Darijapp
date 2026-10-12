@@ -310,13 +310,13 @@
     "fr": "famille",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l3a-2i-la : le 3 serré au fond de la gorge, puis un petit arrêt (2) avant « ila ».",
     "audio": "audio/famille-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l3a2ila dyali kbira",
+      "arabe": "العائلة ديالي كبيرة",
+      "fr": "Ma famille est grande",
+      "audio": "audio/famille-020-ex.mp3"
     }
   },
   {
@@ -326,13 +326,13 @@
     "fr": "père",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l-wa-lid : le « l » de l'article s'accroche au mot.",
     "audio": "audio/famille-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lwalid dyali khddam f lbank",
+      "arabe": "الوالد ديالي خدام ف البانك",
+      "fr": "Mon père travaille à la banque",
+      "audio": "audio/famille-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "mère",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l-wa-li-da : comme « lwalid », avec « a » à la fin.",
     "audio": "audio/famille-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lwalida katteyyeb tajine mzyan",
+      "arabe": "الوالدة كتطيب طاجين مزيان",
+      "fr": "Ma mère cuisine un bon tajine",
+      "audio": "audio/famille-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "fils / garçon",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "weld : une seule syllabe, le « d » final bien net.",
     "audio": "audio/famille-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndi weld wa7ed",
+      "arabe": "عندي ولد واحد",
+      "fr": "J'ai un fils",
+      "audio": "audio/famille-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "fille / fille (jeune)",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "bent : une syllabe, comme « bennt ».",
     "audio": "audio/famille-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bent khti zwina bzaf",
+      "arabe": "بنت ختي زوينة بزاف",
+      "fr": "La fille de ma sœur est très jolie",
+      "audio": "audio/famille-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "enfant",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "der-ri : le r roulé et doublé.",
     "audio": "audio/famille-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had ddrri m9ewwed",
+      "arabe": "هاد الدري مقود",
+      "fr": "Cet enfant est turbulent",
+      "audio": "audio/famille-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "enfants",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "dra-ri : le r roulé, l'accent sur « ra ».",
     "audio": "audio/famille-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddrari kayl3bo f zzen9a",
+      "arabe": "الدراري كيلعبو ف الزنقة",
+      "fr": "Les enfants jouent dans la rue",
+      "audio": "audio/famille-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "bébé",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "rdi3 : finis par le 3, un « a » serré au fond de la gorge.",
     "audio": "audio/famille-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "rrdi3 na3es daba",
+      "arabe": "الرضيع ناعس دابا",
+      "fr": "Le bébé dort maintenant",
+      "audio": "audio/famille-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "frère",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "khou : un raclement de gorge (kh), puis « ou ».",
     "audio": "audio/famille-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khou kayskon f fransa",
+      "arabe": "خو كيسكن ف فرنسا",
+      "fr": "Mon frère habite en France",
+      "audio": "audio/famille-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "sœur",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "kht : raclement (kh) puis un « t » net, sans voyelle.",
     "audio": "audio/famille-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kht karima tal3a m3ana",
+      "arabe": "خت كريمة طالعة معانا",
+      "fr": "La sœur de Karima sort avec nous",
+      "audio": "audio/famille-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "grand-père",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "jed : comme « djed », court.",
     "audio": "audio/famille-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jed dyali 3ndo tmanin 3am",
+      "arabe": "جد ديالي عندو تمانين عام",
+      "fr": "Mon grand-père a quatre-vingts ans",
+      "audio": "audio/famille-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "grand-mère",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "jed-da : le « d » doublé.",
     "audio": "audio/famille-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jedda katfekker f kolchi",
+      "arabe": "جدة كتفكر ف كلشي",
+      "fr": "Grand-mère pense à tout",
+      "audio": "audio/famille-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "oncle paternel",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3em : le 3 serré au fond de la gorge.",
     "audio": "audio/famille-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3emmi jay men fes",
+      "arabe": "عمي جاي من فاس",
+      "fr": "Mon oncle vient de Fès",
+      "audio": "audio/famille-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "tante paternelle",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3em-ma : le 3 serré, puis « mma » appuyé.",
     "audio": "audio/famille-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3emmti sakna f rbat",
+      "arabe": "عمتي ساكنة ف الرباط",
+      "fr": "Ma tante habite à Rabat",
+      "audio": "audio/famille-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "oncle maternel",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "khal : raclement de gorge, puis « al ».",
     "audio": "audio/famille-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khali 3ndo 7anout",
+      "arabe": "خالي عندو حانوت",
+      "fr": "Mon oncle a une boutique",
+      "audio": "audio/famille-034-ex.mp3"
     }
   },
   {
@@ -550,13 +550,13 @@
     "fr": "tante maternelle",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "kha-la : comme « khal », avec « a » à la fin.",
     "audio": "audio/famille-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khalti kat7ki 7kayat zwinin",
+      "arabe": "خالتي كتحكي حكايات زوينين",
+      "fr": "Ma tante raconte de belles histoires",
+      "audio": "audio/famille-035-ex.mp3"
     }
   },
   {
@@ -566,13 +566,13 @@
     "fr": "cousin",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "weld 3em-mi : gorge serrée pour le 3.",
     "audio": "audio/famille-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "weld 3emmi kay9ra m3aya",
+      "arabe": "ولد عمي كيقرا معايا",
+      "fr": "Mon cousin étudie avec moi",
+      "audio": "audio/famille-036-ex.mp3"
     },
     "note": "Le terme varie selon le lien"
   },
@@ -583,13 +583,13 @@
     "fr": "cousine",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "bent 3em-mi : gorge serrée pour le 3.",
     "audio": "audio/famille-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bent 3emmi ghadi tzowwej",
+      "arabe": "بنت عمي غادي تزوج",
+      "fr": "Ma cousine va se marier",
+      "audio": "audio/famille-037-ex.mp3"
     },
     "note": "Le terme varie selon le lien"
   },
@@ -600,13 +600,13 @@
     "fr": "mari / homme",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ra-jel : le r roulé.",
     "audio": "audio/famille-038.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "rajli khddam bzaf",
+      "arabe": "راجلي خدام بزاف",
+      "fr": "Mon mari travaille beaucoup",
+      "audio": "audio/famille-038-ex.mp3"
     }
   },
   {
@@ -616,13 +616,13 @@
     "fr": "épouse / femme",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "mra : « m » et « ra » d'un seul coup.",
     "audio": "audio/famille-039.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mrato men tanja",
+      "arabe": "مراتو من طنجة",
+      "fr": "Sa femme est de Tanger",
+      "audio": "audio/famille-039-ex.mp3"
     }
   },
   {
@@ -632,13 +632,13 @@
     "fr": "mariage",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "zwaj : « z » puis « waj ».",
     "audio": "audio/famille-040.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "zwaj dyalhom f ssif",
+      "arabe": "الزواج ديالهم ف الصيف",
+      "fr": "Leur mariage est en été",
+      "audio": "audio/famille-040-ex.mp3"
     }
   },
   {
@@ -648,13 +648,13 @@
     "fr": "marié",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "m-zow-wej : le « w » doublé.",
     "audio": "audio/famille-041.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nta mzowwej wella la?",
+      "arabe": "نتا مزوج ولا لا؟",
+      "fr": "Tu es marié ou non ?",
+      "audio": "audio/famille-041-ex.mp3"
     }
   },
   {
@@ -664,13 +664,13 @@
     "fr": "célibataire",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3a-zeb : le 3 serré au début.",
     "audio": "audio/famille-042.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana mazal 3azeb",
+      "arabe": "أنا مازال عازب",
+      "fr": "Je suis encore célibataire",
+      "audio": "audio/famille-042-ex.mp3"
     }
   },
   {
@@ -680,13 +680,13 @@
     "fr": "divorcé",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "m-tel-le9 : le 9 (ق) final tiré du fond de la gorge.",
     "audio": "audio/famille-043.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "howa mtelle9 men 3amayn",
+      "arabe": "هو مطلق من عامين",
+      "fr": "Il est divorcé depuis deux ans",
+      "audio": "audio/famille-043-ex.mp3"
     }
   },
   {
@@ -696,13 +696,13 @@
     "fr": "ami",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "sa7b : souffle chaud (7) avant le « b ».",
     "audio": "audio/famille-044.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sa7bi kayji ghedda",
+      "arabe": "صاحبي كيجي غدا",
+      "fr": "Mon ami vient demain",
+      "audio": "audio/famille-044-ex.mp3"
     }
   },
   {
@@ -712,13 +712,13 @@
     "fr": "amie",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "sa7-ba : souffle chaud (7) au milieu.",
     "audio": "audio/famille-045.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sa7bti kat9ra l7o9o9",
+      "arabe": "صاحبتي كتقرا الحقوق",
+      "fr": "Mon amie étudie le droit",
+      "audio": "audio/famille-045-ex.mp3"
     }
   },
   {
@@ -728,13 +728,13 @@
     "fr": "mon amie",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "sa7b-ti : souffle chaud (7), puis « ti ».",
     "audio": "audio/famille-046.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sa7bti ghadi tji l3ers",
+      "arabe": "صاحبتي غادي تجي للعرس",
+      "fr": "Mon amie va venir au mariage",
+      "audio": "audio/famille-046-ex.mp3"
     }
   },
   {
@@ -744,13 +744,13 @@
     "fr": "voisin",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "jar : comme « djar », le r roulé.",
     "audio": "audio/famille-047.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jari 3ndo kelb kbir",
+      "arabe": "جاري عندو كلب كبير",
+      "fr": "Mon voisin a un grand chien",
+      "audio": "audio/famille-047-ex.mp3"
     }
   },
   {
@@ -760,13 +760,13 @@
     "fr": "voisine",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ja-ra : comme « jar », avec « a » à la fin.",
     "audio": "audio/famille-048.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jarti katjib lina l7lwa",
+      "arabe": "جارتي كتجيب لينا الحلوى",
+      "fr": "Ma voisine nous apporte des gâteaux",
+      "audio": "audio/famille-048-ex.mp3"
     }
   },
   {
@@ -776,13 +776,13 @@
     "fr": "invité",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "dif : un « d » épais, comme prononcé avec la langue large.",
     "audio": "audio/famille-049.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndna dif lyom",
+      "arabe": "عندنا ضيف اليوم",
+      "fr": "Nous avons un invité aujourd'hui",
+      "audio": "audio/famille-049-ex.mp3"
     }
   },
   {
@@ -792,13 +792,13 @@
     "fr": "jeune homme",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "chab : « ch » de « chat ».",
     "audio": "audio/famille-050.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had chab driyef bzaf",
+      "arabe": "هاد الشاب ضريف بزاف",
+      "fr": "Ce jeune homme est très gentil",
+      "audio": "audio/famille-050-ex.mp3"
     }
   },
   {
@@ -808,13 +808,13 @@
     "fr": "jeune femme",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "chab-ba : « ch » de « chat », le « b » doublé.",
     "audio": "audio/famille-051.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wa7ed chabba kat9elleb 3lik",
+      "arabe": "واحد شابة كتقلب عليك",
+      "fr": "Une jeune femme te cherche",
+      "audio": "audio/famille-051-ex.mp3"
     }
   },
   {
@@ -824,13 +824,13 @@
     "fr": "vieillard",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "cha-yeb : « ch » de « chat », l'accent sur « cha ».",
     "audio": "audio/famille-052.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chayeb galss f lbab",
+      "arabe": "شايب گالس ف الباب",
+      "fr": "Un vieil homme est assis à la porte",
+      "audio": "audio/famille-052-ex.mp3"
     }
   },
   {
@@ -840,13 +840,13 @@
     "fr": "étranger",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ber-ra-ni : le r roulé et doublé.",
     "audio": "audio/famille-053.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "howa berrani, ma kayhderch ddarija",
+      "arabe": "هو براني، ما كيهضرش الدارجة",
+      "fr": "Il est étranger, il ne parle pas darija",
+      "audio": "audio/famille-053-ex.mp3"
     }
   },
   {
@@ -856,13 +856,13 @@
     "fr": "connaissance",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "m3er-fa : le 3 serré juste après le « m ».",
     "audio": "audio/famille-054.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hadi m3erfa men lkhedma",
+      "arabe": "هادي معرفة من الخدمة",
+      "fr": "C'est une connaissance du travail",
+      "audio": "audio/famille-054-ex.mp3"
     }
   },
   {
@@ -872,13 +872,13 @@
     "fr": "groupe",
     "theme": "famille",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "maj-mou-3a : le 3 serré à la fin.",
     "audio": "audio/famille-055.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mchina f majmou3a kbira",
+      "arabe": "مشينا ف مجموعة كبيرة",
+      "fr": "Nous sommes partis en grand groupe",
+      "audio": "audio/famille-055-ex.mp3"
     }
   }
 ]

@@ -310,13 +310,13 @@
     "fr": "avant-hier",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "9bel l-ba-re7 : 9 tiré du fond de la gorge au début, souffle chaud (7) à la fin.",
     "audio": "audio/jours-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chefto 9bel lbare7",
+      "arabe": "شفتو قبل البارح",
+      "fr": "Je l'ai vu avant-hier",
+      "audio": "audio/jours-020-ex.mp3"
     }
   },
   {
@@ -326,13 +326,13 @@
     "fr": "après-demain",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "men b3d ghed-da : gorge serrée (3), puis « gh » grasseyé.",
     "audio": "audio/jours-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghadi nsafer men b3d ghedda",
+      "arabe": "غادي نسافر من بعد غدا",
+      "fr": "Je pars en voyage après-demain",
+      "audio": "audio/jours-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "ce matin",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "had s-sba7 : « s » doublé, souffle chaud (7) à la fin.",
     "audio": "audio/jours-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kliti had ssba7?",
+      "arabe": "كليتي هاد الصباح؟",
+      "fr": "Tu as mangé ce matin ?",
+      "audio": "audio/jours-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "ce soir",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "had l3chi-ya : le 3 serré, puis « chiya ».",
     "audio": "audio/jours-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nchoufek had l3chiya",
+      "arabe": "نشوفك هاد العشية",
+      "fr": "Je te vois ce soir",
+      "audio": "audio/jours-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "cette nuit",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "had l-li-la : « l » doublé.",
     "audio": "audio/jours-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma n3est walou had llila",
+      "arabe": "ما نعست والو هاد الليلة",
+      "fr": "Je n'ai pas dormi du tout cette nuit",
+      "audio": "audio/jours-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "tout de suite",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "da-ba da-ba : « daba » deux fois, rapide.",
     "audio": "audio/jours-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "aji daba daba!",
+      "arabe": "أجي دابا دابا!",
+      "fr": "Viens tout de suite !",
+      "audio": "audio/jours-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "bientôt",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3la 9rib : gorge serrée (3), puis 9 du fond de la gorge.",
     "audio": "audio/jours-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghadi nrje3 3la 9rib",
+      "arabe": "غادي نرجع على قريب",
+      "fr": "Je reviens bientôt",
+      "audio": "audio/jours-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "tout à l'heure",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "mo-ra chwiy-ya : « ch » de « chat ».",
     "audio": "audio/jours-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nkellmek mora chwiyya",
+      "arabe": "نكلمك مورا شوية",
+      "fr": "Je t'appelle tout à l'heure",
+      "audio": "audio/jours-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "toujours",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "di-ma : comme en français « dima ».",
     "audio": "audio/jours-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "dima kanchreb atay f ssba7",
+      "arabe": "ديما كنشرب أتاي ف الصباح",
+      "fr": "Je bois toujours du thé le matin",
+      "audio": "audio/jours-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "jamais",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3mer : le 3 serré, suivi de « mer ».",
     "audio": "audio/jours-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3mri ma mchit l mrrakech",
+      "arabe": "عمري ما مشيت ل مراكش",
+      "fr": "Je ne suis jamais allé à Marrakech",
+      "audio": "audio/jours-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "souvent",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "bzaf d l-me-rat : « bzaf » puis « lmerat ».",
     "audio": "audio/jours-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kanji hna bzaf d lmerat",
+      "arabe": "كنجي هنا بزاف د المرات",
+      "fr": "Je viens souvent ici",
+      "audio": "audio/jours-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "parfois",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "mer-ra mer-ra : le r roulé et doublé.",
     "audio": "audio/jours-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "merra merra kanakol f lmet3am",
+      "arabe": "مرة مرة كناكل ف المطعم",
+      "fr": "Parfois je mange au restaurant",
+      "audio": "audio/jours-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "rarement",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "9lil : le 9 tiré du fond de la gorge.",
     "audio": "audio/jours-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "9lil fin kanchoufo",
+      "arabe": "قليل فين كنشوفو",
+      "fr": "Je le vois rarement",
+      "audio": "audio/jours-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "chaque jour / tous les jours",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "kol nhar : « nhar » avec un « h » expiré.",
     "audio": "audio/jours-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kol nhar kantmcha",
+      "arabe": "كل نهار كنتمشى",
+      "fr": "Je me promène chaque jour",
+      "audio": "audio/jours-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "une fois",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "mer-ra wa7-da : souffle chaud (7) dans « wa7da ».",
     "audio": "audio/jours-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mchit l fes merra wa7da",
+      "arabe": "مشيت ل فاس مرة وحدة",
+      "fr": "Je suis allé à Fès une fois",
+      "audio": "audio/jours-034-ex.mp3"
     }
   },
   {
@@ -550,13 +550,13 @@
     "fr": "deux fois",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "jouj mrat : « mrat » d'un trait.",
     "audio": "audio/jours-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kanakol jouj mrat f nhar",
+      "arabe": "كناكل جوج مرات ف النهار",
+      "fr": "Je mange deux fois par jour",
+      "audio": "audio/jours-035-ex.mp3"
     }
   },
   {
@@ -566,13 +566,13 @@
     "fr": "encore / pas encore",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ma-zal : l'accent sur « zal ».",
     "audio": "audio/jours-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mazal ma jach",
+      "arabe": "مازال ما جاش",
+      "fr": "Il n'est pas encore venu",
+      "audio": "audio/jours-036-ex.mp3"
     }
   },
   {
@@ -582,13 +582,13 @@
     "fr": "déjà",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "de-ja : comme le français « déjà ».",
     "audio": "audio/jours-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "deja klit, chokran",
+      "arabe": "ديجا كليت، شكرا",
+      "fr": "J'ai déjà mangé, merci",
+      "audio": "audio/jours-037-ex.mp3"
     },
     "note": "Emprunt courant"
   },
@@ -599,13 +599,13 @@
     "fr": "tôt",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "bek-ri : le r roulé.",
     "audio": "audio/jours-038.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nod bekri ghedda",
+      "arabe": "نوض بكري غدا",
+      "fr": "Lève-toi tôt demain",
+      "audio": "audio/jours-038-ex.mp3"
     }
   },
   {
@@ -615,13 +615,13 @@
     "fr": "tard / en retard",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "m3et-tel : le 3 serré après le « m ».",
     "audio": "audio/jours-039.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sme7 lia, ana m3ettel",
+      "arabe": "سمح ليا، أنا معطل",
+      "fr": "Pardon, je suis en retard",
+      "audio": "audio/jours-039-ex.mp3"
     }
   },
   {
@@ -631,13 +631,13 @@
     "fr": "à l'heure",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "f l-wa9t : le 9 tiré du fond de la gorge.",
     "audio": "audio/jours-040.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ja f lwa9t lyom",
+      "arabe": "جا ف الوقت اليوم",
+      "fr": "Il est arrivé à l'heure aujourd'hui",
+      "audio": "audio/jours-040-ex.mp3"
     }
   },
   {
@@ -647,13 +647,13 @@
     "fr": "une minute",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "d9i-9a : deux 9 tirés du fond de la gorge.",
     "audio": "audio/jours-041.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tsenna wa7ed d9i9a",
+      "arabe": "تسنى واحد دقيقة",
+      "fr": "Attends une minute",
+      "audio": "audio/jours-041-ex.mp3"
     }
   },
   {
@@ -663,13 +663,13 @@
     "fr": "une heure / montre",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "sa-3a : le 3 serré au milieu.",
     "audio": "audio/jours-042.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ch7al f sa3a?",
+      "arabe": "شحال ف الساعة؟",
+      "fr": "Quelle heure est-il ?",
+      "audio": "audio/jours-042-ex.mp3"
     }
   },
   {
@@ -679,13 +679,13 @@
     "fr": "une seconde",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ta-ni-ya : comme « tania ».",
     "audio": "audio/jours-043.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghir taniya w nji",
+      "arabe": "غير ثانية و نجي",
+      "fr": "Juste une seconde et j'arrive",
+      "audio": "audio/jours-043-ex.mp3"
     }
   },
   {
@@ -695,13 +695,13 @@
     "fr": "un mois",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "chher : « ch » de « chat », « h » expiré.",
     "audio": "audio/jours-044.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghadi nsafer chher jay",
+      "arabe": "غادي نسافر الشهر الجاي",
+      "fr": "Je pars en voyage le mois prochain",
+      "audio": "audio/jours-044-ex.mp3"
     }
   },
   {
@@ -711,13 +711,13 @@
     "fr": "un siècle",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "9ern : le 9 tiré du fond de la gorge.",
     "audio": "audio/jours-045.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had ddar 3ndha 9ern",
+      "arabe": "هاد الدار عندها قرن",
+      "fr": "Cette maison a un siècle",
+      "audio": "audio/jours-045-ex.mp3"
     }
   },
   {
@@ -727,13 +727,13 @@
     "fr": "midi",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "noss nhar : « noss » avec un « s » épais.",
     "audio": "audio/jours-046.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ntla9aw f noss nhar",
+      "arabe": "نتلاقاو ف نص النهار",
+      "fr": "On se retrouve à midi",
+      "audio": "audio/jours-046-ex.mp3"
     }
   },
   {
@@ -743,13 +743,13 @@
     "fr": "l'après-midi",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "men b3d d-dohr : gorge serrée (3), « h » expiré dans « dohr ».",
     "audio": "audio/jours-047.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kankhdem men b3d ddohr",
+      "arabe": "كنخدم من بعد الظهر",
+      "fr": "Je travaille l'après-midi",
+      "audio": "audio/jours-047-ex.mp3"
     }
   },
   {
@@ -759,13 +759,13 @@
     "fr": "minuit",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "noss l-lil : « l » doublé.",
     "audio": "audio/jours-048.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "na3es men noss llil",
+      "arabe": "ناعس من نص الليل",
+      "fr": "Il dort depuis minuit",
+      "audio": "audio/jours-048-ex.mp3"
     }
   },
   {
@@ -775,13 +775,13 @@
     "fr": "le week-end",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ni-ha-yat si-ma-na : l'accent sur « mana ».",
     "audio": "audio/jours-049.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nihayat simana ghadi nrta7",
+      "arabe": "نهاية السيمانة غادي نرتاح",
+      "fr": "Le week-end, je vais me reposer",
+      "audio": "audio/jours-049-ex.mp3"
     }
   },
   {
@@ -791,13 +791,13 @@
     "fr": "janvier",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ya-na-yer : l'accent sur « na ».",
     "audio": "audio/jours-050.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tzad f yanayer",
+      "arabe": "تزاد ف يناير",
+      "fr": "Il est né en janvier",
+      "audio": "audio/jours-050-ex.mp3"
     }
   },
   {
@@ -807,13 +807,13 @@
     "fr": "février",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "feb-ra-yer : le r roulé.",
     "audio": "audio/jours-051.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "f febrayer kaybrd l7al",
+      "arabe": "ف فبراير كيبرد الحال",
+      "fr": "En février il fait froid",
+      "audio": "audio/jours-051-ex.mp3"
     }
   },
   {
@@ -823,13 +823,13 @@
     "fr": "mars",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "mars : comme le français, le r roulé.",
     "audio": "audio/jours-052.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "f mars kaybda rrbi3",
+      "arabe": "ف مارس كيبدا الربيع",
+      "fr": "En mars commence le printemps",
+      "audio": "audio/jours-052-ex.mp3"
     }
   },
   {
@@ -839,13 +839,13 @@
     "fr": "avril",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ab-ril : le r roulé.",
     "audio": "audio/jours-053.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghadi nsafer f abril",
+      "arabe": "غادي نسافر ف أبريل",
+      "fr": "Je pars en voyage en avril",
+      "audio": "audio/jours-053-ex.mp3"
     }
   },
   {
@@ -855,13 +855,13 @@
     "fr": "mai",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "may : comme « maille ».",
     "audio": "audio/jours-054.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l3ers dyalo f may",
+      "arabe": "العرس ديالو ف ماي",
+      "fr": "Son mariage est en mai",
+      "audio": "audio/jours-054-ex.mp3"
     }
   },
   {
@@ -871,13 +871,13 @@
     "fr": "juin",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "yon-yo : deux syllabes, « you-nyo ».",
     "audio": "audio/jours-055.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "f yonyo kaysaliw l9raya",
+      "arabe": "ف يونيو كيساليو القراية",
+      "fr": "En juin, les cours se terminent",
+      "audio": "audio/jours-055-ex.mp3"
     }
   },
   {
@@ -887,13 +887,13 @@
     "fr": "juillet",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "yol-yoz : « z » final bien net.",
     "audio": "audio/jours-056.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "f yolyoz kanmchiw l lb7ar",
+      "arabe": "ف يوليوز كنمشيو ل البحر",
+      "fr": "En juillet, on va à la mer",
+      "audio": "audio/jours-056-ex.mp3"
     }
   },
   {
@@ -903,13 +903,13 @@
     "fr": "août",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "gho-cht : « gh » grasseyé, « ch » de « chat ».",
     "audio": "audio/jours-057.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "f ghocht ssekhana bzaf",
+      "arabe": "ف غشت السخانة بزاف",
+      "fr": "En août, il fait très chaud",
+      "audio": "audio/jours-057-ex.mp3"
     }
   },
   {
@@ -919,13 +919,13 @@
     "fr": "septembre",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "chtan-ber : « ch » de « chat » au début.",
     "audio": "audio/jours-058.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmadrasa katbda f chtanber",
+      "arabe": "المدرسة كتبدا ف شتنبر",
+      "fr": "L'école commence en septembre",
+      "audio": "audio/jours-058-ex.mp3"
     }
   },
   {
@@ -935,13 +935,13 @@
     "fr": "octobre",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ok-to-ber : l'accent sur « to ».",
     "audio": "audio/jours-059.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tzadet f oktober",
+      "arabe": "تزادت ف أكتوبر",
+      "fr": "Elle est née en octobre",
+      "audio": "audio/jours-059-ex.mp3"
     }
   },
   {
@@ -951,13 +951,13 @@
     "fr": "novembre",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "nwan-ber : « nwan » puis « ber ».",
     "audio": "audio/jours-060.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "f nwanber kayti7 chta",
+      "arabe": "ف نونبر كيطيح الشتا",
+      "fr": "En novembre, il pleut",
+      "audio": "audio/jours-060-ex.mp3"
     }
   },
   {
@@ -967,13 +967,13 @@
     "fr": "décembre",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "do-jan-ber : « jan » comme « djann ».",
     "audio": "audio/jours-061.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "f dojanber kayna l3otla",
+      "arabe": "ف دجنبر كاينة العطلة",
+      "fr": "En décembre, il y a les vacances",
+      "audio": "audio/jours-061-ex.mp3"
     }
   },
   {
@@ -983,13 +983,13 @@
     "fr": "printemps",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "r-rbi3 : le r doublé, le 3 serré à la fin.",
     "audio": "audio/jours-062.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "rrbi3 zwin f lmeghrib",
+      "arabe": "الربيع زوين ف المغرب",
+      "fr": "Le printemps est beau au Maroc",
+      "audio": "audio/jours-062-ex.mp3"
     }
   },
   {
@@ -999,13 +999,13 @@
     "fr": "été",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "s-sif : le « s » doublé.",
     "audio": "audio/jours-063.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "f ssif kan3oumo bzaf",
+      "arabe": "ف الصيف كنعومو بزاف",
+      "fr": "L'été, on nage beaucoup",
+      "audio": "audio/jours-063-ex.mp3"
     }
   },
   {
@@ -1015,13 +1015,13 @@
     "fr": "automne",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l-khrif : raclement (kh) au début.",
     "audio": "audio/jours-064.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "f lkhrif kayti7o lwer9",
+      "arabe": "ف الخريف كيطيحو الورق",
+      "fr": "En automne, les feuilles tombent",
+      "audio": "audio/jours-064-ex.mp3"
     }
   },
   {
@@ -1031,13 +1031,13 @@
     "fr": "hiver / pluie",
     "theme": "jours",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ch-chta : « ch » doublé et appuyé.",
     "audio": "audio/jours-065.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmdina kat7taj chta",
+      "arabe": "المدينة كتحتاج الشتا",
+      "fr": "La ville a besoin de pluie",
+      "audio": "audio/jours-065-ex.mp3"
     }
   }
 ]

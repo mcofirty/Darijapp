@@ -6,13 +6,13 @@
     "fr": "où est la gare ?",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "fin kay-na l-ma-7at-ta d train : souffle chaud (7) dans « lma7atta ».",
     "audio": "audio/chemin-001.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sme7 lia, fin kayna lma7atta d train?",
+      "arabe": "سمح ليا، فين كاينة المحطة د تران؟",
+      "fr": "Pardon, où est la gare ?",
+      "audio": "audio/chemin-001-ex.mp3"
     }
   },
   {
@@ -22,13 +22,13 @@
     "fr": "où est l'aéroport ?",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "fin kayn l-ma-tar : un « t » épais.",
     "audio": "audio/chemin-002.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fin kayn lmatar? 3ndi ttayyara f l3achra",
+      "arabe": "فين كاين المطار؟ عندي الطيارة ف العشرة",
+      "fr": "Où est l'aéroport ? J'ai l'avion à dix heures",
+      "audio": "audio/chemin-002-ex.mp3"
     }
   },
   {
@@ -38,13 +38,13 @@
     "fr": "où est l'hôtel ?",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "fin kayn lo-til : comme « hôtel ».",
     "audio": "audio/chemin-003.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fin kayn lotil lli 7da lb7ar?",
+      "arabe": "فين كاين الأوطيل اللي حدا البحر؟",
+      "fr": "Où est l'hôtel près de la mer ?",
+      "audio": "audio/chemin-003-ex.mp3"
     }
   },
   {
@@ -54,13 +54,13 @@
     "fr": "où sont les toilettes ?",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "fin kay-nin t-to-ya-let : comme « toilettes ».",
     "audio": "audio/chemin-004.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3afak, fin kaynin ttoyalet?",
+      "arabe": "عافاك، فين كاينين التواليت؟",
+      "fr": "S'il vous plaît, où sont les toilettes ?",
+      "audio": "audio/chemin-004-ex.mp3"
     }
   },
   {
@@ -70,13 +70,13 @@
     "fr": "où est le centre-ville ?",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "fin kayn wst l-mdi-na : « wst » d'un trait.",
     "audio": "audio/chemin-005.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fin kayn wst lmdina? bghit nchri",
+      "arabe": "فين كاين وسط المدينة؟ بغيت نشري",
+      "fr": "Où est le centre-ville ? Je veux faire des achats",
+      "audio": "audio/chemin-005-ex.mp3"
     }
   },
   {
@@ -86,13 +86,13 @@
     "fr": "c'est loin ?",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wach b3id : le 3 serré.",
     "audio": "audio/chemin-006.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach b3id men hna l ssou9?",
+      "arabe": "واش بعيد من هنا ل السوق؟",
+      "fr": "C'est loin d'ici jusqu'au souk ?",
+      "audio": "audio/chemin-006-ex.mp3"
     }
   },
   {
@@ -102,13 +102,13 @@
     "fr": "c'est près ?",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wach 9rib : le 9 du fond de la gorge.",
     "audio": "audio/chemin-007.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach 9rib? n9der nmchi 3la rjli?",
+      "arabe": "واش قريب؟ نقدر نمشي على رجلي؟",
+      "fr": "C'est près ? Je peux y aller à pied ?",
+      "audio": "audio/chemin-007-ex.mp3"
     }
   },
   {
@@ -118,13 +118,13 @@
     "fr": "c'est à combien de minutes ?",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ch7al men d9i-9a : « ch » puis 7, deux 9.",
     "audio": "audio/chemin-008.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ch7al men d9i9a b ttaxi?",
+      "arabe": "شحال من دقيقة ب الطاكسي؟",
+      "fr": "C'est à combien de minutes en taxi ?",
+      "audio": "audio/chemin-008-ex.mp3"
     }
   },
   {
@@ -134,13 +134,13 @@
     "fr": "je suis perdu (dit par un homme)",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "a-na ta-lef : un « t » simple.",
     "audio": "audio/chemin-009.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3afak 3awenni, ana talef",
+      "arabe": "عافاك عاوني، أنا تالف",
+      "fr": "S'il vous plaît aidez-moi, je suis perdu",
+      "audio": "audio/chemin-009-ex.mp3"
     }
   },
   {
@@ -150,13 +150,13 @@
     "fr": "je suis perdue",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "a-na tal-fa : comme « talef », au féminin.",
     "audio": "audio/chemin-010.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana talfa, fin kayna ssa7a?",
+      "arabe": "أنا تالفة، فين كاينة الساحة؟",
+      "fr": "Je suis perdue, où est la place ?",
+      "audio": "audio/chemin-010-ex.mp3"
     }
   },
   {
@@ -166,13 +166,13 @@
     "fr": "je veux aller à la médina",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bghit nmchi l-mdi-na : « gh » grasseyé, « ch » de « chat ».",
     "audio": "audio/chemin-011.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit nmchi lmdina l9dima",
+      "arabe": "بغيت نمشي المدينة القديمة",
+      "fr": "Je veux aller à l'ancienne médina",
+      "audio": "audio/chemin-011-ex.mp3"
     }
   },
   {
@@ -182,13 +182,13 @@
     "fr": "je veux aller à la plage",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bghit nmchi l pla-ja : « gh » et « ch ».",
     "audio": "audio/chemin-012.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit nmchi l plaja m3a ddrari",
+      "arabe": "بغيت نمشي للبلاجة مع الدراري",
+      "fr": "Je veux aller à la plage avec les enfants",
+      "audio": "audio/chemin-012-ex.mp3"
     }
   },
   {
@@ -198,13 +198,13 @@
     "fr": "comment aller au souk ?",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ki-fach nmchi l sou9 : « ch » deux fois, 9 à la fin.",
     "audio": "audio/chemin-013.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kifach nmchi l ssou9 men hna?",
+      "arabe": "كيفاش نمشي للسوق من هنا؟",
+      "fr": "Comment aller au souk d'ici ?",
+      "audio": "audio/chemin-013-ex.mp3"
     }
   },
   {
@@ -214,13 +214,13 @@
     "fr": "tournez à droite",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "dour 3la li-men : le 3 serré.",
     "audio": "audio/chemin-014.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "men b3d ddo, dour 3la limen",
+      "arabe": "من بعد الضو، دور على ليمن",
+      "fr": "Après le feu, tournez à droite",
+      "audio": "audio/chemin-014-ex.mp3"
     }
   },
   {
@@ -230,13 +230,13 @@
     "fr": "tournez à gauche",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "dour 3la lis-ser : le 3 serré, le « s » doublé.",
     "audio": "audio/chemin-015.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "dour 3la lisser f zzen9a ttanya",
+      "arabe": "دور على ليسر ف الزنقة التانية",
+      "fr": "Tournez à gauche dans la deuxième rue",
+      "audio": "audio/chemin-015-ex.mp3"
     }
   },
   {
@@ -246,13 +246,13 @@
     "fr": "allez tout droit",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "sir ni-chan : « ch » de « chat ».",
     "audio": "audio/chemin-016.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sir nichan 7tta lmasjid",
+      "arabe": "سير نيشان حتى المسجد",
+      "fr": "Allez tout droit jusqu'à la mosquée",
+      "audio": "audio/chemin-016-ex.mp3"
     }
   },
   {
@@ -262,13 +262,13 @@
     "fr": "arrêtez ici",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "7bes hna : souffle chaud (7), « h » expiré.",
     "audio": "audio/chemin-017.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7bes hna, wselna",
+      "arabe": "حبس هنا، وصلنا",
+      "fr": "Arrêtez ici, nous sommes arrivés",
+      "audio": "audio/chemin-017-ex.mp3"
     }
   },
   {
@@ -278,13 +278,13 @@
     "fr": "continuez tout droit",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kem-mel ni-chan : le « m » doublé.",
     "audio": "audio/chemin-018.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kemmel nichan w ghadi tl9a lbank",
+      "arabe": "كمل نيشان و غادي تلقى البانك",
+      "fr": "Continuez tout droit et vous trouverez la banque",
+      "audio": "audio/chemin-018-ex.mp3"
     }
   },
   {
@@ -294,13 +294,13 @@
     "fr": "je cherche un taxi",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kan-9el-leb 3la ta-xi : 9 du fond de la gorge, 3 serré.",
     "audio": "audio/chemin-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kan9elleb 3la taxi l lmatar",
+      "arabe": "كنقلب على طاكسي ل المطار",
+      "fr": "Je cherche un taxi pour l'aéroport",
+      "audio": "audio/chemin-019-ex.mp3"
     }
   },
   {
@@ -310,13 +310,13 @@
     "fr": "il faut combien pour aller là-bas ?",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ch7al bach nmchi l-tem-ma : « ch » et 7.",
     "audio": "audio/chemin-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ch7al bach nmchi ltemma b ttaxi?",
+      "arabe": "شحال باش نمشي لتما ب الطاكسي؟",
+      "fr": "Ça coûte combien pour aller là-bas en taxi ?",
+      "audio": "audio/chemin-020-ex.mp3"
     }
   },
   {
@@ -326,13 +326,13 @@
     "fr": "mettez le compteur, s'il vous plaît",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ch3el l-kon-tor, 3a-fak : « ch » puis 3 serré.",
     "audio": "audio/chemin-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ch3el lcompteur, 3afak, ma bghitch ntkhasem",
+      "arabe": "شعل الكونطور، عافاك، ما بغيتش نتخاصم",
+      "fr": "Mettez le compteur, s'il vous plaît, je ne veux pas me disputer",
+      "audio": "audio/chemin-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "je descends ici",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "gha-di nhbet hna : « gh » grasseyé, « h » expiré.",
     "audio": "audio/chemin-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "safi, ghadi nhbet hna, chokran",
+      "arabe": "صافي، غادي نهبط هنا، شكرا",
+      "fr": "Bon, je descends ici, merci",
+      "audio": "audio/chemin-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "je voudrais un billet",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bghit ti-ki : « gh » grasseyé.",
     "audio": "audio/chemin-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit tiki l rbat 3afak",
+      "arabe": "بغيت تيكي ل الرباط عافاك",
+      "fr": "Je voudrais un billet pour Rabat, s'il vous plaît",
+      "audio": "audio/chemin-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "un billet aller simple",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ti-ki dyal l'al-le : comme « aller » en français.",
     "audio": "audio/chemin-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit tiki dyal l'aller l fes",
+      "arabe": "بغيت تيكي ديال لالي ل فاس",
+      "fr": "Je voudrais un aller simple pour Fès",
+      "audio": "audio/chemin-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "un billet aller-retour",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ti-ki al-le-re-tour : comme « aller-retour ».",
     "audio": "audio/chemin-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ch7al tiki aller-retour l tanja?",
+      "arabe": "شحال تيكي ألي روتور ل طنجة؟",
+      "fr": "Combien coûte un aller-retour pour Tanger ?",
+      "audio": "audio/chemin-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "quand part le train ?",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "fo9-ach kay-kher-rej train : 9 du fond de la gorge, raclement (kh).",
     "audio": "audio/chemin-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fo9ach kaykherrej train l mrrakech?",
+      "arabe": "فوقاش كيخرج تران ل مراكش؟",
+      "fr": "Quand part le train pour Marrakech ?",
+      "audio": "audio/chemin-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "à quelle heure arrive le bus ?",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "m3a ch7al kay-wsel to-bis : 3 serré, « ch » et 7.",
     "audio": "audio/chemin-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "m3a ch7al kaywsel tobis l lmdina?",
+      "arabe": "معا شحال كيوصل طوبيس ل المدينة؟",
+      "fr": "À quelle heure le bus arrive en ville ?",
+      "audio": "audio/chemin-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "où est l'arrêt de bus ?",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "fin kay-na ma-7at-ta d to-bis : souffle chaud (7).",
     "audio": "audio/chemin-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fin kayna ma7atta d tobis l9riba?",
+      "arabe": "فين كاينة محطة د طوبيس القريبة؟",
+      "fr": "Où est l'arrêt de bus le plus proche ?",
+      "audio": "audio/chemin-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "je veux réserver",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bghit nre-zer-vi : comme « réserver ».",
     "audio": "audio/chemin-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit nrezervi bit l jouj lyali",
+      "arabe": "بغيت نريزيرفي بيت ل جوج ليالي",
+      "fr": "Je veux réserver une chambre pour deux nuits",
+      "audio": "audio/chemin-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "j'ai une réservation",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3ndi re-zer-va-syon : le 3 serré au début.",
     "audio": "audio/chemin-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndi reservation b smiti",
+      "arabe": "عندي ريزيرفاسيون ب سميتي",
+      "fr": "J'ai une réservation à mon nom",
+      "audio": "audio/chemin-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "j'ai perdu mon passeport",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "diya3t l-pas-por dya-li : un « d » épais, 3 serré.",
     "audio": "audio/chemin-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "diye3t lpaspor dyali f lmatar",
+      "arabe": "ضيعت الباسبور ديالي ف المطار",
+      "fr": "J'ai perdu mon passeport à l'aéroport",
+      "audio": "audio/chemin-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "il y a beaucoup de circulation",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kayn z7am bzaf : souffle chaud (7).",
     "audio": "audio/chemin-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayn z7am bzaf f had sa3a",
+      "arabe": "كاين زحام بزاف ف هاد الساعة",
+      "fr": "Il y a beaucoup de circulation à cette heure-ci",
+      "audio": "audio/chemin-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "il y a un embouteillage",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kayn z7am : souffle chaud (7).",
     "audio": "audio/chemin-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sme7 lia, kayn z7am f ttri9",
+      "arabe": "سمح ليا، كاين زحام ف الطريق",
+      "fr": "Désolé, il y a un embouteillage sur la route",
+      "audio": "audio/chemin-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "nous sommes en retard",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "7na m3et-lin : souffle chaud (7), 3 serré.",
     "audio": "audio/chemin-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "zreb, 7na m3etlin!",
+      "arabe": "زرب، حنا معطلين!",
+      "fr": "Dépêche-toi, nous sommes en retard !",
+      "audio": "audio/chemin-034-ex.mp3"
     }
   },
   {
@@ -550,13 +550,13 @@
     "fr": "je suis arrivé",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wselt : « w » accroché au « s ».",
     "audio": "audio/chemin-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wselt l lotil, kolchi mzyan",
+      "arabe": "وصلت ل الأوطيل، كلشي مزيان",
+      "fr": "Je suis arrivé à l'hôtel, tout va bien",
+      "audio": "audio/chemin-035-ex.mp3"
     }
   },
   {
@@ -566,13 +566,13 @@
     "fr": "je pars demain",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "gha-di nmchi ghed-da : deux « gh » grasseyés.",
     "audio": "audio/chemin-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghadi nmchi ghedda f ssba7",
+      "arabe": "غادي نمشي غدا ف الصباح",
+      "fr": "Je pars demain matin",
+      "audio": "audio/chemin-036-ex.mp3"
     }
   },
   {
@@ -582,13 +582,13 @@
     "fr": "je reviens demain",
     "theme": "chemin",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "gha-di nrje3 ghed-da : deux « gh », 3 serré.",
     "audio": "audio/chemin-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghadi nrje3 ghedda f l3chiya",
+      "arabe": "غادي نرجع غدا ف العشية",
+      "fr": "Je reviens demain soir",
+      "audio": "audio/chemin-037-ex.mp3"
     }
   }
 ]

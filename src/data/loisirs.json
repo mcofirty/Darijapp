@@ -6,13 +6,13 @@
     "fr": "sport",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "spor : comme « sport », le r roulé.",
     "audio": "audio/loisirs-001.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kandir sport kol nhar",
+      "arabe": "كندير سبور كل نهار",
+      "fr": "Je fais du sport tous les jours",
+      "audio": "audio/loisirs-001-ex.mp3"
     }
   },
   {
@@ -22,13 +22,13 @@
     "fr": "football / ballon",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ko-ra : le r roulé.",
     "audio": "audio/loisirs-002.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddrari kayl3bo lkora f zzen9a",
+      "arabe": "الدراري كيلعبو الكورة ف الزنقة",
+      "fr": "Les enfants jouent au foot dans la rue",
+      "audio": "audio/loisirs-002-ex.mp3"
     }
   },
   {
@@ -38,13 +38,13 @@
     "fr": "match",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "match : comme en français.",
     "audio": "audio/loisirs-003.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmatch ghadi ybda f ttes3ood",
+      "arabe": "الماتش غادي يبدا ف التسعود",
+      "fr": "Le match va commencer à neuf heures",
+      "audio": "audio/loisirs-003-ex.mp3"
     }
   },
   {
@@ -54,13 +54,13 @@
     "fr": "joueur",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "le-3eb : le 3 serré.",
     "audio": "audio/loisirs-004.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "howa le3eb mzyan f lwidad",
+      "arabe": "هو لاعب مزيان ف الوداد",
+      "fr": "C'est un bon joueur du Wydad",
+      "audio": "audio/loisirs-004-ex.mp3"
     }
   },
   {
@@ -70,13 +70,13 @@
     "fr": "joueuse",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "le3-ba : le 3 serré.",
     "audio": "audio/loisirs-005.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bent khti le3ba d tennis",
+      "arabe": "بنت ختي لاعبة د تينيس",
+      "fr": "Ma nièce est joueuse de tennis",
+      "audio": "audio/loisirs-005-ex.mp3"
     }
   },
   {
@@ -86,13 +86,13 @@
     "fr": "entraîneur",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mo-dar-rib : le « r » doublé.",
     "audio": "audio/loisirs-006.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmodarrib jdid f lfari9",
+      "arabe": "المدرب جديد ف الفريق",
+      "fr": "L'entraîneur est nouveau dans l'équipe",
+      "audio": "audio/loisirs-006-ex.mp3"
     }
   },
   {
@@ -102,13 +102,13 @@
     "fr": "arbitre",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7e-kem : souffle chaud (7) au début.",
     "audio": "audio/loisirs-007.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7ekem ma chafch lpenalty",
+      "arabe": "الحكم ما شافش البينالتي",
+      "fr": "L'arbitre n'a pas vu le penalty",
+      "audio": "audio/loisirs-007-ex.mp3"
     }
   },
   {
@@ -118,13 +118,13 @@
     "fr": "but (football)",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "bi : comme « but » à la marocaine.",
     "audio": "audio/loisirs-008.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "dkhel wa7ed lbut zwin",
+      "arabe": "دخل واحد البي زوين",
+      "fr": "Il a marqué un beau but",
+      "audio": "audio/loisirs-008-ex.mp3"
     }
   },
   {
@@ -134,13 +134,13 @@
     "fr": "terrain",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "te-ran : comme « terrain ».",
     "audio": "audio/loisirs-009.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ntla9aw f terrain f lkhamsa",
+      "arabe": "نتلاقاو ف تيران ف الخمسة",
+      "fr": "On se retrouve au terrain à cinq heures",
+      "audio": "audio/loisirs-009-ex.mp3"
     }
   },
   {
@@ -150,13 +150,13 @@
     "fr": "victoire",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "rb7 : le r roulé, souffle chaud (7).",
     "audio": "audio/loisirs-010.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lfari9 dyalna dar rb7 kbir",
+      "arabe": "الفريق ديالنا دار ربح كبير",
+      "fr": "Notre équipe a remporté une belle victoire",
+      "audio": "audio/loisirs-010-ex.mp3"
     }
   },
   {
@@ -166,13 +166,13 @@
     "fr": "défaite",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "khsa-ra : raclement (kh).",
     "audio": "audio/loisirs-011.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lkhsara kanet s3iba",
+      "arabe": "الخسارة كانت صعيبة",
+      "fr": "La défaite a été dure",
+      "audio": "audio/loisirs-011-ex.mp3"
     }
   },
   {
@@ -182,13 +182,13 @@
     "fr": "égalité (match)",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ta-3a-dol : le 3 serré.",
     "audio": "audio/loisirs-012.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmatch tsala b ta3adol",
+      "arabe": "الماتش تسالا بتعادل",
+      "fr": "Le match s'est fini sur une égalité",
+      "audio": "audio/loisirs-012-ex.mp3"
     }
   },
   {
@@ -198,13 +198,13 @@
     "fr": "gagner",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "rbe7 : souffle chaud (7) à la fin.",
     "audio": "audio/loisirs-013.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "rbe7na lmatch",
+      "arabe": "ربحنا الماتش",
+      "fr": "Nous avons gagné le match",
+      "audio": "audio/loisirs-013-ex.mp3"
     }
   },
   {
@@ -214,13 +214,13 @@
     "fr": "perdre",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "khser : raclement (kh).",
     "audio": "audio/loisirs-014.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khser kolchi f l9mar",
+      "arabe": "خسر كلشي ف القمار",
+      "fr": "Il a tout perdu au jeu",
+      "audio": "audio/loisirs-014-ex.mp3"
     }
   },
   {
@@ -230,13 +230,13 @@
     "fr": "jouer",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l3eb : le 3 serré.",
     "audio": "audio/loisirs-015.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "aji nl3bo lkarta",
+      "arabe": "أجي نلعبو الكارطة",
+      "fr": "Viens, on joue aux cartes",
+      "audio": "audio/loisirs-015-ex.mp3"
     }
   },
   {
@@ -246,13 +246,13 @@
     "fr": "nager",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "3oum : le 3 serré.",
     "audio": "audio/loisirs-016.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kan3oum f lb7ar f ssif",
+      "arabe": "كنعوم ف البحر ف الصيف",
+      "fr": "Je nage dans la mer en été",
+      "audio": "audio/loisirs-016-ex.mp3"
     }
   },
   {
@@ -262,13 +262,13 @@
     "fr": "danser",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "r9es : 9 profond.",
     "audio": "audio/loisirs-017.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "r9esna bzaf f l3ers",
+      "arabe": "رقصنا بزاف ف العرس",
+      "fr": "Nous avons beaucoup dansé au mariage",
+      "audio": "audio/loisirs-017-ex.mp3"
     }
   },
   {
@@ -278,13 +278,13 @@
     "fr": "chanter",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ghen-ni : « gh » grasseyé.",
     "audio": "audio/loisirs-018.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kat7ebb tghenni",
+      "arabe": "كتحب تغني",
+      "fr": "Elle aime chanter",
+      "audio": "audio/loisirs-018-ex.mp3"
     }
   },
   {
@@ -294,13 +294,13 @@
     "fr": "dessiner",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "rsem : le r roulé.",
     "audio": "audio/loisirs-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bentek katrsem mzyan",
+      "arabe": "بنتك كترسم مزيان",
+      "fr": "Ta fille dessine bien",
+      "audio": "audio/loisirs-019-ex.mp3"
     }
   },
   {
@@ -310,13 +310,13 @@
     "fr": "peindre",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sbbeg : un « s » épais, « g » dur.",
     "audio": "audio/loisirs-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sbbeg lbab b lbyed",
+      "arabe": "صبگ الباب بالبيض",
+      "fr": "Il a peint la porte en blanc",
+      "audio": "audio/loisirs-020-ex.mp3"
     }
   },
   {
@@ -326,13 +326,13 @@
     "fr": "photographier",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "swwer : un « s » épais, « w » doublé.",
     "audio": "audio/loisirs-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "swwer lina wa7ed lfoto",
+      "arabe": "صور لينا واحد الفوطو",
+      "fr": "Prends-nous une photo",
+      "audio": "audio/loisirs-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "voyager",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sa-fer : l'accent sur « sa ».",
     "audio": "audio/loisirs-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kansafer kol 3am l lmeghrib",
+      "arabe": "كنسافر كل عام ل المغرب",
+      "fr": "Je voyage au Maroc chaque année",
+      "audio": "audio/loisirs-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "se promener",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "tme-cha : « ch » de « chat ».",
     "audio": "audio/loisirs-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tmechina f lkornich",
+      "arabe": "تمشينا ف الكورنيش",
+      "fr": "Nous nous sommes promenés sur la corniche",
+      "audio": "audio/loisirs-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "faire du vélo",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sou9 bis-klet : 9 profond.",
     "audio": "audio/loisirs-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kansou9 lbisklet f ljnan",
+      "arabe": "كنسوق البيسكليت ف الجنان",
+      "fr": "Je fais du vélo dans le jardin",
+      "audio": "audio/loisirs-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "course à pied",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l-jri : comme « ldjri ».",
     "audio": "audio/loisirs-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ljri f ssba7 mzyan l sse7a",
+      "arabe": "الجري ف الصباح مزيان ل الصحة",
+      "fr": "Courir le matin est bon pour la santé",
+      "audio": "audio/loisirs-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "musculation",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mous-ko-la-syon : comme en français.",
     "audio": "audio/loisirs-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kandir musculation f lsalle",
+      "arabe": "كندير موسكولاسيون ف الصال",
+      "fr": "Je fais de la musculation à la salle",
+      "audio": "audio/loisirs-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "fitness",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "fit-ness : comme en français.",
     "audio": "audio/loisirs-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mrati katdir fitness",
+      "arabe": "مراتي كتدير فيتنس",
+      "fr": "Ma femme fait du fitness",
+      "audio": "audio/loisirs-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "basketball",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "bas-ket : comme « basket ».",
     "audio": "audio/loisirs-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kanl3eb basket m3a s7abi",
+      "arabe": "كنلعب باسكيط مع صحابي",
+      "fr": "Je joue au basket avec mes amis",
+      "audio": "audio/loisirs-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "tennis",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "te-nis : comme « tennis ».",
     "audio": "audio/loisirs-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tennis ghali chwiya hna",
+      "arabe": "تينيس غالي شوية هنا",
+      "fr": "Le tennis est un peu cher ici",
+      "audio": "audio/loisirs-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "padel",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "pa-del : comme « padel ».",
     "audio": "audio/loisirs-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "padel wella mochhour f lmeghrib",
+      "arabe": "باديل ولى مشهور ف المغرب",
+      "fr": "Le padel est devenu célèbre au Maroc",
+      "audio": "audio/loisirs-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "volley",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "vo-li : comme « volley ».",
     "audio": "audio/loisirs-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kanl3bo volley f lplaja",
+      "arabe": "كنلعبو ڤولي ف البلاجة",
+      "fr": "On joue au volley à la plage",
+      "audio": "audio/loisirs-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "boxe",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "boks : comme « boxe ».",
     "audio": "audio/loisirs-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khoya kaydir boxe",
+      "arabe": "خويا كيدير بوكس",
+      "fr": "Mon frère fait de la boxe",
+      "audio": "audio/loisirs-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "arts martiaux",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "fo-noun 7ar-biya : souffle chaud (7).",
     "audio": "audio/loisirs-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddrari kayt3ellmo fonoun 7arbiya",
+      "arabe": "الدراري كيتعلمو فنون حربية",
+      "fr": "Les enfants apprennent les arts martiaux",
+      "audio": "audio/loisirs-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "yoga",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "yo-ga : comme en français.",
     "audio": "audio/loisirs-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "yoga kat3awen f rra7a",
+      "arabe": "يوگا كتعاون ف الراحة",
+      "fr": "Le yoga aide à se détendre",
+      "audio": "audio/loisirs-034-ex.mp3"
     }
   },
   {
@@ -550,13 +550,13 @@
     "fr": "film",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "film : comme « film ».",
     "audio": "audio/loisirs-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chefna film zwin f ssinima",
+      "arabe": "شفنا فيلم زوين ف السينما",
+      "fr": "Nous avons vu un beau film au cinéma",
+      "audio": "audio/loisirs-035-ex.mp3"
     }
   },
   {
@@ -566,13 +566,13 @@
     "fr": "série",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "se-ri : comme « série ».",
     "audio": "audio/loisirs-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kantfarrej f wa7ed sserie turkiya",
+      "arabe": "كنتفرج ف واحد السيري تركية",
+      "fr": "Je regarde une série turque",
+      "audio": "audio/loisirs-036-ex.mp3"
     }
   },
   {
@@ -582,13 +582,13 @@
     "fr": "jeu",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l3-ba : le 3 serré.",
     "audio": "audio/loisirs-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrit l3ba jdida l weldi",
+      "arabe": "شريت لعبة جديدة ل ولدي",
+      "fr": "J'ai acheté un nouveau jeu pour mon fils",
+      "audio": "audio/loisirs-037-ex.mp3"
     }
   },
   {
@@ -598,13 +598,13 @@
     "fr": "jeu vidéo",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "jo vi-de-o : comme « jeu vidéo ».",
     "audio": "audio/loisirs-038.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddrari kayl3bo jeu video bzaf",
+      "arabe": "الدراري كيلعبو جو ڤيديو بزاف",
+      "fr": "Les enfants jouent trop aux jeux vidéo",
+      "audio": "audio/loisirs-038-ex.mp3"
     }
   },
   {
@@ -614,13 +614,13 @@
     "fr": "lecture",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l9-ra-ya : 9 profond.",
     "audio": "audio/loisirs-039.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l9raya hiya lhiwaya dyali",
+      "arabe": "القراية هي الهواية ديالي",
+      "fr": "La lecture est mon passe-temps",
+      "audio": "audio/loisirs-039-ex.mp3"
     }
   },
   {
@@ -630,13 +630,13 @@
     "fr": "spectacle",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "3erd : le 3 serré.",
     "audio": "audio/loisirs-040.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kan 3erd zwin f lmasra7",
+      "arabe": "كان عرض زوين ف المسرح",
+      "fr": "Il y avait un beau spectacle au théâtre",
+      "audio": "audio/loisirs-040-ex.mp3"
     }
   },
   {
@@ -646,13 +646,13 @@
     "fr": "fête",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7ef-la : souffle chaud (7).",
     "audio": "audio/loisirs-041.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndna 7efla f ddar lyom",
+      "arabe": "عندنا حفلة ف الدار اليوم",
+      "fr": "Nous avons une fête à la maison aujourd'hui",
+      "audio": "audio/loisirs-041-ex.mp3"
     }
   },
   {
@@ -662,13 +662,13 @@
     "fr": "soirée",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "soh-riya : « h » expiré.",
     "audio": "audio/loisirs-042.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sohriya zwina m3a l3a2ila",
+      "arabe": "سهرية زوينة مع العائلة",
+      "fr": "Une belle soirée en famille",
+      "audio": "audio/loisirs-042-ex.mp3"
     }
   },
   {
@@ -678,13 +678,13 @@
     "fr": "tourisme",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "si-ya-7a : souffle chaud (7) à la fin.",
     "audio": "audio/loisirs-043.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ssiya7a mohima f mrrakech",
+      "arabe": "السياحة مهمة ف مراكش",
+      "fr": "Le tourisme est important à Marrakech",
+      "audio": "audio/loisirs-043-ex.mp3"
     }
   },
   {
@@ -694,13 +694,13 @@
     "fr": "amusement",
     "theme": "loisirs",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l-mer7 : souffle chaud (7) à la fin.",
     "audio": "audio/loisirs-044.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kan lmer7 bzaf f rr7la",
+      "arabe": "كان المرح بزاف ف الرحلة",
+      "fr": "On s'est bien amusés pendant l'excursion",
+      "audio": "audio/loisirs-044-ex.mp3"
     }
   }
 ]

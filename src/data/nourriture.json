@@ -326,13 +326,13 @@
     "fr": "nourriture",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mak-la : l'accent sur « mak ».",
     "audio": "audio/nourriture-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmakla mghribiya bnina bzaf",
+      "arabe": "الماكلة المغربية بنينة بزاف",
+      "fr": "La cuisine marocaine est très bonne",
+      "audio": "audio/nourriture-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "repas",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "wak-la : comme « makla » avec un « w ».",
     "audio": "audio/nourriture-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ch7al men wakla f nhar?",
+      "arabe": "شحال من واكلة ف النهار؟",
+      "fr": "Combien de repas par jour ?",
+      "audio": "audio/nourriture-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "petit-déjeuner",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ftor : « f » et « tor » d'un trait.",
     "audio": "audio/nourriture-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lftor wajed, aji takol",
+      "arabe": "الفطور واجد، أجي تاكل",
+      "fr": "Le petit-déjeuner est prêt, viens manger",
+      "audio": "audio/nourriture-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "déjeuner",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "gh-da : « gh » grasseyé, puis « da ».",
     "audio": "audio/nourriture-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lghda f jouj",
+      "arabe": "الغدا ف جوج",
+      "fr": "Le déjeuner est à deux heures",
+      "audio": "audio/nourriture-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "dîner",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "3cha : le 3 serré, « ch » de « chat ».",
     "audio": "audio/nourriture-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l3cha khfif lyom",
+      "arabe": "العشا خفيف اليوم",
+      "fr": "Le dîner est léger aujourd'hui",
+      "audio": "audio/nourriture-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "pain rond",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "khobz mdow-wer : raclement (kh), le « w » doublé.",
     "audio": "audio/nourriture-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lwalida katsowweb khobz mdowwer",
+      "arabe": "الوالدة كتصوب خبز مدور",
+      "fr": "Maman fait du pain rond",
+      "audio": "audio/nourriture-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "baguette",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ba-ghit : « gh » grasseyé.",
     "audio": "audio/nourriture-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jib wa7ed lbaghit men l7anout",
+      "arabe": "جيب واحد الباغيت من الحانوت",
+      "fr": "Ramène une baguette de la boutique",
+      "audio": "audio/nourriture-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "semoule",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "smi-da : l'accent sur « mi ».",
     "audio": "audio/nourriture-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ksksou kaytsowweb b ssmida",
+      "arabe": "الكسكسو كيتصوب ب السميدة",
+      "fr": "Le couscous se fait avec de la semoule",
+      "audio": "audio/nourriture-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "rfissa",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "rfis-sa : le « s » doublé.",
     "audio": "audio/nourriture-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "rfissa katkoun f l3ers",
+      "arabe": "الرفيسة كتكون ف العرس",
+      "fr": "La rfissa se sert aux mariages",
+      "audio": "audio/nourriture-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "pastilla",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "bas-ti-la : l'accent sur « ti ».",
     "audio": "audio/nourriture-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bastila d djaj bnina",
+      "arabe": "البسطيلة د الدجاج بنينة",
+      "fr": "La pastilla au poulet est délicieuse",
+      "audio": "audio/nourriture-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "msemen",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "msem-men : le « m » doublé.",
     "audio": "audio/nourriture-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "msemmen b l3sel f lftor",
+      "arabe": "مسمن ب العسل ف الفطور",
+      "fr": "Du msemen au miel au petit-déjeuner",
+      "audio": "audio/nourriture-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "baghrir",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "bagh-rir : « gh » grasseyé, le r roulé.",
     "audio": "audio/nourriture-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "baghrir 3ajebni bzaf",
+      "arabe": "البغرير عاجبني بزاف",
+      "fr": "J'aime beaucoup le baghrir",
+      "audio": "audio/nourriture-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "harcha",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7er-cha : souffle chaud (7), « ch » de « chat ».",
     "audio": "audio/nourriture-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ercha m3a atay",
+      "arabe": "حرشة مع أتاي",
+      "fr": "De la harcha avec du thé",
+      "audio": "audio/nourriture-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "briouate",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "bri-wat : l'accent sur « wat ».",
     "audio": "audio/nourriture-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "briwat b lkefta f romdan",
+      "arabe": "بريوات ب الكفتة ف رمضان",
+      "fr": "Des briouates à la kefta pendant le ramadan",
+      "audio": "audio/nourriture-034-ex.mp3"
     }
   },
   {
@@ -550,13 +550,13 @@
     "fr": "chebakia",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "cheb-ba-ki-ya : « ch » de « chat », le « b » doublé.",
     "audio": "audio/nourriture-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chebbakiya m3a l7rira",
+      "arabe": "شباكية مع الحريرة",
+      "fr": "De la chebakia avec la harira",
+      "audio": "audio/nourriture-035-ex.mp3"
     }
   },
   {
@@ -566,13 +566,13 @@
     "fr": "œuf",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "bi-da : un « d » épais.",
     "audio": "audio/nourriture-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kliti bida f ssba7",
+      "arabe": "كليت بيضة ف الصباح",
+      "fr": "J'ai mangé un œuf ce matin",
+      "audio": "audio/nourriture-036-ex.mp3"
     }
   },
   {
@@ -582,13 +582,13 @@
     "fr": "omelette",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "om-let : comme « omelette ».",
     "audio": "audio/nourriture-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "derti lia omlet?",
+      "arabe": "درتي ليا أومليط؟",
+      "fr": "Tu m'as fait une omelette ?",
+      "audio": "audio/nourriture-037-ex.mp3"
     }
   },
   {
@@ -598,13 +598,13 @@
     "fr": "fromage",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "jben : comme « djben ».",
     "audio": "audio/nourriture-038.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jben dyal lme3za bnin",
+      "arabe": "جبن ديال المعزة بنين",
+      "fr": "Le fromage de chèvre est bon",
+      "audio": "audio/nourriture-038-ex.mp3"
     }
   },
   {
@@ -614,13 +614,13 @@
     "fr": "beurre",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "zeb-da : l'accent sur « zeb ».",
     "audio": "audio/nourriture-039.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ett zzebda 3la lkhobz",
+      "arabe": "حط الزبدة على الخبز",
+      "fr": "Mets le beurre sur le pain",
+      "audio": "audio/nourriture-039-ex.mp3"
     }
   },
   {
@@ -630,13 +630,13 @@
     "fr": "yaourt",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ra-ïb : « ra » puis « ib ».",
     "audio": "audio/nourriture-040.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "rayeb bared f tteladja",
+      "arabe": "رايب بارد ف التلاجة",
+      "fr": "Il y a du yaourt frais au frigo",
+      "audio": "audio/nourriture-040-ex.mp3"
     }
   },
   {
@@ -646,13 +646,13 @@
     "fr": "crème",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kri-ma : comme « crème ».",
     "audio": "audio/nourriture-041.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chi krima f l9hwa?",
+      "arabe": "شي كريمة ف القهوة؟",
+      "fr": "Un peu de crème dans le café ?",
+      "audio": "audio/nourriture-041-ex.mp3"
     }
   },
   {
@@ -662,13 +662,13 @@
     "fr": "riz",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "r-roz : le r roulé et doublé.",
     "audio": "audio/nourriture-042.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "rroz b l7out bnin",
+      "arabe": "الروز ب الحوت بنين",
+      "fr": "Le riz au poisson est bon",
+      "audio": "audio/nourriture-042-ex.mp3"
     }
   },
   {
@@ -678,13 +678,13 @@
     "fr": "pâtes",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l-ma-ka-rou-na : l'accent sur « rou ».",
     "audio": "audio/nourriture-043.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddrari kaybghiw lmakarouna",
+      "arabe": "الدراري كيبغيو الماكارونة",
+      "fr": "Les enfants aiment les pâtes",
+      "audio": "audio/nourriture-043-ex.mp3"
     }
   },
   {
@@ -694,13 +694,13 @@
     "fr": "soupe",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7s-soua : souffle chaud (7), le « s » doublé.",
     "audio": "audio/nourriture-044.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ssoua skhouna f lberd",
+      "arabe": "حسوة سخونة ف البرد",
+      "fr": "Une soupe chaude quand il fait froid",
+      "audio": "audio/nourriture-044-ex.mp3"
     }
   },
   {
@@ -710,13 +710,13 @@
     "fr": "salade",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sa-la-ta : un « s » épais, comme « salade ».",
     "audio": "audio/nourriture-045.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "salata mghribiya b lmatecha",
+      "arabe": "صلاطة مغربية ب المطيشة",
+      "fr": "Une salade marocaine à la tomate",
+      "audio": "audio/nourriture-045-ex.mp3"
     }
   },
   {
@@ -726,13 +726,13 @@
     "fr": "sandwich",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sand-witch : comme en français.",
     "audio": "audio/nourriture-046.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit sandwich b ttoun",
+      "arabe": "بغيت ساندويتش ب الطون",
+      "fr": "Je veux un sandwich au thon",
+      "audio": "audio/nourriture-046-ex.mp3"
     }
   },
   {
@@ -742,13 +742,13 @@
     "fr": "pizza",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "pi-tsa : comme en français.",
     "audio": "audio/nourriture-047.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrina pizza kbira",
+      "arabe": "شرينا بيتزا كبيرة",
+      "fr": "Nous avons acheté une grande pizza",
+      "audio": "audio/nourriture-047-ex.mp3"
     }
   },
   {
@@ -758,13 +758,13 @@
     "fr": "bœuf",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l7em l-be9-ri : souffle chaud (7), 9 du fond de la gorge.",
     "audio": "audio/nourriture-048.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tajine b l7em lbe9ri",
+      "arabe": "طاجين ب اللحم البقري",
+      "fr": "Un tajine au bœuf",
+      "audio": "audio/nourriture-048-ex.mp3"
     }
   },
   {
@@ -774,13 +774,13 @@
     "fr": "veau",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l7em l3-jel : souffle chaud (7), 3 serré.",
     "audio": "audio/nourriture-049.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7em l3jel rtob",
+      "arabe": "اللحم العجل رطب",
+      "fr": "Le veau est tendre",
+      "audio": "audio/nourriture-049-ex.mp3"
     }
   },
   {
@@ -790,13 +790,13 @@
     "fr": "agneau",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l7em l-ghen-mi : souffle chaud (7), « gh » grasseyé.",
     "audio": "audio/nourriture-050.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7em lghenmi f l3id",
+      "arabe": "اللحم الغنمي ف العيد",
+      "fr": "L'agneau pour l'Aïd",
+      "audio": "audio/nourriture-050-ex.mp3"
     }
   },
   {
@@ -806,13 +806,13 @@
     "fr": "dinde",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "dind : comme « dinde ».",
     "audio": "audio/nourriture-051.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chwina dind f lforn",
+      "arabe": "شوينا ديند ف الفرن",
+      "fr": "Nous avons rôti une dinde au four",
+      "audio": "audio/nourriture-051-ex.mp3"
     }
   },
   {
@@ -822,13 +822,13 @@
     "fr": "sardine",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ser-dil : l'accent sur « dil ».",
     "audio": "audio/nourriture-052.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sserdil rkhis f ssou9",
+      "arabe": "السرديل رخيص ف السوق",
+      "fr": "La sardine est bon marché au souk",
+      "audio": "audio/nourriture-052-ex.mp3"
     }
   },
   {
@@ -838,13 +838,13 @@
     "fr": "crevette",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9em-ron : 9 du fond de la gorge.",
     "audio": "audio/nourriture-053.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit 9emron mchwi",
+      "arabe": "بغيت قمرون مشوي",
+      "fr": "Je veux des crevettes grillées",
+      "audio": "audio/nourriture-053-ex.mp3"
     }
   },
   {
@@ -854,13 +854,13 @@
     "fr": "thon",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ton : comme « thon ».",
     "audio": "audio/nourriture-054.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ett ttoun f ssalata",
+      "arabe": "حط الطون ف الصلاطة",
+      "fr": "Mets le thon dans la salade",
+      "audio": "audio/nourriture-054-ex.mp3"
     }
   },
   {
@@ -870,13 +870,13 @@
     "fr": "fruit de mer",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7out l-be7r : deux souffles chauds (7).",
     "audio": "audio/nourriture-055.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kanbghi 7out lbe7r",
+      "arabe": "كنبغي حوت البحر",
+      "fr": "J'aime les fruits de mer",
+      "audio": "audio/nourriture-055-ex.mp3"
     }
   },
   {
@@ -886,13 +886,13 @@
     "fr": "saucisse",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mer-guez : comme en français.",
     "audio": "audio/nourriture-056.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "merguez 3la lfe7em",
+      "arabe": "ميرگيز على الفحم",
+      "fr": "Des merguez sur le charbon",
+      "audio": "audio/nourriture-056-ex.mp3"
     }
   },
   {
@@ -902,13 +902,13 @@
     "fr": "brochette",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9ti-ban : 9 du fond de la gorge.",
     "audio": "audio/nourriture-057.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "9tiban d lkebda",
+      "arabe": "قطبان د الكبدة",
+      "fr": "Des brochettes de foie",
+      "audio": "audio/nourriture-057-ex.mp3"
     }
   },
   {
@@ -918,13 +918,13 @@
     "fr": "kefta",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kef-ta : l'accent sur « kef ».",
     "audio": "audio/nourriture-058.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tajine d lkefta b lbid",
+      "arabe": "طاجين د الكفتة ب البيض",
+      "fr": "Un tajine de kefta aux œufs",
+      "audio": "audio/nourriture-058-ex.mp3"
     }
   },
   {
@@ -934,13 +934,13 @@
     "fr": "foie",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "keb-da : l'accent sur « keb ».",
     "audio": "audio/nourriture-059.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lkebda mchwiya bnina",
+      "arabe": "الكبدة مشوية بنينة",
+      "fr": "Le foie grillé est délicieux",
+      "audio": "audio/nourriture-059-ex.mp3"
     }
   },
   {
@@ -950,13 +950,13 @@
     "fr": "pomme de terre",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "bta-ta : l'accent sur « ta ».",
     "audio": "audio/nourriture-060.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "9chert lbtata",
+      "arabe": "قشرت البطاطا",
+      "fr": "J'ai épluché les pommes de terre",
+      "audio": "audio/nourriture-060-ex.mp3"
     }
   },
   {
@@ -966,13 +966,13 @@
     "fr": "tomate",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ma-ti-cha : « ch » de « chat ».",
     "audio": "audio/nourriture-061.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmaticha ghalya had l3am",
+      "arabe": "الماطيشة غالية هاد العام",
+      "fr": "La tomate est chère cette année",
+      "audio": "audio/nourriture-061-ex.mp3"
     }
   },
   {
@@ -982,13 +982,13 @@
     "fr": "oignon",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "bsla : un « s » épais.",
     "audio": "audio/nourriture-062.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "9ette3 lbsla r9i9a",
+      "arabe": "قطع البصلة رقيقة",
+      "fr": "Coupe l'oignon finement",
+      "audio": "audio/nourriture-062-ex.mp3"
     }
   },
   {
@@ -998,13 +998,13 @@
     "fr": "ail",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "toum : comme « toum ».",
     "audio": "audio/nourriture-063.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "zid chwiya d ttoum",
+      "arabe": "زيد شوية د التوم",
+      "fr": "Ajoute un peu d'ail",
+      "audio": "audio/nourriture-063-ex.mp3"
     }
   },
   {
@@ -1014,13 +1014,13 @@
     "fr": "carotte",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "khiz-zo : raclement (kh), le « z » doublé.",
     "audio": "audio/nourriture-064.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3asir khizzo bnin",
+      "arabe": "عصير خيزو بنين",
+      "fr": "Le jus de carotte est bon",
+      "audio": "audio/nourriture-064-ex.mp3"
     }
   },
   {
@@ -1030,13 +1030,13 @@
     "fr": "courgette",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l-ga-3a sghi-ra : 3 serré, « gh » grasseyé.",
     "audio": "audio/nourriture-065.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lgra3a sghira f lkouskous",
+      "arabe": "الگرعة صغيرة ف الكسكسو",
+      "fr": "La courgette dans le couscous",
+      "audio": "audio/nourriture-065-ex.mp3"
     }
   },
   {
@@ -1046,13 +1046,13 @@
     "fr": "aubergine",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "den-jal : comme « dendjal ».",
     "audio": "audio/nourriture-066.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "za3louk b ddenjal",
+      "arabe": "زعلوك ب الدنجال",
+      "fr": "Du zaalouk à l'aubergine",
+      "audio": "audio/nourriture-066-ex.mp3"
     }
   },
   {
@@ -1062,13 +1062,13 @@
     "fr": "poivron",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "fel-fla : le « l » final bien net.",
     "audio": "audio/nourriture-067.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "felfla khedra w 7amra",
+      "arabe": "فلفلة خضرا و حمرا",
+      "fr": "Poivron vert et rouge",
+      "audio": "audio/nourriture-067-ex.mp3"
     }
   },
   {
@@ -1078,13 +1078,13 @@
     "fr": "piment",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "fel-fla 7ar-ra : souffle chaud (7), le r doublé.",
     "audio": "audio/nourriture-068.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma 7tetch felfla 7arra",
+      "arabe": "ما حطيتش فلفلة حارة",
+      "fr": "Je n'ai pas mis de piment",
+      "audio": "audio/nourriture-068-ex.mp3"
     }
   },
   {
@@ -1094,13 +1094,13 @@
     "fr": "concombre",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "khyar : raclement (kh) au début.",
     "audio": "audio/nourriture-069.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "salata d lkhyar",
+      "arabe": "صلاطة د الخيار",
+      "fr": "Une salade de concombre",
+      "audio": "audio/nourriture-069-ex.mp3"
     }
   },
   {
@@ -1110,13 +1110,13 @@
     "fr": "laitue",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "khess : raclement (kh), « s » doublé.",
     "audio": "audio/nourriture-070.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghsel lkhess mzyan",
+      "arabe": "غسل الخص مزيان",
+      "fr": "Lave bien la laitue",
+      "audio": "audio/nourriture-070-ex.mp3"
     }
   },
   {
@@ -1126,13 +1126,13 @@
     "fr": "chou",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kronb : « kronb » d'un trait.",
     "audio": "audio/nourriture-071.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lkronb f l7rira",
+      "arabe": "الكرنب ف الحريرة",
+      "fr": "Le chou dans la harira",
+      "audio": "audio/nourriture-071-ex.mp3"
     }
   },
   {
@@ -1142,13 +1142,13 @@
     "fr": "chou-fleur",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "chou-flor : « ch » de « chat ».",
     "audio": "audio/nourriture-072.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chouflor m9li bnin",
+      "arabe": "شوفلور مقلي بنين",
+      "fr": "Le chou-fleur frit est bon",
+      "audio": "audio/nourriture-072-ex.mp3"
     }
   },
   {
@@ -1158,13 +1158,13 @@
     "fr": "haricot vert",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "lou-bya khed-ra : raclement (kh).",
     "audio": "audio/nourriture-073.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "loubya khedra m3a l7em",
+      "arabe": "لوبيا خضرا مع اللحم",
+      "fr": "Des haricots verts avec de la viande",
+      "audio": "audio/nourriture-073-ex.mp3"
     }
   },
   {
@@ -1174,13 +1174,13 @@
     "fr": "haricot blanc",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "lou-bya bey-da : un « d » épais.",
     "audio": "audio/nourriture-074.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "loubya beyda f lberd",
+      "arabe": "لوبيا بيضا ف البرد",
+      "fr": "Des haricots blancs quand il fait froid",
+      "audio": "audio/nourriture-074-ex.mp3"
     }
   },
   {
@@ -1190,13 +1190,13 @@
     "fr": "petits pois",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "jel-ba-na : comme « djelbana ».",
     "audio": "audio/nourriture-075.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tajine b ljelbana",
+      "arabe": "طاجين ب الجلبانة",
+      "fr": "Un tajine aux petits pois",
+      "audio": "audio/nourriture-075-ex.mp3"
     }
   },
   {
@@ -1206,13 +1206,13 @@
     "fr": "lentille",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "3des : le 3 serré au début.",
     "audio": "audio/nourriture-076.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l3des kaybghih bzaf",
+      "arabe": "العدس كيبغيه بزاف",
+      "fr": "Il adore les lentilles",
+      "audio": "audio/nourriture-076-ex.mp3"
     }
   },
   {
@@ -1222,13 +1222,13 @@
     "fr": "pois chiche",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7om-mes : souffle chaud (7), le « m » doublé.",
     "audio": "audio/nourriture-077.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7ommes f l7rira",
+      "arabe": "الحمص ف الحريرة",
+      "fr": "Les pois chiches dans la harira",
+      "audio": "audio/nourriture-077-ex.mp3"
     }
   },
   {
@@ -1238,13 +1238,13 @@
     "fr": "maïs",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "dra : un « d » épais, le r roulé.",
     "audio": "audio/nourriture-078.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "dra mchwiya f zzen9a",
+      "arabe": "درة مشوية ف الزنقة",
+      "fr": "Du maïs grillé dans la rue",
+      "audio": "audio/nourriture-078-ex.mp3"
     }
   },
   {
@@ -1254,13 +1254,13 @@
     "fr": "olive",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "zi-tou-na : l'accent sur « tou ».",
     "audio": "audio/nourriture-079.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "zitouna k7la w khedra",
+      "arabe": "زيتونة كحلة و خضرا",
+      "fr": "Olive noire et verte",
+      "audio": "audio/nourriture-079-ex.mp3"
     }
   },
   {
@@ -1270,13 +1270,13 @@
     "fr": "citron",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7a-med : souffle chaud (7) au début.",
     "audio": "audio/nourriture-080.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3sser 7amed 3la l7out",
+      "arabe": "عصر حامض على الحوت",
+      "fr": "Presse un citron sur le poisson",
+      "audio": "audio/nourriture-080-ex.mp3"
     }
   },
   {
@@ -1286,13 +1286,13 @@
     "fr": "orange",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "li-moun : l'accent sur « moun ».",
     "audio": "audio/nourriture-081.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "limoun d berkan bnin",
+      "arabe": "ليمون د بركان بنين",
+      "fr": "Les oranges de Berkane sont bonnes",
+      "audio": "audio/nourriture-081-ex.mp3"
     }
   },
   {
@@ -1302,13 +1302,13 @@
     "fr": "mandarine",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "man-da-ri-na : l'accent sur « ri ».",
     "audio": "audio/nourriture-082.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mandarina 7elwa bzaf",
+      "arabe": "مندرينة حلوة بزاف",
+      "fr": "La mandarine est très sucrée",
+      "audio": "audio/nourriture-082-ex.mp3"
     }
   },
   {
@@ -1318,13 +1318,13 @@
     "fr": "pomme",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "tfa-7a : souffle chaud (7) à la fin.",
     "audio": "audio/nourriture-083.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kol tfa7a kol nhar",
+      "arabe": "كل تفاحة كل نهار",
+      "fr": "Mange une pomme chaque jour",
+      "audio": "audio/nourriture-083-ex.mp3"
     }
   },
   {
@@ -1334,13 +1334,13 @@
     "fr": "poire",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "nga-sa : un « s » épais.",
     "audio": "audio/nourriture-084.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ngasa rteba w bnina",
+      "arabe": "نگاصة رطبة و بنينة",
+      "fr": "Une poire tendre et bonne",
+      "audio": "audio/nourriture-084-ex.mp3"
     }
   },
   {
@@ -1350,13 +1350,13 @@
     "fr": "banane",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ba-nan : comme « banane ».",
     "audio": "audio/nourriture-085.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kilo d lbanan b 3chrin derhem",
+      "arabe": "كيلو د البنان ب عشرين درهم",
+      "fr": "Un kilo de bananes à vingt dirhams",
+      "audio": "audio/nourriture-085-ex.mp3"
     }
   },
   {
@@ -1366,13 +1366,13 @@
     "fr": "fraise",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "frez : comme « fraise ».",
     "audio": "audio/nourriture-086.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "frez dyal l3rayech mchhour",
+      "arabe": "فريز ديال العرايش مشهور",
+      "fr": "Les fraises de Larache sont célèbres",
+      "audio": "audio/nourriture-086-ex.mp3"
     }
   },
   {
@@ -1382,13 +1382,13 @@
     "fr": "framboise",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "fram-bwaz : comme « framboise ».",
     "audio": "audio/nourriture-087.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kika b lframboaz",
+      "arabe": "كيكة ب الفرامبواز",
+      "fr": "Un gâteau à la framboise",
+      "audio": "audio/nourriture-087-ex.mp3"
     }
   },
   {
@@ -1398,13 +1398,13 @@
     "fr": "raisin",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "3neb : le 3 serré au début.",
     "audio": "audio/nourriture-088.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l3neb dyal ssif",
+      "arabe": "العنب ديال الصيف",
+      "fr": "Le raisin d'été",
+      "audio": "audio/nourriture-088-ex.mp3"
     }
   },
   {
@@ -1414,13 +1414,13 @@
     "fr": "pastèque",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "del-la7 : le « l » doublé, souffle chaud (7) à la fin.",
     "audio": "audio/nourriture-089.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "della7 bared f ssif",
+      "arabe": "دلاح بارد ف الصيف",
+      "fr": "Une pastèque fraîche en été",
+      "audio": "audio/nourriture-089-ex.mp3"
     }
   },
   {
@@ -1430,13 +1430,13 @@
     "fr": "melon",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "btikh : raclement (kh) à la fin.",
     "audio": "audio/nourriture-090.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbtikh 7lou bzaf",
+      "arabe": "البطيخ حلو بزاف",
+      "fr": "Le melon est très sucré",
+      "audio": "audio/nourriture-090-ex.mp3"
     }
   },
   {
@@ -1446,13 +1446,13 @@
     "fr": "pêche",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "khokh : deux raclements (kh).",
     "audio": "audio/nourriture-091.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lkhokh dyal sefrou",
+      "arabe": "الخوخ ديال صفرو",
+      "fr": "Les pêches de Sefrou",
+      "audio": "audio/nourriture-091-ex.mp3"
     }
   },
   {
@@ -1462,13 +1462,13 @@
     "fr": "abricot",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mech-mach : deux « ch » de « chat ».",
     "audio": "audio/nourriture-092.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "konfitir d lmechmach",
+      "arabe": "كونفيتور د المشماش",
+      "fr": "De la confiture d'abricot",
+      "audio": "audio/nourriture-092-ex.mp3"
     }
   },
   {
@@ -1478,13 +1478,13 @@
     "fr": "figue",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kar-mous : l'accent sur « mous ».",
     "audio": "audio/nourriture-093.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lkarmous kaykoun f ssif",
+      "arabe": "الكرموس كيكون ف الصيف",
+      "fr": "Les figues, c'est en été",
+      "audio": "audio/nourriture-093-ex.mp3"
     }
   },
   {
@@ -1494,13 +1494,13 @@
     "fr": "datte",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "tmer : « tmer » d'un trait.",
     "audio": "audio/nourriture-094.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kanfetro b ttmer w l7lib",
+      "arabe": "كنفطرو ب التمر و الحليب",
+      "fr": "On rompt le jeûne avec des dattes et du lait",
+      "audio": "audio/nourriture-094-ex.mp3"
     }
   },
   {
@@ -1510,13 +1510,13 @@
     "fr": "grenade",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "r-man : le r roulé.",
     "audio": "audio/nourriture-095.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3asir rrman bnin",
+      "arabe": "عصير الرمان بنين",
+      "fr": "Le jus de grenade est bon",
+      "audio": "audio/nourriture-095-ex.mp3"
     }
   },
   {
@@ -1526,13 +1526,13 @@
     "fr": "noix",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "gar-ga3 : le 3 serré à la fin.",
     "audio": "audio/nourriture-096.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lgarga3 f l7elwa",
+      "arabe": "الگرگاع ف الحلوى",
+      "fr": "Les noix dans les gâteaux",
+      "audio": "audio/nourriture-096-ex.mp3"
     }
   },
   {
@@ -1542,13 +1542,13 @@
     "fr": "amande",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "louz : comme « louz ».",
     "audio": "audio/nourriture-097.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7lib b llouz",
+      "arabe": "حليب ب اللوز",
+      "fr": "Du lait aux amandes",
+      "audio": "audio/nourriture-097-ex.mp3"
     }
   },
   {
@@ -1558,13 +1558,13 @@
     "fr": "cacahuète",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kaw-kaw : deux fois « kaw ».",
     "audio": "audio/nourriture-098.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kawkaw mchwi f ttri9",
+      "arabe": "كاوكاو مشوي ف الطريق",
+      "fr": "Des cacahuètes grillées en chemin",
+      "audio": "audio/nourriture-098-ex.mp3"
     }
   },
   {
@@ -1574,13 +1574,13 @@
     "fr": "miel",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "3sel : le 3 serré au début.",
     "audio": "audio/nourriture-099.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l3sel lbeldi ghali",
+      "arabe": "العسل البلدي غالي",
+      "fr": "Le miel du pays est cher",
+      "audio": "audio/nourriture-099-ex.mp3"
     }
   },
   {
@@ -1590,13 +1590,13 @@
     "fr": "confiture",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kon-fi-tir : comme « confiture ».",
     "audio": "audio/nourriture-100.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khobz b zzebda w lkonfitir",
+      "arabe": "خبز ب الزبدة و الكونفيتور",
+      "fr": "Du pain avec du beurre et de la confiture",
+      "audio": "audio/nourriture-100-ex.mp3"
     }
   },
   {
@@ -1606,13 +1606,13 @@
     "fr": "chocolat",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "cho-ko-la : « ch » de « chat ».",
     "audio": "audio/nourriture-101.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddrari kaybghiw chokola",
+      "arabe": "الدراري كيبغيو شوكولا",
+      "fr": "Les enfants aiment le chocolat",
+      "audio": "audio/nourriture-101-ex.mp3"
     }
   },
   {
@@ -1622,13 +1622,13 @@
     "fr": "gâteau",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ga-to : comme « gâteau ».",
     "audio": "audio/nourriture-102.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrit gateau l 3id lmilad",
+      "arabe": "شريت گاطو ل عيد الميلاد",
+      "fr": "J'ai acheté un gâteau pour l'anniversaire",
+      "audio": "audio/nourriture-102-ex.mp3"
     }
   },
   {
@@ -1638,13 +1638,13 @@
     "fr": "bonbon",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7el-wa : souffle chaud (7) au début.",
     "audio": "audio/nourriture-103.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3tih wa7ed l7elwa",
+      "arabe": "عطيه واحد الحلوة",
+      "fr": "Donne-lui un bonbon",
+      "audio": "audio/nourriture-103-ex.mp3"
     }
   },
   {
@@ -1654,13 +1654,13 @@
     "fr": "glace",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "glas : comme « glace ».",
     "audio": "audio/nourriture-104.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "glace b chokola 3afak",
+      "arabe": "گلاص ب شوكولا عافاك",
+      "fr": "Une glace au chocolat, s'il te plaît",
+      "audio": "audio/nourriture-104-ex.mp3"
     }
   },
   {
@@ -1670,13 +1670,13 @@
     "fr": "dessert",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "di-ser : comme « dessert ».",
     "audio": "audio/nourriture-105.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chnou kayn f dessert?",
+      "arabe": "شنو كاين ف ديسير؟",
+      "fr": "Qu'est-ce qu'il y a en dessert ?",
+      "audio": "audio/nourriture-105-ex.mp3"
     }
   },
   {
@@ -1686,13 +1686,13 @@
     "fr": "eau minérale",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "lma ma3-da-ni : le 3 serré au milieu.",
     "audio": "audio/nourriture-106.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "9er3a d lma ma3dani 3afak",
+      "arabe": "قرعة د الما المعدني عافاك",
+      "fr": "Une bouteille d'eau minérale, s'il te plaît",
+      "audio": "audio/nourriture-106-ex.mp3"
     }
   },
   {
@@ -1702,13 +1702,13 @@
     "fr": "eau gazeuse",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "lma b l-gaz : comme « gaz ».",
     "audio": "audio/nourriture-107.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kanbghi lma b lgaz bared",
+      "arabe": "كنبغي الما بالگاز بارد",
+      "fr": "J'aime l'eau gazeuse bien fraîche",
+      "audio": "audio/nourriture-107-ex.mp3"
     }
   },
   {
@@ -1718,13 +1718,13 @@
     "fr": "thé à la menthe",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "a-tay b na3-na3 : deux 3 serrés.",
     "audio": "audio/nourriture-108.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kas d atay b na3na3",
+      "arabe": "كاس د أتاي بالنعناع",
+      "fr": "Un verre de thé à la menthe",
+      "audio": "audio/nourriture-108-ex.mp3"
     }
   },
   {
@@ -1734,13 +1734,13 @@
     "fr": "café noir",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9h-wa ke7-la : 9 du fond de la gorge, souffle chaud (7).",
     "audio": "audio/nourriture-109.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit 9hwa ke7la bla sokkar",
+      "arabe": "بغيت قهوة كحلة بلا سكر",
+      "fr": "Je veux un café noir sans sucre",
+      "audio": "audio/nourriture-109-ex.mp3"
     }
   },
   {
@@ -1750,13 +1750,13 @@
     "fr": "café au lait",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9h-wa b l7-lib : 9 du fond de la gorge, souffle chaud (7).",
     "audio": "audio/nourriture-110.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wa7ed 9hwa b l7lib 3afak",
+      "arabe": "واحد قهوة بالحليب عافاك",
+      "fr": "Un café au lait, s'il te plaît",
+      "audio": "audio/nourriture-110-ex.mp3"
     }
   },
   {
@@ -1766,13 +1766,13 @@
     "fr": "jus",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "3a-sir : le 3 serré au début.",
     "audio": "audio/nourriture-111.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3asir lbanan b l7lib",
+      "arabe": "عصير البنان بالحليب",
+      "fr": "Un jus de banane au lait",
+      "audio": "audio/nourriture-111-ex.mp3"
     }
   },
   {
@@ -1782,13 +1782,13 @@
     "fr": "jus d'orange",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "3a-sir li-moun : le 3 serré au début.",
     "audio": "audio/nourriture-112.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3asir limoun bla sokkar",
+      "arabe": "عصير ليمون بلا سكر",
+      "fr": "Un jus d'orange sans sucre",
+      "audio": "audio/nourriture-112-ex.mp3"
     }
   },
   {
@@ -1798,13 +1798,13 @@
     "fr": "soda",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "so-da : comme « soda ».",
     "audio": "audio/nourriture-113.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma tchrebch soda bzaf",
+      "arabe": "ما تشربش صودا بزاف",
+      "fr": "Ne bois pas trop de soda",
+      "audio": "audio/nourriture-113-ex.mp3"
     }
   },
   {
@@ -1814,13 +1814,13 @@
     "fr": "limonade",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "li-mo-nad : comme « limonade ».",
     "audio": "audio/nourriture-114.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "limonad bared f ssif",
+      "arabe": "ليموناد بارد ف الصيف",
+      "fr": "Une limonade fraîche en été",
+      "audio": "audio/nourriture-114-ex.mp3"
     }
   },
   {
@@ -1830,13 +1830,13 @@
     "fr": "boisson",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "chrab : « ch » de « chat ».",
     "audio": "audio/nourriture-115.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chnou bghiti men chrab?",
+      "arabe": "شنو بغيتي من شراب؟",
+      "fr": "Qu'est-ce que tu veux comme boisson ?",
+      "audio": "audio/nourriture-115-ex.mp3"
     }
   },
   {
@@ -1846,13 +1846,13 @@
     "fr": "frais / fraîche",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ba-red : le r roulé.",
     "audio": "audio/nourriture-116.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lma bared bzaf",
+      "arabe": "الما بارد بزاف",
+      "fr": "L'eau est très fraîche",
+      "audio": "audio/nourriture-116-ex.mp3"
     }
   },
   {
@@ -1862,13 +1862,13 @@
     "fr": "chaud / chaude",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "skhoun : raclement (kh) au milieu.",
     "audio": "audio/nourriture-117.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "atay skhoun, rred balek",
+      "arabe": "أتاي سخون، رد بالك",
+      "fr": "Le thé est chaud, fais attention",
+      "audio": "audio/nourriture-117-ex.mp3"
     }
   },
   {
@@ -1878,13 +1878,13 @@
     "fr": "sucré",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7lou : souffle chaud (7) au début.",
     "audio": "audio/nourriture-118.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had lgateau 7lou bzaf",
+      "arabe": "هاد الگاطو حلو بزاف",
+      "fr": "Ce gâteau est très sucré",
+      "audio": "audio/nourriture-118-ex.mp3"
     }
   },
   {
@@ -1894,13 +1894,13 @@
     "fr": "salé",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ma-le7 : souffle chaud (7) à la fin.",
     "audio": "audio/nourriture-119.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmakla mal7a chwiya",
+      "arabe": "الماكلة مالحة شوية",
+      "fr": "La nourriture est un peu salée",
+      "audio": "audio/nourriture-119-ex.mp3"
     }
   },
   {
@@ -1910,13 +1910,13 @@
     "fr": "épicé / piquant",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7arr : souffle chaud (7), le r doublé.",
     "audio": "audio/nourriture-120.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7rissa 7arra bzaf",
+      "arabe": "الحريسة حارة بزاف",
+      "fr": "L'harissa est très piquante",
+      "audio": "audio/nourriture-120-ex.mp3"
     }
   },
   {
@@ -1926,13 +1926,13 @@
     "fr": "cru",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ni : comme « ni ».",
     "audio": "audio/nourriture-121.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7em mazal ni",
+      "arabe": "اللحم مازال ني",
+      "fr": "La viande est encore crue",
+      "audio": "audio/nourriture-121-ex.mp3"
     }
   },
   {
@@ -1942,13 +1942,13 @@
     "fr": "cuit",
     "theme": "nourriture",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ta-yeb : un « t » épais.",
     "audio": "audio/nourriture-122.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttajine tayeb, aji takol",
+      "arabe": "الطاجين طايب، أجي تاكل",
+      "fr": "Le tajine est cuit, viens manger",
+      "audio": "audio/nourriture-122-ex.mp3"
     }
   }
 ]

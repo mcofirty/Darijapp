@@ -6,13 +6,13 @@
     "fr": "nature",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "t-ta-bi-3a : un « t » épais et doublé, 3 serré.",
     "audio": "audio/nature-001.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kanbghi ttabi3a f lmeghrib",
+      "arabe": "كنبغي الطبيعة ف المغرب",
+      "fr": "J'aime la nature au Maroc",
+      "audio": "audio/nature-001-ex.mp3"
     }
   },
   {
@@ -22,13 +22,13 @@
     "fr": "ciel",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sma : un « s » léger.",
     "audio": "audio/nature-002.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ssma zer9a lyom",
+      "arabe": "السما زرقا اليوم",
+      "fr": "Le ciel est bleu aujourd'hui",
+      "audio": "audio/nature-002-ex.mp3"
     }
   },
   {
@@ -38,13 +38,13 @@
     "fr": "soleil",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "chmes : « ch » de « chat ».",
     "audio": "audio/nature-003.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chmes 7arra f ssif",
+      "arabe": "الشمس حارة ف الصيف",
+      "fr": "Le soleil est brûlant en été",
+      "audio": "audio/nature-003-ex.mp3"
     }
   },
   {
@@ -54,13 +54,13 @@
     "fr": "lune",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9mer : 9 profond.",
     "audio": "audio/nature-004.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l9mer kamel had llila",
+      "arabe": "القمر كامل هاد الليلة",
+      "fr": "C'est la pleine lune cette nuit",
+      "audio": "audio/nature-004-ex.mp3"
     }
   },
   {
@@ -70,13 +70,13 @@
     "fr": "étoile",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "nej-ma : comme « nedjma ».",
     "audio": "audio/nature-005.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayn bzaf d nnjoum f ssma",
+      "arabe": "كاين بزاف د النجوم ف السما",
+      "fr": "Il y a beaucoup d'étoiles dans le ciel",
+      "audio": "audio/nature-005-ex.mp3"
     }
   },
   {
@@ -86,13 +86,13 @@
     "fr": "nuage",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ghi-ma : « gh » grasseyé.",
     "audio": "audio/nature-006.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayna ghima k7la, ghadi tchti",
+      "arabe": "كاينة غيمة كحلة، غادي تشتي",
+      "fr": "Il y a un nuage noir, il va pleuvoir",
+      "audio": "audio/nature-006-ex.mp3"
     }
   },
   {
@@ -102,13 +102,13 @@
     "fr": "neige",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "telj : « telj » d'un trait.",
     "audio": "audio/nature-007.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttelj f ifran zwin",
+      "arabe": "التلج ف إفران زوين",
+      "fr": "La neige à Ifrane est belle",
+      "audio": "audio/nature-007-ex.mp3"
     }
   },
   {
@@ -118,13 +118,13 @@
     "fr": "vent",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ri7 : souffle chaud (7) à la fin.",
     "audio": "audio/nature-008.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "rri7 9wi lyom",
+      "arabe": "الريح قوي اليوم",
+      "fr": "Le vent est fort aujourd'hui",
+      "audio": "audio/nature-008-ex.mp3"
     }
   },
   {
@@ -134,13 +134,13 @@
     "fr": "orage",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "r3d : 3 serré au milieu.",
     "audio": "audio/nature-009.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sme3t rr3d f llil",
+      "arabe": "سمعت الرعد ف الليل",
+      "fr": "J'ai entendu l'orage la nuit",
+      "audio": "audio/nature-009-ex.mp3"
     }
   },
   {
@@ -150,13 +150,13 @@
     "fr": "éclair",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ber9 : 9 profond à la fin.",
     "audio": "audio/nature-010.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chefti lber9?",
+      "arabe": "شفتي البرق؟",
+      "fr": "Tu as vu l'éclair ?",
+      "audio": "audio/nature-010-ex.mp3"
     }
   },
   {
@@ -166,13 +166,13 @@
     "fr": "brouillard",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "dbab : un « d » épais.",
     "audio": "audio/nature-011.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayn ddbab f ssba7",
+      "arabe": "كاين الضباب ف الصباح",
+      "fr": "Il y a du brouillard le matin",
+      "audio": "audio/nature-011-ex.mp3"
     }
   },
   {
@@ -182,13 +182,13 @@
     "fr": "froid / il fait froid",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l-berd : le r roulé.",
     "audio": "audio/nature-012.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayn lberd, lbes lkebbout",
+      "arabe": "كاين البرد، لبس الكبوط",
+      "fr": "Il fait froid, mets ton manteau",
+      "audio": "audio/nature-012-ex.mp3"
     }
   },
   {
@@ -198,13 +198,13 @@
     "fr": "ombre",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "d-del : un « d » épais et doublé.",
     "audio": "audio/nature-013.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "gles f ddel",
+      "arabe": "گلس ف الضل",
+      "fr": "Assieds-toi à l'ombre",
+      "audio": "audio/nature-013-ex.mp3"
     }
   },
   {
@@ -214,13 +214,13 @@
     "fr": "lumière du soleil",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "do chmes : « d » épais, « ch » de « chat ».",
     "audio": "audio/nature-014.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "do chmes mzyan l ljeld",
+      "arabe": "ضو الشمس مزيان ل الجلد",
+      "fr": "La lumière du soleil est bonne pour la peau",
+      "audio": "audio/nature-014-ex.mp3"
     }
   },
   {
@@ -230,13 +230,13 @@
     "fr": "température",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "da-ra-jat l7a-ra-ra : souffle chaud (7).",
     "audio": "audio/nature-015.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "darajat l7arara tal3a lyom",
+      "arabe": "درجات الحرارة طالعة اليوم",
+      "fr": "Les températures sont élevées aujourd'hui",
+      "audio": "audio/nature-015-ex.mp3"
     }
   },
   {
@@ -246,13 +246,13 @@
     "fr": "météo",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l-me-te-o : comme « météo ».",
     "audio": "audio/nature-016.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chouf lmeteo 9bel ma tkhrej",
+      "arabe": "شوف الميطيو قبل ما تخرج",
+      "fr": "Regarde la météo avant de sortir",
+      "audio": "audio/nature-016-ex.mp3"
     }
   },
   {
@@ -262,13 +262,13 @@
     "fr": "il pleut",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kat-chti : « ch » de « chat ».",
     "audio": "audio/nature-017.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "katchti, khod lmdella",
+      "arabe": "كتشتي، خود المضلة",
+      "fr": "Il pleut, prends le parapluie",
+      "audio": "audio/nature-017-ex.mp3"
     }
   },
   {
@@ -278,13 +278,13 @@
     "fr": "il neige",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kay-ti7 t-telj : souffle chaud (7).",
     "audio": "audio/nature-018.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayti7 ttelj f ljbel",
+      "arabe": "كيطيح التلج ف الجبل",
+      "fr": "Il neige sur la montagne",
+      "audio": "audio/nature-018-ex.mp3"
     }
   },
   {
@@ -294,13 +294,13 @@
     "fr": "il fait chaud",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "s-skha-na : raclement (kh).",
     "audio": "audio/nature-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sskhana bzaf, ma tkhrejch",
+      "arabe": "السخانة بزاف، ما تخرجش",
+      "fr": "Il fait très chaud, ne sors pas",
+      "audio": "audio/nature-019-ex.mp3"
     }
   },
   {
@@ -310,13 +310,13 @@
     "fr": "il y a du vent",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kayn ri7 : souffle chaud (7).",
     "audio": "audio/nature-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayn rri7, sedd cherjem",
+      "arabe": "كاين الريح، سد الشرجم",
+      "fr": "Il y a du vent, ferme la fenêtre",
+      "audio": "audio/nature-020-ex.mp3"
     }
   },
   {
@@ -326,13 +326,13 @@
     "fr": "il fait beau",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l-jaw zwin : comme « ldjaw ».",
     "audio": "audio/nature-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ljaw zwin, yallah nkhorjo",
+      "arabe": "الجو زوين، يالله نخرجو",
+      "fr": "Il fait beau, allons sortir",
+      "audio": "audio/nature-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "il fait mauvais",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l-jaw kha-yeb : raclement (kh).",
     "audio": "audio/nature-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ljaw khayeb, ghadi nb9aw f ddar",
+      "arabe": "الجو خايب، غادي نبقاو ف الدار",
+      "fr": "Il fait mauvais, on va rester à la maison",
+      "audio": "audio/nature-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "montagne",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "jbel : comme « djbel ».",
     "audio": "audio/nature-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tle3na ljbel f nhar l7ed",
+      "arabe": "طلعنا الجبل ف نهار الحد",
+      "fr": "Nous sommes montés à la montagne dimanche",
+      "audio": "audio/nature-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "colline",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "tel-la : le « l » doublé.",
     "audio": "audio/nature-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddar fo9 wa7ed ttella",
+      "arabe": "الدار فوق واحد التلة",
+      "fr": "La maison est sur une colline",
+      "audio": "audio/nature-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "vallée",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "wa-di : comme « wadi ».",
     "audio": "audio/nature-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lwadi khder f rrbi3",
+      "arabe": "الوادي خضر ف الربيع",
+      "fr": "La vallée est verte au printemps",
+      "audio": "audio/nature-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "désert",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "s-se7-ra : souffle chaud (7).",
     "audio": "audio/nature-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit nchouf sse7ra f merzouga",
+      "arabe": "بغيت نشوف الصحرا ف مرزوگة",
+      "fr": "Je veux voir le désert à Merzouga",
+      "audio": "audio/nature-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "forêt",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "gha-ba : « gh » grasseyé.",
     "audio": "audio/nature-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tmechina f lghaba",
+      "arabe": "تمشينا ف الغابة",
+      "fr": "Nous nous sommes promenés dans la forêt",
+      "audio": "audio/nature-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "arbre",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "chej-ra : « ch » de « chat ».",
     "audio": "audio/nature-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "gles te7t chejra",
+      "arabe": "گلس تحت شجرة",
+      "fr": "Il s'est assis sous un arbre",
+      "audio": "audio/nature-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "fleur",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "wer-da : le r roulé.",
     "audio": "audio/nature-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3tiha werda 7emra",
+      "arabe": "عطيها وردة حمرا",
+      "fr": "Offre-lui une rose rouge",
+      "audio": "audio/nature-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "racine",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "3er9 : 3 serré, 9 profond.",
     "audio": "audio/nature-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l3er9 dyal chejra twil",
+      "arabe": "العرق ديال الشجرة طويل",
+      "fr": "La racine de l'arbre est longue",
+      "audio": "audio/nature-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "herbe",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l3-cheb : 3 serré, « ch » de « chat ».",
     "audio": "audio/nature-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma tmchich 3la l3cheb",
+      "arabe": "ما تمشيش على العشب",
+      "fr": "Ne marche pas sur l'herbe",
+      "audio": "audio/nature-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "pierre",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7ej-ra : souffle chaud (7).",
     "audio": "audio/nature-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tti7t 3la wa7ed l7ejra",
+      "arabe": "طحت على واحد الحجرة",
+      "fr": "Je suis tombé sur une pierre",
+      "audio": "audio/nature-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "sable",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "r-mel : le r roulé.",
     "audio": "audio/nature-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "rrmel sskhoun f lplaja",
+      "arabe": "الرمل سخون ف البلاجة",
+      "fr": "Le sable est chaud sur la plage",
+      "audio": "audio/nature-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "mer",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "be7r : souffle chaud (7).",
     "audio": "audio/nature-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbe7r hadi lyom",
+      "arabe": "البحر هادي اليوم",
+      "fr": "La mer est calme aujourd'hui",
+      "audio": "audio/nature-034-ex.mp3"
     }
   },
   {
@@ -550,13 +550,13 @@
     "fr": "océan",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mo-7it : souffle chaud (7).",
     "audio": "audio/nature-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmo7it l2atlasi kbir",
+      "arabe": "المحيط الأطلسي كبير",
+      "fr": "L'océan Atlantique est grand",
+      "audio": "audio/nature-035-ex.mp3"
     }
   },
   {
@@ -566,13 +566,13 @@
     "fr": "rivière",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "wad : comme « wad ».",
     "audio": "audio/nature-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lwad ghmer ba3d chta",
+      "arabe": "الواد غمر بعد الشتا",
+      "fr": "La rivière a débordé après la pluie",
+      "audio": "audio/nature-036-ex.mp3"
     }
   },
   {
@@ -582,13 +582,13 @@
     "fr": "lac",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "b7i-ra : souffle chaud (7).",
     "audio": "audio/nature-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayna b7ira zwina f ljbel",
+      "arabe": "كاينة بحيرة زوينة ف الجبل",
+      "fr": "Il y a un beau lac dans la montagne",
+      "audio": "audio/nature-037-ex.mp3"
     }
   },
   {
@@ -598,13 +598,13 @@
     "fr": "île",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "jzi-ra : comme « djzira ».",
     "audio": "audio/nature-038.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mchina l wa7ed ljzira sghira",
+      "arabe": "مشينا ل واحد الجزيرة صغيرة",
+      "fr": "Nous sommes allés sur une petite île",
+      "audio": "audio/nature-038-ex.mp3"
     }
   },
   {
@@ -614,13 +614,13 @@
     "fr": "feu",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l3af-ya : 3 serré.",
     "audio": "audio/nature-039.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ch3el l3afya f lkanoun",
+      "arabe": "شعل العافية ف الكانون",
+      "fr": "Allume le feu dans le réchaud",
+      "audio": "audio/nature-039-ex.mp3"
     }
   },
   {
@@ -630,13 +630,13 @@
     "fr": "fumée",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "do-khan : raclement (kh).",
     "audio": "audio/nature-040.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayn ddokhan f lkuzina",
+      "arabe": "كاين الدخان ف الكوزينة",
+      "fr": "Il y a de la fumée dans la cuisine",
+      "audio": "audio/nature-040-ex.mp3"
     }
   },
   {
@@ -646,13 +646,13 @@
     "fr": "air",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l-hwa : « h » expiré.",
     "audio": "audio/nature-041.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lhwa n9i f ljbel",
+      "arabe": "الهوا نقي ف الجبل",
+      "fr": "L'air est pur à la montagne",
+      "audio": "audio/nature-041-ex.mp3"
     }
   },
   {
@@ -662,13 +662,13 @@
     "fr": "animal",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7a-ya-wan : souffle chaud (7).",
     "audio": "audio/nature-042.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kanbghi l7ayawanat bzaf",
+      "arabe": "كنبغي الحيوانات بزاف",
+      "fr": "J'aime beaucoup les animaux",
+      "audio": "audio/nature-042-ex.mp3"
     }
   },
   {
@@ -678,13 +678,13 @@
     "fr": "chien",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kelb : comme « kelb ».",
     "audio": "audio/nature-043.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lkelb kaynbe7 f llil",
+      "arabe": "الكلب كينبح ف الليل",
+      "fr": "Le chien aboie la nuit",
+      "audio": "audio/nature-043-ex.mp3"
     }
   },
   {
@@ -694,13 +694,13 @@
     "fr": "chat",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9ett : 9 profond, « t » doublé.",
     "audio": "audio/nature-044.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l9ett na3es f chmes",
+      "arabe": "القط ناعس ف الشمس",
+      "fr": "Le chat dort au soleil",
+      "audio": "audio/nature-044-ex.mp3"
     }
   },
   {
@@ -710,13 +710,13 @@
     "fr": "cheval",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "3oud : 3 serré.",
     "audio": "audio/nature-045.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "rkeb 3la l3oud f lmousem",
+      "arabe": "ركب على العود ف الموسم",
+      "fr": "Il est monté à cheval au moussem",
+      "audio": "audio/nature-045-ex.mp3"
     }
   },
   {
@@ -726,13 +726,13 @@
     "fr": "âne / bête / idiot",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7mar : souffle chaud (7).",
     "audio": "audio/nature-046.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7mar kaychedd l7mel",
+      "arabe": "الحمار كيشد الحمل",
+      "fr": "L'âne porte la charge",
+      "audio": "audio/nature-046-ex.mp3"
     },
     "note": "Familier, insultant"
   },
@@ -743,13 +743,13 @@
     "fr": "vache",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "be9-ra : 9 profond.",
     "audio": "audio/nature-047.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbe9ra katjib l7lib",
+      "arabe": "البقرة كتجيب الحليب",
+      "fr": "La vache donne du lait",
+      "audio": "audio/nature-047-ex.mp3"
     }
   },
   {
@@ -759,13 +759,13 @@
     "fr": "taureau",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "tour : comme « tour ».",
     "audio": "audio/nature-048.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttour kbir w 9wi",
+      "arabe": "التور كبير و قوي",
+      "fr": "Le taureau est grand et fort",
+      "audio": "audio/nature-048-ex.mp3"
     }
   },
   {
@@ -775,13 +775,13 @@
     "fr": "mouton",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7aw-li : souffle chaud (7).",
     "audio": "audio/nature-049.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrina 7awli l l3id",
+      "arabe": "شرينا حولي ل العيد",
+      "fr": "Nous avons acheté un mouton pour l'Aïd",
+      "audio": "audio/nature-049-ex.mp3"
     }
   },
   {
@@ -791,13 +791,13 @@
     "fr": "chèvre",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "m3-za : 3 serré.",
     "audio": "audio/nature-050.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lme3za katakol l3cheb",
+      "arabe": "المعزة كتاكل العشب",
+      "fr": "La chèvre mange l'herbe",
+      "audio": "audio/nature-050-ex.mp3"
     }
   },
   {
@@ -807,13 +807,13 @@
     "fr": "poule",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "djaja : un « d » puis « jaja ».",
     "audio": "audio/nature-051.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddjaja wldat lbid",
+      "arabe": "الدجاجة ولدات البيض",
+      "fr": "La poule a pondu des œufs",
+      "audio": "audio/nature-051-ex.mp3"
     }
   },
   {
@@ -823,13 +823,13 @@
     "fr": "coq",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "dik : comme « dik ».",
     "audio": "audio/nature-052.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddik kaydden f ssba7",
+      "arabe": "الديك كيدن ف الصباح",
+      "fr": "Le coq chante le matin",
+      "audio": "audio/nature-052-ex.mp3"
     }
   },
   {
@@ -839,13 +839,13 @@
     "fr": "canard",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "bat-ta : un « t » épais et doublé.",
     "audio": "audio/nature-053.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbatta kat3oum f lb7ira",
+      "arabe": "البطة كتعوم ف البحيرة",
+      "fr": "Le canard nage dans le lac",
+      "audio": "audio/nature-053-ex.mp3"
     }
   },
   {
@@ -855,13 +855,13 @@
     "fr": "oiseau",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "tir : un « t » épais.",
     "audio": "audio/nature-054.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttir kaygheni 3la chejra",
+      "arabe": "الطير كيغني على الشجرة",
+      "fr": "L'oiseau chante sur l'arbre",
+      "audio": "audio/nature-054-ex.mp3"
     }
   },
   {
@@ -871,13 +871,13 @@
     "fr": "pigeon",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7ma-ma : souffle chaud (7).",
     "audio": "audio/nature-055.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7mam kthir f ssa7a",
+      "arabe": "الحمام كثير ف الساحة",
+      "fr": "Il y a beaucoup de pigeons sur la place",
+      "audio": "audio/nature-055-ex.mp3"
     }
   },
   {
@@ -887,13 +887,13 @@
     "fr": "lapin",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9ni-na : 9 profond.",
     "audio": "audio/nature-056.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddrari kaybghiw l9nina",
+      "arabe": "الدراري كيبغيو القنينة",
+      "fr": "Les enfants aiment le lapin",
+      "audio": "audio/nature-056-ex.mp3"
     }
   },
   {
@@ -903,13 +903,13 @@
     "fr": "lion",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sbe3 : un « s » épais, 3 serré.",
     "audio": "audio/nature-057.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sbe3 howa malik lghaba",
+      "arabe": "السبع هو مالك الغابة",
+      "fr": "Le lion est le roi de la forêt",
+      "audio": "audio/nature-057-ex.mp3"
     }
   },
   {
@@ -919,13 +919,13 @@
     "fr": "tigre",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "nmer : comme « nmer ».",
     "audio": "audio/nature-058.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nnmer kayjri bzerba",
+      "arabe": "النمر كيجري بزربة",
+      "fr": "Le tigre court vite",
+      "audio": "audio/nature-058-ex.mp3"
     }
   },
   {
@@ -935,13 +935,13 @@
     "fr": "éléphant",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "fil : comme « fil ».",
     "audio": "audio/nature-059.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lfil kbir bzaf",
+      "arabe": "الفيل كبير بزاف",
+      "fr": "L'éléphant est très grand",
+      "audio": "audio/nature-059-ex.mp3"
     }
   },
   {
@@ -951,13 +951,13 @@
     "fr": "singe",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9erd : 9 profond.",
     "audio": "audio/nature-060.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l9erd f l7adi9a",
+      "arabe": "القرد ف الحديقة",
+      "fr": "Le singe est au zoo",
+      "audio": "audio/nature-060-ex.mp3"
     }
   },
   {
@@ -967,13 +967,13 @@
     "fr": "serpent",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "7nech : souffle chaud (7), « ch » de « chat ».",
     "audio": "audio/nature-061.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khaf men l7nech",
+      "arabe": "خاف من الحنش",
+      "fr": "Il a eu peur du serpent",
+      "audio": "audio/nature-061-ex.mp3"
     }
   },
   {
@@ -983,13 +983,13 @@
     "fr": "souris (animal)",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "far : comme « far ».",
     "audio": "audio/nature-062.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayn far f lkuzina!",
+      "arabe": "كاين فار ف الكوزينة!",
+      "fr": "Il y a une souris dans la cuisine !",
+      "audio": "audio/nature-062-ex.mp3"
     }
   },
   {
@@ -999,13 +999,13 @@
     "fr": "rat",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "jerd : comme « djerd ».",
     "audio": "audio/nature-063.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ljerd kbir 3la lfar",
+      "arabe": "الجرد كبير على الفار",
+      "fr": "Le rat est plus gros que la souris",
+      "audio": "audio/nature-063-ex.mp3"
     }
   },
   {
@@ -1015,13 +1015,13 @@
     "fr": "abeille",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "n7la : souffle chaud (7).",
     "audio": "audio/nature-064.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "n7la 9ersatni f yeddi",
+      "arabe": "نحلة قرصاتني ف يدي",
+      "fr": "Une abeille m'a piqué la main",
+      "audio": "audio/nature-064-ex.mp3"
     }
   },
   {
@@ -1031,13 +1031,13 @@
     "fr": "fourmi",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "nem-la : comme « nemla ».",
     "audio": "audio/nature-065.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kaynin nnmel f lkuzina",
+      "arabe": "كاينين النمل ف الكوزينة",
+      "fr": "Il y a des fourmis dans la cuisine",
+      "audio": "audio/nature-065-ex.mp3"
     }
   },
   {
@@ -1047,13 +1047,13 @@
     "fr": "mouche",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "de-ba-na : comme « debbana ».",
     "audio": "audio/nature-066.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddebbana katdour 3la lmakla",
+      "arabe": "الدبانة كتدور على الماكلة",
+      "fr": "La mouche tourne autour de la nourriture",
+      "audio": "audio/nature-066-ex.mp3"
     }
   },
   {
@@ -1063,13 +1063,13 @@
     "fr": "moustique",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "na-mo-sa : un « s » épais.",
     "audio": "audio/nature-067.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nnamosa ma khellatnich n3es",
+      "arabe": "الناموسة ما خلاتنيش نعس",
+      "fr": "Le moustique ne m'a pas laissé dormir",
+      "audio": "audio/nature-067-ex.mp3"
     }
   },
   {
@@ -1079,13 +1079,13 @@
     "fr": "papillon",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "fe-ra-cha : « ch » de « chat ».",
     "audio": "audio/nature-068.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ferracha zwina f ljnan",
+      "arabe": "فراشة زوينة ف الجنان",
+      "fr": "Un joli papillon dans le jardin",
+      "audio": "audio/nature-068-ex.mp3"
     }
   },
   {
@@ -1095,13 +1095,13 @@
     "fr": "araignée",
     "theme": "nature",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "3en-kbout : 3 serré.",
     "audio": "audio/nature-069.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayn 3enkbout f sse9f",
+      "arabe": "كاين عنكبوت ف السقف",
+      "fr": "Il y a une araignée au plafond",
+      "audio": "audio/nature-069-ex.mp3"
     }
   }
 ]

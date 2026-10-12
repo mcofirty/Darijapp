@@ -6,13 +6,13 @@
     "fr": "et vous, comment vous appelez-vous ?",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "w n-ta, chno smi-tek : « ch » de « chat ».",
     "audio": "audio/conversation-001.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana smiti yasmine, w nta, chno smitek?",
+      "arabe": "أنا سميتي ياسمين، و نتا، شنو سميتك؟",
+      "fr": "Je m'appelle Yasmine, et vous, comment vous appelez-vous ?",
+      "audio": "audio/conversation-001-ex.mp3"
     },
     "note": "Tutoiement usuel ; adapter au genre"
   },
@@ -23,13 +23,13 @@
     "fr": "j'habite à Paris (dit par un homme)",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "a-na sa-ken f ba-riz : « Bariz » pour Paris.",
     "audio": "audio/conversation-002.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana saken f bariz men 3chr snin",
+      "arabe": "أنا ساكن ف باريز من عشر سنين",
+      "fr": "J'habite à Paris depuis dix ans",
+      "audio": "audio/conversation-002-ex.mp3"
     }
   },
   {
@@ -39,13 +39,13 @@
     "fr": "je suis français (dit par un homme)",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "a-na fran-sa-wi : l'accent sur « sa ».",
     "audio": "audio/conversation-003.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana fransawi, walakin kanbghi lmeghrib",
+      "arabe": "أنا فرنساوي، ولكن كنبغي المغرب",
+      "fr": "Je suis français, mais j'aime le Maroc",
+      "audio": "audio/conversation-003-ex.mp3"
     }
   },
   {
@@ -55,13 +55,13 @@
     "fr": "je suis française",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "a-na fran-sa-wi-ya : comme « fransawi », au féminin.",
     "audio": "audio/conversation-004.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana fransawiya w rajli mghribi",
+      "arabe": "أنا فرنساوية و راجلي مغربي",
+      "fr": "Je suis française et mon mari est marocain",
+      "audio": "audio/conversation-004-ex.mp3"
     }
   },
   {
@@ -71,13 +71,13 @@
     "fr": "je viens de France (dit par un homme)",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "a-na jay men fran-sa : « jay » comme « djaï ».",
     "audio": "audio/conversation-005.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana jay men fransa l l3otla",
+      "arabe": "أنا جاي من فرانسا ل العطلة",
+      "fr": "Je viens de France pour les vacances",
+      "audio": "audio/conversation-005-ex.mp3"
     }
   },
   {
@@ -87,13 +87,13 @@
     "fr": "je suis en vacances",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "a-na f l3ot-la : le 3 serré.",
     "audio": "audio/conversation-006.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana f l3otla 7tta l2ithnin",
+      "arabe": "أنا ف العطلة حتى الإثنين",
+      "fr": "Je suis en vacances jusqu'à lundi",
+      "audio": "audio/conversation-006-ex.mp3"
     }
   },
   {
@@ -103,13 +103,13 @@
     "fr": "je viens pour travailler",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "jit bach nkhdem : « ch » de « chat », raclement (kh).",
     "audio": "audio/conversation-007.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jit l kaza bach nkhdem",
+      "arabe": "جيت ل كازا باش نخدم",
+      "fr": "Je suis venu à Casa pour travailler",
+      "audio": "audio/conversation-007-ex.mp3"
     }
   },
   {
@@ -119,13 +119,13 @@
     "fr": "j'apprends la darija",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kan-t3el-lem d-da-ri-ja : le 3 serré.",
     "audio": "audio/conversation-008.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kant3ellem ddarija f lapplication",
+      "arabe": "كنتعلم الدارجة ف لابليكاسيون",
+      "fr": "J'apprends la darija dans l'application",
+      "audio": "audio/conversation-008-ex.mp3"
     }
   },
   {
@@ -135,13 +135,13 @@
     "fr": "je parle un peu darija",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kan-hder chwi-ya d-da-ri-ja : « ch » de « chat ».",
     "audio": "audio/conversation-009.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kanhder chwiya ddarija, ma tzrebch 3liya",
+      "arabe": "كنهضر شوية الدارجة، ما تزربش عليا",
+      "fr": "Je parle un peu darija, ne va pas trop vite",
+      "audio": "audio/conversation-009-ex.mp3"
     }
   },
   {
@@ -151,13 +151,13 @@
     "fr": "je ne parle pas bien darija",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma kan-hder-ch d-da-ri-ja mzyan : « ch » de « chat ».",
     "audio": "audio/conversation-010.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sme7 lia, ma kanhderch ddarija mzyan",
+      "arabe": "سمح ليا، ما كنهضرش الدارجة مزيان",
+      "fr": "Pardon, je ne parle pas bien darija",
+      "audio": "audio/conversation-010-ex.mp3"
     }
   },
   {
@@ -167,13 +167,13 @@
     "fr": "j'ai compris",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "fhemt : « fhemt » d'un trait, « h » expiré.",
     "audio": "audio/conversation-011.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "safi, fhemt daba",
+      "arabe": "صافي، فهمت دابا",
+      "fr": "D'accord, j'ai compris maintenant",
+      "audio": "audio/conversation-011-ex.mp3"
     }
   },
   {
@@ -183,13 +183,13 @@
     "fr": "je sais",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3reft : le 3 serré au début.",
     "audio": "audio/conversation-012.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3reft lmochkil",
+      "arabe": "عرفت المشكل",
+      "fr": "Je sais quel est le problème",
+      "audio": "audio/conversation-012-ex.mp3"
     }
   },
   {
@@ -199,13 +199,13 @@
     "fr": "je connais cet endroit",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kan-3ref had l-bla-sa : le 3 serré.",
     "audio": "audio/conversation-013.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kan3ref had lblasa, jit liha 9bel",
+      "arabe": "كنعرف هاد البلاصة، جيت ليها قبل",
+      "fr": "Je connais cet endroit, j'y suis venu avant",
+      "audio": "audio/conversation-013-ex.mp3"
     }
   },
   {
@@ -215,13 +215,13 @@
     "fr": "je ne connais pas",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma kan-3ref-ch : 3 serré, « ch » de « chat ».",
     "audio": "audio/conversation-014.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sme7 lia, ma kan3refch fin kayn",
+      "arabe": "سمح ليا، ما كنعرفش فين كاين",
+      "fr": "Désolé, je ne sais pas où c'est",
+      "audio": "audio/conversation-014-ex.mp3"
     }
   },
   {
@@ -231,13 +231,13 @@
     "fr": "peux-tu répéter ? (à un homme)",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "t9-der t3a-wed : 9 du fond de la gorge, 3 serré.",
     "audio": "audio/conversation-015.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma fhemtch, t9der t3awed?",
+      "arabe": "ما فهمتش، تقدر تعاود؟",
+      "fr": "Je n'ai pas compris, peux-tu répéter ?",
+      "audio": "audio/conversation-015-ex.mp3"
     }
   },
   {
@@ -247,13 +247,13 @@
     "fr": "parle plus lentement",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "hder b chwi-ya : « h » expiré, « ch » de « chat ».",
     "audio": "audio/conversation-016.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3afak, hder b chwiya",
+      "arabe": "عافاك، هضر بشوية",
+      "fr": "S'il te plaît, parle plus lentement",
+      "audio": "audio/conversation-016-ex.mp3"
     }
   },
   {
@@ -263,13 +263,13 @@
     "fr": "parle plus fort",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "hder b sout 3a-li : 3 serré.",
     "audio": "audio/conversation-017.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma kansme3ch, hder b sout 3ali",
+      "arabe": "ما كنسمعش، هضر بصوت عالي",
+      "fr": "Je n'entends pas, parle plus fort",
+      "audio": "audio/conversation-017-ex.mp3"
     }
   },
   {
@@ -279,13 +279,13 @@
     "fr": "je n'ai pas entendu",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma sme3t-ch : 3 serré, « ch » de « chat ».",
     "audio": "audio/conversation-018.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma sme3tch mzyan, 3awed",
+      "arabe": "ما سمعتش مزيان، عاود",
+      "fr": "Je n'ai pas bien entendu, répète",
+      "audio": "audio/conversation-018-ex.mp3"
     }
   },
   {
@@ -295,13 +295,13 @@
     "fr": "qu'est-ce que tu as dit ?",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ach glti : « ch » de « chat », « g » dur.",
     "audio": "audio/conversation-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ach glti? ma fhemtch",
+      "arabe": "اش گلتي؟ ما فهمتش",
+      "fr": "Qu'est-ce que tu as dit ? Je n'ai pas compris",
+      "audio": "audio/conversation-019-ex.mp3"
     }
   },
   {
@@ -311,13 +311,13 @@
     "fr": "comment on dit ça en darija ?",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ki-fach kan-go-lo ha-di b d-da-ri-ja : « ch » de « chat ».",
     "audio": "audio/conversation-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kifach kangolo merci b ddarija?",
+      "arabe": "كيفاش كنگولو ميرسي بالدارجة؟",
+      "fr": "Comment on dit « merci » en darija ?",
+      "audio": "audio/conversation-020-ex.mp3"
     }
   },
   {
@@ -327,13 +327,13 @@
     "fr": "comment ça s'écrit ?",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ki-fach kat-tek-teb : « ch » de « chat ».",
     "audio": "audio/conversation-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "smitek, kifach kattekteb?",
+      "arabe": "سميتك، كيفاش كتتكتب؟",
+      "fr": "Ton nom, comment ça s'écrit ?",
+      "audio": "audio/conversation-021-ex.mp3"
     }
   },
   {
@@ -343,13 +343,13 @@
     "fr": "peux-tu m'aider ?",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "t9-der t3a-we-ni : 9 du fond de la gorge, 3 serré.",
     "audio": "audio/conversation-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "t9der t3aweni f lvaliza?",
+      "arabe": "تقدر تعاوني ف الفاليزة؟",
+      "fr": "Tu peux m'aider avec la valise ?",
+      "audio": "audio/conversation-022-ex.mp3"
     }
   },
   {
@@ -359,13 +359,13 @@
     "fr": "j'ai besoin d'aide",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "khas-ni l3awn : raclement (kh), 3 serré.",
     "audio": "audio/conversation-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3afak, khasni l3awn",
+      "arabe": "عافاك، خاصني العون",
+      "fr": "S'il vous plaît, j'ai besoin d'aide",
+      "audio": "audio/conversation-023-ex.mp3"
     }
   },
   {
@@ -375,13 +375,13 @@
     "fr": "merci pour ton aide",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "chok-ran 3la l-mo-sa-3a-da : deux 3 serrés.",
     "audio": "audio/conversation-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chokran 3la lmosa3ada dyalek",
+      "arabe": "شكرا على المساعدة ديالك",
+      "fr": "Merci pour ton aide",
+      "audio": "audio/conversation-024-ex.mp3"
     }
   },
   {
@@ -391,13 +391,13 @@
     "fr": "je suis d'accord",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "a-na mta-fe9 : 9 du fond de la gorge à la fin.",
     "audio": "audio/conversation-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana mtafe9 m3ak",
+      "arabe": "أنا متافق معاك",
+      "fr": "Je suis d'accord avec toi",
+      "audio": "audio/conversation-025-ex.mp3"
     }
   },
   {
@@ -407,13 +407,13 @@
     "fr": "je ne suis pas d'accord",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "a-na ma-chi mta-fe9 : « ch » et 9.",
     "audio": "audio/conversation-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana machi mtafe9 m3ak f hadchi",
+      "arabe": "أنا ماشي متافق معاك ف هادشي",
+      "fr": "Je ne suis pas d'accord avec toi là-dessus",
+      "audio": "audio/conversation-026-ex.mp3"
     }
   },
   {
@@ -423,13 +423,13 @@
     "fr": "tu as raison",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3n-dek l7e9 : 3 serré, 7 soufflé, 9 profond.",
     "audio": "audio/conversation-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndek l7e9, ghaliya bzaf",
+      "arabe": "عندك الحق، غالية بزاف",
+      "fr": "Tu as raison, c'est très cher",
+      "audio": "audio/conversation-027-ex.mp3"
     }
   },
   {
@@ -439,13 +439,13 @@
     "fr": "tu as tort",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma 3n-dek-ch l7e9 : 3, ch, 7 et 9.",
     "audio": "audio/conversation-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "la, ma 3ndekch l7e9",
+      "arabe": "لا، ما عندكش الحق",
+      "fr": "Non, tu as tort",
+      "audio": "audio/conversation-028-ex.mp3"
     }
   },
   {
@@ -455,13 +455,13 @@
     "fr": "je pense que oui",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kan-den bel-li iy-yeh : un « d » épais.",
     "audio": "audio/conversation-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach ghadi yji? kanden belli iyyeh",
+      "arabe": "واش غادي يجي؟ كنضن بلي ايه",
+      "fr": "Il va venir ? Je pense que oui",
+      "audio": "audio/conversation-029-ex.mp3"
     }
   },
   {
@@ -471,13 +471,13 @@
     "fr": "je pense que non",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kan-den bel-li la : un « d » épais.",
     "audio": "audio/conversation-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach ma7loula? kanden belli la",
+      "arabe": "واش محلولة؟ كنضن بلي لا",
+      "fr": "C'est ouvert ? Je pense que non",
+      "audio": "audio/conversation-030-ex.mp3"
     }
   },
   {
@@ -487,13 +487,13 @@
     "fr": "je crois que…",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kan-den bel-li : un « d » épais.",
     "audio": "audio/conversation-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kanden belli ghadi tti7 chta",
+      "arabe": "كنضن بلي غادي تطيح الشتا",
+      "fr": "Je crois qu'il va pleuvoir",
+      "audio": "audio/conversation-031-ex.mp3"
     }
   },
   {
@@ -503,13 +503,13 @@
     "fr": "ce n'est pas possible",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma-chi mom-kin : « ch » de « chat ».",
     "audio": "audio/conversation-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lyom machi momkin, ghedda",
+      "arabe": "اليوم ماشي ممكن، غدا",
+      "fr": "Aujourd'hui ce n'est pas possible, demain",
+      "audio": "audio/conversation-032-ex.mp3"
     }
   },
   {
@@ -519,13 +519,13 @@
     "fr": "ce n'est pas nécessaire / pas forcément",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma-chi da-ro-ri : « ch » de « chat », « d » épais.",
     "audio": "audio/conversation-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "machi darori tji bekri",
+      "arabe": "ماشي ضروري تجي بكري",
+      "fr": "Pas besoin de venir tôt",
+      "audio": "audio/conversation-033-ex.mp3"
     }
   },
   {
@@ -535,13 +535,13 @@
     "fr": "c'est important",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "had-chi mo-him : « ch » de « chat ».",
     "audio": "audio/conversation-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sme3 mzyan, hadchi mohim",
+      "arabe": "سمع مزيان، هادشي مهم",
+      "fr": "Écoute bien, c'est important",
+      "audio": "audio/conversation-034-ex.mp3"
     }
   },
   {
@@ -551,13 +551,13 @@
     "fr": "je suis occupé (dit par un homme)",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "a-na mche-ghoul : « ch » et « gh ».",
     "audio": "audio/conversation-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana mcheghoul, nkellmek men b3d",
+      "arabe": "أنا مشغول، نكلمك من بعد",
+      "fr": "Je suis occupé, je t'appelle plus tard",
+      "audio": "audio/conversation-035-ex.mp3"
     }
   },
   {
@@ -567,13 +567,13 @@
     "fr": "je suis libre maintenant (dit par un homme)",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "a-na fa-regh da-ba : « gh » grasseyé.",
     "audio": "audio/conversation-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana fargh daba, ach bghiti?",
+      "arabe": "أنا فارغ دابا، اش بغيتي؟",
+      "fr": "Je suis libre maintenant, que veux-tu ?",
+      "audio": "audio/conversation-036-ex.mp3"
     }
   },
   {
@@ -583,13 +583,13 @@
     "fr": "je suis prêt (dit par un homme)",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "a-na wa-jed : comme « wadjed ».",
     "audio": "audio/conversation-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana wajed, n9der nmchi",
+      "arabe": "أنا واجد، نقدر نمشي",
+      "fr": "Je suis prêt, je peux partir",
+      "audio": "audio/conversation-037-ex.mp3"
     }
   },
   {
@@ -599,13 +599,13 @@
     "fr": "je suis prête",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "a-na waj-da : comme « wajed », au féminin.",
     "audio": "audio/conversation-038.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tsennani, ana wajda f khmes d9aye9",
+      "arabe": "تسناني، أنا واجدة ف خمس دقايق",
+      "fr": "Attends-moi, je suis prête dans cinq minutes",
+      "audio": "audio/conversation-038-ex.mp3"
     }
   },
   {
@@ -615,13 +615,13 @@
     "fr": "attends un peu",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "tsen-na chwi-ya : « ch » de « chat ».",
     "audio": "audio/conversation-039.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tsenna chwiya, ghadi nji",
+      "arabe": "تسنى شوية، غادي نجي",
+      "fr": "Attends un peu, j'arrive",
+      "audio": "audio/conversation-039-ex.mp3"
     }
   },
   {
@@ -631,13 +631,13 @@
     "fr": "attends-moi",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "tsen-na-ni : l'accent sur « na ».",
     "audio": "audio/conversation-040.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tsennani 7da lbab",
+      "arabe": "تسناني حدا الباب",
+      "fr": "Attends-moi près de la porte",
+      "audio": "audio/conversation-040-ex.mp3"
     }
   },
   {
@@ -647,13 +647,13 @@
     "fr": "viens ici",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "a-ji l-hna : « h » expiré.",
     "audio": "audio/conversation-041.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "aji lhna, chouf hadchi",
+      "arabe": "أجي لهنا، شوف هادشي",
+      "fr": "Viens ici, regarde ça",
+      "audio": "audio/conversation-041-ex.mp3"
     }
   },
   {
@@ -663,13 +663,13 @@
     "fr": "va là-bas",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "sir l-tem-ma : le « m » doublé.",
     "audio": "audio/conversation-042.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sir ltemma w tsennani",
+      "arabe": "سير لتما و تسناني",
+      "fr": "Va là-bas et attends-moi",
+      "audio": "audio/conversation-042-ex.mp3"
     }
   },
   {
@@ -679,13 +679,13 @@
     "fr": "écoute-moi",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "sme3 li-a : le 3 serré.",
     "audio": "audio/conversation-043.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sme3 lia mzyan",
+      "arabe": "سمع ليا مزيان",
+      "fr": "Écoute-moi bien",
+      "audio": "audio/conversation-043-ex.mp3"
     }
   },
   {
@@ -695,13 +695,13 @@
     "fr": "regarde ça",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "chouf ha-da : « ch » de « chat ».",
     "audio": "audio/conversation-044.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chouf hada, zwin bzaf",
+      "arabe": "شوف هادا، زوين بزاف",
+      "fr": "Regarde ça, c'est très beau",
+      "audio": "audio/conversation-044-ex.mp3"
     }
   },
   {
@@ -711,13 +711,13 @@
     "fr": "laisse-moi voir",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "khel-li-ni nchouf : raclement (kh), « ch » de « chat ».",
     "audio": "audio/conversation-045.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khellini nchouf lfoto",
+      "arabe": "خليني نشوف الفوطو",
+      "fr": "Laisse-moi voir la photo",
+      "audio": "audio/conversation-045-ex.mp3"
     }
   },
   {
@@ -727,13 +727,13 @@
     "fr": "donne-moi ça",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3ti-ni ha-da : le 3 serré au début.",
     "audio": "audio/conversation-046.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3tini hada, ana nchedd",
+      "arabe": "عطيني هادا، أنا نشد",
+      "fr": "Donne-moi ça, je le tiens",
+      "audio": "audio/conversation-046-ex.mp3"
     }
   },
   {
@@ -743,13 +743,13 @@
     "fr": "prends ça",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "khod ha-da : raclement (kh).",
     "audio": "audio/conversation-047.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khod hada, hdiya lik",
+      "arabe": "خود هادا، هدية ليك",
+      "fr": "Prends ça, c'est un cadeau pour toi",
+      "audio": "audio/conversation-047-ex.mp3"
     }
   },
   {
@@ -759,13 +759,13 @@
     "fr": "apporte-moi de l'eau",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "jib li-a lma : comme « djib ».",
     "audio": "audio/conversation-048.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jib lia lma bared 3afak",
+      "arabe": "جيب ليا الما بارد عافاك",
+      "fr": "Apporte-moi de l'eau fraîche, s'il te plaît",
+      "audio": "audio/conversation-048-ex.mp3"
     }
   },
   {
@@ -775,13 +775,13 @@
     "fr": "laisse tomber",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "khel-li-ha : raclement (kh), « l » doublé.",
     "audio": "audio/conversation-049.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khelliha, machi mochkil",
+      "arabe": "خليها، ماشي مشكل",
+      "fr": "Laisse tomber, ce n'est pas grave",
+      "audio": "audio/conversation-049-ex.mp3"
     }
   },
   {
@@ -791,13 +791,13 @@
     "fr": "pas maintenant",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma-chi da-ba : « ch » de « chat ».",
     "audio": "audio/conversation-050.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "machi daba, ana 3iyan",
+      "arabe": "ماشي دابا، أنا عيان",
+      "fr": "Pas maintenant, je suis fatigué",
+      "audio": "audio/conversation-050-ex.mp3"
     }
   },
   {
@@ -807,13 +807,13 @@
     "fr": "ça marche !",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wa-kha, mzyan : raclement (kh).",
     "audio": "audio/conversation-051.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wakha, mzyan, ntla9aw f ttmenya",
+      "arabe": "واخا، مزيان، نتلاقاو ف التمنية",
+      "fr": "Ça marche, on se retrouve à huit heures",
+      "audio": "audio/conversation-051-ex.mp3"
     }
   },
   {
@@ -823,13 +823,13 @@
     "fr": "très bien !",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "mzyan bzaf : d'un trait.",
     "audio": "audio/conversation-052.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mzyan bzaf, bravo 3lik",
+      "arabe": "مزيان بزاف، براڤو عليك",
+      "fr": "Très bien, bravo à toi",
+      "audio": "audio/conversation-052-ex.mp3"
     }
   },
   {
@@ -839,13 +839,13 @@
     "fr": "pas de souci",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma kayn bass : le « s » doublé.",
     "audio": "audio/conversation-053.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma kayn bass, ana nkhelles",
+      "arabe": "ما كاين باس، أنا نخلص",
+      "fr": "Pas de souci, je paie",
+      "audio": "audio/conversation-053-ex.mp3"
     }
   },
   {
@@ -855,13 +855,13 @@
     "fr": "je rigole",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kan-de-7ek : « d » épais, souffle chaud (7).",
     "audio": "audio/conversation-054.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma tghdebch, ghir kande7ek",
+      "arabe": "ما تغضبش، غير كنضحك",
+      "fr": "Ne te fâche pas, je rigole seulement",
+      "audio": "audio/conversation-054-ex.mp3"
     }
   },
   {
@@ -871,13 +871,13 @@
     "fr": "je suis sérieux",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kan-hder b jedd : « h » expiré.",
     "audio": "audio/conversation-055.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "la, kanhder b jedd",
+      "arabe": "لا، كنهضر بالجد",
+      "fr": "Non, je suis sérieux",
+      "audio": "audio/conversation-055-ex.mp3"
     }
   },
   {
@@ -887,13 +887,13 @@
     "fr": "tu plaisantes ?",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kat-de-7ek : « d » épais, souffle chaud (7).",
     "audio": "audio/conversation-056.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "katde7ek? ma tamnch",
+      "arabe": "كتضحك؟ ما تامنش",
+      "fr": "Tu plaisantes ? Je n'y crois pas",
+      "audio": "audio/conversation-056-ex.mp3"
     }
   },
   {
@@ -903,13 +903,13 @@
     "fr": "c'est une blague",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "had-chi ghir nok-ta : « ch » et « gh ».",
     "audio": "audio/conversation-057.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma tkhafch, hadchi ghir nokta",
+      "arabe": "ما تخافش، هادشي غير نكتة",
+      "fr": "N'aie pas peur, c'est une blague",
+      "audio": "audio/conversation-057-ex.mp3"
     }
   },
   {
@@ -919,13 +919,13 @@
     "fr": "quoi de neuf ?",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ach khba-rek : « ch » de « chat », raclement (kh).",
     "audio": "audio/conversation-058.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "salam, ach khbarek?",
+      "arabe": "سلام، اش خبارك؟",
+      "fr": "Salut, quoi de neuf ?",
+      "audio": "audio/conversation-058-ex.mp3"
     }
   },
   {
@@ -935,13 +935,13 @@
     "fr": "rien de nouveau",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wa-lou jdid : comme « walou ».",
     "audio": "audio/conversation-059.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "walou jdid, kolchi kif kif",
+      "arabe": "والو جديد، كلشي كيف كيف",
+      "fr": "Rien de nouveau, tout est pareil",
+      "audio": "audio/conversation-059-ex.mp3"
     }
   },
   {
@@ -951,13 +951,13 @@
     "fr": "tout va bien",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kol-chi mzyan : « ch » de « chat ».",
     "audio": "audio/conversation-060.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "f ddar kolchi mzyan",
+      "arabe": "ف الدار كلشي مزيان",
+      "fr": "À la maison tout va bien",
+      "audio": "audio/conversation-060-ex.mp3"
     }
   },
   {
@@ -967,13 +967,13 @@
     "fr": "ce n'est rien",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma-chi chi 7a-ja : deux « ch », souffle chaud (7).",
     "audio": "audio/conversation-061.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma tkhafch, machi chi 7aja",
+      "arabe": "ما تخافش، ماشي شي حاجة",
+      "fr": "N'aie pas peur, ce n'est rien",
+      "audio": "audio/conversation-061-ex.mp3"
     }
   },
   {
@@ -983,13 +983,13 @@
     "fr": "c'est la vie",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ha-di hi-ya d-den-ya : le « d » doublé.",
     "audio": "audio/conversation-062.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma3lich, hadi hiya ddnya",
+      "arabe": "معليش، هادي هي الدنيا",
+      "fr": "Tant pis, c'est la vie",
+      "audio": "audio/conversation-062-ex.mp3"
     }
   },
   {
@@ -999,13 +999,13 @@
     "fr": "ça dépend",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3la 7sab : 3 serré, 7 soufflé.",
     "audio": "audio/conversation-063.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach ghadi tji? 3la 7sab lkhedma",
+      "arabe": "واش غادي تجي؟ على حساب الخدمة",
+      "fr": "Tu vas venir ? Ça dépend du travail",
+      "audio": "audio/conversation-063-ex.mp3"
     }
   },
   {
@@ -1015,13 +1015,13 @@
     "fr": "j'ai une question",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3n-di sou2al : 3 serré, petit arrêt (2).",
     "audio": "audio/conversation-064.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3afak, 3ndi sou2al",
+      "arabe": "عافاك، عندي سؤال",
+      "fr": "S'il vous plaît, j'ai une question",
+      "audio": "audio/conversation-064-ex.mp3"
     }
   },
   {
@@ -1031,13 +1031,13 @@
     "fr": "tu as une question ?",
     "theme": "conversation",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3n-dek chi sou2al : 3, « ch », 2.",
     "audio": "audio/conversation-065.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndek chi sou2al akhor?",
+      "arabe": "عندك شي سؤال اخور؟",
+      "fr": "Tu as une autre question ?",
+      "audio": "audio/conversation-065-ex.mp3"
     }
   }
 ]

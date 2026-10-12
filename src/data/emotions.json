@@ -6,13 +6,13 @@
     "fr": "heureux (homme)",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "fer-7an : souffle chaud (7) au milieu.",
     "audio": "audio/emotions-001.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana fer7an bzaf lyom",
+      "arabe": "أنا فرحان بزاف اليوم",
+      "fr": "Je suis très heureux aujourd'hui",
+      "audio": "audio/emotions-001-ex.mp3"
     }
   },
   {
@@ -22,13 +22,13 @@
     "fr": "heureuse (femme)",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "fer-7a-na : souffle chaud (7) au milieu.",
     "audio": "audio/emotions-002.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mama fer7ana b nnja7 dyali",
+      "arabe": "ماما فرحانة بالنجاح ديالي",
+      "fr": "Maman est heureuse de ma réussite",
+      "audio": "audio/emotions-002-ex.mp3"
     }
   },
   {
@@ -38,13 +38,13 @@
     "fr": "triste",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "7zin : souffle chaud (7) au début.",
     "audio": "audio/emotions-003.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3lach nta 7zin?",
+      "arabe": "علاش نتا حزين؟",
+      "fr": "Pourquoi es-tu triste ?",
+      "audio": "audio/emotions-003-ex.mp3"
     }
   },
   {
@@ -54,13 +54,13 @@
     "fr": "en colère / nerveux",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "m3es-seb : 3 serré, « s » doublé et épais.",
     "audio": "audio/emotions-004.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma tkellmouch, howa m3esseb",
+      "arabe": "ما تكلموش، هو معصب",
+      "fr": "Ne lui parle pas, il est en colère",
+      "audio": "audio/emotions-004-ex.mp3"
     }
   },
   {
@@ -70,13 +70,13 @@
     "fr": "stressé",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "mtwet-ter : le « t » doublé.",
     "audio": "audio/emotions-005.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana mtwetter 3la lemti7an",
+      "arabe": "أنا متوتر على الامتحان",
+      "fr": "Je suis stressé pour l'examen",
+      "audio": "audio/emotions-005-ex.mp3"
     }
   },
   {
@@ -86,13 +86,13 @@
     "fr": "inquiet",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "9a-le9 : deux 9 profonds.",
     "audio": "audio/emotions-006.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lwalida 9al9a 3lik",
+      "arabe": "الوالدة قالقة عليك",
+      "fr": "Ta mère s'inquiète pour toi",
+      "audio": "audio/emotions-006-ex.mp3"
     }
   },
   {
@@ -102,13 +102,13 @@
     "fr": "peur",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l-khof : raclement (kh).",
     "audio": "audio/emotions-007.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndo lkhof men lklab",
+      "arabe": "عندو الخوف من الكلاب",
+      "fr": "Il a peur des chiens",
+      "audio": "audio/emotions-007-ex.mp3"
     }
   },
   {
@@ -118,13 +118,13 @@
     "fr": "j'ai peur",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "kha-yef : raclement (kh).",
     "audio": "audio/emotions-008.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana khayef men ttayyara",
+      "arabe": "أنا خايف من الطيارة",
+      "fr": "J'ai peur de l'avion",
+      "audio": "audio/emotions-008-ex.mp3"
     }
   },
   {
@@ -134,13 +134,13 @@
     "fr": "surpris",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "mte-fa-je2 : petit arrêt (2) à la fin.",
     "audio": "audio/emotions-009.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana mtefaje2 bzaf b had lkhbar",
+      "arabe": "أنا متفاجئ بزاف بهاد الخبار",
+      "fr": "Je suis très surpris par cette nouvelle",
+      "audio": "audio/emotions-009-ex.mp3"
     }
   },
   {
@@ -150,13 +150,13 @@
     "fr": "honte",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l7chou-ma : souffle chaud (7), « ch » de « chat ».",
     "audio": "audio/emotions-010.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hadi l7chouma, ma tgoulch hakka",
+      "arabe": "هادي الحشومة، ما تگولش هكا",
+      "fr": "C'est la honte, ne dis pas ça",
+      "audio": "audio/emotions-010-ex.mp3"
     }
   },
   {
@@ -166,13 +166,13 @@
     "fr": "j'ai honte",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "7chemt : souffle chaud (7), « ch » de « chat ».",
     "audio": "audio/emotions-011.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7chemt bzaf mlli tti7t",
+      "arabe": "حشمت بزاف ملي طحت",
+      "fr": "J'ai eu très honte quand je suis tombé",
+      "audio": "audio/emotions-011-ex.mp3"
     }
   },
   {
@@ -182,13 +182,13 @@
     "fr": "amoureux",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "m3e-che9 : 3 serré, « ch » et 9 profond.",
     "audio": "audio/emotions-012.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "howa m3eche9 f bent jarna",
+      "arabe": "هو معشق ف بنت جارنا",
+      "fr": "Il est amoureux de la fille du voisin",
+      "audio": "audio/emotions-012-ex.mp3"
     }
   },
   {
@@ -198,13 +198,13 @@
     "fr": "amour",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l7ob : souffle chaud (7).",
     "audio": "audio/emotions-013.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7ob ma 3ndo 7dod",
+      "arabe": "الحب ما عندو حدود",
+      "fr": "L'amour n'a pas de limites",
+      "audio": "audio/emotions-013-ex.mp3"
     }
   },
   {
@@ -214,13 +214,13 @@
     "fr": "amitié",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "s-sda-9a : « s » doublé, 9 profond.",
     "audio": "audio/emotions-014.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ssda9a dyalna 9dima",
+      "arabe": "الصداقة ديالنا قديمة",
+      "fr": "Notre amitié est ancienne",
+      "audio": "audio/emotions-014-ex.mp3"
     }
   },
   {
@@ -230,13 +230,13 @@
     "fr": "confiance",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "t-ti-9a : 9 profond.",
     "audio": "audio/emotions-015.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndi tti9a fik",
+      "arabe": "عندي الثقة فيك",
+      "fr": "J'ai confiance en toi",
+      "audio": "audio/emotions-015-ex.mp3"
     }
   },
   {
@@ -246,13 +246,13 @@
     "fr": "espoir",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l2a-mal : petit arrêt (2) au début.",
     "audio": "audio/emotions-016.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma tfe9dch l2amal",
+      "arabe": "ما تفقدش الأمل",
+      "fr": "Ne perds pas espoir",
+      "audio": "audio/emotions-016-ex.mp3"
     }
   },
   {
@@ -262,13 +262,13 @@
     "fr": "joie",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l-fer-7a : souffle chaud (7).",
     "audio": "audio/emotions-017.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lfer7a kanet kbira f l3ers",
+      "arabe": "الفرحة كانت كبيرة ف العرس",
+      "fr": "La joie était grande au mariage",
+      "audio": "audio/emotions-017-ex.mp3"
     }
   },
   {
@@ -278,13 +278,13 @@
     "fr": "chagrin",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l7-ozn : souffle chaud (7).",
     "audio": "audio/emotions-018.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7ozn kaydouz m3a lw9t",
+      "arabe": "الحزن كيدوز مع الوقت",
+      "fr": "Le chagrin passe avec le temps",
+      "audio": "audio/emotions-018-ex.mp3"
     }
   },
   {
@@ -294,13 +294,13 @@
     "fr": "colère",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l3a-sab : 3 serré, « s » épais.",
     "audio": "audio/emotions-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l3asab ma kaysle7 walou",
+      "arabe": "العصب ما كيصلح والو",
+      "fr": "La colère ne règle rien",
+      "audio": "audio/emotions-019-ex.mp3"
     }
   },
   {
@@ -310,13 +310,13 @@
     "fr": "jalousie",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l-ghi-ra : « gh » grasseyé.",
     "audio": "audio/emotions-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lghira bzaf machi mzyana",
+      "arabe": "الغيرة بزاف ماشي مزيانة",
+      "fr": "Trop de jalousie, ce n'est pas bien",
+      "audio": "audio/emotions-020-ex.mp3"
     }
   },
   {
@@ -326,13 +326,13 @@
     "fr": "ennui",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l-me-lal : le « l » final net.",
     "audio": "audio/emotions-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmelal f ddar f l3otla",
+      "arabe": "الملل ف الدار ف العطلة",
+      "fr": "L'ennui à la maison pendant les vacances",
+      "audio": "audio/emotions-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "je m'ennuie",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "mllit : le « l » doublé.",
     "audio": "audio/emotions-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mllit men ttsennaya",
+      "arabe": "مليت من التسناية",
+      "fr": "J'en ai marre d'attendre",
+      "audio": "audio/emotions-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "je suis content (dit par un homme)",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "a-na fer-7an : souffle chaud (7).",
     "audio": "audio/emotions-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana fer7an bik bzaf",
+      "arabe": "أنا فرحان بيك بزاف",
+      "fr": "Je suis très content pour toi",
+      "audio": "audio/emotions-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "je suis contente",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "a-na fer-7a-na : souffle chaud (7).",
     "audio": "audio/emotions-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana fer7ana 7it jiti",
+      "arabe": "أنا فرحانة حيت جيتي",
+      "fr": "Je suis contente que tu sois venu",
+      "audio": "audio/emotions-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "je suis triste",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "a-na 7zin : souffle chaud (7).",
     "audio": "audio/emotions-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana 7zin 7it ghadi tmchi",
+      "arabe": "أنا حزين حيت غادي تمشي",
+      "fr": "Je suis triste parce que tu pars",
+      "audio": "audio/emotions-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "je suis inquiet",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "a-na 9a-le9 : deux 9 profonds.",
     "audio": "audio/emotions-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana 9ale9 7it ma jach",
+      "arabe": "أنا قالق حيت ما جاش",
+      "fr": "Je suis inquiet parce qu'il n'est pas venu",
+      "audio": "audio/emotions-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "je suis tranquille",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "a-na mer-ta7 : souffle chaud (7) à la fin.",
     "audio": "audio/emotions-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana merta7 f had lblad",
+      "arabe": "أنا مرتاح ف هاد البلاد",
+      "fr": "Je me sens tranquille dans ce pays",
+      "audio": "audio/emotions-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "ça me plaît",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3jeb-ni : le 3 serré au début.",
     "audio": "audio/emotions-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had lfilm 3jebni bzaf",
+      "arabe": "هاد الفيلم عجبني بزاف",
+      "fr": "Ce film m'a beaucoup plu",
+      "audio": "audio/emotions-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "ça ne me plaît pas",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ma 3jeb-nich : 3 serré, « ch » de « chat ».",
     "audio": "audio/emotions-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmakla ma 3jebnich",
+      "arabe": "الماكلة ما عجبنيش",
+      "fr": "La nourriture ne m'a pas plu",
+      "audio": "audio/emotions-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "ça me manque",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "twe-7echt had-chi : 7 soufflé, « ch » deux fois.",
     "audio": "audio/emotions-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "twe7echt hadchi dyal lblad",
+      "arabe": "توحشت هادشي ديال البلاد",
+      "fr": "Le pays me manque",
+      "audio": "audio/emotions-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "tu me manques",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "twe-7ech-tek : souffle chaud (7), « ch » de « chat ».",
     "audio": "audio/emotions-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "twe7echtek bzaf a mama",
+      "arabe": "توحشتك بزاف أ ماما",
+      "fr": "Tu me manques beaucoup, maman",
+      "audio": "audio/emotions-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "je t'aime",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "kan-bghik : « gh » grasseyé.",
     "audio": "audio/emotions-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kanbghik, nti 7yati",
+      "arabe": "كنبغيك، نتي حياتي",
+      "fr": "Je t'aime, tu es ma vie",
+      "audio": "audio/emotions-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "je t'aime beaucoup",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "kan-bghik bzaf : « gh » grasseyé.",
     "audio": "audio/emotions-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kanbghik bzaf a khti",
+      "arabe": "كنبغيك بزاف أ ختي",
+      "fr": "Je t'aime beaucoup, ma sœur",
+      "audio": "audio/emotions-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "je te déteste",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "kan-ker-hek : « h » expiré.",
     "audio": "audio/emotions-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghir kande7ek, ma kankerhekch",
+      "arabe": "غير كنضحك، ما كنكرهكش",
+      "fr": "Je rigole, je ne te déteste pas",
+      "audio": "audio/emotions-034-ex.mp3"
     }
   },
   {
@@ -550,13 +550,13 @@
     "fr": "je suis fier de toi",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "a-na fa-khour bik : raclement (kh).",
     "audio": "audio/emotions-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana fakhour bik a weldi",
+      "arabe": "أنا فخور بيك أ ولدي",
+      "fr": "Je suis fier de toi, mon fils",
+      "audio": "audio/emotions-035-ex.mp3"
     }
   },
   {
@@ -566,13 +566,13 @@
     "fr": "tu m'as fait rire",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "d7ek-ti-ni : « d » épais, souffle chaud (7).",
     "audio": "audio/emotions-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "d7ektini bzaf b had nnokta",
+      "arabe": "ضحكتيني بزاف بهاد النكتة",
+      "fr": "Tu m'as fait beaucoup rire avec cette blague",
+      "audio": "audio/emotions-036-ex.mp3"
     }
   },
   {
@@ -582,13 +582,13 @@
     "fr": "courage !",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "chje3 ra-sek : « ch » de « chat », 3 serré.",
     "audio": "audio/emotions-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chje3 rasek, nta 9ad 3liha",
+      "arabe": "شجع راسك، نتا قد عليها",
+      "fr": "Courage, tu en es capable",
+      "audio": "audio/emotions-037-ex.mp3"
     }
   },
   {
@@ -598,13 +598,13 @@
     "fr": "je suis surpris",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "a-na mte-fa-je2 : petit arrêt (2) à la fin.",
     "audio": "audio/emotions-038.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana mtefaje2, ma kontch 3aref",
+      "arabe": "أنا متفاجئ، ما كنتش عارف",
+      "fr": "Je suis surpris, je ne savais pas",
+      "audio": "audio/emotions-038-ex.mp3"
     }
   },
   {
@@ -614,13 +614,13 @@
     "fr": "c'est gênant",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "had-chi kay7-chem : « ch », 7, « ch ».",
     "audio": "audio/emotions-039.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hadchi kay7chem, ma tdirch hakka",
+      "arabe": "هادشي كيحشم، ما تديرش هكا",
+      "fr": "C'est gênant, ne fais pas ça",
+      "audio": "audio/emotions-039-ex.mp3"
     }
   },
   {
@@ -630,13 +630,13 @@
     "fr": "ça m'énerve",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "had-chi kay3s-seb-ni : « ch », 3 serré.",
     "audio": "audio/emotions-040.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "zz7am kay3ssebni",
+      "arabe": "الزحام كيعصبني",
+      "fr": "Les embouteillages m'énervent",
+      "audio": "audio/emotions-040-ex.mp3"
     }
   },
   {
@@ -646,13 +646,13 @@
     "fr": "ne t'inquiète pas (à un homme) / ne t'en fais pas",
     "theme": "emotions",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ma t9le9ch : 9 profond deux fois, « ch » de « chat ».",
     "audio": "audio/emotions-041.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mat9le9ch, kolchi ghadi ykoun mzyan",
+      "arabe": "ماتقلقش، كلشي غادي يكون مزيان",
+      "fr": "Ne t'inquiète pas, tout ira bien",
+      "audio": "audio/emotions-041-ex.mp3"
     }
   }
 ]

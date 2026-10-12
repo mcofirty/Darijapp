@@ -6,13 +6,13 @@
     "fr": "maison",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "dar : le r roulé.",
     "audio": "audio/maison-001.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddar dyalna 9riba men lb7ar",
+      "arabe": "الدار ديالنا قريبة من البحر",
+      "fr": "Notre maison est près de la mer",
+      "audio": "audio/maison-001-ex.mp3"
     }
   },
   {
@@ -22,13 +22,13 @@
     "fr": "appartement",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "a-pa-rt-man : comme « appartement ».",
     "audio": "audio/maison-002.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kankri appartman f l7ouma",
+      "arabe": "كنكري أبارطمان ف الحومة",
+      "fr": "Je loue un appartement dans le quartier",
+      "audio": "audio/maison-002-ex.mp3"
     },
     "note": "Emprunt courant"
   },
@@ -39,13 +39,13 @@
     "fr": "immeuble",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3i-ma-ra : le 3 serré.",
     "audio": "audio/maison-003.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "saken f lteb9a lkhamsa d l3imara",
+      "arabe": "ساكن ف الطبقة الخامسة د العمارة",
+      "fr": "J'habite au cinquième étage de l'immeuble",
+      "audio": "audio/maison-003-ex.mp3"
     }
   },
   {
@@ -55,13 +55,13 @@
     "fr": "chambre",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "bit : comme « bite ».",
     "audio": "audio/maison-004.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbit dyali sghir walakin zwin",
+      "arabe": "البيت ديالي صغير ولكن زوين",
+      "fr": "Ma chambre est petite mais belle",
+      "audio": "audio/maison-004-ex.mp3"
     }
   },
   {
@@ -71,13 +71,13 @@
     "fr": "salon",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "sa-lon : un « s » épais.",
     "audio": "audio/maison-005.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "gelsna f ssalon kantfarrjo",
+      "arabe": "گلسنا ف الصالون كنتفرجو",
+      "fr": "Nous étions au salon à regarder la télé",
+      "audio": "audio/maison-005-ex.mp3"
     }
   },
   {
@@ -87,13 +87,13 @@
     "fr": "cuisine",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "kou-zi-na : comme « cuisine ».",
     "audio": "audio/maison-006.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mama f lkuzina katteyyeb",
+      "arabe": "ماما ف الكوزينة كتطيب",
+      "fr": "Maman est à la cuisine en train de cuisiner",
+      "audio": "audio/maison-006-ex.mp3"
     }
   },
   {
@@ -103,13 +103,13 @@
     "fr": "salle de bain",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "7em-mam : souffle chaud (7), « m » doublé.",
     "audio": "audio/maison-007.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7emmam fih lma skhoun",
+      "arabe": "الحمام فيه الما سخون",
+      "fr": "La salle de bain a l'eau chaude",
+      "audio": "audio/maison-007-ex.mp3"
     }
   },
   {
@@ -119,13 +119,13 @@
     "fr": "toilettes",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "to-ya-let : comme « toilettes ».",
     "audio": "audio/maison-008.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttoyalet 7da lbab",
+      "arabe": "التواليت حدا الباب",
+      "fr": "Les toilettes sont à côté de la porte",
+      "audio": "audio/maison-008-ex.mp3"
     }
   },
   {
@@ -135,13 +135,13 @@
     "fr": "couloir",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "kou-lwar : comme « couloir ».",
     "audio": "audio/maison-009.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ett ssebbat f lcouloir",
+      "arabe": "حط الصباط ف الكولوار",
+      "fr": "Pose les chaussures dans le couloir",
+      "audio": "audio/maison-009-ex.mp3"
     }
   },
   {
@@ -151,13 +151,13 @@
     "fr": "balcon",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "bal-kon : comme « balcon ».",
     "audio": "audio/maison-010.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kanchreb atay f lbalcon",
+      "arabe": "كنشرب أتاي ف البالكون",
+      "fr": "Je bois le thé sur le balcon",
+      "audio": "audio/maison-010-ex.mp3"
     }
   },
   {
@@ -167,13 +167,13 @@
     "fr": "terrasse",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "sta7 : un « s » épais, souffle chaud (7).",
     "audio": "audio/maison-011.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kannechro ttsbin f ssta7",
+      "arabe": "كننشرو التصبين ف السطح",
+      "fr": "On étend le linge sur la terrasse",
+      "audio": "audio/maison-011-ex.mp3"
     }
   },
   {
@@ -183,13 +183,13 @@
     "fr": "jardin",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "jnan : comme « djnan ».",
     "audio": "audio/maison-012.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ljnan fih bzaf d lwerd",
+      "arabe": "الجنان فيه بزاف د الورد",
+      "fr": "Le jardin a beaucoup de fleurs",
+      "audio": "audio/maison-012-ex.mp3"
     }
   },
   {
@@ -199,13 +199,13 @@
     "fr": "cour",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "7ouch : souffle chaud (7), « ch » de « chat ».",
     "audio": "audio/maison-013.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddrari kayl3bo f l7ouch",
+      "arabe": "الدراري كيلعبو ف الحوش",
+      "fr": "Les enfants jouent dans la cour",
+      "audio": "audio/maison-013-ex.mp3"
     }
   },
   {
@@ -215,13 +215,13 @@
     "fr": "porte",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "bab : comme « bab ».",
     "audio": "audio/maison-014.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "seddi lbab 3afak",
+      "arabe": "سدي الباب عافاك",
+      "fr": "Ferme la porte, s'il te plaît",
+      "audio": "audio/maison-014-ex.mp3"
     }
   },
   {
@@ -231,13 +231,13 @@
     "fr": "fenêtre",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "cher-jem : « ch » de « chat ».",
     "audio": "audio/maison-015.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7el cherjem, kayna sskhana",
+      "arabe": "حل الشرجم، كاينة السخانة",
+      "fr": "Ouvre la fenêtre, il fait chaud",
+      "audio": "audio/maison-015-ex.mp3"
     }
   },
   {
@@ -247,13 +247,13 @@
     "fr": "mur",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "7it : souffle chaud (7), un « t » épais.",
     "audio": "audio/maison-016.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3elle9 ttswira f l7it",
+      "arabe": "علق التصويرة ف الحيط",
+      "fr": "Accroche le tableau au mur",
+      "audio": "audio/maison-016-ex.mp3"
     }
   },
   {
@@ -263,13 +263,13 @@
     "fr": "plafond",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "se9f : un « s » épais, 9 profond.",
     "audio": "audio/maison-017.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sse9f 3ali bzaf",
+      "arabe": "السقف عالي بزاف",
+      "fr": "Le plafond est très haut",
+      "audio": "audio/maison-017-ex.mp3"
     }
   },
   {
@@ -279,13 +279,13 @@
     "fr": "sol / terre",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l2ard : petit arrêt (2), « d » épais.",
     "audio": "audio/maison-018.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tti7 lkas f l2ard",
+      "arabe": "طاح الكاس ف الأرض",
+      "fr": "Le verre est tombé par terre",
+      "audio": "audio/maison-018-ex.mp3"
     }
   },
   {
@@ -295,13 +295,13 @@
     "fr": "escalier",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "drouj : comme « droudj ».",
     "audio": "audio/maison-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tle3 ddrouj b chwiya",
+      "arabe": "طلع الدروج بشوية",
+      "fr": "Monte l'escalier doucement",
+      "audio": "audio/maison-019-ex.mp3"
     }
   },
   {
@@ -311,13 +311,13 @@
     "fr": "ascenseur",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "a-san-sor : comme « ascenseur ».",
     "audio": "audio/maison-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lasansor mkhesser lyom",
+      "arabe": "الأسانسور مخسر اليوم",
+      "fr": "L'ascenseur est en panne aujourd'hui",
+      "audio": "audio/maison-020-ex.mp3"
     }
   },
   {
@@ -327,13 +327,13 @@
     "fr": "clé",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "mef-ta7 : souffle chaud (7) à la fin.",
     "audio": "audio/maison-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nsit lmefta7 dakhel",
+      "arabe": "نسيت المفتاح داخل",
+      "fr": "J'ai oublié la clé à l'intérieur",
+      "audio": "audio/maison-021-ex.mp3"
     }
   },
   {
@@ -343,13 +343,13 @@
     "fr": "serrure",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ser-rou-ra : le r roulé et doublé.",
     "audio": "audio/maison-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sserroura mkhessra",
+      "arabe": "السرورة مخسرة",
+      "fr": "La serrure est cassée",
+      "audio": "audio/maison-022-ex.mp3"
     }
   },
   {
@@ -359,13 +359,13 @@
     "fr": "lampe",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "lam-pa : comme « lampe ».",
     "audio": "audio/maison-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ch3el lampa 3afak",
+      "arabe": "شعل لامبة عافاك",
+      "fr": "Allume la lampe, s'il te plaît",
+      "audio": "audio/maison-023-ex.mp3"
     }
   },
   {
@@ -375,13 +375,13 @@
     "fr": "lumière",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "d-daw : un « d » épais et doublé.",
     "audio": "audio/maison-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tfi ddaw 9bel ma tn3es",
+      "arabe": "طفي الضو قبل ما تنعس",
+      "fr": "Éteins la lumière avant de dormir",
+      "audio": "audio/maison-024-ex.mp3"
     }
   },
   {
@@ -391,13 +391,13 @@
     "fr": "électricité",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "d-do : un « d » épais et doublé.",
     "audio": "audio/maison-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "t9te3 ddo f l7ouma",
+      "arabe": "تقطع الضو ف الحومة",
+      "fr": "L'électricité a été coupée dans le quartier",
+      "audio": "audio/maison-025-ex.mp3"
     }
   },
   {
@@ -407,13 +407,13 @@
     "fr": "prise électrique",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "bri-za : le r roulé.",
     "audio": "audio/maison-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fin kayna lbriza bach ncharji?",
+      "arabe": "فين كاينة البريزة باش نشارجي؟",
+      "fr": "Où est la prise pour recharger ?",
+      "audio": "audio/maison-026-ex.mp3"
     }
   },
   {
@@ -423,13 +423,13 @@
     "fr": "interrupteur",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "in-te-rip-tor : comme « interrupteur ».",
     "audio": "audio/maison-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "linteriptor 7da lbab",
+      "arabe": "الأنتيريبتور حدا الباب",
+      "fr": "L'interrupteur est à côté de la porte",
+      "audio": "audio/maison-027-ex.mp3"
     }
   },
   {
@@ -439,13 +439,13 @@
     "fr": "lit",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "frach : « ch » de « chat ».",
     "audio": "audio/maison-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lfrach mrta7 bzaf",
+      "arabe": "الفراش مرتاح بزاف",
+      "fr": "Le lit est très confortable",
+      "audio": "audio/maison-028-ex.mp3"
     }
   },
   {
@@ -455,13 +455,13 @@
     "fr": "matelas",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "mat-la : comme « matelas ».",
     "audio": "audio/maison-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrina matla jdida",
+      "arabe": "شرينا ماطلا جديدة",
+      "fr": "Nous avons acheté un nouveau matelas",
+      "audio": "audio/maison-029-ex.mp3"
     }
   },
   {
@@ -471,13 +471,13 @@
     "fr": "oreiller",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "mkhed-da : raclement (kh), « d » doublé.",
     "audio": "audio/maison-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit mkhedda khra",
+      "arabe": "بغيت مخدة اخرى",
+      "fr": "Je veux un autre oreiller",
+      "audio": "audio/maison-030-ex.mp3"
     }
   },
   {
@@ -487,13 +487,13 @@
     "fr": "couverture",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "kou-ver-ta : comme « couverture ».",
     "audio": "audio/maison-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jib kouverta, kayn lberd",
+      "arabe": "جيب كوفيرطة، كاين البرد",
+      "fr": "Apporte une couverture, il fait froid",
+      "audio": "audio/maison-031-ex.mp3"
     }
   },
   {
@@ -503,13 +503,13 @@
     "fr": "drap",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "char-chaf : deux « ch » de « chat ».",
     "audio": "audio/maison-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "beddel charchaf dyal lfrach",
+      "arabe": "بدل الشرشف ديال الفراش",
+      "fr": "Change le drap du lit",
+      "audio": "audio/maison-032-ex.mp3"
     }
   },
   {
@@ -519,13 +519,13 @@
     "fr": "armoire / placard",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ma-riou : comme « mario ».",
     "audio": "audio/maison-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7wayjek f lmariou",
+      "arabe": "حوايجك ف الماريو",
+      "fr": "Tes vêtements sont dans l'armoire",
+      "audio": "audio/maison-033-ex.mp3"
     }
   },
   {
@@ -535,13 +535,13 @@
     "fr": "placard",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "pla-kar : comme « placard ».",
     "audio": "audio/maison-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ett lvaliza f lplacar",
+      "arabe": "حط الفاليزة ف البلاكار",
+      "fr": "Mets la valise dans le placard",
+      "audio": "audio/maison-034-ex.mp3"
     }
   },
   {
@@ -551,13 +551,13 @@
     "fr": "table",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "tab-la : comme « table ».",
     "audio": "audio/maison-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ett lmakla 3la ttabla",
+      "arabe": "حط الماكلة على الطبلة",
+      "fr": "Mets la nourriture sur la table",
+      "audio": "audio/maison-035-ex.mp3"
     }
   },
   {
@@ -567,13 +567,13 @@
     "fr": "chaise",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "kor-si : le r roulé.",
     "audio": "audio/maison-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jib korsi w gles",
+      "arabe": "جيب كرسي و گلس",
+      "fr": "Prends une chaise et assieds-toi",
+      "audio": "audio/maison-036-ex.mp3"
     }
   },
   {
@@ -583,13 +583,13 @@
     "fr": "canapé",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ka-na-ba : l'accent sur « na ».",
     "audio": "audio/maison-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "n3es f lkanaba",
+      "arabe": "نعس ف الكنابة",
+      "fr": "Il s'est endormi sur le canapé",
+      "audio": "audio/maison-037-ex.mp3"
     }
   },
   {
@@ -599,13 +599,13 @@
     "fr": "fauteuil",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "fo-toy : comme « fauteuil ».",
     "audio": "audio/maison-038.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jeddi galss f lfotoy",
+      "arabe": "جدي گالس ف الفوطوي",
+      "fr": "Grand-père est assis dans le fauteuil",
+      "audio": "audio/maison-038-ex.mp3"
     }
   },
   {
@@ -615,13 +615,13 @@
     "fr": "miroir",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "mra-ya : le r roulé.",
     "audio": "audio/maison-039.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chouf rassek f lmraya",
+      "arabe": "شوف راسك ف المراية",
+      "fr": "Regarde-toi dans le miroir",
+      "audio": "audio/maison-039-ex.mp3"
     }
   },
   {
@@ -631,13 +631,13 @@
     "fr": "rideau",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "sta-ra : un « s » épais.",
     "audio": "audio/maison-040.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7el sstara, bghit ddaw",
+      "arabe": "حل الستارة، بغيت الضو",
+      "fr": "Ouvre le rideau, je veux de la lumière",
+      "audio": "audio/maison-040-ex.mp3"
     }
   },
   {
@@ -647,13 +647,13 @@
     "fr": "tapis",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "zer-biya : le r roulé.",
     "audio": "audio/maison-041.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "zzerbiya mghribiya zwina",
+      "arabe": "الزربية المغربية زوينة",
+      "fr": "Le tapis marocain est beau",
+      "audio": "audio/maison-041-ex.mp3"
     }
   },
   {
@@ -663,13 +663,13 @@
     "fr": "réfrigérateur",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "tel-la-ja : le « l » doublé.",
     "audio": "audio/maison-042.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lma bared f ttellaja",
+      "arabe": "الما بارد ف التلاجة",
+      "fr": "L'eau fraîche est dans le réfrigérateur",
+      "audio": "audio/maison-042-ex.mp3"
     }
   },
   {
@@ -679,13 +679,13 @@
     "fr": "congélateur",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "kon-ji-la-tor : comme « congélateur ».",
     "audio": "audio/maison-043.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7em f lkongelator",
+      "arabe": "اللحم ف الكونجيلاتور",
+      "fr": "La viande est dans le congélateur",
+      "audio": "audio/maison-043-ex.mp3"
     }
   },
   {
@@ -695,13 +695,13 @@
     "fr": "four",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "fer-ran : le r roulé et doublé.",
     "audio": "audio/maison-044.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddi lkhobz l lferran",
+      "arabe": "دي الخبز ل الفران",
+      "fr": "Emmène le pain au four",
+      "audio": "audio/maison-044-ex.mp3"
     }
   },
   {
@@ -711,13 +711,13 @@
     "fr": "cuisinière",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "bo-ta-gaz : comme « butagaz ».",
     "audio": "audio/maison-045.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbotagaz ma khddamch",
+      "arabe": "البوطاگاز ما خدامش",
+      "fr": "La cuisinière ne marche pas",
+      "audio": "audio/maison-045-ex.mp3"
     }
   },
   {
@@ -727,13 +727,13 @@
     "fr": "machine à laver",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ma-chi-na d s-sa-bon : « ch » de « chat ».",
     "audio": "audio/maison-046.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ett 7wayjek f machina d ssabon",
+      "arabe": "حط حوايجك ف ماشينة د الصابون",
+      "fr": "Mets tes vêtements dans la machine à laver",
+      "audio": "audio/maison-046-ex.mp3"
     }
   },
   {
@@ -743,13 +743,13 @@
     "fr": "lave-vaisselle",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ma-chi-na d l-ma-3en : « ch » et 3 serré.",
     "audio": "audio/maison-047.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "machina d lma3en katgheslhom mzyan",
+      "arabe": "ماشينة د الماعن كتغسلهم مزيان",
+      "fr": "Le lave-vaisselle les lave bien",
+      "audio": "audio/maison-047-ex.mp3"
     }
   },
   {
@@ -759,13 +759,13 @@
     "fr": "télévision",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "til-fa-za : comme « tilfaza ».",
     "audio": "audio/maison-048.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tfi ttilfaza w n3es",
+      "arabe": "طفي التلفازة و نعس",
+      "fr": "Éteins la télé et va dormir",
+      "audio": "audio/maison-048-ex.mp3"
     }
   },
   {
@@ -775,13 +775,13 @@
     "fr": "télécommande",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "te-le-ko-mand : comme « télécommande ».",
     "audio": "audio/maison-049.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "fin mcha ttelekomand?",
+      "arabe": "فين مشى التيليكوموند؟",
+      "fr": "Où est passée la télécommande ?",
+      "audio": "audio/maison-049-ex.mp3"
     }
   },
   {
@@ -791,13 +791,13 @@
     "fr": "ventilateur",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "van-ti-la-tor : comme « ventilateur ».",
     "audio": "audio/maison-050.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ch3el lventilateur, kayna sskhana",
+      "arabe": "شعل الڤانتيلاتور، كاينة السخانة",
+      "fr": "Allume le ventilateur, il fait chaud",
+      "audio": "audio/maison-050-ex.mp3"
     }
   },
   {
@@ -807,13 +807,13 @@
     "fr": "climatisation",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "kli-ma-ti-za-syon : comme « climatisation ».",
     "audio": "audio/maison-051.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lklimatizasyoun mkhessra",
+      "arabe": "الكليماتيزاسيون مخسرة",
+      "fr": "La climatisation est en panne",
+      "audio": "audio/maison-051-ex.mp3"
     }
   },
   {
@@ -823,13 +823,13 @@
     "fr": "chauffage",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "chou-faj : « ch » de « chat ».",
     "audio": "audio/maison-052.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ch3el chauffage, kayn lberd",
+      "arabe": "شعل الشوفاج، كاين البرد",
+      "fr": "Allume le chauffage, il fait froid",
+      "audio": "audio/maison-052-ex.mp3"
     }
   },
   {
@@ -839,13 +839,13 @@
     "fr": "balai",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "mken-sa : l'accent sur « ken ».",
     "audio": "audio/maison-053.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jib lmkensa w chette7",
+      "arabe": "جيب المكنسة و شطح",
+      "fr": "Prends le balai et balaie",
+      "audio": "audio/maison-053-ex.mp3"
     }
   },
   {
@@ -855,13 +855,13 @@
     "fr": "poubelle",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "zba-la : comme « zbala ».",
     "audio": "audio/maison-054.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ett zzbala lberra",
+      "arabe": "حط الزبالة البرا",
+      "fr": "Mets la poubelle dehors",
+      "audio": "audio/maison-054-ex.mp3"
     }
   },
   {
@@ -871,13 +871,13 @@
     "fr": "sac-poubelle",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "sa-chi d zba-la : « ch » de « chat ».",
     "audio": "audio/maison-055.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chri saché d zbala men l7anout",
+      "arabe": "شري ساشي د زبالة من الحانوت",
+      "fr": "Achète des sacs-poubelle à la boutique",
+      "audio": "audio/maison-055-ex.mp3"
     }
   },
   {
@@ -887,13 +887,13 @@
     "fr": "seau",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "stel : un « s » épais.",
     "audio": "audio/maison-056.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3emmer sstel b lma",
+      "arabe": "عمر السطل بالما",
+      "fr": "Remplis le seau d'eau",
+      "audio": "audio/maison-056-ex.mp3"
     }
   },
   {
@@ -903,13 +903,13 @@
     "fr": "éponge",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "sfon-ja : un « s » épais.",
     "audio": "audio/maison-057.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghsel ttbasel b ssfonja",
+      "arabe": "غسل الطباسل بالسفنجة",
+      "fr": "Lave les assiettes avec l'éponge",
+      "audio": "audio/maison-057-ex.mp3"
     }
   },
   {
@@ -919,13 +919,13 @@
     "fr": "savon",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "s-sa-boun : un « s » épais et doublé.",
     "audio": "audio/maison-058.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghsel yeddik b ssaboun",
+      "arabe": "غسل يديك بالصابون",
+      "fr": "Lave-toi les mains avec du savon",
+      "audio": "audio/maison-058-ex.mp3"
     }
   },
   {
@@ -935,13 +935,13 @@
     "fr": "serviette",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "fou-ta : comme « fouta ».",
     "audio": "audio/maison-059.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3tini fouta n9iya",
+      "arabe": "عطيني فوطة نقية",
+      "fr": "Donne-moi une serviette propre",
+      "audio": "audio/maison-059-ex.mp3"
     }
   },
   {
@@ -951,13 +951,13 @@
     "fr": "robinet",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ro-bi-ni : comme « robinet ».",
     "audio": "audio/maison-060.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sedd rrobine, lma kaysil",
+      "arabe": "سد الروبيني، الما كيسيل",
+      "fr": "Ferme le robinet, l'eau coule",
+      "audio": "audio/maison-060-ex.mp3"
     }
   },
   {
@@ -967,13 +967,13 @@
     "fr": "eau chaude",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "lma skhoun : raclement (kh).",
     "audio": "audio/maison-061.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma kaynch lma skhoun lyom",
+      "arabe": "ما كاينش الما سخون اليوم",
+      "fr": "Il n'y a pas d'eau chaude aujourd'hui",
+      "audio": "audio/maison-061-ex.mp3"
     }
   },
   {
@@ -983,13 +983,13 @@
     "fr": "eau froide",
     "theme": "maison",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "lma ba-red : le r roulé.",
     "audio": "audio/maison-062.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3tini kas d lma bared",
+      "arabe": "عطيني كاس د الما بارد",
+      "fr": "Donne-moi un verre d'eau froide",
+      "audio": "audio/maison-062-ex.mp3"
     }
   }
 ]

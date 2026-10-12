@@ -294,13 +294,13 @@
     "fr": "acheter / achat",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "chra : « ch » de « chat », le r roulé.",
     "audio": "audio/souk-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chra khobz w 7lib",
+      "arabe": "شرا خبز و حليب",
+      "fr": "Il a acheté du pain et du lait",
+      "audio": "audio/souk-019-ex.mp3"
     }
   },
   {
@@ -310,13 +310,13 @@
     "fr": "vendre",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ba3 : le 3 serré à la fin.",
     "audio": "audio/souk-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ba3 ttomobil dyalo",
+      "arabe": "باع الطوموبيل ديالو",
+      "fr": "Il a vendu sa voiture",
+      "audio": "audio/souk-020-ex.mp3"
     }
   },
   {
@@ -326,13 +326,13 @@
     "fr": "payer",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "khel-les : raclement (kh), le « l » doublé.",
     "audio": "audio/souk-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khelles l7sab w mcha",
+      "arabe": "خلص الحساب و مشى",
+      "fr": "Il a payé l'addition et il est parti",
+      "audio": "audio/souk-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "prix",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "tmen : « tmen » d'un trait.",
     "audio": "audio/souk-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tmen ghali chwiya",
+      "arabe": "التمن غالي شوية",
+      "fr": "Le prix est un peu cher",
+      "audio": "audio/souk-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "monnaie",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "srf : un « s » épais, « srf » sans voyelle.",
     "audio": "audio/souk-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma 3ndich ssrf",
+      "arabe": "ما عنديش الصرف",
+      "fr": "Je n'ai pas de monnaie",
+      "audio": "audio/souk-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "billet de banque",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "war-9a d flous : le 9 tiré du fond de la gorge.",
     "audio": "audio/souk-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3tani war9a d mya derhem",
+      "arabe": "عطاني ورقة د مية درهم",
+      "fr": "Il m'a donné un billet de cent dirhams",
+      "audio": "audio/souk-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "pièce (monnaie)",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9et-3a d flous : 9 du fond de la gorge, 3 serré.",
     "audio": "audio/souk-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l9it 9et3a d flous f l2ard",
+      "arabe": "لقيت قطعة د الفلوس ف الأرض",
+      "fr": "J'ai trouvé une pièce par terre",
+      "audio": "audio/souk-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "euro",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "o-ro : comme « euro ».",
     "audio": "audio/souk-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ch7al l2oro lyom?",
+      "arabe": "شحال الأورو اليوم؟",
+      "fr": "Combien vaut l'euro aujourd'hui ?",
+      "audio": "audio/souk-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "dollar",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "do-lar : comme « dollar ».",
     "audio": "audio/souk-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma kan9blouch ddolar",
+      "arabe": "ما كنقبلوش الدولار",
+      "fr": "On n'accepte pas le dollar",
+      "audio": "audio/souk-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "centime",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sen-tim : comme « centime ».",
     "audio": "audio/souk-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khamsin sentim ma tchri walou",
+      "arabe": "خمسين سنتيم ما تشري والو",
+      "fr": "Cinquante centimes n'achètent rien",
+      "audio": "audio/souk-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "budget",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mi-za-ni-ya : l'accent sur « ni ».",
     "audio": "audio/souk-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmizaniya dyali sghira",
+      "arabe": "الميزانية ديالي صغيرة",
+      "fr": "Mon budget est petit",
+      "audio": "audio/souk-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "facture",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "fa-tou-ra : comme « facture ».",
     "audio": "audio/souk-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lfatoura d dow ghalya",
+      "arabe": "الفاتورة د الضو غالية",
+      "fr": "La facture d'électricité est chère",
+      "audio": "audio/souk-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "reçu",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "re-çu : comme le français « reçu ».",
     "audio": "audio/souk-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3tini reçu 3afak",
+      "arabe": "عطيني روسي عافاك",
+      "fr": "Donne-moi un reçu, s'il te plaît",
+      "audio": "audio/souk-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "ticket de caisse",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ti-ki d caisse : comme en français.",
     "audio": "audio/souk-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khelli tiki d caisse m3ak",
+      "arabe": "خلي تيكي د الكيس معاك",
+      "fr": "Garde le ticket de caisse avec toi",
+      "audio": "audio/souk-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "addition (restaurant)",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l7-sab : souffle chaud (7) au début.",
     "audio": "audio/souk-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jib lina l7sab 3afak",
+      "arabe": "جيب لينا الحساب عافاك",
+      "fr": "Apporte-nous l'addition, s'il te plaît",
+      "audio": "audio/souk-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "réduction",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "takh-fid : raclement (kh) au milieu.",
     "audio": "audio/souk-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayn takhfid f had lma7al",
+      "arabe": "كاين تخفيض ف هاد المحل",
+      "fr": "Il y a une réduction dans ce magasin",
+      "audio": "audio/souk-034-ex.mp3"
     }
   },
   {
@@ -550,13 +550,13 @@
     "fr": "solde (promotion)",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "sold : comme « solde ».",
     "audio": "audio/souk-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ssold bda lyom",
+      "arabe": "الصولد بدا اليوم",
+      "fr": "Les soldes ont commencé aujourd'hui",
+      "audio": "audio/souk-035-ex.mp3"
     }
   },
   {
@@ -566,13 +566,13 @@
     "fr": "promotion",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "pro-mo-syon : comme « promotion ».",
     "audio": "audio/souk-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had lmontouj f promotion",
+      "arabe": "هاد المنتوج ف بروموسيون",
+      "fr": "Ce produit est en promotion",
+      "audio": "audio/souk-036-ex.mp3"
     }
   },
   {
@@ -582,13 +582,13 @@
     "fr": "gratuit",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "fa-bor : comme « faveur ».",
     "audio": "audio/souk-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddkhoul fabor",
+      "arabe": "الدخول فابور",
+      "fr": "L'entrée est gratuite",
+      "audio": "audio/souk-037-ex.mp3"
     }
   },
   {
@@ -598,13 +598,13 @@
     "fr": "qualité",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "jou-da : comme « djouda ».",
     "audio": "audio/souk-038.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ljouda mzyana bzaf",
+      "arabe": "الجودة مزيانة بزاف",
+      "fr": "La qualité est très bonne",
+      "audio": "audio/souk-038-ex.mp3"
     }
   },
   {
@@ -614,13 +614,13 @@
     "fr": "quantité",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "kmi-ya : l'accent sur « mi ».",
     "audio": "audio/souk-039.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lkmiya kbira bzaf",
+      "arabe": "الكمية كبيرة بزاف",
+      "fr": "La quantité est trop grande",
+      "audio": "audio/souk-039-ex.mp3"
     }
   },
   {
@@ -630,13 +630,13 @@
     "fr": "taille (article)",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9yas : le 9 tiré du fond de la gorge.",
     "audio": "audio/souk-040.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ch7al l9yas dyalek?",
+      "arabe": "شحال القياس ديالك؟",
+      "fr": "Quelle est ta taille ?",
+      "audio": "audio/souk-040-ex.mp3"
     }
   },
   {
@@ -646,13 +646,13 @@
     "fr": "marque",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mar-ka : comme « marque ».",
     "audio": "audio/souk-041.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chmen marka hadi?",
+      "arabe": "شمن ماركة هادي؟",
+      "fr": "C'est quelle marque ?",
+      "audio": "audio/souk-041-ex.mp3"
     }
   },
   {
@@ -662,13 +662,13 @@
     "fr": "modèle",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mo-del : comme « modèle ».",
     "audio": "audio/souk-042.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit had lmodel",
+      "arabe": "بغيت هاد الموديل",
+      "fr": "Je veux ce modèle",
+      "audio": "audio/souk-042-ex.mp3"
     }
   },
   {
@@ -678,13 +678,13 @@
     "fr": "original",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "as-li : l'accent sur « as ».",
     "audio": "audio/souk-043.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had ssak asli",
+      "arabe": "هاد الصاك أصلي",
+      "fr": "Ce sac est original",
+      "audio": "audio/souk-043-ex.mp3"
     }
   },
   {
@@ -694,13 +694,13 @@
     "fr": "copie",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ta9-lid : le 9 tiré du fond de la gorge.",
     "audio": "audio/souk-044.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hada ta9lid, machi asli",
+      "arabe": "هادا تقليد، ماشي أصلي",
+      "fr": "C'est une copie, pas l'original",
+      "audio": "audio/souk-044-ex.mp3"
     }
   },
   {
@@ -710,13 +710,13 @@
     "fr": "neuf / nouveau",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "jdid : comme « djdid ».",
     "audio": "audio/souk-045.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrit telefon jdid",
+      "arabe": "شريت تيليفون جديد",
+      "fr": "J'ai acheté un nouveau téléphone",
+      "audio": "audio/souk-045-ex.mp3"
     }
   },
   {
@@ -726,13 +726,13 @@
     "fr": "d'occasion",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mos-ta3-mel : le 3 serré au milieu.",
     "audio": "audio/souk-046.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrit tomobil mosta3mla",
+      "arabe": "شريت طوموبيل مستعملة",
+      "fr": "J'ai acheté une voiture d'occasion",
+      "audio": "audio/souk-046-ex.mp3"
     }
   },
   {
@@ -742,13 +742,13 @@
     "fr": "ouvert (magasin) / ouvert",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ma7-loul : souffle chaud (7) au milieu.",
     "audio": "audio/souk-047.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7anout ma7loula 7tta l3achra",
+      "arabe": "الحانوت محلولة حتى العشرة",
+      "fr": "La boutique est ouverte jusqu'à dix heures",
+      "audio": "audio/souk-047-ex.mp3"
     }
   },
   {
@@ -758,13 +758,13 @@
     "fr": "fermé (magasin) / fermé",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ms-doud : « msdoud » en deux syllabes.",
     "audio": "audio/souk-048.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbank msdouda nhar l7ed",
+      "arabe": "البانك مسدودة نهار الحد",
+      "fr": "La banque est fermée le dimanche",
+      "audio": "audio/souk-048-ex.mp3"
     }
   },
   {
@@ -774,13 +774,13 @@
     "fr": "commande",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ta-lab : comme « talab ».",
     "audio": "audio/souk-049.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddert talab f l2internet",
+      "arabe": "درت طلب ف الأنترنيت",
+      "fr": "J'ai passé une commande sur internet",
+      "audio": "audio/souk-049-ex.mp3"
     }
   },
   {
@@ -790,13 +790,13 @@
     "fr": "livraison",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "taw-sil : l'accent sur « sil ».",
     "audio": "audio/souk-050.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttawsil fabor",
+      "arabe": "التوصيل فابور",
+      "fr": "La livraison est gratuite",
+      "audio": "audio/souk-050-ex.mp3"
     }
   },
   {
@@ -806,13 +806,13 @@
     "fr": "retour (article)",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "rje3 s-sel-3a : le 3 serré deux fois.",
     "audio": "audio/souk-051.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit nrje3 ssel3a",
+      "arabe": "بغيت نرجع السلعة",
+      "fr": "Je veux rendre l'article",
+      "audio": "audio/souk-051-ex.mp3"
     }
   },
   {
@@ -822,13 +822,13 @@
     "fr": "garantie",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "dman : un « d » épais.",
     "audio": "audio/souk-052.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayn dman dyal 3am",
+      "arabe": "كاين ضمان ديال عام",
+      "fr": "Il y a une garantie d'un an",
+      "audio": "audio/souk-052-ex.mp3"
     }
   },
   {
@@ -838,13 +838,13 @@
     "fr": "produit",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mon-touj : comme « montoudj ».",
     "audio": "audio/souk-053.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had lmontouj mghribi",
+      "arabe": "هاد المنتوج مغربي",
+      "fr": "Ce produit est marocain",
+      "audio": "audio/souk-053-ex.mp3"
     }
   },
   {
@@ -854,13 +854,13 @@
     "fr": "client",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "zbon : comme « zboun ».",
     "audio": "audio/souk-054.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "zzbon dima 3ndo l7e9",
+      "arabe": "الزبون ديما عندو الحق",
+      "fr": "Le client a toujours raison",
+      "audio": "audio/souk-054-ex.mp3"
     }
   },
   {
@@ -870,13 +870,13 @@
     "fr": "vendeur",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "bey-ya3 : le « y » doublé, le 3 serré à la fin.",
     "audio": "audio/souk-055.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbeyya3 driyef m3aya",
+      "arabe": "البياع ضريف معايا",
+      "fr": "Le vendeur est gentil avec moi",
+      "audio": "audio/souk-055-ex.mp3"
     }
   },
   {
@@ -886,13 +886,13 @@
     "fr": "caisse",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "caisse : comme en français.",
     "audio": "audio/souk-056.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khelles f caisse",
+      "arabe": "خلص ف الكيس",
+      "fr": "Paie à la caisse",
+      "audio": "audio/souk-056-ex.mp3"
     }
   },
   {
@@ -902,13 +902,13 @@
     "fr": "panier",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "9of-fa : le 9 du fond de la gorge, le « f » doublé.",
     "audio": "audio/souk-057.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lwalida mchat l ssou9 b l9offa",
+      "arabe": "الوالدة مشات ل السوق ب القفة",
+      "fr": "Ma mère est allée au souk avec le panier",
+      "audio": "audio/souk-057-ex.mp3"
     }
   },
   {
@@ -918,13 +918,13 @@
     "fr": "sac plastique",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "mi-ka : l'accent sur « mi ».",
     "audio": "audio/souk-058.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma bghitch mika, 3ndi ssak",
+      "arabe": "ما بغيتش ميكة، عندي الصاك",
+      "fr": "Je ne veux pas de sac plastique, j'ai un sac",
+      "audio": "audio/souk-058-ex.mp3"
     }
   },
   {
@@ -934,13 +934,13 @@
     "fr": "peser",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "wzen : « w » accroché au « z ».",
     "audio": "audio/souk-059.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wzen lia kilo d lbanan",
+      "arabe": "وزن ليا كيلو د البنان",
+      "fr": "Pèse-moi un kilo de bananes",
+      "audio": "audio/souk-059-ex.mp3"
     }
   },
   {
@@ -950,13 +950,13 @@
     "fr": "poids",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "l-wzen : comme « wzen ».",
     "audio": "audio/souk-060.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ch7al lwzen dyal lvaliza?",
+      "arabe": "شحال الوزن ديال الفاليزة؟",
+      "fr": "Combien pèse la valise ?",
+      "audio": "audio/souk-060-ex.mp3"
     }
   },
   {
@@ -966,13 +966,13 @@
     "fr": "un kilo",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "ki-lo : comme en français.",
     "audio": "audio/souk-061.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit kilo d lmatecha",
+      "arabe": "بغيت كيلو د المطيشة",
+      "fr": "Je veux un kilo de tomates",
+      "audio": "audio/souk-061-ex.mp3"
     }
   },
   {
@@ -982,13 +982,13 @@
     "fr": "un demi-kilo",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "noss ki-lo : « noss » avec un « s » épais.",
     "audio": "audio/souk-062.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3tini noss kilo d l3nab",
+      "arabe": "عطيني نص كيلو د العنب",
+      "fr": "Donne-moi un demi-kilo de raisin",
+      "audio": "audio/souk-062-ex.mp3"
     }
   },
   {
@@ -998,13 +998,13 @@
     "fr": "un litre",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "li-ter : comme « litre ».",
     "audio": "audio/souk-063.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrit liter d l7lib",
+      "arabe": "شريت ليتر د الحليب",
+      "fr": "J'ai acheté un litre de lait",
+      "audio": "audio/souk-063-ex.mp3"
     }
   },
   {
@@ -1014,13 +1014,13 @@
     "fr": "un demi-litre",
     "theme": "souk",
     "niveau": 2,
-    "prononciation": "",
+    "prononciation": "noss li-ter : comme « noss » et « liter ».",
     "audio": "audio/souk-064.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit noss liter d zzit",
+      "arabe": "بغيت نص ليتر د الزيت",
+      "fr": "Je veux un demi-litre d'huile",
+      "audio": "audio/souk-064-ex.mp3"
     }
   },
   {
@@ -1030,13 +1030,13 @@
     "fr": "je cherche un magasin",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "kan-9el-leb 3la 7a-nout : 9 du fond de la gorge, 3 serré, 7 soufflé.",
     "audio": "audio/souk-065.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kan9elleb 3la 7anout d lmlabes",
+      "arabe": "كنقلب على حانوت د الملابس",
+      "fr": "Je cherche une boutique de vêtements",
+      "audio": "audio/souk-065-ex.mp3"
     }
   },
   {
@@ -1046,13 +1046,13 @@
     "fr": "combien coûte cette robe ?",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bch7al ha-di r-rou-ba : « ch » puis souffle chaud (7).",
     "audio": "audio/souk-066.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bch7al hadi rrouba l7amra?",
+      "arabe": "بشحال هادي الروبة الحمرا؟",
+      "fr": "Combien coûte cette robe rouge ?",
+      "audio": "audio/souk-066-ex.mp3"
     }
   },
   {
@@ -1062,13 +1062,13 @@
     "fr": "c'est trop cher",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "gha-li bzaf : « gh » grasseyé.",
     "audio": "audio/souk-067.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "la, hadchi ghali bzaf!",
+      "arabe": "لا، هادشي غالي بزاف!",
+      "fr": "Non, c'est trop cher !",
+      "audio": "audio/souk-067-ex.mp3"
     }
   },
   {
@@ -1078,13 +1078,13 @@
     "fr": "baisse un peu le prix",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "n9es chwi-ya f t-tmen : 9 du fond de la gorge, « ch » de « chat ».",
     "audio": "audio/souk-068.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3afak, n9es chwiya f ttmen",
+      "arabe": "عافاك، نقص شوية ف التمن",
+      "fr": "S'il te plaît, baisse un peu le prix",
+      "audio": "audio/souk-068-ex.mp3"
     }
   },
   {
@@ -1094,13 +1094,13 @@
     "fr": "quel est ton dernier prix ?",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ch7al a-kher tmen : « ch » et 7, puis raclement (kh).",
     "audio": "audio/souk-069.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ch7al akher tmen 3la had zzerbiya?",
+      "arabe": "شحال آخر تمن على هاد الزربية؟",
+      "fr": "Quel est ton dernier prix pour ce tapis ?",
+      "audio": "audio/souk-069-ex.mp3"
     }
   },
   {
@@ -1110,13 +1110,13 @@
     "fr": "je n'ai pas assez d'argent",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma 3ndich flous ka-fyin : gorge serrée (3), « ch » de « chat ».",
     "audio": "audio/souk-070.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sme7 lia, ma 3ndich flous kafyin",
+      "arabe": "سمح ليا، ما عنديش فلوس كافيين",
+      "fr": "Pardon, je n'ai pas assez d'argent",
+      "audio": "audio/souk-070-ex.mp3"
     }
   },
   {
@@ -1126,13 +1126,13 @@
     "fr": "je prends ça",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "gha-di na-khod ha-da : « gh » grasseyé, raclement (kh).",
     "audio": "audio/souk-071.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mzyan, ghadi nakhod hada",
+      "arabe": "مزيان، غادي ناخد هادا",
+      "fr": "Bien, je prends ça",
+      "audio": "audio/souk-071-ex.mp3"
     }
   },
   {
@@ -1142,13 +1142,13 @@
     "fr": "je ne prends pas ça",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ma gha-dich na-khod ha-da : « gh », « ch » et « kh ».",
     "audio": "audio/souk-072.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "la chokran, ma ghadich nakhod hada",
+      "arabe": "لا شكرا، ما غاديش ناخد هادا",
+      "fr": "Non merci, je ne prends pas ça",
+      "audio": "audio/souk-072-ex.mp3"
     }
   },
   {
@@ -1158,13 +1158,13 @@
     "fr": "je veux regarder seulement / je veux seulement regarder",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bghit ghir nchouf : deux « gh » grasseyés, « ch » de « chat ».",
     "audio": "audio/souk-073.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma tkhafch, bghit ghir nchouf",
+      "arabe": "ما تخافش، بغيت غير نشوف",
+      "fr": "Ne t'inquiète pas, je veux seulement regarder",
+      "audio": "audio/souk-073-ex.mp3"
     }
   },
   {
@@ -1174,13 +1174,13 @@
     "fr": "je voudrais une autre taille",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bghit 9yas a-khor : 9 du fond de la gorge, raclement (kh).",
     "audio": "audio/souk-074.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had ssebbat sghir, bghit 9yas akhor",
+      "arabe": "هاد الصباط صغير، بغيت قياس اخور",
+      "fr": "Ces chaussures sont petites, je voudrais une autre taille",
+      "audio": "audio/souk-074-ex.mp3"
     }
   },
   {
@@ -1190,13 +1190,13 @@
     "fr": "avez-vous plus grand ?",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wach 3ndek kber men ha-da : gorge serrée (3).",
     "audio": "audio/souk-075.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach 3ndek kber men hada f lk7el?",
+      "arabe": "واش عندك كبر من هادا ف الكحل؟",
+      "fr": "Vous avez plus grand en noir ?",
+      "audio": "audio/souk-075-ex.mp3"
     }
   },
   {
@@ -1206,13 +1206,13 @@
     "fr": "avez-vous plus petit ?",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wach 3ndek sgher men ha-da : gorge serrée (3).",
     "audio": "audio/souk-076.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had lkebbout kbir, wach 3ndek sgher men hada?",
+      "arabe": "هاد الكبوط كبير، واش عندك صغر من هادا؟",
+      "fr": "Ce manteau est grand, vous avez plus petit ?",
+      "audio": "audio/souk-076-ex.mp3"
     }
   },
   {
@@ -1222,13 +1222,13 @@
     "fr": "vous avez une autre couleur ?",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wach 3ndek loun a-khor : gorge serrée (3), raclement (kh).",
     "audio": "audio/souk-077.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "zwin, walakin wach 3ndek loun akhor?",
+      "arabe": "زوين، ولكن واش عندك لون اخور؟",
+      "fr": "C'est joli, mais vous avez une autre couleur ?",
+      "audio": "audio/souk-077-ex.mp3"
     }
   },
   {
@@ -1238,13 +1238,13 @@
     "fr": "je peux essayer ?",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "n9-der n-jer-reb : 9 du fond de la gorge.",
     "audio": "audio/souk-078.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "n9der njerreb had sserwal?",
+      "arabe": "نقدر نجرب هاد السروال؟",
+      "fr": "Je peux essayer ce pantalon ?",
+      "audio": "audio/souk-078-ex.mp3"
     }
   },
   {
@@ -1254,13 +1254,13 @@
     "fr": "où sont les cabines d'essayage ?",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "fin kay-nin ka-bi-nat dyal l'es-sa-yaj : comme en français pour « l'essayage ».",
     "audio": "audio/souk-079.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sme7 lia, fin kaynin kabinat dyal l'essayage?",
+      "arabe": "سمح ليا، فين كاينين كابينات ديال ليساياج؟",
+      "fr": "Pardon, où sont les cabines d'essayage ?",
+      "audio": "audio/souk-079-ex.mp3"
     }
   },
   {
@@ -1270,13 +1270,13 @@
     "fr": "c'est de bonne qualité",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "had-chi jou-da mzya-na : « ch » de « chat ».",
     "audio": "audio/souk-080.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chri men 3ndo, hadchi jouda mzyana",
+      "arabe": "شري من عندو، هادشي جودة مزيانة",
+      "fr": "Achète chez lui, c'est de bonne qualité",
+      "audio": "audio/souk-080-ex.mp3"
     }
   },
   {
@@ -1286,13 +1286,13 @@
     "fr": "ce n'est pas original",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ha-da ma-chi as-li : « ch » de « chat ».",
     "audio": "audio/souk-081.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma tchrich, hada machi asli",
+      "arabe": "ما تشريش، هادا ماشي أصلي",
+      "fr": "N'achète pas, ce n'est pas original",
+      "audio": "audio/souk-081-ex.mp3"
     }
   },
   {
@@ -1302,13 +1302,13 @@
     "fr": "c'est neuf ?",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wach ha-da jdid : « ch » de « chat ».",
     "audio": "audio/souk-082.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach hada jdid wella mosta3mel?",
+      "arabe": "واش هادا جديد ولا مستعمل؟",
+      "fr": "C'est neuf ou d'occasion ?",
+      "audio": "audio/souk-082-ex.mp3"
     }
   },
   {
@@ -1318,13 +1318,13 @@
     "fr": "c'est d'occasion ?",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wach ha-da mos-ta3-mel : le 3 serré.",
     "audio": "audio/souk-083.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach hada mosta3mel? ma ban 3lih walou",
+      "arabe": "واش هادا مستعمل؟ ما بان عليه والو",
+      "fr": "C'est d'occasion ? Ça ne se voit pas du tout",
+      "audio": "audio/souk-083-ex.mp3"
     }
   },
   {
@@ -1334,13 +1334,13 @@
     "fr": "vous avez une garantie ?",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wach kayn dman : un « d » épais dans « dman ».",
     "audio": "audio/souk-084.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach kayn dman 3la had ttelfaza?",
+      "arabe": "واش كاين ضمان على هاد التلفازة؟",
+      "fr": "Il y a une garantie sur cette télé ?",
+      "audio": "audio/souk-084-ex.mp3"
     }
   },
   {
@@ -1350,13 +1350,13 @@
     "fr": "je veux un reçu",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bghit re-çu : « gh » grasseyé.",
     "audio": "audio/souk-085.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit reçu bach nrje3 ssel3a",
+      "arabe": "بغيت روسي باش نرجع السلعة",
+      "fr": "Je veux un reçu pour pouvoir rendre l'article",
+      "audio": "audio/souk-085-ex.mp3"
     }
   },
   {
@@ -1366,13 +1366,13 @@
     "fr": "je veux la facture",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bghit l-fa-tou-ra : « gh » grasseyé.",
     "audio": "audio/souk-086.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit lfatoura 3la smiti",
+      "arabe": "بغيت الفاتورة على سميتي",
+      "fr": "Je veux la facture à mon nom",
+      "audio": "audio/souk-086-ex.mp3"
     }
   },
   {
@@ -1382,13 +1382,13 @@
     "fr": "je peux rendre cet article ?",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "n9der nrje3 had s-sel-3a : 9 du fond de la gorge, deux 3 serrés.",
     "audio": "audio/souk-087.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "n9der nrje3 had ssel3a ila ma 3jbatnich?",
+      "arabe": "نقدر نرجع هاد السلعة إلا ما عجباتنيش؟",
+      "fr": "Je peux rendre l'article s'il ne me plaît pas ?",
+      "audio": "audio/souk-087-ex.mp3"
     }
   },
   {
@@ -1398,13 +1398,13 @@
     "fr": "je vais réfléchir",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "gha-di nfek-ker : « gh » grasseyé, le « k » doublé.",
     "audio": "audio/souk-088.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "zwin, walakin ghadi nfekker",
+      "arabe": "زوين، ولكن غادي نفكر",
+      "fr": "C'est beau, mais je vais réfléchir",
+      "audio": "audio/souk-088-ex.mp3"
     }
   },
   {
@@ -1414,13 +1414,13 @@
     "fr": "je reviens plus tard",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "gha-di nrje3 men b3d : « gh », puis deux 3 serrés.",
     "audio": "audio/souk-089.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghadi nrje3 men b3d m3a mrati",
+      "arabe": "غادي نرجع من بعد مع مراتي",
+      "fr": "Je reviens plus tard avec ma femme",
+      "audio": "audio/souk-089-ex.mp3"
     }
   },
   {
@@ -1430,13 +1430,13 @@
     "fr": "c'est le prix final ?",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ha-da ho-wa a-kher tmen : raclement (kh).",
     "audio": "audio/souk-090.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hada howa akher tmen? safi, nakhdo",
+      "arabe": "هادا هو آخر تمن؟ صافي، ناخدو",
+      "fr": "C'est le prix final ? D'accord, je le prends",
+      "audio": "audio/souk-090-ex.mp3"
     }
   },
   {
@@ -1446,13 +1446,13 @@
     "fr": "donnez-moi un kilo",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3ti-ni ki-lo : le 3 serré au début.",
     "audio": "audio/souk-091.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3tini kilo d lbtata",
+      "arabe": "عطيني كيلو د البطاطا",
+      "fr": "Donnez-moi un kilo de pommes de terre",
+      "audio": "audio/souk-091-ex.mp3"
     }
   },
   {
@@ -1462,13 +1462,13 @@
     "fr": "donnez-moi un demi-kilo",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3ti-ni noss ki-lo : le 3 serré au début.",
     "audio": "audio/souk-092.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3tini noss kilo d lle7m",
+      "arabe": "عطيني نص كيلو د اللحم",
+      "fr": "Donnez-moi un demi-kilo de viande",
+      "audio": "audio/souk-092-ex.mp3"
     }
   },
   {
@@ -1478,13 +1478,13 @@
     "fr": "je veux deux bouteilles",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bghit jouj 9ra-3i : 9 du fond de la gorge, 3 serré.",
     "audio": "audio/souk-093.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit jouj 9ra3i d lma",
+      "arabe": "بغيت جوج قراعي د الما",
+      "fr": "Je veux deux bouteilles d'eau",
+      "audio": "audio/souk-093-ex.mp3"
     }
   },
   {
@@ -1494,13 +1494,13 @@
     "fr": "avez-vous un sac ?",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "wach 3ndek sac : comme « sac » en français.",
     "audio": "audio/souk-094.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach 3ndek sac kbir?",
+      "arabe": "واش عندك صاك كبير؟",
+      "fr": "Vous avez un grand sac ?",
+      "audio": "audio/souk-094-ex.mp3"
     }
   },
   {
@@ -1510,13 +1510,13 @@
     "fr": "je paie par carte",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "gha-di nkhel-les b l-kart : « gh » et raclement (kh).",
     "audio": "audio/souk-095.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghadi nkhelles b lkart, wakha?",
+      "arabe": "غادي نخلص بالكارط، واخا؟",
+      "fr": "Je paie par carte, d'accord ?",
+      "audio": "audio/souk-095-ex.mp3"
     }
   },
   {
@@ -1526,13 +1526,13 @@
     "fr": "je paie en liquide",
     "theme": "souk",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "gha-di nkhel-les b flous : « gh » et raclement (kh).",
     "audio": "audio/souk-096.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma kaynach lkart, ghadi nkhelles b flous",
+      "arabe": "ما كايناش الكارط، غادي نخلص بالفلوس",
+      "fr": "Pas de carte, je paie en liquide",
+      "audio": "audio/souk-096-ex.mp3"
     }
   }
 ]

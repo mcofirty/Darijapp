@@ -6,13 +6,13 @@
     "fr": "corps",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "jsem : comme « djsem », d'un trait.",
     "audio": "audio/corps-001.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lsport mzyan l ljsem",
+      "arabe": "السبور مزيان ل الجسم",
+      "fr": "Le sport est bon pour le corps",
+      "audio": "audio/corps-001-ex.mp3"
     }
   },
   {
@@ -22,13 +22,13 @@
     "fr": "tête",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ras : le r roulé.",
     "audio": "audio/corps-002.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayderni rassi",
+      "arabe": "كيضرني راسي",
+      "fr": "J'ai mal à la tête",
+      "audio": "audio/corps-002-ex.mp3"
     }
   },
   {
@@ -38,13 +38,13 @@
     "fr": "cheveux",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ch3er : « ch » de « chat », puis 3 serré.",
     "audio": "audio/corps-003.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ch3erha twil w ke7el",
+      "arabe": "شعرها طويل و كحل",
+      "fr": "Ses cheveux sont longs et noirs",
+      "audio": "audio/corps-003-ex.mp3"
     }
   },
   {
@@ -54,13 +54,13 @@
     "fr": "visage",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "wejh : « h » expiré à la fin.",
     "audio": "audio/corps-004.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghsel wejhek b lma bared",
+      "arabe": "غسل وجهك بالما بارد",
+      "fr": "Lave-toi le visage à l'eau froide",
+      "audio": "audio/corps-004-ex.mp3"
     }
   },
   {
@@ -70,13 +70,13 @@
     "fr": "front",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "jeb-ha : « h » expiré.",
     "audio": "audio/corps-005.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndo sskhana f jebhto",
+      "arabe": "عندو السخانة ف جبهتو",
+      "fr": "Il a de la fièvre au front",
+      "audio": "audio/corps-005-ex.mp3"
     }
   },
   {
@@ -86,13 +86,13 @@
     "fr": "œil / source (d'eau)",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3in : le 3 serré au début.",
     "audio": "audio/corps-006.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "dekhlat chi 7aja f 3ini",
+      "arabe": "دخلات شي حاجة ف عيني",
+      "fr": "Quelque chose est entré dans mon œil",
+      "audio": "audio/corps-006-ex.mp3"
     }
   },
   {
@@ -102,13 +102,13 @@
     "fr": "yeux",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3i-nin : le 3 serré au début.",
     "audio": "audio/corps-007.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3iniha khedrin",
+      "arabe": "عينيها خضرين",
+      "fr": "Ses yeux sont verts",
+      "audio": "audio/corps-007-ex.mp3"
     }
   },
   {
@@ -118,13 +118,13 @@
     "fr": "sourcil",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "7a-jeb : souffle chaud (7) au début.",
     "audio": "audio/corps-008.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ajbo ghlid",
+      "arabe": "حاجبو غليظ",
+      "fr": "Il a les sourcils épais",
+      "audio": "audio/corps-008-ex.mp3"
     }
   },
   {
@@ -134,13 +134,13 @@
     "fr": "cil",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "rmech : « ch » de « chat » à la fin.",
     "audio": "audio/corps-009.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tti7 lia rmech f 3ini",
+      "arabe": "طاح ليا رمش ف عيني",
+      "fr": "Un cil m'est tombé dans l'œil",
+      "audio": "audio/corps-009-ex.mp3"
     }
   },
   {
@@ -150,13 +150,13 @@
     "fr": "oreille",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "wedn : « wedn » d'un trait.",
     "audio": "audio/corps-010.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayderni wedni",
+      "arabe": "كيضرني ودني",
+      "fr": "J'ai mal à l'oreille",
+      "audio": "audio/corps-010-ex.mp3"
     }
   },
   {
@@ -166,13 +166,13 @@
     "fr": "nez",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "nif : comme « nif ».",
     "audio": "audio/corps-011.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nifo 7mer men lberd",
+      "arabe": "نيفو حمر من البرد",
+      "fr": "Son nez est rouge à cause du froid",
+      "audio": "audio/corps-011-ex.mp3"
     }
   },
   {
@@ -182,13 +182,13 @@
     "fr": "bouche",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "fomm : le « m » doublé.",
     "audio": "audio/corps-012.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7el fommek 3afak",
+      "arabe": "حل فمك عافاك",
+      "fr": "Ouvre la bouche, s'il te plaît",
+      "audio": "audio/corps-012-ex.mp3"
     }
   },
   {
@@ -198,13 +198,13 @@
     "fr": "lèvre",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "cheffa : « ch » de « chat », le « f » doublé.",
     "audio": "audio/corps-013.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "cheffti nachfa",
+      "arabe": "شفتي ناشفة",
+      "fr": "Ma lèvre est sèche",
+      "audio": "audio/corps-013-ex.mp3"
     }
   },
   {
@@ -214,13 +214,13 @@
     "fr": "langue (organe)",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "lsan : l'accent sur « san ».",
     "audio": "audio/corps-014.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ra9t lsani b atay",
+      "arabe": "حرقت لساني ب أتاي",
+      "fr": "Je me suis brûlé la langue avec le thé",
+      "audio": "audio/corps-014-ex.mp3"
     }
   },
   {
@@ -230,13 +230,13 @@
     "fr": "dent",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ders : un « d » épais.",
     "audio": "audio/corps-015.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayderni ders",
+      "arabe": "كيضرني ضرس",
+      "fr": "J'ai mal à une dent",
+      "audio": "audio/corps-015-ex.mp3"
     }
   },
   {
@@ -246,13 +246,13 @@
     "fr": "dents",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "snan : un « s » épais.",
     "audio": "audio/corps-016.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghsel snanek 9bel n3as",
+      "arabe": "غسل سنانك قبل النعاس",
+      "fr": "Brosse-toi les dents avant de dormir",
+      "audio": "audio/corps-016-ex.mp3"
     }
   },
   {
@@ -262,13 +262,13 @@
     "fr": "joue",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "khedd : raclement (kh), le « d » doublé.",
     "audio": "audio/corps-017.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bousat khedd mamaha",
+      "arabe": "باسات خد ماماها",
+      "fr": "Elle a embrassé la joue de sa maman",
+      "audio": "audio/corps-017-ex.mp3"
     }
   },
   {
@@ -278,13 +278,13 @@
     "fr": "menton",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "d9en : le 9 du fond de la gorge.",
     "audio": "audio/corps-018.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndo l7ya f d9no",
+      "arabe": "عندو اللحية ف دقنو",
+      "fr": "Il a de la barbe au menton",
+      "audio": "audio/corps-018-ex.mp3"
     }
   },
   {
@@ -294,13 +294,13 @@
     "fr": "cou",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3on9 : 3 serré au début, 9 profond à la fin.",
     "audio": "audio/corps-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayderni 3on9i",
+      "arabe": "كيضرني عنقي",
+      "fr": "J'ai mal au cou",
+      "audio": "audio/corps-019-ex.mp3"
     }
   },
   {
@@ -310,13 +310,13 @@
     "fr": "gorge",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "7el9 : souffle chaud (7), puis 9 profond.",
     "audio": "audio/corps-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7el9i m7rou9 men lberd",
+      "arabe": "حلقي محروق من البرد",
+      "fr": "J'ai la gorge irritée à cause du froid",
+      "audio": "audio/corps-020-ex.mp3"
     }
   },
   {
@@ -326,13 +326,13 @@
     "fr": "épaule",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ktef : « ktef » d'un trait.",
     "audio": "audio/corps-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chedd lvaliza 3la ktefek",
+      "arabe": "شد الفاليزة على كتفك",
+      "fr": "Porte la valise sur ton épaule",
+      "audio": "audio/corps-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "bras",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "dra3 : le 3 serré à la fin.",
     "audio": "audio/corps-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "therres lih dra3o",
+      "arabe": "تهرس ليه دراعو",
+      "fr": "Il s'est cassé le bras",
+      "audio": "audio/corps-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "coude",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "mer-fe9 : le 9 profond à la fin.",
     "audio": "audio/corps-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "dreb merfe9o f lbab",
+      "arabe": "ضرب مرفقو ف الباب",
+      "fr": "Il s'est cogné le coude contre la porte",
+      "audio": "audio/corps-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "main",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "yed : comme « yed ».",
     "audio": "audio/corps-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghsel yeddik 9bel lmakla",
+      "arabe": "غسل يديك قبل الماكلة",
+      "fr": "Lave-toi les mains avant de manger",
+      "audio": "audio/corps-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "mains",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "yed-din : le « d » doublé.",
     "audio": "audio/corps-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "yeddiya bardin",
+      "arabe": "يديا باردين",
+      "fr": "J'ai les mains froides",
+      "audio": "audio/corps-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "doigt",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "sbe3 : un « s » épais, 3 serré.",
     "audio": "audio/corps-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jre7t sbe3i b lmos",
+      "arabe": "جرحت صبعي بالموس",
+      "fr": "Je me suis coupé le doigt avec le couteau",
+      "audio": "audio/corps-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "ongle",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "dfer : un « d » épais.",
     "audio": "audio/corps-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "9ess dfarek",
+      "arabe": "قص ضفارك",
+      "fr": "Coupe-toi les ongles",
+      "audio": "audio/corps-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "poitrine",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "sder : un « s » épais.",
     "audio": "audio/corps-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayderni sderi mlli kanteneffes",
+      "arabe": "كيضرني صدري ملي كنتنفس",
+      "fr": "J'ai mal à la poitrine quand je respire",
+      "audio": "audio/corps-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "dos",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "dher : un « d » épais, « h » expiré.",
     "audio": "audio/corps-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayderni dheri men lkhedma",
+      "arabe": "كيضرني ضهري من الخدمة",
+      "fr": "J'ai mal au dos à cause du travail",
+      "audio": "audio/corps-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "ventre",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "kerch : « ch » de « chat » à la fin.",
     "audio": "audio/corps-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kerchi kat3ewwerni",
+      "arabe": "كرشي كتعورني",
+      "fr": "J'ai mal au ventre",
+      "audio": "audio/corps-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "taille (corps)",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l-kh-ser : raclement (kh).",
     "audio": "audio/corps-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had sserwal wase3 f lkhser",
+      "arabe": "هاد السروال واسع ف الخصر",
+      "fr": "Ce pantalon est large à la taille",
+      "audio": "audio/corps-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "hanche",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "werk : le r roulé.",
     "audio": "audio/corps-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tti7 w therres werko",
+      "arabe": "طاح و تهرس وركو",
+      "fr": "Il est tombé et s'est cassé la hanche",
+      "audio": "audio/corps-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "jambe / pied",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "rjel : le r roulé.",
     "audio": "audio/corps-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mchit 3la rjli l lkhedma",
+      "arabe": "مشيت على رجلي ل الخدمة",
+      "fr": "Je suis allé au travail à pied",
+      "audio": "audio/corps-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "genou",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "rek-ba : le r roulé.",
     "audio": "audio/corps-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayderni rekbti f lberd",
+      "arabe": "كيضرني ركبتي ف البرد",
+      "fr": "J'ai mal au genou quand il fait froid",
+      "audio": "audio/corps-034-ex.mp3"
     }
   },
   {
@@ -550,13 +550,13 @@
     "fr": "orteil",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "sbe3 rjel : 3 serré, r roulé.",
     "audio": "audio/corps-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "dreb sbe3 rejli f ttabla",
+      "arabe": "ضرب صبع رجلي ف الطابلة",
+      "fr": "Je me suis cogné l'orteil contre la table",
+      "audio": "audio/corps-035-ex.mp3"
     }
   },
   {
@@ -566,13 +566,13 @@
     "fr": "talon",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l3e9b : 3 serré, puis 9 profond.",
     "audio": "audio/corps-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ssebbat kayjre7 lia l3e9b",
+      "arabe": "الصباط كيجرح ليا العقب",
+      "fr": "La chaussure me blesse le talon",
+      "audio": "audio/corps-036-ex.mp3"
     }
   },
   {
@@ -582,13 +582,13 @@
     "fr": "peau",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "jeld : comme « djeld ».",
     "audio": "audio/corps-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7ett lkrima 3la jeldek",
+      "arabe": "حط الكريمة على جلدك",
+      "fr": "Mets la crème sur ta peau",
+      "audio": "audio/corps-037-ex.mp3"
     }
   },
   {
@@ -598,13 +598,13 @@
     "fr": "os",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3dem : 3 serré, « d » épais.",
     "audio": "audio/corps-038.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lkelb kaykoul l3dem",
+      "arabe": "الكلب كياكل العضم",
+      "fr": "Le chien mange l'os",
+      "audio": "audio/corps-038-ex.mp3"
     }
   },
   {
@@ -614,13 +614,13 @@
     "fr": "muscle",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3ad-la : 3 serré, « d » épais.",
     "audio": "audio/corps-039.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndo l3adlat kbar",
+      "arabe": "عندو العضلات كبار",
+      "fr": "Il a de gros muscles",
+      "audio": "audio/corps-039-ex.mp3"
     }
   },
   {
@@ -630,13 +630,13 @@
     "fr": "sang",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "dem : comme « dem ».",
     "audio": "audio/corps-040.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tl3 lia ddem men nifi",
+      "arabe": "طلع ليا الدم من نيفي",
+      "fr": "J'ai saigné du nez",
+      "audio": "audio/corps-040-ex.mp3"
     }
   },
   {
@@ -646,13 +646,13 @@
     "fr": "cœur",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "9elb : 9 du fond de la gorge.",
     "audio": "audio/corps-041.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "9elbo kbir w driyef",
+      "arabe": "قلبو كبير و ضريف",
+      "fr": "Il a un grand cœur, il est gentil",
+      "audio": "audio/corps-041-ex.mp3"
     }
   },
   {
@@ -662,13 +662,13 @@
     "fr": "cerveau",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "mokh : raclement (kh) à la fin.",
     "audio": "audio/corps-042.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khddem mokhek chwiya",
+      "arabe": "خدم مخك شوية",
+      "fr": "Fais un peu travailler ton cerveau",
+      "audio": "audio/corps-042-ex.mp3"
     }
   },
   {
@@ -678,13 +678,13 @@
     "fr": "voix / haut-parleur",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "sout : un « s » épais.",
     "audio": "audio/corps-043.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ssout dyalha zwin",
+      "arabe": "الصوت ديالها زوين",
+      "fr": "Sa voix est belle",
+      "audio": "audio/corps-043-ex.mp3"
     }
   },
   {
@@ -694,13 +694,13 @@
     "fr": "respiration",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "tnef-fos : le « f » doublé.",
     "audio": "audio/corps-044.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tneffos mzyan w rta7",
+      "arabe": "تنفس مزيان و ارتاح",
+      "fr": "Respire bien et détends-toi",
+      "audio": "audio/corps-044-ex.mp3"
     }
   },
   {
@@ -710,13 +710,13 @@
     "fr": "barbe",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "le7-ya : souffle chaud (7) au milieu.",
     "audio": "audio/corps-045.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7le9 le7ytek",
+      "arabe": "حلق لحيتك",
+      "fr": "Rase ta barbe",
+      "audio": "audio/corps-045-ex.mp3"
     }
   },
   {
@@ -726,13 +726,13 @@
     "fr": "moustache",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "chnab : « ch » de « chat ».",
     "audio": "audio/corps-046.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jeddi 3ndo chnab byed",
+      "arabe": "جدي عندو شنب بيض",
+      "fr": "Mon grand-père a une moustache blanche",
+      "audio": "audio/corps-046-ex.mp3"
     }
   },
   {
@@ -742,13 +742,13 @@
     "fr": "grand (taille) / long",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "twil : un « t » épais.",
     "audio": "audio/corps-047.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khoya twil bzaf",
+      "arabe": "خويا طويل بزاف",
+      "fr": "Mon frère est très grand",
+      "audio": "audio/corps-047-ex.mp3"
     }
   },
   {
@@ -758,13 +758,13 @@
     "fr": "petit (taille) / court",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "9sir : 9 du fond de la gorge.",
     "audio": "audio/corps-048.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had sserwal 9sir 3liya",
+      "arabe": "هاد السروال قصير عليا",
+      "fr": "Ce pantalon est trop court pour moi",
+      "audio": "audio/corps-048-ex.mp3"
     }
   },
   {
@@ -774,13 +774,13 @@
     "fr": "mince / fin",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "r9i9 : deux 9 profonds.",
     "audio": "audio/corps-049.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wlit r9i9 men ssport",
+      "arabe": "وليت رقيق من السبور",
+      "fr": "Je suis devenu mince grâce au sport",
+      "audio": "audio/corps-049-ex.mp3"
     }
   },
   {
@@ -790,13 +790,13 @@
     "fr": "gros / épais",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ghlid : « gh » grasseyé.",
     "audio": "audio/corps-050.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lkelb dyalhom ghlid bzaf",
+      "arabe": "الكلب ديالهم غليظ بزاف",
+      "fr": "Leur chien est très gros",
+      "audio": "audio/corps-050-ex.mp3"
     }
   },
   {
@@ -806,13 +806,13 @@
     "fr": "belle (femme)",
     "theme": "corps",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "zwi-na : l'accent sur « wi ».",
     "audio": "audio/corps-051.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bentek zwina bzaf",
+      "arabe": "بنتك زوينة بزاف",
+      "fr": "Ta fille est très belle",
+      "audio": "audio/corps-051-ex.mp3"
     }
   }
 ]

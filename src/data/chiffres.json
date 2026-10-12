@@ -294,13 +294,13 @@
     "fr": "zéro",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "sifr : un « s » épais, puis « ifr » d'un seul coup.",
     "audio": "audio/chiffres-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lmatch tsala sifr sifr",
+      "arabe": "الماتش تسالا صفر صفر",
+      "fr": "Le match a fini zéro à zéro",
+      "audio": "audio/chiffres-019-ex.mp3"
     }
   },
   {
@@ -310,13 +310,13 @@
     "fr": "onze",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "7-dach : souffle chaud (7) puis « dach » avec « ch » de « chat ».",
     "audio": "audio/chiffres-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndi 7dach 3am",
+      "arabe": "عندي حداش عام",
+      "fr": "J'ai onze ans",
+      "audio": "audio/chiffres-020-ex.mp3"
     }
   },
   {
@@ -326,13 +326,13 @@
     "fr": "douze",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "t-nach : « tnach » d'un trait, « ch » de « chat ».",
     "audio": "audio/chiffres-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jibli tnach d lbid",
+      "arabe": "جيبلي طناش د البيض",
+      "fr": "Apporte-moi douze œufs",
+      "audio": "audio/chiffres-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "treize",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "tlet-tach : le « t » doublé au milieu.",
     "audio": "audio/chiffres-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayn tlettach dyal ttlamid",
+      "arabe": "كاين تلطاش ديال التلاميد",
+      "fr": "Il y a treize élèves",
+      "audio": "audio/chiffres-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "quatorze",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "reb3-tach : le 3 serré au milieu.",
     "audio": "audio/chiffres-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndo reb3tach 3am",
+      "arabe": "عندو ربعطاش عام",
+      "fr": "Il a quatorze ans",
+      "audio": "audio/chiffres-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "quinze",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "khmes-tach : raclement (kh) au début, « ch » à la fin.",
     "audio": "audio/chiffres-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tsenna khmestach d d9i9a",
+      "arabe": "تسنى خمسطاش د الدقيقة",
+      "fr": "Attends quinze minutes",
+      "audio": "audio/chiffres-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "seize",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "set-tach : le « t » doublé.",
     "audio": "audio/chiffres-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lkar ja f settach",
+      "arabe": "الكار جا ف سطاش",
+      "fr": "Le car est arrivé à seize heures",
+      "audio": "audio/chiffres-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "dix-sept",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "seb3-tach : le 3 serré au milieu.",
     "audio": "audio/chiffres-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bent khti 3ndha seb3tach 3am",
+      "arabe": "بنت ختي عندها سبعطاش عام",
+      "fr": "Ma nièce a dix-sept ans",
+      "audio": "audio/chiffres-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "dix-huit",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "tmen-tach : « tmen » puis « tach ».",
     "audio": "audio/chiffres-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrit tmntach d lkoura",
+      "arabe": "شريت تمنطاش د الكورة",
+      "fr": "J'ai acheté dix-huit ballons",
+      "audio": "audio/chiffres-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "dix-neuf",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "tes3-tach : le 3 serré au milieu.",
     "audio": "audio/chiffres-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lfoto fiha tes3tach d nnas",
+      "arabe": "الفوطو فيها تسعطاش د الناس",
+      "fr": "La photo a dix-neuf personnes",
+      "audio": "audio/chiffres-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "vingt et un",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "wa-7ed w 3ch-rin : souffle chaud dans « wa7ed », gorge serrée dans « 3chrin ».",
     "audio": "audio/chiffres-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndi wa7ed w 3chrin 3am",
+      "arabe": "عندي واحد و عشرين عام",
+      "fr": "J'ai vingt et un ans",
+      "audio": "audio/chiffres-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "vingt-deux",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "jouj w 3ch-rin : gorge serrée pour le 3.",
     "audio": "audio/chiffres-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had lktab b jouj w 3chrin derhem",
+      "arabe": "هاد الكتاب ب جوج و عشرين درهم",
+      "fr": "Ce livre coûte vingt-deux dirhams",
+      "audio": "audio/chiffres-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "vingt-trois",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "tla-ta w 3ch-rin : gorge serrée pour le 3.",
     "audio": "audio/chiffres-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ja tlata w 3chrin wa7ed",
+      "arabe": "جا تلاتة و عشرين واحد",
+      "fr": "Vingt-trois personnes sont venues",
+      "audio": "audio/chiffres-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "vingt-quatre",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "reb3a w 3ch-rin : deux 3 serrés.",
     "audio": "audio/chiffres-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lyom reb3a w 3chrin f chher",
+      "arabe": "اليوم ربعة و عشرين ف الشهر",
+      "fr": "Aujourd'hui c'est le vingt-quatre du mois",
+      "audio": "audio/chiffres-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "vingt-cinq",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "khem-sa w 3ch-rin : raclement (kh), puis gorge serrée.",
     "audio": "audio/chiffres-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khellest khmsa w 3chrin derhem",
+      "arabe": "خلصت خمسة و عشرين درهم",
+      "fr": "J'ai payé vingt-cinq dirhams",
+      "audio": "audio/chiffres-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "trente",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "tla-tin : comme « tlata », avec « in ».",
     "audio": "audio/chiffres-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3ndo tlatin 3am",
+      "arabe": "عندو تلاتين عام",
+      "fr": "Il a trente ans",
+      "audio": "audio/chiffres-034-ex.mp3"
     }
   },
   {
@@ -550,13 +550,13 @@
     "fr": "quarante",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "reb3-in : le 3 serré au milieu.",
     "audio": "audio/chiffres-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbit fih reb3in metro",
+      "arabe": "البيت فيه ربعين ميترو",
+      "fr": "La chambre fait quarante mètres",
+      "audio": "audio/chiffres-035-ex.mp3"
     }
   },
   {
@@ -566,13 +566,13 @@
     "fr": "soixante",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "set-tin : le « t » doublé.",
     "audio": "audio/chiffres-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jeddi 3ndo settin 3am",
+      "arabe": "جدي عندو ستين عام",
+      "fr": "Mon grand-père a soixante ans",
+      "audio": "audio/chiffres-036-ex.mp3"
     }
   },
   {
@@ -582,13 +582,13 @@
     "fr": "soixante-dix",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "seb3-in : le 3 serré au milieu.",
     "audio": "audio/chiffres-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbe3d kaytsalaw f seb3in",
+      "arabe": "البعض كيتسالاو ف سبعين",
+      "fr": "Certains finissent à soixante-dix",
+      "audio": "audio/chiffres-037-ex.mp3"
     }
   },
   {
@@ -598,13 +598,13 @@
     "fr": "quatre-vingts",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "tma-nin : comme « tmania », avec « in ».",
     "audio": "audio/chiffres-038.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttomobil mchat b tmanin",
+      "arabe": "الطوموبيل مشات ب تمانين",
+      "fr": "La voiture roulait à quatre-vingts",
+      "audio": "audio/chiffres-038-ex.mp3"
     }
   },
   {
@@ -614,13 +614,13 @@
     "fr": "quatre-vingt-dix",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "tes3-in : le 3 serré au milieu.",
     "audio": "audio/chiffres-039.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "jeddti 3ndha tes3in 3am",
+      "arabe": "جدتي عندها تسعين عام",
+      "fr": "Ma grand-mère a quatre-vingt-dix ans",
+      "audio": "audio/chiffres-039-ex.mp3"
     }
   },
   {
@@ -630,13 +630,13 @@
     "fr": "deux cents",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "jouj myat : « myat » d'une traite.",
     "audio": "audio/chiffres-040.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "had ssebbat b jouj myat derhem",
+      "arabe": "هاد الصباط ب جوج مية درهم",
+      "fr": "Ces chaussures coûtent deux cents dirhams",
+      "audio": "audio/chiffres-040-ex.mp3"
     }
   },
   {
@@ -646,13 +646,13 @@
     "fr": "deux mille",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "al-fayn : l'accent sur « fayn ».",
     "audio": "audio/chiffres-041.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tzad f alfayn",
+      "arabe": "تزاد ف ألفين",
+      "fr": "Il est né en deux mille",
+      "audio": "audio/chiffres-041-ex.mp3"
     }
   },
   {
@@ -662,13 +662,13 @@
     "fr": "dix mille",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "3ach-ra laf : gorge serrée pour le 3.",
     "audio": "audio/chiffres-042.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttelfaza b 3chra laf derhem",
+      "arabe": "التلفازة ب عشرة آلاف درهم",
+      "fr": "La télé coûte dix mille dirhams",
+      "audio": "audio/chiffres-042-ex.mp3"
     }
   },
   {
@@ -678,13 +678,13 @@
     "fr": "un million",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "mly-on : « mlyon » en deux syllabes rapides.",
     "audio": "audio/chiffres-043.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "f lmdina kayn mlyon d nnas",
+      "arabe": "ف المدينة كاين مليون د الناس",
+      "fr": "Il y a un million d'habitants dans la ville",
+      "audio": "audio/chiffres-043-ex.mp3"
     }
   },
   {
@@ -694,13 +694,13 @@
     "fr": "premier / d'abord",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l-lew-wel : le « l » doublé au début, le « w » doublé.",
     "audio": "audio/chiffres-044.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nta llewwel f sseff",
+      "arabe": "نتا اللول ف الصف",
+      "fr": "Tu es le premier de la file",
+      "audio": "audio/chiffres-044-ex.mp3"
     }
   },
   {
@@ -710,13 +710,13 @@
     "fr": "deuxième",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "t-ta-ni : le « t » doublé au début.",
     "audio": "audio/chiffres-045.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "hada ttani lli ja",
+      "arabe": "هادا التاني اللي جا",
+      "fr": "C'est le deuxième qui est arrivé",
+      "audio": "audio/chiffres-045-ex.mp3"
     }
   },
   {
@@ -726,13 +726,13 @@
     "fr": "troisième",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "t-ta-let : le « t » doublé au début.",
     "audio": "audio/chiffres-046.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttabe9 ttalet 3afak",
+      "arabe": "الطابق التالت عافاك",
+      "fr": "Le troisième étage, s'il te plaît",
+      "audio": "audio/chiffres-046-ex.mp3"
     }
   },
   {
@@ -742,13 +742,13 @@
     "fr": "quatrième",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "r-ra-be3 : le r roulé et doublé, le 3 serré à la fin.",
     "audio": "audio/chiffres-047.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nhar rrabe3 f simana",
+      "arabe": "النهار الرابع ف السيمانة",
+      "fr": "Le quatrième jour de la semaine",
+      "audio": "audio/chiffres-047-ex.mp3"
     }
   },
   {
@@ -758,13 +758,13 @@
     "fr": "dernier",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "l-le-kher : raclement (kh) à la fin.",
     "audio": "audio/chiffres-048.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "howa llekher lli kharej",
+      "arabe": "هو اللخر اللي خارج",
+      "fr": "C'est le dernier à sortir",
+      "audio": "audio/chiffres-048-ex.mp3"
     }
   },
   {
@@ -774,13 +774,13 @@
     "fr": "la moitié",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "noss : le « s » doublé et épais.",
     "audio": "audio/chiffres-049.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kla noss lkhobza",
+      "arabe": "كلا نص الخبزة",
+      "fr": "Il a mangé la moitié du pain",
+      "audio": "audio/chiffres-049-ex.mp3"
     }
   },
   {
@@ -790,13 +790,13 @@
     "fr": "un quart",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "rbe3 : le 3 serré à la fin.",
     "audio": "audio/chiffres-050.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "rbe3 sa3a w nkemmel",
+      "arabe": "ربع ساعة و نكمل",
+      "fr": "Un quart d'heure et je termine",
+      "audio": "audio/chiffres-050-ex.mp3"
     }
   },
   {
@@ -806,13 +806,13 @@
     "fr": "un tiers",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "tolt : « tolt » d'une seule syllabe.",
     "audio": "audio/chiffres-051.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "khdit tolt lflous",
+      "arabe": "خديت تلت الفلوس",
+      "fr": "J'ai pris un tiers de l'argent",
+      "audio": "audio/chiffres-051-ex.mp3"
     }
   },
   {
@@ -822,13 +822,13 @@
     "fr": "beaucoup / trop",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "bzaf : « bzaf » d'un seul coup.",
     "audio": "audio/chiffres-052.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayn nnas bzaf f ssou9",
+      "arabe": "كاين الناس بزاف ف السوق",
+      "fr": "Il y a beaucoup de monde au souk",
+      "audio": "audio/chiffres-052-ex.mp3"
     }
   },
   {
@@ -838,13 +838,13 @@
     "fr": "très peu",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "chwi-ya bzaf : « ch » de « chat ».",
     "audio": "audio/chiffres-053.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "b9at lia chwiya bzaf d lflous",
+      "arabe": "بقات ليا شوية بزاف د الفلوس",
+      "fr": "Il me reste très peu d'argent",
+      "audio": "audio/chiffres-053-ex.mp3"
     }
   },
   {
@@ -854,13 +854,13 @@
     "fr": "assez",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ka-fi : comme en français « kafi ».",
     "audio": "audio/chiffres-054.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "safi, hadchi kafi",
+      "arabe": "صافي، هادشي كافي",
+      "fr": "C'est bon, ça suffit",
+      "audio": "audio/chiffres-054-ex.mp3"
     }
   },
   {
@@ -870,13 +870,13 @@
     "fr": "plus",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "kter : « kter » d'un trait.",
     "audio": "audio/chiffres-055.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bghit kter men had chi",
+      "arabe": "بغيت كتر من هاد الشي",
+      "fr": "J'en veux plus",
+      "audio": "audio/chiffres-055-ex.mp3"
     }
   },
   {
@@ -886,13 +886,13 @@
     "fr": "moins",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "9ell : le 9 tiré du fond de la gorge, le « l » doublé.",
     "audio": "audio/chiffres-056.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3tini 9ell men hadchi",
+      "arabe": "عطيني قل من هادشي",
+      "fr": "Donne-m'en moins",
+      "audio": "audio/chiffres-056-ex.mp3"
     }
   },
   {
@@ -902,13 +902,13 @@
     "fr": "quelques-uns",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "chi we7-din : « ch » de « chat », souffle chaud (7) dans « we7din ».",
     "audio": "audio/chiffres-057.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chi we7din ma jawch",
+      "arabe": "شي وحدين ما جاوش",
+      "fr": "Quelques-uns ne sont pas venus",
+      "audio": "audio/chiffres-057-ex.mp3"
     }
   },
   {
@@ -918,13 +918,13 @@
     "fr": "une paire / couple",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "jouj : comme « djoudj ».",
     "audio": "audio/chiffres-058.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chrit jouj d ssbabet",
+      "arabe": "شريت جوج د الصبابط",
+      "fr": "J'ai acheté une paire de chaussures",
+      "audio": "audio/chiffres-058-ex.mp3"
     }
   },
   {
@@ -934,13 +934,13 @@
     "fr": "une dizaine",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "chi 3ach-ra : « ch » de « chat », puis gorge serrée.",
     "audio": "audio/chiffres-059.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kano chi 3chra d nnas",
+      "arabe": "كانو شي عشرة د الناس",
+      "fr": "Il y avait une dizaine de personnes",
+      "audio": "audio/chiffres-059-ex.mp3"
     }
   },
   {
@@ -950,13 +950,13 @@
     "fr": "une centaine",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "chi mya : « ch » de « chat ».",
     "audio": "audio/chiffres-060.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chi mya d ttlamid f lmadrasa",
+      "arabe": "شي مية د التلاميد ف المدرسة",
+      "fr": "Une centaine d'élèves à l'école",
+      "audio": "audio/chiffres-060-ex.mp3"
     }
   },
   {
@@ -966,13 +966,13 @@
     "fr": "combien de personnes ?",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ch7al men wa-7ed : « ch » puis souffle chaud (7), deux fois.",
     "audio": "audio/chiffres-061.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ch7al men wa7ed jay lyom?",
+      "arabe": "شحال من واحد جاي اليوم؟",
+      "fr": "Combien de personnes viennent aujourd'hui ?",
+      "audio": "audio/chiffres-061-ex.mp3"
     }
   },
   {
@@ -982,13 +982,13 @@
     "fr": "une seule personne",
     "theme": "chiffres",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "wa-7ed bo7-do : deux souffles chauds (7).",
     "audio": "audio/chiffres-062.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ja wa7ed bo7do",
+      "arabe": "جا واحد بوحدو",
+      "fr": "Une seule personne est venue",
+      "audio": "audio/chiffres-062-ex.mp3"
     }
   }
 ]

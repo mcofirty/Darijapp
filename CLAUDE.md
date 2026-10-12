@@ -277,7 +277,7 @@ Jalon en cours : **3 — Prononciation** (Distingue les sons, mode écoute, puis
 - Voix : MP3 Jamal générés par l'Action « Audio » (secrets `AZURE_SPEECH_KEY` et `AZURE_SPEECH_REGION`) ; si Azure refuse (401/403), vérifier la clé, la région et le niveau F0. Tant qu'un MP3 manque, la voix de l'iPhone lit (arabe standard).
 - Score de prononciation (jalon 3) : les MP3 Jamal serviront de référence (MFCC + DTW) ; envisagé : ajouter la voix féminine Mouna (`ar-MA-MounaNeural`) et garder la meilleure des deux notes. Enregistrement et auto-évaluation à construire.
 - Le contenu a été relu et corrigé par Claude (cohérence latin/arabe, tournures), mais pas par un locuteur natif : signaler les erreurs pour corriger les JSON. L'arabe des 1 530 mots importés a été écrit par Claude d'après le latin et le français, sans relecture.
-- Mots importés : pas d'explication de prononciation ni d'exemple (la fiche montre seulement les sons 3, 7, 9, kh, gh, ch).
+- Mots importés : explication de prononciation et exemple (latin, arabe, français, MP3 `audio/<id>-ex.mp3`) écrits par Claude, en cours (1 009 sur 1 530) ; arabe et tournures à faire relire.
 - Mode écoute : vérifier sur iPhone que la lecture continue écran allumé, et si les commandes de l'écran verrouillé apparaissent.
 - Le Dictionnaire montre tous les mots, avec un ✓ sur ceux déjà vus (le cahier des charges ne prévoyait que les mots vus).
 - Sur iPhone, l'appli installée sur l'écran d'accueil a sa propre mémoire, séparée de Safari (non vérifié sur appareil) : la progression faite dans Safari ne suit pas, et un lien `#mot=…` ouvert dans Safari ajoute sans doute le mot à Safari, pas à l'appli installée. À vérifier, puis prévoir un contournement (copier le lien et l'ouvrir dans l'appli, ou export/import).

@@ -326,13 +326,13 @@
     "fr": "bonjour (salutation)",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ssa-la-mou 3li-kom : le 3 (ع) se serre au fond de la gorge, juste avant « likom ».",
     "audio": "audio/salutations-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ssalam 3likom, kidayrin?",
+      "arabe": "السلام عليكم، كيدايرين؟",
+      "fr": "Bonjour, comment allez-vous ?",
+      "audio": "audio/salutations-021-ex.mp3"
     },
     "note": "Salutation très courante"
   },
@@ -343,13 +343,13 @@
     "fr": "réponse au bonjour du matin",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "sba7 n-nor : finis « sba7 » par un souffle chaud (7), puis appuie le « n » de « nnor ».",
     "audio": "audio/salutations-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sba7 nnor a khoya!",
+      "arabe": "صباح النور أ خويا!",
+      "fr": "Bonjour à toi aussi, mon frère !",
+      "audio": "audio/salutations-022-ex.mp3"
     }
   },
   {
@@ -359,13 +359,13 @@
     "fr": "réponse au bonsoir",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "msa n-nor : « msa » d'un seul coup, puis un « n » appuyé.",
     "audio": "audio/salutations-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "msa nnor, kolchi bikhir?",
+      "arabe": "مسا النور، كلشي بخير؟",
+      "fr": "Bonsoir, tout va bien ?",
+      "audio": "audio/salutations-023-ex.mp3"
     }
   },
   {
@@ -375,13 +375,13 @@
     "fr": "bonne nuit (à une femme)",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "tsba-7i 3la khir : souffle chaud pour le 7, gorge serrée pour le 3, raclement pour le kh.",
     "audio": "audio/salutations-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tsba7i 3la khir a mama",
+      "arabe": "تصبحي على خير أ ماما",
+      "fr": "Bonne nuit, maman",
+      "audio": "audio/salutations-024-ex.mp3"
     }
   },
   {
@@ -391,13 +391,13 @@
     "fr": "à bientôt",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "7tta mn b3d : souffle chaud au début, et le 3 serré dans « b3d ».",
     "audio": "audio/salutations-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "yallah, 7tta mn b3d!",
+      "arabe": "يالله، حتى من بعد!",
+      "fr": "Allez, à bientôt !",
+      "audio": "audio/salutations-025-ex.mp3"
     }
   },
   {
@@ -407,13 +407,13 @@
     "fr": "à demain",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "7tta l-ghed-da : le gh grasseyé comme un « r » parisien.",
     "audio": "audio/salutations-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "safi, 7tta lghdda f lkhedma",
+      "arabe": "صافي، حتى لغدا ف الخدمة",
+      "fr": "D'accord, à demain au travail",
+      "audio": "audio/salutations-026-ex.mp3"
     }
   },
   {
@@ -423,13 +423,13 @@
     "fr": "bienvenue chez nous",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "mr7-ba bik 3nd-na : souffle chaud dans « mr7ba », gorge serrée dans « 3ndna ».",
     "audio": "audio/salutations-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mr7ba bik 3ndna f ddar",
+      "arabe": "مرحبا بيك عندنا ف الدار",
+      "fr": "Bienvenue chez nous à la maison",
+      "audio": "audio/salutations-027-ex.mp3"
     }
   },
   {
@@ -439,13 +439,13 @@
     "fr": "enchanté",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "mt-cher-rfin : « ch » comme dans « chat », le r roulé et doublé.",
     "audio": "audio/salutations-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mtcherrfin, ana smiti karim",
+      "arabe": "متشرفين، أنا سميتي كريم",
+      "fr": "Enchanté, je m'appelle Karim",
+      "audio": "audio/salutations-028-ex.mp3"
     }
   },
   {
@@ -455,13 +455,13 @@
     "fr": "comment ça va ?",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "la-bas : comme en français, deux « a » bien ouverts.",
     "audio": "audio/salutations-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "labas? kolchi mzyan?",
+      "arabe": "لاباس؟ كلشي مزيان؟",
+      "fr": "Ça va ? Tout va bien ?",
+      "audio": "audio/salutations-029-ex.mp3"
     }
   },
   {
@@ -471,13 +471,13 @@
     "fr": "ça va ? (à une femme)",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ki-day-ra : l'accent tombe sur « day ».",
     "audio": "audio/salutations-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kidayra a khti?",
+      "arabe": "كيدايرة أ ختي؟",
+      "fr": "Comment vas-tu, ma sœur ?",
+      "audio": "audio/salutations-030-ex.mp3"
     }
   },
   {
@@ -487,13 +487,13 @@
     "fr": "ça va bien",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "la-bas, l7am-dol-lah : le 7 est un souffle chaud, sans raclement.",
     "audio": "audio/salutations-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "labas, l7amdollah, w nta?",
+      "arabe": "لاباس، الحمد لله، و نتا؟",
+      "fr": "Ça va bien, et toi ?",
+      "audio": "audio/salutations-031-ex.mp3"
     }
   },
   {
@@ -503,13 +503,13 @@
     "fr": "et toi ? (homme)",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "w n-ta : le « w » s'enchaîne directement avec « nta ».",
     "audio": "audio/salutations-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana labas, w nta?",
+      "arabe": "أنا لاباس، و نتا؟",
+      "fr": "Moi ça va, et toi ?",
+      "audio": "audio/salutations-032-ex.mp3"
     }
   },
   {
@@ -519,13 +519,13 @@
     "fr": "et toi ? (femme)",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "w n-ti : comme « nta », avec un « i » à la fin pour une femme.",
     "audio": "audio/salutations-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ana mzyan, w nti?",
+      "arabe": "أنا مزيان، و نتي؟",
+      "fr": "Moi je vais bien, et toi ?",
+      "audio": "audio/salutations-033-ex.mp3"
     }
   },
   {
@@ -535,13 +535,13 @@
     "fr": "merci beaucoup",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "chok-ran bzaf : « ch » de « chat », puis « bzaf » d'une traite.",
     "audio": "audio/salutations-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chokran bzaf 3la lmoussa3ada",
+      "arabe": "شكرا بزاف على المساعدة",
+      "fr": "Merci beaucoup pour l'aide",
+      "audio": "audio/salutations-034-ex.mp3"
     }
   },
   {
@@ -551,13 +551,13 @@
     "fr": "que Dieu te récompense",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "lah y-ja-zik bi-khir : finis par un raclement léger (kh).",
     "audio": "audio/salutations-035.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lah yjazik bikhir 3la had lkhedma",
+      "arabe": "الله يجازيك بخير على هاد الخدمة",
+      "fr": "Que Dieu te récompense pour ce travail",
+      "audio": "audio/salutations-035-ex.mp3"
     }
   },
   {
@@ -567,13 +567,13 @@
     "fr": "de rien",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "la chok-ran 3la wa-jib : le 3 serré avant « la ».",
     "audio": "audio/salutations-036.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "la chokran 3la wajib, a sa7bi",
+      "arabe": "لا شكرا على واجب، أ صاحبي",
+      "fr": "De rien, mon ami",
+      "audio": "audio/salutations-036-ex.mp3"
     }
   },
   {
@@ -583,13 +583,13 @@
     "fr": "désolée (femme)",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "sme-7i li-a : souffle chaud (7) au milieu.",
     "audio": "audio/salutations-037.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sme7i lia, ma fhemtch",
+      "arabe": "سمحي ليا، ما فهمتش",
+      "fr": "Désolée, je n'ai pas compris",
+      "audio": "audio/salutations-037-ex.mp3"
     }
   },
   {
@@ -599,13 +599,13 @@
     "fr": "aucun problème",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ma kayn moch-kil : « ch » de « chat » dans « mochkil ».",
     "audio": "audio/salutations-038.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma kayn mochkil, nji ghedda",
+      "arabe": "ما كاين مشكل، نجي غدا",
+      "fr": "Aucun problème, je viens demain",
+      "audio": "audio/salutations-038-ex.mp3"
     }
   },
   {
@@ -615,13 +615,13 @@
     "fr": "bravo",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "bra-vo : comme en français.",
     "audio": "audio/salutations-039.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bravo 3lik, mzyan bzaf!",
+      "arabe": "براڤو عليك، مزيان بزاف!",
+      "fr": "Bravo à toi, très bien !",
+      "audio": "audio/salutations-039-ex.mp3"
     }
   },
   {
@@ -631,13 +631,13 @@
     "fr": "bon courage",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "lah y3aw-nek : le 3 serré au fond de la gorge.",
     "audio": "audio/salutations-040.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lah y3awnek f lkhedma",
+      "arabe": "الله يعاونك ف الخدمة",
+      "fr": "Bon courage au travail",
+      "audio": "audio/salutations-040-ex.mp3"
     }
   },
   {
@@ -647,13 +647,13 @@
     "fr": "bonne chance",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "bt-taw-fi9 : le 9 (ق) est un « k » tiré du fond de la gorge.",
     "audio": "audio/salutations-041.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bttawfi9 f lemti7an!",
+      "arabe": "بالتوفيق ف الامتحان!",
+      "fr": "Bonne chance pour l'examen !",
+      "audio": "audio/salutations-041-ex.mp3"
     }
   },
   {
@@ -663,13 +663,13 @@
     "fr": "à ta santé / bon appétit / santé ! (toast)",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "bs-sa-7a : le 7 final est un souffle chaud.",
     "audio": "audio/salutations-042.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bssa7a w rra7a!",
+      "arabe": "بالصحة و الراحة!",
+      "fr": "Bon appétit, régale-toi !",
+      "audio": "audio/salutations-042-ex.mp3"
     }
   },
   {
@@ -679,13 +679,13 @@
     "fr": "avec plaisir",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "b kol so-rour : le r roulé, « sorour » bien détaché.",
     "audio": "audio/salutations-043.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "nji m3ak b kol sorour",
+      "arabe": "نجي معاك بكل سرور",
+      "fr": "Je viens avec toi avec plaisir",
+      "audio": "audio/salutations-043-ex.mp3"
     }
   },
   {
@@ -695,13 +695,13 @@
     "fr": "je t'en prie (à un homme)",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "tfad-dal : le « d » doublé et appuyé.",
     "audio": "audio/salutations-044.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tfaddal, gles hna",
+      "arabe": "تفضل، گلس هنا",
+      "fr": "Je t'en prie, assieds-toi ici",
+      "audio": "audio/salutations-044-ex.mp3"
     }
   },
   {
@@ -711,13 +711,13 @@
     "fr": "je t'en prie (à une femme)",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "tfad-dli : comme « tfaddal », avec « i » à la fin pour une femme.",
     "audio": "audio/salutations-045.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "tfaddli, dkhli",
+      "arabe": "تفضلي، دخلي",
+      "fr": "Je t'en prie, entre",
+      "audio": "audio/salutations-045-ex.mp3"
     }
   },
   {
@@ -727,13 +727,13 @@
     "fr": "merci à toi",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "chok-ran lik : « ch » de « chat ».",
     "audio": "audio/salutations-046.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "chokran lik 3la lhdiya",
+      "arabe": "شكرا ليك على الهدية",
+      "fr": "Merci à toi pour le cadeau",
+      "audio": "audio/salutations-046-ex.mp3"
     }
   },
   {
@@ -743,13 +743,13 @@
     "fr": "tout le plaisir est pour moi",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ch-chraf li-a : le « ch » doublé, appuyé.",
     "audio": "audio/salutations-047.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lla, chraf lia ana",
+      "arabe": "لا، الشرف ليا أنا",
+      "fr": "Non, tout le plaisir est pour moi",
+      "audio": "audio/salutations-047-ex.mp3"
     }
   },
   {
@@ -759,13 +759,13 @@
     "fr": "que la paix soit sur vous",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "s-sa-lam 3li-kom : le 3 serré avant « likom ».",
     "audio": "audio/salutations-048.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ssalam 3likom, wach kayn chi wa7ed?",
+      "arabe": "السلام عليكم، واش كاين شي واحد؟",
+      "fr": "Bonjour, il y a quelqu'un ?",
+      "audio": "audio/salutations-048-ex.mp3"
     }
   },
   {
@@ -775,13 +775,13 @@
     "fr": "et sur vous la paix",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "w 3li-kom s-sa-lam : gorge serrée pour le 3, puis « ssalam » appuyé.",
     "audio": "audio/salutations-049.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "w 3likom ssalam, mr7ba",
+      "arabe": "و عليكم السلام، مرحبا",
+      "fr": "Et sur vous la paix, bienvenue",
+      "audio": "audio/salutations-049-ex.mp3"
     }
   },
   {
@@ -791,13 +791,13 @@
     "fr": "comment vas-tu aujourd'hui ?",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "ki-dayr l-yom : l'accent sur « dayr ».",
     "audio": "audio/salutations-050.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kidayr lyom? 7sen men lbare7?",
+      "arabe": "كيداير اليوم؟ حسن من البارح؟",
+      "fr": "Comment vas-tu aujourd'hui ? Mieux qu'hier ?",
+      "audio": "audio/salutations-050-ex.mp3"
     }
   },
   {
@@ -807,13 +807,13 @@
     "fr": "tout va bien, merci",
     "theme": "salutations",
     "niveau": 1,
-    "prononciation": "",
+    "prononciation": "kol-chi mzyan : « ch » de « chat », « mzyan » d'une traite.",
     "audio": "audio/salutations-051.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kolchi mzyan, chokran 3la ssou2al",
+      "arabe": "كلشي مزيان، شكرا على السؤال",
+      "fr": "Tout va bien, merci de demander",
+      "audio": "audio/salutations-051-ex.mp3"
     }
   }
 ]

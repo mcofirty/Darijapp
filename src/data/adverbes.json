@@ -6,13 +6,13 @@
     "fr": "là / c'est là-bas",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "t-ma : le « t » appuyé.",
     "audio": "audio/adverbes-001.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7anout tma, 7da lbank",
+      "arabe": "الحانوت تما، حدا البانك",
+      "fr": "La boutique est là-bas, à côté de la banque",
+      "audio": "audio/adverbes-001-ex.mp3"
     }
   },
   {
@@ -22,13 +22,13 @@
     "fr": "là-haut",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "l-fou9 : le 9 du fond de la gorge à la fin.",
     "audio": "audio/adverbes-002.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "lbit dyali lfou9",
+      "arabe": "البيت ديالي الفوق",
+      "fr": "Ma chambre est là-haut",
+      "audio": "audio/adverbes-002-ex.mp3"
     }
   },
   {
@@ -38,13 +38,13 @@
     "fr": "en bas",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "l-te7t : souffle chaud (7) avant le « t ».",
     "audio": "audio/adverbes-003.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttomobil lte7t f lgaraj",
+      "arabe": "الطوموبيل التحت ف الگاراج",
+      "fr": "La voiture est en bas, au garage",
+      "audio": "audio/adverbes-003-ex.mp3"
     }
   },
   {
@@ -54,13 +54,13 @@
     "fr": "dedans",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "l-da-khel : raclement (kh).",
     "audio": "audio/adverbes-004.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "dkhol l ldakhel, kayn lberd",
+      "arabe": "دخل ل الداخل، كاين البرد",
+      "fr": "Entre à l'intérieur, il fait froid",
+      "audio": "audio/adverbes-004-ex.mp3"
     }
   },
   {
@@ -70,13 +70,13 @@
     "fr": "dehors",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "l-ber-ra : le r roulé et doublé.",
     "audio": "audio/adverbes-005.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ddrari kayl3bo lberra",
+      "arabe": "الدراري كيلعبو البرا",
+      "fr": "Les enfants jouent dehors",
+      "audio": "audio/adverbes-005-ex.mp3"
     }
   },
   {
@@ -86,13 +86,13 @@
     "fr": "devant",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "l9-ddam : 9 du fond de la gorge, le « d » doublé.",
     "audio": "audio/adverbes-006.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "gles l9ddam f ttomobil",
+      "arabe": "گلس القدام ف الطوموبيل",
+      "fr": "Assieds-toi devant dans la voiture",
+      "audio": "audio/adverbes-006-ex.mp3"
     }
   },
   {
@@ -102,13 +102,13 @@
     "fr": "derrière",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "l-lor : le « l » doublé.",
     "audio": "audio/adverbes-007.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttomobil wa9fa llor",
+      "arabe": "الطوموبيل واقفة اللور",
+      "fr": "La voiture est garée derrière",
+      "audio": "audio/adverbes-007-ex.mp3"
     }
   },
   {
@@ -118,13 +118,13 @@
     "fr": "au milieu",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "f l-west : « west » d'un trait.",
     "audio": "audio/adverbes-008.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ttabla f lwest dyal lbit",
+      "arabe": "الطابلة ف الوسط ديال البيت",
+      "fr": "La table est au milieu de la pièce",
+      "audio": "audio/adverbes-008-ex.mp3"
     }
   },
   {
@@ -134,13 +134,13 @@
     "fr": "à côté",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "7da : souffle chaud (7) au début.",
     "audio": "audio/adverbes-009.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "gles 7daya",
+      "arabe": "گلس حدايا",
+      "fr": "Assieds-toi à côté de moi",
+      "audio": "audio/adverbes-009-ex.mp3"
     }
   },
   {
@@ -150,13 +150,13 @@
     "fr": "en face",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "m9a-bel : 9 du fond de la gorge.",
     "audio": "audio/adverbes-010.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ssbitar m9abel lmadrasa",
+      "arabe": "السبيطار مقابل المدرسة",
+      "fr": "L'hôpital est en face de l'école",
+      "audio": "audio/adverbes-010-ex.mp3"
     }
   },
   {
@@ -166,13 +166,13 @@
     "fr": "autour",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "da-yer : un « d » simple.",
     "audio": "audio/adverbes-011.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayn jnan dayer b ddar",
+      "arabe": "كاين جنان داير ب الدار",
+      "fr": "Il y a un jardin autour de la maison",
+      "audio": "audio/adverbes-011-ex.mp3"
     }
   },
   {
@@ -182,13 +182,13 @@
     "fr": "partout",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "f kol bla-sa : « blasa » comme « place ».",
     "audio": "audio/adverbes-012.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kayn nnas f kol blasa",
+      "arabe": "كاين الناس ف كل بلاصة",
+      "fr": "Il y a du monde partout",
+      "audio": "audio/adverbes-012-ex.mp3"
     }
   },
   {
@@ -198,13 +198,13 @@
     "fr": "nulle part",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "f 7tta bla-sa : souffle chaud (7).",
     "audio": "audio/adverbes-013.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ma l9itouch f 7tta blasa",
+      "arabe": "ما لقيتوش ف حتى بلاصة",
+      "fr": "Je ne l'ai trouvé nulle part",
+      "audio": "audio/adverbes-013-ex.mp3"
     }
   },
   {
@@ -214,13 +214,13 @@
     "fr": "partiellement / lentement",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "b chwi-ya : « ch » de « chat ».",
     "audio": "audio/adverbes-014.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "sou9 b chwiya 3afak",
+      "arabe": "سوق بشوية عافاك",
+      "fr": "Conduis lentement, s'il te plaît",
+      "audio": "audio/adverbes-014-ex.mp3"
     }
   },
   {
@@ -230,13 +230,13 @@
     "fr": "complètement",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "b l-ka-mel : l'accent sur « ka ».",
     "audio": "audio/adverbes-015.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kla tajine b lkamel",
+      "arabe": "كلا الطاجين بالكامل",
+      "fr": "Il a mangé tout le tajine",
+      "audio": "audio/adverbes-015-ex.mp3"
     }
   },
   {
@@ -246,13 +246,13 @@
     "fr": "ensemble",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "mjmou-3in : le 3 serré.",
     "audio": "audio/adverbes-016.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "mchina mjmou3in l lb7ar",
+      "arabe": "مشينا مجموعين ل البحر",
+      "fr": "Nous sommes allés ensemble à la mer",
+      "audio": "audio/adverbes-016-ex.mp3"
     }
   },
   {
@@ -262,13 +262,13 @@
     "fr": "seul / seule",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bo7-di : souffle chaud (7) au milieu.",
     "audio": "audio/adverbes-017.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kanskon bo7di",
+      "arabe": "كنسكن بوحدي",
+      "fr": "J'habite seul",
+      "audio": "audio/adverbes-017-ex.mp3"
     }
   },
   {
@@ -278,13 +278,13 @@
     "fr": "rapidement",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "b zer-ba : le r roulé.",
     "audio": "audio/adverbes-018.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "aji b zerba!",
+      "arabe": "أجي بزربة!",
+      "fr": "Viens vite !",
+      "audio": "audio/adverbes-018-ex.mp3"
     }
   },
   {
@@ -294,13 +294,13 @@
     "fr": "exactement",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bd-dabt : un « d » épais et doublé.",
     "audio": "audio/adverbes-019.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ja f tmenya bddabt",
+      "arabe": "جا ف التمنية بالضبط",
+      "fr": "Il est arrivé à huit heures pile",
+      "audio": "audio/adverbes-019-ex.mp3"
     }
   },
   {
@@ -310,13 +310,13 @@
     "fr": "presque / à peu près",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "ta9-ri-ban : le 9 du fond de la gorge.",
     "audio": "audio/adverbes-020.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "kemmelt ta9riban",
+      "arabe": "كملت تقريبا",
+      "fr": "J'ai presque fini",
+      "audio": "audio/adverbes-020-ex.mp3"
     }
   },
   {
@@ -326,13 +326,13 @@
     "fr": "environ",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "7wa-li : souffle chaud (7) au début.",
     "audio": "audio/adverbes-021.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ja 7wali 3chrin wa7ed",
+      "arabe": "جا حوالي عشرين واحد",
+      "fr": "Environ vingt personnes sont venues",
+      "audio": "audio/adverbes-021-ex.mp3"
     }
   },
   {
@@ -342,13 +342,13 @@
     "fr": "également",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "7t-ta : souffle chaud (7), le « t » doublé.",
     "audio": "audio/adverbes-022.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "7tta ana bghit nji",
+      "arabe": "حتى أنا بغيت نجي",
+      "fr": "Moi aussi je veux venir",
+      "audio": "audio/adverbes-022-ex.mp3"
     }
   },
   {
@@ -358,13 +358,13 @@
     "fr": "encore une fois / une autre fois",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "mer-ra khra : raclement (kh) dans « khra ».",
     "audio": "audio/adverbes-023.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3awed merra khra 3afak",
+      "arabe": "عاود مرة اخرى عافاك",
+      "fr": "Répète encore une fois, s'il te plaît",
+      "audio": "audio/adverbes-023-ex.mp3"
     }
   },
   {
@@ -374,13 +374,13 @@
     "fr": "à nouveau",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "men jdid : comme « men djdid ».",
     "audio": "audio/adverbes-024.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bda men jdid",
+      "arabe": "بدا من جديد",
+      "fr": "Recommence à zéro",
+      "audio": "audio/adverbes-024-ex.mp3"
     }
   },
   {
@@ -390,13 +390,13 @@
     "fr": "au début",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "f l-be-da-ya : l'accent sur « da ».",
     "audio": "audio/adverbes-025.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "f lbedaya kan s3ib",
+      "arabe": "ف البداية كان صعيب",
+      "fr": "Au début c'était difficile",
+      "audio": "audio/adverbes-025-ex.mp3"
     }
   },
   {
@@ -406,13 +406,13 @@
     "fr": "à la fin / enfin",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "f l-le-kher : raclement (kh) à la fin.",
     "audio": "audio/adverbes-026.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "f llekher fhemt",
+      "arabe": "ف اللخر فهمت",
+      "fr": "À la fin, j'ai compris",
+      "audio": "audio/adverbes-026-ex.mp3"
     }
   },
   {
@@ -422,13 +422,13 @@
     "fr": "normalement",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "3a-di : le 3 serré au début.",
     "audio": "audio/adverbes-027.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "3adi, ma kayn mochkil",
+      "arabe": "عادي، ما كاين مشكل",
+      "fr": "Normal, il n'y a pas de problème",
+      "audio": "audio/adverbes-027-ex.mp3"
     }
   },
   {
@@ -438,13 +438,13 @@
     "fr": "habituellement",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "f l3a-da : le 3 serré.",
     "audio": "audio/adverbes-028.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "f l3ada kanfter f ssab3a",
+      "arabe": "ف العادة كنفطر ف السابعة",
+      "fr": "D'habitude je déjeune à sept heures",
+      "audio": "audio/adverbes-028-ex.mp3"
     }
   },
   {
@@ -454,13 +454,13 @@
     "fr": "heureusement",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "l7am-dol-lah : souffle chaud (7).",
     "audio": "audio/adverbes-029.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l7amdollah ma tjer7ti walou",
+      "arabe": "الحمد لله ما تجرحتي والو",
+      "fr": "Heureusement, tu ne t'es pas blessé",
+      "audio": "audio/adverbes-029-ex.mp3"
     }
   },
   {
@@ -470,13 +470,13 @@
     "fr": "malheureusement",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "l2a-saf : petit arrêt (2) au début.",
     "audio": "audio/adverbes-030.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "l2asaf, ma n9derch nji",
+      "arabe": "للأسف، ما نقدرش نجي",
+      "fr": "Malheureusement, je ne peux pas venir",
+      "audio": "audio/adverbes-030-ex.mp3"
     }
   },
   {
@@ -486,13 +486,13 @@
     "fr": "probablement",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "gha-li-ban : « gh » grasseyé.",
     "audio": "audio/adverbes-031.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "ghaliban ghadi tti7 chta",
+      "arabe": "غالبا غادي تطيح الشتا",
+      "fr": "Il va probablement pleuvoir",
+      "audio": "audio/adverbes-031-ex.mp3"
     }
   },
   {
@@ -502,13 +502,13 @@
     "fr": "franchement",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bsra-7a : souffle chaud (7) à la fin.",
     "audio": "audio/adverbes-032.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bsra7a, ma 3jbatnich",
+      "arabe": "بصراحة، ما عجباتنيش",
+      "fr": "Franchement, ça ne m'a pas plu",
+      "audio": "audio/adverbes-032-ex.mp3"
     }
   },
   {
@@ -518,13 +518,13 @@
     "fr": "sérieusement",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "b jedd : le « d » doublé.",
     "audio": "audio/adverbes-033.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "wach katkellem b jedd?",
+      "arabe": "واش كتكلم بالجد؟",
+      "fr": "Tu parles sérieusement ?",
+      "audio": "audio/adverbes-033-ex.mp3"
     }
   },
   {
@@ -534,13 +534,13 @@
     "fr": "vraiment",
     "theme": "adverbes",
     "niveau": 3,
-    "prononciation": "",
+    "prononciation": "bs-sa7 : souffle chaud (7) à la fin.",
     "audio": "audio/adverbes-034.mp3",
     "exemple": {
-      "latin": "",
-      "arabe": "",
-      "fr": "",
-      "audio": ""
+      "latin": "bssa7 zwin had lblad",
+      "arabe": "بالصح زوين هاد البلاد",
+      "fr": "Ce pays est vraiment beau",
+      "audio": "audio/adverbes-034-ex.mp3"
     }
   }
 ]
