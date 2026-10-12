@@ -3,7 +3,7 @@ import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { MOTS } from '../data'
 import { planDeSession } from './apprentissage'
 import { DarijaDB } from './db'
-import { ajouterMot, lireMotsPerso, modifierMot, supprimerMot, tousLesMots } from './motsPerso'
+import { ajouterMot, ajouterSiAbsent, lireMotsPerso, modifierMot, supprimerMot, tousLesMots } from './motsPerso'
 
 let base: DarijaDB
 const salam = { latin: 'salam', arabe: 'سلام', fr: 'bonjour' }
@@ -45,5 +45,11 @@ describe('mots ajoutés', () => {
     })
     await supprimerMot(mot.id, base)
     expect(await base.progression.get(mot.id)).toBeUndefined()
+  })
+
+  it('un mot reçu par lien n’est ajouté qu’une fois', async () => {
+    expect((await ajouterSiAbsent(salam, base)).nouveau).toBe(true)
+    expect((await ajouterSiAbsent({ ...salam, latin: ' Salam ' }, base)).nouveau).toBe(false)
+    expect(await lireMotsPerso(base)).toHaveLength(1)
   })
 })

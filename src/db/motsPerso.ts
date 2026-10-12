@@ -19,6 +19,14 @@ export async function ajouterMot(champs: ChampsMot, base: DarijaDB = db): Promis
   return mot
 }
 
+/** Ajoute un mot reçu par lien, sauf s'il est déjà dans « Mes mots » (même latin et même arabe). */
+export async function ajouterSiAbsent(champs: ChampsMot, base: DarijaDB = db): Promise<{ mot: MotPerso; nouveau: boolean }> {
+  const net = nettoyer(champs)
+  const existant = (await base.motsPerso.toArray()).find((m) => m.latin.toLowerCase() === net.latin.toLowerCase() && m.arabe === net.arabe)
+  if (existant) return { mot: existant, nouveau: false }
+  return { mot: await ajouterMot(champs, base), nouveau: true }
+}
+
 export async function modifierMot(id: string, champs: ChampsMot, base: DarijaDB = db): Promise<void> {
   if (!motValide(champs)) throw new Error('Mot invalide')
   await base.motsPerso.update(id, nettoyer(champs))

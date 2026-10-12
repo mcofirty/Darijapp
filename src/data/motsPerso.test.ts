@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import type { MotPerso } from '../db/db'
 import { MOTS } from '.'
-import { THEME_PERSO, assemblerMots, motValide, validerMot, versMot } from './motsPerso'
+import { THEME_PERSO, assemblerMots, lienDeMot, motDuLien, motValide, validerMot, versMot } from './motsPerso'
 
 const salam = { latin: 'salam', arabe: 'سلام', fr: 'bonjour' }
 
@@ -49,5 +49,29 @@ describe('mots ajoutés dans l’appli', () => {
     expect(tous.slice(0, 2).map((m) => m.id)).toEqual(['perso-b', 'perso-a'])
     expect(tous).toHaveLength(MOTS.length + 2)
     expect(tous[2]).toBe(MOTS[0])
+  })
+})
+
+describe('lien de partage', () => {
+  const adresse = 'https://mcofirty.github.io/Darijapp/'
+  const mot = { latin: '3afak', arabe: 'عافاك', fr: 's’il te plaît' }
+
+  it('transporte un mot et le retrouve à l’identique', () => {
+    const lien = lienDeMot(adresse, mot)
+    expect(lien.startsWith(`${adresse}#mot=`)).toBe(true)
+    expect(motDuLien(lien.slice(lien.indexOf('#')))).toEqual(mot)
+  })
+
+  it('remplace un éventuel #ajout de l’adresse', () => {
+    expect(lienDeMot(`${adresse}#ajout`, mot)).toBe(lienDeMot(adresse, mot))
+  })
+
+  it('refuse un lien absent, abîmé ou invalide', () => {
+    expect(motDuLien('')).toBeNull()
+    expect(motDuLien('#ajout')).toBeNull()
+    expect(motDuLien('#mot=%E0%A4%A')).toBeNull()
+    expect(motDuLien('#mot=' + encodeURIComponent('{"a":1}'))).toBeNull()
+    expect(motDuLien('#mot=' + encodeURIComponent(JSON.stringify(['afak', 'عافاك', 'x'])))).toBeNull()
+    expect(motDuLien('#mot=' + encodeURIComponent(JSON.stringify(['salam', 'سلام', 'x'.repeat(200)])))).toBeNull()
   })
 })

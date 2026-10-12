@@ -1,8 +1,8 @@
-import { Trash2 } from 'lucide-react'
+import { Send, Trash2 } from 'lucide-react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { useState, type FormEvent } from 'react'
 import { MOTS } from '../../data'
-import { motValide, validerMot, type ChampsMot } from '../../data/motsPerso'
+import { lienDeMot, motValide, validerMot, type ChampsMot } from '../../data/motsPerso'
 import { ajouterMot, lireMotsPerso, modifierMot, supprimerMot } from '../../db/motsPerso'
 import { Bouton, Vide } from '../../ui/Boutons'
 import { Ligne, Section } from '../../ui/Liste'
@@ -57,6 +57,29 @@ export function AjoutMots() {
     setAfficheErreurs(false)
   }
 
+  /** Feuille de partage de l'iPhone (Messages, WhatsApp…) ; à défaut, copie le lien. */
+  async function partager(mot: ChampsMot) {
+    const url = lienDeMot(window.location.href, mot)
+    const texte = `Un mot pour ton darija : ${mot.latin} = ${mot.fr}`
+    try {
+      if (navigator.share) await navigator.share({ text: texte, url })
+      else {
+        await navigator.clipboard.writeText(`${texte}\n${url}`)
+        window.alert('Lien copié. Colle-le dans un message.')
+      }
+    } catch {
+      // Partage annulé : rien à faire.
+    }
+  }
+
+  function envoyerAuProprietaire() {
+    if (!motValide(champs)) {
+      setAfficheErreurs(true)
+      return
+    }
+    void partager(champs)
+  }
+
   async function envoyer(e: FormEvent) {
     e.preventDefault()
     if (!motValide(champs)) {
@@ -84,9 +107,13 @@ export function AjoutMots() {
           <Champ libelle="Écriture latine (ex. 3afak)" valeur={champs.latin} erreur={erreurs.latin} onChange={(v) => maj('latin', v)} />
           <Champ libelle="Écriture arabe (ex. عافاك)" valeur={champs.arabe} erreur={erreurs.arabe} arabe onChange={(v) => maj('arabe', v)} />
         </Section>
-        <div className="mb-8 flex gap-3">
-          <Bouton type="submit" grand className="flex-1">
+        <div className="mb-8 flex flex-col gap-3">
+          <Bouton type="submit" grand>
             {enEdition ? 'Enregistrer' : 'Ajouter'}
+          </Bouton>
+          <Bouton variante="teinte" grand onClick={envoyerAuProprietaire}>
+            <Send className="h-5 w-5" aria-hidden />
+            Envoyer à Romain
           </Bouton>
           {enEdition && (
             <Bouton variante="gris" grand onClick={reinitialiser}>
@@ -120,6 +147,14 @@ export function AjoutMots() {
               fin={
                 <span className="flex items-center gap-1">
                   <BoutonAudio chemin={`audio/${m.id}.mp3`} arabe={m.arabe} libelle="" />
+                  <button
+                    type="button"
+                    aria-label={`Envoyer ${m.latin} à Romain`}
+                    className="pressable flex h-11 w-11 items-center justify-center text-accent"
+                    onClick={() => void partager(m)}
+                  >
+                    <Send className="h-5 w-5" aria-hidden />
+                  </button>
                   <button
                     type="button"
                     aria-label={`Supprimer ${m.latin}`}

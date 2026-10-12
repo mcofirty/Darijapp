@@ -82,3 +82,25 @@ export function assemblerMots(perso: MotPerso[], programme: Mot[]): Mot[] {
   const tries = [...perso].sort((a, b) => a.creeLe - b.creeLe).map(versMot)
   return [...tries, ...programme]
 }
+
+const PREFIXE_LIEN = '#mot='
+const LONGUEUR_MAX = 80
+
+/** Adresse qui propose un mot : « <adresse de l'appli>#mot=[latin, arabe, français] ». */
+export function lienDeMot(adresseAppli: string, { latin, arabe, fr }: ChampsMot): string {
+  return adresseAppli.split('#')[0] + PREFIXE_LIEN + encodeURIComponent(JSON.stringify([latin.trim(), arabe.trim(), fr.trim()]))
+}
+
+/** Lit un mot proposé dans le hash de l'adresse ; null si absent, mal formé ou invalide. */
+export function motDuLien(hash: string): ChampsMot | null {
+  if (!hash.startsWith(PREFIXE_LIEN)) return null
+  try {
+    const valeur: unknown = JSON.parse(decodeURIComponent(hash.slice(PREFIXE_LIEN.length)))
+    if (!Array.isArray(valeur) || valeur.length !== 3 || valeur.some((v) => typeof v !== 'string' || v.length > LONGUEUR_MAX)) return null
+    const [latin, arabe, fr] = valeur as string[]
+    const champs = { latin: latin.trim(), arabe: arabe.trim(), fr: fr.trim() }
+    return motValide(champs) ? champs : null
+  } catch {
+    return null
+  }
+}

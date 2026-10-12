@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState, type TouchEvent } from 'react'
 import { useProfil } from '../db/useProfil'
+import { motDuLien } from '../data/motsPerso'
 import { AjoutMots } from '../features/ajout/AjoutMots'
+import { Proposition } from '../features/ajout/Proposition'
 import { Apprendre } from '../features/apprendre/Apprendre'
 import { Parcours } from '../features/parcours/Parcours'
 import { Profil } from '../features/profil/Profil'
@@ -21,9 +23,11 @@ interface Toucher {
 const LIEN_AJOUT = '#ajout'
 
 export default function App() {
-  const [ajout, setAjout] = useState(window.location.hash === LIEN_AJOUT)
+  const [hash, setHash] = useState(window.location.hash)
+  const ajout = hash === LIEN_AJOUT
+  const proposition = motDuLien(hash)
   useEffect(() => {
-    const suivre = () => setAjout(window.location.hash === LIEN_AJOUT)
+    const suivre = () => setHash(window.location.hash)
     window.addEventListener('hashchange', suivre)
     return () => window.removeEventListener('hashchange', suivre)
   }, [])
@@ -41,6 +45,11 @@ export default function App() {
     media.addEventListener('change', suivre)
     return () => media.removeEventListener('change', suivre)
   }, [apparence])
+
+  function quitterLien() {
+    history.replaceState(null, '', window.location.pathname + window.location.search)
+    setHash('')
+  }
 
   function changer(cible: Onglet) {
     const de = ONGLETS.findIndex((o) => o.id === onglet)
@@ -70,6 +79,14 @@ export default function App() {
     if (sens === 0) return
     const vers = ONGLETS.findIndex((o) => o.id === onglet) + sens
     if (vers >= 0 && vers < ONGLETS.length) changer(ONGLETS[vers].id)
+  }
+
+  if (proposition) {
+    return (
+      <div className="min-h-dvh overflow-x-hidden pb-16">
+        <Proposition mot={proposition} onTermine={quitterLien} />
+      </div>
+    )
   }
 
   if (ajout) {
