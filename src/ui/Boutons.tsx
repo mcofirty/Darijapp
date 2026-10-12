@@ -49,7 +49,7 @@ export function Segmente<T extends string>({
           aria-selected={valeur === o.id}
           onClick={() => onChange(o.id)}
           className={`t-sous-titre min-h-8 flex-1 rounded-[7px] font-semibold transition-colors ${
-            valeur === o.id ? 'bg-carte shadow-[0_3px_8px_rgba(0,0,0,0.12),0_3px_1px_rgba(0,0,0,0.04)] dark:bg-[#636366]' : ''
+            valeur === o.id ? 'bg-[var(--segment-actif)] shadow-[0_3px_8px_rgba(0,0,0,0.12),0_3px_1px_rgba(0,0,0,0.04)]' : ''
           }`}
         >
           {o.libelle}

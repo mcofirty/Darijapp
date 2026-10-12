@@ -17,7 +17,11 @@ export interface Profil {
   prenom: string
   genre: 'm' | 'f' | null
   afficherArabe: boolean
+  apparence: Apparence
 }
+
+/** Apparence de l'appli : suit l'iPhone, ou forcée en clair ou en sombre. */
+export type Apparence = 'systeme' | 'clair' | 'sombre'
 
 export interface MotPerso {
   id: string
@@ -42,6 +46,7 @@ export const PROFIL_DEFAUT: Profil = {
   prenom: '',
   genre: null,
   afficherArabe: true,
+  apparence: 'systeme',
 }
 
 export class DarijaDB extends Dexie {

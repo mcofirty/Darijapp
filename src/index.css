@@ -1,52 +1,99 @@
 @import "tailwindcss";
 
+/* La variante dark: suit le réglage d'apparence de l'appli (et le système en mode automatique). */
+@custom-variant dark {
+  &:where([data-theme="sombre"], [data-theme="sombre"] *) {
+    @slot;
+  }
+  @media (prefers-color-scheme: dark) {
+    &:where(:root:not([data-theme="clair"]), :root:not([data-theme="clair"]) *) {
+      @slot;
+    }
+  }
+}
+
 /*
  * Système de design d'après les Human Interface Guidelines d'Apple (iOS 26).
- * Couleurs sémantiques système, en clair et en sombre ; une seule couleur d'accent.
+ * Couleurs sémantiques système ; accent aux couleurs du drapeau marocain.
+ * Apparence : réglage du Profil (attribut data-theme sur <html>) — « clair », « sombre »,
+ * ou « systeme » qui suit le réglage de l'iPhone.
  */
 :root {
   --fond: #f2f2f7; /* systemGroupedBackground */
   --carte: #ffffff; /* secondarySystemGroupedBackground */
-  --carte-2: #f2f2f7; /* tertiarySystemGroupedBackground */
+  --carte-2: #f2f2f7;
   --remplissage: rgba(118, 118, 128, 0.12); /* tertiarySystemFill */
+  --segment-actif: #ffffff;
   --texte: #000000; /* label */
   --texte-2: rgba(60, 60, 67, 0.6); /* secondaryLabel */
-  --texte-3: rgba(60, 60, 67, 0.3); /* tertiaryLabel */
-  --separateur: rgba(60, 60, 67, 0.29); /* separator */
-  --accent: #cc4a0a; /* orange de l'appli : 4,6:1 sur blanc (WCAG AA) */
-  --accent-plein: #cc4a0a; /* fond des boutons pleins, texte blanc à 4,6:1 */
-  --accent-doux: rgba(204, 74, 10, 0.13);
-  --vert: #248a3d; /* systemGreen, version accessible pour le texte */
-  --vert-vif: #34c759;
-  --vert-doux: rgba(52, 199, 89, 0.16);
-  --rouge: #d70015;
-  --rouge-doux: rgba(255, 59, 48, 0.14);
+  --texte-3: rgba(60, 60, 67, 0.3);
+  --separateur: rgba(60, 60, 67, 0.29);
+  /* Couleurs du drapeau marocain : rouge #C1272D (5,8:1 sur blanc) et vert #006233 (7,5:1). */
+  --accent: #c1272d;
+  --accent-plein: #c1272d;
+  --accent-doux: rgba(193, 39, 45, 0.1);
+  --vert: #006233;
+  --vert-vif: #00813f;
+  --vert-plein: #006233; /* fond de bouton, texte blanc à 7,5:1 */
+  --vert-doux: rgba(0, 98, 51, 0.12);
+  --rouge: #c1272d;
+  --rouge-doux: rgba(193, 39, 45, 0.1);
   --verre: rgba(255, 255, 255, 0.62);
   --verre-bord: rgba(255, 255, 255, 0.7);
-  color-scheme: light dark;
+  color-scheme: light;
   -webkit-tap-highlight-color: transparent;
 }
 
+:root[data-theme="sombre"] {
+  --fond: #000000;
+  --carte: #1c1c1e;
+  --carte-2: #2c2c2e;
+  --remplissage: rgba(118, 118, 128, 0.24);
+  --segment-actif: #636366;
+  --texte: #ffffff;
+  --texte-2: rgba(235, 235, 245, 0.6);
+  --texte-3: rgba(235, 235, 245, 0.3);
+  --separateur: rgba(84, 84, 88, 0.65);
+  /* Rouge et vert éclaircis pour le texte sur fond sombre (6:1 et plus). */
+  --accent: #ff6961;
+  --accent-plein: #c1272d;
+  --accent-doux: rgba(255, 105, 97, 0.16);
+  --vert: #2fd27f;
+  --vert-vif: #00a352;
+  --vert-plein: #006233;
+  --vert-doux: rgba(47, 210, 127, 0.18);
+  --rouge: #ff6961;
+  --rouge-doux: rgba(255, 105, 97, 0.18);
+  --verre: rgba(30, 30, 32, 0.6);
+  --verre-bord: rgba(255, 255, 255, 0.12);
+  color-scheme: dark;
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="clair"]) {
     --fond: #000000;
     --carte: #1c1c1e;
     --carte-2: #2c2c2e;
     --remplissage: rgba(118, 118, 128, 0.24);
+    --segment-actif: #636366;
     --texte: #ffffff;
     --texte-2: rgba(235, 235, 245, 0.6);
     --texte-3: rgba(235, 235, 245, 0.3);
     --separateur: rgba(84, 84, 88, 0.65);
-    --accent: #ff8f40; /* 7,5:1 sur les cartes sombres */
-    --accent-plein: #cc4a0a;
-    --accent-doux: rgba(255, 143, 64, 0.18);
-    --vert: #30d158;
-    --vert-vif: #30d158;
-    --vert-doux: rgba(48, 209, 88, 0.2);
-    --rouge: #ff453a;
-    --rouge-doux: rgba(255, 69, 58, 0.2);
+    /* Rouge et vert éclaircis pour le texte sur fond sombre (6:1 et plus). */
+    --accent: #ff6961;
+    --accent-plein: #c1272d;
+    --accent-doux: rgba(255, 105, 97, 0.16);
+    --vert: #2fd27f;
+    --vert-vif: #00a352;
+    --vert-plein: #006233;
+  --vert-plein: #006233;
+    --vert-doux: rgba(47, 210, 127, 0.18);
+    --rouge: #ff6961;
+    --rouge-doux: rgba(255, 105, 97, 0.18);
     --verre: rgba(30, 30, 32, 0.6);
     --verre-bord: rgba(255, 255, 255, 0.12);
+    color-scheme: dark;
   }
 }
 
@@ -64,6 +111,7 @@
   --color-accent-doux: var(--accent-doux);
   --color-vert: var(--vert);
   --color-vert-vif: var(--vert-vif);
+  --color-vert-plein: var(--vert-plein);
   --color-vert-doux: var(--vert-doux);
   --color-rouge: var(--rouge);
   --color-rouge-doux: var(--rouge-doux);

@@ -1,9 +1,11 @@
-import { useRef, useState, type TouchEvent } from 'react'
+import { useEffect, useRef, useState, type TouchEvent } from 'react'
+import { useProfil } from '../db/useProfil'
 import { Apprendre } from '../features/apprendre/Apprendre'
 import { Parcours } from '../features/parcours/Parcours'
 import { Profil } from '../features/profil/Profil'
 import { Progres } from '../features/progres/Progres'
 import { Quiz } from '../features/quiz/Quiz'
+import { appliquerApparence } from './apparence'
 import { BarreOnglets } from './BarreOnglets'
 import { sensDuBalayage } from './glisser'
 import { ONGLETS, type Onglet } from './onglets'
@@ -18,6 +20,16 @@ export default function App() {
   const [onglet, setOnglet] = useState<Onglet>('apprendre')
   const [entree, setEntree] = useState<'entree-droite' | 'entree-gauche' | ''>('')
   const depart = useRef<Toucher | null>(null)
+  const { apparence } = useProfil()
+
+  useEffect(() => {
+    appliquerApparence(apparence)
+    // En mode automatique, suivre aussi les changements de l'iPhone (couleur de la barre d'état).
+    const media = window.matchMedia('(prefers-color-scheme: dark)')
+    const suivre = () => appliquerApparence(apparence)
+    media.addEventListener('change', suivre)
+    return () => media.removeEventListener('change', suivre)
+  }, [apparence])
 
   function changer(cible: Onglet) {
     const de = ONGLETS.findIndex((o) => o.id === onglet)

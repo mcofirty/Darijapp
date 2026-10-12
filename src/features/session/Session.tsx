@@ -128,7 +128,7 @@ export function Session({ etapes: depart, nouveaux, entrainement, onFermer, onEn
             </div>
             <Bouton
               grand
-              className={`w-full ${retour?.juste === false ? '!bg-rouge' : retour?.juste ? '!bg-vert' : ''}`}
+              className={`w-full ${retour?.juste ? '!bg-vert-plein' : ''}`}
               onClick={() => void suivant()}
             >
               Continuer

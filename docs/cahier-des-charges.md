@@ -229,7 +229,7 @@ Interface :
 - 5 onglets en barre basse : Apprendre, Parcours, Quiz, Progrès, Profil (détail dans « Écrans et navigation ») ;
 - gros boutons audio accessibles au pouce, lecture automatique à l'affichage d'un mot ;
 - aucune lecture de l'arabe exigée : l'arabe est affiché par défaut à côté du latin, et se masque dans les réglages ;
-- interface en français, mode clair et sombre ;
+- interface en français, aux couleurs du drapeau marocain (rouge et vert), avec un mode clair et un mode sombre au choix dans le Profil (ou automatique) ;
 - design conforme aux Human Interface Guidelines d'Apple (couleurs sémantiques, police système et taille de texte réglable, zones tactiles de 44 pt, contrastes AA).
 
 Exigences non fonctionnelles :

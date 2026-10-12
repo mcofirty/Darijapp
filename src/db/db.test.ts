@@ -21,6 +21,10 @@ describe('profil', () => {
     expect((await lireProfil(base)).afficherArabe).toBe(true)
   })
 
+  it('suit l’apparence de l’iPhone par défaut', async () => {
+    expect((await lireProfil(base)).apparence).toBe('systeme')
+  })
+
   it('enregistre une modification sans perdre le reste', async () => {
     await modifierProfil({ prenom: 'Karim' }, base)
     await modifierProfil({ afficherArabe: false }, base)
