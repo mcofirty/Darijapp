@@ -11,8 +11,13 @@ export type Etape =
   | { type: 'paires'; mots: Mot[] }
   /** Distingue les sons : on entend `cible`, on choisit entre les deux mots de la paire. */
   | { type: 'distingue'; paire: PaireSons; cible: MotSon }
+  /** Dis-le : on prononce le mot, le score compare à la voix de référence. */
+  | { type: 'disle'; mot: Mot }
 
 export type Aleatoire = () => number
+
+/** Mots à prononcer (Dis-le) par session. */
+export const DIRE_PAR_SESSION = 2
 
 export function melanger<T>(liste: T[], alea: Aleatoire = Math.random): T[] {
   const copie = [...liste]
@@ -60,8 +65,9 @@ export function choisirPaire(paires: PaireSons[], mots: Mot[], alea: Aleatoire =
 
 /**
  * Compose une session : chaque nouveau mot est présenté puis exercé, puis les nouveaux mots
- * sont associés par paires ; viennent ensuite une question « Distingue les sons » (si des paires
- * de sons sont fournies), les révisions, dans le désordre, et une série de paires.
+ * sont associés par paires et les `nbDire` premiers sont à prononcer (Dis-le) ; viennent ensuite
+ * une question « Distingue les sons » (si des paires de sons sont fournies), les révisions,
+ * dans le désordre, et une série de paires. Sans nouveau mot, on prononce des révisions.
  */
 export function composerSession(
   nouveaux: Mot[],
@@ -69,6 +75,7 @@ export function composerSession(
   tous: Mot[],
   alea: Aleatoire = Math.random,
   pairesSons: PaireSons[] = [],
+  nbDire = 0,
 ): Etape[] {
   const etapes: Etape[] = []
   nouveaux.forEach((mot, i) => {
@@ -76,12 +83,14 @@ export function composerSession(
     etapes.push(exercice(mot, i, tous, alea))
   })
   if (nouveaux.length >= 3) etapes.push({ type: 'paires', mots: nouveaux.slice(0, 5) })
+  nouveaux.slice(0, nbDire).forEach((mot) => etapes.push({ type: 'disle', mot }))
   if (pairesSons.length > 0 && nouveaux.length + revisions.length > 0) {
     etapes.push(questionDistingue(choisirPaire(pairesSons, [...nouveaux, ...revisions], alea), alea))
   }
 
   const melange = melanger(revisions, alea)
   melange.forEach((mot, i) => etapes.push(exercice(mot, i + 1, tous, alea)))
+  if (nouveaux.length === 0) melange.slice(0, nbDire).forEach((mot) => etapes.push({ type: 'disle', mot }))
   if (melange.length >= 3) etapes.push({ type: 'paires', mots: melange.slice(0, 5) })
   return etapes
 }
@@ -99,6 +108,8 @@ export function etapeARefaire(etape: Etape, tous: Mot[], alea: Aleatoire = Math.
 export class Resultats {
   private erreurs = new Set<string>()
   private vus = new Set<string>()
+  /** Scores de prononciation (Dis-le) par mot. */
+  readonly scores = new Map<string, number[]>()
   bonnes = 0
   mauvaises = 0
 
@@ -106,6 +117,10 @@ export class Resultats {
     this.vus.add(motId)
     this.compter(juste)
     if (!juste) this.erreurs.add(motId)
+  }
+
+  noterScore(motId: string, score: number): void {
+    this.scores.set(motId, [...(this.scores.get(motId) ?? []), score])
   }
 
   /** Réponse qui ne concerne aucun mot du programme (Distingue les sons) : compte seulement. */

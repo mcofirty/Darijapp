@@ -30,6 +30,10 @@ export interface Profil {
   couleur: string
   zellige: string
   pot: string
+  /** Dis-le avec le micro et un score ; sinon, auto-évaluation (mode sans micro). */
+  micro: boolean
+  /** Distances de mots bien dits par l'utilisateur, pour régler le score sur sa voix. */
+  reglageVoix: number[]
 }
 
 /** Apparence de l'appli : suit l'iPhone, ou forcée en clair ou en sombre. */
@@ -115,6 +119,8 @@ export const PROFIL_DEFAUT: Profil = {
   couleur: 'drapeau',
   zellige: 'aucun',
   pot: 'terre',
+  micro: true,
+  reglageVoix: [],
 }
 
 export class DarijaDB extends Dexie {

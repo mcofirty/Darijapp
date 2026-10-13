@@ -26,14 +26,22 @@ export function motsPourQuiz(progressions: EtatSrs[], tous: Mot[], n: number): M
 
 /**
  * 5 questions qui mêlent les exercices : Écoute et choisis, Traduis, Distingue les sons (si des paires
- * de sons sont fournies) et Associe les paires.
+ * de sons sont fournies), Dis-le (si `dire`) et Associe les paires.
  * `candidats` : les mots à interroger, du plus urgent au moins urgent (voir motsPourQuiz).
  */
-export function composerQuiz(candidats: Mot[], tous: Mot[], alea: Aleatoire = Math.random, pairesSons: PaireSons[] = []): Etape[] {
-  const nbSimples = QUESTIONS_PAR_QUIZ - 1 - (pairesSons.length > 0 ? 1 : 0)
-  const mots = candidats.slice(0, nbSimples + MOTS_PAR_PAIRES)
+export function composerQuiz(
+  candidats: Mot[],
+  tous: Mot[],
+  alea: Aleatoire = Math.random,
+  pairesSons: PaireSons[] = [],
+  dire = false,
+): Etape[] {
+  const nbDire = dire ? 1 : 0
+  const nbSimples = QUESTIONS_PAR_QUIZ - 1 - (pairesSons.length > 0 ? 1 : 0) - nbDire
+  const mots = candidats.slice(0, nbSimples + nbDire + MOTS_PAR_PAIRES)
   const simples = melanger(mots.slice(0, nbSimples), alea)
-  const pourPaires = mots.length > nbSimples ? mots.slice(nbSimples) : []
+  const aDire = mots.slice(nbSimples, nbSimples + nbDire)
+  const pourPaires = mots.slice(nbSimples + nbDire)
   const etapes: Etape[] = simples.map((mot, i) => ({
     type: i % 2 === 0 ? 'ecoute' : 'traduis',
     mot,
@@ -42,6 +50,7 @@ export function composerQuiz(candidats: Mot[], tous: Mot[], alea: Aleatoire = Ma
   if (pairesSons.length > 0) {
     etapes.splice(1 + Math.floor(alea() * etapes.length), 0, questionDistingue(choisirPaire(pairesSons, mots, alea), alea))
   }
+  for (const mot of aDire) etapes.splice(1 + Math.floor(alea() * etapes.length), 0, { type: 'disle', mot })
   if (pourPaires.length >= 3) {
     // Les paires prennent une place au hasard, jamais en premier.
     const place = 1 + Math.floor(alea() * etapes.length)

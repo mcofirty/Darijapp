@@ -9,7 +9,7 @@ import type { Mot } from '../../data/types'
 import { db } from '../../db/db'
 import { useMarques } from '../../db/marques'
 import { useMots } from '../../db/motsPerso'
-import { composerSession, melanger } from '../../exercices/session'
+import { DIRE_PAR_SESSION, composerSession, melanger } from '../../exercices/session'
 import { motsDifficiles } from '../../exercices/selections'
 import { useResume } from '../../db/useResume'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
@@ -83,7 +83,7 @@ export function Apprendre() {
   /** Entraînement libre sur une liste : il ne change pas la répétition espacée. */
   function reviser(mots: Mot[]) {
     const choisis = melanger(mots).slice(0, MOTS_PAR_REVISION)
-    setSession({ etapes: composerSession([], choisis, MOTS, Math.random, PAIRES_SONS), nouveaux: 0, entrainement: true })
+    setSession({ etapes: composerSession([], choisis, MOTS, Math.random, PAIRES_SONS, DIRE_PAR_SESSION), nouveaux: 0, entrainement: true })
     setNumero((n) => n + 1)
   }
 

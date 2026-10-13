@@ -59,7 +59,7 @@ Ces fonctions complètent les écrans et se codent entièrement dans l'appli.
 | Favoris | Épingler les mots utiles pour un prochain voyage et les réviser à part | Dictionnaire |
 | Mode écoute | Enchaîne mot darija, pause, traduction, pour réviser sans regarder l'écran | Apprendre |
 | Rappel calendrier | Génère le fichier .ics du rappel quotidien | Profil |
-| Sans micro | Si l'accès au micro est refusé, les exercices oraux laissent place à des exercices d'écoute | Partout |
+| Sans micro | Interrupteur « Micro » dans Profil, ou accès au micro refusé : Dis-le devient une auto-évaluation (dire le mot à voix haute, puis « Je l'ai bien dit » ou « À retravailler ») | Partout |
 
 ## Vocabulaire et prononciation
 
@@ -99,7 +99,9 @@ Affichage après chaque prise de parole :
 
 Un score de 60 ou plus compte comme un mot réussi dans la répétition espacée ; un bouton « Le score se trompe » permet de corriger à la main.
 
-Calibrage automatique : des tests comparent deux rendus de synthèse du même mot (le modèle varie légèrement le rythme à chaque génération), qui doivent dépasser 80, et deux mots proches mais différents, qui doivent rester sous 60 ; les seuils s'ajustent sur ces tests.
+Calibrage automatique : des tests comparent le MP3 de Jamal d'un mot à d'autres rendus du même mot (ralenti, voix plus aiguë, voix plus grave, fabriqués par ffmpeg, car Jamal donne toujours le même rendu), qui doivent dépasser 80, et les deux mots de chaque paire de sons proches (9elb / kelb…), qui doivent rester sous 60 ; les seuils s'ajustent sur ces tests.
+
+Réglage sur ta voix : ta voix n'est pas celle de Jamal. Dans Profil, « Régler le score sur ma voix » te fait répéter 4 mots faciles ; l'écart mesuré décale le barème. Chaque « Le score se trompe » qui fait passer un essai en réussi affine ce réglage. Seules des distances sont gardées, jamais ta voix.
 
 ## Apprentissage ludique
 
@@ -201,7 +203,7 @@ Tout tourne sur le téléphone, sans serveur ni compte. L'audio est préparé un
   - **Répétition espacée** : calcule la prochaine révision de chaque mot ;
   - **Enregistreur et score** : micro, puis score sur 100 par rapport à la référence ;
   - **Contenu** : mots en JSON et fichiers audio MP3 ;
-  - **Stockage local (IndexedDB)** : progression, séries, XP, mots ajoutés et enregistrements de ta voix.
+  - **Stockage local (IndexedDB)** : progression (dont les scores de prononciation), séries, XP, mots ajoutés ; ta voix n'est jamais gardée.
 - **Outils de préparation** :
   - **Script audio (Python)** : génère les MP3 une fois avec la voix marocaine Jamal ;
   - **GitHub Pages** : sert l'appli au téléphone, publiée par Claude Code.
@@ -214,10 +216,10 @@ Les écrans pilotent le moteur d'exercices, qui puise dans le contenu et transme
 | Style | Tailwind CSS | Mise en page mobile rapide |
 | Hors ligne | PWA (vite-plugin-pwa) | Installable sur l'écran d'accueil, marche sans réseau |
 | Stockage | IndexedDB via Dexie | Progression, mots ajoutés et enregistrements gardés sur l'appareil |
-| Audio des mots | Script Python + voix marocaine Jamal (edge-tts), secours mms-tts-ara | MP3 générés une fois et embarqués dans l'appli, accent marocain |
+| Audio des mots | Script Python + voix marocaine Jamal (API Azure Speech, dans GitHub Actions), secours mms-tts-ara | MP3 générés une fois et embarqués dans l'appli, accent marocain |
 | Audio des mots ajoutés | API Web Speech du navigateur | Synthèse immédiate, sans fichier à produire |
 | Enregistrement | MediaRecorder | Intégré au navigateur |
-| Score de prononciation | Empreintes MFCC (bibliothèque Meyda) + comparaison DTW | Calcul sur le téléphone, hors ligne |
+| Score de prononciation | Empreintes MFCC + comparaison DTW, écrites dans l'appli (sans bibliothèque) | Calcul sur le téléphone, hors ligne, même code dans les tests |
 | Rappel | Fichier .ics généré par l'appli | Rappel natif dans le Calendrier de l'iPhone |
 | Tests | Vitest | Vérifier la répétition espacée, la correction et le score |
 | Publication | GitHub Pages + GitHub Actions | Mise en ligne automatique à chaque modification, sans ordinateur |
@@ -262,7 +264,7 @@ Fin du MVP : si l'appli est utilisée 5 jours sur 7 pendant 4 semaines. Chaque j
 Le MVP est réussi si :
 
 - [ ] les 150 mots sont disponibles avec leur audio généré ;
-- [ ] le score dépasse 80 entre deux rendus du même mot et reste sous 60 entre deux mots proches ;
+- [x] le score dépasse 80 entre deux rendus du même mot et reste sous 60 entre deux mots proches ;
 - [ ] tu utilises l'appli 5 jours sur 7 pendant 4 semaines ;
 - [ ] ton taux de bonnes réponses en révision dépasse 80 % ;
 - [ ] aucune progression n'est perdue après fermeture ou mise à jour.

@@ -65,6 +65,17 @@ describe('composerQuiz', () => {
     }
   })
 
+  it('avec Dis-le : une question à prononcer, toujours 5 questions et jamais deux fois le même mot', () => {
+    for (let g = 1; g < 30; g++) {
+      const etapes = composerQuiz(MOTS.slice(0, 9), MOTS, graine(g), PAIRES_SONS, true)
+      expect(etapes).toHaveLength(QUESTIONS_PAR_QUIZ)
+      expect(etapes.filter((e) => e.type === 'disle')).toHaveLength(1)
+      expect(etapes[0].type).not.toBe('disle')
+      const ids = etapes.flatMap((e) => (e.type === 'paires' ? e.mots.map((m) => m.id) : 'mot' in e ? [e.mot.id] : []))
+      expect(new Set(ids).size).toBe(ids.length)
+    }
+  })
+
   it('se passe des paires quand il y a trop peu de mots', () => {
     const etapes = composerQuiz(MOTS.slice(0, 4), MOTS, graine(2))
     expect(etapes.map((e) => e.type).every((t) => t === 'ecoute' || t === 'traduis')).toBe(true)

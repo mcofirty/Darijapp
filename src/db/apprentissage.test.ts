@@ -94,3 +94,21 @@ describe('enregistrerActivite', () => {
     expect((await enregistrerActivite('express', { bonnes: 0, mauvaises: 0 }, J, base)).xp).toBe(10)
   })
 })
+
+describe('scores de prononciation', () => {
+  it('ajoute les scores de Dis-le à la progression du mot, 20 au plus', async () => {
+    const id = MOTS[0].id
+    await enregistrerSession(new Map([[id, true]]), { bonnes: 1, mauvaises: 0, nouveaux: 1, entrainement: false, scores: new Map([[id, [70, 85]]]) }, J, base)
+    expect((await base.progression.get(id))?.scores).toEqual([70, 85])
+    const beaucoup = Array.from({ length: 25 }, (_, i) => i)
+    await enregistrerSession(new Map([[id, true]]), { bonnes: 1, mauvaises: 0, nouveaux: 0, entrainement: true, scores: new Map([[id, beaucoup]]) }, J, base)
+    const scores = (await base.progression.get(id))!.scores
+    expect(scores).toHaveLength(20)
+    expect(scores.at(-1)).toBe(24)
+  })
+
+  it('n’invente pas de progression pour un mot jamais vu en entraînement', async () => {
+    await enregistrerSession(new Map(), { bonnes: 0, mauvaises: 0, nouveaux: 0, entrainement: true, scores: new Map([['inconnu', [90]]]) }, J, base)
+    expect(await base.progression.get('inconnu')).toBeUndefined()
+  })
+})

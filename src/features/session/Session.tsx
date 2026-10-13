@@ -11,6 +11,7 @@ import { Bouton } from '../../ui/Boutons'
 import { Bilan } from './Bilan'
 import { Choix } from './Choix'
 import { Decouverte } from './Decouverte'
+import { DisLe, type ResultatDire } from './DisLe'
 import { Distingue } from './Distingue'
 import { Paires } from './Paires'
 
@@ -35,6 +36,8 @@ export function Session({ etapes: depart, nouveaux, entrainement, quiz = false, 
   const [retour, setRetour] = useState<Retour | null>(null)
   const [bilan, setBilan] = useState<BilanSession | null>(null)
   const [confirmer, setConfirmer] = useState(false)
+  // Dis-le : résultat affiché, validé par « Continuer ».
+  const [dire, setDire] = useState<ResultatDire | null>(null)
   const resultats = useRef(new Resultats())
   // Quiz : chaque question compte une fois (les paires sont justes sans aucune erreur).
   const questions = useRef({ justes: 0, total: 0, erreurPaires: false })
@@ -60,8 +63,18 @@ export function Session({ etapes: depart, nouveaux, entrainement, quiz = false, 
     setRetour(juste ? { juste: true } : { juste: false, mot })
   }
 
+  /** Dis-le validé : compté comme les autres réponses, sans retour en plus (le score est déjà affiché). */
+  function valider(mot: Mot, r: ResultatDire) {
+    resultats.current.noter(mot.id, r.juste)
+    if (r.score !== null) resultats.current.noterScore(mot.id, r.score)
+    compterQuestion(r.juste)
+    sonReponse(r.juste)
+    void suivant()
+  }
+
   async function suivant() {
     setRetour(null)
+    setDire(null)
     if (index + 1 < etapes.length) {
       setIndex(index + 1)
       return
@@ -71,7 +84,7 @@ export function Session({ etapes: depart, nouveaux, entrainement, quiz = false, 
     setBilan(
       quiz
         ? await enregistrerActivite('quiz', { bonnes: q.justes, mauvaises: q.total - q.justes })
-        : await enregistrerSession(r.parMot(), { bonnes: r.bonnes, mauvaises: r.mauvaises, nouveaux, entrainement }),
+        : await enregistrerSession(r.parMot(), { bonnes: r.bonnes, mauvaises: r.mauvaises, nouveaux, entrainement, scores: r.scores }),
     )
   }
 
@@ -141,6 +154,7 @@ export function Session({ etapes: depart, nouveaux, entrainement, quiz = false, 
           {etape.type === 'distingue' && (
             <Distingue paire={etape.paire} cible={etape.cible} onRepondu={(j) => repondre(j, etape.cible, null)} />
           )}
+          {etape.type === 'disle' && <DisLe mot={etape.mot} onPret={setDire} onRepondu={(r) => valider(etape.mot, r)} />}
           {etape.type === 'paires' && (
             <Paires
               mots={etape.mots}
@@ -159,7 +173,7 @@ export function Session({ etapes: depart, nouveaux, entrainement, quiz = false, 
         </div>
       </div>
 
-      {(retour !== null || etape.type === 'decouverte') && (
+      {(retour !== null || etape.type === 'decouverte' || (etape.type === 'disle' && dire)) && (
         <div className="px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2">
           {/* Panneau de commandes en Liquid Glass : il s'ouvre pour donner le résultat. */}
           <div className="verre mx-auto max-w-xl rounded-panneau p-3">
@@ -184,8 +198,8 @@ export function Session({ etapes: depart, nouveaux, entrainement, quiz = false, 
             </div>
             <Bouton
               grand
-              className={`w-full ${retour?.juste ? '!bg-vert-plein' : ''}`}
-              onClick={() => void suivant()}
+              className={`w-full ${retour?.juste || dire?.juste ? '!bg-vert-plein' : ''}`}
+              onClick={() => (etape.type === 'disle' && dire ? valider(etape.mot, dire) : void suivant())}
             >
               Continuer
             </Bouton>

@@ -40,13 +40,16 @@ export interface BilanSession {
   nouveaux: number
 }
 
+/** Scores de prononciation gardés par mot (les plus récents). */
+export const SCORES_GARDES = 20
+
 /**
  * Enregistre une session terminée : met à jour la répétition espacée de chaque mot
- * (sauf en entraînement libre) et ajoute la session à l'historique.
+ * (sauf en entraînement libre), ajoute les scores de prononciation et la session à l'historique.
  */
 export async function enregistrerSession(
   resultats: Map<string, boolean>,
-  stats: { bonnes: number; mauvaises: number; nouveaux: number; entrainement: boolean },
+  stats: { bonnes: number; mauvaises: number; nouveaux: number; entrainement: boolean; scores?: Map<string, number[]> },
   aujourdhui = dateLocale(),
   base: DarijaDB = db,
 ): Promise<BilanSession> {
@@ -66,6 +69,10 @@ export async function enregistrerSession(
         }
         await base.progression.put(progression)
       }
+    }
+    for (const [id, scores] of stats.scores ?? []) {
+      const avant = await base.progression.get(id)
+      if (avant) await base.progression.update(id, { scores: [...avant.scores, ...scores].slice(-SCORES_GARDES) })
     }
     await base.sessions.add({ date: aujourdhui, xp, bonnes: stats.bonnes, mauvaises: stats.mauvaises, nouveaux: stats.nouveaux, type: 'session' })
   })

@@ -118,3 +118,32 @@ describe('Distingue les sons', () => {
     expect([...r.parMot()]).toEqual([[MOTS[0].id, true]])
   })
 })
+
+describe('Dis-le', () => {
+  it('fait prononcer les premiers nouveaux mots après leurs paires', () => {
+    const nouveaux = MOTS.slice(0, 5)
+    const etapes = composerSession(nouveaux, [], MOTS, graine(3), [], 2)
+    const dire = etapes.filter((e) => e.type === 'disle')
+    expect(dire.map((e) => e.mot.id)).toEqual([nouveaux[0].id, nouveaux[1].id])
+    const iPaires = etapes.findIndex((e) => e.type === 'paires')
+    expect(etapes.findIndex((e) => e.type === 'disle')).toBe(iPaires + 1)
+  })
+
+  it('sans nouveau mot, fait prononcer des révisions', () => {
+    const revisions = MOTS.slice(10, 14)
+    const dire = composerSession([], revisions, MOTS, graine(5), [], 2).filter((e) => e.type === 'disle')
+    expect(dire).toHaveLength(2)
+    for (const e of dire) expect(revisions.map((m) => m.id)).toContain(e.mot.id)
+  })
+
+  it('n’est pas refait en fin de session (on peut réessayer sur place)', () => {
+    expect(etapeARefaire({ type: 'disle', mot: MOTS[0] }, MOTS)).toBeNull()
+  })
+
+  it('garde les scores de chaque mot', () => {
+    const r = new Resultats()
+    r.noterScore('a', 72)
+    r.noterScore('a', 85)
+    expect(r.scores.get('a')).toEqual([72, 85])
+  })
+})

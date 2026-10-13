@@ -6,7 +6,7 @@ import { THEMES } from '../../data/themes'
 import { db } from '../../db/db'
 import { ouvrirTresor } from '../../db/journal'
 import { useMots } from '../../db/motsPerso'
-import { composerSession, melanger } from '../../exercices/session'
+import { DIRE_PAR_SESSION, composerSession, melanger } from '../../exercices/session'
 import { ETAPES, XP_TRESOR, cleTresor, etatsDuVoyage, planDeLecon, prochaineEtape, tresorOuvrable, type EtatEtape } from '../../gamification/voyage'
 import { dateLocale } from '../../srs/dates'
 import { Bouton } from '../../ui/Boutons'
@@ -63,8 +63,8 @@ export function Parcours() {
     const plan = planDeLecon(ETAPES[index], MOTS, progressions ?? [], dateLocale())
     const entrainement = plan.entrainement.length > 0
     const etapes = entrainement
-      ? composerSession([], melanger(plan.entrainement).slice(0, 8), MOTS, Math.random, PAIRES_SONS)
-      : composerSession(plan.nouveaux, plan.revisions, MOTS, Math.random, PAIRES_SONS)
+      ? composerSession([], melanger(plan.entrainement).slice(0, 8), MOTS, Math.random, PAIRES_SONS, DIRE_PAR_SESSION)
+      : composerSession(plan.nouveaux, plan.revisions, MOTS, Math.random, PAIRES_SONS, DIRE_PAR_SESSION)
     setSession((s) => ({ etapes, nouveaux: plan.nouveaux.length, entrainement, numero: (s?.numero ?? 0) + 1, etape: index }))
   }
 

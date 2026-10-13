@@ -10,7 +10,7 @@ const MOTS_EXPRESS = 40
 
 export async function preparerQuiz(): Promise<Etape[]> {
   const [progressions, mots] = await Promise.all([db.progression.toArray(), tousLesMots()])
-  return composerQuiz(motsPourQuiz(progressions, mots, 8), mots, Math.random, PAIRES_SONS)
+  return composerQuiz(motsPourQuiz(progressions, mots, 8), mots, Math.random, PAIRES_SONS, true)
 }
 
 /** Générateur de questions du Quiz express, sur les mots les moins sus. */
