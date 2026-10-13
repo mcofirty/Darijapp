@@ -5,6 +5,18 @@ export const CLE_APPARENCE = 'darija-apparence'
 
 const COULEURS_BARRE = { clair: '#f2f2f7', sombre: '#000000' }
 
+/** Couleur achetée au souk, copiée aussi pour être appliquée avant le premier affichage. */
+export const CLE_COULEUR = 'darija-couleur'
+
+export function appliquerCouleur(couleur: string): void {
+  document.documentElement.dataset.couleur = couleur
+  try {
+    localStorage.setItem(CLE_COULEUR, couleur)
+  } catch {
+    // Stockage indisponible : la couleur reste dans IndexedDB.
+  }
+}
+
 /** Applique l'apparence à la page : attribut data-theme et couleur de la barre d'état. */
 export function appliquerApparence(apparence: Apparence): void {
   document.documentElement.dataset.theme = apparence

@@ -9,7 +9,7 @@ import { Parcours } from '../features/parcours/Parcours'
 import { Profil } from '../features/profil/Profil'
 import { Progres } from '../features/progres/Progres'
 import { Quiz } from '../features/quiz/Quiz'
-import { appliquerApparence } from './apparence'
+import { appliquerApparence, appliquerCouleur } from './apparence'
 import { BarreOnglets } from './BarreOnglets'
 import { sensDuBalayage } from './glisser'
 import { ONGLETS, type Onglet } from './onglets'
@@ -36,7 +36,8 @@ export default function App() {
   const [onglet, setOnglet] = useState<Onglet>('apprendre')
   const [entree, setEntree] = useState<'entree-droite' | 'entree-gauche' | ''>('')
   const depart = useRef<Toucher | null>(null)
-  const { apparence } = useProfil()
+  const { apparence, couleur } = useProfil()
+  useEffect(() => appliquerCouleur(couleur), [couleur])
 
   useEffect(() => {
     appliquerApparence(apparence)

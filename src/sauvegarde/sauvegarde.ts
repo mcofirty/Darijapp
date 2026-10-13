@@ -4,7 +4,7 @@ export const FORMAT_SAUVEGARDE = 'darijaapp-sauvegarde'
 export const VERSION_SAUVEGARDE = 1
 
 /** Tables copiées dans le fichier : toute la progression, rien d'autre. */
-export const TABLES_SAUVEGARDEES = ['progression', 'profil', 'motsPerso', 'sessions', 'marques', 'journal', 'bonus'] as const
+export const TABLES_SAUVEGARDEES = ['progression', 'profil', 'motsPerso', 'sessions', 'marques', 'journal', 'bonus', 'achats'] as const
 export type TableSauvegardee = (typeof TABLES_SAUVEGARDEES)[number]
 
 export interface Sauvegarde {

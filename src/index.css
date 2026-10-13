@@ -114,6 +114,33 @@
   }
 }
 
+/*
+ * Couleurs achetées au souk (attribut data-couleur sur <html>) : elles remplacent l'accent rouge du drapeau.
+ * Les erreurs restent rouges. Contrastes vérifiés : 5,4:1 et plus pour le blanc sur le fond plein et pour
+ * le texte d'accent, en clair comme en sombre.
+ */
+:root[data-couleur="chefchaouen"] { --accent: #2563c9; --accent-plein: #2563c9; --accent-doux: rgba(37, 99, 201, 0.1); }
+:root[data-couleur="chefchaouen"][data-theme="sombre"] { --accent: #7fb0ff; --accent-doux: rgba(127, 176, 255, 0.16); }
+@media (prefers-color-scheme: dark) {
+  :root[data-couleur="chefchaouen"]:not([data-theme="clair"]) { --accent: #7fb0ff; --accent-doux: rgba(127, 176, 255, 0.16); }
+}
+:root[data-couleur="marrakech"] { --accent: #b2491a; --accent-plein: #b2491a; --accent-doux: rgba(178, 73, 26, 0.1); }
+:root[data-couleur="marrakech"][data-theme="sombre"] { --accent: #ff9a66; --accent-doux: rgba(255, 154, 102, 0.16); }
+@media (prefers-color-scheme: dark) {
+  :root[data-couleur="marrakech"]:not([data-theme="clair"]) { --accent: #ff9a66; --accent-doux: rgba(255, 154, 102, 0.16); }
+}
+:root[data-couleur="safran"] { --accent: #8a6100; --accent-plein: #8a6100; --accent-doux: rgba(138, 97, 0, 0.1); }
+:root[data-couleur="safran"][data-theme="sombre"] { --accent: #f2c14e; --accent-doux: rgba(242, 193, 78, 0.16); }
+@media (prefers-color-scheme: dark) {
+  :root[data-couleur="safran"]:not([data-theme="clair"]) { --accent: #f2c14e; --accent-doux: rgba(242, 193, 78, 0.16); }
+}
+:root[data-couleur="indigo"] { --accent: #4b3fa8; --accent-plein: #4b3fa8; --accent-doux: rgba(75, 63, 168, 0.1); }
+:root[data-couleur="indigo"][data-theme="sombre"] { --accent: #a99dff; --accent-doux: rgba(169, 157, 255, 0.16); }
+@media (prefers-color-scheme: dark) {
+  :root[data-couleur="indigo"]:not([data-theme="clair"]) { --accent: #a99dff; --accent-doux: rgba(169, 157, 255, 0.16); }
+}
+
+
 @theme inline {
   --color-fond: var(--fond);
   --color-carte: var(--carte);

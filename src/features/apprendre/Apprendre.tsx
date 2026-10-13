@@ -1,5 +1,5 @@
 import { useLiveQuery } from 'dexie-react-hooks'
-import { Flame, Headphones, Star, TriangleAlert } from 'lucide-react'
+import { Coins, Flame, Headphones, Star, TriangleAlert } from 'lucide-react'
 import { useState } from 'react'
 import { motsDuTheme } from '../../data'
 import { SONS } from '../../data/sons'
@@ -16,7 +16,11 @@ import { Ligne, Section, Tuile } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
 import { VISUELS_THEMES, VISUEL_SONS } from '../../ui/visuels'
 import { ModeEcoute } from '../ecoute/ModeEcoute'
+import { Plante } from '../jeu/Plante'
 import { QuetesDuJour } from '../jeu/QuetesDuJour'
+import { Souk } from '../jeu/Souk'
+import { usePorteMonnaie } from '../../db/souk'
+import { useProfil } from '../../db/useProfil'
 import { FicheMot } from '../mots/FicheMot'
 import { ListeMots } from '../mots/ListeMots'
 import { CarteSessionDuJour } from '../session/CarteSessionDuJour'
@@ -31,6 +35,7 @@ type Vue =
   | { type: 'ecoute' }
   | { type: 'favoris' }
   | { type: 'difficiles' }
+  | { type: 'souk' }
   | { type: 'theme'; themeId: string }
 
 /** Une révision de favoris ou de mots difficiles reprend 8 mots au hasard. */
@@ -57,6 +62,8 @@ export function Apprendre() {
   const [numero, setNumero] = useState(0)
   const { niveau, xpTotal } = useResume()
   const MOTS = useMots()
+  const { solde } = usePorteMonnaie()
+  const { pot } = useProfil()
   const marques = useMarques()
   const progressions = useLiveQuery(() => db.progression.toArray(), []) ?? []
   const favoris = MOTS.filter((m) => marques.get(m.id)?.favori)
@@ -95,6 +102,7 @@ export function Apprendre() {
 
   if (vue.type === 'sons') return <GuideSons onRetour={() => setVue({ type: 'accueil' })} />
   if (vue.type === 'ecoute') return <ModeEcoute onRetour={() => setVue({ type: 'accueil' })} />
+  if (vue.type === 'souk') return <Souk onRetour={() => setVue({ type: 'accueil' })} />
   if (vue.type === 'favoris')
     return (
       <ListeSpeciale
@@ -123,6 +131,7 @@ export function Apprendre() {
 
       <Section titre="Ma progression">
         <Ligne
+          tuile={<Plante niveau={niveau.niveau} pot={pot} />}
           titre={
             <span className="block">
               <span className="flex items-baseline justify-between">
@@ -139,6 +148,14 @@ export function Apprendre() {
             </span>
           }
           sousTitre={`${xpTotal} XP au total`}
+        />
+        <Ligne
+          tuile={<Tuile icone={Coins} couleur="#ffcc00" />}
+          titre="Le souk"
+          sousTitre="Dépense tes dirhams en décor"
+          valeur={`${solde} DH`}
+          chevron
+          onClick={() => ouvrir({ type: 'souk' })}
         />
       </Section>
 

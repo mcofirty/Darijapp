@@ -4,6 +4,8 @@ import { planDeSession } from '../../db/apprentissage'
 import { useMots } from '../../db/motsPerso'
 import { useResume } from '../../db/useResume'
 import { Bouton } from '../../ui/Boutons'
+import { useProfil } from '../../db/useProfil'
+import { motifZellige } from '../jeu/Plante'
 
 /** Carte d'accueil : la session du jour, toujours accessible et sans limite. */
 export function CarteSessionDuJour({ onCommencer }: { onCommencer: () => void }) {
@@ -11,6 +13,7 @@ export function CarteSessionDuJour({ onCommencer }: { onCommencer: () => void })
   const MOTS = useMots()
   const plan = useLiveQuery(() => planDeSession(), [sessionsAujourdhui])
   const faite = sessionsAujourdhui > 0
+  const zellige = motifZellige(useProfil().zellige)
 
   const contenu = plan
     ? [
@@ -20,7 +23,8 @@ export function CarteSessionDuJour({ onCommencer }: { onCommencer: () => void })
     : []
 
   return (
-    <section className="mb-[26px] rounded-carte bg-carte p-marge">
+    <section className="mb-[26px] overflow-hidden rounded-carte bg-carte p-marge">
+      {zellige && <div aria-hidden className="-mx-marge -mt-marge mb-marge h-10 opacity-80" style={{ background: `${zellige} center / 28px` }} />}
       <p className="t-note font-semibold uppercase text-accent">{faite ? `Aujourd'hui · +${xpAujourdhui} XP` : 'Session du jour'}</p>
       <h2 className="t-titre-2 mt-1 flex items-center gap-2">
         {faite && <CircleCheck className="h-6 w-6 text-vert" strokeWidth={2.5} aria-hidden />}

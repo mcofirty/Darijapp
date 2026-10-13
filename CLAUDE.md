@@ -81,7 +81,7 @@ docs/
 
 | Onglet | Contenu |
 | --- | --- |
-| Apprendre | Écran d'accueil. Grand titre avec la série (flamme). Carte « Session du jour » (nouveaux mots, révisions, mots vus, « Commencer » puis « Encore une session », sans limite), « Quêtes du jour » (3 quêtes, 3 verres de thé, théière +60 XP), section « Ma progression » (niveau, XP), puis « Explorer » : mode écoute, mes favoris, mots difficiles (ratés et en boîte 1 ou 2 ; listes avec « Réviser » = entraînement libre sur 8 mots, et « Écouter »), guide des sons et 31 thèmes en liste groupée, fiches mots |
+| Apprendre | Écran d'accueil. Grand titre avec la série (flamme). Carte « Session du jour » (nouveaux mots, révisions, mots vus, « Commencer » puis « Encore une session », sans limite), « Quêtes du jour » (3 quêtes, 3 verres de thé, théière +60 XP), section « Ma progression » (plante qui pousse avec le niveau dans le pot choisi, niveau, XP, « Le souk » avec le solde de dirhams), puis « Explorer » : mode écoute, mes favoris, mots difficiles (ratés et en boîte 1 ou 2 ; listes avec « Réviser » = entraînement libre sur 8 mots, et « Écouter »), guide des sons et 31 thèmes en liste groupée, fiches mots |
 | Parcours | Voyage au Maroc en 10 étapes (Tanger, Tétouan, Chefchaouen, Fès, Meknès, Rabat, Casablanca, Marrakech, Essaouira, Merzouga) qui couvrent les 31 thèmes, sur une route qui serpente ; « Prochaine étape » = la première sans tampon ; anneau des mots retenus ; tampon quand 80 % des mots de l'étape sont retenus (boîte 2 ou plus) ; entre deux étapes, un trésor (+100 XP) qui s'ouvre avec le tampon d'avant ; page d'étape (thèmes, « Commencer une leçon » : 5 nouveaux mots de l'étape et ses révisions dues, sinon entraînement libre) ; « Mon passeport » : un tampon à l'encre de chaque ville |
 | Quiz | Trois cartes. « Contrôle tes acquis » : quiz de 5 questions (Écoute et choisis, Traduis, une Distingue les sons et une Associe les paires, jamais en premier) sur les mots les moins sus (boîte, échecs, retard), complétés par le début du programme ; aucune question refaite ; bilan « x sur 5 », « Sans faute ! ». « Quiz express » : 60 s, questions enchaînées sans « Continuer » (réponse affichée 0,45 s), chrono qui rougit à 10 s, score, record gardé dans le profil. « Chasse aux sons » : même chrono avec des questions Distingue les sons, combo (dès la 5e bonne réponse d'affilée, chacune vaut 2 points), record en points. Quiz, Quiz express et Chasse aux sons donnent de l'XP et comptent pour la série, sans toucher à la répétition espacée |
 | Progrès | Contrôle segmenté Tableau de bord / Dictionnaire. Tableau : niveau et XP restants, XP total, série avec les 7 derniers jours (flammes) et « Série sécurisée », XP et activités du jour, quêtes du jour, « Ma collection » (or, argent, bronze, vers l'objectif de 300 mots), 12 badges, mots vus. Dictionnaire : recherche iOS, tous les mots avec une pastille bronze / argent / or sur ceux déjà vus |
@@ -116,6 +116,7 @@ Fonctions complémentaires : premier lancement guidé, remplacer l'audio d'un mo
 - **XP** : 1 par bonne réponse, 10 par session terminée, 5 de bonus sans faute.
 - **Niveaux** : 120 XP pour le niveau 1, 140 pour le niveau 2, puis 20 XP de plus par niveau. Noms : Terreau, Graine, Germe, Pousse, Tige, Feuilles, Bouton, Fleur, Fruit, puis Arbre.
 - **Quêtes** : 3 par jour, renouvelées à minuit heure locale : toujours « Termine une session du jour », plus deux tirées selon la date parmi 8 (2 sessions, sans faute, quiz, Quiz express, Chasse aux sons, 40 XP, 5 nouveaux mots, 10 mots écoutés). Les 3 faites ouvrent la théière-coffre (+60 XP, une fois par jour). Un trésor du Parcours rapporte +100 XP, une seule fois (table `bonus`, `cle` = `tresor-<étape>`).
+- **Dirhams et souk** : 1 DH par bonne réponse, 60 par théière, 50 par trésor (recalculés depuis l'historique), moins les achats. Le souk ne vend que du décor : 4 couleurs d'accent (150 à 250 DH, erreurs toujours en rouge), 2 zelliges pour la carte du jour (120 DH), 3 pots (80 à 120 DH) ; l'article de départ de chaque rayon est gratuit.
 - **Collection et badges** : un mot vu est en bronze, en argent en boîte 3, en or en boîte 4. 12 badges (première activité, sans faute, 50 / 150 / 300 mots, 10 / 50 mots en or, 3 / 7 / 30 jours d'affilée en record, 15 au Quiz express, 20 à la Chasse aux sons).
 - **Série** : jours avec au moins une session. Aujourd'hui non fait ne casse rien. Une journée manquée est pardonnée si aucune autre ne l'a été dans les 7 jours ; deux jours manqués d'affilée cassent la série.
 - **Genre** : sert à accorder les phrases (« toi » = nta au masculin, nti au féminin).
@@ -164,7 +165,7 @@ Favori ou signalement (IndexedDB, table `marques`, depuis la v4 ; supprimé quan
 { "id": "salutations-012", "favori": true, "signale": "traduction", "date": 1760300000000 }
 ```
 
-Journal du jour (table `journal`, v5) : `{ "date": "2026-10-13", "ecoutes": 12, "coffre": true }` ; XP bonus (table `bonus`, v5) : `{ "id": 1, "date": "2026-10-13", "xp": 60, "raison": "coffre" }`, ajoutés à l'XP total. Sauvegarde (`darijaapp-AAAA-MM-JJ.json`) : `{ "format": "darijaapp-sauvegarde", "version": 1, "date": "…", "tables": { progression, profil, motsPerso, sessions, marques, journal, bonus } }` (`audioPerso` mis à null).
+Achat du souk (table `achats`, v6) : `{ "id": "chefchaouen", "date": "2026-10-13", "prix": 150 }` ; décor choisi dans le profil (`couleur`, `zellige`, `pot`), couleur copiée dans localStorage (`darija-couleur`) pour l'appliquer avant le premier affichage (`data-couleur` sur `<html>`). Journal du jour (table `journal`, v5) : `{ "date": "2026-10-13", "ecoutes": 12, "coffre": true }` ; XP bonus (table `bonus`, v5) : `{ "id": 1, "date": "2026-10-13", "xp": 60, "raison": "coffre" }`, ajoutés à l'XP total. Sauvegarde (`darijaapp-AAAA-MM-JJ.json`) : `{ "format": "darijaapp-sauvegarde", "version": 1, "date": "…", "tables": { progression, profil, motsPerso, sessions, marques, journal, bonus } }` (`audioPerso` mis à null).
 
 Progression d'un mot (IndexedDB ; ses champs `favori` et `signale` ne servent pas) :
 
@@ -209,7 +210,7 @@ Progression d'un mot (IndexedDB ; ses champs `favori` et `signale` ne servent pa
 
 ## État du projet
 
-Jalons en cours : **3 — Prononciation** (reste Dis-le) et **4 — Jeu** (restent les dirhams, le souk et les mini-jeux). Les jalons 1 et 2 sont en ligne sur https://mcofirty.github.io/Darijapp/.
+Jalons en cours : **3 — Prononciation** (reste Dis-le) et **4 — Jeu** (restent les mini-jeux marchandage et taxi). Les jalons 1 et 2 sont en ligne sur https://mcofirty.github.io/Darijapp/.
 
 | Jalon | Durée estimée | Contenu | Statut |
 | --- | --- | --- | --- |
@@ -233,8 +234,7 @@ Jalons en cours : **3 — Prononciation** (reste Dis-le) et **4 — Jeu** (reste
 | 2026-10-12 | Import de 1 530 mots et phrases du fichier de l'utilisateur (1 739 entrées, doublons retirés) en 23 nouveaux thèmes et 7 thèmes existants, arabe écrit par Claude ; le 2026-10-13, explication de prononciation et exemple pour chacun | `src/data/*.json`, `src/data/themes.ts`, `src/ui/visuels.ts`, `src/data/data.test.ts` |
 | 2026-10-13 | Onglet Quiz : quiz de 5 questions, Quiz express (60 s, record) et Chasse aux sons ; Distingue les sons (14 paires comme 9elb / kelb, voix Jamal) dans les sessions et les quiz | `src/features/quiz/`, `src/exercices/quiz.ts`, `src/data/sons/paires.json`, `src/data/pairesSons.ts`, `src/features/session/Distingue.tsx` |
 | 2026-10-13 | Mode écoute mains libres ; favoris, mots difficiles et « Signaler une erreur » avec liste à envoyer (base v4) | `src/features/ecoute/`, `src/audio/lecteur.ts`, `src/db/marques.ts`, `src/exercices/selections.ts`, `src/features/apprendre/ListeSpeciale.tsx`, `src/features/profil/MotsSignales.tsx` |
-| 2026-10-13 | Jeu : quêtes du jour et théière (+60 XP), semaine de la série, collection bronze / argent / or, 12 badges ; rappel .ics ; sauvegarde export / import ; base v5 | `src/gamification/`, `src/features/jeu/`, `src/db/journal.ts`, `src/db/sauvegarde.ts`, `src/sauvegarde/`, `src/features/profil/RappelEtSauvegarde.tsx` |
-| 2026-10-13 | Parcours : voyage au Maroc en 10 étapes avec leçons d'étape, tampons dans un passeport et trésors (+100 XP) | `src/gamification/voyage.ts`, `src/features/parcours/`, `src/db/journal.ts` |
+| 2026-10-13 | Jeu (jalon 4) : quêtes du jour et théière, semaine de la série, collection bronze / argent / or, 12 badges ; Parcours en voyage au Maroc (10 étapes, leçons, passeport, trésors) ; dirhams et souk de décor, plante qui pousse avec le niveau ; rappel .ics et sauvegarde ; bases v5 et v6 | `src/gamification/`, `src/features/jeu/`, `src/features/parcours/`, `src/db/journal.ts`, `src/db/souk.ts`, `src/db/sauvegarde.ts`, `src/sauvegarde/` |
 | 2026-10-12 | Animation d'ouverture : vidéo de 3 s de l'utilisateur sur fond sombre à chaque lancement, passée d'un toucher, image finale avec Réduire les animations ou si la vidéo ne démarre pas | `public/lancement.mp4`, `public/lancement-fin.jpg`, `src/app/lancement.ts`, `index.html` |
 
 ## Décisions
@@ -272,6 +272,7 @@ Jalons en cours : **3 — Prononciation** (reste Dis-le) et **4 — Jeu** (reste
 - 2026-10-13 : exemples des mots importés écrits pour tous les 1 530 (choix de l'utilisateur), une phrase courte et courante par mot ; l'article d'un mot en ش n'est pas doublé en latin (chta = الشتا), sinon le test de translittération compterait deux « ch ».
 - 2026-10-13 : quêtes, semaine, collection et badges calculés à partir des tables existantes (activités, progression, profil), sans état stocké qui pourrait se désynchroniser ; seuls les mots écoutés et l'ouverture de la théière vont dans `journal`, et l'XP de la théière dans `bonus` (pas dans `sessions`, pour ne pas fausser les activités du jour). Badges de série sur le record (plus longue suite de jours), pour qu'un badge obtenu ne se perde pas.
 - 2026-10-13 : Parcours indépendant du programme de la session du jour (qui garde l'ordre des thèmes) : les leçons d'étape écrivent dans la même répétition espacée ; aucune étape n'est verrouillée, seuls les trésors attendent un tampon.
+- 2026-10-13 : dirhams jamais stockés, recalculés depuis l'historique (bonnes réponses, théières, trésors) moins les achats : le solde ne peut ni se désynchroniser ni devenir négatif ; souk limité au décor pour respecter « rien de payant ni de verrouillé ».
 - 2026-10-10 : pas de routeur ; navigation par état React, suffisante pour 5 onglets.
 
 ## Points en suspens

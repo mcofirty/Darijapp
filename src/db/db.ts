@@ -26,6 +26,10 @@ export interface Profil {
   recordSons: number
   /** Heure du rappel quotidien (« 19:00 »), pour le fichier calendrier. */
   heureRappel: string
+  /** Décor choisi au souk : couleur de l'appli, zellige de la carte du jour, pot de la plante. */
+  couleur: string
+  zellige: string
+  pot: string
 }
 
 /** Apparence de l'appli : suit l'iPhone, ou forcée en clair ou en sombre. */
@@ -91,6 +95,13 @@ export interface Bonus {
   cle?: string
 }
 
+/** Article acheté au souk (table `achats`, depuis la v6). */
+export interface Achat {
+  id: string
+  date: string
+  prix: number
+}
+
 export const PROFIL_DEFAUT: Profil = {
   id: 'moi',
   prenom: '',
@@ -101,6 +112,9 @@ export const PROFIL_DEFAUT: Profil = {
   recordExpress: 0,
   recordSons: 0,
   heureRappel: '19:00',
+  couleur: 'drapeau',
+  zellige: 'aucun',
+  pot: 'terre',
 }
 
 export class DarijaDB extends Dexie {
@@ -111,6 +125,7 @@ export class DarijaDB extends Dexie {
   marques!: Table<Marque, string>
   journal!: Table<Journal, string>
   bonus!: Table<Bonus, number>
+  achats!: Table<Achat, string>
 
   constructor(nom = 'darijapp') {
     super(nom)
@@ -135,6 +150,10 @@ export class DarijaDB extends Dexie {
     this.version(5).stores({
       journal: 'date',
       bonus: '++id, date',
+    })
+    // v6 : achats du souk. Ajout de table seul : rien n'est perdu.
+    this.version(6).stores({
+      achats: 'id',
     })
   }
 }

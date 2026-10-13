@@ -14,6 +14,7 @@
       // Apparence choisie dans le Profil, appliquée avant le premier affichage.
       try {
         document.documentElement.dataset.theme = localStorage.getItem('darija-apparence') || 'systeme'
+        document.documentElement.dataset.couleur = localStorage.getItem('darija-couleur') || 'drapeau'
       } catch (e) {}
     </script>
     <style>
