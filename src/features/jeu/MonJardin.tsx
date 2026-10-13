@@ -1,4 +1,4 @@
-import { Coins } from 'lucide-react'
+import { ChevronRight, Coins } from 'lucide-react'
 import { useProfil } from '../../db/useProfil'
 import { useResume } from '../../db/useResume'
 import { STADES, croissance } from '../../gamification/jardin'
@@ -59,5 +59,30 @@ export function MonJardin({ retour, onSouk }: { retour: { libelle: string; actio
         <Coins className="h-5 w-5" strokeWidth={2.4} aria-hidden /> Décorer au souk
       </Bouton>
     </Page>
+  )
+}
+
+/** Aperçu du jardin pour le tableau de bord de Progrès : la scène en direct ; un toucher ouvre « Mon jardin ». */
+export function ApercuJardin({ onOuvrir }: { onOuvrir: () => void }) {
+  const { xpTotal } = useResume()
+  const { espece, pot, fond, objets } = useProfil()
+  const c = croissance(xpTotal)
+  return (
+    <Section titre="Mon jardin">
+      <button type="button" onClick={onOuvrir} className="pressable block w-full text-left" aria-label={`Ouvrir mon jardin : ${c.nom}, stade ${c.stade} sur ${STADES}`}>
+        <Jardin stade={c.stade} avancement={c.avancement} espece={espece} pot={pot} fond={fond} objets={objets} />
+        <span className="flex min-h-ligne items-center gap-3 px-marge py-3">
+          <span className="min-w-0 flex-1">
+            <span className="t-corps block">
+              {c.nom} · <span className="text-texte-2">stade {c.stade} sur {STADES}</span>
+            </span>
+            <span className="t-sous-titre block text-texte-2">
+              {c.prochain ? `Encore ${c.xpRestants} XP avant « ${c.prochain} »` : c.xpRestants > 0 ? `Encore ${c.xpRestants} XP pour sa pleine taille` : 'Ton arbre a sa pleine taille'}
+            </span>
+          </span>
+          <ChevronRight className="h-5 w-5 shrink-0 text-texte-3" strokeWidth={2.4} aria-hidden />
+        </span>
+      </button>
+    </Section>
   )
 }

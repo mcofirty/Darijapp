@@ -6,7 +6,7 @@ import { useResume } from '../../db/useResume'
 import { Segmente } from '../../ui/Boutons'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
-import { MonJardin } from '../jeu/MonJardin'
+import { ApercuJardin, MonJardin } from '../jeu/MonJardin'
 import { Souk } from '../jeu/Souk'
 import { Badges, Collection, Semaine } from '../jeu/Tableau'
 import { QuetesDuJour } from '../jeu/QuetesDuJour'
@@ -23,6 +23,11 @@ export function Progres() {
   if (mot) return <FicheMot mot={mot} retour={{ libelle: 'Progrès', action: () => setMot(null) }} />
   if (jardin === 'jardin') return <MonJardin retour={{ libelle: 'Progrès', action: () => setJardin(null) }} onSouk={() => setJardin('souk')} />
   if (jardin === 'souk') return <Souk retour={{ libelle: 'Mon jardin', action: () => setJardin('jardin') }} />
+
+  function ouvrirJardin() {
+    setJardin('jardin')
+    window.scrollTo(0, 0)
+  }
 
   return (
     <Page titre="Progrès">
@@ -58,15 +63,12 @@ export function Progres() {
                   </span>
                 </span>
               }
-              sousTitre="Voir ma plante dans Mon jardin"
               chevron
-              onClick={() => {
-                setJardin('jardin')
-                window.scrollTo(0, 0)
-              }}
+              onClick={ouvrirJardin}
             />
             <Ligne tuile={<Tuile icone={Trophy} couleur="#ffcc00" />} titre="XP au total" valeur={xpTotal} />
           </Section>
+          <ApercuJardin onOuvrir={ouvrirJardin} />
           <Semaine />
           <Section titre="Aujourd'hui">
             <Ligne tuile={<Tuile icone={Sparkles} couleur="#af52de" />} titre="XP du jour" valeur={xpAujourdhui} />
