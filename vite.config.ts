@@ -11,16 +11,11 @@ const dossierAudio = 'public/audio'
 const audios = existsSync(dossierAudio)
   ? readdirSync(dossierAudio).filter((f) => f.endsWith('.mp3')).sort()
   : []
-// Essai de la voix vocalisée (page cachée #voix) : MP3 déjà générés par l'Action.
-const essaisVoix = existsSync(`${dossierAudio}/essai`)
-  ? readdirSync(`${dossierAudio}/essai`).filter((f) => f.endsWith('.mp3')).sort()
-  : []
 
 export default defineConfig({
   base: '/Darijapp/',
   define: {
     __AUDIOS__: JSON.stringify(audios),
-    __ESSAI_VOIX__: JSON.stringify(essaisVoix),
   },
   plugins: [
     react(),

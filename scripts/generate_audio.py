@@ -20,7 +20,6 @@ Utilisation :
     python scripts/generate_audio.py --force          # régénère tout
     python scripts/generate_audio.py --apercu         # montre les textes lus
     python scripts/generate_audio.py --moteur mms     # voix de secours
-    python scripts/generate_audio.py --essai          # essai de la voix vocalisée (page #voix)
 """
 
 import argparse
@@ -52,24 +51,6 @@ def texte_a_lire(arabe: str) -> str:
     """« ... », « / » et « — » servent à l'affichage : on les remplace par des pauses."""
     texte = arabe.replace("...", "،").replace("/", "،").replace("—", "،")
     return " ".join(texte.split())
-
-
-VOIX_VOCALISEE = RACINE / "scripts" / "voix.json"
-ESSAI_VOIX = RACINE / "scripts" / "essai-voix.json"
-
-
-def lister_essai(force: bool = False) -> list[tuple[str, Path]]:
-    """Essai de la voix vocalisée (scripts/voix.json, écrit par « npm run voix ») sur quelques mots :
-    MP3 rangés à part dans public/audio/essai/, pour les comparer aux actuels sur la page cachée #voix."""
-    if not ESSAI_VOIX.exists():
-        return []
-    textes = json.loads(VOIX_VOCALISEE.read_text(encoding="utf-8"))
-    taches = []
-    for audio in json.loads(ESSAI_VOIX.read_text(encoding="utf-8")):
-        cible = PUBLIC / "audio" / "essai" / Path(audio).name
-        if audio in textes and (force or not cible.exists()):
-            taches.append((textes[audio], cible))
-    return taches
 
 
 def lister_a_generer(theme: str | None, force: bool) -> list[tuple[str, Path]]:
@@ -190,10 +171,9 @@ def main() -> int:
     parser.add_argument("--force", action="store_true", help="régénérer même les MP3 existants")
     parser.add_argument("--apercu", action="store_true", help="afficher les textes lus, sans générer")
     parser.add_argument("--moteur", choices=["azure", "mms"], default="azure", help="voix marocaine Azure ou secours local (mms)")
-    parser.add_argument("--essai", action="store_true", help="générer l'essai de voix vocalisée (scripts/essai-voix.json)")
     args = parser.parse_args()
 
-    taches = lister_essai(args.force) if args.essai else lister_a_generer(args.theme, args.force)
+    taches = lister_a_generer(args.theme, args.force)
     if args.apercu:
         for texte, cible in taches:
             print(f"{cible.name:28} {texte}")

@@ -3,7 +3,6 @@ import { useProfil } from '../db/useProfil'
 import { motDuLien } from '../data/motsPerso'
 import { AjoutMots } from '../features/ajout/AjoutMots'
 import { Proposition } from '../features/ajout/Proposition'
-import { EssaiVoix } from '../features/voix/EssaiVoix'
 import { choisirSons } from '../audio/effets'
 import { Apprendre } from '../features/apprendre/Apprendre'
 import { AideInstallation } from '../features/onboarding/AideInstallation'
@@ -24,8 +23,6 @@ interface Toucher {
 
 /** Page cachée d'ajout de mots : accessible seulement par le lien « …/Darijapp/#ajout ». */
 const LIEN_AJOUT = '#ajout'
-/** Page cachée de comparaison des voix : « …/Darijapp/#voix ». */
-const LIEN_VOIX = '#voix'
 
 export default function App() {
   const [hash, setHash] = useState(window.location.hash)
@@ -92,14 +89,6 @@ export default function App() {
     return (
       <div className="min-h-dvh overflow-x-clip pb-16">
         <Proposition mot={proposition} onTermine={quitterLien} />
-      </div>
-    )
-  }
-
-  if (hash === LIEN_VOIX) {
-    return (
-      <div className="min-h-dvh overflow-x-clip pb-16">
-        <EssaiVoix />
       </div>
     )
   }
