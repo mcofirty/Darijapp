@@ -57,6 +57,20 @@ export function appreciation(score: number): Appreciation {
   return { libelle: 'À retravailler', etoiles: 1, reussi: false }
 }
 
+/**
+ * Couleur du score dans l'anneau : or à 100, vert foncé dès 90, vert clair dès 80, orange dès 70,
+ * jaune dès 50, rouge dès 1, noir à 0.
+ */
+export function couleurDuScore(score: number): string {
+  if (score >= 100) return '#d4a017'
+  if (score >= 90) return '#1e7d3c'
+  if (score >= 80) return '#4cc764'
+  if (score >= 70) return '#ff9500'
+  if (score >= 50) return '#ffcc00'
+  if (score >= 1) return '#e0282e'
+  return '#000000'
+}
+
 /** Empreinte d'un enregistrement de référence, calculée une fois par mot. */
 export type Empreinte = Float64Array[]
 

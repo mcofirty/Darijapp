@@ -93,9 +93,11 @@ Le calcul tient dans un module unique (`src/scoring/`), testé à part, pour pou
 
 Affichage après chaque prise de parole :
 
-- 80 à 100 : « Excellent », 3 étoiles ;
-- 60 à 79 : « Presque », 2 étoiles, le modèle est rejoué ;
-- moins de 60 : « À retravailler », 1 étoile, audio ralenti et note sur le son difficile.
+- 80 à 100 : « Excellent » ;
+- 60 à 79 : « Presque », le modèle est rejoué ;
+- moins de 60 : « À retravailler », audio ralenti et note sur le son difficile.
+
+La note s'affiche dans un anneau qui se remplit, le chiffre au centre, de couleur : or à 100, vert foncé dès 90, vert clair dès 80, orange dès 70, jaune dès 50, rouge dès 1, noir à 0.
 
 Un score de 60 ou plus compte comme un mot réussi dans la répétition espacée ; un bouton « Le score se trompe » permet de corriger à la main.
 
@@ -121,7 +123,7 @@ Répétition espacée : chaque mot a un intervalle de révision (algorithme type
 
 Mécaniques de motivation :
 
-- niveaux nommés comme les étapes d'une plante (Terreau, Graine, Germe, Pousse, Tige, Feuilles, Bouton, Fleur, Fruit, Arbre), avec une mascotte pot de fleurs ; progression proposée : 120 XP pour le niveau 1, 140 pour le niveau 2, puis 20 XP de plus par niveau ;
+- 30 niveaux, les paliers d'une plante en 10 stades (Terreau, Graine, Germe, Pousse, Tige, Feuilles, Bouton, Fleur, Fruit, Arbre) de 3 paliers chacun, chaque palier ajoutant un détail visible (terre arrosée, graine qui se fend, crosse qui sort de terre, coccinelle, tuteur, papillon, abeille, nid…) ; 60 XP pour le niveau 1, puis 10 XP de plus par niveau (environ 3 mois pour l'arbre) ;
 - « Mon jardin » : en touchant la barre de niveau, la plante en grand, qui grandit avec chaque XP, dans le décor choisi ;
 - dirhams : 1 par bonne réponse et un bonus de précision par activité (10 sans faute, 5 avec une erreur, 2 avec deux) ; ils s'échangent au souk contre du décor seulement : plantes, fonds et objets du jardin, pots, couleurs de l'appli, sons des réponses, confettis, zelliges ;
 - 3 quêtes du jour, renouvelées à minuit : écouter 5 mots, terminer une session de cartes, réussir une session ou un quiz sans faute ; une quête de prononciation peut s'y ajouter (3 mots notés 80 ou plus) ;

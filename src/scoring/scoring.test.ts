@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { dtw } from './dtw'
 import { FREQUENCE, PAUSE_PHRASE, mfcc, niveauMax, reechantillonner, rogner } from './mfcc'
-import { ajouterReglage, appreciation, decalageVoix, distanceEssai, empreinte, scoreDeDistance, REGLAGES_GARDES } from './score'
+import { ajouterReglage, appreciation, couleurDuScore, decalageVoix, distanceEssai, empreinte, scoreDeDistance, REGLAGES_GARDES } from './score'
 
 /** Signal synthétique : une voyelle (deux formants) qui glisse, entourée de silence. */
 function voyelle(f1: number, f2: number, duree = 0.5, silence = 0.2, etirement = 1): Float32Array {
@@ -147,5 +147,18 @@ describe('score', () => {
     const meme = distanceEssai(ref, voyelle(700, 1200, 0.7, 0.3, 1.1))!
     const autre = distanceEssai(ref, voyelle(300, 2300))!
     expect(meme).toBeLessThan(autre)
+  })
+})
+
+describe('couleurDuScore', () => {
+  it('suit les seuils : or, vert foncé, vert clair, orange, jaune, rouge, noir', () => {
+    const c = (n: number) => couleurDuScore(n)
+    expect(c(100)).toBe('#d4a017')
+    expect([90, 99].map(c)).toEqual(['#1e7d3c', '#1e7d3c'])
+    expect([80, 89].map(c)).toEqual(['#4cc764', '#4cc764'])
+    expect([70, 79].map(c)).toEqual(['#ff9500', '#ff9500'])
+    expect([50, 69].map(c)).toEqual(['#ffcc00', '#ffcc00'])
+    expect([1, 49].map(c)).toEqual(['#e0282e', '#e0282e'])
+    expect(c(0)).toBe('#000000')
   })
 })

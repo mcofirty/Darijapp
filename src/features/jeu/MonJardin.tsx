@@ -5,8 +5,8 @@ import { lireXpTotal } from '../../db/apprentissage'
 import { lireProfil, modifierProfil } from '../../db/db'
 import { useProfil } from '../../db/useProfil'
 import { useResume } from '../../db/useResume'
-import { STADES, croissance, etapesDeCroissance } from '../../gamification/jardin'
-import { NOMS_NIVEAUX } from '../../gamification/xp'
+import { PALIERS, STADES, croissance, etapesDeCroissance } from '../../gamification/jardin'
+import { NOMS_NIVEAUX, NOMS_PALIERS, PALIERS_PAR_STADE } from '../../gamification/xp'
 import { Bouton } from '../../ui/Boutons'
 import { Section } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
@@ -44,7 +44,7 @@ export function ContenuJardin({ onSouk }: { onSouk: () => void }) {
   const fin = anim ? croissance(anim.arrivee) : c
   const plante = useCroissanceAnimee(etapes, fin, anim?.cle ?? 0)
   const avant = anim ? croissance(anim.depart) : c
-  const aGrandi = anim !== null && fin.stade > avant.stade
+  const aGrandi = anim !== null && fin.niveau > avant.niveau
 
   return (
     <>
@@ -56,38 +56,74 @@ export function ContenuJardin({ onSouk }: { onSouk: () => void }) {
         {aGrandi && (
           <p className="t-appel flex items-center gap-2 bg-vert-doux px-marge py-3 font-semibold text-vert" role="status">
             <Sprout className="h-5 w-5 shrink-0" strokeWidth={2.4} aria-hidden />
-            {anim.depart === 0 ? `Ta plante a poussé jusqu’au stade « ${fin.nom} » !` : `Ta plante a grandi : « ${avant.nom} » → « ${fin.nom} » !`}
+            {anim.depart === 0
+              ? `Ta plante a poussé jusqu’au palier « ${fin.nomPalier} » !`
+              : `Ta plante a grandi : « ${avant.nomPalier} » → « ${fin.nomPalier} » !`}
           </p>
         )}
         <div className="p-marge">
           <p className="t-note font-semibold uppercase text-accent">
-            Stade {c.stade} sur {STADES}
+            Niveau {c.niveau} sur {PALIERS} · {c.nom}, stade {c.stade} sur {STADES}
           </p>
-          <h2 className="t-titre-2 mt-1">{c.nom}</h2>
-          <span className="mt-3 block h-2 overflow-hidden rounded-full bg-remplissage" aria-hidden>
-            <span className="block h-full rounded-full bg-vert-plein transition-[width] duration-700" style={{ width: `${c.avancement * 100}%` }} />
-          </span>
+          <h2 className="t-titre-2 mt-1">{c.nomPalier}</h2>
+          {/* Les 3 paliers du stade, chacun avec sa barre. */}
+          <div className="mt-3 flex gap-1.5" aria-hidden>
+            {Array.from({ length: PALIERS_PAR_STADE }, (_, i) => (
+              <span key={i} className="block h-2 flex-1 overflow-hidden rounded-full bg-remplissage">
+                <span
+                  className="block h-full rounded-full bg-vert-plein transition-[width] duration-700"
+                  style={{ width: `${(i + 1 < c.palier ? 1 : i + 1 === c.palier ? c.avancementPalier : 0) * 100}%` }}
+                />
+              </span>
+            ))}
+          </div>
           <p className="t-sous-titre mt-2 text-texte-2">
             {c.prochain
               ? `Encore ${c.xpRestants} XP avant « ${c.prochain} ». Chaque bonne réponse la fait pousser.`
               : c.xpRestants > 0
                 ? `Encore ${c.xpRestants} XP pour que ton arbre atteigne sa pleine taille.`
-                : 'Ton arbre a sa pleine taille. Bravo !'}
+                : 'Ton arbre centenaire a sa pleine taille. Bravo !'}
           </p>
         </div>
       </div>
 
-      <Section titre="Les étapes de ta plante">
+      <Section titre={`Les paliers du stade « ${c.nom} »`} note="Chaque palier change quelque chose dans le pot : regarde bien ta plante.">
+        <div className="grid grid-cols-3 gap-y-3 px-2 py-4">
+          {Array.from({ length: PALIERS_PAR_STADE }, (_, i) => {
+            const palier = i + 1
+            const niveau = (c.stade - 1) * PALIERS_PAR_STADE + palier
+            const nom = NOMS_PALIERS[niveau - 1]
+            const atteint = palier <= c.palier
+            return (
+              <div key={nom} className={`flex flex-col items-center text-center ${atteint ? '' : 'opacity-35 grayscale'}`} aria-label={`${nom}${atteint ? ', atteint' : ''}`}>
+                <span className={`rounded-full p-0.5 ${palier === c.palier ? 'ring-2 ring-[var(--accent)]' : ''}`}>
+                  <Plante stade={c.stade} avancement={(palier - 0.4) / PALIERS_PAR_STADE} espece={espece} pot={pot} taille={56} />
+                </span>
+                <span className={`t-legende mt-1 px-1 ${palier === c.palier ? 'font-semibold text-accent' : 'text-texte-2'}`}>{nom}</span>
+              </div>
+            )
+          })}
+        </div>
+      </Section>
+
+      <Section titre="Les 10 stades de ta plante">
         <div className="grid grid-cols-5 gap-y-3 px-2 py-4">
           {NOMS_NIVEAUX.map((nom, i) => {
             const stade = i + 1
             const atteint = stade <= c.stade
+            // Paliers atteints dans ce stade : tous avant le stade actuel, aucun après.
+            const faits = stade < c.stade ? PALIERS_PAR_STADE : stade === c.stade ? c.palier : 0
             return (
-              <div key={nom} className={`flex flex-col items-center ${atteint ? '' : 'opacity-35 grayscale'}`} aria-label={`${nom}${atteint ? ', atteint' : ''}`}>
+              <div key={nom} className={`flex flex-col items-center ${atteint ? '' : 'opacity-35 grayscale'}`} aria-label={`${nom}${atteint ? `, ${faits} palier${faits > 1 ? 's' : ''} sur 3` : ''}`}>
                 <span className={`rounded-full p-0.5 ${stade === c.stade ? 'ring-2 ring-[var(--accent)]' : ''}`}>
-                  <Plante stade={stade} avancement={0.6} espece={espece} pot={pot} taille={40} />
+                  <Plante stade={stade} avancement={0.85} espece={espece} pot={pot} taille={40} />
                 </span>
                 <span className={`t-legende mt-1 ${stade === c.stade ? 'font-semibold text-accent' : 'text-texte-2'}`}>{nom}</span>
+                <span className="mt-0.5 flex gap-0.5" aria-hidden>
+                  {Array.from({ length: PALIERS_PAR_STADE }, (_, k) => (
+                    <span key={k} className={`h-1.5 w-1.5 rounded-full ${k < faits ? 'bg-vert-plein' : 'bg-remplissage'}`} />
+                  ))}
+                </span>
               </div>
             )
           })}

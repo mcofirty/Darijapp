@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { calculerSerie } from './serie'
-import { niveauDepuisXp, nomDuNiveau, xpDeSession, xpDuNiveau } from './xp'
+import { NOMS_PALIERS, niveauDepuisXp, nomDuNiveau, xpDeSession, xpDuNiveau } from './xp'
 
 describe('xp', () => {
   it('compte 1 XP par bonne réponse, 10 par session et 5 sans faute', () => {
@@ -8,20 +8,28 @@ describe('xp', () => {
     expect(xpDeSession(12, true)).toBe(27)
   })
 
-  it('suit la progression 120, 140, puis +20 par niveau', () => {
-    expect([1, 2, 3, 4].map(xpDuNiveau)).toEqual([120, 140, 160, 180])
+  it('suit la progression 60, 70, puis +10 par niveau', () => {
+    expect([1, 2, 3, 4].map(xpDuNiveau)).toEqual([60, 70, 80, 90])
+  })
+
+  it('demande environ 6 000 XP pour les 30 paliers', () => {
+    const total = Array.from({ length: 30 }, (_, i) => xpDuNiveau(i + 1)).reduce((a, b) => a + b, 0)
+    expect(total).toBe(6150)
+    expect(niveauDepuisXp(total).niveau).toBe(31)
   })
 
   it('calcule le niveau et l’avancée dans le niveau', () => {
-    expect(niveauDepuisXp(0)).toEqual({ niveau: 1, nom: 'Terreau', xp: 0, objectif: 120 })
-    expect(niveauDepuisXp(119).niveau).toBe(1)
-    expect(niveauDepuisXp(120)).toEqual({ niveau: 2, nom: 'Graine', xp: 0, objectif: 140 })
-    expect(niveauDepuisXp(300)).toEqual({ niveau: 3, nom: 'Germe', xp: 40, objectif: 160 })
+    expect(niveauDepuisXp(0)).toEqual({ niveau: 1, nom: 'Terre sèche', xp: 0, objectif: 60 })
+    expect(niveauDepuisXp(59).niveau).toBe(1)
+    expect(niveauDepuisXp(60)).toEqual({ niveau: 2, nom: 'Terre arrosée', xp: 0, objectif: 70 })
+    expect(niveauDepuisXp(150)).toEqual({ niveau: 3, nom: 'Terre prête', xp: 20, objectif: 80 })
   })
 
-  it('reste « Arbre » au-delà du dernier nom', () => {
-    expect(nomDuNiveau(10)).toBe('Arbre')
-    expect(nomDuNiveau(25)).toBe('Arbre')
+  it('a 30 paliers nommés, puis reste « Arbre centenaire »', () => {
+    expect(NOMS_PALIERS).toHaveLength(30)
+    expect(new Set(NOMS_PALIERS).size).toBe(30)
+    expect(nomDuNiveau(30)).toBe('Arbre centenaire')
+    expect(nomDuNiveau(45)).toBe('Arbre centenaire')
   })
 })
 

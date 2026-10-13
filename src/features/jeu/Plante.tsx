@@ -1,10 +1,12 @@
 import type { ReactNode } from 'react'
+import { palierDe } from '../../gamification/jardin'
 import { article } from '../../gamification/souk'
 
 /**
  * La plante de l'utilisateur, dessinée en SVG : 10 stades (Terreau, Graine, Germe, Pousse, Tige,
- * Feuilles, Bouton, Fleur, Fruit, Arbre), une espèce et un pot choisis au souk. `avancement`
- * (0 à 1, progression dans le niveau) la fait grandir petit à petit vers le stade suivant.
+ * Feuilles, Bouton, Fleur, Fruit, Arbre) de 3 paliers chacun, une espèce et un pot choisis au souk.
+ * `avancement` (0 à 1 dans le stade, un tiers par palier) la fait grandir petit à petit, et chaque
+ * palier ajoute un détail visible (terre arrosée, graine qui se fend, crosse, coccinelle, tuteur…).
  * Repère : boîte de 100 × 120, terre du pot à y = 88, la plante pousse vers le haut depuis x = 50.
  */
 
@@ -87,6 +89,7 @@ function bouton(x: number, y: number, r: number, e: Espece, k: number | string) 
 
 /** Plante en buisson (menthe, oranger, olivier, rosier) : tige, feuilles, bouton, fleurs, fruits, puis arbre. */
 function Buisson({ stade, croissance, e, espece }: { stade: number; croissance: number; e: Espece; espece: string }) {
+  const palier = palierDe(croissance)
   const els: ReactNode[] = []
   if (stade === 10) {
     // Arbre : tronc et couronne, qui s'étoffent avec l'avancement.
@@ -156,13 +159,16 @@ function Buisson({ stade, croissance, e, espece }: { stade: number; croissance: 
     els.push(feuille(65, SOL - h * 0.55 - 12, -60, longueur * 0.75, e, 'r2f', true))
   }
   if (stade === 7) {
-    els.push(bouton(50, sommet - 2, 3 + croissance * 1.5, e, 1))
-    if (croissance > 0.5) els.push(bouton(35, SOL - h * 0.45 - 14, 2.5, e, 2))
+    // Un bouton, puis trois, puis celui du haut s'entrouvre.
+    els.push(palier === 3 ? fleur(50, sommet - 3, 3.2, e, 1, espece) : bouton(50, sommet - 2, 3 + croissance * 1.5, e, 1))
+    if (palier >= 2) els.push(bouton(35, SOL - h * 0.45 - 14, 2.5, e, 2))
+    if (palier >= 2) els.push(bouton(65, SOL - h * 0.55 - 14, 2.5, e, 3))
   }
   if (stade === 8) {
+    // Une fleur, puis la floraison complète.
     els.push(fleur(50, sommet - 3, 5 + croissance, e, 1, espece))
-    els.push(fleur(35, SOL - h * 0.45 - 15, 3.5, e, 2, espece))
-    els.push(fleur(65, SOL - h * 0.55 - 15, 3.5, e, 3, espece))
+    if (palier >= 2) els.push(fleur(35, SOL - h * 0.45 - 15, 3.5, e, 2, espece))
+    if (palier >= 2) els.push(fleur(65, SOL - h * 0.55 - 15, 3.5, e, 3, espece))
   }
   if (stade === 9) {
     els.push(fleur(50, sommet - 3, 4, e, 1, espece))
@@ -276,7 +282,7 @@ interface PlanteProps {
 /** La plante seule, dans son pot. */
 export function Plante({ stade, avancement = 1, espece = 'menthe', pot, taille = 56, vivante = false, pop = 0 }: PlanteProps) {
   return (
-    <svg viewBox="0 0 100 120" width={taille} height={taille * 1.2} role="img" aria-label={`Plante, stade ${stade} sur 10`}>
+    <svg viewBox="0 0 100 120" width={taille} height={taille * 1.2} role="img" aria-label={`Plante, stade ${stade} sur 10, palier ${palierDe(avancement)} sur 3`}>
       <PlanteDessin stade={stade} avancement={avancement} espece={espece} vivante={vivante} pop={pop} />
       <Pot pot={pot} />
     </svg>
@@ -319,20 +325,196 @@ function PlanteDessin({ stade, avancement, espece, vivante, pop = 0 }: { stade: 
   )
 }
 
+/** Mélange deux couleurs #rrggbb (t = 0 : la première, 1 : la seconde). */
+function melange(a: string, b: string, t: number): string {
+  const c = (h: string, i: number) => parseInt(h.slice(1 + i * 2, 3 + i * 2), 16)
+  return `#${[0, 1, 2].map((i) => Math.round(c(a, i) + (c(b, i) - c(a, i)) * t).toString(16).padStart(2, '0')).join('')}`
+}
+
+/** Hauteur approximative de la plante (repère du buisson), pour placer les visiteurs. */
+function hauteur(stade: number, croissance: number): number {
+  return 6 + (stade - 3 + croissance) * 8.5
+}
+
+/** Terreau : terre sèche et fissurée, puis arrosée, puis creusée pour la graine. */
+function Terreau({ palier, t }: { palier: number; t: number }) {
+  if (palier === 1)
+    return (
+      <g stroke="#6e4e33" strokeWidth="0.5" fill="none" strokeLinecap="round">
+        <path d="M38 88 l4 -0.6 l2 0.8 l3 -0.5" />
+        <path d="M53 87.6 l3 0.7 l2 -0.6 l4 0.5" />
+        <path d="M46 89.2 l2 -0.5 l3 0.4" />
+      </g>
+    )
+  if (palier === 2)
+    return (
+      <g>
+        {/* Terre mouillée qui brille, et les dernières gouttes. */}
+        <ellipse cx="46" cy={SOL - 0.6} rx="7" ry="1" fill="#fff" opacity="0.18" />
+        {[0, 1, 2].map((i) => (
+          <path key={i} d={`M${44 + i * 6} ${SOL - 14 + ((t * 30 + i * 7) % 10)} q-1.4 2.4 0 3.2 q1.4 -0.8 0 -3.2z`} fill="#7cc3f0" opacity="0.85" />
+        ))}
+      </g>
+    )
+  return (
+    <g>
+      {/* Un petit trou creusé au doigt, la terre repoussée sur le côté. */}
+      <ellipse cx="50" cy={SOL - 0.3} rx={2.6 + t} ry="1.1" fill="#2e1a0d" />
+      <path d={`M${45 - t} ${SOL - 0.6} q2 -1.6 3.4 -0.4`} stroke="#7a5232" strokeWidth="1.2" fill="none" strokeLinecap="round" />
+    </g>
+  )
+}
+
+/** Graine : posée sur la terre, puis enfouie sous une petite bosse, puis fendue avec sa racine. */
+function Graine({ palier, t, e }: { palier: number; t: number; e: Espece }) {
+  if (palier === 1)
+    return (
+      <g>
+        <ellipse cx="50" cy={SOL - 2.4} rx="3.4" ry="2.2" fill="#8b5a2b" transform={`rotate(-15 50 ${SOL - 2.4})`} />
+        <ellipse cx="49" cy={SOL - 3.2} rx="1.2" ry="0.6" fill="#fff" opacity="0.4" />
+      </g>
+    )
+  if (palier === 2)
+    return (
+      <g>
+        <ellipse cx="50" cy={SOL - 1.2} rx={5 + t} ry={2.4 + t * 0.6} fill="#5a371f" />
+        <ellipse cx="51" cy={SOL - 2.2} rx="2.6" ry="1.6" fill="#8b5a2b" />
+      </g>
+    )
+  return (
+    <g>
+      <ellipse cx="50" cy={SOL - 1.2} rx="6" ry="2.6" fill="#5a371f" />
+      {/* Les deux moitiés de la graine s'écartent : une racine blanche descend, une pointe verte monte. */}
+      <ellipse cx="48.3" cy={SOL - 2.2} rx="2.2" ry="1.6" fill="#8b5a2b" transform={`rotate(-20 48.3 ${SOL - 2.2})`} />
+      <ellipse cx="52" cy={SOL - 2.2} rx="2.2" ry="1.6" fill="#8b5a2b" transform={`rotate(25 52 ${SOL - 2.2})`} />
+      <path d={`M49.5 ${SOL - 1} q-2 ${2 + t * 2} 1 ${3 + t * 3}`} stroke="#f3ead8" strokeWidth="0.9" fill="none" strokeLinecap="round" />
+      <path d={`M50.2 ${SOL - 3} q0.6 ${-1.5 - t * 2} 1.8 ${-2 - t * 2}`} stroke={e.tige} strokeWidth="1.1" fill="none" strokeLinecap="round" opacity={0.4 + t * 0.6} />
+    </g>
+  )
+}
+
+/** Germe, avant ses feuilles : la terre se soulève et se fend, puis une crosse sort, tête en bas. */
+function Emergence({ palier, t, e }: { palier: number; t: number; e: Espece }) {
+  if (palier === 1)
+    return (
+      <g>
+        <path d={`M43 ${SOL} q7 ${-4 - t * 2} 14 0z`} fill="#5a371f" />
+        <path d={`M48 ${SOL - 2.5} l1.5 1.4 l1.4 -1.6 l1.6 1.2`} stroke="#2e1a0d" strokeWidth="0.6" fill="none" />
+        <path d={`M50 ${SOL - 2.6} q0.4 ${-1 - t * 2} 1.6 ${-1.6 - t * 2}`} stroke={e.feuille} strokeWidth="1.4" fill="none" strokeLinecap="round" />
+      </g>
+    )
+  const h = 5 + t * 5
+  return (
+    <g>
+      <path d={`M43 ${SOL} q7 -3 14 0z`} fill="#5a371f" />
+      <path d={`M48 ${SOL - 1} C48 ${SOL - h} 54 ${SOL - h - 1.5} 54 ${SOL - h + 3}`} stroke={e.tige} strokeWidth="1.8" fill="none" strokeLinecap="round" />
+      <ellipse cx="54.2" cy={SOL - h + 4} rx="1.6" ry="2.2" fill={e.feuille} />
+    </g>
+  )
+}
+
+/** Petits visiteurs des paliers : coccinelle, escargot, papillon, abeille, oiseau et son nid. */
+function Visiteurs({ stade, palier, croissance, e }: { stade: number; palier: number; croissance: number; e: Espece }) {
+  const h = hauteur(stade, croissance)
+  const els: ReactNode[] = []
+  if (stade === 4 && palier === 3)
+    els.push(
+      <g key="coccinelle" transform={`translate(58 ${SOL - h * 0.55})`}>
+        <circle r="2.4" fill="#e0282e" />
+        <path d="M0 -2.4 V2.4" stroke="#1c1c1e" strokeWidth="0.4" />
+        <circle cx="-2.2" r="1.2" fill="#1c1c1e" />
+        <circle cx="0.9" cy="-1" r="0.5" fill="#1c1c1e" />
+        <circle cx="1" cy="1" r="0.5" fill="#1c1c1e" />
+        <circle cx="-0.9" cy="0.4" r="0.45" fill="#1c1c1e" />
+      </g>,
+    )
+  if (stade === 5 && palier >= 2)
+    els.push(
+      <g key="tuteur">
+        <rect x="41.6" y={SOL - h * 0.85} width="1.6" height={h * 0.85} rx="0.8" fill="#d9b26f" />
+        <path d={`M42.4 ${SOL - h * 0.6} q4 -1 7.6 0`} stroke="#f2e6c9" strokeWidth="0.8" fill="none" />
+      </g>,
+    )
+  if (stade === 5 && palier === 3)
+    els.push(
+      <g key="escargot" transform={`translate(33 ${SOL - 6.4})`}>
+        <path d="M-3 2 h9 q1 0 1 -1 l-1 -2" fill="#c8b48a" />
+        <circle cx="0" cy="-0.6" r="2.8" fill="#a0662b" />
+        <path d="M0 -0.6 m-1.6 0 a1.6 1.6 0 1 1 1.6 1.6" stroke="#6b4423" strokeWidth="0.5" fill="none" />
+        <path d="M6 1 l1 -2.6 M6.6 1 l1.8 -2" stroke="#c8b48a" strokeWidth="0.5" />
+      </g>,
+    )
+  if (stade === 6 && palier === 3)
+    els.push(
+      <g key="papillon" transform={`translate(70 ${SOL - h - 2})`}>
+        <g className="visiteur-vol">
+        <ellipse cx="-2.2" cy="-1.4" rx="2.6" ry="2" fill="#ff9f1c" transform="rotate(-25 -2.2 -1.4)" />
+        <ellipse cx="2.2" cy="-1.4" rx="2.6" ry="2" fill="#ff9f1c" transform="rotate(25 2.2 -1.4)" />
+        <ellipse cx="-1.6" cy="1.6" rx="1.6" ry="1.3" fill="#ffbf69" />
+        <ellipse cx="1.6" cy="1.6" rx="1.6" ry="1.3" fill="#ffbf69" />
+        <rect x="-0.35" y="-2.6" width="0.7" height="5" rx="0.35" fill="#1c1c1e" />
+        </g>
+      </g>,
+    )
+  if (stade === 8 && palier === 3)
+    els.push(
+      <g key="abeille" transform={`translate(62 ${SOL - h - 4})`}>
+        <g className="visiteur-vol">
+        <ellipse cx="-0.6" cy="-2" rx="1.4" ry="1" fill="#fff" opacity="0.85" />
+        <ellipse cx="1" cy="-2" rx="1.4" ry="1" fill="#fff" opacity="0.85" />
+        <ellipse rx="2.6" ry="1.7" fill="#ffcc00" />
+        <path d="M-0.8 -1.6 v3.2 M0.9 -1.6 v3.2" stroke="#1c1c1e" strokeWidth="0.7" />
+        </g>
+      </g>,
+    )
+  if (stade === 9 && palier === 3) els.push(fruit(36, SOL - 6, 2.2, e, 'tombe'))
+  if (stade === 10 && palier === 3) {
+    const r = 22 + 8 * croissance
+    const haut = SOL - 34 - 10 * croissance
+    els.push(
+      <g key="nid" transform={`translate(${50 + r * 0.55} ${haut - r * 0.55})`}>
+        <path d="M-5 0 q5 4 10 0 z" fill="#8a5a35" />
+        <path d="M-5 0 q5 2 10 0" stroke="#5c3b20" strokeWidth="0.5" fill="none" />
+        <circle cx="1" cy="-3" r="2.4" fill="#7a8fa6" />
+        <circle cx="3.2" cy="-5" r="1.6" fill="#7a8fa6" />
+        <path d="M4.6 -5 l1.8 0.4 l-1.8 0.6z" fill="#f2a900" />
+        <circle cx="3.6" cy="-5.3" r="0.35" fill="#1c1c1e" />
+      </g>,
+    )
+  }
+  return <>{els}</>
+}
+
 function PlanteVivante({ stade: n, croissance, e, espece, vivante }: { stade: number; croissance: number; e: Espece; espece: string; vivante: boolean }) {
+  const palier = palierDe(croissance)
+  // Avancement dans le palier (0 à 1), pour les détails propres à chaque palier.
+  const t = Math.min(1, Math.max(0, croissance * 3 - (palier - 1)))
+  // Fruits verts, puis qui mûrissent, puis mûrs.
+  const fruitMur = n === 9 && palier < 3 ? melange('#8bc34a', e.fruit, palier === 1 ? 0 : 0.5 + t * 0.4) : e.fruit
+  const ep = fruitMur === e.fruit ? e : { ...e, fruit: fruitMur }
+  // Terre sèche au premier palier, mouillée au deuxième, puis terre fraîche.
+  const terre = n === 1 && palier === 1 ? '#9a7650' : n === 1 && palier === 2 ? '#3f2414' : '#5a371f'
+  // Le germe de l'espèce n'apparaît qu'au 3e palier du stade 3 : il pousse alors sur ce seul tiers.
+  const especeDessin = n === 3 ? Math.max(0, croissance * 3 - 2) : croissance
   return (
     <g className={vivante ? 'plante-vivante' : undefined}>
-      {/* Terre fraîche, quelques cailloux. */}
-      <ellipse cx="50" cy={SOL} rx="20" ry="3" fill="#5a371f" />
-      <circle cx="40" cy={SOL - 0.5} r="0.9" fill="#8a6a4f" />
-      <circle cx="58" cy={SOL} r="0.7" fill="#8a6a4f" />
-      {e.forme === 'palmier' ? (
-        <Palmier stade={n} croissance={croissance} e={e} />
+      {/* Terre bombée au-dessus du rebord du pot (sèche, mouillée ou fraîche), quelques cailloux. */}
+      <path d={`M27 ${SOL - 2.5} Q50 ${SOL - 8.5} 73 ${SOL - 2.5}Z`} fill={terre} />
+      <circle cx="40" cy={SOL - 4.6} r="0.9" fill="#8a6a4f" />
+      <circle cx="61" cy={SOL - 4} r="0.7" fill="#8a6a4f" />
+      {n <= 2 || (n === 3 && palier < 3) ? (
+        // Les tout premiers paliers se jouent au ras de la terre : dessinés plus grands, sur la terre bombée.
+        <g transform={`translate(50 ${SOL - 5.4}) scale(1.7) translate(-50 ${-SOL})`}>
+          {n === 1 ? <Terreau palier={palier} t={t} /> : n === 2 ? <Graine palier={palier} t={t} e={e} /> : <Emergence palier={palier} t={t} e={e} />}
+        </g>
+      ) : e.forme === 'palmier' ? (
+        <Palmier stade={n} croissance={especeDessin} e={ep} />
       ) : e.forme === 'cactus' ? (
-        <Cactus stade={n} croissance={croissance} e={e} />
+        <Cactus stade={n} croissance={especeDessin} e={ep} />
       ) : (
-        <Buisson stade={n} croissance={croissance} e={e} espece={espece} />
+        <Buisson stade={n} croissance={especeDessin} e={ep} espece={espece} />
       )}
+      <Visiteurs stade={n} palier={palier} croissance={croissance} e={ep} />
     </g>
   )
 }

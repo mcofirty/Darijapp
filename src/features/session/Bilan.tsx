@@ -43,7 +43,7 @@ function PlanteGrandie({ xpAvant, xp }: { xpAvant: number; xp: number }) {
       <Plante stade={plante.stade} avancement={plante.avancement} espece={espece} pot={pot} taille={120} pop={plante.pop} vivante />
       <p className="t-titre-3 mt-2">Ta plante a grandi !</p>
       <p className="t-appel text-texte-2">
-        {avant.nom} → <span className="font-semibold text-vert">{apres.nom}</span>
+        {avant.nomPalier} → <span className="font-semibold text-vert">{apres.nomPalier}</span>
       </p>
     </div>
   )
@@ -82,7 +82,7 @@ export function Bilan({ titre, sousTitre, xp, taux, activite, lignes, libelleEnc
       <div className="relative mx-auto flex min-h-full max-w-xl flex-col justify-center px-marge pb-[calc(max(0.75rem,env(safe-area-inset-bottom))+9rem)] pt-[calc(env(safe-area-inset-top)+2rem)]">
         <h2 className="t-grand-titre mb-1 text-center">{titre}</h2>
         <p className="t-appel mb-8 text-center text-texte-2">{sousTitre}</p>
-        {activite?.xpAvant !== undefined && croissance(activite.xpAvant + xp).stade > croissance(activite.xpAvant).stade && (
+        {activite?.xpAvant !== undefined && croissance(activite.xpAvant + xp).niveau > croissance(activite.xpAvant).niveau && (
           <PlanteGrandie xpAvant={activite.xpAvant} xp={xp} />
         )}
         <Section>

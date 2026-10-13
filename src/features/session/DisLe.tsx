@@ -1,4 +1,4 @@
-import { Ear, Eye, Lightbulb, Loader2, Mic, RotateCcw, Square, Star, Volume2 } from 'lucide-react'
+import { Ear, Eye, Lightbulb, Loader2, Mic, RotateCcw, Square, Volume2 } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { jouer } from '../../audio/lecteur'
 import { SILENCE_MOT, SILENCE_PHRASE, decoder16k, enregistrer, microDisponible, preparerMicro, referenceDuMot, rejouer, type Enregistrement } from '../../audio/micro'
@@ -9,6 +9,7 @@ import { useProfil } from '../../db/useProfil'
 import { indice } from '../../exercices/phrases'
 import { PAUSE_MOT, PAUSE_PHRASE } from '../../scoring/mfcc'
 import { ajouterReglage, appreciation, decalageVoix, distanceEssai, scoreDeDistance } from '../../scoring/score'
+import { AnneauScore } from '../../ui/AnneauScore'
 import { Bouton } from '../../ui/Boutons'
 import { BoutonAudio } from '../mots/BoutonAudio'
 
@@ -239,16 +240,6 @@ export function DisLe({ mot, inverse = false, phrase = false, titre, consigne, o
   )
 }
 
-function Etoiles({ n }: { n: number }) {
-  return (
-    <span className="flex justify-center gap-1" aria-label={`${n} étoile${n > 1 ? 's' : ''} sur 3`}>
-      {[1, 2, 3].map((i) => (
-        <Star key={i} className={`h-7 w-7 ${i <= n ? 'text-[#ffcc00]' : 'text-remplissage'}`} fill="currentColor" strokeWidth={0} aria-hidden />
-      ))}
-    </span>
-  )
-}
-
 function ResultatScore(props: {
   mot: ADire
   score: number
@@ -264,12 +255,8 @@ function ResultatScore(props: {
   const sons = a.reussi ? [] : sonsDuMot(props.mot.latin)
   return (
     <div className="text-center" aria-live="polite">
-      <Etoiles n={a.etoiles} />
-      <p className={`t-grand-titre mt-2 ${a.reussi ? 'text-vert' : 'text-rouge'}`}>
-        {props.score}
-        <span className="t-titre-3 text-texte-2"> / 100</span>
-      </p>
-      <p className="t-titre-3">{a.libelle}</p>
+      <AnneauScore score={props.score} />
+      <p className="t-titre-3 mt-2">{a.libelle}</p>
       {props.corrige && (
         <p className="t-sous-titre mt-1 text-texte-2">Corrigé par toi : {reussi ? 'compté comme réussi' : 'compté à retravailler'}.</p>
       )}

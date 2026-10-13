@@ -4,13 +4,13 @@ import type { EtapeAnimation } from '../../gamification/jardin'
 export interface EtatPlante {
   stade: number
   avancement: number
-  /** Numéro du dernier changement de stade (0 = aucun) : relance le rebond et les étincelles. */
+  /** Numéro du dernier changement de palier (0 = aucun) : relance le rebond et les étincelles. */
   pop: number
   enCours: boolean
 }
 
 /** Durée d'une étape : plus elle pousse, plus elle prend de temps. */
-const duree = (e: EtapeAnimation) => 350 + 1100 * (e.a - e.de)
+const duree = (e: EtapeAnimation) => 300 + 2400 * (e.a - e.de)
 const PAUSE_STADE = 450
 
 const sansAnimation = () => typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
@@ -55,10 +55,11 @@ export function useCroissanceAnimee(etapes: EtapeAnimation[], final: { stade: nu
         finir()
         return
       }
-      // Nouveau stade : rebond et étincelles, puis il pousse à son tour après une courte pause.
-      if (etapes[index].stade !== e.stade) pop++
+      // Nouveau palier : rebond et étincelles, puis il pousse à son tour après une courte pause.
+      const nouveau = etapes[index].stade !== e.stade || etapes[index].palier !== e.palier
+      if (nouveau) pop++
       setEtat({ stade: etapes[index].stade, avancement: etapes[index].de, pop, enCours: true })
-      debut = maintenant + (etapes[index].stade !== e.stade ? PAUSE_STADE : 0)
+      debut = maintenant + (nouveau ? PAUSE_STADE : 0)
       image = requestAnimationFrame(tour)
     }
     setEtat({ stade: etapes[0].stade, avancement: etapes[0].de, pop: 0, enCours: true })
