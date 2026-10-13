@@ -99,7 +99,7 @@ export function niveauMax(signal: Float32Array): number {
 }
 
 /** FFT en place (radix 2), parties réelle et imaginaire séparées. */
-function fft(re: Float64Array, im: Float64Array): void {
+export function fft(re: Float64Array, im: Float64Array): void {
   const n = re.length
   for (let i = 1, j = 0; i < n; i++) {
     let bit = n >> 1
