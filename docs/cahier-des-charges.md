@@ -57,7 +57,7 @@ Ces fonctions complètent les écrans et se codent entièrement dans l'appli.
 | Signaler un mot | Marquer une traduction ou une translittération douteuse ; la liste s'exporte pour corriger le fichier JSON avec Claude Code | Fiche mot |
 | Mots difficiles | Liste automatique des mots les plus ratés, révisables en une session dédiée | Apprendre |
 | Favoris | Épingler les mots utiles pour un prochain voyage et les réviser à part | Dictionnaire |
-| Mode écoute | Enchaîne mot darija, pause, traduction, pour réviser sans regarder l'écran | Apprendre |
+| Mode écoute | Enchaîne mot darija, pause, traduction, pour réviser sans regarder l'écran ; en option, la phrase d'exemple du mot deux fois, avec le temps de la répéter | Apprendre |
 | Rappel calendrier | Génère le fichier .ics du rappel quotidien | Profil |
 | Sans micro | Interrupteur « Micro » dans Profil, ou accès au micro refusé : Dis-le devient une auto-évaluation (dire le mot à voix haute, puis « Je l'ai bien dit » ou « À retravailler ») | Partout |
 | Sans parler, sans écouter | Interrupteurs « Exercices de prononciation » et « Exercices d'écoute » dans Profil. Sans parler : plus de Dis-le, et dans les dialogues on choisit sa réplique. Sans écouter : Écoute et choisis devient Traduis, plus de Distingue les sons ni de son automatique, et les jeux à l'oreille (Chasse aux sons, Marchandage, Taxi, mode écoute) sont grisés. Pendant un exercice, « Je ne peux pas parler maintenant » ou « Je ne peux pas écouter maintenant » le passe sans le compter et coupe ce type d'exercice 15 min | Partout |
@@ -118,7 +118,7 @@ Les exercices ci-dessous composent les leçons du Parcours et le Quiz de 5 quest
 | Associe les paires | Relier 5 mots darija à leur traduction | Mémorisation |
 | Dis-le | Voir la traduction, prononcer, obtenir un score sur 100, puis écouter le modèle | Expression orale |
 | Distingue les sons | Entendre l'un de deux mots proches (ex. 9elb, cœur / kelb, chien) et dire lequel a été prononcé | Oreille pour les sons difficiles |
-| Dis-le en darija | Voir seulement le français d'un mot déjà connu, le dire (indice possible), puis découvrir le darija et le modèle | Rappel actif à l'oral |
+| Dis-le en darija | Voir seulement le français d'un mot déjà connu, ou du premier mot appris dans la session, le dire (indice possible), puis découvrir le darija et le modèle | Rappel actif à l'oral |
 | Construis la phrase | Entendre l'exemple d'un mot, voir sa traduction et remettre ses mots dans l'ordre parmi quelques intrus | Ordre des mots, compréhension de phrases |
 | Quiz express | 60 secondes pour enchaîner un maximum de bonnes réponses | Rapidité de rappel |
 
@@ -190,7 +190,7 @@ Progression d'un mot, stockée sur le téléphone :
 }
 ```
 
-Génération de l'audio : un script Python, lancé automatiquement par GitHub Actions à chaque modification des mots, transforme l'écriture arabe de chaque mot et de chaque exemple en fichier MP3 avec la voix neuronale marocaine Jamal de Microsoft (ar-MA-JamalNeural, par l'API Azure Speech, offre gratuite). Tant qu'un MP3 manque, la voix arabe de l'iPhone lit le mot. La mise en ligne est une Action séparée, qui publie un changement en 2 minutes environ. Les fichiers sont générés une fois, rangés dans `public/audio/` et embarqués dans l'appli, qui reste hors ligne.
+Génération de l'audio : un script Python, lancé automatiquement par GitHub Actions à chaque modification des mots, transforme l'écriture arabe de chaque mot et de chaque exemple en fichier MP3 avec la voix neuronale marocaine Jamal de Microsoft (ar-MA-JamalNeural, par l'API Azure Speech, offre gratuite). Tant qu'un MP3 manque, la voix arabe de l'iPhone lit le mot. La mise en ligne est une Action séparée, qui publie un changement en 2 minutes environ. Les fichiers sont générés une fois et rangés dans `public/audio/` ; chacun est gardé sur le téléphone à sa première écoute, ou tous d'un coup (environ 50 Mo) depuis Profil, « Audio hors ligne ».
 
 Cette voix a un accent marocain mais reste une synthèse : elle sert de repère, et la fonction « Remplacer l'audio » permet d'y substituer une vraie voix marocaine dès que tu en as une.
 
@@ -254,7 +254,7 @@ Exigences non fonctionnelles :
 | Vie privée | Enregistrements de voix et progression restent sur l'appareil |
 | Compatibilité | Chrome Android et Safari iOS récents |
 | Accessibilité | Texte affiché pour chaque audio, contrastes lisibles |
-| Sauvegarde | Export et import de la progression en un fichier |
+| Sauvegarde | Export et import de la progression en un fichier, rappel dans le bilan tous les 7 jours, stockage persistant demandé au navigateur |
 
 ## Planning et critères de réussite
 
