@@ -1,4 +1,4 @@
-import { Send, Trash2 } from 'lucide-react'
+import { ArrowRight, Send, Trash2 } from 'lucide-react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { useState, type FormEvent } from 'react'
 import { MOTS } from '../../data'
@@ -41,7 +41,7 @@ function Champ({ libelle, valeur, erreur, arabe = false, onChange }: ChampProps)
 }
 
 /** Page cachée (lien « #ajout ») : ajouter, modifier et supprimer ses propres mots. */
-export function AjoutMots() {
+export function AjoutMots({ onOuvrirAppli }: { onOuvrirAppli: () => void }) {
   const mots = useLiveQuery(() => lireMotsPerso(), [])
   const [champs, setChamps] = useState<ChampsMot>(VIDE)
   const [enEdition, setEnEdition] = useState<string | null>(null)
@@ -92,6 +92,10 @@ export function AjoutMots() {
         <br />
         Tu veux ajouter un mot ?
       </p>
+      <Bouton variante="gris" className="-mt-4 mb-8" onClick={onOuvrirAppli}>
+        Ouvrir l’application
+        <ArrowRight className="h-5 w-5" aria-hidden />
+      </Bouton>
       <form onSubmit={envoyer}>
         <Section
           titre={enEdition ? 'Modifier le mot' : 'Nouveau mot'}

@@ -53,6 +53,7 @@ export default function App() {
   function quitterLien() {
     history.replaceState(null, '', window.location.pathname + window.location.search)
     setHash('')
+    window.scrollTo(0, 0)
   }
 
   function changer(cible: Onglet) {
@@ -96,7 +97,7 @@ export default function App() {
   if (ajout) {
     return (
       <div className="min-h-dvh overflow-x-clip pb-16">
-        <AjoutMots />
+        <AjoutMots onOuvrirAppli={quitterLien} />
       </div>
     )
   }
