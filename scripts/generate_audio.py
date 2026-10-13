@@ -109,7 +109,7 @@ def generer_azure(taches: list[tuple[str, Path]]) -> list[tuple[str, Path]]:
     echecs: list[tuple[str, Path]] = []
     for i, (texte, cible) in enumerate(taches, 1):
         ssml = (
-            f"<speak version='1.0' xml:lang='ar-MA'><voice xml:lang='ar-MA' name='{VOIX}'>"
+            f"<speak version='1.0' xml:lang='{VOIX[:5]}'><voice xml:lang='{VOIX[:5]}' name='{VOIX}'>"
             f"{escape(texte)}</voice></speak>"
         ).encode("utf-8")
         for essai in range(1, ESSAIS + 1):
