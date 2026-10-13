@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 import { sonReponse } from '../../audio/effets'
 import { enregistrerActivite, type BilanSession } from '../../db/apprentissage'
 import { lireProfil, modifierProfil } from '../../db/db'
-import { DUREE_EXPRESS, apresExpress, pointsDeReponse } from '../../exercices/quiz'
+import { BONUS_TEMPS, DUREE_EXPRESS, apresExpress, pointsDeReponse, prolonger } from '../../exercices/quiz'
 import type { Etape } from '../../exercices/session'
 import { Alerte } from '../../ui/Alerte'
 import { Ligne, Tuile } from '../../ui/Liste'
@@ -44,12 +44,15 @@ export function Chrono({ jeu, prochaine, onFermer, onEncore }: Props) {
   const [fin, setFin] = useState<{ bilan: BilanSession; record: number; nouveauRecord: boolean } | null>(null)
   const fini = useRef(false)
   const score = useRef({ bonnes: 0, mauvaises: 0, points: 0, combo: 0 })
+  // Échéance du chrono : chaque bonne réponse la repousse (+2 s, 60 s au plus devant soi).
+  const echeance = useRef(Date.now() + DUREE_EXPRESS * 1000)
+  const depart = useRef(Date.now())
+  const [bonus, setBonus] = useState(0)
 
-  // Chrono calculé depuis l'heure de départ : il reste juste même si l'iPhone ralentit les minuteries.
+  // Chrono calculé depuis l'échéance : il reste juste même si l'iPhone ralentit les minuteries.
   useEffect(() => {
-    const depart = Date.now()
     const id = window.setInterval(() => {
-      const reste = Math.max(0, DUREE_EXPRESS - (Date.now() - depart) / 1000)
+      const reste = Math.max(0, (echeance.current - Date.now()) / 1000)
       setRestant(reste)
       if (reste === 0) {
         window.clearInterval(id)
@@ -80,6 +83,11 @@ export function Chrono({ jeu, prochaine, onFermer, onEncore }: Props) {
     setMauvaises(s.mauvaises)
     setPoints(s.points)
     setCombo(s.combo)
+    if (juste) {
+      echeance.current = prolonger(echeance.current, Date.now())
+      setRestant(Math.max(0, (echeance.current - Date.now()) / 1000))
+      setBonus((b) => b + 1)
+    }
     const precedente = question
     window.setTimeout(() => {
       if (fini.current) return
@@ -92,7 +100,7 @@ export function Chrono({ jeu, prochaine, onFermer, onEncore }: Props) {
     return (
       <Bilan
         titre={fin.nouveauRecord ? 'Nouveau record !' : 'Temps écoulé'}
-        sousTitre={`${bonnes} bonne${bonnes > 1 ? 's' : ''} réponse${bonnes > 1 ? 's' : ''} en ${DUREE_EXPRESS} secondes${
+        sousTitre={`${bonnes} bonne${bonnes > 1 ? 's' : ''} réponse${bonnes > 1 ? 's' : ''} en ${Math.round((Date.now() - depart.current) / 1000)} secondes${
           avecCombo && points > bonnes ? `, ${points} points avec les combos` : ''
         }`}
         xp={fin.bilan.xp}
@@ -131,8 +139,13 @@ export function Chrono({ jeu, prochaine, onFermer, onEncore }: Props) {
                 style={{ width: `${(restant / DUREE_EXPRESS) * 100}%` }}
               />
             </div>
-            <span className={`t-gras w-8 text-right tabular-nums ${secondes <= 10 ? 'text-rouge' : ''}`} role="timer" aria-label={`${secondes} secondes`}>
+            <span className={`t-gras relative w-8 text-right tabular-nums ${secondes <= 10 ? 'text-rouge' : ''}`} role="timer" aria-label={`${secondes} secondes`}>
               {secondes}
+              {bonus > 0 && (
+                <span key={bonus} className="bonus-temps t-note absolute -top-3 right-0 font-semibold text-vert" aria-hidden>
+                  +{BONUS_TEMPS} s
+                </span>
+              )}
             </span>
           </div>
           <div className="verre verre-fin t-gras flex h-11 shrink-0 items-center gap-1 rounded-full px-4 tabular-nums" aria-label={`Score : ${points}`}>

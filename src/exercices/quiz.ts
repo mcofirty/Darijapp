@@ -7,6 +7,16 @@ import { choisirPaire, melanger, propositions, questionDistingue, type Aleatoire
 
 export const QUESTIONS_PAR_QUIZ = 5
 export const DUREE_EXPRESS = 60
+/** Secondes rendues au chrono par une bonne réponse (Quiz express, Chasse aux sons). */
+export const BONUS_TEMPS = 2
+
+/**
+ * Nouvelle échéance du chrono (en ms) après une bonne réponse : +2 s, sans que le temps
+ * restant dépasse jamais les 60 s du départ.
+ */
+export function prolonger(echeance: number, maintenant: number): number {
+  return Math.min(echeance + BONUS_TEMPS * 1000, maintenant + DUREE_EXPRESS * 1000)
+}
 /** Mots de la question « Associe les paires » d'un quiz. */
 const MOTS_PAR_PAIRES = 4
 

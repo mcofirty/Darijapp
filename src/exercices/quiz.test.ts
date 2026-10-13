@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { MOTS } from '../data'
 import { PAIRES_SONS } from '../data/pairesSons'
 import type { EtatSrs } from '../srs/leitner'
-import { COMBO_BONUS, QUESTIONS_PAR_QUIZ, apresExpress, composerQuiz, motsPourQuiz, pointsDeReponse, questionExpress } from './quiz'
+import { BONUS_TEMPS, COMBO_BONUS, DUREE_EXPRESS, QUESTIONS_PAR_QUIZ, prolonger, apresExpress, composerQuiz, motsPourQuiz, pointsDeReponse, questionExpress } from './quiz'
 
 function graine(n: number) {
   return () => {
@@ -110,5 +110,14 @@ describe('apresExpress', () => {
     expect(apresExpress(12, 10)).toEqual({ record: 12, nouveauRecord: true })
     expect(apresExpress(10, 10)).toEqual({ record: 10, nouveauRecord: false })
     expect(apresExpress(3, 10)).toEqual({ record: 10, nouveauRecord: false })
+  })
+})
+
+describe('prolonger', () => {
+  it('ajoute 2 s par bonne réponse, sans dépasser 60 s devant soi', () => {
+    const t = 1_000_000
+    expect(prolonger(t + 30_000, t)).toBe(t + 30_000 + BONUS_TEMPS * 1000)
+    expect(prolonger(t + 59_000, t)).toBe(t + DUREE_EXPRESS * 1000)
+    expect(prolonger(t + 60_000, t)).toBe(t + 60_000)
   })
 })
