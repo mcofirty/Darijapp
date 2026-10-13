@@ -24,13 +24,8 @@ export interface ChampsMot {
   fr: string
 }
 
-/** Ce qui accompagne un mot envoyé par lien : quand et d'où il a été ajouté (facultatif). */
-export interface Provenance {
-  ajouteLe?: number
-  lieu?: string
-}
-
-export type MotRecu = ChampsMot & Provenance
+/** Mot envoyé par lien, avec l'heure de son ajout sur le téléphone de la personne qui l'envoie. */
+export type MotRecu = ChampsMot & { ajouteLe?: number }
 
 export interface ErreursMot {
   latin?: string
@@ -93,14 +88,13 @@ export function assemblerMots(perso: MotPerso[], programme: Mot[]): Mot[] {
 
 const PREFIXE_LIEN = '#mot='
 const LONGUEUR_MAX = 80
-export const LONGUEUR_MAX_LIEU = 60
 
 /**
- * Adresse qui propose un mot : « <adresse de l'appli>#mot=[latin, arabe, français, ajouté le, lieu] ».
- * L'heure et le lieu sont ceux de l'ajout sur le téléphone de la personne qui envoie.
+ * Adresse qui propose un mot : « <adresse de l'appli>#mot=[latin, arabe, français, ajouté le] ».
+ * L'heure est celle de l'ajout sur le téléphone de la personne qui envoie.
  */
-export function lienDeMot(adresseAppli: string, { latin, arabe, fr, ajouteLe, lieu }: MotRecu): string {
-  const valeur = [latin.trim(), arabe.trim(), fr.trim(), ajouteLe ?? null, lieu?.trim() ?? '']
+export function lienDeMot(adresseAppli: string, { latin, arabe, fr, ajouteLe }: MotRecu): string {
+  const valeur = [latin.trim(), arabe.trim(), fr.trim(), ajouteLe ?? null]
   return adresseAppli.split('#')[0] + PREFIXE_LIEN + encodeURIComponent(JSON.stringify(valeur))
 }
 
@@ -110,24 +104,22 @@ function textesValides(valeurs: unknown[]): valeurs is string[] {
 
 /**
  * Lit un mot proposé dans le hash de l'adresse ; null si absent, mal formé ou invalide.
- * Accepte aussi les liens d'avant l'heure et le lieu (trois valeurs).
+ * Accepte aussi les liens sans heure (trois valeurs) et ceux qui avaient un lieu en cinquième valeur, ignoré.
  */
 export function motDuLien(hash: string): MotRecu | null {
   if (!hash.startsWith(PREFIXE_LIEN)) return null
   try {
     const valeur: unknown = JSON.parse(decodeURIComponent(hash.slice(PREFIXE_LIEN.length)))
-    if (!Array.isArray(valeur) || (valeur.length !== 3 && valeur.length !== 5)) return null
-    const [ajouteLe, lieu] = (valeur as unknown[]).slice(3)
+    if (!Array.isArray(valeur) || valeur.length < 3 || valeur.length > 5) return null
+    const ajouteLe: unknown = valeur[3] ?? null
     const textes = (valeur as unknown[]).slice(0, 3)
     if (!textesValides(textes)) return null
     const [latin, arabe, fr] = textes
     const champs: MotRecu = { latin: latin.trim(), arabe: arabe.trim(), fr: fr.trim() }
     if (!motValide(champs)) return null
-    if (valeur.length === 5) {
-      if (ajouteLe !== null && !(typeof ajouteLe === 'number' && Number.isFinite(ajouteLe) && ajouteLe > 0)) return null
-      if (typeof lieu !== 'string' || lieu.length > LONGUEUR_MAX_LIEU) return null
-      if (ajouteLe !== null) champs.ajouteLe = ajouteLe
-      if (lieu.trim()) champs.lieu = lieu.trim()
+    if (ajouteLe !== null) {
+      if (!(typeof ajouteLe === 'number' && Number.isFinite(ajouteLe) && ajouteLe > 0)) return null
+      champs.ajouteLe = ajouteLe
     }
     return champs
   } catch {
@@ -135,15 +127,9 @@ export function motDuLien(hash: string): MotRecu | null {
   }
 }
 
-/** « Ajouté le 13 octobre à 14 h 32, à Casablanca » (heure du téléphone qui affiche) ; null sans rien à dire. */
-export function decrireProvenance({ ajouteLe, lieu }: Provenance): string | null {
-  const morceaux: string[] = []
-  if (ajouteLe) {
-    const d = new Date(ajouteLe)
-    const jour = d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
-    const minutes = String(d.getMinutes()).padStart(2, '0')
-    morceaux.push(`le ${jour} à ${d.getHours()} h ${minutes}`)
-  }
-  if (lieu?.trim()) morceaux.push(`à ${lieu.trim()}`)
-  return morceaux.length ? `Ajouté ${morceaux.join(', ')}` : null
+/** « Ajouté le 13 octobre 2026 à 14 h 32 », à l'heure du téléphone qui affiche. */
+export function decrireAjout(ajouteLe: number): string {
+  const d = new Date(ajouteLe)
+  const jour = d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
+  return `Ajouté le ${jour} à ${d.getHours()} h ${String(d.getMinutes()).padStart(2, '0')}`
 }

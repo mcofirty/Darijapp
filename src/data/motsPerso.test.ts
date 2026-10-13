@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import type { MotPerso } from '../db/db'
 import { MOTS } from '.'
-import { THEME_PERSO, assemblerMots, decrireProvenance, lienDeMot, motDuLien, motValide, validerMot, versMot } from './motsPerso'
+import { THEME_PERSO, assemblerMots, decrireAjout, lienDeMot, motDuLien, motValide, validerMot, versMot } from './motsPerso'
 
 const salam = { latin: 'salam', arabe: 'سلام', fr: 'bonjour' }
 
@@ -75,38 +75,29 @@ describe('lien de partage', () => {
     expect(motDuLien('#mot=' + encodeURIComponent(JSON.stringify(['salam', 'سلام', 'x'.repeat(200)])))).toBeNull()
   })
 
-  it('transporte l’heure et le lieu de l’ajout', () => {
+  it('transporte l’heure de l’ajout', () => {
     const ajouteLe = new Date(2026, 9, 13, 14, 32).getTime()
-    const lien = lienDeMot(adresse, { ...mot, ajouteLe, lieu: ' Casablanca ' })
-    expect(motDuLien(lien.slice(lien.indexOf('#')))).toEqual({ ...mot, ajouteLe, lieu: 'Casablanca' })
+    const lien = lienDeMot(adresse, { ...mot, ajouteLe })
+    expect(motDuLien(lien.slice(lien.indexOf('#')))).toEqual({ ...mot, ajouteLe })
   })
 
-  it('lit encore les liens d’avant l’heure et le lieu', () => {
-    expect(motDuLien('#mot=' + encodeURIComponent(JSON.stringify(['3afak', 'عافاك', 's’il te plaît'])))).toEqual(mot)
+  it('lit encore les liens sans heure, et ignore le lieu des anciens liens', () => {
+    const lien = (...valeurs: unknown[]) => '#mot=' + encodeURIComponent(JSON.stringify(['3afak', 'عافاك', 's’il te plaît', ...valeurs]))
+    expect(motDuLien(lien())).toEqual(mot)
+    expect(motDuLien(lien(null))).toEqual(mot)
+    expect(motDuLien(lien(1760300000000, 'Casablanca'))).toEqual({ ...mot, ajouteLe: 1760300000000 })
   })
 
-  it('refuse une heure ou un lieu abîmés', () => {
-    const lien = (ajouteLe: unknown, lieu: unknown) => '#mot=' + encodeURIComponent(JSON.stringify(['3afak', 'عافاك', 'x', ajouteLe, lieu]))
-    expect(motDuLien(lien(null, ''))).toEqual({ ...mot, fr: 'x' })
-    expect(motDuLien(lien('demain', ''))).toBeNull()
-    expect(motDuLien(lien(-5, ''))).toBeNull()
-    expect(motDuLien(lien(null, 42))).toBeNull()
-    expect(motDuLien(lien(null, 'x'.repeat(61)))).toBeNull()
-    expect(motDuLien('#mot=' + encodeURIComponent(JSON.stringify(['3afak', 'عافاك', 'x', null])))).toBeNull()
+  it('refuse une heure abîmée', () => {
+    const lien = (...valeurs: unknown[]) => '#mot=' + encodeURIComponent(JSON.stringify(['3afak', 'عافاك', 'x', ...valeurs]))
+    expect(motDuLien(lien('demain'))).toBeNull()
+    expect(motDuLien(lien(-5))).toBeNull()
+    expect(motDuLien(lien(null, '', 'trop'))).toBeNull()
   })
 })
 
-describe('provenance d’un mot', () => {
-  const ajouteLe = new Date(2026, 9, 13, 9, 5).getTime()
-
-  it('donne la date, l’heure et le lieu', () => {
-    expect(decrireProvenance({ ajouteLe, lieu: 'Casablanca' })).toBe('Ajouté le 13 octobre 2026 à 9 h 05, à Casablanca')
-  })
-
-  it('se contente de ce qui est connu', () => {
-    expect(decrireProvenance({ ajouteLe })).toBe('Ajouté le 13 octobre 2026 à 9 h 05')
-    expect(decrireProvenance({ lieu: 'Fès' })).toBe('Ajouté à Fès')
-    expect(decrireProvenance({ lieu: '  ' })).toBeNull()
-    expect(decrireProvenance({})).toBeNull()
+describe('heure d’ajout d’un mot', () => {
+  it('donne la date et l’heure', () => {
+    expect(decrireAjout(new Date(2026, 9, 13, 9, 5).getTime())).toBe('Ajouté le 13 octobre 2026 à 9 h 05')
   })
 })

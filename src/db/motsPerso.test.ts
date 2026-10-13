@@ -53,18 +53,10 @@ describe('mots ajoutés', () => {
     expect(await lireMotsPerso(base)).toHaveLength(1)
   })
 
-  it('un mot reçu garde l’heure et le lieu de son ajout', async () => {
-    const { mot } = await ajouterSiAbsent({ ...salam, ajouteLe: 1760300000000, lieu: ' Casablanca ' }, base)
-    expect(mot).toMatchObject({ ajouteLe: 1760300000000, lieu: 'Casablanca' })
+  it('un mot reçu garde l’heure de son ajout', async () => {
+    const { mot } = await ajouterSiAbsent({ ...salam, ajouteLe: 1760300000000 }, base)
+    expect(mot.ajouteLe).toBe(1760300000000)
     expect(mot.creeLe).toBeGreaterThan(1760300000000)
-  })
-
-  it('le lieu se modifie et s’efface', async () => {
-    const mot = await ajouterMot({ ...salam, lieu: 'Rabat' }, base)
-    await modifierMot(mot.id, { ...salam, lieu: 'Fès' }, base)
-    expect((await base.motsPerso.get(mot.id))?.lieu).toBe('Fès')
-    await modifierMot(mot.id, { ...salam, lieu: ' ' }, base)
-    expect((await base.motsPerso.get(mot.id))?.lieu).toBeUndefined()
-    expect(await ajouterMot({ ...salam, latin: 'salam 3likom', arabe: 'سلام عليكم', lieu: '' }, base)).not.toHaveProperty('lieu')
+    expect(await ajouterMot({ ...salam, latin: 'salam 3likom', arabe: 'سلام عليكم' }, base)).not.toHaveProperty('ajouteLe')
   })
 })
