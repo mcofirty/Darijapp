@@ -38,6 +38,14 @@ export interface BilanSession {
   bonnes: number
   mauvaises: number
   nouveaux: number
+  /** XP total avant l'activité : le bilan montre si la plante a changé de stade. */
+  xpAvant: number
+}
+
+/** XP total : activités et bonus (théière-coffre, trésors). */
+export async function lireXpTotal(base: DarijaDB = db): Promise<number> {
+  const [sessions, bonus] = await Promise.all([base.sessions.toArray(), base.bonus.toArray()])
+  return [...sessions, ...bonus].reduce((t, g) => t + g.xp, 0)
 }
 
 /** Scores de prononciation gardés par mot (les plus récents). */
@@ -54,6 +62,7 @@ export async function enregistrerSession(
   base: DarijaDB = db,
 ): Promise<BilanSession> {
   const xp = xpDeSession(stats.bonnes, stats.mauvaises === 0)
+  const xpAvant = await lireXpTotal(base)
   await base.transaction('rw', base.progression, base.sessions, async () => {
     if (!stats.entrainement) {
       for (const [id, reussi] of resultats) {
@@ -76,7 +85,7 @@ export async function enregistrerSession(
     }
     await base.sessions.add({ date: aujourdhui, xp, bonnes: stats.bonnes, mauvaises: stats.mauvaises, nouveaux: stats.nouveaux, type: 'session' })
   })
-  return { xp, bonnes: stats.bonnes, mauvaises: stats.mauvaises, nouveaux: stats.nouveaux }
+  return { xp, bonnes: stats.bonnes, mauvaises: stats.mauvaises, nouveaux: stats.nouveaux, xpAvant }
 }
 
 /**
@@ -90,6 +99,7 @@ export async function enregistrerActivite(
   base: DarijaDB = db,
 ): Promise<BilanSession> {
   const xp = xpDeSession(stats.bonnes, stats.mauvaises === 0 && stats.bonnes > 0)
+  const xpAvant = await lireXpTotal(base)
   await base.sessions.add({ date: aujourdhui, xp, bonnes: stats.bonnes, mauvaises: stats.mauvaises, nouveaux: 0, type })
-  return { xp, bonnes: stats.bonnes, mauvaises: stats.mauvaises, nouveaux: 0 }
+  return { xp, bonnes: stats.bonnes, mauvaises: stats.mauvaises, nouveaux: 0, xpAvant }
 }

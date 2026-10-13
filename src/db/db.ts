@@ -37,6 +37,8 @@ export interface Profil {
   /** Sons de réponse et confettis du bilan, choisis au souk. */
   sons: string
   confettis: string
+  /** XP total la dernière fois que « Mon jardin » a été ouvert : la plante pousse en animation depuis là. */
+  jardinXpVu: number | null
   /** Dis-le avec le micro et un score ; sinon, auto-évaluation (mode sans micro). */
   micro: boolean
   /** Distances de mots bien dits par l'utilisateur, pour régler le score sur sa voix. */
@@ -131,6 +133,7 @@ export const PROFIL_DEFAUT: Profil = {
   objets: [],
   sons: 'classique',
   confettis: 'papiers',
+  jardinXpVu: null,
   micro: true,
   reglageVoix: [],
 }

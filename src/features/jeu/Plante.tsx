@@ -269,22 +269,57 @@ interface PlanteProps {
   taille?: number
   /** Balancement doux (page « Mon jardin »). */
   vivante?: boolean
+  /** Numéro du dernier changement de stade d'une animation : rebond et étincelles. */
+  pop?: number
 }
 
 /** La plante seule, dans son pot. */
-export function Plante({ stade, avancement = 1, espece = 'menthe', pot, taille = 56, vivante = false }: PlanteProps) {
+export function Plante({ stade, avancement = 1, espece = 'menthe', pot, taille = 56, vivante = false, pop = 0 }: PlanteProps) {
   return (
     <svg viewBox="0 0 100 120" width={taille} height={taille * 1.2} role="img" aria-label={`Plante, stade ${stade} sur 10`}>
-      <PlanteDessin stade={stade} avancement={avancement} espece={espece} vivante={vivante} />
+      <PlanteDessin stade={stade} avancement={avancement} espece={espece} vivante={vivante} pop={pop} />
       <Pot pot={pot} />
     </svg>
   )
 }
 
-function PlanteDessin({ stade, avancement, espece, vivante }: { stade: number; avancement: number; espece: string; vivante: boolean }) {
+/** Étincelles qui jaillissent quand la plante change de stade (repère de la plante). */
+function Etincelles() {
+  return (
+    <g aria-hidden>
+      {Array.from({ length: 10 }, (_, i) => {
+        const a = (i / 10) * 2 * Math.PI
+        return (
+          <circle
+            key={i}
+            className="etincelle"
+            cx="50"
+            cy="55"
+            r={i % 2 ? 1.6 : 2.4}
+            fill={i % 3 === 0 ? '#ffcc00' : i % 3 === 1 ? '#ffffff' : '#7ed957'}
+            style={{ '--dx': `${Math.cos(a) * 34}px`, '--dy': `${Math.sin(a) * 30}px`, animationDelay: `${(i % 3) * 60}ms` } as React.CSSProperties}
+          />
+        )
+      })}
+    </g>
+  )
+}
+
+function PlanteDessin({ stade, avancement, espece, vivante, pop = 0 }: { stade: number; avancement: number; espece: string; vivante: boolean; pop?: number }) {
   const e = ESPECES[espece] ?? ESPECES.menthe
   const croissance = Math.min(1, Math.max(0, avancement))
   const n = Math.min(Math.max(stade, 1), 10)
+  return (
+    <>
+      <g key={pop} className={pop > 0 ? 'plante-pop' : undefined}>
+        <PlanteVivante stade={n} croissance={croissance} e={e} espece={espece} vivante={vivante} />
+      </g>
+      {pop > 0 && <Etincelles key={`e${pop}`} />}
+    </>
+  )
+}
+
+function PlanteVivante({ stade: n, croissance, e, espece, vivante }: { stade: number; croissance: number; e: Espece; espece: string; vivante: boolean }) {
   return (
     <g className={vivante ? 'plante-vivante' : undefined}>
       {/* Terre fraîche, quelques cailloux. */}
@@ -408,7 +443,23 @@ function Objet({ id }: { id: string }) {
 }
 
 /** Scène complète de « Mon jardin » : fond, objets et plante en grand. */
-export function Jardin({ stade, avancement, espece, pot, fond, objets }: { stade: number; avancement: number; espece: string; pot: string; fond: string; objets: string[] }) {
+export function Jardin({
+  stade,
+  avancement,
+  espece,
+  pot,
+  fond,
+  objets,
+  pop = 0,
+}: {
+  stade: number
+  avancement: number
+  espece: string
+  pot: string
+  fond: string
+  objets: string[]
+  pop?: number
+}) {
   return (
     <svg viewBox="0 0 360 300" className="block h-auto w-full" role="img" aria-label={`Ton jardin : plante au stade ${stade} sur 10`}>
       <Fond id={fond} />
@@ -417,7 +468,7 @@ export function Jardin({ stade, avancement, espece, pot, fond, objets }: { stade
       ))}
       {/* La plante, 2,1 fois sa taille : le bas du pot touche le sol. */}
       <g transform="translate(75 10) scale(2.1)">
-        <PlanteDessin stade={stade} avancement={avancement} espece={espece} vivante />
+        <PlanteDessin stade={stade} avancement={avancement} espece={espece} vivante pop={pop} />
         <Pot pot={pot} />
       </g>
     </svg>

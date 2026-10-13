@@ -37,3 +37,26 @@ export function croissance(xpTotal: number): Croissance {
 export function taille({ stade, avancement }: Pick<Croissance, 'stade' | 'avancement'>): number {
   return Math.min(1, (stade - 1 + Math.min(1, Math.max(0, avancement))) / STADES)
 }
+
+/** Un morceau de l'animation de croissance : la plante d'un stade, qui passe d'un avancement à un autre. */
+export interface EtapeAnimation {
+  stade: number
+  de: number
+  a: number
+}
+
+/**
+ * Étapes pour animer la plante d'un total d'XP à un autre : elle finit son stade, passe chaque
+ * stade intermédiaire en entier, puis pousse dans le nouveau stade jusqu'à l'avancement actuel.
+ */
+export function etapesDeCroissance(xpDepart: number, xpArrivee: number): EtapeAnimation[] {
+  if (xpArrivee <= xpDepart) return []
+  const d = croissance(xpDepart)
+  const f = croissance(xpArrivee)
+  if (f.stade === d.stade) return f.avancement > d.avancement ? [{ stade: d.stade, de: d.avancement, a: f.avancement }] : []
+  const etapes: EtapeAnimation[] = []
+  if (d.avancement < 1) etapes.push({ stade: d.stade, de: d.avancement, a: 1 })
+  for (let s = d.stade + 1; s < f.stade; s++) etapes.push({ stade: s, de: 0, a: 1 })
+  etapes.push({ stade: f.stade, de: 0, a: f.avancement })
+  return etapes
+}

@@ -498,6 +498,28 @@ body {
   transform-origin: 50% 100%;
   animation: balancer 5s ease-in-out infinite;
 }
+/* Changement de stade : la plante rebondit depuis le pied, des étincelles jaillissent. */
+.plante-pop {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: rebond-plante 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes rebond-plante {
+  0% { transform: scale(0.88); }
+  55% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+.etincelle {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: etincelle 0.9s ease-out forwards;
+}
+@keyframes etincelle {
+  0% { opacity: 1; transform: translate(0, 0) scale(0.4); }
+  70% { opacity: 1; }
+  100% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(1); }
+}
 @keyframes balancer {
   0%, 100% { transform: rotate(-1.2deg); }
   50% { transform: rotate(1.2deg); }
@@ -515,4 +537,5 @@ body {
   .feuille-entree { animation: none; }
   .confetti { display: none; }
   .plante-vivante { animation: none; }
+  .plante-pop, .etincelle { animation: none; }
 }

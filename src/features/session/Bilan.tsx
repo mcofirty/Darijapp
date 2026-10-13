@@ -1,8 +1,11 @@
 import { Coins, Flame, Sparkles, Target } from 'lucide-react'
-import type { ReactNode } from 'react'
+import { useState, type ReactNode } from 'react'
 import { useProfil } from '../../db/useProfil'
 import { useResume } from '../../db/useResume'
+import { croissance, etapesDeCroissance } from '../../gamification/jardin'
 import { bonusPrecision, dirhamsDActivite } from '../../gamification/souk'
+import { Plante } from '../jeu/Plante'
+import { useCroissanceAnimee } from '../jeu/useCroissanceAnimee'
 import { Bouton } from '../../ui/Boutons'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
 
@@ -13,7 +16,7 @@ interface Props {
   /** Taux de réussite, de 0 à 1 ; absent quand il n'a pas de sens (Quiz express). */
   taux?: number
   /** Bonnes réponses et erreurs de l'activité, pour les dirhams gagnés. */
-  activite?: { bonnes: number; mauvaises: number }
+  activite?: { bonnes: number; mauvaises: number; xpAvant?: number }
   /** Lignes ajoutées en tête du bilan (score, record…). */
   lignes?: ReactNode
   libelleEncore: string
@@ -26,6 +29,24 @@ const CONFETTIS: Record<string, { couleurs: string[]; classe: string }> = {
   papiers: { couleurs: ['#ff9500', '#ffcc00', '#34c759', '#007aff', '#ff2d55'], classe: '' },
   petales: { couleurs: ['#e2445c', '#f06b84', '#c2185b', '#ff9fb2'], classe: 'petale' },
   etoiles: { couleurs: ['#ffcc00', '#f2c14e', '#ffd966', '#e0a800'], classe: 'etoile' },
+}
+
+/** La plante qui passe au stade suivant pendant l'activité : animée dans le bilan. */
+function PlanteGrandie({ xpAvant, xp }: { xpAvant: number; xp: number }) {
+  const { espece, pot } = useProfil()
+  const [etapes] = useState(() => etapesDeCroissance(xpAvant, xpAvant + xp))
+  const avant = croissance(xpAvant)
+  const apres = croissance(xpAvant + xp)
+  const plante = useCroissanceAnimee(etapes, apres, 1)
+  return (
+    <div className="mb-6 flex flex-col items-center text-center" role="status">
+      <Plante stade={plante.stade} avancement={plante.avancement} espece={espece} pot={pot} taille={120} pop={plante.pop} vivante />
+      <p className="t-titre-3 mt-2">Ta plante a grandi !</p>
+      <p className="t-appel text-texte-2">
+        {avant.nom} → <span className="font-semibold text-vert">{apres.nom}</span>
+      </p>
+    </div>
+  )
 }
 
 /** Écran de fin de session, de quiz ou de Quiz express, avec confettis. */
@@ -54,6 +75,9 @@ export function Bilan({ titre, sousTitre, xp, taux, activite, lignes, libelleEnc
       <div className="relative mx-auto flex min-h-full max-w-xl flex-col justify-center px-marge pb-[calc(max(0.75rem,env(safe-area-inset-bottom))+9rem)] pt-[calc(env(safe-area-inset-top)+2rem)]">
         <h2 className="t-grand-titre mb-1 text-center">{titre}</h2>
         <p className="t-appel mb-8 text-center text-texte-2">{sousTitre}</p>
+        {activite?.xpAvant !== undefined && croissance(activite.xpAvant + xp).stade > croissance(activite.xpAvant).stade && (
+          <PlanteGrandie xpAvant={activite.xpAvant} xp={xp} />
+        )}
         <Section>
           {lignes}
           <Ligne tuile={<Tuile icone={Sparkles} couleur="#af52de" />} titre="XP gagnés" valeur={`+${xp}`} />
