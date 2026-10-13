@@ -3,14 +3,15 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { arreterLecture, jouer, lireEtAttendre } from '../../audio/lecteur'
 import { sonReponse } from '../../audio/effets'
 import { enregistrerActivite, type BilanSession } from '../../db/apprentissage'
-import { modifierProfil } from '../../db/db'
-import { useProfil } from '../../db/useProfil'
-import { SCENES, aDire, meilleurResultat, repliquesDe, type Scene } from '../../exercices/dialogues'
+import { couperUnMoment, modifierProfil } from '../../db/db'
+import { useModes, useProfil } from '../../db/useProfil'
+import { SCENES, aDire, meilleurResultat, propositionsReplique, repliquesDe, type Scene } from '../../exercices/dialogues'
 import { Alerte } from '../../ui/Alerte'
 import { Bouton } from '../../ui/Boutons'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
 import { Bilan } from '../session/Bilan'
+import { Choix } from '../session/Choix'
 import { DisLe, type ResultatDire } from '../session/DisLe'
 
 /** Couleurs des tuiles des scènes, dans l'ordre. */
@@ -66,6 +67,11 @@ function Dialogue({ scene, onFermer, onEncore }: { scene: Scene; onFermer: () =>
   const [enLecture, setEnLecture] = useState<number | null>(null)
   const [bilan, setBilan] = useState<BilanSession | null>(null)
   const [confirmer, setConfirmer] = useState(false)
+  // Sans parler (réglage, pause, ou « Je ne peux pas parler maintenant ») : on choisit sa réplique.
+  const modes = useModes()
+  const [sansParler, setSansParler] = useState(false)
+  const parle = (modes?.parler ?? true) && !sansParler
+  const ecoute = modes?.ecouter ?? true
   const score = useRef({ bonnes: 0, mauvaises: 0 })
   const resultats = useRef(new Map<number, boolean>())
   const lecture = useRef(0)
@@ -96,7 +102,7 @@ function Dialogue({ scene, onFermer, onEncore }: { scene: Scene; onFermer: () =>
   useEffect(() => {
     if (phase === 'ecoute') return
     const fin = phase === 'fin' ? repliques.length : index
-    void lireSuite(precedenteDite(fin) + 1, fin)
+    if (ecoute) void lireSuite(precedenteDite(fin) + 1, fin)
     window.setTimeout(() => bas.current?.scrollIntoView({ behavior: 'smooth', block: 'end' }), 100)
   }, [phase, index])
 
@@ -127,6 +133,12 @@ function Dialogue({ scene, onFermer, onEncore }: { scene: Scene; onFermer: () =>
     await modifierProfil({ dialogues: meilleurResultat(profil.dialogues, scene.id, bonnes) })
     setBilan(await enregistrerActivite('dialogue', score.current))
   }
+
+  // Sans parler : les répliques proposées pour celle à dire, tirées une fois par réplique.
+  const choix = useMemo(
+    () => (phase === 'jeu' && repliques[index] ? propositionsReplique(repliques[index], scene, profil.genre) : null),
+    [phase, index, repliques, scene, profil.genre],
+  )
 
   if (bilan) {
     const { bonnes, mauvaises } = score.current
@@ -175,7 +187,12 @@ function Dialogue({ scene, onFermer, onEncore }: { scene: Scene; onFermer: () =>
         <div className="mb-5 rounded-liste bg-carte px-marge py-4">
           <p className="t-titre-3">{phase === 'ecoute' ? 'Écoute la scène' : 'Joue ton rôle'}</p>
           <p className="t-sous-titre mt-1 text-texte-2">
-            {scene.contexte} {phase === 'ecoute' ? 'Touche une réplique pour la réécouter.' : `${scene.autre} te parle : réponds en darija.`}
+            {scene.contexte}{' '}
+            {phase === 'ecoute'
+              ? 'Touche une réplique pour la réécouter.'
+              : parle
+                ? `${scene.autre} te parle : réponds en darija.`
+                : `${scene.autre} te parle : choisis ta réponse en darija.`}
           </p>
         </div>
 
@@ -198,7 +215,12 @@ function Dialogue({ scene, onFermer, onEncore }: { scene: Scene; onFermer: () =>
           ))}
         </ul>
 
-        {actuelle && (
+        {actuelle && !parle && choix && (
+          <div key={index} className="entree-droite mt-6">
+            <Choix type="traduis" mot={actuelle} choix={choix} onRepondu={(juste) => setDire({ juste, score: null })} />
+          </div>
+        )}
+        {actuelle && parle && (
           <div key={index} className="entree-droite mt-6">
             <DisLe
               mot={actuelle}
@@ -208,6 +230,10 @@ function Dialogue({ scene, onFermer, onEncore }: { scene: Scene; onFermer: () =>
               consigne={`Comment le dis-tu en darija ? L’indice t’aide si besoin.`}
               onPret={setDire}
               onRepondu={valider}
+              onPasMaintenant={() => {
+                void couperUnMoment('parler')
+                setSansParler(true)
+              }}
             />
           </div>
         )}

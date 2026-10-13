@@ -1,10 +1,13 @@
 import { useRef, useState } from 'react'
-import { jouer } from '../../audio/lecteur'
+import { jouerAuto } from '../../audio/lecteur'
 import { sonReponse } from '../../audio/effets'
 import { CircleCheck, CircleX, X } from 'lucide-react'
 import type { Mot } from '../../data/types'
 import { useMots } from '../../db/motsPerso'
 import { enregistrerActivite, enregistrerSession, type BilanSession } from '../../db/apprentissage'
+import { couperUnMoment } from '../../db/db'
+import { useModes } from '../../db/useProfil'
+import { adapterEtapes, type Modes } from '../../exercices/modes'
 import { Resultats, etapeARefaire, type Etape } from '../../exercices/session'
 import { Alerte } from '../../ui/Alerte'
 import { Bouton } from '../../ui/Boutons'
@@ -34,9 +37,19 @@ type Reponse = Pick<Mot, 'latin' | 'arabe' | 'fr' | 'audio'>
 type Retour = { juste: true } | { juste: false; mot: Reponse }
 
 /** Session plein écran : une étape à la fois, retour immédiat, étapes ratées refaites à la fin. */
-export function Session({ etapes: depart, nouveaux, entrainement, activite, onFermer, onEncore }: Props) {
+export function Session(props: Props) {
+  // Les étapes sont adaptées aux modes (sans parler, sans écouter) : on attend la lecture du profil.
+  const modes = useModes()
+  if (!modes) return <div data-sans-balayage className="fixed inset-0 z-30 bg-fond" />
+  return <SessionEnCours {...props} modesDepart={modes} />
+}
+
+function SessionEnCours({ etapes: depart, nouveaux, entrainement, activite, onFermer, onEncore, modesDepart }: Props & { modesDepart: Modes }) {
   const quiz = activite !== undefined
-  const [etapes, setEtapes] = useState(depart)
+  const [etapes, setEtapes] = useState(() => adapterEtapes(depart, modesDepart))
+  const modes = useRef(modesDepart)
+  // Change quand l'étape en cours est remplacée (« Je ne peux pas… maintenant ») : elle est redessinée.
+  const [version, setVersion] = useState(0)
   const [index, setIndex] = useState(0)
   const [retour, setRetour] = useState<Retour | null>(null)
   const [bilan, setBilan] = useState<BilanSession | null>(null)
@@ -60,10 +73,10 @@ export function Session({ etapes: depart, nouveaux, entrainement, activite, onFe
     else resultats.current.compter(juste)
     compterQuestion(juste)
     sonReponse(juste)
-    setTimeout(() => jouer(mot.audio, mot.arabe), 350)
+    setTimeout(() => jouerAuto(mot.audio, mot.arabe), 350)
     if (!juste && !quiz) {
       const refaire = etapeARefaire(etape, MOTS)
-      if (refaire) setEtapes((e) => [...e, refaire])
+      if (refaire) setEtapes((e) => [...e, ...adapterEtapes([refaire], modes.current)])
     }
     setRetour(juste ? { juste: true } : { juste: false, mot })
   }
@@ -77,6 +90,20 @@ export function Session({ etapes: depart, nouveaux, entrainement, activite, onFe
     void suivant()
   }
 
+  /**
+   * « Je ne peux pas parler / écouter maintenant » : coupe le mode 15 min, puis adapte l'étape en cours
+   * (passée sans être comptée, ou Écoute et choisis devenu Traduis) et les suivantes.
+   */
+  function pasMaintenant(mode: 'parler' | 'ecouter') {
+    void couperUnMoment(mode)
+    modes.current = { ...modes.current, [mode]: false }
+    const nouvelles = [...etapes.slice(0, index), ...adapterEtapes(etapes.slice(index), modes.current)]
+    setEtapes(nouvelles)
+    setVersion((v) => v + 1)
+    setDire(null)
+    if (index >= nouvelles.length) void terminer()
+  }
+
   async function suivant() {
     setRetour(null)
     setDire(null)
@@ -84,6 +111,10 @@ export function Session({ etapes: depart, nouveaux, entrainement, activite, onFe
       setIndex(index + 1)
       return
     }
+    await terminer()
+  }
+
+  async function terminer() {
     const r = resultats.current
     const q = questions.current
     setBilan(
@@ -125,6 +156,9 @@ export function Session({ etapes: depart, nouveaux, entrainement, activite, onFe
     )
   }
 
+  // Dernière étape passée (« Je ne peux pas… maintenant ») : le bilan arrive.
+  if (!etape) return <div data-sans-balayage className="fixed inset-0 z-30 bg-fond" />
+
   return (
     <div data-sans-balayage className="fixed inset-0 z-30 flex flex-col bg-fond">
       {/* Barre du haut en verre, au-dessus du contenu qui défile dessous (bord flou d'iOS 26). */}
@@ -153,16 +187,34 @@ export function Session({ etapes: depart, nouveaux, entrainement, activite, onFe
       </div>
 
       <div className="mx-auto w-full max-w-xl flex-1 overflow-y-auto px-marge pb-6 pt-[calc(env(safe-area-inset-top)+4.5rem)]">
-        <div key={index} className="entree-droite">
+        <div key={`${index}-${version}`} className="entree-droite">
           {etape.type === 'decouverte' && <Decouverte mot={etape.mot} />}
           {(etape.type === 'ecoute' || etape.type === 'traduis') && (
-            <Choix type={etape.type} mot={etape.mot} choix={etape.choix} onRepondu={(j) => repondre(j, etape.mot, etape.mot.id)} />
+            <Choix
+              type={etape.type}
+              mot={etape.mot}
+              choix={etape.choix}
+              onRepondu={(j) => repondre(j, etape.mot, etape.mot.id)}
+              onPasMaintenant={() => pasMaintenant('ecouter')}
+            />
           )}
           {etape.type === 'distingue' && (
-            <Distingue paire={etape.paire} cible={etape.cible} onRepondu={(j) => repondre(j, etape.cible, null)} />
+            <Distingue
+              paire={etape.paire}
+              cible={etape.cible}
+              onRepondu={(j) => repondre(j, etape.cible, null)}
+              onPasMaintenant={() => pasMaintenant('ecouter')}
+            />
           )}
           {etape.type === 'disle' && (
-            <DisLe mot={etape.mot} inverse={etape.inverse} phrase={etape.phrase} onPret={setDire} onRepondu={(r) => valider(etape.mot, r)} />
+            <DisLe
+              mot={etape.mot}
+              inverse={etape.inverse}
+              phrase={etape.phrase}
+              onPret={setDire}
+              onRepondu={(r) => valider(etape.mot, r)}
+              onPasMaintenant={() => pasMaintenant('parler')}
+            />
           )}
           {etape.type === 'phrase' && (
             <Construis mot={etape.mot} morceaux={etape.morceaux} onRepondu={(j) => repondre(j, etape.mot.exemple, etape.mot.id)} />

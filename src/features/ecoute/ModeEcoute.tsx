@@ -1,13 +1,14 @@
 import { useLiveQuery } from 'dexie-react-hooks'
-import { Headphones, History } from 'lucide-react'
+import { Headphones, History, VolumeX } from 'lucide-react'
 import { useState } from 'react'
 import { motsDuTheme } from '../../data'
 import { THEMES } from '../../data/themes'
 import type { Mot } from '../../data/types'
-import { db } from '../../db/db'
+import { db, reglerMode } from '../../db/db'
 import { useMots } from '../../db/motsPerso'
+import { useModes } from '../../db/useProfil'
 import { dureeApproximative, dureeEnMinutes, motsVusAEcouter, type OptionsEcoute } from '../../exercices/ecoute'
-import { Interrupteur } from '../../ui/Boutons'
+import { Bouton, Interrupteur, Vide } from '../../ui/Boutons'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
 import { VISUELS_THEMES } from '../../ui/visuels'
@@ -22,12 +23,29 @@ export function ModeEcoute({ onRetour }: { onRetour: () => void }) {
   const progressions = useLiveQuery(() => db.progression.toArray(), []) ?? []
   const [options, setOptions] = useState<OptionsEcoute>({ repeter: true, francais: true })
   const [ecoute, setEcoute] = useState<{ titre: string; mots: Mot[] } | null>(null)
+  const sourd = useModes()?.ecouter === false
 
   const aRevoir = motsVusAEcouter(progressions, mots, MOTS_A_REVOIR)
   const tousVus = motsVusAEcouter(progressions, mots)
   const duree = (n: number) => `${n} mot${n > 1 ? 's' : ''} · ${dureeEnMinutes(dureeApproximative(n, options))}`
 
   if (ecoute) return <LecteurEcoute {...ecoute} options={options} onFermer={() => setEcoute(null)} />
+
+  if (sourd)
+    return (
+      <Page titre="Mode écoute" retour={{ libelle: 'Apprendre', action: onRetour }}>
+        <Vide
+          icone={<VolumeX className="h-12 w-12" strokeWidth={1.8} aria-hidden />}
+          titre="Exercices d’écoute coupés"
+          texte="Le mode écoute lit tes mots à voix haute : réactive l’écoute pour l’utiliser."
+        />
+        <div className="text-center">
+          <Bouton grand onClick={() => void reglerMode('ecouter', true)}>
+            Réactiver l’écoute
+          </Bouton>
+        </div>
+      </Page>
+    )
 
   return (
     <Page titre="Mode écoute" retour={{ libelle: 'Apprendre', action: onRetour }}>

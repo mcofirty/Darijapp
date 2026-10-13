@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState, type TouchEvent } from 'react'
-import { useProfil } from '../db/useProfil'
+import { useModes, useProfil } from '../db/useProfil'
+import { reglerLectureAutomatique } from '../audio/lecteur'
 import { motDuLien } from '../data/motsPerso'
 import { AjoutMots } from '../features/ajout/AjoutMots'
 import { Proposition } from '../features/ajout/Proposition'
-import { choisirSons } from '../audio/effets'
+import { choisirSons, couperSons } from '../audio/effets'
 import { Apprendre } from '../features/apprendre/Apprendre'
 import { AideInstallation } from '../features/onboarding/AideInstallation'
 import { Parcours } from '../features/parcours/Parcours'
@@ -40,6 +41,12 @@ export default function App() {
   const { apparence, couleur, sons } = useProfil()
   useEffect(() => appliquerCouleur(couleur), [couleur])
   useEffect(() => choisirSons(sons), [sons])
+  // Sans écoute (réglage ou pause de 15 min) : plus de lecture automatique ni de son de réponse.
+  const ecouter = useModes()?.ecouter ?? true
+  useEffect(() => {
+    reglerLectureAutomatique(ecouter)
+    couperSons(!ecouter)
+  }, [ecouter])
 
   useEffect(() => {
     appliquerApparence(apparence)

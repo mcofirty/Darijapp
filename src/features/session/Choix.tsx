@@ -3,16 +3,22 @@ import { useEffect, useState } from 'react'
 import { jouer } from '../../audio/lecteur'
 import type { Mot } from '../../data/types'
 import { useProfil } from '../../db/useProfil'
+import { PasMaintenant } from './PasMaintenant'
+
+/** Une proposition : un mot du programme, ou une réplique de dialogue. */
+type Option = Pick<Mot, 'id' | 'latin' | 'arabe' | 'fr' | 'audio'>
 
 interface Props {
   type: 'ecoute' | 'traduis'
-  mot: Mot
-  choix: Mot[]
+  mot: Option
+  choix: Option[]
   onRepondu: (juste: boolean) => void
+  /** « Je ne peux pas écouter maintenant » : la question est passée (Distingue) ou devient un Traduis. */
+  onPasMaintenant?: () => void
 }
 
 /** « Écoute et choisis » (audio → français) ou « Traduis » (français → darija). */
-export function Choix({ type, mot, choix, onRepondu }: Props) {
+export function Choix({ type, mot, choix, onRepondu, onPasMaintenant }: Props) {
   const { afficherArabe } = useProfil()
   const [choisi, setChoisi] = useState<string | null>(null)
 
@@ -20,7 +26,7 @@ export function Choix({ type, mot, choix, onRepondu }: Props) {
     if (type === 'ecoute') jouer(mot.audio, mot.arabe)
   }, [mot, type])
 
-  function choisir(c: Mot) {
+  function choisir(c: Option) {
     if (choisi) return
     setChoisi(c.id)
     onRepondu(c.id === mot.id)
@@ -91,6 +97,7 @@ export function Choix({ type, mot, choix, onRepondu }: Props) {
           )
         })}
       </ul>
+      {onPasMaintenant && type === 'ecoute' && !choisi && <PasMaintenant mode="ecouter" onClick={onPasMaintenant} />}
     </div>
   )
 }

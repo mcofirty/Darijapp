@@ -1,4 +1,5 @@
 import Dexie, { type Table } from 'dexie'
+import { finDePause } from '../exercices/modes'
 
 export interface ProgressionMot {
   id: string
@@ -41,6 +42,13 @@ export interface Profil {
   jardinXpVu: number | null
   /** Dis-le avec le micro et un score ; sinon, auto-évaluation (mode sans micro). */
   micro: boolean
+  /** Exercices de prononciation (Dis-le, Dis-le en darija) : sans eux, ils sont retirés des activités. */
+  parler: boolean
+  /** Exercices d'écoute (Écoute et choisis, Distingue les sons, jeux à l'oreille) et lecture automatique. */
+  ecouter: boolean
+  /** « Je ne peux pas parler / écouter maintenant » : horodatage de fin de la pause, ou null. */
+  pauseParler: number | null
+  pauseEcouter: number | null
   /** Distances de mots bien dits par l'utilisateur, pour régler le score sur sa voix. */
   reglageVoix: number[]
   /** Score précis (expérimental) : le modèle de reconnaissance des sons note Dis-le, s'il est téléchargé. */
@@ -141,6 +149,10 @@ export const PROFIL_DEFAUT: Profil = {
   confettis: 'papiers',
   jardinXpVu: null,
   micro: true,
+  parler: true,
+  ecouter: true,
+  pauseParler: null,
+  pauseEcouter: null,
   reglageVoix: [],
   scorePrecis: false,
   dialogues: {},
@@ -192,6 +204,17 @@ export const db = new DarijaDB()
 export async function lireProfil(base: DarijaDB = db): Promise<Profil> {
   const profil = await base.profil.get('moi')
   return { ...PROFIL_DEFAUT, ...profil }
+}
+
+/** « Je ne peux pas parler / écouter maintenant » : coupe le mode pendant 15 min. */
+export async function couperUnMoment(mode: 'parler' | 'ecouter', base: DarijaDB = db): Promise<Profil> {
+  const fin = finDePause(Date.now())
+  return modifierProfil(mode === 'parler' ? { pauseParler: fin } : { pauseEcouter: fin }, base)
+}
+
+/** Rallume un mode depuis le Profil (ou « Réactiver l'écoute ») : sa pause éventuelle est levée. */
+export async function reglerMode(mode: 'parler' | 'ecouter', actif: boolean, base: DarijaDB = db): Promise<Profil> {
+  return modifierProfil(mode === 'parler' ? { parler: actif, pauseParler: null } : { ecouter: actif, pauseEcouter: null }, base)
 }
 
 export async function modifierProfil(changements: Partial<Omit<Profil, 'id'>>, base: DarijaDB = db): Promise<Profil> {

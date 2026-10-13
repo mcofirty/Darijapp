@@ -1,6 +1,6 @@
 import { Flag, Star } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import { jouer } from '../../audio/lecteur'
+import { jouerAuto } from '../../audio/lecteur'
 import { sonsDuMot } from '../../data/sons'
 import type { Mot } from '../../data/types'
 import type { MotifSignalement } from '../../db/db'
@@ -26,7 +26,7 @@ export function FicheMot({ mot, retour }: Props) {
   // Lecture automatique à l'ouverture (l'ouverture vient d'un toucher, ce qu'exige iOS).
   useEffect(() => {
     window.scrollTo(0, 0)
-    jouer(mot.audio, mot.arabe)
+    jouerAuto(mot.audio, mot.arabe)
   }, [mot])
 
   return (

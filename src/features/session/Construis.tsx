@@ -1,6 +1,6 @@
 import { Snail, Volume2 } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import { jouer } from '../../audio/lecteur'
+import { jouer, jouerAuto } from '../../audio/lecteur'
 import type { Mot } from '../../data/types'
 import { useProfil } from '../../db/useProfil'
 import { phraseJuste } from '../../exercices/phrases'
@@ -21,7 +21,7 @@ export function Construis({ mot, morceaux, onRepondu }: Props) {
   const [verdict, setVerdict] = useState<boolean | null>(null)
 
   useEffect(() => {
-    jouer(ex.audio, ex.arabe)
+    jouerAuto(ex.audio, ex.arabe)
   }, [ex])
 
   function prendre(i: number) {

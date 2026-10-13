@@ -1,6 +1,7 @@
 import { BookOpenText } from 'lucide-react'
 import { useState } from 'react'
-import { useProfil } from '../../db/useProfil'
+import { useModes, useProfil } from '../../db/useProfil'
+import { TOUS_LES_MODES } from '../../exercices/modes'
 import { LECONS_GRAMMAIRE, QUESTIONS_PAR_LECON, composerLecon, type FormeGrammaire, type LeconGrammaire } from '../../exercices/grammaire'
 import type { Etape } from '../../exercices/session'
 import { Bouton } from '../../ui/Boutons'
@@ -16,6 +17,7 @@ const COULEURS = ['#ff3b30', '#ff9500', '#34c759', '#007aff', '#5856d6', '#af52d
 export function Grammaire({ onRetour }: { onRetour: () => void }) {
   const [lecon, setLecon] = useState<LeconGrammaire | null>(null)
   const [entrainement, setEntrainement] = useState<{ etapes: Etape[]; numero: number } | null>(null)
+  const modes = useModes() ?? TOUS_LES_MODES
 
   function ouvrir(l: LeconGrammaire | null) {
     setLecon(l)
@@ -23,7 +25,7 @@ export function Grammaire({ onRetour }: { onRetour: () => void }) {
   }
 
   function sEntrainer(l: LeconGrammaire) {
-    setEntrainement((e) => ({ etapes: composerLecon(l), numero: (e?.numero ?? 0) + 1 }))
+    setEntrainement((e) => ({ etapes: composerLecon(l, Math.random, modes), numero: (e?.numero ?? 0) + 1 }))
   }
 
   if (lecon && entrainement)

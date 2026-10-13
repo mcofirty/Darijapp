@@ -1,5 +1,6 @@
 import donnees from '../data/parler/grammaire.json'
 import type { Mot } from '../data/types'
+import { TOUS_LES_MODES, type Modes } from './modes'
 import { phraseConstructible } from './phrases'
 import { melanger, propositions, questionPhrase, type Aleatoire, type Etape } from './session'
 
@@ -47,9 +48,10 @@ export function formeEnMot(forme: FormeGrammaire, lecon: LeconGrammaire): Mot {
 /**
  * 5 questions sur des formes différentes : Traduis, Écoute et choisis, Construis la phrase
  * (s'il y a une forme de 3 à 6 mots, sinon Traduis), Écoute et choisis, et Dis-le d'une phrase,
- * les leurres pris dans la leçon (dari / darek / daro…).
+ * les leurres pris dans la leçon (dari / darek / daro…). Sans parler, la phrase à dire devient un
+ * Traduis ; sans écouter, les Écoute et choisis deviennent des Traduis : toujours 5 questions.
  */
-export function composerLecon(lecon: LeconGrammaire, alea: Aleatoire = Math.random): Etape[] {
+export function composerLecon(lecon: LeconGrammaire, alea: Aleatoire = Math.random, modes: Modes = TOUS_LES_MODES): Etape[] {
   const mots = lecon.formes.map((f) => formeEnMot(f, lecon))
   const restants = melanger(mots, alea)
   const prendre = (filtre: (m: Mot) => boolean = () => true): Mot | undefined => {
@@ -60,9 +62,10 @@ export function composerLecon(lecon: LeconGrammaire, alea: Aleatoire = Math.rand
   const aDire = prendre((m) => m.latin.includes(' ')) ?? prendre()!
   const aConstruire = prendre(phraseConstructible)
   const choix = (type: 'ecoute' | 'traduis', mot: Mot): Etape => ({ type, mot, choix: propositions(mot, mots, alea) })
-  const etapes: Etape[] = [choix('traduis', prendre()!), choix('ecoute', prendre()!)]
+  const ecoute = modes.ecouter ? 'ecoute' : 'traduis'
+  const etapes: Etape[] = [choix('traduis', prendre()!), choix(ecoute, prendre()!)]
   etapes.push(aConstruire ? questionPhrase(aConstruire, mots, alea) : choix('traduis', prendre()!))
-  etapes.push(choix('ecoute', prendre()!))
-  etapes.push({ type: 'disle', mot: aDire, phrase: aDire.latin.includes(' ') })
+  etapes.push(choix(ecoute, prendre()!))
+  etapes.push(modes.parler ? { type: 'disle', mot: aDire, phrase: aDire.latin.includes(' ') } : choix('traduis', aDire))
   return etapes
 }

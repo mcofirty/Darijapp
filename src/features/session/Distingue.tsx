@@ -3,15 +3,18 @@ import { useEffect, useMemo, useState } from 'react'
 import { jouer } from '../../audio/lecteur'
 import type { MotSon, PaireSons } from '../../data/pairesSons'
 import { useProfil } from '../../db/useProfil'
+import { PasMaintenant } from './PasMaintenant'
 
 interface Props {
   paire: PaireSons
   cible: MotSon
   onRepondu: (juste: boolean) => void
+  /** « Je ne peux pas écouter maintenant » : la question est passée (Distingue) ou devient un Traduis. */
+  onPasMaintenant?: () => void
 }
 
 /** « Distingue les sons » : on entend un mot (9elb ou kelb ?) et on choisit lequel. */
-export function Distingue({ paire, cible, onRepondu }: Props) {
+export function Distingue({ paire, cible, onRepondu, onPasMaintenant }: Props) {
   const { afficherArabe } = useProfil()
   const [choisi, setChoisi] = useState<string | null>(null)
   // Ordre d'affichage tiré une fois : la bonne réponse n'est pas toujours au même endroit.
@@ -88,6 +91,7 @@ export function Distingue({ paire, cible, onRepondu }: Props) {
           )
         })}
       </ul>
+      {onPasMaintenant && !choisi && <PasMaintenant mode="ecouter" onClick={onPasMaintenant} />}
     </div>
   )
 }

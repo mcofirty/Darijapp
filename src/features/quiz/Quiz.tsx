@@ -1,7 +1,8 @@
-import { Trophy } from 'lucide-react'
+import { Trophy, VolumeX } from 'lucide-react'
 import { useState, type ReactNode } from 'react'
 import type { Etape } from '../../exercices/session'
-import { useProfil } from '../../db/useProfil'
+import { useModes, useProfil } from '../../db/useProfil'
+import { TOUS_LES_MODES } from '../../exercices/modes'
 import { Bouton } from '../../ui/Boutons'
 import { Page } from '../../ui/Page'
 import { Session } from '../session/Session'
@@ -14,6 +15,16 @@ type EnCours =
   | { type: 'quiz'; etapes: Etape[]; numero: number }
   | { type: 'chrono'; jeu: JeuChrono; prochaine: (precedente: Etape | null) => Etape; numero: number }
   | { type: 'marchandage' | 'taxi'; numero: number }
+
+/** Sans écoute, les jeux qui se jouent à l'oreille restent visibles mais ne se lancent pas. */
+function DemandeDEcouter() {
+  return (
+    <p className="t-sous-titre mt-3 flex items-center gap-1.5 text-texte-2">
+      <VolumeX className="h-4 w-4 shrink-0" strokeWidth={2.4} aria-hidden />
+      Demande d’écouter : exercices d’écoute coupés (Profil).
+    </p>
+  )
+}
 
 function Carte({ surtitre, titre, texte, record, children }: { surtitre: string; titre: string; texte: string; record?: string; children: ReactNode }) {
   return (
@@ -36,14 +47,16 @@ function Carte({ surtitre, titre, texte, record, children }: { surtitre: string;
 export function Quiz() {
   const [enCours, setEnCours] = useState<EnCours | null>(null)
   const { recordExpress, recordSons } = useProfil()
+  const modes = useModes() ?? TOUS_LES_MODES
+  const sourd = !modes.ecouter
 
   async function lancerQuiz() {
-    const etapes = await preparerQuiz()
+    const etapes = await preparerQuiz(modes)
     setEnCours((e) => ({ type: 'quiz', etapes, numero: (e?.numero ?? 0) + 1 }))
   }
 
   async function lancerChrono(jeu: JeuChrono) {
-    const prochaine = jeu === 'express' ? await preparerExpress() : questionSons
+    const prochaine = jeu === 'express' ? await preparerExpress(modes) : questionSons
     setEnCours((e) => ({ type: 'chrono', jeu, prochaine, numero: (e?.numero ?? 0) + 1 }))
   }
 
@@ -109,7 +122,8 @@ export function Quiz() {
         texte="9elb ou kelb ? 7al ou khal ? Écoute et choisis le bon mot. À partir de 5 bonnes réponses d'affilée, chacune vaut 2 points."
         record={recordSons > 0 ? `Record : ${recordSons} point${recordSons > 1 ? 's' : ''}` : 'Pas encore de record'}
       >
-        <Bouton grand variante="teinte" className="mt-4 w-full" onClick={() => void lancerChrono('sons')}>
+        {sourd && <DemandeDEcouter />}
+        <Bouton grand variante="teinte" className="mt-4 w-full" disabled={sourd} onClick={() => void lancerChrono('sons')}>
           Lancer la chasse
         </Bouton>
       </Carte>
@@ -118,7 +132,8 @@ export function Quiz() {
         titre="Marchandage au souk"
         texte="Le marchand annonce ses prix en darija : comprends-les, dis que c’est trop cher et repars avec une bonne affaire."
       >
-        <Bouton grand variante="teinte" className="mt-4 w-full" onClick={() => rejouer('marchandage')}>
+        {sourd && <DemandeDEcouter />}
+        <Bouton grand variante="teinte" className="mt-4 w-full" disabled={sourd} onClick={() => rejouer('marchandage')}>
           Aller au souk
         </Bouton>
       </Carte>
@@ -128,7 +143,8 @@ export function Quiz() {
         titre="Le taxi"
         texte="Tu conduis : le passager te guide en darija (à droite, à gauche, tout droit, arrête-toi). Choisis la bonne direction."
       >
-        <Bouton grand variante="teinte" className="mt-4 w-full" onClick={() => rejouer('taxi')}>
+        {sourd && <DemandeDEcouter />}
+        <Bouton grand variante="teinte" className="mt-4 w-full" disabled={sourd} onClick={() => rejouer('taxi')}>
           Prendre le volant
         </Bouton>
       </Carte>

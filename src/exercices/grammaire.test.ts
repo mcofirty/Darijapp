@@ -61,4 +61,15 @@ describe('composerLecon', () => {
     const possessifs = LECONS_GRAMMAIRE.find((l) => l.id === 'possessifs')!
     expect(composerLecon(possessifs, graine(3)).some((e) => e.type === 'phrase')).toBe(false)
   })
+
+  it('sans parler ni écouter : toujours 5 questions, sans Dis-le ni Écoute et choisis', () => {
+    for (const l of LECONS_GRAMMAIRE) {
+      for (const modes of [{ parler: false, ecouter: true }, { parler: true, ecouter: false }, { parler: false, ecouter: false }]) {
+        const etapes = composerLecon(l, graine(5), modes)
+        expect(etapes).toHaveLength(QUESTIONS_PAR_LECON)
+        expect(etapes.some((e) => e.type === 'disle')).toBe(modes.parler)
+        expect(etapes.some((e) => e.type === 'ecoute')).toBe(modes.ecouter)
+      }
+    }
+  })
 })

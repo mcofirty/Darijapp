@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { jouer } from '../../audio/lecteur'
+import { jouerAuto } from '../../audio/lecteur'
 import { sonsDuMot } from '../../data/sons'
 import type { Mot } from '../../data/types'
 import { useProfil } from '../../db/useProfil'
@@ -12,7 +12,7 @@ export function Decouverte({ mot }: { mot: Mot }) {
   const sons = sonsDuMot(mot.latin)
 
   useEffect(() => {
-    jouer(mot.audio, mot.arabe)
+    jouerAuto(mot.audio, mot.arabe)
   }, [mot])
 
   return (

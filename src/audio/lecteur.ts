@@ -1,6 +1,12 @@
 const audiosDisponibles = new Set(__AUDIOS__)
 
 let element: HTMLAudioElement | null = null
+/** Sans « Exercices d'écoute » : aucun son ne part tout seul (seuls les boutons Écouter lisent). */
+let lectureAutomatique = true
+
+export function reglerLectureAutomatique(actif: boolean): void {
+  lectureAutomatique = actif
+}
 
 /** Indique si le MP3 généré existe pour ce chemin (ex. « audio/salutations-001.mp3 »). */
 export function audioDisponible(chemin: string): boolean {
@@ -62,6 +68,11 @@ export function jouer(chemin: string, texteArabe: string, vitesse = 1): void {
   element.src = import.meta.env.BASE_URL + chemin
   element.playbackRate = vitesse
   element.play().catch(() => parlerArabe(texteArabe, vitesse))
+}
+
+/** Lecture qui part toute seule (ouverture d'une fiche, mot rejoué après une réponse…) : coupée sans écoute. */
+export function jouerAuto(chemin: string, texteArabe: string, vitesse = 1): void {
+  if (lectureAutomatique) jouer(chemin, texteArabe, vitesse)
 }
 
 /** Comme `jouer`, mais attend la fin de la lecture (mode écoute). */

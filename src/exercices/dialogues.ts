@@ -1,4 +1,5 @@
 import donnees from '../data/parler/dialogues.json'
+import { melanger } from './session'
 
 /** Dialogues courts (logique pure) : on écoute une scène, puis on y tient son rôle avec Dis-le. */
 
@@ -48,4 +49,25 @@ export function aDire(scene: Scene): number {
 /** Meilleurs résultats par scène (répliques réussies), mis à jour si la partie fait mieux. */
 export function meilleurResultat(meilleurs: Record<string, number>, sceneId: string, reussies: number): Record<string, number> {
   return reussies > (meilleurs[sceneId] ?? -1) ? { ...meilleurs, [sceneId]: reussies } : meilleurs
+}
+
+/**
+ * Sans parler : la réplique à retrouver parmi 4 répliques à dire, les leurres pris d'abord dans la scène,
+ * puis dans les autres scènes (graphies et traductions toutes différentes), accordés au genre.
+ */
+export function propositionsReplique(
+  replique: TexteReplique,
+  scene: Scene,
+  genre: 'm' | 'f' | null,
+  alea: () => number = Math.random,
+): TexteReplique[] {
+  const aDireDe = (s: Scene) => repliquesDe(s, genre).filter((r) => r.qui === 'moi')
+  const autresScenes = melanger(SCENES.filter((s) => s.id !== scene.id).flatMap(aDireDe), alea)
+  const leurres: TexteReplique[] = []
+  for (const r of [...melanger(aDireDe(scene), alea), ...autresScenes]) {
+    if (leurres.length === 3) break
+    const deja = [replique, ...leurres]
+    if (!deja.some((l) => l.latin === r.latin || l.fr === r.fr)) leurres.push(r)
+  }
+  return melanger([replique, ...leurres], alea).map(({ id, latin, arabe, fr, audio }) => ({ id, latin, arabe, fr, audio }))
 }

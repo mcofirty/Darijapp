@@ -2,8 +2,15 @@ let contexte: AudioContext | null = null
 /** Jeu de sons choisi au souk (« classique », « qraqeb » ou « darbouka »), mis à jour par l'appli. */
 let jeu = 'classique'
 
+/** Sans « Exercices d'écoute », les sons de réponse se taisent aussi. */
+let muet = false
+
 export function choisirSons(id: string): void {
   jeu = id
+}
+
+export function couperSons(actif: boolean): void {
+  muet = actif
 }
 
 function note(frequence: number, debut: number, duree: number, type: OscillatorType, volume: number, glisse?: number): void {
@@ -96,7 +103,7 @@ function jouerJeu(id: string, juste: boolean): void {
 
 /** Petit son de retour après une réponse (synthétisé, sans fichier), dans le jeu de sons choisi. */
 export function sonReponse(juste: boolean): void {
-  essayerDeJouer(jeu, juste)
+  if (!muet) essayerDeJouer(jeu, juste)
 }
 
 /** Fait entendre un jeu de sons au souk, avant de l'acheter. */

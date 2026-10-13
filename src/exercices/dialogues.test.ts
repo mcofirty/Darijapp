@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { validerMot } from '../data/motsPerso'
-import { SCENES, aDire, accorder, meilleurResultat, repliquesDe } from './dialogues'
+import { SCENES, aDire, accorder, meilleurResultat, propositionsReplique, repliquesDe } from './dialogues'
 
 describe('données des dialogues', () => {
   it('8 scènes de 4 à 6 répliques, dont 2 ou 3 à dire', () => {
@@ -54,5 +54,23 @@ describe('meilleurResultat', () => {
     expect(meilleurResultat({}, 'cafe', 0)).toEqual({ cafe: 0 })
     expect(meilleurResultat({ cafe: 2 }, 'cafe', 1)).toEqual({ cafe: 2 })
     expect(meilleurResultat({ cafe: 2 }, 'cafe', 3)).toEqual({ cafe: 3 })
+  })
+})
+
+describe('propositionsReplique', () => {
+  it('4 répliques à dire, dont la bonne, toutes différentes, accordées au genre', () => {
+    for (const genre of ['m', 'f'] as const) {
+      for (const s of SCENES) {
+        for (const r of repliquesDe(s, genre).filter((x) => x.qui === 'moi')) {
+          const choix = propositionsReplique(r, s, genre)
+          expect(choix).toHaveLength(4)
+          expect(choix.map((c) => c.id)).toContain(r.id)
+          expect(new Set(choix.map((c) => c.latin)).size).toBe(4)
+          expect(new Set(choix.map((c) => c.fr)).size).toBe(4)
+          const aDireAccordees = SCENES.flatMap((x) => repliquesDe(x, genre)).filter((x) => x.qui === 'moi').map((x) => x.id)
+          expect(choix.every((c) => aDireAccordees.includes(c.id))).toBe(true)
+        }
+      }
+    }
   })
 })

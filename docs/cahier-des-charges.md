@@ -37,7 +37,7 @@ L'appli s'organise en 5 onglets dans une barre de navigation basse et suit les r
 | Parcours | La progression guidée | Voyage au Maroc en 10 étapes (villes) qui regroupent les 31 thèmes ; prochaine étape conseillée mise en avant ; leçon d'étape ; tampon dans un passeport quand 80 % des mots de l'étape sont retenus ; trésors à +100 XP entre les étapes |
 | Quiz | Le contrôle des acquis | Quiz de 5 questions mêlant les exercices, sans toucher aux révisions ; Quiz express (60 s, record) ; Chasse aux sons (60 s de « Distingue les sons », combo dès 5 bonnes réponses d'affilée, record) ; mini-jeux Marchandage au souk (comprendre les prix, faire baisser) et Le taxi (suivre les directions en darija) ; bonus de quête si aucune faute |
 | Progrès | Le tableau de bord | Accueil « Salut + prénom » ; niveau, XP total, XP du jour et XP restants avant le niveau suivant ; quêtes du jour et coffre ; série avec calendrier de la semaine ; statistiques (mots maîtrisés par thème, taux de réussite, courbe du score par son) ; bascule vers le Dictionnaire |
-| Profil | Les réglages | Prénom et avatar ; genre, pour accorder les phrases (« toi » se dit nta au masculin, nti au féminin) ; objectif quotidien ; heure du rappel ; vitesse audio et lecture automatique ; affichage de l'arabe ; langue de l'interface ; mode sombre ; export, import et remise à zéro de la progression |
+| Profil | Les réglages | Prénom et avatar ; genre, pour accorder les phrases (« toi » se dit nta au masculin, nti au féminin) ; objectif quotidien ; heure du rappel ; vitesse audio et lecture automatique ; exercices de prononciation et d'écoute (à couper pour jouer sans parler ou sans le son) ; affichage de l'arabe ; langue de l'interface ; mode sombre ; export, import et remise à zéro de la progression |
 
 Le Dictionnaire liste tous les mots, en marquant ceux déjà vus, avec recherche, audio et niveau de maîtrise de chaque mot.
 
@@ -60,6 +60,7 @@ Ces fonctions complètent les écrans et se codent entièrement dans l'appli.
 | Mode écoute | Enchaîne mot darija, pause, traduction, pour réviser sans regarder l'écran | Apprendre |
 | Rappel calendrier | Génère le fichier .ics du rappel quotidien | Profil |
 | Sans micro | Interrupteur « Micro » dans Profil, ou accès au micro refusé : Dis-le devient une auto-évaluation (dire le mot à voix haute, puis « Je l'ai bien dit » ou « À retravailler ») | Partout |
+| Sans parler, sans écouter | Interrupteurs « Exercices de prononciation » et « Exercices d'écoute » dans Profil. Sans parler : plus de Dis-le, et dans les dialogues on choisit sa réplique. Sans écouter : Écoute et choisis devient Traduis, plus de Distingue les sons ni de son automatique, et les jeux à l'oreille (Chasse aux sons, Marchandage, Taxi, mode écoute) sont grisés. Pendant un exercice, « Je ne peux pas parler maintenant » ou « Je ne peux pas écouter maintenant » le passe sans le compter et coupe ce type d'exercice 15 min | Partout |
 
 ## Vocabulaire et prononciation
 

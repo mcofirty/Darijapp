@@ -1,6 +1,6 @@
 import { Ear, Eye, Lightbulb, Loader2, Mic, RotateCcw, Square, Volume2 } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
-import { jouer } from '../../audio/lecteur'
+import { jouer, jouerAuto } from '../../audio/lecteur'
 import { modelePresent, noterParSons, ouvrirModele } from '../../audio/modeleSons'
 import { SILENCE_MOT, SILENCE_PHRASE, decoder16k, enregistrer, microDisponible, preparerMicro, referenceDuMot, rejouer, type Enregistrement } from '../../audio/micro'
 import { sonsDuMot } from '../../data/sons'
@@ -14,6 +14,7 @@ import { SEUIL_SON, sonRate, type DetailSon } from '../../scoring/sons/prononcia
 import { AnneauScore } from '../../ui/AnneauScore'
 import { Bouton } from '../../ui/Boutons'
 import { BoutonAudio } from '../mots/BoutonAudio'
+import { PasMaintenant } from './PasMaintenant'
 
 export interface ResultatDire {
   juste: boolean
@@ -37,6 +38,8 @@ interface Props {
   onPret: (r: ResultatDire | null) => void
   /** Auto-évaluation : la réponse est donnée tout de suite. */
   onRepondu: (r: ResultatDire) => void
+  /** « Je ne peux pas parler maintenant » : l'exercice est passé sans être compté. */
+  onPasMaintenant?: () => void
 }
 
 type Etat =
@@ -52,7 +55,7 @@ type Etat =
  * Dis-le : on écoute le mot, on le dit, et le score compare à la voix de Jamal.
  * En mode inverse, on part du français : rien n'est lu avant l'essai, un indice donne le début.
  */
-export function DisLe({ mot, inverse = false, phrase = false, titre, consigne, onPret, onRepondu }: Props) {
+export function DisLe({ mot, inverse = false, phrase = false, titre, consigne, onPret, onRepondu, onPasMaintenant }: Props) {
   const profil = useProfil()
   const [etat, setEtat] = useState<Etat>({ type: 'pret' })
   const [niveau, setNiveau] = useState(0)
@@ -72,7 +75,7 @@ export function DisLe({ mot, inverse = false, phrase = false, titre, consigne, o
   }, [profil.scorePrecis])
 
   useEffect(() => {
-    if (!inverse) jouer(mot.audio, mot.arabe)
+    if (!inverse) jouerAuto(mot.audio, mot.arabe)
     // Charge la référence pendant que l'utilisateur écoute.
     void referenceDuMot(mot.audio, pause)
     return () => enCours.current?.arreter()
@@ -82,7 +85,7 @@ export function DisLe({ mot, inverse = false, phrase = false, titre, consigne, o
   function devoiler() {
     if (devoile) return
     setDevoile(true)
-    window.setTimeout(() => jouer(mot.audio, mot.arabe), 400)
+    window.setTimeout(() => jouerAuto(mot.audio, mot.arabe), 400)
   }
 
   async function parler() {
@@ -138,8 +141,8 @@ export function DisLe({ mot, inverse = false, phrase = false, titre, consigne, o
       // « À retravailler » : au ralenti.
       if (!devoile) {
         setDevoile(true)
-        window.setTimeout(() => jouer(mot.audio, mot.arabe, score < 60 ? 0.75 : 1), 600)
-      } else if (score < 80) window.setTimeout(() => jouer(mot.audio, mot.arabe, score < 60 ? 0.75 : 1), 600)
+        window.setTimeout(() => jouerAuto(mot.audio, mot.arabe, score < 60 ? 0.75 : 1), 600)
+      } else if (score < 80) window.setTimeout(() => jouerAuto(mot.audio, mot.arabe, score < 60 ? 0.75 : 1), 600)
     } catch {
       setEtat({ type: 'auto', son, raison: 'Ton essai n’a pas pu être analysé : compare-le au modèle.' })
       devoiler()
@@ -261,6 +264,7 @@ export function DisLe({ mot, inverse = false, phrase = false, titre, consigne, o
           </p>
         </div>
       )}
+      {onPasMaintenant && (etat.type === 'pret' || etat.type === 'muet') && <PasMaintenant mode="parler" onClick={onPasMaintenant} />}
     </div>
   )
 }

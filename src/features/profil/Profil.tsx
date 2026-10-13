@@ -1,7 +1,7 @@
-import { AudioLines, Flag, Languages, Mic, SunMoon, UserRound } from 'lucide-react'
+import { AudioLines, Ear, Flag, Languages, Mic, Speech, SunMoon, UserRound } from 'lucide-react'
 import { useState } from 'react'
-import { modifierProfil, type Apparence } from '../../db/db'
-import { useProfil } from '../../db/useProfil'
+import { modifierProfil, reglerMode, type Apparence } from '../../db/db'
+import { useModes, useProfil } from '../../db/useProfil'
 import { Interrupteur, Segmente } from '../../ui/Boutons'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
 import { useMarques } from '../../db/marques'
@@ -22,8 +22,20 @@ const GENRES: { id: 'm' | 'f'; libelle: string }[] = [
   { id: 'f', libelle: 'Féminin' },
 ]
 
+/** Sous-titre d'un mode : coupé pour un moment par « Je ne peux pas… maintenant », ou le réglage. */
+function etatDuMode(actif: boolean, pause: number | null, allume: string): string {
+  if (!actif) return 'Coupés'
+  if (pause !== null && pause > Date.now()) {
+    const fin = new Date(pause)
+    return `Coupés jusqu’à ${fin.getHours()} h ${String(fin.getMinutes()).padStart(2, '0')}`
+  }
+  return allume
+}
+
 export function Profil() {
   const profil = useProfil()
+  // Redessine à la fin d'une pause de 15 min (sous-titres « Coupés jusqu'à… »).
+  useModes()
   const [signales, setSignales] = useState(false)
   const [reglage, setReglage] = useState(false)
   const nbSignales = [...useMarques().values()].filter((m) => m.signale).length
@@ -59,6 +71,23 @@ export function Profil() {
               onChange={(v) => void modifierProfil({ afficherArabe: v })}
             />
           }
+        />
+      </Section>
+      <Section
+        titre="Exercices"
+        note="Pour jouer sans parler ou sans le son : les exercices concernés sont retirés des sessions, quiz et leçons. Pendant une activité, « Je ne peux pas parler maintenant » ou « Je ne peux pas écouter maintenant » les coupe 15 min."
+      >
+        <Ligne
+          tuile={<Tuile icone={Speech} couleur="#ff9500" />}
+          titre="Exercices de prononciation"
+          sousTitre={etatDuMode(profil.parler, profil.pauseParler, 'Dis-le et Dis-le en darija')}
+          fin={<Interrupteur libelle="Exercices de prononciation" actif={profil.parler} onChange={(v) => void reglerMode('parler', v)} />}
+        />
+        <Ligne
+          tuile={<Tuile icone={Ear} couleur="#007aff" />}
+          titre="Exercices d’écoute"
+          sousTitre={etatDuMode(profil.ecouter, profil.pauseEcouter, 'Écoute, sons et lecture automatique')}
+          fin={<Interrupteur libelle="Exercices d’écoute" actif={profil.ecouter} onChange={(v) => void reglerMode('ecouter', v)} />}
         />
       </Section>
       <Section titre="Prononciation" note="Sans micro, l’exercice Dis-le te laisse juger toi-même. Ta voix n’est jamais gardée ni envoyée : elle est analysée sur l’iPhone puis oubliée.">

@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { jouer } from '../../audio/lecteur'
+import { jouerAuto } from '../../audio/lecteur'
 import { sonReponse } from '../../audio/effets'
 import type { Mot } from '../../data/types'
 import { melanger } from '../../exercices/session'
@@ -20,7 +20,7 @@ export function Paires({ mots, onErreur, onTermine }: Props) {
 
   function toucherGauche(m: Mot) {
     setSelection(m.id)
-    jouer(m.audio, m.arabe)
+    jouerAuto(m.audio, m.arabe)
   }
 
   function toucherDroite(m: Mot) {
