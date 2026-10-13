@@ -46,3 +46,12 @@ describe('sauvegarde', () => {
     await autre.delete()
   })
 })
+
+describe('trésors', () => {
+  it('un trésor ne rapporte qu’une fois', async () => {
+    const { ouvrirTresor } = await import('./journal')
+    expect(await ouvrirTresor('tresor-tanger', 100, J, base)).toBe(100)
+    expect(await ouvrirTresor('tresor-tanger', 100, J, base)).toBe(0)
+    expect(await ouvrirTresor('tresor-tetouan', 100, J, base)).toBe(100)
+  })
+})

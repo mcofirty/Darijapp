@@ -29,3 +29,13 @@ export async function ouvrirCoffre(aujourdhui = dateLocale(), base: DarijaDB = d
     return XP_COFFRE
   })
 }
+
+/** Ouvre un trésor du Parcours : +100 XP, une seule fois par trésor. Renvoie les XP gagnés. */
+export async function ouvrirTresor(cle: string, xp: number, aujourdhui = dateLocale(), base: DarijaDB = db): Promise<number> {
+  return base.transaction('rw', base.bonus, async () => {
+    const deja = await base.bonus.filter((b) => b.cle === cle).count()
+    if (deja > 0) return 0
+    await base.bonus.add({ date: aujourdhui, xp, raison: 'tresor', cle })
+    return xp
+  })
+}

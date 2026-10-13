@@ -87,6 +87,8 @@ export interface Bonus {
   date: string
   xp: number
   raison: 'coffre' | 'tresor'
+  /** Trésor ouvert (« tresor-tanger ») : chacun ne rapporte qu'une fois. */
+  cle?: string
 }
 
 export const PROFIL_DEFAUT: Profil = {

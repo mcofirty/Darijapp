@@ -418,6 +418,18 @@ body {
 .entree-droite { animation: depuis-droite 0.25s ease-out; }
 .entree-gauche { animation: depuis-gauche 0.25s ease-out; }
 
+/* Trésor du Parcours prêt à ouvrir : il sautille doucement. */
+.tresor-pret {
+  animation: sautille 1.6s ease-in-out infinite;
+}
+@keyframes sautille {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tresor-pret { animation: none; }
+}
+
 /* Confettis du bilan de session. */
 .confetti {
   position: absolute;
