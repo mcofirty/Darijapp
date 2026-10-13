@@ -17,7 +17,6 @@ import json
 import subprocess
 import sys
 import time
-import wave
 from argparse import Namespace
 from pathlib import Path
 
@@ -83,16 +82,22 @@ def main():
     unites = lm.inventory.unit
     sons = [unites.get_unit(i) for i in range(len(unites))]
     print('sons universels :', len(sons))
-    ara = lm.inventory.get_unit('ara')
-    sons_ara = [ara.get_unit(i) for i in range(1, len(ara))]
-    print('inventaire arabe :', ' '.join(sons_ara))
+    sons_ara = []
+    for langue in ['ary', 'arb']:
+        inv = lm.inventory.get_unit(langue)
+        liste = [inv.get_unit(i) for i in range(1, len(inv))]
+        print(f'inventaire {langue} :', ' '.join(liste))
+        if langue == 'ary':
+            sons_ara = liste
     for s in ['ʕ', 'ħ', 'q', 'x', 'χ', 'ɣ', 'ʁ', 'h', 'k', 'ɡ', 'ʔ', 'ʃ', 'ʒ', 'r', 'ɾ', 'sˤ', 'tˤ', 'dˤ', 'ə']:
         print(f'  {s} universel : {s in sons}, arabe : {s in sons_ara}')
 
     # Export ONNX et vérification sur un vrai mot.
     enveloppe = Enveloppe(am).eval()
     wav = wav16k(RACINE / 'public' / 'audio' / 'son-9elb.mp3')
-    mfcc = pm.compute(read_audio(str(wav)))
+    from allosaurus.pm.utils import resample_audio
+    audio8k = resample_audio(read_audio(str(wav)), pm_config['sample_rate'])
+    mfcc = pm.compute(audio8k)
     entree = torch.from_numpy(np.expand_dims(mfcc, 0).astype(np.float32))
     with torch.no_grad():
         attendu = enveloppe(entree).numpy()
@@ -115,16 +120,16 @@ def main():
             if not mp3.exists():
                 continue
             w = str(wav16k(mp3))
-            print(f'{cote:14} ara : {reco.recognize(w, "ara"):24} | ipa : {reco.recognize(w, "ipa"):24} | top3 : {reco.recognize(w, "ara", topk=3)}')
+            print(f'{cote:14} ary : {reco.recognize(w, "ary"):24} | ipa : {reco.recognize(w, "ipa"):24} | top3 : {reco.recognize(w, "ary", topk=3)}')
 
     # Fichiers de l'appli.
     (SORTIE / 'allosaurus.onnx').write_bytes(onnx.read_bytes())
     json.dump({'sons': sons, 'arabe': sons_ara, 'mfcc': pm_config}, open(SORTIE / 'sons.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    with wave.open(str(wav)) as f:
-        echantillons = f.readframes(f.getnframes())
     reference = {
         'mot': 'son-9elb',
-        'echantillons': base64.b64encode(echantillons).decode(),
+        'frequence': pm_config['sample_rate'],
+        # Échantillons déjà rééchantillonnés par resampy (échelle 16 bits), pour tester les MFCC seuls.
+        'echantillons': base64.b64encode(np.asarray(audio8k.samples, dtype=np.float32).tobytes()).decode(),
         'mfcc': np.round(mfcc, 5).tolist(),
         'logits': np.round(attendu[0], 4).tolist(),
     }
