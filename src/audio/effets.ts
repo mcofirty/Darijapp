@@ -40,8 +40,42 @@ function claquement(debut: number, duree: number, frequence: number, volume: num
   source.start(ctx.currentTime + debut)
 }
 
+/** Youyou (zaghrouta) : une note aiguë qui ondule très vite, comme la langue qui bat. */
+function youyou(debut: number, duree: number, frequence: number, volume: number): void {
+  const ctx = contexte!
+  const osc = ctx.createOscillator()
+  const lfo = ctx.createOscillator()
+  const profondeur = ctx.createGain()
+  const gain = ctx.createGain()
+  osc.type = 'sine'
+  osc.frequency.value = frequence
+  lfo.frequency.value = 13
+  profondeur.gain.value = frequence * 0.08
+  lfo.connect(profondeur).connect(osc.frequency)
+  gain.gain.setValueAtTime(0.0001, ctx.currentTime + debut)
+  gain.gain.exponentialRampToValueAtTime(volume, ctx.currentTime + debut + 0.05)
+  gain.gain.setValueAtTime(volume, ctx.currentTime + debut + duree - 0.1)
+  gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + debut + duree)
+  osc.connect(gain).connect(ctx.destination)
+  for (const o of [osc, lfo]) {
+    o.start(ctx.currentTime + debut)
+    o.stop(ctx.currentTime + debut + duree)
+  }
+}
+
 function jouerJeu(id: string, juste: boolean): void {
-  if (id === 'qraqeb') {
+  if (id === 'oud') {
+    // Deux cordes pincées (quinte montante) ; une erreur : une corde grave qui retombe.
+    if (juste) {
+      note(294, 0, 0.5, 'triangle', 0.22)
+      note(588, 0, 0.3, 'sine', 0.05)
+      note(440, 0.13, 0.6, 'triangle', 0.22)
+      note(880, 0.13, 0.35, 'sine', 0.05)
+    } else note(147, 0, 0.6, 'triangle', 0.24, 130)
+  } else if (id === 'zaghrouta') {
+    if (juste) youyou(0, 0.55, 1250, 0.09)
+    else note(220, 0, 0.3, 'triangle', 0.18, 170)
+  } else if (id === 'qraqeb') {
     // Le rythme ternaire des castagnettes gnaoua ; un seul claquement sourd pour une erreur.
     if (juste) [0, 0.11, 0.22].forEach((t, i) => claquement(t, 0.07, i === 2 ? 5200 : 4200, 0.5))
     else claquement(0, 0.12, 1800, 0.5)

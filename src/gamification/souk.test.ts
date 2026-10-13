@@ -45,6 +45,12 @@ describe('souk', () => {
     }
   })
 
+  it('au moins 4 articles par rayon', () => {
+    for (const c of ['espece', 'fond', 'objet', 'pot', 'couleur', 'zellige', 'sons', 'confettis']) {
+      expect(ARTICLES.filter((a) => a.categorie === c).length, c).toBeGreaterThanOrEqual(4)
+    }
+  })
+
   it('identifiants uniques', () => {
     expect(new Set(ARTICLES.map((a) => a.id)).size).toBe(ARTICLES.length)
   })

@@ -29,6 +29,8 @@ export const CONFETTIS: Record<string, { couleurs: string[]; classe: string }> =
   papiers: { couleurs: ['#ff9500', '#ffcc00', '#34c759', '#007aff', '#ff2d55'], classe: '' },
   petales: { couleurs: ['#e2445c', '#f06b84', '#c2185b', '#ff9fb2'], classe: 'petale' },
   etoiles: { couleurs: ['#ffcc00', '#f2c14e', '#ffd966', '#e0a800'], classe: 'etoile' },
+  feuilles: { couleurs: ['#3fae5a', '#2f8f46', '#6cc76f', '#24733a'], classe: 'feuille' },
+  pieces: { couleurs: ['#d4a017', '#e8b923', '#c99a14', '#f2cf4e'], classe: 'piece' },
 }
 
 /** La plante qui passe au stade suivant pendant l'activité : animée dans le bilan. */

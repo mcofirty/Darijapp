@@ -1,4 +1,4 @@
-import { Check, Coins, Eye, EyeOff, Lamp, Bird, CupSoda, Volume2, PartyPopper } from 'lucide-react'
+import { Check, Coins, Eye, EyeOff, Lamp, Bird, Cat, CupSoda, Soup, Volume2, PartyPopper, RectangleHorizontal } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { apercuSons } from '../../audio/effets'
@@ -27,7 +27,7 @@ const RAYONS: { allee: Allee; categorie: Categorie; titre: string; note: string 
   { allee: 'appli', categorie: 'zellige', titre: 'Zellige de la carte du jour', note: 'Un motif en haut de la carte « Session du jour ».' },
 ]
 
-const ICONES_OBJETS: Record<string, typeof Lamp> = { lanterne: Lamp, theiere: CupSoda, cigogne: Bird }
+const ICONES_OBJETS: Record<string, typeof Lamp> = { lanterne: Lamp, theiere: CupSoda, cigogne: Bird, tapis: RectangleHorizontal, tajine: Soup, chat: Cat }
 
 function Apercu({ a, stade, espece, pot }: { a: Article; stade: number; espece: string; pot: string }) {
   // Les plantes et les pots se montrent au stade Fleur (ou plus, si la plante y est déjà).

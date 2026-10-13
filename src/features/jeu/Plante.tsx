@@ -29,6 +29,9 @@ const ESPECES: Record<string, Espece> = {
   olivier: { feuille: '#8a9a6b', feuilleSombre: '#6f7f52', tige: '#7a6a55', fleur: '#f3f0d0', coeur: '#d9cf8f', fruit: '#3b2f4a', largeur: 0.22, forme: 'buisson', tronc: '#7a6a55' },
   rosier: { feuille: '#2f7d3a', feuilleSombre: '#256b31', tige: '#3d6b2a', fleur: '#e2445c', coeur: '#b3203a', fruit: '#c0392b', largeur: 0.45, forme: 'buisson', tronc: '#4a5a2a' },
   palmier: { feuille: '#4f9a3a', feuilleSombre: '#3f7f2e', tige: '#a0662b', fleur: '#f2d16b', coeur: '#e0b13c', fruit: '#8a4f1d', largeur: 0.18, forme: 'palmier', tronc: '#a0662b' },
+  jasmin: { feuille: '#2e7a36', feuilleSombre: '#24632b', tige: '#3d6b2a', fleur: '#ffffff', coeur: '#f7e7a6', fruit: '#2b2440', largeur: 0.38, forme: 'buisson', tronc: '#5a4a2e' },
+  grenadier: { feuille: '#3f8f3a', feuilleSombre: '#2f7530', tige: '#6b4a2e', fleur: '#ef4a26', coeur: '#ffb02e', fruit: '#c0262d', largeur: 0.3, forme: 'buisson', tronc: '#6b4a2e' },
+  arganier: { feuille: '#7fa03c', feuilleSombre: '#66862e', tige: '#6e5a3c', fleur: '#e8e3b0', coeur: '#c9c070', fruit: '#c8b23a', largeur: 0.28, forme: 'buisson', tronc: '#6e5a3c' },
   figuier: { feuille: '#5b9a4a', feuilleSombre: '#4a823b', tige: '#5b9a4a', fleur: '#ffd23f', coeur: '#f2a900', fruit: '#b8325a', largeur: 0.5, forme: 'cactus', tronc: '#4a823b' },
 }
 
@@ -116,7 +119,7 @@ function Buisson({ stade, croissance, e, espece }: { stade: number; croissance: 
     points.forEach(([dx, dy], i) => {
       const x = 50 + dx * r
       const y = haut + dy * r
-      els.push(espece === 'menthe' || espece === 'rosier' ? fleur(x, y, espece === 'rosier' ? 4 : 3, e, `a${i}`, espece) : fruit(x, y, espece === 'olivier' ? 1.8 : 3, e, `a${i}`))
+      els.push(espece === 'menthe' || espece === 'rosier' || espece === 'jasmin' ? fleur(x, y, espece === 'menthe' ? 3 : 4, e, `a${i}`, espece) : fruit(x, y, espece === 'olivier' ? 1.8 : 3, e, `a${i}`))
     })
     return <>{els}</>
   }
@@ -261,6 +264,15 @@ function Pot({ pot }: { pot: string }) {
       <rect x="25" y={SOL - 3} width="50" height="7" rx="2.5" fill="#000" opacity="0.12" />
       {pot === 'safi' && <path d={`M35 ${SOL + 12} l4 -4 l4 4 l4 -4 l4 4 l4 -4 l4 4 l4 -4 l4 4`} fill="none" stroke="#f5e6b8" strokeWidth="1.6" />}
       {pot === 'cuivre' && [0, 1, 2, 3, 4].map((i) => <circle key={i} cx={36 + i * 7} cy={SOL + 10 + (i % 2) * 6} r="1.5" fill="#e8a46b" />)}
+      {pot === 'tamegroute' && [0, 1, 2, 3, 4, 5].map((i) => <path key={i} d={`M${33 + i * 6.5} ${SOL + 3} q1.4 ${4 + (i % 3) * 3} 0 ${7 + (i % 3) * 3}`} stroke="#2f5216" strokeWidth="2" fill="none" strokeLinecap="round" opacity="0.7" />)}
+      {pot === 'berbere' && (
+        <g fill="#a63a22">
+          {[0, 1, 2, 3].map((i) => (
+            <path key={i} d={`M${36 + i * 8} ${SOL + 18} l4 -7 l4 7z`} />
+          ))}
+          <rect x="31" y={SOL + 8} width="38" height="1.4" fill="#2b2b2b" />
+        </g>
+      )}
       {pot === 'tadelakt' && <path d={`M32 ${SOL + 8} q18 5 36 0`} fill="none" stroke="#fff" strokeWidth="1.4" opacity="0.4" />}
     </g>
   )
@@ -565,6 +577,66 @@ function Fond({ id }: { id: string }) {
         <rect y="250" width="360" height="50" fill="#c96d2c" opacity="0.5" />
       </g>
     )
+ if (id === 'montagnes')
+    return (
+      <g>
+        <rect width="360" height="300" fill="#cfe2f5" />
+        <path d="M0 200 L70 110 L120 160 L190 70 L260 150 L310 105 L360 160 V250 H0Z" fill="#8aa1b8" />
+        <path d="M190 70 L172 93 L182 90 L190 100 L200 88 L210 94Z M70 110 L58 126 L70 122 L80 128Z M310 105 L298 120 L312 117 L320 122Z" fill="#ffffff" />
+        <path d="M0 225 Q90 190 180 220 T360 210 V250 H0Z" fill="#6f8f5a" />
+        <g fill="#c98e5c">
+          <rect x="20" y="206" width="30" height="20" />
+          <rect x="44" y="198" width="22" height="28" />
+          <rect x="300" y="200" width="34" height="24" />
+        </g>
+        <g fill="#7a4f2c">
+          <rect x="28" y="212" width="5" height="6" />
+          <rect x="52" y="206" width="5" height="6" />
+          <rect x="312" y="208" width="5" height="6" />
+        </g>
+        <rect y="250" width="360" height="50" fill="#b9a27e" />
+        <rect y="250" width="360" height="3" fill="#a08a66" />
+      </g>
+    )
+  if (id === 'port')
+    return (
+      <g>
+        <rect width="360" height="300" fill="#bfe3f7" />
+        <circle cx="300" cy="55" r="20" fill="#fff6c8" />
+        <rect y="160" width="360" height="90" fill="#3d8fc4" />
+        <path d="M0 175 q15 -4 30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0" stroke="#7cc3e8" strokeWidth="2" fill="none" />
+        <path d="M0 160 V120 h14 v-10 h12 v10 h20 v-10 h12 v10 h22 V160Z" fill="#d9c3a0" />
+        {[[200, 205], [255, 222], [150, 228]].map(([x, y], i) => (
+          <g key={i} transform={`translate(${x} ${y})`}>
+            <path d="M0 0 h42 l-7 10 h-28z" fill="#1f5fa8" />
+            <rect x="0" y="-2" width="42" height="3" fill="#f2f2f2" />
+            <path d="M20 -2 v-20 l12 18z" fill="#ffffff" opacity={i === 0 ? 1 : 0} />
+          </g>
+        ))}
+        <path d="M60 80 q6 -5 12 0 q6 -5 12 0" stroke="#f8f8f8" strokeWidth="2" fill="none" />
+        <rect y="250" width="360" height="50" fill="#e7d6b4" />
+        <rect y="250" width="360" height="3" fill="#d4c09a" />
+      </g>
+    )
+  if (id === 'nuitetoilee')
+    return (
+      <g>
+        <defs>
+          <linearGradient id="nuit" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#0f1838" />
+            <stop offset="1" stopColor="#2c3c78" />
+          </linearGradient>
+        </defs>
+        <rect width="360" height="300" fill="url(#nuit)" />
+        <circle cx="290" cy="60" r="22" fill="#fff6d5" />
+        <circle cx="300" cy="54" r="20" fill="#1a2550" />
+        {Array.from({ length: 26 }, (_, i) => (
+          <circle key={i} cx={(i * 97) % 350 + 5} cy={(i * 53) % 190 + 8} r={i % 4 === 0 ? 1.6 : 0.9} fill="#ffffff" opacity={0.5 + (i % 3) * 0.2} />
+        ))}
+        <rect y="250" width="360" height="50" fill="#2f4a3a" />
+        <rect y="250" width="360" height="3" fill="#3f5f4a" />
+      </g>
+    )
   return (
     <g>
       <defs>
@@ -607,6 +679,41 @@ function Objet({ id }: { id: string }) {
         <circle cx="18" cy="2" r="2.5" fill="#a8a8b2" />
         <rect x="6" y="32" width="24" height="3" rx="1.5" fill="#a8a8b2" />
         <path d="M40 30 h10 l-2 6 h-6z" fill="#c8e6c9" opacity="0.9" />
+      </g>
+    )
+  if (id === 'tapis')
+    return (
+      <g transform="translate(92 246)">
+        <path d="M8 0 h160 l14 16 h-188z" fill="#b3262e" />
+        <path d="M14 3 h148 l9 10 h-166z" fill="none" stroke="#f2e2c4" strokeWidth="1.4" />
+        {[0, 1, 2, 3, 4].map((i) => (
+          <path key={i} d={`M${34 + i * 28} 8 l7 -4 l7 4 l-7 4z`} fill="#1c1c1e" />
+        ))}
+        {Array.from({ length: 12 }, (_, i) => (
+          <path key={`f${i}`} d={`M${-2 + i * 16.5} 16 v4`} stroke="#f2e2c4" strokeWidth="1.2" />
+        ))}
+      </g>
+    )
+  if (id === 'tajine')
+    return (
+      <g transform="translate(18 236)">
+        <ellipse cx="26" cy="24" rx="26" ry="6" fill="#8a3f1d" />
+        <path d="M6 22 Q26 -10 46 22z" fill="#b65a2c" />
+        <path d="M14 17 q12 -6 24 0" stroke="#f2d0a0" strokeWidth="1.4" fill="none" />
+        <circle cx="26" cy="2" r="3" fill="#8a3f1d" />
+      </g>
+    )
+  if (id === 'chat')
+    return (
+      <g transform="translate(262 222)">
+        <path d="M44 26 q14 -2 10 -16" stroke="#e09a4a" strokeWidth="4" fill="none" strokeLinecap="round" />
+        <ellipse cx="30" cy="22" rx="18" ry="9" fill="#e09a4a" />
+        <circle cx="12" cy="14" r="9" fill="#e09a4a" />
+        <path d="M5 8 l1 -8 l6 5z M15 6 l5 -6 l2 8z" fill="#e09a4a" />
+        <path d="M7 14 q2 1.5 4 0 M14 14 q2 1.5 4 0" stroke="#5a3a1a" strokeWidth="1" fill="none" />
+        <path d="M26 16 q4 4 0 8 M34 15 q4 4 0 8" stroke="#c0782f" strokeWidth="1.4" fill="none" />
+        <text x="22" y="2" fontSize="8" fill="#8a8a8e">z</text>
+        <text x="28" y="-5" fontSize="6" fill="#8a8a8e">z</text>
       </g>
     )
   if (id === 'cigogne')
@@ -665,6 +772,14 @@ export function motifZellige(id: string): string | undefined {
   }
   if (id === 'fassi') {
     const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M12 1 L23 12 L12 23 L1 12 Z' fill='%232563c9' fill-opacity='0.85'/><path d='M12 7 L17 12 L12 17 L7 12 Z' fill='white'/></svg>`
+    return `url("data:image/svg+xml,${svg}")`
+  }
+  if (id === 'meknes') {
+    const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'><path d='M9 1 h10 l8 8 v10 l-8 8 h-10 l-8 -8 v-10 z' fill='%23d9822b' fill-opacity='0.85'/><rect x='10' y='10' width='8' height='8' fill='%232563c9'/></svg>`
+    return `url("data:image/svg+xml,${svg}")`
+  }
+  if (id === 'rabat') {
+    const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='24' height='16' viewBox='0 0 24 16'><path d='M0 6 l6 -5 l6 5 l6 -5 l6 5 v4 l-6 -5 l-6 5 l-6 -5 l-6 5 z' fill='%231c1c1e'/></svg>`
     return `url("data:image/svg+xml,${svg}")`
   }
   if (id === 'tetouan') {
