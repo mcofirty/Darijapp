@@ -1,5 +1,5 @@
 import { useLiveQuery } from 'dexie-react-hooks'
-import { ChevronRight, Coins, Sprout } from 'lucide-react'
+import { Coins, Sprout } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { lireXpTotal } from '../../db/apprentissage'
 import { lireProfil, modifierProfil } from '../../db/db'
@@ -18,6 +18,15 @@ import { useCroissanceAnimee } from './useCroissanceAnimee'
  * dans le décor et avec les objets achetés au souk. Ouvert en touchant la barre de niveau.
  */
 export function MonJardin({ retour, onSouk }: { retour: { libelle: string; action: () => void }; onSouk: () => void }) {
+  return (
+    <Page titre="Mon jardin" retour={retour}>
+      <ContenuJardin onSouk={onSouk} />
+    </Page>
+  )
+}
+
+/** Le contenu de « Mon jardin », seul (troisième choix du menu de Progrès) ou dans sa page (depuis Apprendre). */
+export function ContenuJardin({ onSouk }: { onSouk: () => void }) {
   const { xpTotal } = useResume()
   const { espece, pot, fond, objets } = useProfil()
   const c = croissance(xpTotal)
@@ -38,7 +47,7 @@ export function MonJardin({ retour, onSouk }: { retour: { libelle: string; actio
   const aGrandi = anim !== null && fin.stade > avant.stade
 
   return (
-    <Page titre="Mon jardin" retour={retour}>
+    <>
       <div className="mb-[26px] overflow-hidden rounded-carte bg-carte">
         {/* Un toucher pendant l'animation la passe. */}
         <div onClick={plante.enCours ? plante.passer : undefined} className={plante.enCours ? 'cursor-pointer' : undefined}>
@@ -104,31 +113,7 @@ export function MonJardin({ retour, onSouk }: { retour: { libelle: string; actio
           </Bouton>
         )}
       </div>
-    </Page>
+    </>
   )
 }
 
-/** Aperçu du jardin pour le tableau de bord de Progrès : la scène en direct ; un toucher ouvre « Mon jardin ». */
-export function ApercuJardin({ onOuvrir }: { onOuvrir: () => void }) {
-  const { xpTotal } = useResume()
-  const { espece, pot, fond, objets } = useProfil()
-  const c = croissance(xpTotal)
-  return (
-    <Section titre="Mon jardin">
-      <button type="button" onClick={onOuvrir} className="pressable block w-full text-left" aria-label={`Ouvrir mon jardin : ${c.nom}, stade ${c.stade} sur ${STADES}`}>
-        <Jardin stade={c.stade} avancement={c.avancement} espece={espece} pot={pot} fond={fond} objets={objets} />
-        <span className="flex min-h-ligne items-center gap-3 px-marge py-3">
-          <span className="min-w-0 flex-1">
-            <span className="t-corps block">
-              {c.nom} · <span className="text-texte-2">stade {c.stade} sur {STADES}</span>
-            </span>
-            <span className="t-sous-titre block text-texte-2">
-              {c.prochain ? `Encore ${c.xpRestants} XP avant « ${c.prochain} »` : c.xpRestants > 0 ? `Encore ${c.xpRestants} XP pour sa pleine taille` : 'Ton arbre a sa pleine taille'}
-            </span>
-          </span>
-          <ChevronRight className="h-5 w-5 shrink-0 text-texte-3" strokeWidth={2.4} aria-hidden />
-        </span>
-      </button>
-    </Section>
-  )
-}

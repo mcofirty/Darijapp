@@ -6,7 +6,7 @@ import { useResume } from '../../db/useResume'
 import { Segmente } from '../../ui/Boutons'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
-import { ApercuJardin, MonJardin } from '../jeu/MonJardin'
+import { ContenuJardin } from '../jeu/MonJardin'
 import { Souk } from '../jeu/Souk'
 import { Badges, Collection, Semaine } from '../jeu/Tableau'
 import { QuetesDuJour } from '../jeu/QuetesDuJour'
@@ -14,18 +14,17 @@ import { FicheMot } from '../mots/FicheMot'
 import { Dictionnaire } from './Dictionnaire'
 
 export function Progres() {
-  const [vue, setVue] = useState<'tableau' | 'dictionnaire'>('tableau')
+  const [vue, setVue] = useState<'tableau' | 'dictionnaire' | 'jardin'>('tableau')
   const [mot, setMot] = useState<Mot | null>(null)
-  const [jardin, setJardin] = useState<'jardin' | 'souk' | null>(null)
+  const [souk, setSouk] = useState(false)
   const { niveau, xpTotal, xpAujourdhui, sessionsAujourdhui, motsVus } = useResume()
   const MOTS = useMots()
 
   if (mot) return <FicheMot mot={mot} retour={{ libelle: 'Progrès', action: () => setMot(null) }} />
-  if (jardin === 'jardin') return <MonJardin retour={{ libelle: 'Progrès', action: () => setJardin(null) }} onSouk={() => setJardin('souk')} />
-  if (jardin === 'souk') return <Souk retour={{ libelle: 'Mon jardin', action: () => setJardin('jardin') }} />
+  if (souk) return <Souk retour={{ libelle: 'Progrès', action: () => setSouk(false) }} />
 
   function ouvrirJardin() {
-    setJardin('jardin')
+    setVue('jardin')
     window.scrollTo(0, 0)
   }
 
@@ -36,6 +35,7 @@ export function Progres() {
           options={[
             { id: 'tableau', libelle: 'Tableau de bord' },
             { id: 'dictionnaire', libelle: 'Dictionnaire' },
+            { id: 'jardin', libelle: 'Mon jardin' },
           ]}
           valeur={vue}
           onChange={setVue}
@@ -43,6 +43,13 @@ export function Progres() {
       </div>
       {vue === 'dictionnaire' ? (
         <Dictionnaire onChoisir={setMot} />
+      ) : vue === 'jardin' ? (
+        <ContenuJardin
+          onSouk={() => {
+            setSouk(true)
+            window.scrollTo(0, 0)
+          }}
+        />
       ) : (
         <>
           <Section titre="Niveau">
@@ -68,7 +75,6 @@ export function Progres() {
             />
             <Ligne tuile={<Tuile icone={Trophy} couleur="#ffcc00" />} titre="XP au total" valeur={xpTotal} />
           </Section>
-          <ApercuJardin onOuvrir={ouvrirJardin} />
           <Semaine />
           <Section titre="Aujourd'hui">
             <Ligne tuile={<Tuile icone={Sparkles} couleur="#af52de" />} titre="XP du jour" valeur={xpAujourdhui} />

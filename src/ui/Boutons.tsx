@@ -114,7 +114,7 @@ export function Segmente<T extends string>({
               // Clavier ou lecteur d'écran (sans pointeur) : changement direct.
               if (e.detail === 0) onChange(o.id)
             }}
-            className={`t-sous-titre relative min-h-8 flex-1 rounded-full font-semibold transition-transform duration-150 ${
+            className={`t-sous-titre relative min-h-8 flex-1 whitespace-nowrap rounded-full px-1 text-[clamp(12px,3.5vw,0.882rem)] font-semibold transition-transform duration-150 ${
               glisse && affiche === i ? 'scale-105' : ''
             }`}
           >
