@@ -18,9 +18,10 @@ export interface Alignement {
 
 /**
  * DTW avec pas symétriques (diagonale, horizontal, vertical) ; `largeur` limite l'écart
- * entre les deux temps (bande de Sakoe-Chiba, en part de la plus longue suite).
+ * entre les deux temps (bande de Sakoe-Chiba, en part de la plus longue suite) ; `mesure` compare
+ * deux trames (distance euclidienne par défaut).
  */
-export function dtw(ref: Float64Array[], essai: Float64Array[], largeur = 0.4): Alignement {
+export function dtw(ref: Float64Array[], essai: Float64Array[], largeur = 0.4, mesure: (a: Float64Array, b: Float64Array) => number = distance): Alignement {
   const n = ref.length
   const m = essai.length
   if (n === 0 || m === 0) return { moyenne: Infinity, locales: [] }
@@ -33,7 +34,7 @@ export function dtw(ref: Float64Array[], essai: Float64Array[], largeur = 0.4): 
     // Le centre de la bande suit la diagonale du rectangle n × m.
     const centre = Math.round((i * m) / n)
     for (let j = Math.max(1, centre - bande); j <= Math.min(m, centre + bande); j++) {
-      const d = distance(ref[i - 1], essai[j - 1])
+      const d = mesure(ref[i - 1], essai[j - 1])
       const diag = cout[ix(i - 1, j - 1)]
       const haut = cout[ix(i - 1, j)]
       const gauche = cout[ix(i, j - 1)]
