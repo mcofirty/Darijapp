@@ -1,12 +1,14 @@
 import { Check, Coins, Eye, EyeOff, Lamp, Bird, CupSoda, Volume2, PartyPopper } from 'lucide-react'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { apercuSons } from '../../audio/effets'
 import { acheter, choisir, usePorteMonnaie } from '../../db/souk'
 import { useProfil } from '../../db/useProfil'
 import { useResume } from '../../db/useResume'
 import { croissance } from '../../gamification/jardin'
 import { ARTICLES, BONUS_PRECISION, DH_PAR_BONNE_REPONSE, DH_PAR_THEIERE, DH_PAR_TRESOR, possede, type Article, type Categorie } from '../../gamification/souk'
-import { Alerte } from '../../ui/Alerte'
+import { Alerte, type ActionAlerte } from '../../ui/Alerte'
+import { PluieConfettis } from '../session/Bilan'
 import { Segmente } from '../../ui/Boutons'
 import { Ligne, Section } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
@@ -49,6 +51,20 @@ function Apercu({ a, stade, espece, pot }: { a: Article; stade: number; espece: 
   )
 }
 
+/** Rayons de l'allée « L'appli » : un article pas encore acheté s'y essaie pendant que la fenêtre d'achat est ouverte. */
+const A_ESSAYER: Categorie[] = ['couleur', 'sons', 'confettis', 'zellige']
+
+/** Aperçu dans la fenêtre d'achat : la carte « Session du jour » avec son zellige. */
+function ApercuZellige({ id }: { id: string }) {
+  const motif = motifZellige(id)
+  return (
+    <div className="mb-4 overflow-hidden rounded-[18px] bg-carte text-left" aria-hidden>
+      {motif && <div className="h-10 opacity-80" style={{ background: `${motif} center / 28px` }} />}
+      <p className="t-note px-3 pb-2 pt-2 font-semibold uppercase text-accent">Session du jour</p>
+    </div>
+  )
+}
+
 /** Le souk : on y dépense ses dirhams en décor (jardin et appli). Rien d'utile à l'apprentissage ne s'y achète. */
 export function Souk({ retour }: { retour: { libelle: string; action: () => void } }) {
   const { solde, achats } = usePorteMonnaie()
@@ -58,12 +74,49 @@ export function Souk({ retour }: { retour: { libelle: string; action: () => void
   const [allee, setAllee] = useState<Allee>('jardin')
   const [confirmer, setConfirmer] = useState<Article | null>(null)
   const [message, setMessage] = useState<string | null>(null)
+  // Confettis en cours d'essai (la clé relance la pluie).
+  const [pluie, setPluie] = useState<{ type: string; cle: number } | null>(null)
+  const essai = confirmer && A_ESSAYER.includes(confirmer.categorie) ? confirmer : null
+  const couleurChoisie = useRef(profil.couleur)
+  couleurChoisie.current = profil.couleur
+  const achete = useRef(false)
+
+  // Essai d'une couleur : l'appli la prend tant que la fenêtre d'achat est ouverte, puis reprend la sienne
+  // (sauf si l'article vient d'être acheté : il est alors choisi et appliqué par App).
+  useEffect(() => {
+    if (essai?.categorie !== 'couleur') return
+    achete.current = false
+    document.documentElement.dataset.couleur = essai.id
+    return () => {
+      if (!achete.current) document.documentElement.dataset.couleur = couleurChoisie.current
+    }
+  }, [essai])
+
+  function essayer(a: Article) {
+    if (a.categorie === 'sons') apercuSons(a.id)
+    if (a.categorie === 'confettis') setPluie((p) => ({ type: a.id, cle: (p?.cle ?? 0) + 1 }))
+  }
 
   function toucher(a: Article) {
-    if (a.categorie === 'sons') apercuSons(a.id)
-    if (possede(a.id, achats)) void choisir(a.categorie, a.id)
-    else setConfirmer(a)
+    if (possede(a.id, achats)) {
+      if (a.categorie === 'sons') apercuSons(a.id)
+      void choisir(a.categorie, a.id)
+      return
+    }
+    essayer(a)
+    setConfirmer(a)
   }
+
+  function fermer() {
+    setConfirmer(null)
+    setPluie(null)
+  }
+
+  /** Bouton pour rejouer l'aperçu d'un son ou de confettis. */
+  const rejouer: ActionAlerte[] =
+    essai && (essai.categorie === 'sons' || essai.categorie === 'confettis')
+      ? [{ libelle: essai.categorie === 'sons' ? 'Réécouter' : 'Revoir', role: 'choix', action: () => essayer(essai) }]
+      : []
 
   return (
     <Page titre="Le souk" retour={retour}>
@@ -128,25 +181,36 @@ export function Souk({ retour }: { retour: { libelle: string; action: () => void
       {confirmer && (
         <Alerte
           titre={`${confirmer.nom} : ${confirmer.prix} DH`}
-          message={solde >= confirmer.prix ? `Il te restera ${solde - confirmer.prix} DH.` : `Il te manque ${confirmer.prix - solde} DH. Continue à pratiquer !`}
-          onAnnuler={() => setConfirmer(null)}
+          apercu={essai?.categorie === 'zellige' ? <ApercuZellige id={essai.id} /> : undefined}
+          message={[
+            essai ? 'Aperçu : il disparaît si tu n’achètes pas.' : '',
+            solde >= confirmer.prix ? `Il te restera ${solde - confirmer.prix} DH.` : `Il te manque ${confirmer.prix - solde} DH. Continue à pratiquer !`,
+          ]
+            .filter(Boolean)
+            .join(' ')}
+          onAnnuler={fermer}
           actions={
             solde >= confirmer.prix
               ? [
-                  { libelle: 'Annuler', role: 'annuler', action: () => setConfirmer(null) },
+                  ...rejouer,
+                  { libelle: 'Annuler', role: 'annuler', action: fermer },
                   {
                     libelle: 'Acheter',
                     action: () => {
                       const a = confirmer
-                      setConfirmer(null)
-                      void acheter(a.id).then((e) => e && setMessage(e))
+                      void acheter(a.id).then((e) => {
+                        if (e) setMessage(e)
+                        else achete.current = true
+                        fermer()
+                      })
                     },
                   },
                 ]
-              : [{ libelle: 'OK', role: 'annuler', action: () => setConfirmer(null) }]
+              : [...rejouer, { libelle: 'OK', role: 'annuler', action: fermer }]
           }
         />
       )}
+      {pluie && createPortal(<PluieConfettis key={pluie.cle} type={pluie.type} classe="fixed inset-0 z-[60]" />, document.body)}
       {message && <Alerte titre={message} onAnnuler={() => setMessage(null)} actions={[{ libelle: 'OK', action: () => setMessage(null) }]} />}
     </Page>
   )

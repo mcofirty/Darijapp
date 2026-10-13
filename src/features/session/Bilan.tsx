@@ -25,7 +25,7 @@ interface Props {
 }
 
 /** Couleurs des confettis choisis au souk. */
-const CONFETTIS: Record<string, { couleurs: string[]; classe: string }> = {
+export const CONFETTIS: Record<string, { couleurs: string[]; classe: string }> = {
   papiers: { couleurs: ['#ff9500', '#ffcc00', '#34c759', '#007aff', '#ff2d55'], classe: '' },
   petales: { couleurs: ['#e2445c', '#f06b84', '#c2185b', '#ff9fb2'], classe: 'petale' },
   etoiles: { couleurs: ['#ffcc00', '#f2c14e', '#ffd966', '#e0a800'], classe: 'etoile' },
@@ -49,29 +49,36 @@ function PlanteGrandie({ xpAvant, xp }: { xpAvant: number; xp: number }) {
   )
 }
 
+/** Pluie de confettis (ceux du profil, ou ceux à essayer au souk) ; `classe` place la couche. */
+export function PluieConfettis({ type, classe = 'fixed inset-0' }: { type: string; classe?: string }) {
+  const style = CONFETTIS[type] ?? CONFETTIS.papiers
+  return (
+    <div aria-hidden className={`pointer-events-none ${classe}`}>
+      {Array.from({ length: 36 }, (_, i) => (
+        <span
+          key={i}
+          className={`confetti ${style.classe}`}
+          style={{
+            left: `${(i * 37) % 100}%`,
+            background: style.couleurs[i % style.couleurs.length],
+            animationDelay: `${(i % 9) * 0.12}s`,
+            animationDuration: `${2.2 + (i % 5) * 0.3}s`,
+          }}
+        />
+      ))}
+    </div>
+  )
+}
+
 /** Écran de fin de session, de quiz ou de Quiz express, avec confettis. */
 export function Bilan({ titre, sousTitre, xp, taux, activite, lignes, libelleEncore, onFermer, onEncore }: Props) {
   const { serie } = useResume()
   const { confettis } = useProfil()
-  const style = CONFETTIS[confettis] ?? CONFETTIS.papiers
   const dirhams = activite ? dirhamsDActivite(activite) : 0
   const bonus = activite && activite.bonnes > 0 ? bonusPrecision(activite.mauvaises) : 0
   return (
     <div data-sans-balayage className="fixed inset-0 z-30 overflow-y-auto bg-fond">
-      <div aria-hidden className="pointer-events-none fixed inset-0">
-        {Array.from({ length: 36 }, (_, i) => (
-          <span
-            key={i}
-            className={`confetti ${style.classe}`}
-            style={{
-              left: `${(i * 37) % 100}%`,
-              background: style.couleurs[i % style.couleurs.length],
-              animationDelay: `${(i % 9) * 0.12}s`,
-              animationDuration: `${2.2 + (i % 5) * 0.3}s`,
-            }}
-          />
-        ))}
-      </div>
+      <PluieConfettis type={confettis} />
       <div className="relative mx-auto flex min-h-full max-w-xl flex-col justify-center px-marge pb-[calc(max(0.75rem,env(safe-area-inset-bottom))+9rem)] pt-[calc(env(safe-area-inset-top)+2rem)]">
         <h2 className="t-grand-titre mb-1 text-center">{titre}</h2>
         <p className="t-appel mb-8 text-center text-texte-2">{sousTitre}</p>

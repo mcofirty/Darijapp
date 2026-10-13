@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 
 export interface ActionAlerte {
@@ -11,6 +11,8 @@ export interface ActionAlerte {
 interface Props {
   titre: string
   message?: string
+  /** Contenu montré au-dessus du titre (aperçu d'un article du souk). */
+  apercu?: ReactNode
   actions: ActionAlerte[]
   /** Échap ou toucher le voile. */
   onAnnuler: () => void
@@ -24,7 +26,7 @@ const STYLES = {
 }
 
 /** Alerte iOS 26 en Liquid Glass : titre, message et boutons en capsules, sur un voile assombri. */
-export function Alerte({ titre, message, actions, onAnnuler }: Props) {
+export function Alerte({ titre, message, apercu, actions, onAnnuler }: Props) {
   const annuler = useRef(onAnnuler)
   annuler.current = onAnnuler
   const focus = useRef<HTMLButtonElement>(null)
@@ -49,6 +51,7 @@ export function Alerte({ titre, message, actions, onAnnuler }: Props) {
         aria-describedby={message ? 'alerte-message' : undefined}
         className="verre verre-fin verre-epais alerte-entree w-full max-w-[19rem] rounded-alerte p-4 pt-5 text-center"
       >
+        {apercu}
         <h2 id="alerte-titre" className="t-gras px-2">
           {titre}
         </h2>
