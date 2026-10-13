@@ -1,13 +1,8 @@
 # Prépare le modèle de reconnaissance des sons (score précis, expérimental) et l'enregistre dans le repo.
-# Se déclenche quand le script change, ou à la main depuis l'onglet Actions.
+# Se lance à la main depuis l'onglet Actions (case « enregistrer » pour écrire le modèle dans le repo).
 name: Modèle
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'scripts/modele/**'
-      - '.github/workflows/modele.yml'
   workflow_dispatch:
     inputs:
       enregistrer:
@@ -41,7 +36,7 @@ jobs:
           pip install -q transformers==4.44.2 huggingface_hub onnx==1.16.2 onnxruntime==1.19.2 "numpy<2"
 
       # Grand modèle wav2vec2 XLSR-53 (phonétique de Common Voice). Le petit modèle Allosaurus
-      # (scripts/modele/exporter.py) n'avait ni ʕ ni ħ et confondait q, kh et gh.
+      # (retiré, dans l’historique git) n’avait ni ʕ ni ħ et confondait q, kh et gh.
       - name: Exporter et évaluer le modèle
         env:
           ENREGISTRER: ${{ inputs.enregistrer && '1' || '0' }}
