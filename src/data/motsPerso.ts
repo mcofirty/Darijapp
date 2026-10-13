@@ -24,6 +24,14 @@ export interface ChampsMot {
   fr: string
 }
 
+/** Ce qui accompagne un mot envoyé par lien : quand et d'où il a été ajouté (facultatif). */
+export interface Provenance {
+  ajouteLe?: number
+  lieu?: string
+}
+
+export type MotRecu = ChampsMot & Provenance
+
 export interface ErreursMot {
   latin?: string
   arabe?: string
@@ -85,22 +93,57 @@ export function assemblerMots(perso: MotPerso[], programme: Mot[]): Mot[] {
 
 const PREFIXE_LIEN = '#mot='
 const LONGUEUR_MAX = 80
+export const LONGUEUR_MAX_LIEU = 60
 
-/** Adresse qui propose un mot : « <adresse de l'appli>#mot=[latin, arabe, français] ». */
-export function lienDeMot(adresseAppli: string, { latin, arabe, fr }: ChampsMot): string {
-  return adresseAppli.split('#')[0] + PREFIXE_LIEN + encodeURIComponent(JSON.stringify([latin.trim(), arabe.trim(), fr.trim()]))
+/**
+ * Adresse qui propose un mot : « <adresse de l'appli>#mot=[latin, arabe, français, ajouté le, lieu] ».
+ * L'heure et le lieu sont ceux de l'ajout sur le téléphone de la personne qui envoie.
+ */
+export function lienDeMot(adresseAppli: string, { latin, arabe, fr, ajouteLe, lieu }: MotRecu): string {
+  const valeur = [latin.trim(), arabe.trim(), fr.trim(), ajouteLe ?? null, lieu?.trim() ?? '']
+  return adresseAppli.split('#')[0] + PREFIXE_LIEN + encodeURIComponent(JSON.stringify(valeur))
 }
 
-/** Lit un mot proposé dans le hash de l'adresse ; null si absent, mal formé ou invalide. */
-export function motDuLien(hash: string): ChampsMot | null {
+function textesValides(valeurs: unknown[]): valeurs is string[] {
+  return valeurs.every((v) => typeof v === 'string' && v.length <= LONGUEUR_MAX)
+}
+
+/**
+ * Lit un mot proposé dans le hash de l'adresse ; null si absent, mal formé ou invalide.
+ * Accepte aussi les liens d'avant l'heure et le lieu (trois valeurs).
+ */
+export function motDuLien(hash: string): MotRecu | null {
   if (!hash.startsWith(PREFIXE_LIEN)) return null
   try {
     const valeur: unknown = JSON.parse(decodeURIComponent(hash.slice(PREFIXE_LIEN.length)))
-    if (!Array.isArray(valeur) || valeur.length !== 3 || valeur.some((v) => typeof v !== 'string' || v.length > LONGUEUR_MAX)) return null
-    const [latin, arabe, fr] = valeur as string[]
-    const champs = { latin: latin.trim(), arabe: arabe.trim(), fr: fr.trim() }
-    return motValide(champs) ? champs : null
+    if (!Array.isArray(valeur) || (valeur.length !== 3 && valeur.length !== 5)) return null
+    const [ajouteLe, lieu] = (valeur as unknown[]).slice(3)
+    const textes = (valeur as unknown[]).slice(0, 3)
+    if (!textesValides(textes)) return null
+    const [latin, arabe, fr] = textes
+    const champs: MotRecu = { latin: latin.trim(), arabe: arabe.trim(), fr: fr.trim() }
+    if (!motValide(champs)) return null
+    if (valeur.length === 5) {
+      if (ajouteLe !== null && !(typeof ajouteLe === 'number' && Number.isFinite(ajouteLe) && ajouteLe > 0)) return null
+      if (typeof lieu !== 'string' || lieu.length > LONGUEUR_MAX_LIEU) return null
+      if (ajouteLe !== null) champs.ajouteLe = ajouteLe
+      if (lieu.trim()) champs.lieu = lieu.trim()
+    }
+    return champs
   } catch {
     return null
   }
+}
+
+/** « Ajouté le 13 octobre à 14 h 32, à Casablanca » (heure du téléphone qui affiche) ; null sans rien à dire. */
+export function decrireProvenance({ ajouteLe, lieu }: Provenance): string | null {
+  const morceaux: string[] = []
+  if (ajouteLe) {
+    const d = new Date(ajouteLe)
+    const jour = d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
+    const minutes = String(d.getMinutes()).padStart(2, '0')
+    morceaux.push(`le ${jour} à ${d.getHours()} h ${minutes}`)
+  }
+  if (lieu?.trim()) morceaux.push(`à ${lieu.trim()}`)
+  return morceaux.length ? `Ajouté ${morceaux.join(', ')}` : null
 }

@@ -1,6 +1,6 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import { MOTS } from '../data'
-import { assemblerMots, motValide, type ChampsMot } from '../data/motsPerso'
+import { assemblerMots, LONGUEUR_MAX_LIEU, motValide, type ChampsMot, type MotRecu } from '../data/motsPerso'
 import type { Mot } from '../data/types'
 import { db, type DarijaDB, type MotPerso } from './db'
 
@@ -8,28 +8,40 @@ function nettoyer({ latin, arabe, fr }: ChampsMot): ChampsMot {
   return { latin: latin.trim().replace(/\s+/g, ' '), arabe: arabe.trim().replace(/\s+/g, ' '), fr: fr.trim() }
 }
 
+/** Lieu facultatif : espaces retirés, coupé à la longueur permise ; undefined s'il est vide. */
+function nettoyerLieu(lieu?: string): string | undefined {
+  const net = lieu?.trim().replace(/\s+/g, ' ').slice(0, LONGUEUR_MAX_LIEU)
+  return net || undefined
+}
+
 export async function lireMotsPerso(base: DarijaDB = db): Promise<MotPerso[]> {
   return (await base.motsPerso.orderBy('creeLe').toArray()).reverse()
 }
 
-export async function ajouterMot(champs: ChampsMot, base: DarijaDB = db): Promise<MotPerso> {
+export async function ajouterMot(champs: MotRecu, base: DarijaDB = db): Promise<MotPerso> {
   if (!motValide(champs)) throw new Error('Mot invalide')
   const mot: MotPerso = { id: `perso-${crypto.randomUUID()}`, ...nettoyer(champs), creeLe: Date.now() }
+  const lieu = nettoyerLieu(champs.lieu)
+  if (lieu) mot.lieu = lieu
+  if (champs.ajouteLe) mot.ajouteLe = champs.ajouteLe
   await base.motsPerso.add(mot)
   return mot
 }
 
-/** Ajoute un mot reçu par lien, sauf s'il est déjà dans « Mes mots » (même latin et même arabe). */
-export async function ajouterSiAbsent(champs: ChampsMot, base: DarijaDB = db): Promise<{ mot: MotPerso; nouveau: boolean }> {
+/**
+ * Ajoute un mot reçu par lien, avec l'heure et le lieu de son ajout chez l'autre personne,
+ * sauf s'il est déjà dans « Mes mots » (même latin et même arabe).
+ */
+export async function ajouterSiAbsent(champs: MotRecu, base: DarijaDB = db): Promise<{ mot: MotPerso; nouveau: boolean }> {
   const net = nettoyer(champs)
   const existant = (await base.motsPerso.toArray()).find((m) => m.latin.toLowerCase() === net.latin.toLowerCase() && m.arabe === net.arabe)
   if (existant) return { mot: existant, nouveau: false }
   return { mot: await ajouterMot(champs, base), nouveau: true }
 }
 
-export async function modifierMot(id: string, champs: ChampsMot, base: DarijaDB = db): Promise<void> {
+export async function modifierMot(id: string, champs: ChampsMot & { lieu?: string }, base: DarijaDB = db): Promise<void> {
   if (!motValide(champs)) throw new Error('Mot invalide')
-  await base.motsPerso.update(id, nettoyer(champs))
+  await base.motsPerso.update(id, { ...nettoyer(champs), lieu: nettoyerLieu(champs.lieu) })
 }
 
 /** Supprime le mot et sa progression (répétition espacée). */

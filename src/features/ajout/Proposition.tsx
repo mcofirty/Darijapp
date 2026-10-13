@@ -1,12 +1,13 @@
 import { useState } from 'react'
-import type { ChampsMot } from '../../data/motsPerso'
+import { decrireProvenance, type MotRecu } from '../../data/motsPerso'
 import { ajouterSiAbsent } from '../../db/motsPerso'
 import { Bouton } from '../../ui/Boutons'
 import { Page } from '../../ui/Page'
 
 /** Écran affiché quand on ouvre un lien « #mot=… » : le mot n'est ajouté qu'après confirmation. */
-export function Proposition({ mot, onTermine }: { mot: ChampsMot; onTermine: () => void }) {
+export function Proposition({ mot, onTermine }: { mot: MotRecu; onTermine: () => void }) {
   const [fait, setFait] = useState<'ajoute' | 'existait' | null>(null)
+  const provenance = decrireProvenance(mot)
 
   async function ajouter() {
     const { nouveau } = await ajouterSiAbsent(mot)
@@ -21,6 +22,7 @@ export function Proposition({ mot, onTermine }: { mot: ChampsMot; onTermine: () 
         </p>
         <p className="t-titre-2 mt-2">{mot.latin}</p>
         <p className="t-titre-3 mt-1 text-texte-2">{mot.fr}</p>
+        {provenance && <p className="t-note mt-4 text-texte-2">{provenance}</p>}
       </div>
       {fait ? (
         <>

@@ -1,8 +1,8 @@
 import { ArrowRight, Send, Trash2 } from 'lucide-react'
 import { useLiveQuery } from 'dexie-react-hooks'
-import { useState, type FormEvent } from 'react'
+import { useEffect, useState, type FormEvent } from 'react'
 import { MOTS } from '../../data'
-import { lienDeMot, motValide, validerMot, type ChampsMot } from '../../data/motsPerso'
+import { decrireProvenance, lienDeMot, LONGUEUR_MAX_LIEU, motValide, validerMot, type ChampsMot, type MotRecu } from '../../data/motsPerso'
 import { ajouterMot, lireMotsPerso, modifierMot, supprimerMot } from '../../db/motsPerso'
 import { Alerte } from '../../ui/Alerte'
 import { Bouton, Vide } from '../../ui/Boutons'
@@ -17,10 +17,11 @@ interface ChampProps {
   valeur: string
   erreur?: string
   arabe?: boolean
+  maxLength?: number
   onChange: (v: string) => void
 }
 
-function Champ({ libelle, valeur, erreur, arabe = false, onChange }: ChampProps) {
+function Champ({ libelle, valeur, erreur, arabe = false, maxLength, onChange }: ChampProps) {
   return (
     <label className="block px-marge py-2">
       <span className="t-note uppercase text-texte-2">{libelle}</span>
@@ -28,6 +29,7 @@ function Champ({ libelle, valeur, erreur, arabe = false, onChange }: ChampProps)
         data-sans-balayage
         value={valeur}
         onChange={(e) => onChange(e.target.value)}
+        maxLength={maxLength}
         dir={arabe ? 'rtl' : 'ltr'}
         lang={arabe ? 'ar' : undefined}
         autoCapitalize="none"
@@ -47,7 +49,13 @@ export function AjoutMots({ onOuvrirAppli }: { onOuvrirAppli: () => void }) {
   const [enEdition, setEnEdition] = useState<string | null>(null)
   const [afficheErreurs, setAfficheErreurs] = useState(false)
   const [aSupprimer, setASupprimer] = useState<{ id: string; latin: string } | null>(null)
+  // Lieu facultatif, repris du dernier mot ajouté pour ne pas le réécrire à chaque fois.
+  const [lieu, setLieu] = useState<string | null>(null)
   const erreurs = afficheErreurs ? validerMot(champs) : {}
+
+  useEffect(() => {
+    if (mots && lieu === null) setLieu(mots[0]?.lieu ?? '')
+  }, [mots, lieu])
 
   function maj(cle: keyof ChampsMot, valeur: string) {
     setChamps((c) => ({ ...c, [cle]: valeur }))
@@ -55,12 +63,13 @@ export function AjoutMots({ onOuvrirAppli }: { onOuvrirAppli: () => void }) {
 
   function reinitialiser() {
     setChamps(VIDE)
+    setLieu(mots?.[0]?.lieu ?? '')
     setEnEdition(null)
     setAfficheErreurs(false)
   }
 
   /** Feuille de partage de l'iPhone (Messages, WhatsApp…) ; à défaut, copie le lien. */
-  async function partager(mot: ChampsMot) {
+  async function partager(mot: MotRecu) {
     const url = lienDeMot(window.location.href, mot)
     const texte = `Un mot pour ton darija : ${mot.latin} = ${mot.fr}`
     try {
@@ -80,9 +89,13 @@ export function AjoutMots({ onOuvrirAppli }: { onOuvrirAppli: () => void }) {
       setAfficheErreurs(true)
       return
     }
-    if (enEdition) await modifierMot(enEdition, champs)
-    else await ajouterMot(champs)
-    reinitialiser()
+    const lieuSaisi = lieu ?? ''
+    if (enEdition) await modifierMot(enEdition, { ...champs, lieu: lieuSaisi })
+    else await ajouterMot({ ...champs, lieu: lieuSaisi })
+    setChamps(VIDE)
+    setEnEdition(null)
+    setAfficheErreurs(false)
+    setLieu(lieuSaisi)
   }
 
   return (
@@ -99,11 +112,12 @@ export function AjoutMots({ onOuvrirAppli }: { onOuvrirAppli: () => void }) {
       <form onSubmit={envoyer}>
         <Section
           titre={enEdition ? 'Modifier le mot' : 'Nouveau mot'}
-          note="Les trois champs sont obligatoires. Écris 3 pour ع, 7 pour ح, 9 pour ق, kh pour خ, gh pour غ et ch pour ش."
+          note="Les trois premiers champs sont obligatoires. Écris 3 pour ع, 7 pour ح, 9 pour ق, kh pour خ, gh pour غ et ch pour ش. Quand tu envoies un mot, l’heure de son ajout et le lieu (si tu l’as écrit) partent avec lui."
         >
           <Champ libelle="En français" valeur={champs.fr} erreur={erreurs.fr} onChange={(v) => maj('fr', v)} />
           <Champ libelle="Écriture latine (ex. 3afak)" valeur={champs.latin} erreur={erreurs.latin} onChange={(v) => maj('latin', v)} />
           <Champ libelle="Écriture arabe (ex. عافاك)" valeur={champs.arabe} erreur={erreurs.arabe} arabe onChange={(v) => maj('arabe', v)} />
+          <Champ libelle="Lieu, facultatif (ex. Casablanca)" valeur={lieu ?? ''} maxLength={LONGUEUR_MAX_LIEU} onChange={setLieu} />
         </Section>
         <div className="mb-8 flex flex-col gap-3">
           <Bouton type="submit" grand>
@@ -131,11 +145,17 @@ export function AjoutMots({ onOuvrirAppli }: { onOuvrirAppli: () => void }) {
               onClick={() => {
                 setEnEdition(m.id)
                 setChamps({ latin: m.latin, arabe: m.arabe, fr: m.fr })
+                setLieu(m.lieu ?? '')
                 setAfficheErreurs(false)
                 window.scrollTo(0, 0)
               }}
               titre={<span className="font-semibold">{m.latin}</span>}
-              sousTitre={m.fr}
+              sousTitre={
+                <>
+                  {m.fr}
+                  <span className="t-note block">{decrireProvenance({ ajouteLe: m.ajouteLe ?? m.creeLe, lieu: m.lieu })}</span>
+                </>
+              }
               valeur={
                 <span className="arabe text-[1.15rem]" dir="rtl" lang="ar">
                   {m.arabe}
@@ -148,7 +168,7 @@ export function AjoutMots({ onOuvrirAppli }: { onOuvrirAppli: () => void }) {
                     type="button"
                     aria-label={`Envoyer ${m.latin} à Romain`}
                     className="pressable flex h-11 w-11 items-center justify-center text-accent"
-                    onClick={() => void partager(m)}
+                    onClick={() => void partager({ ...m, ajouteLe: m.ajouteLe ?? m.creeLe })}
                   >
                     <Send className="h-5 w-5" aria-hidden />
                   </button>

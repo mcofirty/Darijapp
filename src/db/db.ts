@@ -56,6 +56,10 @@ export interface MotPerso {
   fr: string
   /** Horodatage de création, pour garder l'ordre d'ajout. */
   creeLe: number
+  /** Lieu facultatif écrit par la personne qui a ajouté le mot (ex. « Casablanca »), envoyé avec le mot. */
+  lieu?: string
+  /** Mot reçu par lien : heure à laquelle l'autre personne l'avait ajouté sur son téléphone. */
+  ajouteLe?: number
 }
 
 export interface SessionFaite {
