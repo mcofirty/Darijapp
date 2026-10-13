@@ -11,6 +11,7 @@ import { Bouton } from '../../ui/Boutons'
 import { Section } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
 import { Jardin, Plante } from './Plante'
+import { PousseDepuisGraine } from './PousseDepuisGraine'
 import { useCroissanceAnimee } from './useCroissanceAnimee'
 
 /**
@@ -45,6 +46,7 @@ export function ContenuJardin({ onSouk }: { onSouk: () => void }) {
   const plante = useCroissanceAnimee(etapes, fin, anim?.cle ?? 0)
   const avant = anim ? croissance(anim.depart) : c
   const aGrandi = anim !== null && fin.niveau > avant.niveau
+  const [revoir, setRevoir] = useState(false)
 
   return (
     <>
@@ -140,15 +142,13 @@ export function ContenuJardin({ onSouk }: { onSouk: () => void }) {
             variante="gris"
             className="w-full"
             disabled={plante.enCours}
-            onClick={() => {
-              window.scrollTo({ top: 0, behavior: 'smooth' })
-              setAnim({ depart: 0, arrivee: xpLu, cle: (anim?.cle ?? 0) + 1 })
-            }}
+            onClick={() => setRevoir(true)}
           >
             <Sprout className="h-5 w-5" strokeWidth={2.4} aria-hidden /> Revoir sa pousse depuis la graine
           </Bouton>
         )}
       </div>
+      {revoir && xpLu !== undefined && <PousseDepuisGraine xp={xpLu} onFermer={() => setRevoir(false)} />}
     </>
   )
 }
