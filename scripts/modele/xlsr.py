@@ -129,6 +129,7 @@ def main():
         'echantillons': base64.b64encode(echantillons(RACINE / 'public' / 'audio' / 'son-9elb.mp3').tobytes()).decode(),
         'logits': np.round(sessions['int8'].run(None, {'audio': exemple})[0][0], 3).tolist(),
     }
+    (RACINE / 'src' / 'scoring' / 'sons').mkdir(parents=True, exist_ok=True)
     json.dump(reference, open(RACINE / 'src' / 'scoring' / 'sons' / 'reference-xlsr.json', 'w'))
     print('fichiers écrits :', ', '.join(morceaux))
 
