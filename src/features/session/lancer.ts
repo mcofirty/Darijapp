@@ -13,7 +13,7 @@ export interface SessionPrete {
 export async function preparerSession(): Promise<SessionPrete> {
   const plan = await planDeSession()
   const MOTS = await tousLesMots()
-  const options = { phrase: true, connus: await motsConnus() }
+  const options = { phrase: true, connus: await motsConnus(), rappel: true }
   if (plan.nouveaux.length + plan.revisions.length > 0) {
     return {
       etapes: composerSession(plan.nouveaux, plan.revisions, MOTS, Math.random, PAIRES_SONS, DIRE_PAR_SESSION, options),

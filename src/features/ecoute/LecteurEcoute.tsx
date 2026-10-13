@@ -51,6 +51,8 @@ export function LecteurEcoute({ titre, mots, options, onFermer }: Props) {
   const [index, setIndex] = useState(0)
   const [enLecture, setEnLecture] = useState(true)
   const [fini, setFini] = useState(false)
+  // Pendant la phrase d'exemple, elle s'affiche sous le mot.
+  const [phrase, setPhrase] = useState(false)
   // Chaque lancement de boucle reçoit un numéro : une boucle dépassée (pause, mot suivant) s'arrête seule.
   const jeton = useRef(0)
   const mot = mots[index]
@@ -62,12 +64,13 @@ export function LecteurEcoute({ titre, mots, options, onFermer }: Props) {
     for (let i = depart; i < mots.length; i++) {
       if (!actif()) return
       setIndex(i)
+      setPhrase(false)
       const m = mots[i]
       if ('mediaSession' in navigator) {
         navigator.mediaSession.metadata = new MediaMetadata({ title: m.latin, artist: m.fr, album: `Darijaapp · ${titre}` })
       }
       let note = false
-      for (const pas of programmeDuMot(options)) {
+      for (const pas of programmeDuMot(options, m.exemple.latin)) {
         if (!actif()) return
         if (pas.type === 'darija') {
           await lireEtAttendre(m.audio, m.arabe, pas.lent ? 0.75 : 1)
@@ -78,6 +81,10 @@ export function LecteurEcoute({ titre, mots, options, onFermer }: Props) {
           }
         }
         else if (pas.type === 'francais') await parlerFrancais(m.fr)
+        else if (pas.type === 'exemple') {
+          setPhrase(true)
+          await lireEtAttendre(m.exemple.audio, m.exemple.arabe)
+        } else if (pas.type === 'exempleFr') await parlerFrancais(m.exemple.fr)
         else await attendre(pas.ms)
       }
     }
@@ -167,6 +174,17 @@ export function LecteurEcoute({ titre, mots, options, onFermer }: Props) {
               </p>
             )}
             <p className="t-titre-3 mt-4 text-texte-2">{mot.fr}</p>
+            {phrase && (
+              <div className="entree-droite mt-8 rounded-liste bg-carte px-marge py-4">
+                <p className="t-titre-3">{mot.exemple.latin}</p>
+                {afficherArabe && (
+                  <p className="arabe mt-1 text-[1.4rem] text-texte-2" dir="rtl" lang="ar">
+                    {mot.exemple.arabe}
+                  </p>
+                )}
+                <p className="t-appel mt-1 text-texte-2">{mot.exemple.fr}</p>
+              </div>
+            )}
           </div>
         )}
       </div>

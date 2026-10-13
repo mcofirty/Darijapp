@@ -86,6 +86,17 @@ describe('composerSession avec options', () => {
     expect(dits).not.toContain(mot!.id)
   })
 
+  it('fait redire de mémoire le premier nouveau mot après les révisions', () => {
+    const etapes = composerSession(nouveaux, revisions, MOTS, graine(2), [], 2, { rappel: true })
+    const rappel = etapes.findIndex((e) => e.type === 'disle' && e.inverse)
+    expect(rappel).toBeGreaterThan(-1)
+    expect(etapes[rappel]).toMatchObject({ mot: nouveaux[0] })
+    const derniereRevision = etapes.findLastIndex((e) => e.type === 'ecoute' || e.type === 'traduis')
+    expect(rappel).toBeGreaterThan(derniereRevision)
+    expect(composerSession([], revisions, MOTS, graine(2), [], 2, { rappel: true }).some((e) => e.type === 'disle' && e.inverse)).toBe(false)
+    expect(composerSession(nouveaux, revisions, MOTS, graine(2), [], 2).some((e) => e.type === 'disle' && e.inverse)).toBe(false)
+  })
+
   it('sans mot connu, pas de « Dis-le en darija »', () => {
     const etapes = composerSession(nouveaux, revisions, MOTS, graine(2), [], 2, { connus: new Set() })
     expect(etapes.some((e) => e.type === 'disle' && e.inverse)).toBe(false)

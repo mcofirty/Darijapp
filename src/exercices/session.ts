@@ -74,6 +74,11 @@ export interface OptionsSession {
   phrase?: boolean
   /** Mots bien connus (boîte 2 ou plus) : une révision parmi eux est à dire depuis le français. */
   connus?: Set<string>
+  /**
+   * Le premier nouveau mot est à redire de mémoire depuis le français en fin de session (« Dis-le en
+   * darija ») : le retrouver quelques minutes après l'avoir appris l'ancre mieux que de le relire.
+   */
+  rappel?: boolean
 }
 
 /** Une question « Construis la phrase » sur l'exemple du mot. */
@@ -85,8 +90,9 @@ export function questionPhrase(mot: Mot, tous: Mot[], alea: Aleatoire = Math.ran
  * Compose une session : chaque nouveau mot est présenté puis exercé, puis les nouveaux mots
  * sont associés par paires et les `nbDire` premiers sont à prononcer (Dis-le) ; viennent ensuite
  * une question « Distingue les sons » (si des paires de sons sont fournies), les révisions,
- * dans le désordre, une phrase à construire et un « Dis-le en darija » (selon les options),
- * et une série de paires. Sans nouveau mot, on prononce des révisions.
+ * dans le désordre, une phrase à construire et un « Dis-le en darija » sur une révision connue et sur
+ * le premier nouveau mot (selon les options), et une série de paires. Sans nouveau mot, on prononce
+ * des révisions.
  */
 export function composerSession(
   nouveaux: Mot[],
@@ -118,6 +124,7 @@ export function composerSession(
   }
   const inverse = melange.find((m) => options.connus?.has(m.id) && !dits.includes(m))
   if (inverse) etapes.push({ type: 'disle', mot: inverse, inverse: true })
+  if (options.rappel && nouveaux.length > 0) etapes.push({ type: 'disle', mot: nouveaux[0], inverse: true })
   if (melange.length >= 3) etapes.push({ type: 'paires', mots: melange.slice(0, 5) })
   return etapes
 }

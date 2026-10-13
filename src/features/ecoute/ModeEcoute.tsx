@@ -21,7 +21,7 @@ const MOTS_A_REVOIR = 30
 export function ModeEcoute({ onRetour }: { onRetour: () => void }) {
   const mots = useMots()
   const progressions = useLiveQuery(() => db.progression.toArray(), []) ?? []
-  const [options, setOptions] = useState<OptionsEcoute>({ repeter: true, francais: true })
+  const [options, setOptions] = useState<OptionsEcoute>({ repeter: true, francais: true, phrases: false })
   const [ecoute, setEcoute] = useState<{ titre: string; mots: Mot[] } | null>(null)
   const sourd = useModes()?.ecouter === false
 
@@ -62,6 +62,11 @@ export function ModeEcoute({ onRetour }: { onRetour: () => void }) {
         <Ligne
           titre="Traduction en français"
           fin={<Interrupteur actif={options.francais} onChange={(v) => setOptions({ ...options, francais: v })} libelle="Traduction en français" />}
+        />
+        <Ligne
+          titre="Phrases d’exemple à répéter"
+          sousTitre="Chaque phrase deux fois, avec le temps de la redire"
+          fin={<Interrupteur actif={!!options.phrases} onChange={(v) => setOptions({ ...options, phrases: v })} libelle="Phrases d’exemple à répéter" />}
         />
       </Section>
 
