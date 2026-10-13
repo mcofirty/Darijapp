@@ -9,6 +9,8 @@ on:
     paths:
       - 'src/data/**'
       - 'scripts/generate_audio.py'
+      - 'scripts/essai-voix.json'
+      - 'scripts/voix.json'
   workflow_dispatch:
 
 # Une seule génération à la fois (même groupe que l'ancienne Action « Publier », qui générait aussi l'audio) :
@@ -32,7 +34,7 @@ jobs:
       - name: Compter les MP3 manquants
         id: manquants
         run: |
-          n=$(python3 -c "import sys; sys.path.insert(0, 'scripts'); import generate_audio as g; print(len(g.lister_a_generer(None, False)))")
+          n=$(python3 -c "import sys; sys.path.insert(0, 'scripts'); import generate_audio as g; print(len(g.lister_a_generer(None, False)) + len(g.lister_essai()))")
           echo "nombre=$n" >> "$GITHUB_OUTPUT"
           echo "$n fichier(s) audio à générer"
 
@@ -40,6 +42,29 @@ jobs:
         if: steps.manquants.outputs.nombre != '0'
         with:
           python-version: '3.12'
+
+      # Essai de la voix vocalisée d'après le latin (quelques mots, comparés aux actuels sur la page #voix).
+      - name: Générer l'essai de voix
+        timeout-minutes: 10
+        if: steps.manquants.outputs.nombre != '0'
+        continue-on-error: true
+        env:
+          AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
+          AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
+        run: python scripts/generate_audio.py --essai
+
+      # L'essai est enregistré tout de suite, sans attendre la génération complète qui peut durer.
+      - name: Enregistrer l'essai de voix
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain public/audio/essai)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add public/audio/essai
+            git commit -m "feat: génère l'essai de voix vocalisée"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
 
       - name: Générer les MP3 (voix marocaine Jamal, Azure Speech)
         timeout-minutes: 150
@@ -58,7 +83,7 @@ jobs:
           if [ -n "$(git status --porcelain public/audio)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add public/audio/*.mp3
+            git add public/audio
             git commit -m "feat: génère les MP3 manquants"
             git pull --rebase origin main
             git push origin HEAD:main

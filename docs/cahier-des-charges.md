@@ -216,7 +216,7 @@ Les écrans pilotent le moteur d'exercices, qui puise dans le contenu et transme
 | Style | Tailwind CSS | Mise en page mobile rapide |
 | Hors ligne | PWA (vite-plugin-pwa) | Installable sur l'écran d'accueil, marche sans réseau |
 | Stockage | IndexedDB via Dexie | Progression, mots ajoutés et enregistrements gardés sur l'appareil |
-| Audio des mots | Script Python + voix marocaine Jamal (API Azure Speech, dans GitHub Actions), secours mms-tts-ara | MP3 générés une fois et embarqués dans l'appli, accent marocain |
+| Audio des mots | Script Python + voix marocaine Jamal (API Azure Speech, dans GitHub Actions), secours mms-tts-ara ; à l'essai : arabe vocalisé d'après le latin pour une prononciation parlée plutôt que littéraire | MP3 générés une fois et embarqués dans l'appli, accent marocain |
 | Audio des mots ajoutés | API Web Speech du navigateur | Synthèse immédiate, sans fichier à produire |
 | Enregistrement | MediaRecorder | Intégré au navigateur |
 | Score de prononciation | Empreintes MFCC + comparaison DTW, écrites dans l'appli (sans bibliothèque) | Calcul sur le téléphone, hors ligne, même code dans les tests |
