@@ -9,6 +9,11 @@ on:
       - 'scripts/modele/**'
       - '.github/workflows/modele.yml'
   workflow_dispatch:
+    inputs:
+      enregistrer:
+        description: 'Écrire le modèle dans le repo (sinon, évaluation seule)'
+        type: boolean
+        default: false
 
 concurrency:
   group: modele
@@ -17,7 +22,7 @@ concurrency:
 jobs:
   modele:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     permissions:
       contents: write
     steps:
@@ -33,10 +38,14 @@ jobs:
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
           pip install -q torch==2.4.1 --index-url https://download.pytorch.org/whl/cpu
-          pip install -q allosaurus==1.0.2 onnx==1.16.2 onnxruntime==1.19.2 "numpy<2"
+          pip install -q transformers==4.44.2 huggingface_hub onnx==1.16.2 onnxruntime==1.19.2 "numpy<2"
 
+      # Grand modèle wav2vec2 XLSR-53 (phonétique de Common Voice). Le petit modèle Allosaurus
+      # (scripts/modele/exporter.py) n'avait ni ʕ ni ħ et confondait q, kh et gh.
       - name: Exporter et évaluer le modèle
-        run: python scripts/modele/exporter.py
+        env:
+          ENREGISTRER: ${{ inputs.enregistrer && '1' || '0' }}
+        run: python scripts/modele/xlsr.py
 
       - name: Enregistrer le modèle dans le repo
         run: |
@@ -44,7 +53,7 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add public/modele src/scoring/sons
-            git commit -m "feat: modèle de reconnaissance des sons (Allosaurus en ONNX)"
+            git commit -m "feat: modèle de reconnaissance des sons (wav2vec2 XLSR-53 en ONNX int8)"
             git pull --rebase origin main
             git push origin HEAD:main
           fi
