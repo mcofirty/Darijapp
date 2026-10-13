@@ -105,6 +105,8 @@ Calibrage automatique : des tests comparent le MP3 de Jamal d'un mot à d'autres
 
 Réglage sur ta voix : ta voix n'est pas celle de Jamal. Dans Profil, « Régler le score sur ma voix » te fait répéter 4 mots faciles ; l'écart mesuré décale le barème. Chaque « Le score se trompe » qui fait passer un essai en réussi affine ce réglage. Seules des distances sont gardées, jamais ta voix.
 
+Score précis (expérimental, à activer dans Profil) : l'empreinte MFCC compare surtout le timbre, si bien qu'une voix différente de celle de Jamal est mal jugée. En option, l'appli télécharge une fois un modèle de reconnaissance des sons (wav2vec2 XLSR-53, 366 Mo, gardé sur le téléphone) qui écoute ta voix et celle de Jamal ; chaque son du mot est noté selon que le modèle entend la même chose chez toi et chez Jamal (les sons du darija comptent triple). Le résultat montre le mot son par son en pastilles (vert, orange, rouge) et dit ce que le modèle entend à la place d'un ع, ح, ق, خ ou غ raté (« on entend plutôt un h »). Le calcul se fait toujours sur le téléphone, en quelques secondes. Calibrage : 4 autres voix arabes de synthèse (2 femmes, 2 hommes) disent les mots des paires ; environ 4 bons mots sur 5 réussissent et 4 mots voisins sur 5 échouent, quand l'ancien score, réglé sur ces voix, ne refusait plus les mots voisins.
+
 ## Apprentissage ludique
 
 Les exercices ci-dessous composent les leçons du Parcours et le Quiz de 5 questions, en privilégiant les mots à revoir ; les cartes du jour restent dans l'onglet Apprendre.

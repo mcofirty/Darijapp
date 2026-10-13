@@ -218,24 +218,31 @@ export function ressemblance(a: Record<string, number>, b: Record<string, number
   return Math.min(1, s)
 }
 
-/** Barème du score par sons (réglé sur des voix de synthèse : Jamal et 4 autres voix arabes, voir calibrageSons.test.ts). */
-export const BAREME_SONS = { zero: 0.7, cent: 0.9, special: 0.8 }
+/**
+ * Barème du score par sons, réglé sur Jamal et 4 autres voix arabes d'Azure (calibrageSons.test.ts) :
+ * la moyenne pondérée des ressemblances va de 0 (à 0,55) à 100 (à 0,95).
+ */
+export const BAREME_SONS = { zero: 0.55, cent: 0.95 }
 
-/** Un son du darija (ع ح ق خ غ) est jugé raté sous ce seuil de ressemblance avec la référence. */
-export const sonRate = (d: DetailSon) => d.special && d.probabilite < BAREME_SONS.special
+/** Ressemblance sous laquelle un son est montré comme raté, et un son du darija expliqué. */
+export const SEUIL_SON = 0.7
+
+/** Un son du darija (ع ح ق خ غ) mal dit : expliqué après l'essai. */
+export const sonRate = (d: DetailSon) => d.special && d.probabilite < SEUIL_SON
 
 /**
  * Compare l'essai à la voix de référence, son par son : pour chaque son attendu, ce que le modèle croit
- * entendre doit être pareil dans les deux voix. Un son que le modèle entend mal chez Jamal (souvent ع et ح)
- * n'est donc pas compté faux pour autant ; il l'est si l'essai fait pencher le modèle ailleurs (un h, rien…).
- * Note : moyenne pondérée des ressemblances (sons du darija ×3, voyelles ×0,25), ramenée de [0,7 ; 0,9] à
- * [0 ; 100] ; un son du darija raté plafonne la note à 59 (« À retravailler »).
+ * entendre doit être pareil dans les deux voix (ressemblance des répartitions). Un son que le modèle entend
+ * mal chez Jamal (souvent ع et ح) n'est donc pas compté faux pour autant ; il l'est si l'essai fait pencher
+ * le modèle ailleurs (un h, rien…). Un son nettement reconnu dans l'essai, plus que chez Jamal, compte comme
+ * bien dit. Note : moyenne pondérée (sons du darija ×3, voyelles ×0,25), ramenée sur 100 par `BAREME_SONS`.
  */
 export function comparer(reference: Evaluation, essai: Evaluation): Evaluation {
   const details = essai.details.map((d, i) => {
     const r = reference.details[i]
-    const proche = r ? ressemblance(r.repartition, d.repartition) : d.probabilite
-    return { ...d, probabilite: proche }
+    if (!r) return d
+    const attendu = Math.min(1, d.probabilite / Math.max(r.probabilite, 0.3))
+    return { ...d, probabilite: Math.max(ressemblance(r.repartition, d.repartition), attendu) }
   })
   let somme = 0
   let poids = 0
@@ -245,7 +252,6 @@ export function comparer(reference: Evaluation, essai: Evaluation): Evaluation {
     poids += w
   }
   const moyenne = poids ? somme / poids : 0
-  let score = Math.round(100 * Math.min(1, Math.max(0, (moyenne - BAREME_SONS.zero) / (BAREME_SONS.cent - BAREME_SONS.zero))))
-  if (details.some(sonRate)) score = Math.min(score, 59)
+  const score = Math.round(100 * Math.min(1, Math.max(0, (moyenne - BAREME_SONS.zero) / (BAREME_SONS.cent - BAREME_SONS.zero))))
   return { score, details }
 }

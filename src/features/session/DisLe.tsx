@@ -10,7 +10,7 @@ import { useProfil } from '../../db/useProfil'
 import { indice } from '../../exercices/phrases'
 import { PAUSE_MOT, PAUSE_PHRASE } from '../../scoring/mfcc'
 import { ajouterReglage, appreciation, decalageVoix, distanceEssai, scoreDeDistance } from '../../scoring/score'
-import { sonRate, type DetailSon } from '../../scoring/sons/prononciation'
+import { SEUIL_SON, sonRate, type DetailSon } from '../../scoring/sons/prononciation'
 import { AnneauScore } from '../../ui/AnneauScore'
 import { Bouton } from '../../ui/Boutons'
 import { BoutonAudio } from '../mots/BoutonAudio'
@@ -279,7 +279,7 @@ function ResultatScore(props: {
   const a = appreciation(props.score)
   const reussi = a.reussi !== props.corrige
   // Explications des sons du darija : ceux ratés (score précis), sinon tous ceux du mot quand c'est raté.
-  const rates = new Set(props.sons?.filter(sonRate).map((d) => d.latin))
+  const rates = new Set(a.reussi ? [] : props.sons?.filter(sonRate).map((d) => d.latin))
   const sons = props.sons ? sonsDuMot(props.mot.latin).filter((s) => rates.has(s.latin)) : a.reussi ? [] : sonsDuMot(props.mot.latin)
   return (
     <div className="text-center" aria-live="polite">
@@ -322,14 +322,23 @@ function ResultatScore(props: {
 
 /** Couleur d'un son selon sa ressemblance avec la référence. */
 function teinteSon(d: DetailSon): string {
-  if (d.probabilite >= 0.8) return 'bg-vert-doux text-vert'
-  if (d.probabilite >= 0.6 && !d.special) return 'bg-[color-mix(in_srgb,#ff9500_18%,transparent)] text-[#c76a00] dark:text-[#ffb340]'
+  if (d.probabilite >= 0.85) return 'bg-vert-doux text-vert'
+  if (d.probabilite >= SEUIL_SON) return 'bg-[color-mix(in_srgb,#ff9500_18%,transparent)] text-[#c76a00] dark:text-[#ffb340]'
   return 'bg-rouge-doux text-rouge'
 }
 
-/** Score précis : chaque son du mot en pastille colorée, et ce que le modèle a entendu à la place des sons ratés. */
+/** Confusions courantes des sons du darija : seules celles-ci sont nommées (les autres sont du bruit du modèle). */
+const VOISINS: Record<string, string[]> = {
+  '7': ['h', 'kh', '3', 'a'],
+  '3': ['a', 'hamza', '7'],
+  '9': ['k', 'g', 'gh', 'kh'],
+  kh: ['k', 'h', 'gh', '9', '7'],
+  gh: ['r', 'kh', '9', 'g'],
+}
+
+/** Score précis : chaque son du mot en pastille colorée ; pour les sons du darija ratés, ce que le modèle a entendu. */
 function SonParSon({ sons }: { sons: DetailSon[] }) {
-  const rates = sons.filter((d) => d.probabilite < 0.6 && !d.voyelle)
+  const rates = sons.filter((d) => d.special && d.probabilite < SEUIL_SON)
   return (
     <div className="mt-3">
       <p className="flex flex-wrap justify-center gap-1.5" aria-label="Son par son">
@@ -342,7 +351,11 @@ function SonParSon({ sons }: { sons: DetailSon[] }) {
       {rates.map((d, i) => (
         <p key={i} className="t-sous-titre mt-2 text-texte-2">
           Ton <span className="font-semibold text-texte">{d.latin}</span> :{' '}
-          {d.confondu === null ? 'je ne l’entends presque pas.' : d.confondu === d.latin ? 'pas tout à fait comme Jamal.' : `on entend plutôt un « ${d.confondu} ».`}
+          {d.confondu === null
+            ? 'je ne l’entends presque pas.'
+            : VOISINS[d.latin]?.includes(d.confondu)
+              ? `on entend plutôt un « ${d.confondu} ».`
+              : 'il ne sonne pas encore comme celui de Jamal.'}
         </p>
       ))}
     </div>
