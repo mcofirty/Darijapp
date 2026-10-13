@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { fichierIcs } from './rappel'
-import { FORMAT_SAUVEGARDE, lireSauvegarde, nomDuFichier, resumeSauvegarde } from './sauvegarde'
+import { FORMAT_SAUVEGARDE, ageSauvegarde, joursDepuis, lireSauvegarde, nomDuFichier, resumeSauvegarde, sauvegardeConseillee } from './sauvegarde'
 
 describe('lireSauvegarde', () => {
   const valide = {
@@ -29,6 +29,30 @@ describe('lireSauvegarde', () => {
 
   it('nomme le fichier avec la date', () => {
     expect(nomDuFichier('2026-10-13')).toBe('darijaapp-2026-10-13.json')
+  })
+})
+
+describe('rappel de sauvegarde', () => {
+  const t = (jour: number, heure = 12) => new Date(2026, 9, jour, heure).getTime()
+
+  it('compte les jours du calendrier, pas les heures', () => {
+    expect(joursDepuis(t(13, 23), t(14, 1))).toBe(1)
+    expect(joursDepuis(t(13, 1), t(13, 23))).toBe(0)
+    expect(joursDepuis(t(1), t(13))).toBe(12)
+  })
+
+  it('conseille une sauvegarde après 7 jours, ou après 3 activités sans aucune', () => {
+    expect(sauvegardeConseillee(t(6), t(13), 50)).toBe(true)
+    expect(sauvegardeConseillee(t(7), t(13), 50)).toBe(false)
+    expect(sauvegardeConseillee(null, t(13), 2)).toBe(false)
+    expect(sauvegardeConseillee(null, t(13), 3)).toBe(true)
+  })
+
+  it('dit l’âge de la dernière sauvegarde', () => {
+    expect(ageSauvegarde(null, t(13))).toBe('Jamais sauvegardée')
+    expect(ageSauvegarde(t(13, 8), t(13, 20))).toBe('Dernière sauvegarde aujourd’hui')
+    expect(ageSauvegarde(t(12), t(13))).toBe('Dernière sauvegarde hier')
+    expect(ageSauvegarde(t(4), t(13))).toBe('Dernière sauvegarde il y a 9 jours')
   })
 })
 

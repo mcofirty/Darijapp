@@ -5,6 +5,7 @@ import { useResume } from '../../db/useResume'
 import { croissance, etapesDeCroissance } from '../../gamification/jardin'
 import { bonusPrecision, dirhamsDActivite } from '../../gamification/souk'
 import { Plante } from '../jeu/Plante'
+import { RappelSauvegarde } from '../profil/RappelSauvegarde'
 import { useCroissanceAnimee } from '../jeu/useCroissanceAnimee'
 import { Bouton } from '../../ui/Boutons'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
@@ -107,6 +108,7 @@ export function Bilan({ titre, sousTitre, xp, taux, activite, lignes, libelleEnc
           )}
           <Ligne tuile={<Tuile icone={Flame} couleur="#ff3b30" />} titre="Série" valeur={`${serie.jours} jour${serie.jours > 1 ? 's' : ''}`} />
         </Section>
+        <RappelSauvegarde />
       </div>
       {/* Commandes dans un panneau en verre, comme le panneau « Continuer » de la session. */}
       <div className="fixed inset-x-0 bottom-0 px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2">

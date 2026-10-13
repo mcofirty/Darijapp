@@ -50,3 +50,32 @@ export function resumeSauvegarde(s: Sauvegarde): string {
   const activites = s.tables.sessions.length
   return `${mots} mot${mots > 1 ? 's' : ''} vu${mots > 1 ? 's' : ''}, ${activites} activité${activites > 1 ? 's' : ''}`
 }
+
+/** Une sauvegarde est conseillée tous les 7 jours (rappel dans le bilan). */
+export const JOURS_ENTRE_SAUVEGARDES = 7
+/** Jamais sauvegardé : le rappel attend quelques activités, pour ne pas gêner le premier jour. */
+export const ACTIVITES_AVANT_PREMIERE_SAUVEGARDE = 3
+
+/** Jours écoulés entre deux horodatages, comptés en jours du calendrier local. */
+export function joursDepuis(horodatage: number, maintenant: number): number {
+  const jour = (t: number) => {
+    const d = new Date(t)
+    return new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime()
+  }
+  return Math.round((jour(maintenant) - jour(horodatage)) / 86_400_000)
+}
+
+/** Faut-il proposer de sauvegarder ? Après 7 jours sans sauvegarde, ou dès 3 activités si on n'a jamais sauvegardé. */
+export function sauvegardeConseillee(derniere: number | null, maintenant: number, nbActivites: number): boolean {
+  if (derniere === null) return nbActivites >= ACTIVITES_AVANT_PREMIERE_SAUVEGARDE
+  return joursDepuis(derniere, maintenant) >= JOURS_ENTRE_SAUVEGARDES
+}
+
+/** « Dernière sauvegarde : il y a 3 jours », « aujourd’hui », « hier », ou « jamais ». */
+export function ageSauvegarde(derniere: number | null, maintenant: number): string {
+  if (derniere === null) return 'Jamais sauvegardée'
+  const jours = joursDepuis(derniere, maintenant)
+  if (jours <= 0) return 'Dernière sauvegarde aujourd’hui'
+  if (jours === 1) return 'Dernière sauvegarde hier'
+  return `Dernière sauvegarde il y a ${jours} jours`
+}

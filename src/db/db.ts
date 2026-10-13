@@ -55,6 +55,8 @@ export interface Profil {
   scorePrecis: boolean
   /** Dialogues : meilleur nombre de répliques réussies par scène. */
   dialogues: Record<string, number>
+  /** Horodatage du dernier export de la progression (rappel tous les 7 jours), null si jamais. */
+  derniereSauvegarde: number | null
 }
 
 /** Apparence de l'appli : suit l'iPhone, ou forcée en clair ou en sombre. */
@@ -156,6 +158,7 @@ export const PROFIL_DEFAUT: Profil = {
   reglageVoix: [],
   scorePrecis: false,
   dialogues: {},
+  derniereSauvegarde: null,
 }
 
 export class DarijaDB extends Dexie {

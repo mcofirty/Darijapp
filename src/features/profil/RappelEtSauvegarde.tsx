@@ -1,27 +1,28 @@
-import { BellRing, Download, Upload } from 'lucide-react'
-import { useState } from 'react'
+import { BellRing, Download, ShieldCheck, Upload } from 'lucide-react'
+import { useEffect, useState } from 'react'
 import { choisirFichier, donnerFichier } from '../../app/fichiers'
+import { stockagePersistant } from '../../app/stockage'
 import { modifierProfil } from '../../db/db'
-import { exporter, importer } from '../../db/sauvegarde'
+import { importer } from '../../db/sauvegarde'
 import { useProfil } from '../../db/useProfil'
 import { fichierIcs } from '../../sauvegarde/rappel'
-import { lireSauvegarde, nomDuFichier, resumeSauvegarde, type Sauvegarde } from '../../sauvegarde/sauvegarde'
+import { ageSauvegarde, lireSauvegarde, resumeSauvegarde, type Sauvegarde } from '../../sauvegarde/sauvegarde'
 import { dateLocale } from '../../srs/dates'
 import { Alerte } from '../../ui/Alerte'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
+import { sauvegarderProgression } from './sauvegarder'
 
 const ADRESSE = 'https://mcofirty.github.io/Darijapp/'
 
 /** Rappel quotidien (.ics pour Calendrier) et sauvegarde de la progression (export / import). */
 export function RappelEtSauvegarde() {
-  const { heureRappel } = useProfil()
+  const { heureRappel, derniereSauvegarde } = useProfil()
   const [aImporter, setAImporter] = useState<Sauvegarde | null>(null)
   const [message, setMessage] = useState<string | null>(null)
-
-  async function exporterProgression() {
-    const sauvegarde = await exporter()
-    await donnerFichier(nomDuFichier(dateLocale()), 'application/json', JSON.stringify(sauvegarde))
-  }
+  const [protege, setProtege] = useState<boolean | null>(null)
+  useEffect(() => {
+    void stockagePersistant().then(setProtege)
+  }, [])
 
   async function choisirSauvegarde() {
     const texte = await choisirFichier('application/json,.json')
@@ -55,9 +56,23 @@ export function RappelEtSauvegarde() {
 
       <Section
         titre="Sauvegarde"
-        note="Ta progression reste sur ce téléphone. Exporte-la de temps en temps dans Fichiers : tu pourras la réimporter si les données de l’appli sont effacées, ou sur un autre appareil."
+        note="Ta progression reste sur ce téléphone. Exporte-la dans Fichiers (iCloud Drive) : tu pourras la réimporter si les données de l’appli sont effacées, ou sur un autre appareil. Le bilan te le rappelle tous les 7 jours."
       >
-        <Ligne tuile={<Tuile icone={Download} couleur="#007aff" />} titre="Exporter ma progression" chevron onClick={() => void exporterProgression()} />
+        {protege !== null && (
+          <Ligne
+            tuile={<Tuile icone={ShieldCheck} couleur={protege ? '#34c759' : '#8e8e93'} />}
+            titre="Données protégées"
+            sousTitre={protege ? 'L’iPhone ne les effacera pas pour faire de la place' : 'L’iPhone pourrait les effacer : exporte-les régulièrement'}
+            valeur={protege ? 'Oui' : 'Non'}
+          />
+        )}
+        <Ligne
+          tuile={<Tuile icone={Download} couleur="#007aff" />}
+          titre="Exporter ma progression"
+          sousTitre={ageSauvegarde(derniereSauvegarde, Date.now())}
+          chevron
+          onClick={() => void sauvegarderProgression()}
+        />
         <Ligne tuile={<Tuile icone={Upload} couleur="#34c759" />} titre="Importer une sauvegarde" chevron onClick={() => void choisirSauvegarde()} />
       </Section>
 
