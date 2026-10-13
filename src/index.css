@@ -224,6 +224,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Pas de barre de défilement visible (page et zones qui défilent) : le défilement reste au doigt. */
+* {
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
 @layer components {
   .t-grand-titre { font-size: 2rem; line-height: 1.2; font-weight: 700; letter-spacing: 0.01em; }
   .t-titre-1 { font-size: 1.647rem; line-height: 1.21; font-weight: 700; }
