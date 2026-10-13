@@ -1,5 +1,5 @@
-// Textes lus par la voix Jamal : l'arabe de chaque mot, vocalisé d'après le latin (src/data/vocaliser.ts),
-// pour qu'il soit dit en darija et non en arabe standard. Écrit scripts/voix.json, lu par generate_audio.py.
+// Textes lus par la voix Jamal : le latin de chaque mot écrit en arabe vocalisé (src/data/vocaliser.ts),
+// pour qu'il soit dit comme on le parle et non en arabe standard. Écrit scripts/voix.json, lu par generate_audio.py.
 //
 //   npm run voix               # régénère scripts/voix.json
 //   node scripts/voix.mjs --verifier   # échoue si scripts/voix.json n'est pas à jour (lancé par les tests)
@@ -47,5 +47,5 @@ if (process.argv.includes('--verifier')) {
   }
 } else {
   writeFileSync(cible, contenu)
-  console.log(`${vocalises} textes vocalisés sur ${entrees.filter((e) => e.audio).length} (les autres gardent l’arabe tel quel).`)
+  console.log(`${vocalises} textes écrits pour la voix sur ${entrees.filter((e) => e.audio).length}.`)
 }

@@ -3,8 +3,6 @@ import { describe, expect, it } from 'vitest'
 import { MOTS } from '.'
 import { decouperLatin, vocaliser } from './vocaliser'
 
-const sansDiacritiques = (s: string) => s.replace(/[ً-ْ]/g, '')
-
 describe('decouperLatin', () => {
   it('reconnaît les sons à deux lettres, les doubles et les voyelles', () => {
     expect(decouperLatin('khobz').map((u) => (u.type === 'consonne' ? u.son : u.type))).toEqual(['kh', 'voyelle', 'b', 'z'])
@@ -20,38 +18,47 @@ describe('vocaliser', () => {
     ['bzaf', 'بزاف', 'بْزَافْ'],
     ['mzyan', 'مزيان', 'مْزْيَانْ'],
     ['3afak', 'عافاك', 'عَافَاكْ'],
-    ['ktab', 'كتاب', 'كْتَابْ'],
     ['salam', 'سلام', 'سَلَامْ'],
     ['kelb', 'كلب', 'كلْبْ'],
-    ['ssba7', 'الصباح', 'الصّبَاحْ'],
+    ['kayn', 'كاين', 'كَايْنْ'],
     ['3amma', 'عمة', 'عَمَّة'],
     ['chokran', 'شكرا', 'شُكْرًا'],
-    ['b ssaboun', 'بالصابون', 'بْالصَّابُونْ'],
-    ['lpenalty', 'البينالتي', 'الْبِينَالْتِي'],
+    // L'article que le latin ne prononce pas disparaît ; l'assimilation reste (ssba7).
+    ['lkhobz', 'الخبز', 'لْخُبْزْ'],
+    ['ssba7', 'الصباح', 'صّبَاحْ'],
+    ['chmes 7arra', 'الشمس حارة', 'شْمسْ حَارَّة'],
+    ['l7amdollah', 'الحمد لله', 'لْحَمْدُ للَهْ'],
   ])('%s', (latin, arabe, attendu) => {
     expect(vocaliser(latin, arabe)).toBe(attendu.normalize('NFC'))
   })
 
-  it('soukoun sur les consonnes qui s’enchaînent, sans voyelle de l’arabe standard', () => {
-    // « kayn » : pas de voyelle entre y et n.
-    expect(vocaliser('kayn', 'كاين')).toBe('كَايْنْ')
+  it('garde les consonnes lourdes que le latin n’écrit pas', () => {
+    expect(vocaliser('sbe3', 'صبع')).toBe('صْبعْ')
+    expect(vocaliser('wst', 'وسط')).toBe('وْسْطْ')
   })
 
-  it('renonce quand le latin et l’arabe ne se correspondent pas', () => {
-    expect(vocaliser('taxi', 'طاكسي')).toBeNull()
-    expect(vocaliser('bzaf', 'شكرا')).toBeNull()
+  it('suit le latin quand l’arabe dit autre chose', () => {
+    // باسات (basat) écrit, « bousat » prononcé.
+    expect(vocaliser('bousat', 'باسات')).toBe('بُسَاتْ')
   })
 
-  it('n’ajoute que des voyelles : l’arabe reste lettre pour lettre le même', () => {
+  it('lit le latin seul quand l’arabe ne lui correspond pas', () => {
+    expect(vocaliser('taxi', 'طاكسي')).toBe('تَكْسِي')
+    expect(vocaliser('bzaf', 'شكرا')).toBe('بْزَفْ')
+  })
+
+  it('écrit tout le programme en arabe, sans lettre latine', () => {
     for (const m of MOTS) {
-      const v = vocaliser(m.latin, m.arabe)
-      if (v) expect(sansDiacritiques(v)).toBe(m.arabe.normalize('NFC'))
+      for (const [latin, arabe] of [
+        [m.latin, m.arabe],
+        [m.exemple.latin, m.exemple.arabe],
+      ]) {
+        if (!latin) continue
+        const v = vocaliser(latin, arabe)
+        expect(v, latin).toBeTruthy()
+        expect(v, latin).not.toMatch(/[a-z0-9]/i)
+      }
     }
-  })
-
-  it('vocalise au moins 95 % des mots du programme', () => {
-    const faits = MOTS.filter((m) => vocaliser(m.latin, m.arabe)).length
-    expect(faits / MOTS.length).toBeGreaterThan(0.95)
   })
 })
 

@@ -18,7 +18,7 @@ function lire(chemin: string) {
 
 /**
  * Page cachée « …/Darijapp/#voix » : compare la voix actuelle (arabe sans voyelles) et la voix
- * vocalisée d'après le latin (scripts/voix.json), sur les mots de scripts/essai-voix.json.
+ * qui lit le latin (scripts/voix.json), sur les mots de scripts/essai-voix.json.
  */
 export function EssaiVoix() {
   const MOTS = useMots()
@@ -55,8 +55,9 @@ export function EssaiVoix() {
   return (
     <Page titre="Essai de voix">
       <p className="t-corps mb-[26px] px-1 text-texte-2">
-        « Avant » : la voix actuelle, qui lit l’arabe sans voyelles. « Après » : la même voix, guidée par le latin pour parler darija
-        (consonnes enchaînées, pas de voyelles de l’arabe standard). Écoute les deux et dis à Claude laquelle sonne le plus parlé.
+        « Avant » : la voix actuelle, qui lit l’arabe sans voyelles. « Après » : la même voix, qui lit le latin (réécrit en arabe
+        vocalisé, avec les consonnes lourdes de l’arabe). Écoute les deux et dis à Claude laquelle sonne le plus comme les gens
+        parlent.
         {manquants > 0 && ` ${manquants} « Après » sont encore en cours de génération par l’Action « Audio ».`}
       </p>
       <Section>

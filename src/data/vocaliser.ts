@@ -1,15 +1,15 @@
 /**
- * Vocalisation de l'arabe pour la voix de synthèse (logique pure, sans import : `scripts/voix.ts`
- * la lance directement avec Node).
+ * Texte lu par la voix de synthèse (logique pure, sans import : `scripts/voix.mjs` la lance
+ * directement avec Node).
  *
  * L'arabe des mots est écrit sans voyelles : la voix le lit alors comme de l'arabe standard
  * (« kataba » pour كتب, voyelles finales). Le latin, lui, dit comment on parle (« ktab », « bzaf »).
- * On aligne les deux, puis on place sur chaque consonne arabe :
+ * On réécrit donc le latin en arabe entièrement vocalisé, en l'alignant sur l'arabe pour garder
+ * ce que le latin n'écrit pas (consonnes lourdes, voyelles longues) :
  * - un soukoun (ْ) quand le latin enchaîne une autre consonne, ou en fin de mot ;
- * - une chadda (ّ) quand le latin double la consonne (« ssba7 », « mzyan » non, « 3amma » oui) ;
+ * - une chadda (ّ) quand le latin double la consonne (« ssba7 », « 3amma ») ;
  * - une voyelle brève quand le latin en a une que l'arabe n'écrit pas (a → َ, i → ِ, ou → ُ) ;
  *   le « e » du latin (voyelle neutre, schwa) n'a pas d'équivalent : rien n'est ajouté.
- * Si l'alignement est trop incertain, on renvoie null : la voix garde l'arabe tel quel.
  */
 
 const FATHA = '\u064E'
@@ -125,17 +125,19 @@ function coutMuette(lettre: string, debutDeMot: boolean, articleAvant: boolean):
 
 const PONCTUATION_ARABE = new Set(['؟', '،', '!', '.', '—', '/', '?', ',', ':', '«', '»', '؛'])
 
-type Role =
-  | { type: 'consonne'; unite: number }
-  | { type: 'voyelle'; unite: number }
-  | { type: 'muette' }
-  | { type: 'neutre' }
+/**
+ * Une étape de l'alignement : 1 consonne commune, 2 voyelle écrite en arabe, 3 espace ou ponctuation communs,
+ * 4 son du latin absent de l'arabe, 5 lettre arabe absente du latin, 6 consonne doublée écrite deux fois.
+ * `i` et `j` : position dans le latin et dans l'arabe au début de l'étape.
+ */
+interface Etape {
+  code: number
+  i: number
+  j: number
+}
 
-/** Aligne le latin et l'arabe (programmation dynamique) ; renvoie le rôle de chaque lettre arabe et le coût. */
-function aligner(
-  unites: Unite[],
-  lettres: string[],
-): { roles: Role[]; voyellesPortees: Set<number>; sautees: Set<number>; cout: number } {
+/** Aligne le latin et l'arabe (programmation dynamique) ; renvoie le chemin et son coût. */
+function aligner(unites: Unite[], lettres: string[]): { chemin: Etape[]; cout: number } {
   const n = unites.length
   const m = lettres.length
   const debutDeMot = lettres.map((_, j) => j === 0 || lettres[j - 1] === ' ')
@@ -187,32 +189,19 @@ function aligner(
       }
     }
   }
-  const roles: Role[] = Array.from({ length: m }, () => ({ type: 'neutre' }))
-  const voyellesPortees = new Set<number>()
-  const sautees = new Set<number>()
+  // Remonte le meilleur chemin, puis le remet dans l'ordre du texte.
+  const chemin: Etape[] = []
   let i = n
   let j = m
   while (i > 0 || j > 0) {
-    const p = pas[i][j]
-    if (p === 1) roles[j - 1] = { type: 'consonne', unite: i - 1 }
-    else if (p === 6) {
-      roles[j - 1] = { type: 'consonne', unite: i - 1 }
-      roles[j - 2] = { type: 'muette' }
-    } else if (p === 4) sautees.add(i - 1)
-    else if (p === 2) {
-      roles[j - 1] = { type: 'voyelle', unite: i - 1 }
-      voyellesPortees.add(i - 1)
-    } else if (p === 5 && lettres[j - 1] !== ' ' && !PONCTUATION_ARABE.has(lettres[j - 1])) roles[j - 1] = { type: 'muette' }
-    if (p === 1 || p === 2 || p === 3) {
-      i--
-      j--
-    } else if (p === 6) {
-      i--
-      j -= 2
-    } else if (p === 4) i--
-    else j--
+    const code = pas[i][j]
+    const di = code === 5 ? 0 : 1
+    const dj = code === 4 ? 0 : code === 6 ? 2 : 1
+    i -= di
+    j -= dj
+    chemin.push({ code, i, j })
   }
-  return { roles, voyellesPortees, sautees, cout: cout[n][m] }
+  return { chemin: chemin.reverse(), cout: cout[n][m] }
 }
 
 const BREVE: Record<string, string> = { a: FATHA, i: KASRA, u: DAMMA, e: '' }
@@ -225,41 +214,108 @@ function coutMax(unites: Unite[]): number {
   return Math.min(3, 0.6 + 0.6 * mots)
 }
 
+/** Lettre arabe de chaque consonne du latin, quand l'arabe ne la donne pas. */
+const TRANSLITTERATION: Record<string, string> = {
+  b: 'ب',
+  p: 'ب',
+  t: 'ت',
+  d: 'د',
+  j: 'ج',
+  g: 'گ',
+  k: 'ك',
+  q: 'ق',
+  '9': 'ق',
+  '3': 'ع',
+  '7': 'ح',
+  h: 'ه',
+  kh: 'خ',
+  gh: 'غ',
+  ch: 'ش',
+  s: 'س',
+  ç: 'س',
+  c: 'ك',
+  x: 'كْس',
+  z: 'ز',
+  r: 'ر',
+  l: 'ل',
+  m: 'م',
+  n: 'ن',
+  f: 'ف',
+  v: 'ڤ',
+  w: 'و',
+  y: 'ي',
+  '2': 'ء',
+}
+/** Voyelle du latin en fin de mot, écrite en lettre pour être bien entendue. */
+const LONGUE: Record<string, string> = { a: 'ا', i: 'ي', u: 'و', e: '' }
+/** Voyelle du latin en début de mot : portée par un alif. */
+const INITIALE: Record<string, string> = { a: 'أَ', i: 'إِ', u: 'أُ', e: 'أ' }
+const FAMILLE: Record<string, string> = { ا: 'a', ى: 'a', ة: 'a', آ: 'a', ي: 'i', إ: 'i', و: 'u', ؤ: 'u' }
+
 /**
- * L'arabe vocalisé d'après le latin, ou null si les deux ne se correspondent pas assez
- * (la voix lit alors l'arabe tel quel).
+ * Ce que lit la voix : le latin, écrit en arabe entièrement vocalisé. C'est le latin qui décide
+ * de la prononciation ; de l'arabe, on ne garde que ce que le latin n'écrit pas, quand les deux
+ * concordent : consonnes lourdes (ص ط ض ق, écrites s t d g en latin) et voyelles longues (ا و ي).
+ * Lettres arabes absentes du latin : retirées (article non prononcé, lettre muette). Sons du latin
+ * absents de l'arabe : ajoutés. Si les deux divergent trop, tout vient du latin.
  */
 export function vocaliser(latin: string, arabe: string): string | null {
   const unites = decouperLatin(latin)
-  const lettres = [...arabe.normalize('NFC')]
-  if (unites.length === 0 || lettres.length === 0) return null
-  const { roles, voyellesPortees, sautees, cout } = aligner(unites, lettres)
-  if (cout > coutMax(unites)) return null
+  if (unites.length === 0) return null
+  const lettres = [...arabe.normalize('NFC')].filter((l) => !/[\u064B-\u0652]/.test(l))
+  let { chemin, cout } = aligner(unites, lettres)
+  if (cout > coutMax(unites)) chemin = aligner(unites, []).chemin
 
-  let sortie = ''
-  lettres.forEach((l, j) => {
-    sortie += l
-    const role = roles[j]
-    if (role.type !== 'consonne' || l === 'ة') return
-    const u = unites[role.unite] as Extract<Unite, { type: 'consonne' }>
-    const suite = unites[role.unite + 1]
-    if (u.double) sortie += CHADDA
-    const lettreSuivante = lettres[j + 1]
-    const roleSuivant = roles[j + 1]?.type
-    if (suite?.type === 'voyelle' && lettreSuivante in BREVE_DEVANT && (roleSuivant === 'voyelle' || roleSuivant === 'muette')) {
-      // Une voyelle longue écrite suit : la brève doit lui correspondre (كَا, كِي, كُو), sinon rien (latin et arabe divergent).
-      const famille: Record<string, string> = { ا: 'a', ى: 'a', ة: 'a', ي: 'i', إ: 'i', و: 'u', ؤ: 'u' }
-      const accord = famille[lettreSuivante] === suite.son || (suite.son === 'e' && famille[lettreSuivante] === 'i')
-      const tanwin = lettreSuivante === 'ا' && sautees.has(role.unite + 2) && unites[role.unite + 2]?.type === 'consonne'
-      sortie += tanwin ? FATHATAN : accord ? BREVE_DEVANT[lettreSuivante] : ''
-    } else if (suite?.type === 'voyelle') {
-      if (voyellesPortees.has(role.unite + 1)) {
-        // Voyelle longue écrite juste après : on annonce sa voyelle brève.
-        const porteuse = lettres.slice(j + 1).find((_, k) => roles[j + 1 + k]?.type === 'voyelle')
-        const tanwin = porteuse === 'ا' && sautees.has(role.unite + 2) && unites[role.unite + 2]?.type === 'consonne'
-        sortie += tanwin ? FATHATAN : porteuse ? (BREVE_DEVANT[porteuse] ?? '') : ''
-      } else sortie += BREVE[suite.son]
-    } else if (!u.double) sortie += SOUKOUN
+  const estFin = (k: number) => {
+    const u = unites[k]
+    return u === undefined || u.type === 'espace' || u.type === 'ponctuation'
+  }
+  const tanwin = (k: number) => {
+    const u = unites[k]
+    const avant = unites[k - 1]
+    return u?.type === 'consonne' && u.son === 'n' && !u.double && estFin(k + 1) && avant?.type === 'voyelle' && avant.son === 'a'
+  }
+
+  // Morceaux du texte, dans l'ordre ; les consonnes gardent leur son du latin pour recevoir leur voyelle.
+  const morceaux: { texte: string; unite?: number; double?: boolean }[] = []
+  const voyelleEcrite = new Map<number, string>()
+  // « n » final lu comme tanwin (chokran = شكرا) : seulement quand l'arabe ne l'écrit pas.
+  const tanwinLu = new Set(chemin.filter((e) => e.code === 4 && tanwin(e.i)).map((e) => e.i))
+  for (const { code, i, j } of chemin) {
+    const u = unites[i]
+    if (code === 1) morceaux.push({ texte: lettres[j], unite: i, double: u.type === 'consonne' && u.double })
+    else if (code === 6) morceaux.push({ texte: lettres[j] }, { texte: lettres[j + 1], unite: i })
+    else if (code === 2) {
+      morceaux.push({ texte: lettres[j] })
+      voyelleEcrite.set(i, lettres[j])
+    } else if (code === 3 || (code === 5 && (lettres[j] === ' ' || PONCTUATION_ARABE.has(lettres[j])))) morceaux.push({ texte: lettres[j] })
+    else if (code === 4) {
+      if (u.type === 'espace') morceaux.push({ texte: ' ' })
+      else if (u.type === 'consonne' && !tanwin(i)) morceaux.push({ texte: TRANSLITTERATION[u.son] ?? '', unite: i, double: u.double })
+      else if (u.type === 'voyelle') {
+        const avant = unites[i - 1]
+        if (avant === undefined || avant.type === 'espace' || avant.type === 'ponctuation') morceaux.push({ texte: INITIALE[u.son] })
+        else if (estFin(i + 1) || avant.type !== 'consonne') {
+          // Voyelle finale, ou qui suit une autre voyelle : écrite en lettre.
+          morceaux.push({ texte: LONGUE[u.son] })
+          if (LONGUE[u.son]) voyelleEcrite.set(i, LONGUE[u.son])
+        }
+      }
+    }
+    // code 5 : lettre arabe que le latin ne prononce pas, retirée.
+  }
+
+  const sortie = morceaux.map(({ texte, unite, double }) => {
+    if (unite === undefined || texte === 'ة') return texte
+    const suite = unites[unite + 1]
+    let marques = double ? CHADDA : ''
+    if (suite?.type === 'voyelle') {
+      const ecrite = voyelleEcrite.get(unite + 1)
+      if (ecrite === undefined) marques += BREVE[suite.son]
+      else if (ecrite === 'ا' && tanwinLu.has(unite + 2)) marques += FATHATAN
+      else if (FAMILLE[ecrite] === suite.son || (suite.son === 'e' && FAMILLE[ecrite] === 'i')) marques += BREVE_DEVANT[ecrite] ?? ''
+    } else if (!double) marques += SOUKOUN
+    return texte + marques
   })
-  return sortie.normalize('NFC')
+  return sortie.join('').replace(/ +/g, ' ').trim().normalize('NFC')
 }
