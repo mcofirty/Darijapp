@@ -2,7 +2,7 @@ import 'fake-indexeddb/auto'
 import Dexie from 'dexie'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { MOTS } from '../data'
-import { NOUVEAUX_PAR_SESSION, enregistrerActivite, enregistrerSession, motsDejaVus, planDeSession } from './apprentissage'
+import { NOUVEAUX_PAR_SESSION, enregistrerActivite, enregistrerSession, motsConnus, motsDejaVus, planDeSession } from './apprentissage'
 import { DarijaDB } from './db'
 
 const J = '2026-10-12'
@@ -14,6 +14,13 @@ beforeEach(() => {
 
 afterEach(async () => {
   await base.delete()
+})
+
+describe('motsConnus', () => {
+  it('ne garde que les mots en boîte 2 ou plus', async () => {
+    await enregistrerSession(new Map([[MOTS[0].id, true], [MOTS[1].id, false]]), { bonnes: 1, mauvaises: 1, nouveaux: 2, entrainement: false }, J, base)
+    expect([...(await motsConnus(base))]).toEqual([MOTS[0].id])
+  })
 })
 
 describe('planDeSession', () => {

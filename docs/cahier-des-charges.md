@@ -105,7 +105,7 @@ Réglage sur ta voix : ta voix n'est pas celle de Jamal. Dans Profil, « Régler
 
 ## Apprentissage ludique
 
-Les 5 exercices ci-dessous composent les leçons du Parcours et le Quiz de 5 questions, en privilégiant les mots à revoir ; les cartes du jour restent dans l'onglet Apprendre.
+Les exercices ci-dessous composent les leçons du Parcours et le Quiz de 5 questions, en privilégiant les mots à revoir ; les cartes du jour restent dans l'onglet Apprendre.
 
 | Exercice | Déroulement | Compétence travaillée |
 | --- | --- | --- |
@@ -113,6 +113,8 @@ Les 5 exercices ci-dessous composent les leçons du Parcours et le Quiz de 5 que
 | Associe les paires | Relier 5 mots darija à leur traduction | Mémorisation |
 | Dis-le | Voir la traduction, prononcer, obtenir un score sur 100, puis écouter le modèle | Expression orale |
 | Distingue les sons | Entendre l'un de deux mots proches (ex. 9elb, cœur / kelb, chien) et dire lequel a été prononcé | Oreille pour les sons difficiles |
+| Dis-le en darija | Voir seulement le français d'un mot déjà connu, le dire (indice possible), puis découvrir le darija et le modèle | Rappel actif à l'oral |
+| Construis la phrase | Entendre l'exemple d'un mot, voir sa traduction et remettre ses mots dans l'ordre parmi quelques intrus | Ordre des mots, compréhension de phrases |
 | Quiz express | 60 secondes pour enchaîner un maximum de bonnes réponses | Rapidité de rappel |
 
 Répétition espacée : chaque mot a un intervalle de révision (algorithme type Leitner ou SM-2). Un mot raté revient le lendemain ; un mot réussi plusieurs fois revient après 3, 7, puis 21 jours.

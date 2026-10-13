@@ -1,11 +1,13 @@
-import { Ear, Loader2, Mic, RotateCcw, Square, Star, Volume2 } from 'lucide-react'
+import { Ear, Eye, Lightbulb, Loader2, Mic, RotateCcw, Square, Star, Volume2 } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { jouer } from '../../audio/lecteur'
-import { decoder16k, enregistrer, microDisponible, preparerMicro, referenceDuMot, rejouer, type Enregistrement } from '../../audio/micro'
+import { SILENCE_MOT, SILENCE_PHRASE, decoder16k, enregistrer, microDisponible, preparerMicro, referenceDuMot, rejouer, type Enregistrement } from '../../audio/micro'
 import { sonsDuMot } from '../../data/sons'
 import type { Mot } from '../../data/types'
 import { modifierProfil } from '../../db/db'
 import { useProfil } from '../../db/useProfil'
+import { indice } from '../../exercices/phrases'
+import { PAUSE_MOT, PAUSE_PHRASE } from '../../scoring/mfcc'
 import { ajouterReglage, appreciation, decalageVoix, distanceEssai, scoreDeDistance } from '../../scoring/score'
 import { Bouton } from '../../ui/Boutons'
 import { BoutonAudio } from '../mots/BoutonAudio'
@@ -16,8 +18,18 @@ export interface ResultatDire {
   score: number | null
 }
 
+/** Ce qui est à dire : un mot du programme, ou une phrase (exemple, réplique de dialogue, forme de grammaire). */
+export type ADire = Pick<Mot, 'latin' | 'arabe' | 'fr' | 'audio'>
+
 interface Props {
-  mot: Mot
+  mot: ADire
+  /** « Dis-le en darija » : seul le français est montré ; le darija se dévoile après l'essai. */
+  inverse?: boolean
+  /** Une phrase : pauses entre les mots tolérées, enregistrement plus long. */
+  phrase?: boolean
+  /** Titre et consigne à la place de « Dis-le » (dialogues). */
+  titre?: string
+  consigne?: string
   /** Résultat prêt à valider (le bouton « Continuer » apparaît), ou null pendant un nouvel essai. */
   onPret: (r: ResultatDire | null) => void
   /** Auto-évaluation : la réponse est donnée tout de suite. */
@@ -33,20 +45,34 @@ type Etat =
   /** Pas de score possible (sans micro, micro refusé, pas de MP3 de référence) : l'utilisateur juge. */
   | { type: 'auto'; son: Blob | null; raison: string }
 
-/** Dis-le : on écoute le mot, on le dit, et le score compare à la voix de Jamal. */
-export function DisLe({ mot, onPret, onRepondu }: Props) {
+/**
+ * Dis-le : on écoute le mot, on le dit, et le score compare à la voix de Jamal.
+ * En mode inverse, on part du français : rien n'est lu avant l'essai, un indice donne le début.
+ */
+export function DisLe({ mot, inverse = false, phrase = false, titre, consigne, onPret, onRepondu }: Props) {
   const profil = useProfil()
   const [etat, setEtat] = useState<Etat>({ type: 'pret' })
   const [niveau, setNiveau] = useState(0)
+  // Mode inverse : 0 = français seul, 1 = indice (début du mot), 2 = darija montré.
+  const [aide, setAide] = useState(0)
+  const [devoile, setDevoile] = useState(!inverse)
   const enCours = useRef<Enregistrement | null>(null)
   const avecMicro = profil.micro && microDisponible()
+  const pause = phrase ? PAUSE_PHRASE : PAUSE_MOT
 
   useEffect(() => {
-    jouer(mot.audio, mot.arabe)
+    if (!inverse) jouer(mot.audio, mot.arabe)
     // Charge la référence pendant que l'utilisateur écoute.
-    void referenceDuMot(mot.audio)
+    void referenceDuMot(mot.audio, pause)
     return () => enCours.current?.arreter()
-  }, [mot])
+  }, [mot, inverse, pause])
+
+  /** Mode inverse : le darija apparaît, et le modèle est lu. */
+  function devoiler() {
+    if (devoile) return
+    setDevoile(true)
+    window.setTimeout(() => jouer(mot.audio, mot.arabe), 400)
+  }
 
   async function parler() {
     if (enCours.current) {
@@ -55,12 +81,15 @@ export function DisLe({ mot, onPret, onRepondu }: Props) {
     }
     preparerMicro()
     onPret(null)
-    const ref = await referenceDuMot(mot.audio)
+    const ref = await referenceDuMot(mot.audio, pause)
     let e: Enregistrement
     try {
-      e = await enregistrer(Math.max(3000, (ref?.duree ?? 1.5) * 2500 + 1000), setNiveau)
+      e = phrase
+        ? await enregistrer(Math.max(5000, (ref?.duree ?? 2.5) * 3000 + 2000), setNiveau, SILENCE_PHRASE)
+        : await enregistrer(Math.max(3000, (ref?.duree ?? 1.5) * 2500 + 1000), setNiveau, SILENCE_MOT)
     } catch {
-      setEtat({ type: 'auto', son: null, raison: 'Le micro n’est pas autorisé. Dis le mot à voix haute, puis juge toi-même.' })
+      setEtat({ type: 'auto', son: null, raison: 'Le micro n’est pas autorisé. Dis-le à voix haute, puis juge toi-même.' })
+      devoiler()
       return
     }
     enCours.current = e
@@ -69,11 +98,12 @@ export function DisLe({ mot, onPret, onRepondu }: Props) {
     enCours.current = null
     setEtat({ type: 'analyse' })
     if (!ref) {
-      setEtat({ type: 'auto', son, raison: 'Pas de score pour ce mot (pas d’enregistrement de référence) : compare ton essai au modèle.' })
+      setEtat({ type: 'auto', son, raison: 'Pas de score ici (pas d’enregistrement de référence) : compare ton essai au modèle.' })
+      devoiler()
       return
     }
     try {
-      const distance = distanceEssai(ref.empreinte, await decoder16k(await son.arrayBuffer()))
+      const distance = distanceEssai(ref.empreinte, await decoder16k(await son.arrayBuffer()), pause)
       if (distance === null) {
         setEtat({ type: 'muet' })
         return
@@ -81,10 +111,15 @@ export function DisLe({ mot, onPret, onRepondu }: Props) {
       const score = scoreDeDistance(distance, decalageVoix(profil.reglageVoix))
       setEtat({ type: 'resultat', score, distance, son, corrige: false, regle: false })
       onPret({ juste: appreciation(score).reussi, score })
-      // « Presque » : le modèle est rejoué ; « À retravailler » : au ralenti.
-      if (score < 80) window.setTimeout(() => jouer(mot.audio, mot.arabe, score < 60 ? 0.75 : 1), 600)
+      // Mode inverse : le darija se dévoile avec le modèle. Sinon, « Presque » : le modèle est rejoué ;
+      // « À retravailler » : au ralenti.
+      if (!devoile) {
+        setDevoile(true)
+        window.setTimeout(() => jouer(mot.audio, mot.arabe, score < 60 ? 0.75 : 1), 600)
+      } else if (score < 80) window.setTimeout(() => jouer(mot.audio, mot.arabe, score < 60 ? 0.75 : 1), 600)
     } catch {
       setEtat({ type: 'auto', son, raison: 'Ton essai n’a pas pu être analysé : compare-le au modèle.' })
+      devoiler()
     }
   }
 
@@ -100,26 +135,59 @@ export function DisLe({ mot, onPret, onRepondu }: Props) {
   }
 
   const enregistre = etat.type === 'ecoute'
+  const cible = phrase ? 'la phrase' : 'le mot'
+  const montre = devoile || aide === 2
   return (
     <div>
-      <h2 className="t-titre-2">Dis-le</h2>
-      <p className="t-appel mb-5 mt-1 text-texte-2">{avecMicro ? 'Écoute, puis prononce le mot.' : 'Écoute, puis dis le mot à voix haute.'}</p>
+      <h2 className="t-titre-2">{titre ?? (inverse ? 'Dis-le en darija' : 'Dis-le')}</h2>
+      <p className="t-appel mb-5 mt-1 text-texte-2">
+        {consigne ??
+          (inverse
+            ? 'Comment dit-on en darija ? Dis-le à voix haute.'
+            : avecMicro
+              ? `Écoute, puis prononce ${cible}.`
+              : `Écoute, puis dis ${cible} à voix haute.`)}
+      </p>
       <div className="mb-6 rounded-liste bg-carte px-marge py-5 text-center">
-        <p className="t-titre-1">{mot.latin}</p>
-        {profil.afficherArabe && (
-          <p className="arabe mt-1 text-[2rem] leading-tight" dir="rtl" lang="ar">
-            {mot.arabe}
-          </p>
+        {inverse && <p className="t-titre-2 mb-3">{mot.fr}</p>}
+        {montre ? (
+          <>
+            <p className={phrase ? 't-titre-2' : 't-titre-1'}>{mot.latin}</p>
+            {profil.afficherArabe && (
+              <p className={`arabe mt-1 leading-tight ${phrase ? 'text-[1.6rem]' : 'text-[2rem]'}`} dir="rtl" lang="ar">
+                {mot.arabe}
+              </p>
+            )}
+            {!inverse && <p className="t-sous-titre mt-1 text-texte-2">{mot.fr}</p>}
+          </>
+        ) : (
+          aide === 1 && <p className="t-titre-2 text-texte-2">{indice(mot.latin)}</p>
         )}
-        <p className="t-sous-titre mt-1 text-texte-2">{mot.fr}</p>
-        <div className="mt-4 flex gap-3">
-          <BoutonAudio chemin={mot.audio} arabe={mot.arabe} libelle="Écouter" />
-          <BoutonAudio chemin={mot.audio} arabe={mot.arabe} vitesse={0.75} libelle="Ralenti" />
-        </div>
+        {devoile ? (
+          <div className="mt-4 flex gap-3">
+            <BoutonAudio chemin={mot.audio} arabe={mot.arabe} libelle="Écouter" />
+            <BoutonAudio chemin={mot.audio} arabe={mot.arabe} vitesse={0.75} libelle="Ralenti" />
+          </div>
+        ) : (
+          aide < 2 && (
+            <Bouton variante="teinte" className="mt-4" onClick={() => setAide(aide + 1)}>
+              <Lightbulb className="h-5 w-5" strokeWidth={2.4} aria-hidden /> {aide === 0 ? 'Indice' : 'Voir le darija'}
+            </Bouton>
+          )
+        )}
       </div>
 
       {!avecMicro && etat.type !== 'auto' ? (
-        <AutoEvaluation son={null} raison="Mode sans micro : dis le mot à voix haute, puis juge toi-même." mot={mot} onRepondu={onRepondu} />
+        devoile ? (
+          <AutoEvaluation son={null} raison={`Mode sans micro : dis ${cible} à voix haute, puis juge toi-même.`} mot={mot} onRepondu={onRepondu} />
+        ) : (
+          <div className="text-center">
+            <p className="t-appel mb-4 text-texte-2">Dis-le à voix haute, puis regarde la réponse.</p>
+            <Bouton grand className="w-full" onClick={devoiler}>
+              <Eye className="h-5 w-5" strokeWidth={2.4} aria-hidden /> Montrer la réponse
+            </Bouton>
+          </div>
+        )
       ) : etat.type === 'auto' ? (
         <AutoEvaluation son={etat.son} raison={etat.raison} mot={mot} onRepondu={onRepondu} />
       ) : etat.type === 'resultat' ? (
@@ -163,7 +231,7 @@ export function DisLe({ mot, onPret, onRepondu }: Props) {
                 ? 'Je t’écoute… Touche pour arrêter.'
                 : etat.type === 'muet'
                   ? 'Je n’ai rien entendu. Rapproche-toi du micro et réessaie.'
-                  : 'Touche le micro et dis le mot.'}
+                  : `Touche le micro et dis ${cible}.`}
           </p>
         </div>
       )}
@@ -182,7 +250,7 @@ function Etoiles({ n }: { n: number }) {
 }
 
 function ResultatScore(props: {
-  mot: Mot
+  mot: ADire
   score: number
   corrige: boolean
   regle: boolean
@@ -236,7 +304,7 @@ function ResultatScore(props: {
   )
 }
 
-function AutoEvaluation({ son, raison, mot, onRepondu }: { son: Blob | null; raison: string; mot: Mot; onRepondu: (r: ResultatDire) => void }) {
+function AutoEvaluation({ son, raison, mot, onRepondu }: { son: Blob | null; raison: string; mot: ADire; onRepondu: (r: ResultatDire) => void }) {
   return (
     <div className="text-center">
       <p className="t-appel mb-4 text-texte-2">{raison}</p>

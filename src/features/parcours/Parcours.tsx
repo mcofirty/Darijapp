@@ -62,9 +62,10 @@ export function Parcours() {
   function lancerLecon(index: number) {
     const plan = planDeLecon(ETAPES[index], MOTS, progressions ?? [], dateLocale())
     const entrainement = plan.entrainement.length > 0
+    const options = { phrase: true, connus: new Set((progressions ?? []).filter((p) => p.boite >= 2).map((p) => p.id)) }
     const etapes = entrainement
-      ? composerSession([], melanger(plan.entrainement).slice(0, 8), MOTS, Math.random, PAIRES_SONS, DIRE_PAR_SESSION)
-      : composerSession(plan.nouveaux, plan.revisions, MOTS, Math.random, PAIRES_SONS, DIRE_PAR_SESSION)
+      ? composerSession([], melanger(plan.entrainement).slice(0, 8), MOTS, Math.random, PAIRES_SONS, DIRE_PAR_SESSION, options)
+      : composerSession(plan.nouveaux, plan.revisions, MOTS, Math.random, PAIRES_SONS, DIRE_PAR_SESSION, options)
     setSession((s) => ({ etapes, nouveaux: plan.nouveaux.length, entrainement, numero: (s?.numero ?? 0) + 1, etape: index }))
   }
 

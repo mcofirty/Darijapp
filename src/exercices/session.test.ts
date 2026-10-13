@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { MOTS } from '../data'
 import { PAIRES_SONS } from '../data/pairesSons'
+import { phraseConstructible } from './phrases'
 import { Resultats, choisirPaire, composerSession, etapeARefaire, melanger, propositions, questionDistingue } from './session'
 
 /** Générateur pseudo-aléatoire reproductible. */
@@ -60,11 +61,47 @@ describe('composerSession', () => {
   })
 })
 
+describe('composerSession avec options', () => {
+  const nouveaux = MOTS.slice(0, 5)
+  const revisions = MOTS.slice(20, 28)
+
+  it('ajoute une phrase à construire sur une révision, sinon sur un nouveau mot', () => {
+    const avec = composerSession(nouveaux, revisions, MOTS, graine(2), [], 0, { phrase: true })
+    const phrases = avec.filter((e) => e.type === 'phrase')
+    expect(phrases).toHaveLength(1)
+    expect(revisions).toContain(phrases[0].type === 'phrase' && phrases[0].mot)
+    const sansRevision = composerSession(nouveaux, [], MOTS, graine(2), [], 0, { phrase: true }).filter((e) => e.type === 'phrase')
+    expect(sansRevision).toHaveLength(1)
+    expect(nouveaux).toContain(sansRevision[0].type === 'phrase' && sansRevision[0].mot)
+  })
+
+  it('fait dire en darija une révision bien connue, qui n’est pas déjà à dire', () => {
+    const connus = new Set(revisions.slice(0, 3).map((m) => m.id))
+    const etapes = composerSession([], revisions, MOTS, graine(2), [], 2, { connus })
+    const inverses = etapes.filter((e) => e.type === 'disle' && e.inverse)
+    const dits = etapes.filter((e) => e.type === 'disle' && !e.inverse).map((e) => e.type === 'disle' && e.mot.id)
+    expect(inverses).toHaveLength(1)
+    const mot = inverses[0].type === 'disle' ? inverses[0].mot : null
+    expect(connus.has(mot!.id)).toBe(true)
+    expect(dits).not.toContain(mot!.id)
+  })
+
+  it('sans mot connu, pas de « Dis-le en darija »', () => {
+    const etapes = composerSession(nouveaux, revisions, MOTS, graine(2), [], 2, { connus: new Set() })
+    expect(etapes.some((e) => e.type === 'disle' && e.inverse)).toBe(false)
+  })
+})
+
 describe('etapeARefaire', () => {
   it('refait les exercices à choix mais pas les découvertes', () => {
     const [decouverte, ecoute] = composerSession(MOTS.slice(0, 1), [], MOTS, graine(4))
     expect(etapeARefaire(decouverte, MOTS)).toBeNull()
     expect(etapeARefaire(ecoute, MOTS)).toMatchObject({ type: 'ecoute', mot: ecoute.type === 'ecoute' ? ecoute.mot : null })
+  })
+
+  it('refait une phrase à construire avec des morceaux remélangés', () => {
+    const [phrase] = composerSession([], [MOTS.find(phraseConstructible)!], MOTS, graine(4), [], 0, { phrase: true }).filter((e) => e.type === 'phrase')
+    expect(etapeARefaire(phrase, MOTS)).toMatchObject({ type: 'phrase', mot: phrase.type === 'phrase' ? phrase.mot : null })
   })
 })
 

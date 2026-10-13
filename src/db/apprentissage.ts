@@ -33,6 +33,12 @@ export async function motsDejaVus(base: DarijaDB = db): Promise<Mot[]> {
   return ids.map((id) => parId.get(id)).filter((m): m is Mot => m !== undefined)
 }
 
+/** Mots bien connus (boîte 2 ou plus) : « Dis-le en darija » les fait dire depuis le français. */
+export async function motsConnus(base: DarijaDB = db): Promise<Set<string>> {
+  const progressions = await base.progression.toArray()
+  return new Set(progressions.filter((p) => p.boite >= 2).map((p) => p.id))
+}
+
 export interface BilanSession {
   xp: number
   bonnes: number

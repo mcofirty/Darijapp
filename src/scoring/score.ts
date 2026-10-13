@@ -1,5 +1,5 @@
 import { dtw } from './dtw'
-import { mfcc, niveauMax, rogner } from './mfcc'
+import { PAUSE_MOT, mfcc, niveauMax, rogner } from './mfcc'
 
 /**
  * Score de prononciation (logique pure) : compare l'essai à la voix de référence (MP3 de Jamal)
@@ -60,17 +60,18 @@ export function appreciation(score: number): Appreciation {
 /** Empreinte d'un enregistrement de référence, calculée une fois par mot. */
 export type Empreinte = Float64Array[]
 
-export function empreinte(signal16k: Float32Array): Empreinte {
-  return mfcc(rogner(signal16k))
+/** `pause` : PAUSE_PHRASE pour une phrase, dont les mots sont séparés par de courts silences. */
+export function empreinte(signal16k: Float32Array, pause = PAUSE_MOT): Empreinte {
+  return mfcc(rogner(signal16k, undefined, pause))
 }
 
 /**
  * Distance entre la référence et l'essai (signaux à 16 kHz), la plus petite sur les étirements
  * de fréquence ; `null` si l'essai est muet ou trop court.
  */
-export function distanceEssai(reference: Empreinte, essai16k: Float32Array): number | null {
+export function distanceEssai(reference: Empreinte, essai16k: Float32Array, pause = PAUSE_MOT): number | null {
   if (niveauMax(essai16k) < NIVEAU_MIN) return null
-  const utile = rogner(essai16k)
+  const utile = rogner(essai16k, undefined, pause)
   let meilleure = Infinity
   for (const e of ETIREMENTS) {
     const trames = mfcc(utile, e)

@@ -10,6 +10,7 @@ import { Alerte } from '../../ui/Alerte'
 import { Bouton } from '../../ui/Boutons'
 import { Bilan } from './Bilan'
 import { Choix } from './Choix'
+import { Construis } from './Construis'
 import { Decouverte } from './Decouverte'
 import { DisLe, type ResultatDire } from './DisLe'
 import { Distingue } from './Distingue'
@@ -156,7 +157,12 @@ export function Session({ etapes: depart, nouveaux, entrainement, quiz = false, 
           {etape.type === 'distingue' && (
             <Distingue paire={etape.paire} cible={etape.cible} onRepondu={(j) => repondre(j, etape.cible, null)} />
           )}
-          {etape.type === 'disle' && <DisLe mot={etape.mot} onPret={setDire} onRepondu={(r) => valider(etape.mot, r)} />}
+          {etape.type === 'disle' && (
+            <DisLe mot={etape.mot} inverse={etape.inverse} onPret={setDire} onRepondu={(r) => valider(etape.mot, r)} />
+          )}
+          {etape.type === 'phrase' && (
+            <Construis mot={etape.mot} morceaux={etape.morceaux} onRepondu={(j) => repondre(j, etape.mot.exemple, etape.mot.id)} />
+          )}
           {etape.type === 'paires' && (
             <Paires
               mots={etape.mots}

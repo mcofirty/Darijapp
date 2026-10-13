@@ -1,6 +1,7 @@
 import type { MotSon, PaireSons } from '../data/pairesSons'
 import { sonsDuMot } from '../data/sons'
 import type { Mot } from '../data/types'
+import { morceauxDePhrase, phraseConstructible } from './phrases'
 
 /** Moteur d'exercices (logique pure) : compose une session et suit ses résultats. */
 
@@ -11,8 +12,13 @@ export type Etape =
   | { type: 'paires'; mots: Mot[] }
   /** Distingue les sons : on entend `cible`, on choisit entre les deux mots de la paire. */
   | { type: 'distingue'; paire: PaireSons; cible: MotSon }
-  /** Dis-le : on prononce le mot, le score compare à la voix de référence. */
-  | { type: 'disle'; mot: Mot }
+  /**
+   * Dis-le : on prononce le mot, le score compare à la voix de référence. `inverse` : « Dis-le en
+   * darija », seul le français est montré (mot déjà bien connu).
+   */
+  | { type: 'disle'; mot: Mot; inverse?: boolean }
+  /** Construis la phrase : on remet dans l'ordre les mots de l'exemple du mot (avec des intrus). */
+  | { type: 'phrase'; mot: Mot; morceaux: string[] }
 
 export type Aleatoire = () => number
 
@@ -63,11 +69,24 @@ export function choisirPaire(paires: PaireSons[], mots: Mot[], alea: Aleatoire =
   return choix[Math.floor(alea() * choix.length)]
 }
 
+export interface OptionsSession {
+  /** Ajoute une question « Construis la phrase » (sur une révision, sinon un nouveau mot). */
+  phrase?: boolean
+  /** Mots bien connus (boîte 2 ou plus) : une révision parmi eux est à dire depuis le français. */
+  connus?: Set<string>
+}
+
+/** Une question « Construis la phrase » sur l'exemple du mot. */
+export function questionPhrase(mot: Mot, tous: Mot[], alea: Aleatoire = Math.random): Etape {
+  return { type: 'phrase', mot, morceaux: morceauxDePhrase(mot, tous, alea) }
+}
+
 /**
  * Compose une session : chaque nouveau mot est présenté puis exercé, puis les nouveaux mots
  * sont associés par paires et les `nbDire` premiers sont à prononcer (Dis-le) ; viennent ensuite
  * une question « Distingue les sons » (si des paires de sons sont fournies), les révisions,
- * dans le désordre, et une série de paires. Sans nouveau mot, on prononce des révisions.
+ * dans le désordre, une phrase à construire et un « Dis-le en darija » (selon les options),
+ * et une série de paires. Sans nouveau mot, on prononce des révisions.
  */
 export function composerSession(
   nouveaux: Mot[],
@@ -76,6 +95,7 @@ export function composerSession(
   alea: Aleatoire = Math.random,
   pairesSons: PaireSons[] = [],
   nbDire = 0,
+  options: OptionsSession = {},
 ): Etape[] {
   const etapes: Etape[] = []
   nouveaux.forEach((mot, i) => {
@@ -90,7 +110,14 @@ export function composerSession(
 
   const melange = melanger(revisions, alea)
   melange.forEach((mot, i) => etapes.push(exercice(mot, i + 1, tous, alea)))
-  if (nouveaux.length === 0) melange.slice(0, nbDire).forEach((mot) => etapes.push({ type: 'disle', mot }))
+  const dits = nouveaux.length === 0 ? melange.slice(0, nbDire) : []
+  dits.forEach((mot) => etapes.push({ type: 'disle', mot }))
+  if (options.phrase) {
+    const pourPhrase = melange.find(phraseConstructible) ?? nouveaux.find(phraseConstructible)
+    if (pourPhrase) etapes.push(questionPhrase(pourPhrase, tous, alea))
+  }
+  const inverse = melange.find((m) => options.connus?.has(m.id) && !dits.includes(m))
+  if (inverse) etapes.push({ type: 'disle', mot: inverse, inverse: true })
   if (melange.length >= 3) etapes.push({ type: 'paires', mots: melange.slice(0, 5) })
   return etapes
 }
@@ -101,6 +128,7 @@ export function etapeARefaire(etape: Etape, tous: Mot[], alea: Aleatoire = Math.
     return { ...etape, choix: propositions(etape.mot, tous, alea) }
   }
   if (etape.type === 'distingue') return questionDistingue(etape.paire, alea)
+  if (etape.type === 'phrase') return questionPhrase(etape.mot, tous, alea)
   return null
 }
 

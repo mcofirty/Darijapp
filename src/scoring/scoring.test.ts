@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { dtw } from './dtw'
-import { FREQUENCE, mfcc, niveauMax, reechantillonner, rogner } from './mfcc'
+import { FREQUENCE, PAUSE_PHRASE, mfcc, niveauMax, reechantillonner, rogner } from './mfcc'
 import { ajouterReglage, appreciation, decalageVoix, distanceEssai, empreinte, scoreDeDistance, REGLAGES_GARDES } from './score'
 
 /** Signal synthétique : une voyelle (deux formants) qui glisse, entourée de silence. */
@@ -39,6 +39,16 @@ describe('mfcc', () => {
     const utile = rogner(signal)
     expect(utile.length).toBeLessThan(signal.length * 0.7)
     expect(utile.length).toBeGreaterThan(0.4 * FREQUENCE)
+  })
+
+  it('garde toute une phrase quand ses mots sont séparés par une pause', () => {
+    // Deux « mots » de 0,4 s séparés par 0,6 s de silence : le mot seul n'en garde qu'un.
+    const mot = voyelle(700, 1200, 0.4, 0)
+    const phrase = new Float32Array(mot.length * 2 + Math.round(0.6 * FREQUENCE))
+    phrase.set(mot, 0)
+    phrase.set(mot, mot.length + Math.round(0.6 * FREQUENCE))
+    expect(rogner(phrase).length).toBeLessThan(0.6 * FREQUENCE)
+    expect(rogner(phrase, undefined, PAUSE_PHRASE).length).toBeGreaterThan(1.3 * FREQUENCE)
   })
 
   it('mesure le niveau maximal', () => {

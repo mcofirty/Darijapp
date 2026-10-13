@@ -60,17 +60,21 @@ function energies(signal: Float32Array): number[] {
   return e
 }
 
+/** Pause la plus longue (s) à l'intérieur d'un mot, et entre les mots d'une phrase dite par un débutant. */
+export const PAUSE_MOT = 0.35
+export const PAUSE_PHRASE = 0.8
+
 /**
  * Garde la parole et retire le silence autour : les trames à moins de `seuil` dB du maximum,
- * regroupées quand moins de 0,35 s les sépare (les pauses d'un mot sont plus courtes) ;
- * on garde le groupe le plus fort, plus une petite marge. Un bruit isolé (toucher l'écran,
- * déclic) avant ou après le mot est ainsi laissé de côté.
+ * regroupées quand moins de `pause` s les sépare (0,35 s : les pauses d'un mot sont plus courtes ;
+ * 0,8 s pour une phrase, dont les mots sont séparés) ; on garde le groupe le plus fort, plus une
+ * petite marge. Un bruit isolé (toucher l'écran, déclic) avant ou après le mot est ainsi laissé de côté.
  */
-export function rogner(signal: Float32Array, seuil = 35): Float32Array {
+export function rogner(signal: Float32Array, seuil = 35, pause = PAUSE_MOT): Float32Array {
   const e = energies(signal)
   if (e.length === 0) return signal
   const max = Math.max(...e)
-  const ecartMax = Math.round((0.35 * FREQUENCE) / PAS)
+  const ecartMax = Math.round((pause * FREQUENCE) / PAS)
   const groupes: { debut: number; fin: number; poids: number }[] = []
   e.forEach((v, t) => {
     if (v <= max - seuil) return
