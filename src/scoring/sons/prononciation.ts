@@ -151,6 +151,11 @@ export interface DetailSon {
   confondu: string | null
   special: boolean
   voyelle: boolean
+  /**
+   * Ce que le modèle croit entendre à cette place : probabilité du son attendu, de chaque remplaçant
+   * (par sa graphie) et de l'omission (« ∅ »). Sert à comparer avec la voix de référence.
+   */
+  repartition: Record<string, number>
 }
 
 export interface Evaluation {
@@ -174,21 +179,27 @@ export function evaluer(s: Sorties, attendus: string[]): Evaluation {
     let total = reference
     let meilleur = -Infinity
     let confondu: string | null = null
+    const vraisemblances: Record<string, number> = { [PAR_NOM.get(son)!.latin]: reference }
     // Le même mot avec ce son remplacé par chacun des autres, ou omis.
     for (let q = 1; q <= s.classes.length; q++) {
       if (q === sequence[i]) continue
       const v = vraisemblance(s, [...sequence.slice(0, i), q, ...sequence.slice(i + 1)])
+      const nom = PAR_NOM.get(s.classes[q - 1])!.latin
+      vraisemblances[nom] = v
       total = logsomme(total, v)
       if (v > meilleur) {
         meilleur = v
-        confondu = PAR_NOM.get(s.classes[q - 1])!.latin
+        confondu = nom
       }
     }
     const sans = vraisemblance(s, [...sequence.slice(0, i), ...sequence.slice(i + 1)])
+    vraisemblances['∅'] = sans
     total = logsomme(total, sans)
     if (sans > meilleur) confondu = null
+    const repartition: Record<string, number> = {}
+    for (const [k, v] of Object.entries(vraisemblances)) repartition[k] = Math.exp(v - total)
     const c = PAR_NOM.get(son)!
-    return { son, latin: c.latin, probabilite: Math.exp(reference - total), confondu, special: !!c.special, voyelle: !!c.voyelle }
+    return { son, latin: c.latin, probabilite: Math.exp(reference - total), confondu, special: !!c.special, voyelle: !!c.voyelle, repartition }
   })
   let somme = 0
   let poids = 0
@@ -198,4 +209,43 @@ export function evaluer(s: Sorties, attendus: string[]): Evaluation {
     poids += w
   }
   return { score: poids ? Math.round((100 * somme) / poids) : 0, details }
+}
+
+/** Ressemblance (0 à 1) de deux répartitions : coefficient de Bhattacharyya. */
+export function ressemblance(a: Record<string, number>, b: Record<string, number>): number {
+  let s = 0
+  for (const [k, p] of Object.entries(a)) s += Math.sqrt(p * (b[k] ?? 0))
+  return Math.min(1, s)
+}
+
+/** Barème du score par sons (réglé sur des voix de synthèse : Jamal et 4 autres voix arabes, voir calibrageSons.test.ts). */
+export const BAREME_SONS = { zero: 0.7, cent: 0.9, special: 0.8 }
+
+/** Un son du darija (ع ح ق خ غ) est jugé raté sous ce seuil de ressemblance avec la référence. */
+export const sonRate = (d: DetailSon) => d.special && d.probabilite < BAREME_SONS.special
+
+/**
+ * Compare l'essai à la voix de référence, son par son : pour chaque son attendu, ce que le modèle croit
+ * entendre doit être pareil dans les deux voix. Un son que le modèle entend mal chez Jamal (souvent ع et ح)
+ * n'est donc pas compté faux pour autant ; il l'est si l'essai fait pencher le modèle ailleurs (un h, rien…).
+ * Note : moyenne pondérée des ressemblances (sons du darija ×3, voyelles ×0,25), ramenée de [0,7 ; 0,9] à
+ * [0 ; 100] ; un son du darija raté plafonne la note à 59 (« À retravailler »).
+ */
+export function comparer(reference: Evaluation, essai: Evaluation): Evaluation {
+  const details = essai.details.map((d, i) => {
+    const r = reference.details[i]
+    const proche = r ? ressemblance(r.repartition, d.repartition) : d.probabilite
+    return { ...d, probabilite: proche }
+  })
+  let somme = 0
+  let poids = 0
+  for (const d of details) {
+    const w = d.special ? POIDS_SPECIAL : d.voyelle ? POIDS_VOYELLE : POIDS_CONSONNE
+    somme += w * d.probabilite
+    poids += w
+  }
+  const moyenne = poids ? somme / poids : 0
+  let score = Math.round(100 * Math.min(1, Math.max(0, (moyenne - BAREME_SONS.zero) / (BAREME_SONS.cent - BAREME_SONS.zero))))
+  if (details.some(sonRate)) score = Math.min(score, 59)
+  return { score, details }
 }

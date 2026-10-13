@@ -9,6 +9,7 @@ import { Page } from '../../ui/Page'
 import { MotsSignales } from './MotsSignales'
 import { RappelEtSauvegarde } from './RappelEtSauvegarde'
 import { ReglageVoix } from './ReglageVoix'
+import { ScorePrecis } from './ScorePrecis'
 
 const APPARENCES: { id: Apparence; libelle: string }[] = [
   { id: 'systeme', libelle: 'Automatique' },
@@ -76,6 +77,7 @@ export function Profil() {
             onClick={() => setReglage(true)}
           />
         )}
+        {profil.micro && <ScorePrecis />}
       </Section>
       <RappelEtSauvegarde />
       <Section titre="Contenu">

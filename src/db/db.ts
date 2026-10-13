@@ -43,6 +43,8 @@ export interface Profil {
   micro: boolean
   /** Distances de mots bien dits par l'utilisateur, pour régler le score sur sa voix. */
   reglageVoix: number[]
+  /** Score précis (expérimental) : le modèle de reconnaissance des sons note Dis-le, s'il est téléchargé. */
+  scorePrecis: boolean
   /** Dialogues : meilleur nombre de répliques réussies par scène. */
   dialogues: Record<string, number>
 }
@@ -140,6 +142,7 @@ export const PROFIL_DEFAUT: Profil = {
   jardinXpVu: null,
   micro: true,
   reglageVoix: [],
+  scorePrecis: false,
   dialogues: {},
 }
 

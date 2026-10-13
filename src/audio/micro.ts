@@ -105,14 +105,14 @@ export async function decoder16k(donnees: ArrayBuffer): Promise<Float32Array> {
   return reechantillonner(tampon.getChannelData(0), tampon.sampleRate)
 }
 
-const references = new Map<string, Promise<{ empreinte: Empreinte; duree: number } | null>>()
+const references = new Map<string, Promise<{ empreinte: Empreinte; duree: number; signal: Float32Array } | null>>()
 
 /**
  * Empreinte du MP3 de Jamal d'un mot (ou d'une phrase, avec `pause` = PAUSE_PHRASE), gardée en mémoire.
  * `null` sans MP3 (mot ajouté, MP3 pas encore généré, ou hors ligne sans l'avoir écouté) : on passe
  * alors à l'auto-évaluation.
  */
-export function referenceDuMot(chemin: string, pause = PAUSE_MOT): Promise<{ empreinte: Empreinte; duree: number } | null> {
+export function referenceDuMot(chemin: string, pause = PAUSE_MOT): Promise<{ empreinte: Empreinte; duree: number; signal: Float32Array } | null> {
   if (!chemin || !audioDisponible(chemin)) return Promise.resolve(null)
   const cle = `${pause}:${chemin}`
   let r = references.get(cle)
@@ -120,7 +120,7 @@ export function referenceDuMot(chemin: string, pause = PAUSE_MOT): Promise<{ emp
     r = fetch(import.meta.env.BASE_URL + chemin)
       .then((rep) => (rep.ok ? rep.arrayBuffer() : Promise.reject(new Error(String(rep.status)))))
       .then(decoder16k)
-      .then((signal) => ({ empreinte: empreinte(signal, pause), duree: signal.length / FREQUENCE }))
+      .then((signal) => ({ empreinte: empreinte(signal, pause), duree: signal.length / FREQUENCE, signal }))
       .catch(() => {
         references.delete(cle)
         return null

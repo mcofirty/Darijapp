@@ -1,7 +1,7 @@
 import type { InferenceSession } from 'onnxruntime-web'
 import wasmUrl from '../../node_modules/onnxruntime-web/dist/ort-wasm-simd-threaded.wasm?url'
 import { preparerAudio, type InfosModele } from '../scoring/sons/modele'
-import { regrouper, type Sorties } from '../scoring/sons/prononciation'
+import { comparer, evaluer, regrouper, sonsAttendus, type Evaluation, type Sorties } from '../scoring/sons/prononciation'
 
 /**
  * Le grand modèle de reconnaissance des sons dans le navigateur (onnxruntime-web, WebAssembly).
@@ -114,4 +114,23 @@ export async function ecouterSons(signal16k: Float32Array): Promise<Sorties> {
   const sortie = await s.run({ audio: new ort.Tensor('float32', audio, [1, audio.length]) })
   const logits = sortie.logits
   return regrouper(logits.data as Float32Array, logits.dims[1], infos.vocabulaire)
+}
+
+/** Analyse de la voix de référence, gardée par MP3 : on ne la refait pas à chaque essai. */
+const references = new Map<string, Promise<Sorties>>()
+
+/**
+ * Note un essai son par son contre la voix de référence (même mot, MP3 de Jamal).
+ * `cle` identifie la référence (son chemin) ; les deux signaux sont à 16 kHz.
+ */
+export async function noterParSons(cle: string, reference16k: Float32Array, essai16k: Float32Array, latin: string): Promise<Evaluation> {
+  let ref = references.get(cle)
+  if (!ref) {
+    ref = ecouterSons(reference16k)
+    references.set(cle, ref)
+    ref.catch(() => references.delete(cle))
+  }
+  const attendus = sonsAttendus(latin)
+  const [r, e] = [await ref, await ecouterSons(essai16k)]
+  return comparer(evaluer(r, attendus), evaluer(e, attendus))
 }

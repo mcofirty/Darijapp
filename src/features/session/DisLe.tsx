@@ -1,6 +1,7 @@
 import { Ear, Eye, Lightbulb, Loader2, Mic, RotateCcw, Square, Volume2 } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { jouer } from '../../audio/lecteur'
+import { modelePresent, noterParSons, ouvrirModele } from '../../audio/modeleSons'
 import { SILENCE_MOT, SILENCE_PHRASE, decoder16k, enregistrer, microDisponible, preparerMicro, referenceDuMot, rejouer, type Enregistrement } from '../../audio/micro'
 import { sonsDuMot } from '../../data/sons'
 import type { Mot } from '../../data/types'
@@ -9,6 +10,7 @@ import { useProfil } from '../../db/useProfil'
 import { indice } from '../../exercices/phrases'
 import { PAUSE_MOT, PAUSE_PHRASE } from '../../scoring/mfcc'
 import { ajouterReglage, appreciation, decalageVoix, distanceEssai, scoreDeDistance } from '../../scoring/score'
+import { sonRate, type DetailSon } from '../../scoring/sons/prononciation'
 import { AnneauScore } from '../../ui/AnneauScore'
 import { Bouton } from '../../ui/Boutons'
 import { BoutonAudio } from '../mots/BoutonAudio'
@@ -42,7 +44,7 @@ type Etat =
   | { type: 'ecoute' }
   | { type: 'analyse' }
   | { type: 'muet' }
-  | { type: 'resultat'; score: number; distance: number; son: Blob; corrige: boolean; regle: boolean }
+  | { type: 'resultat'; score: number; distance: number; son: Blob; corrige: boolean; regle: boolean; sons: DetailSon[] | null }
   /** Pas de score possible (sans micro, micro refusé, pas de MP3 de référence) : l'utilisateur juge. */
   | { type: 'auto'; son: Blob | null; raison: string }
 
@@ -60,6 +62,14 @@ export function DisLe({ mot, inverse = false, phrase = false, titre, consigne, o
   const enCours = useRef<Enregistrement | null>(null)
   const avecMicro = profil.micro && microDisponible()
   const pause = phrase ? PAUSE_PHRASE : PAUSE_MOT
+
+  // Score précis : le modèle est ouvert dès l'arrivée sur l'exercice (quelques secondes au premier).
+  useEffect(() => {
+    if (!profil.scorePrecis) return
+    void modelePresent().then((oui) => {
+      if (oui) ouvrirModele().catch(() => {})
+    })
+  }, [profil.scorePrecis])
 
   useEffect(() => {
     if (!inverse) jouer(mot.audio, mot.arabe)
@@ -104,13 +114,25 @@ export function DisLe({ mot, inverse = false, phrase = false, titre, consigne, o
       return
     }
     try {
-      const distance = distanceEssai(ref.empreinte, await decoder16k(await son.arrayBuffer()), pause)
+      const essai = await decoder16k(await son.arrayBuffer())
+      const distance = distanceEssai(ref.empreinte, essai, pause)
       if (distance === null) {
         setEtat({ type: 'muet' })
         return
       }
-      const score = scoreDeDistance(distance, decalageVoix(profil.reglageVoix))
-      setEtat({ type: 'resultat', score, distance, son, corrige: false, regle: false })
+      let score = scoreDeDistance(distance, decalageVoix(profil.reglageVoix))
+      let sons: DetailSon[] | null = null
+      // Score précis : chaque son du mot, comparé à ce que le modèle entend chez Jamal ; sinon, le score acoustique.
+      if (profil.scorePrecis && (await modelePresent())) {
+        try {
+          const e = await noterParSons(mot.audio, ref.signal, essai, mot.latin)
+          score = e.score
+          sons = e.details
+        } catch {
+          // Modèle impossible à ouvrir (mémoire) : on garde le score acoustique.
+        }
+      }
+      setEtat({ type: 'resultat', score, distance, son, corrige: false, regle: false, sons })
       onPret({ juste: appreciation(score).reussi, score })
       // Mode inverse : le darija se dévoile avec le modèle. Sinon, « Presque » : le modèle est rejoué ;
       // « À retravailler » : au ralenti.
@@ -195,6 +217,7 @@ export function DisLe({ mot, inverse = false, phrase = false, titre, consigne, o
         <ResultatScore
           mot={mot}
           score={etat.score}
+          sons={etat.sons}
           corrige={etat.corrige}
           regle={profil.reglageVoix.length > 0}
           onMonEssai={() => rejouer(etat.son)}
@@ -227,7 +250,9 @@ export function DisLe({ mot, inverse = false, phrase = false, titre, consigne, o
           </button>
           <p className="t-appel mt-3 text-texte-2">
             {etat.type === 'analyse'
-              ? 'J’écoute ton essai…'
+              ? profil.scorePrecis
+                ? 'J’écoute chaque son… (quelques secondes)'
+                : 'J’écoute ton essai…'
               : enregistre
                 ? 'Je t’écoute… Touche pour arrêter.'
                 : etat.type === 'muet'
@@ -243,6 +268,7 @@ export function DisLe({ mot, inverse = false, phrase = false, titre, consigne, o
 function ResultatScore(props: {
   mot: ADire
   score: number
+  sons: DetailSon[] | null
   corrige: boolean
   regle: boolean
   onMonEssai: () => void
@@ -252,7 +278,9 @@ function ResultatScore(props: {
 }) {
   const a = appreciation(props.score)
   const reussi = a.reussi !== props.corrige
-  const sons = a.reussi ? [] : sonsDuMot(props.mot.latin)
+  // Explications des sons du darija : ceux ratés (score précis), sinon tous ceux du mot quand c'est raté.
+  const rates = new Set(props.sons?.filter(sonRate).map((d) => d.latin))
+  const sons = props.sons ? sonsDuMot(props.mot.latin).filter((s) => rates.has(s.latin)) : a.reussi ? [] : sonsDuMot(props.mot.latin)
   return (
     <div className="text-center" aria-live="polite">
       <AnneauScore score={props.score} />
@@ -260,6 +288,7 @@ function ResultatScore(props: {
       {props.corrige && (
         <p className="t-sous-titre mt-1 text-texte-2">Corrigé par toi : {reussi ? 'compté comme réussi' : 'compté à retravailler'}.</p>
       )}
+      {props.sons && <SonParSon sons={props.sons} />}
       {sons.map((s) => (
         <p key={s.latin} className="t-sous-titre mt-3 rounded-liste bg-carte px-marge py-3 text-left">
           <span className="font-semibold">
@@ -284,9 +313,38 @@ function ResultatScore(props: {
           {props.corrige ? 'Annuler ma correction' : 'Le score se trompe'}
         </button>
       </div>
-      {!props.regle && !a.reussi && (
+      {!props.sons && !props.regle && !a.reussi && (
         <p className="t-note mt-2 text-texte-2">Le score compare ta voix à celle de Jamal. Pour qu’il s’habitue à la tienne : Profil, « Régler le score sur ma voix ».</p>
       )}
+    </div>
+  )
+}
+
+/** Couleur d'un son selon sa ressemblance avec la référence. */
+function teinteSon(d: DetailSon): string {
+  if (d.probabilite >= 0.8) return 'bg-vert-doux text-vert'
+  if (d.probabilite >= 0.6 && !d.special) return 'bg-[color-mix(in_srgb,#ff9500_18%,transparent)] text-[#c76a00] dark:text-[#ffb340]'
+  return 'bg-rouge-doux text-rouge'
+}
+
+/** Score précis : chaque son du mot en pastille colorée, et ce que le modèle a entendu à la place des sons ratés. */
+function SonParSon({ sons }: { sons: DetailSon[] }) {
+  const rates = sons.filter((d) => d.probabilite < 0.6 && !d.voyelle)
+  return (
+    <div className="mt-3">
+      <p className="flex flex-wrap justify-center gap-1.5" aria-label="Son par son">
+        {sons.map((d, i) => (
+          <span key={i} className={`t-gras rounded-reponse px-2.5 py-1 ${d.voyelle ? 'opacity-70' : ''} ${teinteSon(d)}`}>
+            {d.latin}
+          </span>
+        ))}
+      </p>
+      {rates.map((d, i) => (
+        <p key={i} className="t-sous-titre mt-2 text-texte-2">
+          Ton <span className="font-semibold text-texte">{d.latin}</span> :{' '}
+          {d.confondu === null ? 'je ne l’entends presque pas.' : d.confondu === d.latin ? 'pas tout à fait comme Jamal.' : `on entend plutôt un « ${d.confondu} ».`}
+        </p>
+      ))}
     </div>
   )
 }
