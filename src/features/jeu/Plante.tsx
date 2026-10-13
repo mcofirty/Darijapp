@@ -329,6 +329,8 @@ function PlanteDessin({ stade, avancement, espece, vivante, pop = 0 }: { stade: 
   const n = Math.min(Math.max(stade, 1), 10)
   return (
     <>
+      {/* La terre reste immobile : seules la graine et la plante rebondissent et se balancent. */}
+      <Terre stade={n} croissance={croissance} e={e} />
       <g key={pop} className={pop > 0 ? 'plante-pop' : undefined}>
         <PlanteVivante stade={n} croissance={croissance} e={e} espece={espece} vivante={vivante} />
       </g>
@@ -426,7 +428,21 @@ function Emergence({ palier, t, e }: { palier: number; t: number; e: Espece }) {
 }
 
 /** Petits visiteurs des paliers : coccinelle, escargot, papillon, abeille, oiseau et son nid. */
-function Visiteurs({ stade, palier, croissance, e }: { stade: number; palier: number; croissance: number; e: Espece }) {
+function Visiteurs({ stade, palier, croissance, e, sol = false }: { stade: number; palier: number; croissance: number; e: Espece; sol?: boolean }) {
+  // Au sol (escargot, fruit tombé) : dessinés avec la terre, immobiles. Les autres suivent la plante.
+  if (sol) {
+    if (stade === 5 && palier === 3)
+      return (
+        <g transform={`translate(33 ${SOL - 6.4})`}>
+          <path d="M-3 2 h9 q1 0 1 -1 l-1 -2" fill="#c8b48a" />
+          <circle cx="0" cy="-0.6" r="2.8" fill="#a0662b" />
+          <path d="M0 -0.6 m-1.6 0 a1.6 1.6 0 1 1 1.6 1.6" stroke="#6b4423" strokeWidth="0.5" fill="none" />
+          <path d="M6 1 l1 -2.6 M6.6 1 l1.8 -2" stroke="#c8b48a" strokeWidth="0.5" />
+        </g>
+      )
+    if (stade === 9 && palier === 3) return fruit(36, SOL - 6, 2.2, e, 'tombe')
+    return null
+  }
   const h = hauteur(stade, croissance)
   const els: ReactNode[] = []
   if (stade === 4 && palier === 3)
@@ -445,15 +461,6 @@ function Visiteurs({ stade, palier, croissance, e }: { stade: number; palier: nu
       <g key="tuteur">
         <rect x="41.6" y={SOL - h * 0.85} width="1.6" height={h * 0.85} rx="0.8" fill="#d9b26f" />
         <path d={`M42.4 ${SOL - h * 0.6} q4 -1 7.6 0`} stroke="#f2e6c9" strokeWidth="0.8" fill="none" />
-      </g>,
-    )
-  if (stade === 5 && palier === 3)
-    els.push(
-      <g key="escargot" transform={`translate(33 ${SOL - 6.4})`}>
-        <path d="M-3 2 h9 q1 0 1 -1 l-1 -2" fill="#c8b48a" />
-        <circle cx="0" cy="-0.6" r="2.8" fill="#a0662b" />
-        <path d="M0 -0.6 m-1.6 0 a1.6 1.6 0 1 1 1.6 1.6" stroke="#6b4423" strokeWidth="0.5" fill="none" />
-        <path d="M6 1 l1 -2.6 M6.6 1 l1.8 -2" stroke="#c8b48a" strokeWidth="0.5" />
       </g>,
     )
   if (stade === 6 && palier === 3)
@@ -479,7 +486,6 @@ function Visiteurs({ stade, palier, croissance, e }: { stade: number; palier: nu
         </g>
       </g>,
     )
-  if (stade === 9 && palier === 3) els.push(fruit(36, SOL - 6, 2.2, e, 'tombe'))
   if (stade === 10 && palier === 3) {
     const r = 22 + 8 * croissance
     const haut = SOL - 34 - 10 * croissance
@@ -497,6 +503,27 @@ function Visiteurs({ stade, palier, croissance, e }: { stade: number; palier: nu
   return <>{els}</>
 }
 
+/** Ce qui reste fixe dans le pot : la terre bombée, ses cailloux, le terreau du stade 1 et ce qui est tombé au sol. */
+function Terre({ stade: n, croissance, e }: { stade: number; croissance: number; e: Espece }) {
+  const palier = palierDe(croissance)
+  const t = Math.min(1, Math.max(0, croissance * 3 - (palier - 1)))
+  // Terre sèche au premier palier, mouillée au deuxième, puis terre fraîche.
+  const terre = n === 1 && palier === 1 ? '#9a7650' : n === 1 && palier === 2 ? '#3f2414' : '#5a371f'
+  return (
+    <g>
+      <path d={`M27 ${SOL - 2.5} Q50 ${SOL - 8.5} 73 ${SOL - 2.5}Z`} fill={terre} />
+      <circle cx="40" cy={SOL - 4.6} r="0.9" fill="#8a6a4f" />
+      <circle cx="61" cy={SOL - 4} r="0.7" fill="#8a6a4f" />
+      {n === 1 && (
+        <g transform={`translate(50 ${SOL - 5.4}) scale(1.7) translate(-50 ${-SOL})`}>
+          <Terreau palier={palier} t={t} />
+        </g>
+      )}
+      <Visiteurs stade={n} palier={palier} croissance={croissance} e={e} sol />
+    </g>
+  )
+}
+
 function PlanteVivante({ stade: n, croissance, e, espece, vivante }: { stade: number; croissance: number; e: Espece; espece: string; vivante: boolean }) {
   const palier = palierDe(croissance)
   // Avancement dans le palier (0 à 1), pour les détails propres à chaque palier.
@@ -504,20 +531,14 @@ function PlanteVivante({ stade: n, croissance, e, espece, vivante }: { stade: nu
   // Fruits verts, puis qui mûrissent, puis mûrs.
   const fruitMur = n === 9 && palier < 3 ? melange('#8bc34a', e.fruit, palier === 1 ? 0 : 0.5 + t * 0.4) : e.fruit
   const ep = fruitMur === e.fruit ? e : { ...e, fruit: fruitMur }
-  // Terre sèche au premier palier, mouillée au deuxième, puis terre fraîche.
-  const terre = n === 1 && palier === 1 ? '#9a7650' : n === 1 && palier === 2 ? '#3f2414' : '#5a371f'
   // Le germe de l'espèce n'apparaît qu'au 3e palier du stade 3 : il pousse alors sur ce seul tiers.
   const especeDessin = n === 3 ? Math.max(0, croissance * 3 - 2) : croissance
   return (
     <g className={vivante ? 'plante-vivante' : undefined}>
-      {/* Terre bombée au-dessus du rebord du pot (sèche, mouillée ou fraîche), quelques cailloux. */}
-      <path d={`M27 ${SOL - 2.5} Q50 ${SOL - 8.5} 73 ${SOL - 2.5}Z`} fill={terre} />
-      <circle cx="40" cy={SOL - 4.6} r="0.9" fill="#8a6a4f" />
-      <circle cx="61" cy={SOL - 4} r="0.7" fill="#8a6a4f" />
-      {n <= 2 || (n === 3 && palier < 3) ? (
+      {n === 1 ? null : n === 2 || (n === 3 && palier < 3) ? (
         // Les tout premiers paliers se jouent au ras de la terre : dessinés plus grands, sur la terre bombée.
         <g transform={`translate(50 ${SOL - 5.4}) scale(1.7) translate(-50 ${-SOL})`}>
-          {n === 1 ? <Terreau palier={palier} t={t} /> : n === 2 ? <Graine palier={palier} t={t} e={e} /> : <Emergence palier={palier} t={t} e={e} />}
+          {n === 2 ? <Graine palier={palier} t={t} e={e} /> : <Emergence palier={palier} t={t} e={e} />}
         </g>
       ) : e.forme === 'palmier' ? (
         <Palmier stade={n} croissance={especeDessin} e={ep} />
