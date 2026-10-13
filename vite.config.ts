@@ -22,7 +22,7 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['logo-180.png', 'logo-favicon.png'],
+      includeAssets: ['pot-180.png', 'pot-favicon.png'],
       workbox: {
         // Les MP3 (plusieurs dizaines de Mo) ne sont pas téléchargés à l'installation : chacun est gardé
         // sur le téléphone à sa première écoute, puis marche hors ligne.
@@ -53,9 +53,9 @@ export default defineConfig({
         background_color: '#faf9f5',
         theme_color: '#c1272d',
         icons: [
-          { src: 'logo-192.png', sizes: '192x192', type: 'image/png' },
-          { src: 'logo-512.png', sizes: '512x512', type: 'image/png' },
-          { src: 'logo-maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+          { src: 'pot-192.png', sizes: '192x192', type: 'image/png' },
+          { src: 'pot-512.png', sizes: '512x512', type: 'image/png' },
+          { src: 'pot-maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
         ],
       },
     }),
