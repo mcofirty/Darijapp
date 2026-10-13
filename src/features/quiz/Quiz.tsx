@@ -6,11 +6,14 @@ import { Bouton } from '../../ui/Boutons'
 import { Page } from '../../ui/Page'
 import { Session } from '../session/Session'
 import { Chrono, type JeuChrono } from './Chrono'
+import { Marchandage } from './Marchandage'
+import { Taxi } from './Taxi'
 import { preparerExpress, preparerQuiz, questionSons } from './lancer'
 
 type EnCours =
   | { type: 'quiz'; etapes: Etape[]; numero: number }
   | { type: 'chrono'; jeu: JeuChrono; prochaine: (precedente: Etape | null) => Etape; numero: number }
+  | { type: 'marchandage' | 'taxi'; numero: number }
 
 function Carte({ surtitre, titre, texte, record, children }: { surtitre: string; titre: string; texte: string; record?: string; children: ReactNode }) {
   return (
@@ -29,7 +32,7 @@ function Carte({ surtitre, titre, texte, record, children }: { surtitre: string;
   )
 }
 
-/** Onglet Quiz : quiz de 5 questions, Quiz express et Chasse aux sons (60 secondes chacun). */
+/** Onglet Quiz : quiz de 5 questions, jeux contre la montre (Quiz express, Chasse aux sons) et mini-jeux (souk, taxi). */
 export function Quiz() {
   const [enCours, setEnCours] = useState<EnCours | null>(null)
   const { recordExpress, recordSons } = useProfil()
@@ -56,6 +59,11 @@ export function Quiz() {
         onEncore={() => void lancerQuiz()}
       />
     )
+
+  const rejouer = (type: 'marchandage' | 'taxi') => setEnCours((e) => ({ type, numero: (e?.numero ?? 0) + 1 }))
+  if (enCours?.type === 'marchandage')
+    return <Marchandage key={enCours.numero} onFermer={() => setEnCours(null)} onEncore={() => rejouer('marchandage')} />
+  if (enCours?.type === 'taxi') return <Taxi key={enCours.numero} onFermer={() => setEnCours(null)} onEncore={() => rejouer('taxi')} />
 
   if (enCours?.type === 'chrono')
     return (
@@ -103,6 +111,25 @@ export function Quiz() {
       >
         <Bouton grand variante="teinte" className="mt-4 w-full" onClick={() => void lancerChrono('sons')}>
           Lancer la chasse
+        </Bouton>
+      </Carte>
+      <Carte
+        surtitre="Mini-jeu · chiffres et prix"
+        titre="Marchandage au souk"
+        texte="Le marchand annonce ses prix en darija : comprends-les, dis que c’est trop cher et repars avec une bonne affaire."
+      >
+        <Bouton grand variante="teinte" className="mt-4 w-full" onClick={() => rejouer('marchandage')}>
+          Aller au souk
+        </Bouton>
+      </Carte>
+
+      <Carte
+        surtitre="Mini-jeu · directions"
+        titre="Le taxi"
+        texte="Tu conduis : le passager te guide en darija (à droite, à gauche, tout droit, arrête-toi). Choisis la bonne direction."
+      >
+        <Bouton grand variante="teinte" className="mt-4 w-full" onClick={() => rejouer('taxi')}>
+          Prendre le volant
         </Bouton>
       </Carte>
     </Page>

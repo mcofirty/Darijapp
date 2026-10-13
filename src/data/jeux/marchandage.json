@@ -1,0 +1,164 @@
+{
+  "articles": [
+    {
+      "id": "zerbiya",
+      "nom": "un tapis",
+      "latin": "zerbiya",
+      "arabe": "زربية",
+      "prix": [
+        {
+          "id": "jeu-zerbiya-1",
+          "montant": 1000,
+          "latin": "had zzerbiya b alf derhem",
+          "arabe": "هاد الزربية ب ألف درهم",
+          "fr": "Ce tapis est à mille dirhams",
+          "audio": "audio/jeu-zerbiya-1.mp3"
+        },
+        {
+          "id": "jeu-zerbiya-2",
+          "montant": 800,
+          "latin": "la, ghir tmenmya derhem",
+          "arabe": "لا، غير تمنمية درهم",
+          "fr": "Non, seulement huit cents dirhams",
+          "audio": "audio/jeu-zerbiya-2.mp3"
+        },
+        {
+          "id": "jeu-zerbiya-3",
+          "montant": 600,
+          "latin": "akher tmen, settmya",
+          "arabe": "آخر تمن، ستمية",
+          "fr": "Dernier prix, six cents",
+          "audio": "audio/jeu-zerbiya-3.mp3"
+        }
+      ]
+    },
+    {
+      "id": "belgha",
+      "nom": "des babouches",
+      "latin": "belgha",
+      "arabe": "بلغة",
+      "prix": [
+        {
+          "id": "jeu-belgha-1",
+          "montant": 200,
+          "latin": "had lbelgha b mitayn derhem",
+          "arabe": "هاد البلغة ب ميتين درهم",
+          "fr": "Ces babouches sont à deux cents dirhams",
+          "audio": "audio/jeu-belgha-1.mp3"
+        },
+        {
+          "id": "jeu-belgha-2",
+          "montant": 180,
+          "latin": "safi, mya w tmanin",
+          "arabe": "صافي، مية و تمانين",
+          "fr": "D'accord, cent quatre-vingts",
+          "audio": "audio/jeu-belgha-2.mp3"
+        },
+        {
+          "id": "jeu-belgha-3",
+          "montant": 150,
+          "latin": "akher tmen, mya w khamsin",
+          "arabe": "آخر تمن، مية و خمسين",
+          "fr": "Dernier prix, cent cinquante",
+          "audio": "audio/jeu-belgha-3.mp3"
+        }
+      ]
+    },
+    {
+      "id": "berrad",
+      "nom": "une théière",
+      "latin": "berrad",
+      "arabe": "براد",
+      "prix": [
+        {
+          "id": "jeu-berrad-1",
+          "montant": 300,
+          "latin": "had lberrad b tlatmya derhem",
+          "arabe": "هاد البراد ب تلتمية درهم",
+          "fr": "Cette théière est à trois cents dirhams",
+          "audio": "audio/jeu-berrad-1.mp3"
+        },
+        {
+          "id": "jeu-berrad-2",
+          "montant": 250,
+          "latin": "safi, mitayn w khamsin",
+          "arabe": "صافي، ميتين و خمسين",
+          "fr": "D'accord, deux cent cinquante",
+          "audio": "audio/jeu-berrad-2.mp3"
+        },
+        {
+          "id": "jeu-berrad-3",
+          "montant": 200,
+          "latin": "akher tmen, mitayn",
+          "arabe": "آخر تمن، ميتين",
+          "fr": "Dernier prix, deux cents",
+          "audio": "audio/jeu-berrad-3.mp3"
+        }
+      ]
+    },
+    {
+      "id": "fanous",
+      "nom": "une lanterne",
+      "latin": "fanous",
+      "arabe": "فانوس",
+      "prix": [
+        {
+          "id": "jeu-fanous-1",
+          "montant": 400,
+          "latin": "had lfanous b rb3emya derhem",
+          "arabe": "هاد الفانوس ب ربعمية درهم",
+          "fr": "Cette lanterne est à quatre cents dirhams",
+          "audio": "audio/jeu-fanous-1.mp3"
+        },
+        {
+          "id": "jeu-fanous-2",
+          "montant": 350,
+          "latin": "safi, tlatmya w khamsin",
+          "arabe": "صافي، تلتمية و خمسين",
+          "fr": "D'accord, trois cent cinquante",
+          "audio": "audio/jeu-fanous-2.mp3"
+        },
+        {
+          "id": "jeu-fanous-3",
+          "montant": 300,
+          "latin": "akher tmen, tlatmya",
+          "arabe": "آخر تمن، تلتمية",
+          "fr": "Dernier prix, trois cents",
+          "audio": "audio/jeu-fanous-3.mp3"
+        }
+      ]
+    },
+    {
+      "id": "ras-l7anout",
+      "nom": "des épices",
+      "latin": "ras l7anout",
+      "arabe": "راس الحانوت",
+      "prix": [
+        {
+          "id": "jeu-ras-l7anout-1",
+          "montant": 60,
+          "latin": "noss kilo d ras l7anout b settin derhem",
+          "arabe": "نص كيلو د راس الحانوت ب ستين درهم",
+          "fr": "Un demi-kilo de ras el hanout à soixante dirhams",
+          "audio": "audio/jeu-ras-l7anout-1.mp3"
+        },
+        {
+          "id": "jeu-ras-l7anout-2",
+          "montant": 50,
+          "latin": "safi, khamsin derhem",
+          "arabe": "صافي، خمسين درهم",
+          "fr": "D'accord, cinquante dirhams",
+          "audio": "audio/jeu-ras-l7anout-2.mp3"
+        },
+        {
+          "id": "jeu-ras-l7anout-3",
+          "montant": 40,
+          "latin": "akher tmen, reb3in",
+          "arabe": "آخر تمن، ربعين",
+          "fr": "Dernier prix, quarante",
+          "audio": "audio/jeu-ras-l7anout-3.mp3"
+        }
+      ]
+    }
+  ]
+}

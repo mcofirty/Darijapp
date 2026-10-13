@@ -58,7 +58,7 @@ export interface SessionFaite {
 }
 
 /** Activité enregistrée dans l'historique : toutes comptent pour l'XP et la série. */
-export type TypeActivite = 'session' | 'quiz' | 'express' | 'sons'
+export type TypeActivite = 'session' | 'quiz' | 'express' | 'sons' | 'marchandage' | 'taxi'
 
 /** Ce qui ne va pas dans un mot signalé. */
 export type MotifSignalement = 'traduction' | 'ecriture' | 'prononciation'
