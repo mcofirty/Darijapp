@@ -93,7 +93,7 @@ export function Quiz() {
     )
 
   return (
-    <Page zellige titre="Quiz">
+    <Page titre="Quiz">
       <Carte
         surtitre="5 questions"
         titre="Contrôle tes acquis"

@@ -135,7 +135,7 @@ export function Parcours() {
   })
 
   return (
-    <Page zellige titre="Parcours">
+    <Page titre="Parcours">
       <Section>
         <Ligne
           tuile={<Tuile icone={Stamp} couleur="#c1272d" />}

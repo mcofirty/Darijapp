@@ -26,7 +26,7 @@ const RAYONS: { allee: Allee; categorie: Categorie; titre: string; note: string;
   { allee: 'appli', categorie: 'couleur', titre: 'Couleurs de l’appli', note: 'Remplace le rouge des boutons et des accents. Les erreurs restent en rouge.' },
   { allee: 'appli', categorie: 'sons', titre: 'Sons des réponses', note: 'Touche un jeu de sons pour l’écouter.' },
   { allee: 'appli', categorie: 'confettis', titre: 'Confettis du bilan', note: 'Ce qui tombe à la fin d’une session ou d’un quiz.' },
-  { allee: 'appli', categorie: 'zellige', titre: 'Zellige de l’appli', note: 'Un motif sur les cartes, les en-têtes, les bilans, les barres de progression et les jeux.' },
+  { allee: 'appli', categorie: 'zellige', titre: 'Zellige de l’appli', note: 'Un motif sur les cartes, les bilans, les barres de progression et les jeux.' },
 ]
 
 const ICONES_OBJETS: Record<string, typeof Lamp> = { lanterne: Lamp, theiere: CupSoda, cigogne: Bird, tapis: RectangleHorizontal, tajine: Soup, chat: Cat, tortue: Turtle, poule: Egg, moineaux: Bird, fennec: PawPrint, dromadaire: PawPrint }

@@ -29,7 +29,7 @@ export function Progres() {
   }
 
   return (
-    <Page zellige titre="Progrès">
+    <Page titre="Progrès">
       <div className="mb-6">
         <Segmente
           options={[

@@ -154,7 +154,7 @@ export function Apprendre() {
     )
 
   return (
-    <Page zellige titre="Apprendre" accessoire={<Serie />}>
+    <Page titre="Apprendre" accessoire={<Serie />}>
       <CarteSessionDuJour onCommencer={() => void lancer()} />
       <QuetesDuJour />
 

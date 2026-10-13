@@ -26,6 +26,7 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 | 2026-10-13 | Oral d'abord : le premier nouveau mot à redire de mémoire en fin de session, phrases d'exemple à répéter dans le mode écoute | `src/exercices/session.ts`, `src/exercices/ecoute.ts`, `src/features/ecoute/` |
 | 2026-10-13 | `CLAUDE.md` résumé ; détail dans `docs/ecrans.md` et `docs/historique.md` | `CLAUDE.md`, `docs/` |
 | 2026-10-13 | Zellige du souk dans toute l'appli : en-tête des onglets, cartes, barres de progression, bilans, Marchandage, Taxi, passeport | `src/ui/zellige.tsx`, `src/ui/Page.tsx`, `src/ui/Liste.tsx` |
+| 2026-10-13 | Zellige retiré de l'en-tête des onglets (demande de l'utilisateur) | `src/ui/Page.tsx` |
 | 2026-10-12 | Animation d'ouverture : vidéo de 3 s de l'utilisateur sur fond sombre à chaque lancement, passée d'un toucher, image finale avec Réduire les animations ou si la vidéo ne démarre pas | `public/lancement.mp4`, `public/lancement-fin.jpg`, `src/app/lancement.ts`, `index.html` |
 
 ## Décisions
@@ -60,3 +61,4 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-13 : rappel du premier nouveau mot en « Dis-le en darija » en fin de session (après les révisions, pour qu'un peu de temps ait passé) : le retrouver de mémoire ancre mieux que le relire ; raté, il compte comme une erreur du mot, comme un Dis-le raté. Phrases du mode écoute désactivées par défaut (l'écoute double de durée).
 - 2026-10-13 : `CLAUDE.md` résumé à environ 260 lignes et 33 000 caractères (il en faisait 300 et 75 000) : le détail des écrans et des règles va dans `docs/ecrans.md`, l'historique complet dans `docs/historique.md`, pour que le fichier lu en début de session reste lisible.
 - 2026-10-13 : zellige à 7 endroits choisis par l'utilisateur (jeux et menus), un seul module (`src/ui/zellige.tsx`, carreaux SVG en `data:` pour les fonds CSS et les `<pattern>` du Taxi) ; fond émaillé clair sous chaque motif pour qu'il reste visible en mode sombre ; bande d'en-tête à 40 % et courte, pour ne pas gêner le grand titre.
+- 2026-10-13 : bande de zellige en haut des onglets retirée à la demande de l'utilisateur ; le zellige reste sur les cartes, barres, bilans, jeux et passeport.
