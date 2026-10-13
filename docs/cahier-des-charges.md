@@ -21,9 +21,9 @@ La version 1 vise un seul profil : un francophone débutant, sans connaissance d
 | Domaine | v1 | Évolutions |
 | --- | --- | --- |
 | Vocabulaire | 1 682 mots et phrases en 31 thèmes (tous avec voix marocaine, explication de prononciation et exemple ; 1 530 importés d'un fichier fourni par l'utilisateur, dont Claude a écrit l'arabe et les exemples), plus tes propres mots | Relecture par un locuteur natif, exemples pour les mots importés |
-| Audio | Synthèse vocale générée par script, remplaçable par tes enregistrements | Dialogues audio |
-| Prononciation | Score sur 100 calculé sur l'appareil, paires de sons proches | Notation de phrases entières |
-| Jeux | Cartes du jour, quiz, parcours, quêtes, séries, niveaux, grammaire orale (6 fiches courtes avec entraînement : négation, possessifs, présent, futur, passé, questions) | Dialogues |
+| Audio | Synthèse vocale générée par script (mots, exemples, grammaire, dialogues), remplaçable par tes enregistrements | Voix différentes selon les personnages |
+| Prononciation | Score sur 100 calculé sur l'appareil, paires de sons proches, phrases entières (exemples, grammaire, dialogues) | Score par son dans une phrase |
+| Jeux | Cartes du jour, quiz, parcours, quêtes, séries, niveaux, grammaire orale (6 fiches courtes avec entraînement : négation, possessifs, présent, futur, passé, questions), 8 dialogues courts à écouter puis à jouer (tes répliques avec Dis-le, accordées à ton genre) | Dialogues plus longs, à embranchements |
 
 Hors périmètre de la v1 : grammaire détaillée, apprentissage de l'écriture arabe, fonctions sociales (invitations, classements).
 
@@ -261,7 +261,7 @@ Le MVP tient en 7 semaines à temps partiel (estimation, dont une semaine pour l
 | Exercices | Semaines 2 et 3 | Cartes et quiz, répétition espacée |
 | Prononciation | Semaines 4 et 5 | Enregistrement, score sur 100, sons du darija |
 | Jeu et contenu | Semaines 6 et 7 | Quêtes et séries, parcours complet, 150 mots |
-| Version 2 | Ensuite | Grammaire, dialogues, 500 mots |
+| Version 2 | Ensuite | Grammaire, dialogues, 500 mots (grammaire orale et dialogues faits le 2026-10-13) |
 
 Fin du MVP : si l'appli est utilisée 5 jours sur 7 pendant 4 semaines. Chaque jalon produit une version utilisable ; la v2 ne démarre qu'une fois l'habitude installée.
 

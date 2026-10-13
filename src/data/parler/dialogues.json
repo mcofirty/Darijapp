@@ -1,0 +1,507 @@
+{
+  "scenes": [
+    {
+      "id": "cafe",
+      "titre": "Au café",
+      "contexte": "Tu t'assois en terrasse. Le serveur arrive.",
+      "autre": "Le serveur",
+      "repliques": [
+        {
+          "id": "dia-cafe-1",
+          "qui": "autre",
+          "latin": "mr7ba, chno bghiti tchreb?",
+          "arabe": "مرحبا، شنو بغيتي تشرب؟",
+          "fr": "Bienvenue, qu'est-ce que tu veux boire ?",
+          "audio": "audio/dia-cafe-1.mp3"
+        },
+        {
+          "id": "dia-cafe-2",
+          "qui": "moi",
+          "latin": "3tini wa7d atay 3afak",
+          "arabe": "عطيني واحد أتاي عافاك",
+          "fr": "Donne-moi un thé, s'il te plaît",
+          "audio": "audio/dia-cafe-2.mp3"
+        },
+        {
+          "id": "dia-cafe-3",
+          "qui": "autre",
+          "latin": "bghiti m3ah chi 7aja?",
+          "arabe": "بغيتي معاه شي حاجة؟",
+          "fr": "Tu veux quelque chose avec ?",
+          "audio": "audio/dia-cafe-3.mp3"
+        },
+        {
+          "id": "dia-cafe-4",
+          "qui": "moi",
+          "latin": "la, chokran. ch7al?",
+          "arabe": "لا، شكرا. شحال؟",
+          "fr": "Non, merci. C'est combien ?",
+          "audio": "audio/dia-cafe-4.mp3"
+        },
+        {
+          "id": "dia-cafe-5",
+          "qui": "autre",
+          "latin": "3achra drahem",
+          "arabe": "عشرة دراهم",
+          "fr": "Dix dirhams",
+          "audio": "audio/dia-cafe-5.mp3"
+        },
+        {
+          "id": "dia-cafe-6",
+          "qui": "moi",
+          "latin": "hak, chokran",
+          "arabe": "هاك، شكرا",
+          "fr": "Tiens, merci",
+          "audio": "audio/dia-cafe-6.mp3"
+        }
+      ]
+    },
+    {
+      "id": "taxi",
+      "titre": "En taxi",
+      "contexte": "Tu arrêtes un petit taxi pour aller à la médina.",
+      "autre": "Le chauffeur",
+      "repliques": [
+        {
+          "id": "dia-taxi-1",
+          "qui": "moi",
+          "latin": "salam, wach t9der twsselni l lmdina l9dima?",
+          "arabe": "سلام، واش تقدر توصلني للمدينة القديمة؟",
+          "fr": "Bonjour, tu peux m'emmener à la vieille médina ?",
+          "audio": "audio/dia-taxi-1.mp3"
+        },
+        {
+          "id": "dia-taxi-2",
+          "qui": "autre",
+          "latin": "iyeh, tle3",
+          "arabe": "إيه، طلع",
+          "fr": "Oui, monte",
+          "audio": "audio/dia-taxi-2.mp3"
+        },
+        {
+          "id": "dia-taxi-3",
+          "qui": "moi",
+          "latin": "ch3el lcompteur, 3afak",
+          "arabe": "شعل الكونطور، عافاك",
+          "fr": "Mets le compteur, s'il te plaît",
+          "audio": "audio/dia-taxi-3.mp3"
+        },
+        {
+          "id": "dia-taxi-4",
+          "qui": "autre",
+          "latin": "wakha, ma kayn mochkil",
+          "arabe": "واخا، ما كاين مشكل",
+          "fr": "D'accord, pas de problème",
+          "audio": "audio/dia-taxi-4.mp3"
+        },
+        {
+          "id": "dia-taxi-5",
+          "qui": "moi",
+          "latin": "7bes hna 3afak",
+          "arabe": "حبس هنا عافاك",
+          "fr": "Arrête-toi ici, s'il te plaît",
+          "audio": "audio/dia-taxi-5.mp3"
+        }
+      ]
+    },
+    {
+      "id": "epicerie",
+      "titre": "Chez l'épicier",
+      "contexte": "Tu entres dans le 7anout du quartier.",
+      "autre": "L'épicier",
+      "repliques": [
+        {
+          "id": "dia-epicerie-1",
+          "qui": "autre",
+          "latin": "salam, ach bghiti?",
+          "arabe": "سلام، أش بغيتي؟",
+          "fr": "Bonjour, qu'est-ce que tu veux ?",
+          "audio": "audio/dia-epicerie-1.mp3"
+        },
+        {
+          "id": "dia-epicerie-2",
+          "qui": "moi",
+          "latin": "bghit khobz w 9er3a d lma",
+          "arabe": "بغيت خبز و قرعة د الما",
+          "fr": "Je veux du pain et une bouteille d'eau",
+          "audio": "audio/dia-epicerie-2.mp3"
+        },
+        {
+          "id": "dia-epicerie-3",
+          "qui": "autre",
+          "latin": "chi 7aja khra?",
+          "arabe": "شي حاجة خرى؟",
+          "fr": "Autre chose ?",
+          "audio": "audio/dia-epicerie-3.mp3"
+        },
+        {
+          "id": "dia-epicerie-4",
+          "qui": "moi",
+          "latin": "la, safi. ch7al kolchi?",
+          "arabe": "لا، صافي. شحال كلشي؟",
+          "fr": "Non, c'est tout. Combien pour le tout ?",
+          "audio": "audio/dia-epicerie-4.mp3"
+        },
+        {
+          "id": "dia-epicerie-5",
+          "qui": "autre",
+          "latin": "khamstach derhem",
+          "arabe": "خمستاش درهم",
+          "fr": "Quinze dirhams",
+          "audio": "audio/dia-epicerie-5.mp3"
+        },
+        {
+          "id": "dia-epicerie-6",
+          "qui": "moi",
+          "latin": "hak. bslama",
+          "arabe": "هاك. بسلامة",
+          "fr": "Tiens. Au revoir",
+          "audio": "audio/dia-epicerie-6.mp3"
+        }
+      ]
+    },
+    {
+      "id": "voisine",
+      "titre": "Faire connaissance",
+      "contexte": "Tu croises ta voisine dans l'escalier.",
+      "autre": "La voisine",
+      "repliques": [
+        {
+          "id": "dia-voisine-1",
+          "qui": "autre",
+          "latin": "salam, nta jdid hna?",
+          "arabe": "سلام، نتا جديد هنا؟",
+          "fr": "Bonjour, tu es nouveau ici ?",
+          "audio": "audio/dia-voisine-1.mp3",
+          "feminin": {
+            "id": "dia-voisine-1-f",
+            "latin": "salam, nti jdida hna?",
+            "arabe": "سلام، نتي جديدة هنا؟",
+            "fr": "Bonjour, tu es nouvelle ici ?",
+            "audio": "audio/dia-voisine-1-f.mp3"
+          }
+        },
+        {
+          "id": "dia-voisine-2",
+          "qui": "moi",
+          "latin": "iyeh, ana jarek ljdid",
+          "arabe": "إيه، أنا جارك الجديد",
+          "fr": "Oui, je suis ton nouveau voisin",
+          "audio": "audio/dia-voisine-2.mp3",
+          "feminin": {
+            "id": "dia-voisine-2-f",
+            "latin": "iyeh, ana jartek ljdida",
+            "arabe": "إيه، أنا جارتك الجديدة",
+            "fr": "Oui, je suis ta nouvelle voisine",
+            "audio": "audio/dia-voisine-2-f.mp3"
+          }
+        },
+        {
+          "id": "dia-voisine-3",
+          "qui": "autre",
+          "latin": "mr7ba bik! nta mghribi?",
+          "arabe": "مرحبا بيك! نتا مغربي؟",
+          "fr": "Bienvenue ! Tu es marocain ?",
+          "audio": "audio/dia-voisine-3.mp3",
+          "feminin": {
+            "id": "dia-voisine-3-f",
+            "latin": "mr7ba bik! nti mghribiya?",
+            "arabe": "مرحبا بيك! نتي مغربية؟",
+            "fr": "Bienvenue ! Tu es marocaine ?",
+            "audio": "audio/dia-voisine-3-f.mp3"
+          }
+        },
+        {
+          "id": "dia-voisine-4",
+          "qui": "moi",
+          "latin": "la, ana fransawi",
+          "arabe": "لا، أنا فرنساوي",
+          "fr": "Non, je suis français",
+          "audio": "audio/dia-voisine-4.mp3",
+          "feminin": {
+            "id": "dia-voisine-4-f",
+            "latin": "la, ana fransawiya",
+            "arabe": "لا، أنا فرنساوية",
+            "fr": "Non, je suis française",
+            "audio": "audio/dia-voisine-4-f.mp3"
+          }
+        },
+        {
+          "id": "dia-voisine-5",
+          "qui": "autre",
+          "latin": "kat-hder ddarija mzyan!",
+          "arabe": "كتهضر الدارجة مزيان!",
+          "fr": "Tu parles bien la darija !",
+          "audio": "audio/dia-voisine-5.mp3",
+          "feminin": {
+            "id": "dia-voisine-5-f",
+            "latin": "kat-hderi ddarija mzyan!",
+            "arabe": "كتهضري الدارجة مزيان!",
+            "fr": "Tu parles bien la darija !",
+            "audio": "audio/dia-voisine-5-f.mp3"
+          }
+        },
+        {
+          "id": "dia-voisine-6",
+          "qui": "moi",
+          "latin": "chwiya, ana kan-t3ellem",
+          "arabe": "شوية، أنا كنتعلم",
+          "fr": "Un peu, j'apprends",
+          "audio": "audio/dia-voisine-6.mp3"
+        }
+      ]
+    },
+    {
+      "id": "chemin",
+      "titre": "Demander son chemin",
+      "contexte": "Tu cherches une banque dans une rue que tu ne connais pas.",
+      "autre": "Un passant",
+      "repliques": [
+        {
+          "id": "dia-chemin-1",
+          "qui": "moi",
+          "latin": "sme7 lia, fin kayna lbanka?",
+          "arabe": "سمح ليا، فين كاينة البانكة؟",
+          "fr": "Excuse-moi, où est la banque ?",
+          "audio": "audio/dia-chemin-1.mp3"
+        },
+        {
+          "id": "dia-chemin-2",
+          "qui": "autre",
+          "latin": "sir nichan, men b3d dour 3la limen",
+          "arabe": "سير نيشان، من بعد دور على اليمين",
+          "fr": "Va tout droit, puis tourne à droite",
+          "audio": "audio/dia-chemin-2.mp3"
+        },
+        {
+          "id": "dia-chemin-3",
+          "qui": "moi",
+          "latin": "wach b3ida?",
+          "arabe": "واش بعيدة؟",
+          "fr": "C'est loin ?",
+          "audio": "audio/dia-chemin-3.mp3"
+        },
+        {
+          "id": "dia-chemin-4",
+          "qui": "autre",
+          "latin": "la, 9riba, khmes d9aye9",
+          "arabe": "لا، قريبة، خمس دقايق",
+          "fr": "Non, c'est près, cinq minutes",
+          "audio": "audio/dia-chemin-4.mp3"
+        },
+        {
+          "id": "dia-chemin-5",
+          "qui": "moi",
+          "latin": "chokran bzaf",
+          "arabe": "شكرا بزاف",
+          "fr": "Merci beaucoup",
+          "audio": "audio/dia-chemin-5.mp3"
+        },
+        {
+          "id": "dia-chemin-6",
+          "qui": "autre",
+          "latin": "bla jmil",
+          "arabe": "بلا جميل",
+          "fr": "De rien",
+          "audio": "audio/dia-chemin-6.mp3"
+        }
+      ]
+    },
+    {
+      "id": "restaurant",
+      "titre": "Au restaurant",
+      "contexte": "Tu entres dans un petit restaurant pour déjeuner.",
+      "autre": "Le serveur",
+      "repliques": [
+        {
+          "id": "dia-restaurant-1",
+          "qui": "autre",
+          "latin": "mr7ba bik, tfeddel",
+          "arabe": "مرحبا بيك، تفضل",
+          "fr": "Bienvenue, je t'en prie",
+          "audio": "audio/dia-restaurant-1.mp3",
+          "feminin": {
+            "id": "dia-restaurant-1-f",
+            "latin": "mr7ba bik, tfeddli",
+            "arabe": "مرحبا بيك، تفضلي",
+            "fr": "Bienvenue, je t'en prie",
+            "audio": "audio/dia-restaurant-1-f.mp3"
+          }
+        },
+        {
+          "id": "dia-restaurant-2",
+          "qui": "moi",
+          "latin": "chno 3ndkom lyoum?",
+          "arabe": "شنو عندكم اليوم؟",
+          "fr": "Qu'est-ce que vous avez aujourd'hui ?",
+          "audio": "audio/dia-restaurant-2.mp3"
+        },
+        {
+          "id": "dia-restaurant-3",
+          "qui": "autre",
+          "latin": "3ndna tajine b l7em w kosksou",
+          "arabe": "عندنا طاجين باللحم و كسكسو",
+          "fr": "Nous avons un tajine à la viande et du couscous",
+          "audio": "audio/dia-restaurant-3.mp3"
+        },
+        {
+          "id": "dia-restaurant-4",
+          "qui": "moi",
+          "latin": "bghit tajine 3afak",
+          "arabe": "بغيت طاجين عافاك",
+          "fr": "Je voudrais un tajine, s'il te plaît",
+          "audio": "audio/dia-restaurant-4.mp3"
+        },
+        {
+          "id": "dia-restaurant-5",
+          "qui": "autre",
+          "latin": "bghiti chi 7aja tchreb?",
+          "arabe": "بغيتي شي حاجة تشرب؟",
+          "fr": "Tu veux quelque chose à boire ?",
+          "audio": "audio/dia-restaurant-5.mp3"
+        },
+        {
+          "id": "dia-restaurant-6",
+          "qui": "moi",
+          "latin": "lma 3afak",
+          "arabe": "الما عافاك",
+          "fr": "De l'eau, s'il te plaît",
+          "audio": "audio/dia-restaurant-6.mp3"
+        }
+      ]
+    },
+    {
+      "id": "pharmacie",
+      "titre": "À la pharmacie",
+      "contexte": "Tu ne te sens pas bien et tu entres à la pharmacie.",
+      "autre": "Le pharmacien",
+      "repliques": [
+        {
+          "id": "dia-pharmacie-1",
+          "qui": "autre",
+          "latin": "salam, kifach n9der n3awnek?",
+          "arabe": "سلام، كيفاش نقدر نعاونك؟",
+          "fr": "Bonjour, comment je peux t'aider ?",
+          "audio": "audio/dia-pharmacie-1.mp3"
+        },
+        {
+          "id": "dia-pharmacie-2",
+          "qui": "moi",
+          "latin": "kaywje3ni rasi",
+          "arabe": "كيوجعني راسي",
+          "fr": "J'ai mal à la tête",
+          "audio": "audio/dia-pharmacie-2.mp3"
+        },
+        {
+          "id": "dia-pharmacie-3",
+          "qui": "autre",
+          "latin": "wach 3ndek sskhana?",
+          "arabe": "واش عندك السخانة؟",
+          "fr": "Tu as de la fièvre ?",
+          "audio": "audio/dia-pharmacie-3.mp3"
+        },
+        {
+          "id": "dia-pharmacie-4",
+          "qui": "moi",
+          "latin": "la, ghir rasi",
+          "arabe": "لا، غير راسي",
+          "fr": "Non, juste la tête",
+          "audio": "audio/dia-pharmacie-4.mp3"
+        },
+        {
+          "id": "dia-pharmacie-5",
+          "qui": "autre",
+          "latin": "khod had ddwa, jouj merrat f nhar",
+          "arabe": "خود هاد الدوا، جوج مرات ف النهار",
+          "fr": "Prends ce médicament, deux fois par jour",
+          "audio": "audio/dia-pharmacie-5.mp3",
+          "feminin": {
+            "id": "dia-pharmacie-5-f",
+            "latin": "khodi had ddwa, jouj merrat f nhar",
+            "arabe": "خودي هاد الدوا، جوج مرات ف النهار",
+            "fr": "Prends ce médicament, deux fois par jour",
+            "audio": "audio/dia-pharmacie-5-f.mp3"
+          }
+        },
+        {
+          "id": "dia-pharmacie-6",
+          "qui": "moi",
+          "latin": "chokran, ch7al?",
+          "arabe": "شكرا، شحال؟",
+          "fr": "Merci, c'est combien ?",
+          "audio": "audio/dia-pharmacie-6.mp3"
+        }
+      ]
+    },
+    {
+      "id": "telephone",
+      "titre": "Au téléphone",
+      "contexte": "Un ami t'appelle en fin d'après-midi.",
+      "autre": "Ton ami",
+      "repliques": [
+        {
+          "id": "dia-telephone-1",
+          "qui": "autre",
+          "latin": "allo, fin nta?",
+          "arabe": "ألو، فين نتا؟",
+          "fr": "Allô, tu es où ?",
+          "audio": "audio/dia-telephone-1.mp3",
+          "feminin": {
+            "id": "dia-telephone-1-f",
+            "latin": "allo, fin nti?",
+            "arabe": "ألو، فين نتي؟",
+            "fr": "Allô, tu es où ?",
+            "audio": "audio/dia-telephone-1-f.mp3"
+          }
+        },
+        {
+          "id": "dia-telephone-2",
+          "qui": "moi",
+          "latin": "ana f ddar",
+          "arabe": "أنا ف الدار",
+          "fr": "Je suis à la maison",
+          "audio": "audio/dia-telephone-2.mp3"
+        },
+        {
+          "id": "dia-telephone-3",
+          "qui": "autre",
+          "latin": "ghadi nmchiw nakolou, wach tji m3ana?",
+          "arabe": "غادي نمشيو ناكلو، واش تجي معانا؟",
+          "fr": "On va aller manger, tu viens avec nous ?",
+          "audio": "audio/dia-telephone-3.mp3",
+          "feminin": {
+            "id": "dia-telephone-3-f",
+            "latin": "ghadi nmchiw nakolou, wach tjiy m3ana?",
+            "arabe": "غادي نمشيو ناكلو، واش تجيي معانا؟",
+            "fr": "On va aller manger, tu viens avec nous ?",
+            "audio": "audio/dia-telephone-3-f.mp3"
+          }
+        },
+        {
+          "id": "dia-telephone-4",
+          "qui": "moi",
+          "latin": "iyeh, imta?",
+          "arabe": "إيه، إمتى؟",
+          "fr": "Oui, quand ?",
+          "audio": "audio/dia-telephone-4.mp3"
+        },
+        {
+          "id": "dia-telephone-5",
+          "qui": "autre",
+          "latin": "men daba nos sa3a",
+          "arabe": "من دابا نص ساعة",
+          "fr": "Dans une demi-heure",
+          "audio": "audio/dia-telephone-5.mp3"
+        },
+        {
+          "id": "dia-telephone-6",
+          "qui": "moi",
+          "latin": "wakha, ghanji",
+          "arabe": "واخا، غانجي",
+          "fr": "D'accord, j'arrive",
+          "audio": "audio/dia-telephone-6.mp3"
+        }
+      ]
+    }
+  ]
+}

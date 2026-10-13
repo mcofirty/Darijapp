@@ -1,5 +1,5 @@
 import { useLiveQuery } from 'dexie-react-hooks'
-import { BookOpenText, Coins, Flame, Headphones, Star, TriangleAlert } from 'lucide-react'
+import { BookOpenText, Coins, Flame, Headphones, MessagesSquare, Star, TriangleAlert } from 'lucide-react'
 import { useState } from 'react'
 import { motsDuTheme } from '../../data'
 import { SONS } from '../../data/sons'
@@ -28,7 +28,9 @@ import { ListeMots } from '../mots/ListeMots'
 import { CarteSessionDuJour } from '../session/CarteSessionDuJour'
 import { preparerSession, type SessionPrete } from '../session/lancer'
 import { Session } from '../session/Session'
+import { Dialogues } from '../parler/Dialogues'
 import { Grammaire } from '../parler/Grammaire'
+import { SCENES } from '../../exercices/dialogues'
 import { LECONS_GRAMMAIRE } from '../../exercices/grammaire'
 import { GuideSons } from './GuideSons'
 import { ListeSpeciale } from './ListeSpeciale'
@@ -42,6 +44,7 @@ type Vue =
   | { type: 'souk'; depuisJardin?: boolean }
   | { type: 'jardin' }
   | { type: 'grammaire' }
+  | { type: 'dialogues' }
   | { type: 'theme'; themeId: string }
 
 /** Une révision de favoris ou de mots difficiles reprend 8 mots au hasard. */
@@ -106,6 +109,7 @@ export function Apprendre() {
     )
   }
 
+  if (vue.type === 'dialogues') return <Dialogues onRetour={() => setVue({ type: 'accueil' })} />
   if (vue.type === 'grammaire') return <Grammaire onRetour={() => setVue({ type: 'accueil' })} />
   if (vue.type === 'sons') return <GuideSons onRetour={() => setVue({ type: 'accueil' })} />
   if (vue.type === 'ecoute') return <ModeEcoute onRetour={() => setVue({ type: 'accueil' })} />
@@ -185,6 +189,14 @@ export function Apprendre() {
       </Section>
 
       <Section titre="Parler">
+        <Ligne
+          tuile={<Tuile icone={MessagesSquare} couleur="#34c759" />}
+          titre="Dialogues"
+          sousTitre="Au café, en taxi, chez l’épicier…"
+          valeur={SCENES.length}
+          chevron
+          onClick={() => ouvrir({ type: 'dialogues' })}
+        />
         <Ligne
           tuile={<Tuile icone={BookOpenText} couleur="#5856d6" />}
           titre="Grammaire orale"

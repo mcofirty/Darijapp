@@ -43,6 +43,8 @@ export interface Profil {
   micro: boolean
   /** Distances de mots bien dits par l'utilisateur, pour régler le score sur sa voix. */
   reglageVoix: number[]
+  /** Dialogues : meilleur nombre de répliques réussies par scène. */
+  dialogues: Record<string, number>
 }
 
 /** Apparence de l'appli : suit l'iPhone, ou forcée en clair ou en sombre. */
@@ -140,6 +142,7 @@ export const PROFIL_DEFAUT: Profil = {
   jardinXpVu: null,
   micro: true,
   reglageVoix: [],
+  dialogues: {},
 }
 
 export class DarijaDB extends Dexie {
