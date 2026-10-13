@@ -1,0 +1,426 @@
+{
+  "lecons": [
+    {
+      "id": "negation",
+      "titre": "Dire non : ma…ch",
+      "sousTitre": "ma fhemtch, ma kaynch, machi",
+      "regle": [
+        "Pour dire « ne… pas », on entoure le verbe : « ma » devant, « -ch » collé à la fin. fhemt (j'ai compris) devient ma fhemtch (je n'ai pas compris).",
+        "Ça marche aussi avec « 3ndi » (j'ai) et « kayn » (il y a) : ma 3ndich, ma kaynch.",
+        "Devant un nom ou un adjectif, on dit simplement « machi » : machi mzyan, ce n'est pas bien."
+      ],
+      "formes": [
+        {
+          "id": "gram-negation-1",
+          "latin": "fhemt",
+          "arabe": "فهمت",
+          "fr": "j'ai compris",
+          "audio": "audio/gram-negation-1.mp3"
+        },
+        {
+          "id": "gram-negation-2",
+          "latin": "ma fhemtch",
+          "arabe": "ما فهمتش",
+          "fr": "je n'ai pas compris",
+          "audio": "audio/gram-negation-2.mp3"
+        },
+        {
+          "id": "gram-negation-3",
+          "latin": "bghit atay",
+          "arabe": "بغيت أتاي",
+          "fr": "je veux du thé",
+          "audio": "audio/gram-negation-3.mp3"
+        },
+        {
+          "id": "gram-negation-4",
+          "latin": "ma bghitch atay",
+          "arabe": "ما بغيتش أتاي",
+          "fr": "je ne veux pas de thé",
+          "audio": "audio/gram-negation-4.mp3"
+        },
+        {
+          "id": "gram-negation-5",
+          "latin": "3ndi lwe9t",
+          "arabe": "عندي الوقت",
+          "fr": "j'ai le temps",
+          "audio": "audio/gram-negation-5.mp3"
+        },
+        {
+          "id": "gram-negation-6",
+          "latin": "ma 3ndich lwe9t",
+          "arabe": "ما عنديش الوقت",
+          "fr": "je n'ai pas le temps",
+          "audio": "audio/gram-negation-6.mp3"
+        },
+        {
+          "id": "gram-negation-7",
+          "latin": "kayn lma",
+          "arabe": "كاين الما",
+          "fr": "il y a de l'eau",
+          "audio": "audio/gram-negation-7.mp3"
+        },
+        {
+          "id": "gram-negation-8",
+          "latin": "ma kaynch lma",
+          "arabe": "ما كاينش الما",
+          "fr": "il n'y a pas d'eau",
+          "audio": "audio/gram-negation-8.mp3"
+        },
+        {
+          "id": "gram-negation-9",
+          "latin": "machi mzyan",
+          "arabe": "ماشي مزيان",
+          "fr": "ce n'est pas bien",
+          "audio": "audio/gram-negation-9.mp3"
+        }
+      ]
+    },
+    {
+      "id": "possessifs",
+      "titre": "Mon, ton, son : dari, darek",
+      "sousTitre": "dari, darek, daro, darha…",
+      "regle": [
+        "Pour dire « mon, ton, son… », on colle une fin au nom : -i (mon), -ek (ton), -o (son, à lui), -ha (son, à elle), -na (notre), -kom (votre), -hom (leur).",
+        "dar (maison) donne dari, darek, daro, darha, darna, darkom, darhom. Pareil pour ktab (livre) : ktabi, ktabek…",
+        "Avec « 3nd » (chez), la même fin dit qui possède : 3ndi (j'ai), 3ndek (tu as)."
+      ],
+      "formes": [
+        {
+          "id": "gram-possessifs-1",
+          "latin": "dari",
+          "arabe": "داري",
+          "fr": "ma maison",
+          "audio": "audio/gram-possessifs-1.mp3"
+        },
+        {
+          "id": "gram-possessifs-2",
+          "latin": "darek",
+          "arabe": "دارك",
+          "fr": "ta maison",
+          "audio": "audio/gram-possessifs-2.mp3"
+        },
+        {
+          "id": "gram-possessifs-3",
+          "latin": "daro",
+          "arabe": "دارو",
+          "fr": "sa maison (à lui)",
+          "audio": "audio/gram-possessifs-3.mp3"
+        },
+        {
+          "id": "gram-possessifs-4",
+          "latin": "darha",
+          "arabe": "دارها",
+          "fr": "sa maison (à elle)",
+          "audio": "audio/gram-possessifs-4.mp3"
+        },
+        {
+          "id": "gram-possessifs-5",
+          "latin": "darna",
+          "arabe": "دارنا",
+          "fr": "notre maison",
+          "audio": "audio/gram-possessifs-5.mp3"
+        },
+        {
+          "id": "gram-possessifs-6",
+          "latin": "darkom",
+          "arabe": "داركم",
+          "fr": "votre maison",
+          "audio": "audio/gram-possessifs-6.mp3"
+        },
+        {
+          "id": "gram-possessifs-7",
+          "latin": "darhom",
+          "arabe": "دارهم",
+          "fr": "leur maison",
+          "audio": "audio/gram-possessifs-7.mp3"
+        },
+        {
+          "id": "gram-possessifs-8",
+          "latin": "fin ktabi?",
+          "arabe": "فين كتابي؟",
+          "fr": "où est mon livre ?",
+          "audio": "audio/gram-possessifs-8.mp3"
+        },
+        {
+          "id": "gram-possessifs-9",
+          "latin": "3ndek tomobil?",
+          "arabe": "عندك طوموبيل؟",
+          "fr": "tu as une voiture ?",
+          "audio": "audio/gram-possessifs-9.mp3"
+        }
+      ]
+    },
+    {
+      "id": "present",
+      "titre": "Le présent : ka-",
+      "sousTitre": "kanakol, katakol, kayakol…",
+      "regle": [
+        "Pour ce qu'on fait maintenant ou d'habitude, on met « ka- » devant le verbe conjugué : kanakol, je mange.",
+        "Le début dit qui fait l'action : kan- (je), kat- (tu, elle), kay- (il). Au pluriel, on ajoute -ou à la fin : kanakolou (nous mangeons).",
+        "Au féminin, « tu » ajoute -i : nti katakli, tu manges (à une femme)."
+      ],
+      "formes": [
+        {
+          "id": "gram-present-1",
+          "latin": "ana kanakol",
+          "arabe": "أنا كناكل",
+          "fr": "je mange",
+          "audio": "audio/gram-present-1.mp3"
+        },
+        {
+          "id": "gram-present-2",
+          "latin": "nta katakol",
+          "arabe": "نتا كتاكل",
+          "fr": "tu manges (à un homme)",
+          "audio": "audio/gram-present-2.mp3"
+        },
+        {
+          "id": "gram-present-3",
+          "latin": "nti katakli",
+          "arabe": "نتي كتاكلي",
+          "fr": "tu manges (à une femme)",
+          "audio": "audio/gram-present-3.mp3"
+        },
+        {
+          "id": "gram-present-4",
+          "latin": "howa kayakol",
+          "arabe": "هو كياكل",
+          "fr": "il mange",
+          "audio": "audio/gram-present-4.mp3"
+        },
+        {
+          "id": "gram-present-5",
+          "latin": "hiya katakol",
+          "arabe": "هي كتاكل",
+          "fr": "elle mange",
+          "audio": "audio/gram-present-5.mp3"
+        },
+        {
+          "id": "gram-present-6",
+          "latin": "7na kanakolou",
+          "arabe": "حنا كناكلو",
+          "fr": "nous mangeons",
+          "audio": "audio/gram-present-6.mp3"
+        },
+        {
+          "id": "gram-present-7",
+          "latin": "homa kayakolou",
+          "arabe": "هوما كياكلو",
+          "fr": "ils mangent",
+          "audio": "audio/gram-present-7.mp3"
+        },
+        {
+          "id": "gram-present-8",
+          "latin": "kanchreb atay kol nhar",
+          "arabe": "كنشرب أتاي كل نهار",
+          "fr": "je bois du thé tous les jours",
+          "audio": "audio/gram-present-8.mp3"
+        },
+        {
+          "id": "gram-present-9",
+          "latin": "kanhder ddarija chwiya",
+          "arabe": "كنهضر الدارجة شوية",
+          "fr": "je parle un peu darija",
+          "audio": "audio/gram-present-9.mp3"
+        }
+      ]
+    },
+    {
+      "id": "futur",
+      "titre": "Le futur : ghadi",
+      "sousTitre": "ghadi nmchi, ghanmchi",
+      "regle": [
+        "Pour le futur, on met « ghadi » devant le verbe, sans « ka- » : ghadi nmchi, je vais aller.",
+        "À l'oral, ghadi se raccourcit souvent en « gha- » collé au verbe : ghanmchi, j'irai.",
+        "Pour une femme, ghadi devient ghadia : hiya ghadia tsafer, elle va voyager. Pour dire non : ma ghadich."
+      ],
+      "formes": [
+        {
+          "id": "gram-futur-1",
+          "latin": "ghadi nmchi l ssou9",
+          "arabe": "غادي نمشي للسوق",
+          "fr": "je vais aller au souk",
+          "audio": "audio/gram-futur-1.mp3"
+        },
+        {
+          "id": "gram-futur-2",
+          "latin": "ghanmchi ghedda",
+          "arabe": "غانمشي غدا",
+          "fr": "j'irai demain",
+          "audio": "audio/gram-futur-2.mp3"
+        },
+        {
+          "id": "gram-futur-3",
+          "latin": "ghadi nakol m3ak",
+          "arabe": "غادي ناكل معاك",
+          "fr": "je vais manger avec toi",
+          "audio": "audio/gram-futur-3.mp3"
+        },
+        {
+          "id": "gram-futur-4",
+          "latin": "wach ghadi tji?",
+          "arabe": "واش غادي تجي؟",
+          "fr": "tu vas venir ?",
+          "audio": "audio/gram-futur-4.mp3"
+        },
+        {
+          "id": "gram-futur-5",
+          "latin": "la, ma ghadich nji",
+          "arabe": "لا، ما غاديش نجي",
+          "fr": "non, je ne vais pas venir",
+          "audio": "audio/gram-futur-5.mp3"
+        },
+        {
+          "id": "gram-futur-6",
+          "latin": "howa ghadi ychri tomobil",
+          "arabe": "هو غادي يشري طوموبيل",
+          "fr": "il va acheter une voiture",
+          "audio": "audio/gram-futur-6.mp3"
+        },
+        {
+          "id": "gram-futur-7",
+          "latin": "hiya ghadia tsafer",
+          "arabe": "هي غادية تسافر",
+          "fr": "elle va voyager",
+          "audio": "audio/gram-futur-7.mp3"
+        }
+      ]
+    },
+    {
+      "id": "passe",
+      "titre": "Le passé : mchit, mcha",
+      "sousTitre": "mchit, mcha, mchat, mchina…",
+      "regle": [
+        "Au passé, pas de « ka- » : la fin du verbe dit qui a fait l'action. Avec mcha (aller) : mchit (je suis allé), mchiti (tu es allé), mcha (il est allé), mchat (elle est allée).",
+        "Au pluriel : mchina (nous), mchitou (vous), mchaw (ils).",
+        "Même chose avec kla (manger) et chreb (boire) : klit, j'ai mangé ; chrebt, j'ai bu."
+      ],
+      "formes": [
+        {
+          "id": "gram-passe-1",
+          "latin": "ana mchit l ssou9",
+          "arabe": "أنا مشيت للسوق",
+          "fr": "je suis allé au souk",
+          "audio": "audio/gram-passe-1.mp3"
+        },
+        {
+          "id": "gram-passe-2",
+          "latin": "wach mchiti l lmdina?",
+          "arabe": "واش مشيتي للمدينة؟",
+          "fr": "tu es allé en ville ?",
+          "audio": "audio/gram-passe-2.mp3"
+        },
+        {
+          "id": "gram-passe-3",
+          "latin": "howa mcha l lkhdma",
+          "arabe": "هو مشا للخدمة",
+          "fr": "il est allé au travail",
+          "audio": "audio/gram-passe-3.mp3"
+        },
+        {
+          "id": "gram-passe-4",
+          "latin": "hiya mchat lbare7",
+          "arabe": "هي مشات البارح",
+          "fr": "elle est partie hier",
+          "audio": "audio/gram-passe-4.mp3"
+        },
+        {
+          "id": "gram-passe-5",
+          "latin": "7na mchina l ddar",
+          "arabe": "حنا مشينا للدار",
+          "fr": "nous sommes allés à la maison",
+          "audio": "audio/gram-passe-5.mp3"
+        },
+        {
+          "id": "gram-passe-6",
+          "latin": "homa mchaw l fas",
+          "arabe": "هوما مشاو لفاس",
+          "fr": "ils sont allés à Fès",
+          "audio": "audio/gram-passe-6.mp3"
+        },
+        {
+          "id": "gram-passe-7",
+          "latin": "klit bzaf",
+          "arabe": "كليت بزاف",
+          "fr": "j'ai trop mangé",
+          "audio": "audio/gram-passe-7.mp3"
+        },
+        {
+          "id": "gram-passe-8",
+          "latin": "chrebt atay",
+          "arabe": "شربت أتاي",
+          "fr": "j'ai bu du thé",
+          "audio": "audio/gram-passe-8.mp3"
+        }
+      ]
+    },
+    {
+      "id": "questions",
+      "titre": "Poser une question",
+      "sousTitre": "wach, fin, chno, imta, 3lach…",
+      "regle": [
+        "Pour une question à laquelle on répond par oui ou non, on commence par « wach » : wach fhemti? as-tu compris ?",
+        "Les mots de question se mettent au début : fin (où), chno (quoi), imta (quand), 3lach (pourquoi), ch7al (combien), kifach (comment).",
+        "L'ordre des mots ne change pas : c'est le mot de question et la voix qui montent qui font la question."
+      ],
+      "formes": [
+        {
+          "id": "gram-questions-1",
+          "latin": "wach fhemti?",
+          "arabe": "واش فهمتي؟",
+          "fr": "as-tu compris ?",
+          "audio": "audio/gram-questions-1.mp3"
+        },
+        {
+          "id": "gram-questions-2",
+          "latin": "wach kayn lma?",
+          "arabe": "واش كاين الما؟",
+          "fr": "est-ce qu'il y a de l'eau ?",
+          "audio": "audio/gram-questions-2.mp3"
+        },
+        {
+          "id": "gram-questions-3",
+          "latin": "fin kayn l7ammam?",
+          "arabe": "فين كاين الحمام؟",
+          "fr": "où est la salle de bain ?",
+          "audio": "audio/gram-questions-3.mp3"
+        },
+        {
+          "id": "gram-questions-4",
+          "latin": "chno hada?",
+          "arabe": "شنو هادا؟",
+          "fr": "qu'est-ce que c'est ?",
+          "audio": "audio/gram-questions-4.mp3"
+        },
+        {
+          "id": "gram-questions-5",
+          "latin": "imta ghadi tji?",
+          "arabe": "إمتى غادي تجي؟",
+          "fr": "quand vas-tu venir ?",
+          "audio": "audio/gram-questions-5.mp3"
+        },
+        {
+          "id": "gram-questions-6",
+          "latin": "3lach ma jitich?",
+          "arabe": "علاش ما جيتيش؟",
+          "fr": "pourquoi tu n'es pas venu ?",
+          "audio": "audio/gram-questions-6.mp3"
+        },
+        {
+          "id": "gram-questions-7",
+          "latin": "ch7al hadi?",
+          "arabe": "شحال هادي؟",
+          "fr": "combien ça coûte ?",
+          "audio": "audio/gram-questions-7.mp3"
+        },
+        {
+          "id": "gram-questions-8",
+          "latin": "kifach nmchi l lmdina?",
+          "arabe": "كيفاش نمشي للمدينة؟",
+          "fr": "comment je vais en ville ?",
+          "audio": "audio/gram-questions-8.mp3"
+        }
+      ]
+    }
+  ]
+}

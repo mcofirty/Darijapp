@@ -54,7 +54,7 @@ export function Quiz() {
         etapes={enCours.etapes}
         nouveaux={0}
         entrainement
-        quiz
+        activite="quiz"
         onFermer={() => setEnCours(null)}
         onEncore={() => void lancerQuiz()}
       />

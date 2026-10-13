@@ -16,7 +16,7 @@ export type Etape =
    * Dis-le : on prononce le mot, le score compare à la voix de référence. `inverse` : « Dis-le en
    * darija », seul le français est montré (mot déjà bien connu).
    */
-  | { type: 'disle'; mot: Mot; inverse?: boolean }
+  | { type: 'disle'; mot: Mot; inverse?: boolean; phrase?: boolean }
   /** Construis la phrase : on remet dans l'ordre les mots de l'exemple du mot (avec des intrus). */
   | { type: 'phrase'; mot: Mot; morceaux: string[] }
 

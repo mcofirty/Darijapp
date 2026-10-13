@@ -20,8 +20,11 @@ interface Props {
   etapes: Etape[]
   nouveaux: number
   entrainement: boolean
-  /** Quiz : pas de question refaite, pas de répétition espacée, bilan « Quiz terminé ». */
-  quiz?: boolean
+  /**
+   * Quiz ou leçon de grammaire : pas de question refaite, pas de répétition espacée,
+   * l'activité est enregistrée comme telle avec son propre bilan.
+   */
+  activite?: 'quiz' | 'grammaire'
   onFermer: () => void
   onEncore: () => void
 }
@@ -31,7 +34,8 @@ type Reponse = Pick<Mot, 'latin' | 'arabe' | 'fr' | 'audio'>
 type Retour = { juste: true } | { juste: false; mot: Reponse }
 
 /** Session plein écran : une étape à la fois, retour immédiat, étapes ratées refaites à la fin. */
-export function Session({ etapes: depart, nouveaux, entrainement, quiz = false, onFermer, onEncore }: Props) {
+export function Session({ etapes: depart, nouveaux, entrainement, activite, onFermer, onEncore }: Props) {
+  const quiz = activite !== undefined
   const [etapes, setEtapes] = useState(depart)
   const [index, setIndex] = useState(0)
   const [retour, setRetour] = useState<Retour | null>(null)
@@ -84,7 +88,7 @@ export function Session({ etapes: depart, nouveaux, entrainement, quiz = false, 
     const q = questions.current
     setBilan(
       quiz
-        ? await enregistrerActivite('quiz', { bonnes: q.justes, mauvaises: q.total - q.justes })
+        ? await enregistrerActivite(activite, { bonnes: q.justes, mauvaises: q.total - q.justes })
         : await enregistrerSession(r.parMot(), { bonnes: r.bonnes, mauvaises: r.mauvaises, nouveaux, entrainement, scores: r.scores }),
     )
   }
@@ -94,12 +98,12 @@ export function Session({ etapes: depart, nouveaux, entrainement, quiz = false, 
     const q = questions.current
     return quiz ? (
       <Bilan
-        titre={q.justes === q.total ? 'Sans faute !' : 'Quiz terminé'}
+        titre={q.justes === q.total ? 'Sans faute !' : activite === 'grammaire' ? 'Leçon terminée' : 'Quiz terminé'}
         sousTitre={`${q.justes} bonne${q.justes > 1 ? 's' : ''} réponse${q.justes > 1 ? 's' : ''} sur ${q.total}`}
         xp={bilan.xp}
         activite={bilan}
         taux={q.total > 0 ? q.justes / q.total : 1}
-        libelleEncore="Nouveau quiz"
+        libelleEncore={activite === 'grammaire' ? 'Refaire la leçon' : 'Nouveau quiz'}
         onFermer={onFermer}
         onEncore={onEncore}
       />
@@ -129,7 +133,7 @@ export function Session({ etapes: depart, nouveaux, entrainement, quiz = false, 
           <button
             type="button"
             onClick={() => setConfirmer(true)}
-            aria-label={quiz ? 'Quitter le quiz' : 'Quitter la session'}
+            aria-label={activite === 'quiz' ? 'Quitter le quiz' : activite === 'grammaire' ? 'Quitter la leçon' : 'Quitter la session'}
             className="verre verre-fin pressable flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
           >
             <X className="h-5 w-5" strokeWidth={2.4} aria-hidden />
@@ -158,7 +162,7 @@ export function Session({ etapes: depart, nouveaux, entrainement, quiz = false, 
             <Distingue paire={etape.paire} cible={etape.cible} onRepondu={(j) => repondre(j, etape.cible, null)} />
           )}
           {etape.type === 'disle' && (
-            <DisLe mot={etape.mot} inverse={etape.inverse} onPret={setDire} onRepondu={(r) => valider(etape.mot, r)} />
+            <DisLe mot={etape.mot} inverse={etape.inverse} phrase={etape.phrase} onPret={setDire} onRepondu={(r) => valider(etape.mot, r)} />
           )}
           {etape.type === 'phrase' && (
             <Construis mot={etape.mot} morceaux={etape.morceaux} onRepondu={(j) => repondre(j, etape.mot.exemple, etape.mot.id)} />
@@ -217,8 +221,14 @@ export function Session({ etapes: depart, nouveaux, entrainement, quiz = false, 
 
       {confirmer && (
         <Alerte
-          titre={quiz ? 'Quitter le quiz ?' : 'Quitter la session ?'}
-          message={quiz ? 'Ce quiz ne sera pas compté.' : 'Les réponses de cette session ne seront pas enregistrées.'}
+          titre={activite === 'quiz' ? 'Quitter le quiz ?' : activite === 'grammaire' ? 'Quitter la leçon ?' : 'Quitter la session ?'}
+          message={
+            activite === 'quiz'
+              ? 'Ce quiz ne sera pas compté.'
+              : activite === 'grammaire'
+                ? 'Cette leçon ne sera pas comptée.'
+                : 'Les réponses de cette session ne seront pas enregistrées.'
+          }
           onAnnuler={() => setConfirmer(false)}
           actions={[
             { libelle: 'Continuer', role: 'annuler', action: () => setConfirmer(false) },

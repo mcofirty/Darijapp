@@ -23,7 +23,7 @@ La version 1 vise un seul profil : un francophone débutant, sans connaissance d
 | Vocabulaire | 1 682 mots et phrases en 31 thèmes (tous avec voix marocaine, explication de prononciation et exemple ; 1 530 importés d'un fichier fourni par l'utilisateur, dont Claude a écrit l'arabe et les exemples), plus tes propres mots | Relecture par un locuteur natif, exemples pour les mots importés |
 | Audio | Synthèse vocale générée par script, remplaçable par tes enregistrements | Dialogues audio |
 | Prononciation | Score sur 100 calculé sur l'appareil, paires de sons proches | Notation de phrases entières |
-| Jeux | Cartes du jour, quiz, parcours, quêtes, séries, niveaux | Leçons de grammaire, dialogues, défis chronométrés |
+| Jeux | Cartes du jour, quiz, parcours, quêtes, séries, niveaux, grammaire orale (6 fiches courtes avec entraînement : négation, possessifs, présent, futur, passé, questions) | Dialogues |
 
 Hors périmètre de la v1 : grammaire détaillée, apprentissage de l'écriture arabe, fonctions sociales (invitations, classements).
 

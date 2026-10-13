@@ -1,4 +1,4 @@
-import { AudioLines, Flag, Languages, Mic, SunMoon } from 'lucide-react'
+import { AudioLines, Flag, Languages, Mic, SunMoon, UserRound } from 'lucide-react'
 import { useState } from 'react'
 import { modifierProfil, type Apparence } from '../../db/db'
 import { useProfil } from '../../db/useProfil'
@@ -16,6 +16,11 @@ const APPARENCES: { id: Apparence; libelle: string }[] = [
   { id: 'sombre', libelle: 'Sombre' },
 ]
 
+const GENRES: { id: 'm' | 'f'; libelle: string }[] = [
+  { id: 'm', libelle: 'Masculin' },
+  { id: 'f', libelle: 'Féminin' },
+]
+
 export function Profil() {
   const profil = useProfil()
   const [signales, setSignales] = useState(false)
@@ -29,6 +34,16 @@ export function Profil() {
         <Ligne tuile={<Tuile icone={SunMoon} couleur="#5856d6" />} titre="Thème" />
         <div className="sans-separateur px-marge pb-marge">
           <Segmente options={APPARENCES} valeur={profil.apparence} onChange={(v) => void modifierProfil({ apparence: v })} />
+        </div>
+      </Section>
+      <Section
+        titre="Moi"
+        arrondi="rounded-segmente"
+        note="Accorde les phrases où tu parles de toi ou où l’on s’adresse à toi : « nta » ou « nti », « mghribi » ou « mghribiya »."
+      >
+        <Ligne tuile={<Tuile icone={UserRound} couleur="#ff9500" />} titre="Genre" />
+        <div className="sans-separateur px-marge pb-marge">
+          <Segmente options={GENRES} valeur={profil.genre ?? 'm'} onChange={(v) => void modifierProfil({ genre: v })} />
         </div>
       </Section>
       <Section titre="Affichage">
