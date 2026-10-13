@@ -7,6 +7,7 @@ import { Ligne, Section, Tuile } from '../../ui/Liste'
 import { useMarques } from '../../db/marques'
 import { Page } from '../../ui/Page'
 import { MotsSignales } from './MotsSignales'
+import { AudioHorsLigne } from './AudioHorsLigne'
 import { RappelEtSauvegarde } from './RappelEtSauvegarde'
 import { ReglageVoix } from './ReglageVoix'
 import { ScorePrecis } from './ScorePrecis'
@@ -108,6 +109,7 @@ export function Profil() {
         )}
         {profil.micro && <ScorePrecis />}
       </Section>
+      <AudioHorsLigne />
       <RappelEtSauvegarde />
       <Section titre="Contenu">
         <Ligne
