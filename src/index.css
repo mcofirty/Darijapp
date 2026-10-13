@@ -520,6 +520,58 @@ body {
   70% { opacity: 1; }
   100% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(1); }
 }
+/* Théière-coffre : elle arrive, verse le thé sur la plante, repart ; la scène s'efface (3,8 s). */
+.arrosage-scene { animation: arrosage-scene 3.8s ease forwards; }
+@keyframes arrosage-scene {
+  0% { opacity: 0; transform: scale(0.85); }
+  8% { opacity: 1; transform: scale(1); }
+  88% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.95); }
+}
+.arrosage-theiere {
+  transform-box: fill-box;
+  transform-origin: 70% 30%;
+  animation: theiere-verse 3.8s ease-in-out forwards;
+}
+@keyframes theiere-verse {
+  0% { transform: translate(90px, -90px) rotate(30deg); }
+  16% { transform: translate(0, 0) rotate(20deg); }
+  27% { transform: translate(0, 0) rotate(0deg); }
+  60% { transform: translate(0, 0) rotate(-4deg); }
+  70% { transform: translate(0, 0) rotate(18deg); }
+  86%, 100% { transform: translate(90px, -90px) rotate(30deg); }
+}
+.arrosage-filet {
+  stroke-dasharray: 140;
+  stroke-dashoffset: 140;
+  opacity: 0;
+  animation: filet-the 3.8s linear forwards;
+}
+@keyframes filet-the {
+  0%, 26% { stroke-dashoffset: 140; opacity: 0; }
+  27% { opacity: 0.9; }
+  34% { stroke-dashoffset: 0; opacity: 0.9; }
+  62% { stroke-dashoffset: 0; opacity: 0.9; }
+  70%, 100% { stroke-dashoffset: -140; opacity: 0; }
+}
+.arrosage-goutte {
+  opacity: 0;
+  transform-box: fill-box;
+  animation: goutte 0.7s ease-out forwards;
+}
+@keyframes goutte {
+  0% { opacity: 1; transform: translate(0, -6px); }
+  100% { opacity: 0; transform: translate(var(--gx, 0px), 10px) scale(0.6); }
+}
+.gain-xp {
+  opacity: 0;
+  animation: gain-xp 3.8s ease forwards;
+}
+@keyframes gain-xp {
+  0%, 40% { opacity: 0; transform: translateY(14px); }
+  52%, 82% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
 @keyframes balancer {
   0%, 100% { transform: rotate(-1.2deg); }
   50% { transform: rotate(1.2deg); }
@@ -538,4 +590,5 @@ body {
   .confetti { display: none; }
   .plante-vivante { animation: none; }
   .plante-pop, .etincelle { animation: none; }
+  .gain-xp { opacity: 1; animation: none; }
 }

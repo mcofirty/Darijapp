@@ -1,10 +1,12 @@
 import { CircleCheck, Circle } from 'lucide-react'
 import { useState } from 'react'
+import { lireXpTotal } from '../../db/apprentissage'
 import { ouvrirCoffre } from '../../db/journal'
 import { useJeu } from '../../db/useJeu'
 import { XP_COFFRE } from '../../gamification/quetes'
 import { Bouton } from '../../ui/Boutons'
 import { Ligne, Section } from '../../ui/Liste'
+import { Arrosage } from './Arrosage'
 
 /** Verre à thé marocain : il se remplit de thé quand la quête est faite. */
 function Verre({ plein }: { plein: boolean }) {
@@ -21,6 +23,7 @@ function Verre({ plein }: { plein: boolean }) {
 export function QuetesDuJour() {
   const { quetes, coffreOuvert } = useJeu()
   const [gagne, setGagne] = useState(0)
+  const [arrosage, setArrosage] = useState<{ xpAvant: number; gain: number } | null>(null)
   if (quetes.length === 0) return null
   const faites = quetes.filter((q) => q.faite).length
   const toutes = faites === quetes.length
@@ -54,7 +57,16 @@ export function QuetesDuJour() {
           {coffreOuvert ? (
             <p className="t-appel font-semibold text-vert">{gagne > 0 ? `+${gagne} XP, bravo !` : 'Théière ouverte aujourd’hui'}</p>
           ) : toutes ? (
-            <Bouton variante="plein" onClick={async () => setGagne(await ouvrirCoffre())}>
+            <Bouton
+              variante="plein"
+              onClick={async () => {
+                // La théière arrose la plante : elle pousse avec l'XP de la théière.
+                const xpAvant = await lireXpTotal()
+                const gain = await ouvrirCoffre()
+                setGagne(gain)
+                if (gain > 0) setArrosage({ xpAvant, gain })
+              }}
+            >
               Ouvrir la théière
             </Bouton>
           ) : (
@@ -62,6 +74,7 @@ export function QuetesDuJour() {
           )}
         </div>
       </div>
+      {arrosage && <Arrosage xpAvant={arrosage.xpAvant} gain={arrosage.gain} onFin={() => setArrosage(null)} />}
     </Section>
   )
 }
