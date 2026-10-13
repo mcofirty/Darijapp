@@ -96,6 +96,7 @@ export function Chrono({ jeu, prochaine, onFermer, onEncore }: Props) {
           avecCombo && points > bonnes ? `, ${points} points avec les combos` : ''
         }`}
         xp={fin.bilan.xp}
+        activite={fin.bilan}
         taux={bonnes + mauvaises > 0 ? bonnes / (bonnes + mauvaises) : undefined}
         lignes={
           <>

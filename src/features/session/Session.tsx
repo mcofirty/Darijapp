@@ -96,6 +96,7 @@ export function Session({ etapes: depart, nouveaux, entrainement, quiz = false, 
         titre={q.justes === q.total ? 'Sans faute !' : 'Quiz terminé'}
         sousTitre={`${q.justes} bonne${q.justes > 1 ? 's' : ''} réponse${q.justes > 1 ? 's' : ''} sur ${q.total}`}
         xp={bilan.xp}
+        activite={bilan}
         taux={q.total > 0 ? q.justes / q.total : 1}
         libelleEncore="Nouveau quiz"
         onFermer={onFermer}
@@ -110,6 +111,7 @@ export function Session({ etapes: depart, nouveaux, entrainement, quiz = false, 
             : 'Révision terminée'
         }
         xp={bilan.xp}
+        activite={bilan}
         taux={r.taux}
         libelleEncore="Encore une session"
         onFermer={onFermer}

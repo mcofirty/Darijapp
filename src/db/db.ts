@@ -30,6 +30,13 @@ export interface Profil {
   couleur: string
   zellige: string
   pot: string
+  /** Jardin (« Mon jardin ») : espèce de la plante, fond, objets affichés autour du pot. */
+  espece: string
+  fond: string
+  objets: string[]
+  /** Sons de réponse et confettis du bilan, choisis au souk. */
+  sons: string
+  confettis: string
   /** Dis-le avec le micro et un score ; sinon, auto-évaluation (mode sans micro). */
   micro: boolean
   /** Distances de mots bien dits par l'utilisateur, pour régler le score sur sa voix. */
@@ -119,6 +126,11 @@ export const PROFIL_DEFAUT: Profil = {
   couleur: 'drapeau',
   zellige: 'aucun',
   pot: 'terre',
+  espece: 'menthe',
+  fond: 'ciel',
+  objets: [],
+  sons: 'classique',
+  confettis: 'papiers',
   micro: true,
   reglageVoix: [],
 }

@@ -120,6 +120,8 @@ Répétition espacée : chaque mot a un intervalle de révision (algorithme type
 Mécaniques de motivation :
 
 - niveaux nommés comme les étapes d'une plante (Terreau, Graine, Germe, Pousse, Tige, Feuilles, Bouton, Fleur, Fruit, Arbre), avec une mascotte pot de fleurs ; progression proposée : 120 XP pour le niveau 1, 140 pour le niveau 2, puis 20 XP de plus par niveau ;
+- « Mon jardin » : en touchant la barre de niveau, la plante en grand, qui grandit avec chaque XP, dans le décor choisi ;
+- dirhams : 1 par bonne réponse et un bonus de précision par activité (10 sans faute, 5 avec une erreur, 2 avec deux) ; ils s'échangent au souk contre du décor seulement : plantes, fonds et objets du jardin, pots, couleurs de l'appli, sons des réponses, confettis, zelliges ;
 - 3 quêtes du jour, renouvelées à minuit : écouter 5 mots, terminer une session de cartes, réussir une session ou un quiz sans faute ; une quête de prononciation peut s'y ajouter (3 mots notés 80 ou plus) ;
 - coffre du jour : les 3 quêtes terminées rapportent +60 XP ;
 - série de jours consécutifs avec calendrier de la semaine et mention « Série sécurisée pour aujourd'hui » ; une journée manquée par semaine ne casse pas la série ;

@@ -1,7 +1,7 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import { achatPossible, article, dirhamsGagnes, solde, type Categorie } from '../gamification/souk'
 import { dateLocale } from '../srs/dates'
-import { db, modifierProfil, type Achat, type DarijaDB } from './db'
+import { db, lireProfil, modifierProfil, type Achat, type DarijaDB } from './db'
 
 /** Dirhams gagnés depuis le début, recalculés à partir des activités, théières et trésors. */
 async function gagnes(base: DarijaDB): Promise<number> {
@@ -10,7 +10,7 @@ async function gagnes(base: DarijaDB): Promise<number> {
     base.journal.filter((j) => j.coffre).count(),
     base.bonus.filter((b) => b.raison === 'tresor').count(),
   ])
-  return dirhamsGagnes({ bonnes: sessions.reduce((t, s) => t + s.bonnes, 0), theieres, tresors })
+  return dirhamsGagnes({ activites: sessions, theieres, tresors })
 }
 
 export interface PorteMonnaie {
@@ -41,7 +41,10 @@ export async function acheter(id: string, base: DarijaDB = db): Promise<string |
   return erreur
 }
 
-/** Met en place un article possédé (couleur, zellige ou pot). */
+/** Met en place un article possédé ; un objet du jardin s'affiche, ou se range s'il était déjà affiché. */
 export async function choisir(categorie: Categorie, id: string, base: DarijaDB = db): Promise<void> {
-  await modifierProfil({ [categorie]: id }, base)
+  if (categorie === 'objet') {
+    const { objets } = await lireProfil(base)
+    await modifierProfil({ objets: objets.includes(id) ? objets.filter((o) => o !== id) : [...objets, id] }, base)
+  } else await modifierProfil({ [categorie]: id }, base)
 }

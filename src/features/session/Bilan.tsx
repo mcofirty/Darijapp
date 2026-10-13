@@ -1,6 +1,8 @@
-import { Flame, Sparkles, Target } from 'lucide-react'
+import { Coins, Flame, Sparkles, Target } from 'lucide-react'
 import type { ReactNode } from 'react'
+import { useProfil } from '../../db/useProfil'
 import { useResume } from '../../db/useResume'
+import { bonusPrecision, dirhamsDActivite } from '../../gamification/souk'
 import { Bouton } from '../../ui/Boutons'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
 
@@ -10,6 +12,8 @@ interface Props {
   xp: number
   /** Taux de réussite, de 0 à 1 ; absent quand il n'a pas de sens (Quiz express). */
   taux?: number
+  /** Bonnes réponses et erreurs de l'activité, pour les dirhams gagnés. */
+  activite?: { bonnes: number; mauvaises: number }
   /** Lignes ajoutées en tête du bilan (score, record…). */
   lignes?: ReactNode
   libelleEncore: string
@@ -17,21 +21,30 @@ interface Props {
   onEncore: () => void
 }
 
-const COULEURS = ['#ff9500', '#ffcc00', '#34c759', '#007aff', '#ff2d55']
+/** Couleurs des confettis choisis au souk. */
+const CONFETTIS: Record<string, { couleurs: string[]; classe: string }> = {
+  papiers: { couleurs: ['#ff9500', '#ffcc00', '#34c759', '#007aff', '#ff2d55'], classe: '' },
+  petales: { couleurs: ['#e2445c', '#f06b84', '#c2185b', '#ff9fb2'], classe: 'petale' },
+  etoiles: { couleurs: ['#ffcc00', '#f2c14e', '#ffd966', '#e0a800'], classe: 'etoile' },
+}
 
 /** Écran de fin de session, de quiz ou de Quiz express, avec confettis. */
-export function Bilan({ titre, sousTitre, xp, taux, lignes, libelleEncore, onFermer, onEncore }: Props) {
+export function Bilan({ titre, sousTitre, xp, taux, activite, lignes, libelleEncore, onFermer, onEncore }: Props) {
   const { serie } = useResume()
+  const { confettis } = useProfil()
+  const style = CONFETTIS[confettis] ?? CONFETTIS.papiers
+  const dirhams = activite ? dirhamsDActivite(activite) : 0
+  const bonus = activite && activite.bonnes > 0 ? bonusPrecision(activite.mauvaises) : 0
   return (
     <div data-sans-balayage className="fixed inset-0 z-30 overflow-y-auto bg-fond">
       <div aria-hidden className="pointer-events-none fixed inset-0">
         {Array.from({ length: 36 }, (_, i) => (
           <span
             key={i}
-            className="confetti"
+            className={`confetti ${style.classe}`}
             style={{
               left: `${(i * 37) % 100}%`,
-              background: COULEURS[i % COULEURS.length],
+              background: style.couleurs[i % style.couleurs.length],
               animationDelay: `${(i % 9) * 0.12}s`,
               animationDuration: `${2.2 + (i % 5) * 0.3}s`,
             }}
@@ -44,6 +57,18 @@ export function Bilan({ titre, sousTitre, xp, taux, lignes, libelleEncore, onFer
         <Section>
           {lignes}
           <Ligne tuile={<Tuile icone={Sparkles} couleur="#af52de" />} titre="XP gagnés" valeur={`+${xp}`} />
+          {activite && (
+            <Ligne
+              tuile={<Tuile icone={Coins} couleur="#ffcc00" />}
+              titre="Dirhams gagnés"
+              sousTitre={
+                bonus > 0
+                  ? `dont +${bonus} DH de précision (${activite.mauvaises === 0 ? 'sans faute' : `${activite.mauvaises} erreur${activite.mauvaises > 1 ? 's' : ''}`})`
+                  : 'Moins d’erreurs, plus de dirhams'
+              }
+              valeur={`+${dirhams} DH`}
+            />
+          )}
           {taux !== undefined && (
             <Ligne tuile={<Tuile icone={Target} couleur="#34c759" />} titre="Réussite" valeur={`${Math.round(taux * 100)} %`} />
           )}

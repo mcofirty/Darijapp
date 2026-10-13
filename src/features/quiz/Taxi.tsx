@@ -80,6 +80,7 @@ export function Taxi({ onFermer, onEncore }: Props) {
         titre="Courses terminées"
         sousTitre={`${bonnes} bonne${bonnes > 1 ? 's' : ''} direction${bonnes > 1 ? 's' : ''} sur ${bonnes + mauvaises}`}
         xp={bilan.xp}
+        activite={bilan}
         taux={bonnes / Math.max(1, bonnes + mauvaises)}
         libelleEncore="Nouvelle course"
         onFermer={onFermer}

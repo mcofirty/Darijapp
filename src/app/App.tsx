@@ -4,6 +4,7 @@ import { motDuLien } from '../data/motsPerso'
 import { AjoutMots } from '../features/ajout/AjoutMots'
 import { Proposition } from '../features/ajout/Proposition'
 import { EssaiVoix } from '../features/voix/EssaiVoix'
+import { choisirSons } from '../audio/effets'
 import { Apprendre } from '../features/apprendre/Apprendre'
 import { AideInstallation } from '../features/onboarding/AideInstallation'
 import { Parcours } from '../features/parcours/Parcours'
@@ -39,8 +40,9 @@ export default function App() {
   const [onglet, setOnglet] = useState<Onglet>('apprendre')
   const [entree, setEntree] = useState<'entree-droite' | 'entree-gauche' | ''>('')
   const depart = useRef<Toucher | null>(null)
-  const { apparence, couleur } = useProfil()
+  const { apparence, couleur, sons } = useProfil()
   useEffect(() => appliquerCouleur(couleur), [couleur])
+  useEffect(() => choisirSons(sons), [sons])
 
   useEffect(() => {
     appliquerApparence(apparence)

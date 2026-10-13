@@ -19,6 +19,8 @@ import { ModeEcoute } from '../ecoute/ModeEcoute'
 import { Plante } from '../jeu/Plante'
 import { QuetesDuJour } from '../jeu/QuetesDuJour'
 import { Souk } from '../jeu/Souk'
+import { MonJardin } from '../jeu/MonJardin'
+import { croissance } from '../../gamification/jardin'
 import { usePorteMonnaie } from '../../db/souk'
 import { useProfil } from '../../db/useProfil'
 import { FicheMot } from '../mots/FicheMot'
@@ -35,7 +37,8 @@ type Vue =
   | { type: 'ecoute' }
   | { type: 'favoris' }
   | { type: 'difficiles' }
-  | { type: 'souk' }
+  | { type: 'souk'; depuisJardin?: boolean }
+  | { type: 'jardin' }
   | { type: 'theme'; themeId: string }
 
 /** Une révision de favoris ou de mots difficiles reprend 8 mots au hasard. */
@@ -63,7 +66,7 @@ export function Apprendre() {
   const { niveau, xpTotal } = useResume()
   const MOTS = useMots()
   const { solde } = usePorteMonnaie()
-  const { pot } = useProfil()
+  const { pot, espece } = useProfil()
   const marques = useMarques()
   const progressions = useLiveQuery(() => db.progression.toArray(), []) ?? []
   const favoris = MOTS.filter((m) => marques.get(m.id)?.favori)
@@ -102,7 +105,23 @@ export function Apprendre() {
 
   if (vue.type === 'sons') return <GuideSons onRetour={() => setVue({ type: 'accueil' })} />
   if (vue.type === 'ecoute') return <ModeEcoute onRetour={() => setVue({ type: 'accueil' })} />
-  if (vue.type === 'souk') return <Souk onRetour={() => setVue({ type: 'accueil' })} />
+  if (vue.type === 'souk')
+    return (
+      <Souk
+        retour={
+          vue.depuisJardin
+            ? { libelle: 'Mon jardin', action: () => ouvrir({ type: 'jardin' }) }
+            : { libelle: 'Apprendre', action: () => setVue({ type: 'accueil' }) }
+        }
+      />
+    )
+  if (vue.type === 'jardin')
+    return (
+      <MonJardin
+        retour={{ libelle: 'Apprendre', action: () => setVue({ type: 'accueil' }) }}
+        onSouk={() => ouvrir({ type: 'souk', depuisJardin: true })}
+      />
+    )
   if (vue.type === 'favoris')
     return (
       <ListeSpeciale
@@ -131,7 +150,7 @@ export function Apprendre() {
 
       <Section titre="Ma progression">
         <Ligne
-          tuile={<Plante niveau={niveau.niveau} pot={pot} />}
+          tuile={<Plante stade={croissance(xpTotal).stade} avancement={croissance(xpTotal).avancement} espece={espece} pot={pot} taille={48} />}
           titre={
             <span className="block">
               <span className="flex items-baseline justify-between">
@@ -147,7 +166,9 @@ export function Apprendre() {
               </span>
             </span>
           }
-          sousTitre={`${xpTotal} XP au total`}
+          sousTitre={`${xpTotal} XP au total · Mon jardin`}
+          chevron
+          onClick={() => ouvrir({ type: 'jardin' })}
         />
         <Ligne
           tuile={<Tuile icone={Coins} couleur="#ffcc00" />}

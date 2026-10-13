@@ -6,6 +6,8 @@ import { useResume } from '../../db/useResume'
 import { Segmente } from '../../ui/Boutons'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
+import { MonJardin } from '../jeu/MonJardin'
+import { Souk } from '../jeu/Souk'
 import { Badges, Collection, Semaine } from '../jeu/Tableau'
 import { QuetesDuJour } from '../jeu/QuetesDuJour'
 import { FicheMot } from '../mots/FicheMot'
@@ -14,10 +16,13 @@ import { Dictionnaire } from './Dictionnaire'
 export function Progres() {
   const [vue, setVue] = useState<'tableau' | 'dictionnaire'>('tableau')
   const [mot, setMot] = useState<Mot | null>(null)
+  const [jardin, setJardin] = useState<'jardin' | 'souk' | null>(null)
   const { niveau, xpTotal, xpAujourdhui, sessionsAujourdhui, motsVus } = useResume()
   const MOTS = useMots()
 
   if (mot) return <FicheMot mot={mot} retour={{ libelle: 'Progrès', action: () => setMot(null) }} />
+  if (jardin === 'jardin') return <MonJardin retour={{ libelle: 'Progrès', action: () => setJardin(null) }} onSouk={() => setJardin('souk')} />
+  if (jardin === 'souk') return <Souk retour={{ libelle: 'Mon jardin', action: () => setJardin('jardin') }} />
 
   return (
     <Page titre="Progrès">
@@ -53,6 +58,12 @@ export function Progres() {
                   </span>
                 </span>
               }
+              sousTitre="Voir ma plante dans Mon jardin"
+              chevron
+              onClick={() => {
+                setJardin('jardin')
+                window.scrollTo(0, 0)
+              }}
             />
             <Ligne tuile={<Tuile icone={Trophy} couleur="#ffcc00" />} titre="XP au total" valeur={xpTotal} />
           </Section>
