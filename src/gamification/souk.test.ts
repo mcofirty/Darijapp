@@ -51,6 +51,12 @@ describe('souk', () => {
     }
   })
 
+  it('au moins 5 animaux, tous des objets du jardin', () => {
+    const animaux = ARTICLES.filter((a) => a.animal)
+    expect(animaux.length).toBeGreaterThanOrEqual(5)
+    expect(animaux.every((a) => a.categorie === 'objet')).toBe(true)
+  })
+
   it('identifiants uniques', () => {
     expect(new Set(ARTICLES.map((a) => a.id)).size).toBe(ARTICLES.length)
   })

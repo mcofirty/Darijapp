@@ -42,6 +42,8 @@ export interface Article {
   prix: number
   /** Couleur d'aperçu dans le souk. */
   apercu: string
+  /** Objet du jardin qui est un animal : rangé au rayon « Animaux ». */
+  animal?: boolean
 }
 
 /** Articles gratuits, possédés d'office : les réglages de départ. */
@@ -95,10 +97,15 @@ export const ARTICLES: Article[] = [
   { id: 'nuitetoilee', categorie: 'fond', nom: 'Nuit étoilée', description: 'La lune et les étoiles au-dessus du jardin', prix: 400, apercu: '#1b2550' },
   { id: 'lanterne', categorie: 'objet', nom: 'Lanterne', description: 'Fanous en cuivre ajouré', prix: 100, apercu: '#d4a017' },
   { id: 'theiere', categorie: 'objet', nom: 'Théière', description: 'Le thé à la menthe, à côté du pot', prix: 120, apercu: '#c0c0c8' },
-  { id: 'cigogne', categorie: 'objet', nom: 'Cigogne', description: 'Celle des remparts de Rabat', prix: 200, apercu: '#f2f2f2' },
+  { id: 'cigogne', categorie: 'objet', nom: 'Cigogne', description: 'Celle des remparts de Rabat', prix: 200, apercu: '#f2f2f2', animal: true },
   { id: 'tapis', categorie: 'objet', nom: 'Tapis berbère', description: 'Sous le pot, losanges rouges', prix: 150, apercu: '#b3262e' },
   { id: 'tajine', categorie: 'objet', nom: 'Tajine', description: 'Le plat au couvercle pointu, devant le pot', prix: 100, apercu: '#b65a2c' },
-  { id: 'chat', categorie: 'objet', nom: 'Chat de la médina', description: 'Il fait la sieste à côté de ta plante', prix: 180, apercu: '#e09a4a' },
+  { id: 'chat', categorie: 'objet', nom: 'Chat de la médina', description: 'Il fait la sieste à côté de ta plante', prix: 180, apercu: '#e09a4a', animal: true },
+  { id: 'tortue', categorie: 'objet', nom: 'Tortue grecque', description: 'Elle traverse le jardin, sans se presser', prix: 120, apercu: '#7a8a3a', animal: true },
+  { id: 'poule', categorie: 'objet', nom: 'Poule beldi', description: 'La poule de la ferme, qui picore', prix: 100, apercu: '#a0522d', animal: true },
+  { id: 'moineaux', categorie: 'objet', nom: 'Moineaux', description: 'Deux oiseaux qui passent dans le ciel', prix: 100, apercu: '#8a6a4a', animal: true },
+  { id: 'fennec', categorie: 'objet', nom: 'Fennec', description: 'Le petit renard du désert aux grandes oreilles', prix: 250, apercu: '#e8b77a', animal: true },
+  { id: 'dromadaire', categorie: 'objet', nom: 'Dromadaire', description: 'Au loin, il passe tranquillement', prix: 300, apercu: '#c8955a', animal: true },
   { id: 'classique', categorie: 'sons', nom: 'Sons classiques', description: 'Deux notes douces, ou une note grave', prix: 0, apercu: '#8e8e93' },
   { id: 'qraqeb', categorie: 'sons', nom: 'Qraqeb', description: 'Les castagnettes de fer des Gnaoua', prix: 150, apercu: '#5f5f6b' },
   { id: 'darbouka', categorie: 'sons', nom: 'Darbouka', description: 'Le « doum » et le « tek » du tambour', prix: 150, apercu: '#a0662b' },

@@ -654,8 +654,73 @@ function Fond({ id }: { id: string }) {
   )
 }
 
-/** Objets posés autour du pot. */
+/** Ordre de dessin des objets et animaux, du fond vers l'avant. */
+const PROFONDEUR = ['moineaux', 'dromadaire', 'cigogne', 'lanterne', 'fennec', 'tapis', 'theiere', 'chat', 'tajine', 'poule', 'tortue']
+
+/** Objets et animaux posés autour du pot. */
 function Objet({ id }: { id: string }) {
+  if (id === 'moineaux')
+    return (
+      <g fill="#6b4f36">
+        {[
+          [34, 52, 1],
+          [66, 40, 0.8],
+        ].map(([x, y, k], i) => (
+          <g key={i} transform={`translate(${x} ${y}) scale(${k})`}>
+            <path d="M-9 -2 q5 -6 9 0 q4 -6 9 0 q-4 -1 -9 3 q-5 -4 -9 -3z" />
+            <circle cx="0" cy="1" r="2.2" />
+          </g>
+        ))}
+      </g>
+    )
+  if (id === 'dromadaire')
+    return (
+      <g transform="translate(6 208) scale(0.45)" fill="#c8955a" opacity="0.9">
+        <path d="M10 30 q4 -22 20 -22 q8 -14 18 0 q10 0 12 14 h6 q2 -14 10 -18 l3 4 q-6 6 -6 18 q-2 8 -8 8 h-50z" />
+        {[16, 24, 50, 58].map((x) => (
+          <rect key={x} x={x} y="36" width="3.4" height="24" rx="1.5" />
+        ))}
+        <circle cx="76" cy="16" r="1" fill="#3a2a1a" />
+      </g>
+    )
+  if (id === 'fennec')
+    return (
+      <g transform="translate(52 214)">
+        <path d="M6 30 q-10 -2 -6 -12 q4 6 10 6z" fill="#e8b77a" />
+        <ellipse cx="22" cy="28" rx="13" ry="9" fill="#e8b77a" />
+        <circle cx="30" cy="16" r="7" fill="#efc48c" />
+        <path d="M24 12 l-4 -14 l8 9z M34 11 l6 -13 l-1 12z" fill="#efc48c" />
+        <path d="M25 9 l-3 -8 l5 6z M34 9 l4 -8 l-1 7z" fill="#f5a7a0" />
+        <circle cx="28" cy="16" r="1" fill="#2a1a0a" />
+        <circle cx="33" cy="16" r="1" fill="#2a1a0a" />
+        <circle cx="31" cy="20" r="1.2" fill="#2a1a0a" />
+      </g>
+    )
+  if (id === 'poule')
+    return (
+      <g transform="translate(316 252)">
+        <path d="M2 14 q-6 -10 2 -16 q2 6 8 6z" fill="#7a3a1a" />
+        <ellipse cx="16" cy="16" rx="12" ry="9" fill="#a0522d" />
+        <circle cx="26" cy="7" r="5" fill="#a0522d" />
+        <path d="M24 2 q2 -4 4 0 q2 -3 3 1z" fill="#e0282e" />
+        <path d="M31 8 l4 1.5 l-4 1.5z" fill="#f2a900" />
+        <path d="M29 11 q1 3 -1 4" fill="#e0282e" />
+        <circle cx="27.5" cy="6.5" r="0.8" fill="#1c1c1e" />
+        <path d="M13 24 v6 M19 24 v6" stroke="#f2a900" strokeWidth="1.4" />
+      </g>
+    )
+  if (id === 'tortue')
+    return (
+      <g transform="translate(104 266)">
+        <ellipse cx="34" cy="10" rx="5" ry="3.6" fill="#9aa64a" />
+        <circle cx="35.5" cy="9" r="0.7" fill="#1c1c1e" />
+        {[6, 22].map((x) => (
+          <ellipse key={x} cx={x} cy="14" rx="3" ry="2.2" fill="#9aa64a" />
+        ))}
+        <path d="M2 13 q12 -18 28 0z" fill="#7a6a2a" />
+        <path d="M8 12 l4 -6 l6 0 l4 6 M12 6 l3 -3 l3 3" stroke="#c8b46a" strokeWidth="0.9" fill="none" />
+      </g>
+    )
   if (id === 'lanterne')
     return (
       <g transform="translate(96 186)">
@@ -752,9 +817,12 @@ export function Jardin({
   return (
     <svg viewBox="0 0 360 300" className="block h-auto w-full" role="img" aria-label={`Ton jardin : plante au stade ${stade} sur 10`}>
       <Fond id={fond} />
-      {objets.map((o) => (
-        <Objet key={o} id={o} />
-      ))}
+      {/* Du plus loin au plus proche : le dromadaire et les moineaux derrière, la tortue devant. */}
+      {[...objets]
+        .sort((a, b) => PROFONDEUR.indexOf(a) - PROFONDEUR.indexOf(b))
+        .map((o) => (
+          <Objet key={o} id={o} />
+        ))}
       {/* La plante, 2,1 fois sa taille : le bas du pot touche le sol. */}
       <g transform="translate(75 10) scale(2.1)">
         <PlanteDessin stade={stade} avancement={avancement} espece={espece} vivante pop={pop} />

@@ -1,4 +1,4 @@
-import { Check, Coins, Eye, EyeOff, Lamp, Bird, Cat, CupSoda, Soup, Volume2, PartyPopper, RectangleHorizontal } from 'lucide-react'
+import { Check, Coins, Egg, Eye, EyeOff, Lamp, Bird, Cat, CupSoda, PawPrint, Soup, Turtle, Volume2, PartyPopper, RectangleHorizontal } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { apercuSons } from '../../audio/effets'
@@ -16,10 +16,11 @@ import { Plante, motifZellige } from './Plante'
 
 type Allee = 'jardin' | 'appli'
 
-const RAYONS: { allee: Allee; categorie: Categorie; titre: string; note: string }[] = [
+const RAYONS: { allee: Allee; categorie: Categorie; titre: string; note: string; animaux?: boolean }[] = [
   { allee: 'jardin', categorie: 'espece', titre: 'Plantes', note: 'Ta plante garde ses progrès : elle change d’espèce, pas de taille.' },
   { allee: 'jardin', categorie: 'fond', titre: 'Décors', note: 'Le fond de « Mon jardin ».' },
   { allee: 'jardin', categorie: 'objet', titre: 'Objets', note: 'Autour du pot. Touche un objet à toi pour l’afficher ou le ranger.' },
+  { allee: 'jardin', categorie: 'objet', titre: 'Animaux', note: 'Ils viennent habiter ton jardin. Touche un animal à toi pour l’afficher ou le ranger.', animaux: true },
   { allee: 'jardin', categorie: 'pot', titre: 'Pots', note: 'Ta plante pousse avec ton niveau, de Terreau à Arbre.' },
   { allee: 'appli', categorie: 'couleur', titre: 'Couleurs de l’appli', note: 'Remplace le rouge des boutons et des accents. Les erreurs restent en rouge.' },
   { allee: 'appli', categorie: 'sons', titre: 'Sons des réponses', note: 'Touche un jeu de sons pour l’écouter.' },
@@ -27,7 +28,7 @@ const RAYONS: { allee: Allee; categorie: Categorie; titre: string; note: string 
   { allee: 'appli', categorie: 'zellige', titre: 'Zellige de la carte du jour', note: 'Un motif en haut de la carte « Session du jour ».' },
 ]
 
-const ICONES_OBJETS: Record<string, typeof Lamp> = { lanterne: Lamp, theiere: CupSoda, cigogne: Bird, tapis: RectangleHorizontal, tajine: Soup, chat: Cat }
+const ICONES_OBJETS: Record<string, typeof Lamp> = { lanterne: Lamp, theiere: CupSoda, cigogne: Bird, tapis: RectangleHorizontal, tajine: Soup, chat: Cat, tortue: Turtle, poule: Egg, moineaux: Bird, fennec: PawPrint, dromadaire: PawPrint }
 
 function Apercu({ a, stade, espece, pot }: { a: Article; stade: number; espece: string; pot: string }) {
   // Les plantes et les pots se montrent au stade Fleur (ou plus, si la plante y est déjà).
@@ -145,8 +146,8 @@ export function Souk({ retour }: { retour: { libelle: string; action: () => void
       </div>
 
       {RAYONS.filter((r) => r.allee === allee).map((r) => (
-        <Section key={r.categorie} titre={r.titre} note={r.note}>
-          {ARTICLES.filter((a) => a.categorie === r.categorie).map((a) => {
+        <Section key={r.titre} titre={r.titre} note={r.note}>
+          {ARTICLES.filter((a) => a.categorie === r.categorie && !!a.animal === !!r.animaux).map((a) => {
             const choisi = a.categorie === 'objet' ? profil.objets.includes(a.id) : profil[a.categorie] === a.id
             const aMoi = possede(a.id, achats)
             return (
