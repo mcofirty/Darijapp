@@ -1,0 +1,50 @@
+# Prépare le modèle de reconnaissance des sons (score précis, expérimental) et l'enregistre dans le repo.
+# Se déclenche quand le script change, ou à la main depuis l'onglet Actions.
+name: Modèle
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/modele/**'
+      - '.github/workflows/modele.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: modele
+  cancel-in-progress: true
+
+jobs:
+  modele:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installer ffmpeg et les dépendances
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          pip install -q torch==2.4.1 --index-url https://download.pytorch.org/whl/cpu
+          pip install -q allosaurus==1.0.2 onnx==1.16.2 onnxruntime==1.19.2 "numpy<2"
+
+      - name: Exporter et évaluer le modèle
+        run: python scripts/modele/exporter.py
+
+      - name: Enregistrer le modèle dans le repo
+        run: |
+          if [ -n "$(git status --porcelain public/modele src/scoring/sons)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add public/modele src/scoring/sons
+            git commit -m "feat: modèle de reconnaissance des sons (Allosaurus en ONNX)"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
