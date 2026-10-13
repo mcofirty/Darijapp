@@ -29,6 +29,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      # ffmpeg décode les MP3 pour le test de calibrage du score de prononciation.
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends ffmpeg
       - run: npm test
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3

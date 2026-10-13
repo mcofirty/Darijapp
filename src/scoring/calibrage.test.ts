@@ -1,6 +1,6 @@
 import { execFileSync } from 'node:child_process'
 import { existsSync, readFileSync } from 'node:fs'
-import { describe, expect, it } from 'vitest'
+import { beforeAll, describe, expect, it } from 'vitest'
 import { reechantillonner } from './mfcc'
 import { distanceEssai, empreinte, scoreDeDistance } from './score'
 
@@ -41,8 +41,13 @@ function decoder(id: string, filtre: string): Float32Array {
 }
 
 describe.skipIf(!ffmpeg || !presents)('calibrage sur la voix de Jamal', () => {
-  const signaux = new Map<string, Float32Array>(mots.flatMap((m) => Object.entries(RENDUS).map(([r, f]) => [`${m.id}:${r}`, decoder(m.id, f)] as const)))
-  const references = new Map(mots.map((m) => [m.id, empreinte(signaux.get(`${m.id}:original`)!)]))
+  // Décodé dans beforeAll : le corps d'un describe sauté est quand même exécuté à la collecte.
+  const signaux = new Map<string, Float32Array>()
+  const references = new Map<string, ReturnType<typeof empreinte>>()
+  beforeAll(() => {
+    for (const m of mots) for (const [r, f] of Object.entries(RENDUS)) signaux.set(`${m.id}:${r}`, decoder(m.id, f))
+    for (const m of mots) references.set(m.id, empreinte(signaux.get(`${m.id}:original`)!))
+  }, 120000)
   const score = (ref: string, essai: string) => scoreDeDistance(distanceEssai(references.get(ref)!, signaux.get(essai)!)!)
 
   it.each(mots.map((m) => m.id))('%s : un autre rendu du même mot dépasse 80', (id) => {
