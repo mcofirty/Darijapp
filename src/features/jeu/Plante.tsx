@@ -350,31 +350,47 @@ function hauteur(stade: number, croissance: number): number {
   return 6 + (stade - 3 + croissance) * 8.5
 }
 
-/** Terreau : terre sèche et fissurée, puis arrosée, puis creusée pour la graine. */
+/** Hauteur du dessus de la terre bombée au point x (courbe de `Terre`, de x = 27 à 73). */
+function surface(x: number): number {
+  const u = Math.min(1, Math.max(0, (x - 27) / 46))
+  return SOL - 2.5 - 12 * u * (1 - u)
+}
+
+/** Fissure qui suit la terre de x1 à x2, juste sous sa surface. */
+function fissure(x1: number, x2: number, pas = 2.2): string {
+  let d = `M${x1} ${surface(x1) + 1}`
+  for (let x = x1 + pas, k = 0; x <= x2 + 0.01; x += pas, k++) d += ` L${x.toFixed(1)} ${(surface(x) + (k % 2 ? 0.9 : 1.6)).toFixed(2)}`
+  return d
+}
+
+/**
+ * Terreau : terre sèche et fissurée, puis arrosée, puis creusée pour la graine.
+ * Dessiné à l'échelle de la terre bombée (pas agrandi) pour que tout reste dans la terre.
+ */
 function Terreau({ palier, t }: { palier: number; t: number }) {
   if (palier === 1)
     return (
-      <g stroke="#6e4e33" strokeWidth="0.5" fill="none" strokeLinecap="round">
-        <path d="M38 88 l4 -0.6 l2 0.8 l3 -0.5" />
-        <path d="M53 87.6 l3 0.7 l2 -0.6 l4 0.5" />
-        <path d="M46 89.2 l2 -0.5 l3 0.4" />
+      <g stroke="#6e4e33" strokeWidth="0.6" fill="none" strokeLinecap="round" strokeLinejoin="round">
+        <path d={fissure(33, 41.8)} />
+        <path d={fissure(46, 52.6)} />
+        <path d={fissure(56.6, 66)} />
       </g>
     )
   if (palier === 2)
     return (
       <g>
         {/* Terre mouillée qui brille, et les dernières gouttes. */}
-        <ellipse cx="46" cy={SOL - 0.6} rx="7" ry="1" fill="#fff" opacity="0.18" />
+        <ellipse cx="46" cy={surface(46) + 1.2} rx="9" ry="1.1" fill="#fff" opacity="0.18" />
         {[0, 1, 2].map((i) => (
-          <path key={i} d={`M${44 + i * 6} ${SOL - 14 + ((t * 30 + i * 7) % 10)} q-1.4 2.4 0 3.2 q1.4 -0.8 0 -3.2z`} fill="#7cc3f0" opacity="0.85" />
+          <path key={i} d={`M${42 + i * 8} ${SOL - 26 + ((t * 30 + i * 7) % 14)} q-2 3.6 0 4.8 q2 -1.2 0 -4.8z`} fill="#7cc3f0" opacity="0.85" />
         ))}
       </g>
     )
   return (
     <g>
       {/* Un petit trou creusé au doigt, la terre repoussée sur le côté. */}
-      <ellipse cx="50" cy={SOL - 0.3} rx={2.6 + t} ry="1.1" fill="#2e1a0d" />
-      <path d={`M${45 - t} ${SOL - 0.6} q2 -1.6 3.4 -0.4`} stroke="#7a5232" strokeWidth="1.2" fill="none" strokeLinecap="round" />
+      <ellipse cx="50" cy={surface(50) + 1} rx={4 + t * 1.6} ry="1.1" fill="#2e1a0d" />
+      <path d={`M${39.5 - t * 1.6} ${surface(40) + 0.8} q2.8 ${-2.6 - t} 5.6 0z`} fill="#6b4226" />
     </g>
   )
 }
@@ -384,20 +400,20 @@ function Graine({ palier, t, e }: { palier: number; t: number; e: Espece }) {
   if (palier === 1)
     return (
       <g>
-        <ellipse cx="50" cy={SOL - 2.4} rx="3.4" ry="2.2" fill="#8b5a2b" transform={`rotate(-15 50 ${SOL - 2.4})`} />
-        <ellipse cx="49" cy={SOL - 3.2} rx="1.2" ry="0.6" fill="#fff" opacity="0.4" />
+        <ellipse cx="50" cy={SOL - 1.8} rx="3.4" ry="2.2" fill="#8b5a2b" transform={`rotate(-15 50 ${SOL - 1.8})`} />
+        <ellipse cx="49" cy={SOL - 2.6} rx="1.2" ry="0.6" fill="#fff" opacity="0.4" />
       </g>
     )
   if (palier === 2)
     return (
       <g>
-        <ellipse cx="50" cy={SOL - 1.2} rx={5 + t} ry={2.4 + t * 0.6} fill="#5a371f" />
+        <Bosse demi={5.5 + t} haut={6.8 + t} />
         <ellipse cx="51" cy={SOL - 2.2} rx="2.6" ry="1.6" fill="#8b5a2b" />
       </g>
     )
   return (
     <g>
-      <ellipse cx="50" cy={SOL - 1.2} rx="6" ry="2.6" fill="#5a371f" />
+      <Bosse demi={6.5} haut={7.6} />
       {/* Les deux moitiés de la graine s'écartent : une racine blanche descend, une pointe verte monte. */}
       <ellipse cx="48.3" cy={SOL - 2.2} rx="2.2" ry="1.6" fill="#8b5a2b" transform={`rotate(-20 48.3 ${SOL - 2.2})`} />
       <ellipse cx="52" cy={SOL - 2.2} rx="2.2" ry="1.6" fill="#8b5a2b" transform={`rotate(25 52 ${SOL - 2.2})`} />
@@ -407,20 +423,30 @@ function Graine({ palier, t, e }: { palier: number; t: number; e: Espece }) {
   )
 }
 
+/**
+ * Terre soulevée (graine enfouie, germe). Sa base descend sous la surface (même couleur que la terre, cachée
+ * par le rebord du pot) : posée à plat sur la terre bombée, elle laissait voir le ciel sur les côtés.
+ */
+function Bosse({ demi = 7, haut }: { demi?: number; haut: number }) {
+  // Les bords partent un peu sous la surface (SOL + 0,6), là où la terre bombée les recouvre.
+  return <path d={`M${50 - demi} ${SOL + 4} V${SOL + 0.6} q${demi} ${-haut} ${demi * 2} 0 V${SOL + 4}z`} fill="#5a371f" />
+}
+
 /** Germe, avant ses feuilles : la terre se soulève et se fend, puis une crosse sort, tête en bas. */
 function Emergence({ palier, t, e }: { palier: number; t: number; e: Espece }) {
   if (palier === 1)
     return (
       <g>
-        <path d={`M43 ${SOL} q7 ${-4 - t * 2} 14 0z`} fill="#5a371f" />
-        <path d={`M48 ${SOL - 2.5} l1.5 1.4 l1.4 -1.6 l1.6 1.2`} stroke="#2e1a0d" strokeWidth="0.6" fill="none" />
-        <path d={`M50 ${SOL - 2.6} q0.4 ${-1 - t * 2} 1.6 ${-1.6 - t * 2}`} stroke={e.feuille} strokeWidth="1.4" fill="none" strokeLinecap="round" />
+        <Bosse haut={5.2 + t * 2} />
+        {/* La fente reste sous le sommet de la bosse. */}
+        <path d={`M48 ${SOL - 1.2 - t * 0.8} l1.5 1.4 l1.4 -1.6 l1.6 1.2`} stroke="#2e1a0d" strokeWidth="0.6" fill="none" />
+        <path d={`M50 ${SOL - 1.3 - t * 0.8} q0.4 ${-1 - t * 2} 1.6 ${-1.6 - t * 2}`} stroke={e.feuille} strokeWidth="1.4" fill="none" strokeLinecap="round" />
       </g>
     )
   const h = 5 + t * 5
   return (
     <g>
-      <path d={`M43 ${SOL} q7 -3 14 0z`} fill="#5a371f" />
+      <Bosse haut={4.2} />
       <path d={`M48 ${SOL - 1} C48 ${SOL - h} 54 ${SOL - h - 1.5} 54 ${SOL - h + 3}`} stroke={e.tige} strokeWidth="1.8" fill="none" strokeLinecap="round" />
       <ellipse cx="54.2" cy={SOL - h + 4} rx="1.6" ry="2.2" fill={e.feuille} />
     </g>
@@ -433,7 +459,7 @@ function Visiteurs({ stade, palier, croissance, e, sol = false }: { stade: numbe
   if (sol) {
     if (stade === 5 && palier === 3)
       return (
-        <g transform={`translate(33 ${SOL - 6.4})`}>
+        <g transform={`translate(33 ${surface(33) - 2})`}>
           <path d="M-3 2 h9 q1 0 1 -1 l-1 -2" fill="#c8b48a" />
           <circle cx="0" cy="-0.6" r="2.8" fill="#a0662b" />
           <path d="M0 -0.6 m-1.6 0 a1.6 1.6 0 1 1 1.6 1.6" stroke="#6b4423" strokeWidth="0.5" fill="none" />
@@ -512,13 +538,9 @@ function Terre({ stade: n, croissance, e }: { stade: number; croissance: number;
   return (
     <g>
       <path d={`M27 ${SOL - 2.5} Q50 ${SOL - 8.5} 73 ${SOL - 2.5}Z`} fill={terre} />
-      <circle cx="40" cy={SOL - 4.6} r="0.9" fill="#8a6a4f" />
-      <circle cx="61" cy={SOL - 4} r="0.7" fill="#8a6a4f" />
-      {n === 1 && (
-        <g transform={`translate(50 ${SOL - 5.4}) scale(1.7) translate(-50 ${-SOL})`}>
-          <Terreau palier={palier} t={t} />
-        </g>
-      )}
+      <circle cx="40" cy={surface(40) + 1.1} r="0.9" fill="#8a6a4f" />
+      <circle cx="61" cy={surface(61) + 1.1} r="0.7" fill="#8a6a4f" />
+      {n === 1 && <Terreau palier={palier} t={t} />}
       <Visiteurs stade={n} palier={palier} croissance={croissance} e={e} sol />
     </g>
   )
