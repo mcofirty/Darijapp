@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { BADGES, compterCollection, maitrise, type StatsBadges } from './collection'
+import { BADGES, FAMILLES_BADGES, avancementBadge, badgeObtenu, compterCollection, maitrise, type StatsBadges } from './collection'
 import { meilleureSerie, septDerniersJours } from './serie'
 
 describe('collection', () => {
@@ -10,16 +10,31 @@ describe('collection', () => {
 })
 
 describe('badges', () => {
-  const zero: StatsBadges = { motsVus: 0, motsOr: 0, meilleureSerie: 0, activites: 0, sansFaute: 0, recordExpress: 0, recordSons: 0 }
+  const cles = [...new Set(BADGES.map((b) => b.mesure))]
+  const avec = (n: number) => Object.fromEntries(cles.map((c) => [c, n])) as unknown as StatsBadges
 
-  it('aucun badge au départ, tous avec tout', () => {
-    expect(BADGES.filter((b) => b.obtenu(zero))).toEqual([])
-    const tout: StatsBadges = { motsVus: 300, motsOr: 50, meilleureSerie: 30, activites: 9, sansFaute: 1, recordExpress: 15, recordSons: 20 }
-    expect(BADGES.every((b) => b.obtenu(tout))).toBe(true)
+  it('aucun badge au départ, tous au bout du compte', () => {
+    expect(BADGES.filter((b) => badgeObtenu(b, avec(0)))).toEqual([])
+    expect(BADGES.every((b) => badgeObtenu(b, avec(100000)))).toBe(true)
   })
 
-  it('identifiants uniques', () => {
+  it('plus de 50 badges, au moins 3 par famille, identifiants uniques', () => {
+    expect(BADGES.length).toBeGreaterThanOrEqual(50)
+    for (const f of FAMILLES_BADGES) expect(BADGES.filter((b) => b.famille === f.id).length, f.id).toBeGreaterThanOrEqual(3)
     expect(new Set(BADGES.map((b) => b.id)).size).toBe(BADGES.length)
+  })
+
+  it('dans une famille, une même mesure a des seuils croissants', () => {
+    for (const c of cles) {
+      const seuils = BADGES.filter((b) => b.mesure === c).map((b) => b.seuil)
+      expect(seuils, c).toEqual([...seuils].sort((a, b) => a - b))
+    }
+  })
+
+  it('l’avancée vers un badge va de 0 à 1', () => {
+    const b = BADGES.find((x) => x.id === 'mots-50')!
+    expect(avancementBadge(b, { ...avec(0), motsVus: 20 })).toBeCloseTo(0.4)
+    expect(avancementBadge(b, { ...avec(0), motsVus: 80 })).toBe(1)
   })
 })
 

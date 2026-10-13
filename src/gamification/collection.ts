@@ -21,32 +21,151 @@ export const OBJECTIF_MOTS = 300
 
 export interface StatsBadges {
   motsVus: number
+  motsArgent: number
   motsOr: number
   meilleureSerie: number
   activites: number
   sansFaute: number
   recordExpress: number
   recordSons: number
+  /** Niveau (palier de la plante, 1 à 30). */
+  niveau: number
+  xpTotal: number
+  /** Essais de Dis-le notés 80 ou plus, et notés 100. */
+  excellents: number
+  parfaits: number
+  /** Scènes de dialogue jouées, et jouées sans faute. */
+  dialogues: number
+  dialoguesParfaits: number
+  grammaire: number
+  /** Parties de marchandage et de taxi. */
+  marchandages: number
+  taxis: number
+  tampons: number
+  theieres: number
+  achats: number
+  motsAjoutes: number
 }
+
+export type FamilleBadge =
+  | 'mots'
+  | 'maitrise'
+  | 'serie'
+  | 'pratique'
+  | 'plante'
+  | 'prononciation'
+  | 'parler'
+  | 'jeux'
+  | 'voyage'
+  | 'souk'
+
+export const FAMILLES_BADGES: { id: FamilleBadge; titre: string }[] = [
+  { id: 'mots', titre: 'Vocabulaire' },
+  { id: 'maitrise', titre: 'Mots retenus' },
+  { id: 'serie', titre: 'Régularité' },
+  { id: 'pratique', titre: 'Pratique' },
+  { id: 'plante', titre: 'Ma plante' },
+  { id: 'prononciation', titre: 'Prononciation' },
+  { id: 'parler', titre: 'Parler' },
+  { id: 'jeux', titre: 'Jeux' },
+  { id: 'voyage', titre: 'Voyage et théière' },
+  { id: 'souk', titre: 'Souk et partage' },
+]
 
 export interface Badge {
   id: string
+  famille: FamilleBadge
   titre: string
   description: string
-  obtenu: (s: StatsBadges) => boolean
+  /** Ce qui est compté, et le seuil à atteindre. */
+  mesure: keyof StatsBadges
+  seuil: number
 }
 
+/** Badge obtenu : la mesure atteint le seuil. */
+export function badgeObtenu(b: Badge, s: StatsBadges): boolean {
+  return s[b.mesure] >= b.seuil
+}
+
+/** Avancée vers un badge, de 0 à 1. */
+export function avancementBadge(b: Badge, s: StatsBadges): number {
+  return Math.min(1, s[b.mesure] / b.seuil)
+}
+
+const b = (famille: FamilleBadge, mesure: keyof StatsBadges, seuil: number, id: string, titre: string, description: string): Badge => ({
+  id,
+  famille,
+  titre,
+  description,
+  mesure,
+  seuil,
+})
+
 export const BADGES: Badge[] = [
-  { id: 'premiers-pas', titre: 'Premiers pas', description: 'Termine ta première activité', obtenu: (s) => s.activites >= 1 },
-  { id: 'sans-faute', titre: 'Sans faute', description: 'Réussis une activité sans erreur', obtenu: (s) => s.sansFaute >= 1 },
-  { id: 'mots-50', titre: '50 mots', description: 'Découvre 50 mots', obtenu: (s) => s.motsVus >= 50 },
-  { id: 'mots-150', titre: '150 mots', description: 'Découvre 150 mots', obtenu: (s) => s.motsVus >= 150 },
-  { id: 'mots-300', titre: 'Objectif 300', description: 'Découvre 300 mots', obtenu: (s) => s.motsVus >= OBJECTIF_MOTS },
-  { id: 'or-10', titre: '10 mots en or', description: 'Retiens 10 mots trois semaines', obtenu: (s) => s.motsOr >= 10 },
-  { id: 'or-50', titre: '50 mots en or', description: 'Retiens 50 mots trois semaines', obtenu: (s) => s.motsOr >= 50 },
-  { id: 'serie-3', titre: '3 jours', description: 'Pratique 3 jours d’affilée', obtenu: (s) => s.meilleureSerie >= 3 },
-  { id: 'serie-7', titre: '7 jours', description: 'Pratique 7 jours d’affilée', obtenu: (s) => s.meilleureSerie >= 7 },
-  { id: 'serie-30', titre: '30 jours', description: 'Pratique 30 jours d’affilée', obtenu: (s) => s.meilleureSerie >= 30 },
-  { id: 'eclair', titre: 'Éclair', description: '15 bonnes réponses au Quiz express', obtenu: (s) => s.recordExpress >= 15 },
-  { id: 'oreille', titre: 'Oreille fine', description: '20 points à la Chasse aux sons', obtenu: (s) => s.recordSons >= 20 },
+  b('mots', 'motsVus', 10, 'mots-10', 'Premiers mots', 'Découvre 10 mots'),
+  b('mots', 'motsVus', 25, 'mots-25', 'Petit carnet', 'Découvre 25 mots'),
+  b('mots', 'motsVus', 50, 'mots-50', '50 mots', 'Découvre 50 mots'),
+  b('mots', 'motsVus', 100, 'mots-100', 'Centaine', 'Découvre 100 mots'),
+  b('mots', 'motsVus', 150, 'mots-150', '150 mots', 'Découvre 150 mots'),
+  b('mots', 'motsVus', 200, 'mots-200', '200 mots', 'Découvre 200 mots'),
+  b('mots', 'motsVus', OBJECTIF_MOTS, 'mots-300', 'Objectif 300', 'Découvre 300 mots'),
+  b('mots', 'motsVus', 500, 'mots-500', 'Bavard', 'Découvre 500 mots'),
+  b('mots', 'motsVus', 1000, 'mots-1000', 'Dictionnaire vivant', 'Découvre 1 000 mots'),
+  b('maitrise', 'motsArgent', 10, 'argent-10', '10 en argent', 'Retiens 10 mots une semaine'),
+  b('maitrise', 'motsArgent', 50, 'argent-50', '50 en argent', 'Retiens 50 mots une semaine'),
+  b('maitrise', 'motsOr', 10, 'or-10', '10 mots en or', 'Retiens 10 mots trois semaines'),
+  b('maitrise', 'motsOr', 50, 'or-50', '50 mots en or', 'Retiens 50 mots trois semaines'),
+  b('maitrise', 'motsOr', 100, 'or-100', '100 mots en or', 'Retiens 100 mots trois semaines'),
+  b('maitrise', 'motsOr', OBJECTIF_MOTS, 'or-300', 'Trésor de mots', 'Retiens 300 mots trois semaines'),
+  b('serie', 'meilleureSerie', 3, 'serie-3', '3 jours', 'Pratique 3 jours d’affilée'),
+  b('serie', 'meilleureSerie', 7, 'serie-7', 'Une semaine', 'Pratique 7 jours d’affilée'),
+  b('serie', 'meilleureSerie', 14, 'serie-14', 'Deux semaines', 'Pratique 14 jours d’affilée'),
+  b('serie', 'meilleureSerie', 30, 'serie-30', 'Un mois', 'Pratique 30 jours d’affilée'),
+  b('serie', 'meilleureSerie', 60, 'serie-60', 'Deux mois', 'Pratique 60 jours d’affilée'),
+  b('serie', 'meilleureSerie', 100, 'serie-100', '100 jours', 'Pratique 100 jours d’affilée'),
+  b('pratique', 'activites', 1, 'premiers-pas', 'Premiers pas', 'Termine ta première activité'),
+  b('pratique', 'activites', 10, 'activites-10', 'Lancé', 'Termine 10 activités'),
+  b('pratique', 'activites', 50, 'activites-50', 'Assidu', 'Termine 50 activités'),
+  b('pratique', 'activites', 100, 'activites-100', 'Infatigable', 'Termine 100 activités'),
+  b('pratique', 'activites', 250, 'activites-250', 'Pilier', 'Termine 250 activités'),
+  b('pratique', 'sansFaute', 1, 'sans-faute', 'Sans faute', 'Réussis une activité sans erreur'),
+  b('pratique', 'sansFaute', 10, 'sans-faute-10', 'Précis', '10 activités sans erreur'),
+  b('pratique', 'sansFaute', 50, 'sans-faute-50', 'Impeccable', '50 activités sans erreur'),
+  b('plante', 'niveau', 7, 'niveau-germe', 'Ça perce !', 'Atteins le stade Germe'),
+  b('plante', 'niveau', 10, 'niveau-pousse', 'Pousse', 'Atteins le stade Pousse'),
+  b('plante', 'niveau', 16, 'niveau-feuilles', 'Feuillage', 'Atteins le stade Feuilles'),
+  b('plante', 'niveau', 22, 'niveau-fleur', 'En fleur', 'Atteins le stade Fleur'),
+  b('plante', 'niveau', 28, 'niveau-arbre', 'Arbre', 'Atteins le stade Arbre'),
+  b('plante', 'niveau', 30, 'niveau-centenaire', 'Centenaire', 'Atteins le niveau 30'),
+  b('plante', 'xpTotal', 1000, 'xp-1000', '1 000 XP', 'Gagne 1 000 XP'),
+  b('plante', 'xpTotal', 5000, 'xp-5000', '5 000 XP', 'Gagne 5 000 XP'),
+  b('prononciation', 'excellents', 1, 'excellent-1', 'Première étoile', 'Un mot noté 80 ou plus'),
+  b('prononciation', 'excellents', 10, 'excellent-10', 'Belle voix', '10 mots notés 80 ou plus'),
+  b('prononciation', 'excellents', 50, 'excellent-50', 'Accent du bled', '50 mots notés 80 ou plus'),
+  b('prononciation', 'parfaits', 1, 'parfait', '100 sur 100', 'Un mot noté 100'),
+  b('prononciation', 'recordSons', 10, 'oreille-10', 'Bonne oreille', '10 points à la Chasse aux sons'),
+  b('prononciation', 'recordSons', 20, 'oreille', 'Oreille fine', '20 points à la Chasse aux sons'),
+  b('prononciation', 'recordSons', 40, 'oreille-40', 'Oreille d’or', '40 points à la Chasse aux sons'),
+  b('parler', 'dialogues', 1, 'dialogue-1', 'Premier échange', 'Joue un dialogue'),
+  b('parler', 'dialogues', 8, 'dialogue-8', 'Tous les dialogues', 'Joue les 8 dialogues'),
+  b('parler', 'dialoguesParfaits', 1, 'dialogue-parfait', 'Comme un local', 'Un dialogue sans erreur'),
+  b('parler', 'grammaire', 1, 'grammaire-1', 'Grammairien', 'Termine une leçon de grammaire'),
+  b('parler', 'grammaire', 12, 'grammaire-12', 'Règles en poche', 'Termine 12 leçons de grammaire'),
+  b('jeux', 'recordExpress', 10, 'eclair-10', 'Rapide', '10 bonnes réponses au Quiz express'),
+  b('jeux', 'recordExpress', 15, 'eclair', 'Éclair', '15 bonnes réponses au Quiz express'),
+  b('jeux', 'recordExpress', 25, 'eclair-25', 'Foudre', '25 bonnes réponses au Quiz express'),
+  b('jeux', 'marchandages', 1, 'marchand', 'Marchandeur', 'Marchande au souk'),
+  b('jeux', 'marchandages', 10, 'marchand-10', 'Roi du souk', 'Marchande 10 fois'),
+  b('jeux', 'taxis', 1, 'taxi', 'Chauffeur', 'Conduis le taxi'),
+  b('jeux', 'taxis', 10, 'taxi-10', 'Petit taxi', 'Conduis le taxi 10 fois'),
+  b('voyage', 'tampons', 1, 'tampon-1', 'Premier tampon', 'Un tampon dans ton passeport'),
+  b('voyage', 'tampons', 5, 'tampon-5', 'Mi-parcours', '5 tampons dans ton passeport'),
+  b('voyage', 'tampons', 10, 'tampon-10', 'Jusqu’à Merzouga', 'Les 10 tampons du voyage'),
+  b('voyage', 'theieres', 1, 'theiere-1', 'Premier thé', 'Ouvre la théière'),
+  b('voyage', 'theieres', 10, 'theiere-10', 'Thé à la menthe', 'Ouvre la théière 10 fois'),
+  b('voyage', 'theieres', 30, 'theiere-30', 'Maître du thé', 'Ouvre la théière 30 fois'),
+  b('souk', 'achats', 1, 'achat-1', 'Premier achat', 'Achète un article au souk'),
+  b('souk', 'achats', 10, 'achat-10', 'Collectionneur', 'Achète 10 articles au souk'),
+  b('souk', 'achats', 25, 'achat-25', 'Grand décorateur', 'Achète 25 articles au souk'),
+  b('souk', 'motsAjoutes', 1, 'mot-ajoute', 'Mot de famille', 'Ajoute un mot dans « Mes mots »'),
 ]
