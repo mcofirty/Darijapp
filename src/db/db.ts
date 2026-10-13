@@ -53,6 +53,13 @@ export interface Profil {
   reglageVoix: number[]
   /** Score précis (expérimental) : le modèle de reconnaissance des sons note Dis-le, s'il est téléchargé. */
   scorePrecis: boolean
+  /** Jours manqués couverts par un gel de série (acheté au souk), et par une série réparée. */
+  joursGeles: string[]
+  joursRepares: string[]
+  /** Double XP (théière, trésor) : horodatage de fin, ou null. */
+  doubleXpJusqua: number | null
+  /** Lundi du dernier bilan de la semaine fermé. */
+  bilanSemaineVu: string | null
   /** Dialogues : meilleur nombre de répliques réussies par scène. */
   dialogues: Record<string, number>
   /** Horodatage du dernier export de la progression (rappel tous les 7 jours), null si jamais. */
@@ -157,6 +164,10 @@ export const PROFIL_DEFAUT: Profil = {
   pauseEcouter: null,
   reglageVoix: [],
   scorePrecis: false,
+  joursGeles: [],
+  joursRepares: [],
+  doubleXpJusqua: null,
+  bilanSemaineVu: null,
   dialogues: {},
   derniereSauvegarde: null,
 }

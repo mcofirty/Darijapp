@@ -1,8 +1,10 @@
-import { Check, Coins, Egg, Eye, EyeOff, Lamp, Bird, Cat, CupSoda, PawPrint, Soup, Turtle, Volume2, PartyPopper, RectangleHorizontal } from 'lucide-react'
+import { Check, Coins, Egg, Eye, EyeOff, Lamp, Bird, Cat, CupSoda, PawPrint, Soup, Turtle, Volume2, PartyPopper, RectangleHorizontal, Snowflake } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { apercuSons } from '../../audio/effets'
 import { acheter, choisir, usePorteMonnaie } from '../../db/souk'
+import { acheterGel, useEtatSerie } from '../../db/serie'
+import { GELS_MAX, PRIX_GEL } from '../../gamification/serie'
 import { useProfil } from '../../db/useProfil'
 import { useResume } from '../../db/useResume'
 import { croissance } from '../../gamification/jardin'
@@ -10,7 +12,7 @@ import { ARTICLES, BONUS_PRECISION, DH_PAR_BONNE_REPONSE, DH_PAR_THEIERE, DH_PAR
 import { Alerte, type ActionAlerte } from '../../ui/Alerte'
 import { PluieConfettis } from '../session/Bilan'
 import { Segmente } from '../../ui/Boutons'
-import { Ligne, Section } from '../../ui/Liste'
+import { Ligne, Section, Tuile } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
 import { Plante } from './Plante'
 import { BandeZellige, fondZellige, zellige } from '../../ui/zellige'
@@ -134,6 +136,8 @@ export function Souk({ retour }: { retour: { libelle: string; action: () => void
         </span>
       </section>
 
+      <GelDeSerie onMessage={setMessage} />
+
       <div className="mb-[26px]">
         <Segmente
           options={[
@@ -214,5 +218,40 @@ export function Souk({ retour }: { retour: { libelle: string; action: () => void
       {pluie && createPortal(<PluieConfettis key={pluie.cle} type={pluie.type} classe="fixed inset-0 z-[60]" />, document.body)}
       {message && <Alerte titre={message} onAnnuler={() => setMessage(null)} actions={[{ libelle: 'OK', action: () => setMessage(null) }]} />}
     </Page>
+  )
+}
+
+/** Le gel de série : protège la série quand des jours manqués la casseraient (2 d'avance au plus). */
+function GelDeSerie({ onMessage }: { onMessage: (m: string) => void }) {
+  const { gels } = useEtatSerie()
+  const [confirmer, setConfirmer] = useState(false)
+  return (
+    <Section titre="Ma série" note={`Un gel couvre un jour manqué quand le pardon d’un jour par semaine ne suffit pas. Il est utilisé tout seul. ${GELS_MAX} d’avance au plus.`}>
+      <Ligne
+        tuile={<Tuile icone={Snowflake} couleur="#1e88e5" />}
+        titre="Gel de série"
+        sousTitre={`${gels} sur ${GELS_MAX} en réserve`}
+        valeur={gels >= GELS_MAX ? 'Complet' : `${PRIX_GEL} DH`}
+        chevron={gels < GELS_MAX}
+        onClick={gels < GELS_MAX ? () => setConfirmer(true) : undefined}
+      />
+      {confirmer && (
+        <Alerte
+          titre="Acheter un gel de série ?"
+          message={`${PRIX_GEL} DH. Il protège ta série un jour manqué.`}
+          onAnnuler={() => setConfirmer(false)}
+          actions={[
+            { libelle: 'Annuler', role: 'annuler', action: () => setConfirmer(false) },
+            {
+              libelle: 'Acheter',
+              action: () => {
+                setConfirmer(false)
+                void acheterGel().then((e) => onMessage(e ?? 'Gel de série acheté : ta série est protégée.'))
+              },
+            },
+          ]}
+        />
+      )}
+    </Section>
   )
 }

@@ -9,6 +9,7 @@ import { Page } from '../../ui/Page'
 import { ContenuJardin } from '../jeu/MonJardin'
 import { Souk } from '../jeu/Souk'
 import { Badges, Collection, Semaine } from '../jeu/Tableau'
+import { DefisReussis } from '../jeu/Motivation'
 import { QuetesDuJour } from '../jeu/QuetesDuJour'
 import { FicheMot } from '../mots/FicheMot'
 import { Dictionnaire } from './Dictionnaire'
@@ -82,6 +83,7 @@ export function Progres() {
           </Section>
           <QuetesDuJour />
           <Collection />
+          <DefisReussis />
           <Badges />
           <Section titre="Vocabulaire">
             <Ligne titre="Mots vus" valeur={`${motsVus.size} / ${MOTS.length}`} />

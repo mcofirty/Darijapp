@@ -489,6 +489,11 @@ body {
   .tresor-pret { animation: none; }
 }
 
+/* Combo dans les sessions : la pastille « 5 d'affilée ! » arrive en rebondissant. */
+.combo-fete {
+  animation: alerte-entree 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
 /* Micro de Dis-le pendant l'écoute : une onde part du bouton plein, « parle maintenant ». */
 .micro-onde {
   animation: micro-onde 1.2s ease-out infinite;

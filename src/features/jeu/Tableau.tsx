@@ -1,4 +1,4 @@
-import { BookOpen, Coins, CupSoda, Flame, Gamepad2, Medal, MessagesSquare, Mic, Sprout, Target, type LucideIcon } from 'lucide-react'
+import { BookOpen, Coins, CupSoda, Flame, Snowflake, Gamepad2, Medal, MessagesSquare, Mic, Sprout, Target, type LucideIcon } from 'lucide-react'
 import { useState } from 'react'
 import { useJeu } from '../../db/useJeu'
 import { useResume } from '../../db/useResume'
@@ -12,7 +12,7 @@ export function Semaine() {
   return (
     <Section
       titre="Série"
-      note={serie.aujourdhui ? 'Série sécurisée pour aujourd’hui.' : 'Fais une activité aujourd’hui pour garder ta série. Un jour manqué par semaine est pardonné.'}
+      note={serie.aujourdhui ? 'Série sécurisée pour aujourd’hui.' : 'Fais une activité aujourd’hui pour garder ta série. Un jour manqué par semaine est pardonné ; au-delà, un gel de série (au souk) protège ta série.'}
     >
       <Ligne titre={<span className="font-semibold">{serie.jours} jour{serie.jours > 1 ? 's' : ''} d’affilée</span>} />
       <div className="flex justify-between px-marge pb-4 pt-1">
@@ -20,10 +20,14 @@ export function Semaine() {
           <div key={j.date} className="flex flex-col items-center gap-1">
             <span className={`t-note ${j.aujourdhui ? 'font-semibold text-texte' : 'text-texte-2'}`}>{j.lettre}</span>
             <span
-              className={`flex h-9 w-9 items-center justify-center rounded-full ${j.fait ? 'bg-accent-doux text-accent' : 'bg-remplissage text-texte-3'}`}
-              aria-label={`${j.date} : ${j.fait ? 'pratiqué' : 'pas pratiqué'}`}
+              className={`flex h-9 w-9 items-center justify-center rounded-full ${j.fait ? 'bg-accent-doux text-accent' : j.gele ? 'bg-[#e3f2fd] text-[#1e88e5] dark:bg-[#0d3a5c] dark:text-[#64b5f6]' : 'bg-remplissage text-texte-3'}`}
+              aria-label={`${j.date} : ${j.fait ? 'pratiqué' : j.gele ? 'gelé' : 'pas pratiqué'}`}
             >
-              <Flame className="h-5 w-5" strokeWidth={2.2} fill={j.fait ? 'currentColor' : 'none'} aria-hidden />
+              {j.gele && !j.fait ? (
+                <Snowflake className="h-5 w-5" strokeWidth={2.2} aria-hidden />
+              ) : (
+                <Flame className="h-5 w-5" strokeWidth={2.2} fill={j.fait ? 'currentColor' : 'none'} aria-hidden />
+              )}
             </span>
           </div>
         ))}

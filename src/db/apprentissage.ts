@@ -1,8 +1,9 @@
 import type { Mot } from '../data/types'
+import { multiplicateurXp } from '../gamification/combo'
 import { xpDeSession } from '../gamification/xp'
 import { dateLocale } from '../srs/dates'
 import { apresReponse, motsAReviser, nouveauxMots } from '../srs/leitner'
-import { db, type DarijaDB, type ProgressionMot, type TypeActivite } from './db'
+import { db, lireProfil, type DarijaDB, type ProgressionMot, type TypeActivite } from './db'
 import { tousLesMots } from './motsPerso'
 
 export const NOUVEAUX_PAR_SESSION = 5
@@ -46,6 +47,17 @@ export interface BilanSession {
   nouveaux: number
   /** XP total avant l'activité : le bilan montre si la plante a changé de stade. */
   xpAvant: number
+  /** XP de combo (bonnes réponses d'affilée) compris dans `xp`. */
+  combo: number
+  /** XP doublé (théière ou trésor dans le quart d'heure). */
+  double: boolean
+}
+
+/** XP d'une activité : réponses, fin et sans-faute, plus le combo, le tout doublé pendant le double XP. */
+async function xpGagne(bonnes: number, sansFaute: boolean, combo: number, base: DarijaDB): Promise<{ xp: number; double: boolean }> {
+  const { doubleXpJusqua } = await lireProfil(base)
+  const fois = multiplicateurXp(Date.now(), doubleXpJusqua)
+  return { xp: (xpDeSession(bonnes, sansFaute) + combo) * fois, double: fois > 1 }
 }
 
 /** XP total : activités et bonus (théière-coffre, trésors). */
@@ -63,11 +75,12 @@ export const SCORES_GARDES = 20
  */
 export async function enregistrerSession(
   resultats: Map<string, boolean>,
-  stats: { bonnes: number; mauvaises: number; nouveaux: number; entrainement: boolean; scores?: Map<string, number[]> },
+  stats: { bonnes: number; mauvaises: number; nouveaux: number; entrainement: boolean; scores?: Map<string, number[]>; combo?: number },
   aujourdhui = dateLocale(),
   base: DarijaDB = db,
 ): Promise<BilanSession> {
-  const xp = xpDeSession(stats.bonnes, stats.mauvaises === 0)
+  const combo = stats.combo ?? 0
+  const { xp, double } = await xpGagne(stats.bonnes, stats.mauvaises === 0, combo, base)
   const xpAvant = await lireXpTotal(base)
   await base.transaction('rw', base.progression, base.sessions, async () => {
     if (!stats.entrainement) {
@@ -91,7 +104,7 @@ export async function enregistrerSession(
     }
     await base.sessions.add({ date: aujourdhui, xp, bonnes: stats.bonnes, mauvaises: stats.mauvaises, nouveaux: stats.nouveaux, type: 'session' })
   })
-  return { xp, bonnes: stats.bonnes, mauvaises: stats.mauvaises, nouveaux: stats.nouveaux, xpAvant }
+  return { xp, bonnes: stats.bonnes, mauvaises: stats.mauvaises, nouveaux: stats.nouveaux, xpAvant, combo, double }
 }
 
 /**
@@ -100,12 +113,13 @@ export async function enregistrerSession(
  */
 export async function enregistrerActivite(
   type: Exclude<TypeActivite, 'session'>,
-  stats: { bonnes: number; mauvaises: number },
+  stats: { bonnes: number; mauvaises: number; combo?: number },
   aujourdhui = dateLocale(),
   base: DarijaDB = db,
 ): Promise<BilanSession> {
-  const xp = xpDeSession(stats.bonnes, stats.mauvaises === 0 && stats.bonnes > 0)
+  const combo = stats.combo ?? 0
+  const { xp, double } = await xpGagne(stats.bonnes, stats.mauvaises === 0 && stats.bonnes > 0, combo, base)
   const xpAvant = await lireXpTotal(base)
   await base.sessions.add({ date: aujourdhui, xp, bonnes: stats.bonnes, mauvaises: stats.mauvaises, nouveaux: 0, type })
-  return { xp, bonnes: stats.bonnes, mauvaises: stats.mauvaises, nouveaux: 0, xpAvant }
+  return { xp, bonnes: stats.bonnes, mauvaises: stats.mauvaises, nouveaux: 0, xpAvant, combo, double }
 }

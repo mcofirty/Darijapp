@@ -18,6 +18,7 @@ import { VISUELS_THEMES, VISUEL_SONS } from '../../ui/visuels'
 import { ModeEcoute } from '../ecoute/ModeEcoute'
 import { Plante } from '../jeu/Plante'
 import { QuetesDuJour } from '../jeu/QuetesDuJour'
+import { AnnoncesDuJour, LignesMotivation } from '../jeu/Motivation'
 import { Souk } from '../jeu/Souk'
 import { MonJardin } from '../jeu/MonJardin'
 import { croissance } from '../../gamification/jardin'
@@ -155,6 +156,7 @@ export function Apprendre() {
 
   return (
     <Page titre="Apprendre" accessoire={<Serie />}>
+      <AnnoncesDuJour />
       <CarteSessionDuJour onCommencer={() => void lancer()} />
       <QuetesDuJour />
 
@@ -180,6 +182,7 @@ export function Apprendre() {
           chevron
           onClick={() => ouvrir({ type: 'jardin' })}
         />
+        <LignesMotivation />
         <Ligne
           tuile={<Tuile icone={Coins} couleur="#ffcc00" />}
           titre="Le souk"

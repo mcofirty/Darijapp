@@ -6,6 +6,7 @@ import { AjoutMots } from '../features/ajout/AjoutMots'
 import { Proposition } from '../features/ajout/Proposition'
 import { choisirSons, couperSons } from '../audio/effets'
 import { modelePresent, ouvrirModele } from '../audio/modeleSons'
+import { appliquerGels } from '../db/serie'
 import { Apprendre } from '../features/apprendre/Apprendre'
 import { AideInstallation } from '../features/onboarding/AideInstallation'
 import { Parcours } from '../features/parcours/Parcours'
@@ -48,6 +49,10 @@ export default function App() {
     reglerLectureAutomatique(ecouter)
     couperSons(!ecouter)
   }, [ecouter])
+  // Gel de série : utilisé tout seul à l'ouverture si des jours manqués cassent la série.
+  useEffect(() => {
+    void appliquerGels()
+  }, [])
   // Score précis : le modèle s'ouvre peu après le lancement, pour être prêt au premier Dis-le.
   useEffect(() => {
     if (!scorePrecis) return

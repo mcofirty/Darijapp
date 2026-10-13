@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import type { Mot } from '../../data/types'
 import { useProfil } from '../../db/useProfil'
-import { useMaitrises } from '../../db/useJeu'
+import { useBoites, useMaitrises } from '../../db/useJeu'
+import { ForceMot } from '../../ui/ForceMot'
 import { COULEURS_MAITRISE, NOMS_MAITRISE } from '../../gamification/collection'
 import { Ligne, Section } from '../../ui/Liste'
 import { BoutonAudio } from './BoutonAudio'
@@ -19,6 +20,7 @@ const TRANCHE = 120
 export function ListeMots({ mots, onChoisir, titre }: Props) {
   const { afficherArabe } = useProfil()
   const maitrises = useMaitrises()
+  const boites = useBoites()
   const [limite, setLimite] = useState(PREMIERE_TRANCHE)
   const repere = useRef<HTMLDivElement>(null)
 
@@ -56,6 +58,7 @@ export function ListeMots({ mots, onChoisir, titre }: Props) {
                     aria-label={`carte ${NOMS_MAITRISE[maitrises.get(m.id)!]}`}
                   />
                 )}
+                {boites.has(m.id) && <ForceMot boite={boites.get(m.id)!} />}
               </span>
             }
             sousTitre={m.fr}

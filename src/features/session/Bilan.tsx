@@ -18,7 +18,7 @@ interface Props {
   /** Taux de réussite, de 0 à 1 ; absent quand il n'a pas de sens (Quiz express). */
   taux?: number
   /** Bonnes réponses et erreurs de l'activité, pour les dirhams gagnés. */
-  activite?: { bonnes: number; mauvaises: number; xpAvant?: number }
+  activite?: { bonnes: number; mauvaises: number; xpAvant?: number; combo?: number; double?: boolean }
   /** Lignes ajoutées en tête du bilan (score, record…). */
   lignes?: ReactNode
   libelleEncore: string
@@ -96,7 +96,14 @@ export function Bilan({ titre, sousTitre, xp, taux, activite, lignes, libelleEnc
         )}
         <Section>
           {lignes}
-          <Ligne tuile={<Tuile icone={Sparkles} couleur="#af52de" />} titre="XP gagnés" valeur={`+${xp}`} />
+          <Ligne
+            tuile={<Tuile icone={Sparkles} couleur="#af52de" />}
+            titre="XP gagnés"
+            sousTitre={
+              [activite?.combo ? `dont +${activite.combo} de combo` : '', activite?.double ? 'doublés (théière ou trésor)' : ''].filter(Boolean).join(', ') || undefined
+            }
+            valeur={`+${xp}`}
+          />
           {activite && (
             <Ligne
               tuile={<Tuile icone={Coins} couleur="#ffcc00" />}

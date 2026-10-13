@@ -19,6 +19,14 @@ export function compterCollection(progressions: { boite: number }[]): Record<Mai
 /** Objectif du programme : 300 mots en 3 mois. */
 export const OBJECTIF_MOTS = 300
 
+/** Points du « mustawa d nnbta » par boîte : un mot bien retenu vaut beaucoup plus qu'un mot juste vu. */
+export const POINTS_MUSTAWA = [0, 1, 3, 6, 10]
+
+/** « Mustawa d nnbta » (niveau de la plante, en darija) : score global qui monte avec les mots retenus. */
+export function mustawa(progressions: { boite: number }[]): number {
+  return progressions.reduce((t, p) => t + (POINTS_MUSTAWA[Math.min(4, Math.max(0, p.boite))] ?? 0), 0)
+}
+
 export interface StatsBadges {
   motsVus: number
   motsArgent: number

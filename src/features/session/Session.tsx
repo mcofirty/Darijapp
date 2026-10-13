@@ -1,7 +1,8 @@
 import { useRef, useState } from 'react'
+import { Combo } from '../../gamification/combo'
 import { jouerAuto } from '../../audio/lecteur'
 import { sonReponse } from '../../audio/effets'
-import { CircleCheck, CircleX, X } from 'lucide-react'
+import { CircleCheck, CircleX, Flame, X } from 'lucide-react'
 import type { Mot } from '../../data/types'
 import { useMots } from '../../db/motsPerso'
 import { enregistrerActivite, enregistrerSession, type BilanSession } from '../../db/apprentissage'
@@ -58,6 +59,9 @@ function SessionEnCours({ etapes: depart, nouveaux, entrainement, activite, onFe
   // Dis-le : résultat affiché, validé par « Continuer ».
   const [dire, setDire] = useState<ResultatDire | null>(null)
   const resultats = useRef(new Resultats())
+  // Bonnes réponses d'affilée : dès la 5e, chacune rapporte 1 XP de plus ; chaque palier de 5 est fêté.
+  const combo = useRef(new Combo())
+  const [fete, setFete] = useState<number | null>(null)
   // Quiz : chaque question compte une fois (les paires sont justes sans aucune erreur).
   const questions = useRef({ justes: 0, total: 0, erreurPaires: false })
   const MOTS = useMots()
@@ -66,6 +70,7 @@ function SessionEnCours({ etapes: depart, nouveaux, entrainement, activite, onFe
   function compterQuestion(juste: boolean) {
     questions.current.total++
     if (juste) questions.current.justes++
+    setFete(combo.current.noter(juste))
   }
 
   /** `motId` : null pour une réponse hors programme (Distingue les sons), qui ne touche pas la répétition espacée. */
@@ -120,8 +125,8 @@ function SessionEnCours({ etapes: depart, nouveaux, entrainement, activite, onFe
     const q = questions.current
     setBilan(
       quiz
-        ? await enregistrerActivite(activite, { bonnes: q.justes, mauvaises: q.total - q.justes })
-        : await enregistrerSession(r.parMot(), { bonnes: r.bonnes, mauvaises: r.mauvaises, nouveaux, entrainement, scores: r.scores }),
+        ? await enregistrerActivite(activite, { bonnes: q.justes, mauvaises: q.total - q.justes, combo: combo.current.bonus })
+        : await enregistrerSession(r.parMot(), { bonnes: r.bonnes, mauvaises: r.mauvaises, nouveaux, entrainement, scores: r.scores, combo: combo.current.bonus }),
     )
   }
 
@@ -245,8 +250,13 @@ function SessionEnCours({ etapes: depart, nouveaux, entrainement, activite, onFe
             <div className={`deplier ${retour ? 'ouvert' : ''}`} aria-live="polite">
               <div>
                 {retour?.juste === true && (
-                  <p className="t-titre-3 flex items-center gap-2 px-2 pb-3 pt-1 text-vert">
+                  <p className="t-titre-3 flex flex-wrap items-center gap-2 px-2 pb-3 pt-1 text-vert">
                     <CircleCheck className="h-6 w-6" strokeWidth={2.5} aria-hidden /> Bravo !
+                    {fete && (
+                      <span className="combo-fete t-appel ml-auto flex items-center gap-1 rounded-full bg-[#fff3e0] px-3 py-1 font-semibold text-[#e65100] dark:bg-[#4a2a00] dark:text-[#ffb74d]">
+                        <Flame className="h-4 w-4" strokeWidth={2.4} fill="currentColor" aria-hidden /> {fete} d’affilée ! +1 XP par réponse
+                      </span>
+                    )}
                   </p>
                 )}
                 {retour?.juste === false && (

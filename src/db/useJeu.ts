@@ -10,6 +10,7 @@ import { meilleureSerie, septDerniersJours, type JourSemaine } from '../gamifica
 import { dateLocale } from '../srs/dates'
 import { db, lireProfil } from './db'
 import { lireJournal } from './journal'
+import { couverts } from './serie'
 
 export interface Jeu {
   quetes: Avancement[]
@@ -72,7 +73,7 @@ export function useJeu(): Jeu {
       return {
         quetes: quetesDuJour(aujourdhui).map((q) => avancement(q, stats)),
         coffreOuvert: journal.coffre,
-        semaine: septDerniersJours(dates, aujourdhui),
+        semaine: septDerniersJours(dates, aujourdhui, couverts(profil)),
         collection,
         badges: BADGES.map((badge) => ({
           badge,
@@ -89,4 +90,10 @@ export function useJeu(): Jeu {
 export function useMaitrises(): Map<string, Maitrise> {
   const progressions = useLiveQuery(() => db.progression.toArray(), [])
   return new Map((progressions ?? []).map((p) => [p.id, maitrise(p.boite)]))
+}
+
+/** Boîte de répétition espacée de chaque mot vu (force du mot), par identifiant. */
+export function useBoites(): Map<string, number> {
+  const progressions = useLiveQuery(() => db.progression.toArray(), [])
+  return new Map((progressions ?? []).map((p) => [p.id, p.boite]))
 }

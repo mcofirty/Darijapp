@@ -2,7 +2,8 @@ import { useLiveQuery } from 'dexie-react-hooks'
 import { calculerSerie, type Serie } from '../gamification/serie'
 import { niveauDepuisXp, type Niveau } from '../gamification/xp'
 import { dateLocale } from '../srs/dates'
-import { db } from './db'
+import { db, lireProfil } from './db'
+import { couverts } from './serie'
 
 export interface Resume {
   xpTotal: number
@@ -27,10 +28,11 @@ export function useResume(): Resume {
   return (
     useLiveQuery(async () => {
       const aujourdhui = dateLocale()
-      const [sessions, ids, bonus] = await Promise.all([
+      const [sessions, ids, bonus, profil] = await Promise.all([
         db.sessions.toArray(),
         db.progression.toCollection().primaryKeys(),
         db.bonus.toArray(),
+        lireProfil(),
       ])
       // XP des activités et des bonus (théière-coffre, trésors).
       const gains = [...sessions, ...bonus]
@@ -40,7 +42,7 @@ export function useResume(): Resume {
         xpTotal,
         xpAujourdhui: gains.filter((g) => g.date === aujourdhui).reduce((t, s) => t + s.xp, 0),
         niveau: niveauDepuisXp(xpTotal),
-        serie: calculerSerie(sessions.map((s) => s.date), aujourdhui),
+        serie: calculerSerie(sessions.map((s) => s.date), aujourdhui, couverts(profil)),
         sessionsAujourdhui: duJour.length,
         motsVus: new Set(ids),
       }
