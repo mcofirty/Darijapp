@@ -68,9 +68,9 @@ export const PAUSE_PHRASE = 0.8
  * Garde la parole et retire le silence autour : les trames à moins de `seuil` dB du maximum,
  * regroupées quand moins de `pause` s les sépare (0,35 s : les pauses d'un mot sont plus courtes ;
  * 0,8 s pour une phrase, dont les mots sont séparés) ; on garde le groupe le plus fort, plus une
- * petite marge. Un bruit isolé (toucher l'écran, déclic) avant ou après le mot est ainsi laissé de côté.
+ * petite marge (`marge`, en s). Un bruit isolé (toucher l'écran, déclic) avant ou après le mot est ainsi laissé de côté.
  */
-export function rogner(signal: Float32Array, seuil = 35, pause = PAUSE_MOT): Float32Array {
+export function rogner(signal: Float32Array, seuil = 35, pause = PAUSE_MOT, marge = 0.03): Float32Array {
   const e = energies(signal)
   if (e.length === 0) return signal
   const max = Math.max(...e)
@@ -86,9 +86,9 @@ export function rogner(signal: Float32Array, seuil = 35, pause = PAUSE_MOT): Flo
     } else groupes.push({ debut: t, fin: t, poids })
   })
   const { debut, fin } = groupes.reduce((a, g) => (g.poids > a.poids ? g : a))
-  const marge = Math.round((0.03 * FREQUENCE) / PAS)
-  const a = Math.max(0, debut - marge) * PAS
-  const b = Math.min(signal.length, (fin + marge) * PAS + TRAME)
+  const m = Math.round((marge * FREQUENCE) / PAS)
+  const a = Math.max(0, debut - m) * PAS
+  const b = Math.min(signal.length, (fin + m) * PAS + TRAME)
   return signal.subarray(a, b)
 }
 

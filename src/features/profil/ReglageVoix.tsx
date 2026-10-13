@@ -1,4 +1,4 @@
-import { CircleCheck, Loader2, Mic, Square } from 'lucide-react'
+import { CircleCheck } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { jouer } from '../../audio/lecteur'
 import { decoder16k, enregistrer, microDisponible, preparerMicro, referenceDuMot, type Enregistrement } from '../../audio/micro'
@@ -6,6 +6,7 @@ import { MOTS_SONS } from '../../data/pairesSons'
 import { modifierProfil } from '../../db/db'
 import { useProfil } from '../../db/useProfil'
 import { decalageVoix, distanceEssai } from '../../scoring/score'
+import { BoutonMicro } from '../../ui/BoutonMicro'
 import { Bouton } from '../../ui/Boutons'
 import { Section } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
@@ -110,26 +111,9 @@ export function ReglageVoix({ onRetour }: { onRetour: () => void }) {
           <div className="my-4 flex justify-center">
             <BoutonAudio chemin={mot.audio} arabe={mot.arabe} libelle="Écouter" />
           </div>
-          <button
-            type="button"
-            onClick={() => void parler()}
-            disabled={etat === 'analyse'}
-            aria-label={ecoute ? 'Arrêter l’enregistrement' : 'Parler'}
-            className="pressable relative mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-accent-plein text-white"
-          >
-            <span
-              className="absolute inset-0 rounded-full bg-accent-plein opacity-25 transition-transform duration-100"
-              style={{ transform: `scale(${ecoute ? 1 + niveau * 0.6 : 1})` }}
-              aria-hidden
-            />
-            {etat === 'analyse' ? (
-              <Loader2 className="relative h-9 w-9 animate-spin" aria-hidden />
-            ) : ecoute ? (
-              <Square className="relative h-7 w-7" fill="currentColor" aria-hidden />
-            ) : (
-              <Mic className="relative h-9 w-9" strokeWidth={2.2} aria-hidden />
-            )}
-          </button>
+          <div className="flex justify-center">
+            <BoutonMicro etat={etat === 'analyse' ? 'analyse' : ecoute ? 'ecoute' : 'pret'} niveau={niveau} taille="h-20 w-20" onClick={() => void parler()} />
+          </div>
           <p className="t-appel mt-3 text-texte-2" aria-live="polite">
             {ecoute
               ? 'Je t’écoute…'

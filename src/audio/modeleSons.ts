@@ -1,7 +1,8 @@
 import type { InferenceSession } from 'onnxruntime-web'
 import wasmUrl from '../../node_modules/onnxruntime-web/dist/ort-wasm-simd-threaded.wasm?url'
+import { PAUSE_MOT, rogner } from '../scoring/mfcc'
 import { preparerAudio, type InfosModele } from '../scoring/sons/modele'
-import { comparer, evaluer, regrouper, sonsAttendus, type Evaluation, type Sorties } from '../scoring/sons/prononciation'
+import { CLASSES, comparer, evaluer, regrouper, sonsAttendus, type DetailSon, type Evaluation, type Sorties } from '../scoring/sons/prononciation'
 
 /**
  * Le grand modèle de reconnaissance des sons dans le navigateur (onnxruntime-web, WebAssembly).
@@ -12,6 +13,8 @@ import { comparer, evaluer, regrouper, sonsAttendus, type Evaluation, type Sorti
 const CACHE = 'darija-modele'
 const DOSSIER = `${import.meta.env.BASE_URL}modele/`
 const INFOS = `${DOSSIER}xlsr.json`
+/** Voix de Jamal déjà analysée, mot par mot (scripts/modele/references.ts). */
+const REFERENCES = `${DOSSIER}references.json`
 
 /** Lit la description du modèle (en ligne si possible, sinon la copie gardée). */
 export async function infosModele(): Promise<InfosModele> {
@@ -45,8 +48,8 @@ export async function modelePresent(): Promise<boolean> {
 export async function telechargerModele(progres: (part: number) => void, signal?: AbortSignal): Promise<void> {
   const infos = await infosModele()
   const cache = await caches.open(CACHE)
-  const fichiers = [wasmUrl, ...infos.morceaux.map((m) => DOSSIER + m)]
-  const total = infos.taille + 11e6
+  const fichiers = [wasmUrl, REFERENCES, ...infos.morceaux.map((m) => DOSSIER + m)]
+  const total = infos.taille + 12e6
   let fait = 0
   for (const url of fichiers) {
     const garde = await cache.match(url)
@@ -78,10 +81,28 @@ export async function supprimerModele(): Promise<void> {
   if (typeof caches !== 'undefined') await caches.delete(CACHE)
 }
 
-let session: Promise<{ session: InferenceSession; infos: InfosModele }> | null = null
+type Reference = { l: string; s: Record<string, number>[] }
+let session: Promise<{ session: InferenceSession; infos: InfosModele; references: Map<string, Reference> }> | null = null
+
+/** Les références analysées à l'avance (gardées avec le modèle ; récupérées si un ancien téléchargement ne les a pas). */
+async function lireReferences(cache: Cache): Promise<Map<string, Reference>> {
+  let r = await cache.match(REFERENCES)
+  if (!r) {
+    try {
+      const reponse = await fetch(REFERENCES)
+      if (reponse.ok) {
+        await cache.put(REFERENCES, reponse.clone())
+        r = reponse
+      }
+    } catch {
+      // Hors ligne : chaque référence sera analysée sur le téléphone.
+    }
+  }
+  return new Map(r ? Object.entries((await r.json()) as Record<string, Reference>) : [])
+}
 
 /** Ouvre le modèle (une fois par lancement de l'appli : quelques secondes). */
-export function ouvrirModele(): Promise<{ session: InferenceSession; infos: InfosModele }> {
+export function ouvrirModele(): Promise<{ session: InferenceSession; infos: InfosModele; references: Map<string, Reference> }> {
   session ??= (async () => {
     const ort = await import('onnxruntime-web')
     const cache = await caches.open(CACHE)
@@ -100,7 +121,8 @@ export function ouvrirModele(): Promise<{ session: InferenceSession; infos: Info
       octets.set(morceau, position)
       position += morceau.byteLength
     }
-    return { session: await ort.InferenceSession.create(octets, { executionProviders: ['wasm'], graphOptimizationLevel: 'all' }), infos }
+    const references = await lireReferences(cache)
+    return { session: await ort.InferenceSession.create(octets, { executionProviders: ['wasm'], graphOptimizationLevel: 'all' }), infos, references }
   })()
   session.catch(() => (session = null))
   return session
@@ -116,21 +138,40 @@ export async function ecouterSons(signal16k: Float32Array): Promise<Sorties> {
   return regrouper(logits.data as Float32Array, logits.dims[1], infos.vocabulaire)
 }
 
-/** Analyse de la voix de référence, gardée par MP3 : on ne la refait pas à chaque essai. */
-const references = new Map<string, Promise<Sorties>>()
+/** Analyse de la voix de référence faite sur le téléphone, gardée par MP3 (quand elle n'est pas dans references.json). */
+const analyses = new Map<string, Promise<Sorties>>()
+
+const PAR_LATIN = new Map(CLASSES.map((c) => [c.nom, c]))
+
+/** Évaluation de la référence reconstituée depuis references.json. */
+function depuisReference(r: Reference, attendus: string[]): Evaluation {
+  const details: DetailSon[] = attendus.map((son, i) => {
+    const c = PAR_LATIN.get(son)!
+    const repartition = r.s[i] ?? {}
+    return { son, latin: c.latin, probabilite: repartition[c.latin] ?? 0, confondu: null, special: !!c.special, voyelle: !!c.voyelle, repartition }
+  })
+  return { score: 0, details }
+}
 
 /**
- * Note un essai son par son contre la voix de référence (même mot, MP3 de Jamal).
- * `cle` identifie la référence (son chemin) ; les deux signaux sont à 16 kHz.
+ * Note un essai son par son contre la voix de référence (même mot, MP3 de Jamal). `cle` est le chemin du MP3 ;
+ * les signaux sont à 16 kHz. Seule la parole de l'essai est analysée (silences autour coupés, 0,2 s de marge) ;
+ * la référence vient de references.json, sinon elle est analysée ici une fois.
  */
-export async function noterParSons(cle: string, reference16k: Float32Array, essai16k: Float32Array, latin: string): Promise<Evaluation> {
-  let ref = references.get(cle)
+export async function noterParSons(cle: string, reference16k: Float32Array, essai16k: Float32Array, latin: string, pause = PAUSE_MOT): Promise<Evaluation> {
+  const { references } = await ouvrirModele()
+  const attendus = sonsAttendus(latin)
+  const parole = rogner(essai16k, 35, pause, 0.2)
+  const connue = references.get(cle)
+  if (connue && connue.l === latin && connue.s.length === attendus.length) {
+    return comparer(depuisReference(connue, attendus), evaluer(await ecouterSons(parole), attendus))
+  }
+  let ref = analyses.get(cle)
   if (!ref) {
     ref = ecouterSons(reference16k)
-    references.set(cle, ref)
-    ref.catch(() => references.delete(cle))
+    analyses.set(cle, ref)
+    ref.catch(() => analyses.delete(cle))
   }
-  const attendus = sonsAttendus(latin)
-  const [r, e] = [await ref, await ecouterSons(essai16k)]
-  return comparer(evaluer(r, attendus), evaluer(e, attendus))
+  const r = await ref
+  return comparer(evaluer(r, attendus), evaluer(await ecouterSons(parole), attendus))
 }

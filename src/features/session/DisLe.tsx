@@ -1,4 +1,4 @@
-import { Ear, Eye, Lightbulb, Loader2, Mic, RotateCcw, Square, Volume2 } from 'lucide-react'
+import { Ear, Eye, Lightbulb, RotateCcw, Volume2 } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { jouer, jouerAuto } from '../../audio/lecteur'
 import { modelePresent, noterParSons, ouvrirModele } from '../../audio/modeleSons'
@@ -12,6 +12,7 @@ import { PAUSE_MOT, PAUSE_PHRASE } from '../../scoring/mfcc'
 import { ajouterReglage, appreciation, decalageVoix, distanceEssai, scoreDeDistance } from '../../scoring/score'
 import { SEUIL_SON, sonRate, type DetailSon } from '../../scoring/sons/prononciation'
 import { AnneauScore } from '../../ui/AnneauScore'
+import { BoutonMicro } from '../../ui/BoutonMicro'
 import { Bouton } from '../../ui/Boutons'
 import { BoutonAudio } from '../mots/BoutonAudio'
 import { PasMaintenant } from './PasMaintenant'
@@ -128,7 +129,7 @@ export function DisLe({ mot, inverse = false, phrase = false, titre, consigne, o
       // Score précis : chaque son du mot, comparé à ce que le modèle entend chez Jamal ; sinon, le score acoustique.
       if (profil.scorePrecis && (await modelePresent())) {
         try {
-          const e = await noterParSons(mot.audio, ref.signal, essai, mot.latin)
+          const e = await noterParSons(mot.audio, ref.signal, essai, mot.latin, pause)
           score = e.score
           sons = e.details
         } catch {
@@ -230,34 +231,14 @@ export function DisLe({ mot, inverse = false, phrase = false, titre, consigne, o
         />
       ) : (
         <div className="flex flex-col items-center" aria-live="polite">
-          <button
-            type="button"
-            onClick={() => void parler()}
-            disabled={etat.type === 'analyse'}
-            aria-label={enregistre ? 'Arrêter l’enregistrement' : 'Parler'}
-            className="pressable relative flex h-24 w-24 items-center justify-center rounded-full bg-accent-plein text-white"
-          >
-            {/* Halo qui suit le volume de la voix. */}
-            <span
-              className="absolute inset-0 rounded-full bg-accent-plein opacity-25 transition-transform duration-100"
-              style={{ transform: `scale(${enregistre ? 1 + niveau * 0.6 : 1})` }}
-              aria-hidden
-            />
-            {etat.type === 'analyse' ? (
-              <Loader2 className="relative h-10 w-10 animate-spin" strokeWidth={2.2} aria-hidden />
-            ) : enregistre ? (
-              <Square className="relative h-8 w-8" fill="currentColor" strokeWidth={2} aria-hidden />
-            ) : (
-              <Mic className="relative h-10 w-10" strokeWidth={2.2} aria-hidden />
-            )}
-          </button>
+          <BoutonMicro etat={etat.type === 'analyse' ? 'analyse' : enregistre ? 'ecoute' : 'pret'} niveau={niveau} onClick={() => void parler()} />
           <p className="t-appel mt-3 text-texte-2">
             {etat.type === 'analyse'
               ? profil.scorePrecis
                 ? 'J’écoute chaque son… (quelques secondes)'
                 : 'J’écoute ton essai…'
               : enregistre
-                ? 'Je t’écoute… Touche pour arrêter.'
+                ? 'Parle maintenant, je t’écoute… (touche pour arrêter)'
                 : etat.type === 'muet'
                   ? 'Je n’ai rien entendu. Rapproche-toi du micro et réessaie.'
                   : `Touche le micro et dis ${cible}.`}

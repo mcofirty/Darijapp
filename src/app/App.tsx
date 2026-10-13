@@ -5,6 +5,7 @@ import { motDuLien } from '../data/motsPerso'
 import { AjoutMots } from '../features/ajout/AjoutMots'
 import { Proposition } from '../features/ajout/Proposition'
 import { choisirSons, couperSons } from '../audio/effets'
+import { modelePresent, ouvrirModele } from '../audio/modeleSons'
 import { Apprendre } from '../features/apprendre/Apprendre'
 import { AideInstallation } from '../features/onboarding/AideInstallation'
 import { Parcours } from '../features/parcours/Parcours'
@@ -38,7 +39,7 @@ export default function App() {
   const [onglet, setOnglet] = useState<Onglet>('apprendre')
   const [entree, setEntree] = useState<'entree-droite' | 'entree-gauche' | ''>('')
   const depart = useRef<Toucher | null>(null)
-  const { apparence, couleur, sons } = useProfil()
+  const { apparence, couleur, sons, scorePrecis } = useProfil()
   useEffect(() => appliquerCouleur(couleur), [couleur])
   useEffect(() => choisirSons(sons), [sons])
   // Sans écoute (réglage ou pause de 15 min) : plus de lecture automatique ni de son de réponse.
@@ -47,6 +48,16 @@ export default function App() {
     reglerLectureAutomatique(ecouter)
     couperSons(!ecouter)
   }, [ecouter])
+  // Score précis : le modèle s'ouvre peu après le lancement, pour être prêt au premier Dis-le.
+  useEffect(() => {
+    if (!scorePrecis) return
+    const minuteur = window.setTimeout(() => {
+      void modelePresent().then((oui) => {
+        if (oui) ouvrirModele().catch(() => {})
+      })
+    }, 3000)
+    return () => window.clearTimeout(minuteur)
+  }, [scorePrecis])
 
   useEffect(() => {
     appliquerApparence(apparence)

@@ -1,7 +1,7 @@
 import { execFileSync } from 'node:child_process'
 import { existsSync, readFileSync } from 'node:fs'
 import { beforeAll, describe, expect, it } from 'vitest'
-import { reechantillonner } from '../mfcc'
+import { reechantillonner, rogner } from '../mfcc'
 import { preparerAudio, type InfosModele } from './modele'
 import { comparer, evaluer, regrouper, sonsAttendus, type Sorties } from './prononciation'
 
@@ -50,10 +50,12 @@ describe.skipIf(!ffmpeg || !modele)('calibrage du score par sons', () => {
       const r = await session.run({ audio: new ort.Tensor('float32', a, [1, a.length]) })
       return regrouper(r.logits.data as Float32Array, r.logits.dims[1], infos.vocabulaire)
     }
+    // Comme dans l'appli : la référence entière, l'essai réduit à sa parole (0,2 s de marge).
+    const parole = (s: Float32Array) => rogner(s, 35, undefined, 0.2)
     for (const m of mots) {
       sorties.set(`jamal:${m.id}`, await ecouter(decoder(`public/audio/${m.id}.mp3`)))
-      for (const [r, f] of Object.entries(RENDUS)) sorties.set(`${r}:${m.id}`, await ecouter(decoder(`public/audio/${m.id}.mp3`, f)))
-      for (const v of VOIX) sorties.set(`${v}:${m.id}`, await ecouter(decoder(`scripts/modele/voix-test/${v}/${m.id}.mp3`)))
+      for (const [r, f] of Object.entries(RENDUS)) sorties.set(`${r}:${m.id}`, await ecouter(parole(decoder(`public/audio/${m.id}.mp3`, f))))
+      for (const v of VOIX) sorties.set(`${v}:${m.id}`, await ecouter(parole(decoder(`scripts/modele/voix-test/${v}/${m.id}.mp3`))))
     }
   }, 900000)
 
