@@ -67,7 +67,7 @@ export const ARTICLES: Article[] = [
   { id: 'turquoise', categorie: 'couleur', nom: 'Turquoise d’Essaouira', description: 'Les barques bleues du port', prix: 250, apercu: '#00707d' },
   { id: 'atlas', categorie: 'couleur', nom: 'Vert de l’Atlas', description: 'Les cèdres du Moyen Atlas', prix: 200, apercu: '#2e7d32' },
   { id: 'nuit', categorie: 'couleur', nom: 'Nuit du Sahara', description: 'Le ciel étoilé du désert', prix: 300, apercu: '#283a6b' },
-  { id: 'aucun', categorie: 'zellige', nom: 'Sans zellige', description: 'La carte du jour toute simple', prix: 0, apercu: 'transparent' },
+  { id: 'aucun', categorie: 'zellige', nom: 'Sans zellige', description: 'L’appli sans motif', prix: 0, apercu: 'transparent' },
   { id: 'etoile', categorie: 'zellige', nom: 'Zellige étoilé', description: 'Étoiles à huit branches, rouge et vert', prix: 120, apercu: '#c1272d' },
   { id: 'fassi', categorie: 'zellige', nom: 'Zellige de Fès', description: 'Losanges bleus et blancs', prix: 120, apercu: '#2563c9' },
   { id: 'tetouan', categorie: 'zellige', nom: 'Zellige de Tétouan', description: 'Hexagones verts et blancs', prix: 150, apercu: '#1d7a5f' },

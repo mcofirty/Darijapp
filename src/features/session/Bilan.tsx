@@ -9,6 +9,7 @@ import { RappelSauvegarde } from '../profil/RappelSauvegarde'
 import { useCroissanceAnimee } from '../jeu/useCroissanceAnimee'
 import { Bouton } from '../../ui/Boutons'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
+import { BandeZellige, useZellige } from '../../ui/zellige'
 
 interface Props {
   titre: string
@@ -77,10 +78,15 @@ export function PluieConfettis({ type, classe = 'fixed inset-0' }: { type: strin
 export function Bilan({ titre, sousTitre, xp, taux, activite, lignes, libelleEncore, onFermer, onEncore }: Props) {
   const { serie } = useResume()
   const { confettis } = useProfil()
+  const zellige = useZellige()
   const dirhams = activite ? dirhamsDActivite(activite) : 0
   const bonus = activite && activite.bonnes > 0 ? bonusPrecision(activite.mauvaises) : 0
   return (
     <div data-sans-balayage className="fixed inset-0 z-30 overflow-y-auto bg-fond">
+      <BandeZellige
+        z={zellige}
+        className="pointer-events-none absolute inset-x-0 top-0 h-[calc(env(safe-area-inset-top)+7rem)] [mask-image:linear-gradient(#000_35%,transparent)]"
+      />
       <PluieConfettis type={confettis} />
       <div className="relative mx-auto flex min-h-full max-w-xl flex-col justify-center px-marge pb-[calc(max(0.75rem,env(safe-area-inset-bottom))+9rem)] pt-[calc(env(safe-area-inset-top)+2rem)]">
         <h2 className="t-grand-titre mb-1 text-center">{titre}</h2>

@@ -1,5 +1,6 @@
 import { ChevronRight, type LucideIcon } from 'lucide-react'
 import type { ReactNode } from 'react'
+import { BandeZellige, type Zellige } from './zellige'
 
 /**
  * Section de liste groupée (style Réglages) : en-tête, cellules arrondies, note de bas.
@@ -9,18 +10,22 @@ export function Section({
   titre,
   note,
   arrondi = 'rounded-liste',
+  zellige,
   children,
 }: {
   titre?: string
   note?: string
   arrondi?: string
+  /** Bandeau de zellige en haut de la carte (hors de la liste, pour ne pas ajouter de séparateur). */
+  zellige?: Zellige
   children: ReactNode
 }) {
   return (
     <section className="mb-[26px]">
       {titre && <h2 className="t-gras mb-2 px-marge text-texte-2">{titre}</h2>}
-      <div className={`liste overflow-hidden bg-carte ${arrondi}`}>
-        {children}
+      <div className={`overflow-hidden bg-carte ${arrondi}`}>
+        <BandeZellige z={zellige} className="h-8" />
+        <div className="liste">{children}</div>
       </div>
       {note && <p className="t-note mt-2 px-marge text-texte-2">{note}</p>}
     </section>

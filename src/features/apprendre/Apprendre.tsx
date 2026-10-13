@@ -34,6 +34,7 @@ import { SCENES } from '../../exercices/dialogues'
 import { LECONS_GRAMMAIRE } from '../../exercices/grammaire'
 import { GuideSons } from './GuideSons'
 import { ListeSpeciale } from './ListeSpeciale'
+import { useZellige } from '../../ui/zellige'
 
 type Vue =
   | { type: 'accueil' }
@@ -66,6 +67,7 @@ function Serie() {
 
 export function Apprendre() {
   const [vue, setVue] = useState<Vue>({ type: 'accueil' })
+  const zellige = useZellige()
   const [mot, setMot] = useState<Mot | null>(null)
   const [session, setSession] = useState<SessionPrete | null>(null)
   const [numero, setNumero] = useState(0)
@@ -152,7 +154,7 @@ export function Apprendre() {
     )
 
   return (
-    <Page titre="Apprendre" accessoire={<Serie />}>
+    <Page zellige titre="Apprendre" accessoire={<Serie />}>
       <CarteSessionDuJour onCommencer={() => void lancer()} />
       <QuetesDuJour />
 
@@ -188,7 +190,7 @@ export function Apprendre() {
         />
       </Section>
 
-      <Section titre="Parler">
+      <Section titre="Parler" zellige={zellige}>
         <Ligne
           tuile={<Tuile icone={MessagesSquare} couleur="#34c759" />}
           titre="Dialogues"

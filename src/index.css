@@ -46,6 +46,8 @@
   --verre-epais: rgba(255, 255, 255, 0.72);
   --voile: rgba(0, 0, 0, 0.2);
   --verre-curseur: rgba(255, 255, 255, 0.78);
+  /* Fond émaillé sous le motif de zellige (barres de progression). */
+  --zellige-fond: #fbf6ec;
   color-scheme: light;
   -webkit-tap-highlight-color: transparent;
 }
@@ -78,6 +80,7 @@
   --verre-epais: rgba(37, 37, 40, 0.72);
   --voile: rgba(0, 0, 0, 0.45);
   --verre-curseur: rgba(255, 255, 255, 0.2);
+  --zellige-fond: #e6dcc6;
   color-scheme: dark;
 }
 
@@ -110,6 +113,7 @@
     --verre-epais: rgba(37, 37, 40, 0.72);
     --voile: rgba(0, 0, 0, 0.45);
     --verre-curseur: rgba(255, 255, 255, 0.2);
+  --zellige-fond: #e6dcc6;
     color-scheme: dark;
   }
 }

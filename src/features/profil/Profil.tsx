@@ -43,7 +43,7 @@ export function Profil() {
   if (signales) return <MotsSignales onRetour={() => setSignales(false)} />
   if (reglage) return <ReglageVoix onRetour={() => setReglage(false)} />
   return (
-    <Page titre="Profil">
+    <Page zellige titre="Profil">
       <Section titre="Apparence" arrondi="rounded-segmente" note="Automatique suit le réglage clair ou sombre de l'iPhone.">
         <Ligne tuile={<Tuile icone={SunMoon} couleur="#5856d6" />} titre="Thème" />
         <div className="sans-separateur px-marge pb-marge">

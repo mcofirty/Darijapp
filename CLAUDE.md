@@ -49,7 +49,7 @@ Publication : chaque push sur `main` lance l'Action « Publier » (tests, build,
 ```
 src/
   app/            navigation à 5 onglets (barre Liquid Glass, balayage), animation d'ouverture, fichiers partagés, stockage persistant
-  ui/             composants iOS : Page (grand titre), Section/Ligne/Tuile (listes groupées), Bouton, Segmente, Interrupteur, Alerte, Vide
+  ui/             composants iOS : Page (grand titre), Section/Ligne/Tuile (listes groupées), Bouton, Segmente, Interrupteur, Alerte, Vide ; zellige du souk
   audio/          lecture des mots (MP3, sinon synthèse vocale du téléphone), audio hors ligne (`horsLigne.ts`), micro et décodage (`micro.ts`)
   features/
     mots/         fiche d'un mot, liste de mots, bouton audio (partagés)
@@ -94,7 +94,7 @@ Détail complet (chaque écran, exercice, animation, mesure du design) : `docs/e
 
 - **Session du jour** (plein écran, style Duolingo, sans cœurs) : jusqu'à 8 révisions dues et 5 nouveaux mots dans l'ordre du programme ; découverte, Écoute et choisis, Traduis, Associe les paires, 2 Dis-le, Distingue les sons, Construis la phrase, Dis-le en darija (une révision connue, puis le premier nouveau mot, de mémoire) ; question ratée refaite en fin ; bilan (XP, dirhams, plante qui grandit, rappel de sauvegarde). Sans rien de dû : entraînement libre sur 8 mots vus.
 - **Autres écrans** : fiche mot (écoute, ralenti, sons, exemple, favori, signalement), « Mes mots » (page cachée `#ajout`, partage d'un mot par lien `#mot=`), aide à l'installation (Safari sur iPhone), vidéo d'ouverture, grammaire orale (6 fiches), dialogues (8 scènes accordées au genre), mode écoute (mains libres, phrases d'exemple à répéter), Mon jardin et souk.
-- **Design** : Human Interface Guidelines d'iOS 26 ; couleurs du drapeau (rouge #C1272D pour l'accent, vert #006233 pour les réussites ; `--accent-plein` / `--vert-plein` sous un texte blanc), clair et sombre (`data-theme`), SF Pro à l'échelle iOS (`.t-grand-titre`…), grands titres et bord flou au défilement, listes groupées façon Réglages (marge 20 pt, cellules 56 pt), angles d'iOS 26 (jetons `--radius-*`, conteneurs concentriques), Liquid Glass (`.verre`, `.verre-fin`, `.verre-epais`) réservé aux commandes, jamais au contenu ; barre d'onglets flottante dont la lentille suit le doigt, balayage entre onglets ; Réduire les animations et Réduire la transparence respectés.
+- **Design** : Human Interface Guidelines d'iOS 26 ; couleurs du drapeau (rouge #C1272D pour l'accent, vert #006233 pour les réussites ; `--accent-plein` / `--vert-plein` sous un texte blanc), clair et sombre (`data-theme`), SF Pro à l'échelle iOS (`.t-grand-titre`…), grands titres et bord flou au défilement, listes groupées façon Réglages (marge 20 pt, cellules 56 pt), angles d'iOS 26 (jetons `--radius-*`, conteneurs concentriques), Liquid Glass (`.verre`, `.verre-fin`, `.verre-epais`) réservé aux commandes, jamais au contenu ; barre d'onglets flottante dont la lentille suit le doigt, balayage entre onglets ; le zellige du souk (`src/ui/zellige.tsx`, sur un fond émaillé clair `--zellige-fond`) décore l'en-tête des onglets, les cartes (Session du jour, Quiz, Parler, étape du Parcours, mot), les barres de progression, les bilans, l'auvent du marchand, le plan du Taxi et la bordure du passeport ; Réduire les animations et Réduire la transparence respectés.
 
 ## Règles métier
 
@@ -221,7 +221,7 @@ Liste complète, ligne par ligne : `docs/historique.md`.
 | 2026-10-13 | Jalon 3, prononciation : Dis-le (MFCC + DTW), réglage sur la voix, anneau du score, score précis (modèle de sons) | `src/scoring/`, `src/audio/micro.ts`, `src/audio/modeleSons.ts`, `src/features/session/DisLe.tsx` |
 | 2026-10-13 | Jalon 4, jeu : quêtes et théière, collection, 66 badges, Parcours, dirhams et souk, plante en 30 paliers et « Mon jardin », marchandage et taxi, rappel .ics, sauvegarde | `src/gamification/`, `src/features/jeu/`, `src/features/parcours/`, `src/sauvegarde/` |
 | 2026-10-13 | Parler : Construis la phrase, Dis-le en darija, grammaire orale, dialogues ; modes sans parler et sans écouter | `src/features/parler/`, `src/exercices/phrases.ts`, `src/exercices/modes.ts` |
-| 2026-10-13 | Sauvegarde protégée et rappelée, audio hors ligne, oral d'abord (nouveau mot redit de mémoire, phrases du mode écoute), `CLAUDE.md` résumé | `src/app/stockage.ts`, `src/audio/horsLigne.ts`, `src/exercices/ecoute.ts`, `docs/` |
+| 2026-10-13 | Sauvegarde protégée et rappelée, audio hors ligne, oral d'abord (nouveau mot redit de mémoire, phrases du mode écoute), `CLAUDE.md` résumé, zellige du souk dans toute l'appli | `src/app/stockage.ts`, `src/audio/horsLigne.ts`, `src/exercices/ecoute.ts`, `src/ui/zellige.tsx`, `docs/` |
 
 ## Décisions
 

@@ -874,28 +874,3 @@ export function Jardin({
     </svg>
   )
 }
-
-/** Motif de zellige (SVG en fond), choisi au souk pour la carte du jour. */
-export function motifZellige(id: string): string | undefined {
-  if (id === 'etoile') {
-    const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'><g fill='none' stroke-width='1.6'><path d='M14 3 L17 11 L25 14 L17 17 L14 25 L11 17 L3 14 L11 11 Z' stroke='%23c1272d'/><rect x='9' y='9' width='10' height='10' transform='rotate(45 14 14)' stroke='%23006233'/></g></svg>`
-    return `url("data:image/svg+xml,${svg}")`
-  }
-  if (id === 'fassi') {
-    const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M12 1 L23 12 L12 23 L1 12 Z' fill='%232563c9' fill-opacity='0.85'/><path d='M12 7 L17 12 L12 17 L7 12 Z' fill='white'/></svg>`
-    return `url("data:image/svg+xml,${svg}")`
-  }
-  if (id === 'meknes') {
-    const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'><path d='M9 1 h10 l8 8 v10 l-8 8 h-10 l-8 -8 v-10 z' fill='%23d9822b' fill-opacity='0.85'/><rect x='10' y='10' width='8' height='8' fill='%232563c9'/></svg>`
-    return `url("data:image/svg+xml,${svg}")`
-  }
-  if (id === 'rabat') {
-    const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='24' height='16' viewBox='0 0 24 16'><path d='M0 6 l6 -5 l6 5 l6 -5 l6 5 v4 l-6 -5 l-6 5 l-6 -5 l-6 5 z' fill='%231c1c1e'/></svg>`
-    return `url("data:image/svg+xml,${svg}")`
-  }
-  if (id === 'tetouan') {
-    const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='26' height='30' viewBox='0 0 26 30'><path d='M13 1 L25 8 L25 22 L13 29 L1 22 L1 8 Z' fill='%231d7a5f' fill-opacity='0.85'/><path d='M13 8 L19 11.5 L19 18.5 L13 22 L7 18.5 L7 11.5 Z' fill='white'/></svg>`
-    return `url("data:image/svg+xml,${svg}")`
-  }
-  return undefined
-}

@@ -9,6 +9,7 @@ import { useProfil } from '../../db/useProfil'
 import { DESTINATIONS, MOTS_TAXI, TAILLE_PLAN, nouvelleCourse, type Consigne, type Course } from '../../exercices/jeux'
 import { Alerte } from '../../ui/Alerte'
 import { Bilan } from '../session/Bilan'
+import { MotifSvg, useZellige } from '../../ui/zellige'
 
 /** Courses par partie. */
 const COURSES = 3
@@ -96,6 +97,7 @@ export function Taxi({ onFermer, onEncore }: Props) {
   const avant = course.chemin[Math.max(0, Math.min(pas, course.chemin.length - 1) - 1)]
   const angle = pas === 0 ? 0 : (Math.atan2(position.x - avant.x, avant.y - position.y) * 180) / Math.PI
   const taille = TAILLE_PLAN * CASE
+  const zellige = useZellige()
 
   return (
     <div data-sans-balayage className="fixed inset-0 z-30 flex flex-col bg-fond">
@@ -143,6 +145,19 @@ export function Taxi({ onFermer, onEncore }: Props) {
 
         {/* Plan du quartier : rues en gris, trajet en pointillés, taxi en jaune. */}
         <svg viewBox={`-6 -6 ${taille + 12} ${taille + 12}`} className="mb-4 w-full max-w-[300px]" role="img" aria-label="Plan du trajet">
+          {/* Avec un zellige du souk, les pâtés de maisons entre les rues en sont carrelés. */}
+          {zellige && (
+            <>
+              <defs>
+                <MotifSvg z={zellige} id="zellige-taxi" />
+              </defs>
+              {Array.from({ length: (TAILLE_PLAN - 1) ** 2 }, (_, k) => {
+                const x = (k % (TAILLE_PLAN - 1)) * CASE + CASE / 2 + 10
+                const y = Math.floor(k / (TAILLE_PLAN - 1)) * CASE + CASE / 2 + 10
+                return <rect key={k} x={x} y={y} width={CASE - 20} height={CASE - 20} rx="6" fill="url(#zellige-taxi)" opacity="0.85" />
+              })}
+            </>
+          )}
           {Array.from({ length: TAILLE_PLAN }, (_, i) => (
             <g key={i}>
               <line x1={CASE / 2} y1={i * CASE + CASE / 2} x2={taille - CASE / 2} y2={i * CASE + CASE / 2} stroke="var(--remplissage)" strokeWidth="14" strokeLinecap="round" />

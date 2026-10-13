@@ -5,10 +5,12 @@ import type { Mot } from '../../data/types'
 import { useProfil } from '../../db/useProfil'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
 import { BoutonAudio } from '../mots/BoutonAudio'
+import { BandeZellige, useZellige } from '../../ui/zellige'
 
 /** Présentation d'un nouveau mot avant de l'exercer. */
 export function Decouverte({ mot }: { mot: Mot }) {
   const { afficherArabe } = useProfil()
+  const zellige = useZellige()
   const sons = sonsDuMot(mot.latin)
 
   useEffect(() => {
@@ -19,7 +21,8 @@ export function Decouverte({ mot }: { mot: Mot }) {
     <div>
       <p className="t-note mb-1 font-semibold uppercase text-accent">Nouveau mot</p>
       <h2 className="t-grand-titre mb-4">{mot.latin}</h2>
-      <div className="mb-[26px] rounded-liste bg-carte px-marge py-6 text-center">
+      <div className="mb-[26px] overflow-hidden rounded-liste bg-carte px-marge py-6 text-center">
+        <BandeZellige z={zellige} className="-mx-marge -mt-6 mb-6 h-8" />
         {afficherArabe && (
           <p className="arabe text-[2.4rem] leading-tight" dir="rtl" lang="ar">
             {mot.arabe}

@@ -6,6 +6,7 @@ import { programmeDuMot, type OptionsEcoute } from '../../exercices/ecoute'
 import { noterEcoute } from '../../db/journal'
 import { useProfil } from '../../db/useProfil'
 import { Bouton } from '../../ui/Boutons'
+import { RemplissageBarre } from '../../ui/zellige'
 
 interface Props {
   titre: string
@@ -155,7 +156,7 @@ export function LecteurEcoute({ titre, mots, options, onFermer }: Props) {
       </div>
       <div className="mx-auto w-full max-w-xl px-marge">
         <div className="h-1 overflow-hidden rounded-full bg-remplissage" aria-hidden>
-          <div className="h-full rounded-full bg-accent transition-[width] duration-500" style={{ width: `${((index + 1) / mots.length) * 100}%` }} />
+          <RemplissageBarre fraction={(index + 1) / mots.length} />
         </div>
       </div>
 

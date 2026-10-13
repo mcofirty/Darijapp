@@ -18,6 +18,7 @@ import { Decouverte } from './Decouverte'
 import { DisLe, type ResultatDire } from './DisLe'
 import { Distingue } from './Distingue'
 import { Paires } from './Paires'
+import { RemplissageBarre } from '../../ui/zellige'
 
 interface Props {
   etapes: Etape[]
@@ -180,7 +181,7 @@ function SessionEnCours({ etapes: depart, nouveaux, entrainement, activite, onFe
               aria-valuemax={etapes.length}
               aria-label="Progression de la session"
             >
-              <div className="h-full rounded-full bg-accent transition-[width] duration-500" style={{ width: `${(index / etapes.length) * 100}%` }} />
+              <RemplissageBarre fraction={index / etapes.length} />
             </div>
           </div>
         </div>

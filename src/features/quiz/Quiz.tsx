@@ -10,6 +10,7 @@ import { Chrono, type JeuChrono } from './Chrono'
 import { Marchandage } from './Marchandage'
 import { Taxi } from './Taxi'
 import { preparerExpress, preparerQuiz, questionSons } from './lancer'
+import { BandeZellige, useZellige } from '../../ui/zellige'
 
 type EnCours =
   | { type: 'quiz'; etapes: Etape[]; numero: number }
@@ -27,8 +28,10 @@ function DemandeDEcouter() {
 }
 
 function Carte({ surtitre, titre, texte, record, children }: { surtitre: string; titre: string; texte: string; record?: string; children: ReactNode }) {
+  const zellige = useZellige()
   return (
-    <section className="mb-[26px] rounded-carte bg-carte p-marge">
+    <section className="mb-[26px] overflow-hidden rounded-carte bg-carte p-marge">
+      <BandeZellige z={zellige} className="-mx-marge -mt-marge mb-marge h-8" />
       <p className="t-note font-semibold uppercase text-accent">{surtitre}</p>
       <h2 className="t-titre-2 mt-1">{titre}</h2>
       <p className="t-sous-titre mt-1 text-texte-2">{texte}</p>
@@ -90,7 +93,7 @@ export function Quiz() {
     )
 
   return (
-    <Page titre="Quiz">
+    <Page zellige titre="Quiz">
       <Carte
         surtitre="5 questions"
         titre="Contrôle tes acquis"

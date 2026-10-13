@@ -13,6 +13,7 @@ import { Page } from '../../ui/Page'
 import { Bilan } from '../session/Bilan'
 import { Choix } from '../session/Choix'
 import { DisLe, type ResultatDire } from '../session/DisLe'
+import { RemplissageBarre } from '../../ui/zellige'
 
 /** Couleurs des tuiles des scènes, dans l'ordre. */
 const COULEURS = ['#a2845e', '#ffcc00', '#34c759', '#ff2d55', '#007aff', '#ff9500', '#30b0c7', '#5856d6']
@@ -177,7 +178,7 @@ function Dialogue({ scene, onFermer, onEncore }: { scene: Scene; onFermer: () =>
             <p className="t-appel flex-1 truncate text-center font-semibold">{scene.titre}</p>
           ) : (
             <div className="h-2 flex-1 overflow-hidden rounded-full bg-remplissage" aria-hidden>
-              <div className="h-full rounded-full bg-accent transition-[width] duration-500" style={{ width: `${(faites / nbADire) * 100}%` }} />
+              <RemplissageBarre fraction={faites / nbADire} />
             </div>
           )}
         </div>

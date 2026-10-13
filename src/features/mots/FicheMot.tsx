@@ -11,6 +11,7 @@ import { Alerte } from '../../ui/Alerte'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
 import { BoutonAudio } from './BoutonAudio'
+import { BandeZellige, useZellige } from '../../ui/zellige'
 
 interface Props {
   mot: Mot
@@ -19,6 +20,7 @@ interface Props {
 
 export function FicheMot({ mot, retour }: Props) {
   const { afficherArabe } = useProfil()
+  const zellige = useZellige()
   const sons = sonsDuMot(mot.latin)
   const marque = useMarques().get(mot.id)
   const [choixMotif, setChoixMotif] = useState(false)
@@ -31,7 +33,8 @@ export function FicheMot({ mot, retour }: Props) {
 
   return (
     <Page titre={mot.latin} retour={retour}>
-      <div className="mb-[26px] rounded-liste bg-carte px-marge py-6 text-center">
+      <div className="mb-[26px] overflow-hidden rounded-liste bg-carte px-marge py-6 text-center">
+        <BandeZellige z={zellige} className="-mx-marge -mt-6 mb-6 h-8" />
         {afficherArabe && (
           <p className="arabe text-[2.4rem] leading-tight" dir="rtl" lang="ar">
             {mot.arabe}

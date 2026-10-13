@@ -10,6 +10,8 @@ import { melanger } from '../../exercices/session'
 import { Alerte } from '../../ui/Alerte'
 import { Bouton } from '../../ui/Boutons'
 import { Bilan } from '../session/Bilan'
+import { RemplissageBarre } from '../../ui/zellige'
+import { Auvent, useZellige } from '../../ui/zellige'
 
 /** Articles marchandés par partie. */
 const ARTICLES_PAR_PARTIE = 2
@@ -87,7 +89,7 @@ export function Marchandage({ onFermer, onEncore }: Props) {
         </button>
         <div className="verre verre-fin flex h-11 flex-1 items-center rounded-full px-4">
           <div className="h-2 flex-1 overflow-hidden rounded-full bg-remplissage" aria-hidden>
-            <div className="h-full rounded-full bg-accent transition-[width] duration-500" style={{ width: `${(index / partie.length) * 100}%` }} />
+            <RemplissageBarre fraction={index / partie.length} />
           </div>
         </div>
       </div>
@@ -138,23 +140,27 @@ export function Marchandage({ onFermer, onEncore }: Props) {
 }
 
 function ArticleEnVente({ article, afficherArabe }: { article: ArticleSouk; afficherArabe: boolean }) {
+  const zellige = useZellige()
   return (
-    <div className="mb-6 flex items-center gap-3 rounded-liste bg-carte p-marge">
-      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent-doux text-accent" aria-hidden>
-        <ShoppingBag className="h-6 w-6" strokeWidth={2.2} />
-      </span>
-      <span className="min-w-0">
-        <span className="t-note block font-semibold uppercase text-accent">Au souk</span>
-        <span className="t-gras block">
-          {article.latin}
-          {afficherArabe && (
-            <span className="arabe ml-2 font-normal text-texte-2" lang="ar">
-              {article.arabe}
-            </span>
-          )}
+    <div className="mb-6 overflow-hidden rounded-liste bg-carte">
+      <Auvent z={zellige} />
+      <div className="flex items-center gap-3 p-marge">
+        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent-doux text-accent" aria-hidden>
+          <ShoppingBag className="h-6 w-6" strokeWidth={2.2} />
         </span>
-        <span className="t-sous-titre block text-texte-2">Tu veux acheter {article.nom}.</span>
-      </span>
+        <span className="min-w-0">
+          <span className="t-note block font-semibold uppercase text-accent">Au souk</span>
+          <span className="t-gras block">
+            {article.latin}
+            {afficherArabe && (
+              <span className="arabe ml-2 font-normal text-texte-2" lang="ar">
+                {article.arabe}
+              </span>
+            )}
+          </span>
+          <span className="t-sous-titre block text-texte-2">Tu veux acheter {article.nom}.</span>
+        </span>
+      </div>
     </div>
   )
 }

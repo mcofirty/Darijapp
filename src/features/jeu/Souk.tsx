@@ -12,7 +12,8 @@ import { PluieConfettis } from '../session/Bilan'
 import { Segmente } from '../../ui/Boutons'
 import { Ligne, Section } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
-import { Plante, motifZellige } from './Plante'
+import { Plante } from './Plante'
+import { BandeZellige, fondZellige, zellige } from '../../ui/zellige'
 
 type Allee = 'jardin' | 'appli'
 
@@ -25,7 +26,7 @@ const RAYONS: { allee: Allee; categorie: Categorie; titre: string; note: string;
   { allee: 'appli', categorie: 'couleur', titre: 'Couleurs de l’appli', note: 'Remplace le rouge des boutons et des accents. Les erreurs restent en rouge.' },
   { allee: 'appli', categorie: 'sons', titre: 'Sons des réponses', note: 'Touche un jeu de sons pour l’écouter.' },
   { allee: 'appli', categorie: 'confettis', titre: 'Confettis du bilan', note: 'Ce qui tombe à la fin d’une session ou d’un quiz.' },
-  { allee: 'appli', categorie: 'zellige', titre: 'Zellige de la carte du jour', note: 'Un motif en haut de la carte « Session du jour ».' },
+  { allee: 'appli', categorie: 'zellige', titre: 'Zellige de l’appli', note: 'Un motif sur les cartes, les en-têtes, les bilans, les barres de progression et les jeux.' },
 ]
 
 const ICONES_OBJETS: Record<string, typeof Lamp> = { lanterne: Lamp, theiere: CupSoda, cigogne: Bird, tapis: RectangleHorizontal, tajine: Soup, chat: Cat, tortue: Turtle, poule: Egg, moineaux: Bird, fennec: PawPrint, dromadaire: PawPrint }
@@ -42,11 +43,11 @@ function Apercu({ a, stade, espece, pot }: { a: Article; stade: number; espece: 
         <Icone className="h-5 w-5" strokeWidth={2.2} />
       </span>
     )
-  const motif = a.categorie === 'zellige' ? motifZellige(a.id) : undefined
+  const motif = a.categorie === 'zellige' ? zellige(a.id) : undefined
   return (
     <span
       className="block h-9 w-9 shrink-0 rounded-full border border-separateur"
-      style={{ background: motif ? `${motif} center / 18px` : a.apercu, backgroundColor: motif ? 'var(--carte)' : a.apercu }}
+      style={motif ? { ...fondZellige(motif, 18), backgroundColor: 'var(--carte)' } : { background: a.apercu }}
       aria-hidden
     />
   )
@@ -57,10 +58,9 @@ const A_ESSAYER: Categorie[] = ['couleur', 'sons', 'confettis', 'zellige']
 
 /** Aperçu dans la fenêtre d'achat : la carte « Session du jour » avec son zellige. */
 function ApercuZellige({ id }: { id: string }) {
-  const motif = motifZellige(id)
   return (
     <div className="mb-4 overflow-hidden rounded-[18px] bg-carte text-left" aria-hidden>
-      {motif && <div className="h-10 opacity-80" style={{ background: `${motif} center / 28px` }} />}
+      <BandeZellige z={zellige(id)} />
       <p className="t-note px-3 pb-2 pt-2 font-semibold uppercase text-accent">Session du jour</p>
     </div>
   )
