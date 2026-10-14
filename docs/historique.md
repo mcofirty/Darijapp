@@ -38,6 +38,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 ## Décisions
 
+- 2026-10-14 : le diagnostic confirme que la synthèse du prétest a réussi (environ 51–54 s par mot en FP32), et situe l'arrêt après l'inférence ; récupérer le journal du job en échec avant correction du workflow.
+
 - 2026-10-14 : récupérer le diagnostic de l'Action corpus depuis son artifact avec un job dédié avant relance, pour distinguer un défaut d'inférence d'un défaut du workflow sans gaspiller les calculs des 40 lots.
 
 - 2026-10-14 : l'utilisateur demande explicitement de générer les 3 511 MP3 et d'écouter 50 mots avant de décider du déploiement. Les candidats sont conservés sur la branche expérimentale ; seule la page de comparaison et ses 100 MP3 sont ajoutés sous `/test-audio/`, sans modifier les lecteurs, les fichiers actifs ou les références de score. 16 étapes, quatre threads et BF16 conditionnel pour maîtriser les ressources ; aucune certification linguistique déduite du contrôle technique.

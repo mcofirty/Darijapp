@@ -22,9 +22,11 @@ jobs:
         shell: bash
         run: |
           python - <<'PY'
-          import base64,json,pathlib,subprocess
+          import base64,json,pathlib,subprocess,re
           root=pathlib.Path('artifacts/previous-probe')
           result={'files':[str(p.relative_to(root)) for p in root.rglob('*') if p.is_file()]}
+          logs=subprocess.run(['gh','run','view','38584885931','--repo','mcofirty/Darijapp','--log-failed'],capture_output=True,text=True)
+          result['failed_step_log']=re.sub(r'https?://[^\s]+','<url>',logs.stdout[-16000:])
           for name in ['report.json','error.json','resources.txt','plan.json']:
               found=list(root.rglob(name))
               if found:
@@ -33,6 +35,8 @@ jobs:
           body={'message':'test: conserve le diagnostic du prétest corpus HADRA',
                 'branch':'feat/hadra-tts',
                 'content':base64.b64encode(json.dumps(result,ensure_ascii=False,indent=2).encode()).decode()}
+          old=subprocess.run(['gh','api','repos/mcofirty/Darijapp/contents/docs/hadra/corpus-diagnostic.json?ref=feat/hadra-tts','--jq','.sha'],capture_output=True,text=True)
+          if old.returncode==0:body['sha']=old.stdout.strip()
           path=pathlib.Path('/tmp/hadra-diagnostic-body.json');path.write_text(json.dumps(body))
           subprocess.run(['gh','api','--method','PUT','repos/mcofirty/Darijapp/contents/docs/hadra/corpus-diagnostic.json','--input',str(path)],check=True,stdout=subprocess.DEVNULL)
           PY
