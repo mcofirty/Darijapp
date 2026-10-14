@@ -202,7 +202,7 @@ Profil : en plus des réglages, `micro` (Dis-le avec score), `parler` et `ecoute
 
 Jalon en cours : **4 — Jeu** (contenu du jeu terminé). Les jalons 1 à 3 sont en ligne sur https://mcofirty.github.io/Darijapp/ (score de prononciation à éprouver sur iPhone avec une vraie voix).
 
-Test OpenAI : clé GitHub disponible, API bloquée par `insufficient_quota` (HTTP 429 confirmé), aucun MP3 généré. Attendre l’activation de la facturation / du quota par l’utilisateur avant toute nouvelle requête. Pilote prêt, limité aux mêmes dix entrées ; Jamal reste active.
+Test OpenAI : l’utilisateur déclare le crédit API ajouté après `insufficient_quota`. Relance du pilote prêt, limité aux mêmes dix entrées ; vérifier génération et publication. Jamal reste active.
 
 Voix HADRA refusée par l’utilisateur le 2026-10-14 après écoute des 50 mots : arrêt du corpus et suppression du déclenchement automatique. Le comparatif `/test-audio/` reste disponible. Jamal reste la voix active ; aucun déploiement de HADRA et aucune reprise sans nouvelle demande explicite.
 
@@ -253,7 +253,7 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 
 ## Points en suspens
 
-- Test OpenAI autorisé (2026-10-14) : pilote de dix mots difficiles prêt avec `gpt-4o-mini-tts-2025-12-15` / Cedar, entrée latine, contrôles et reprise sans retry payant ; page autonome `/test-audio-openai/` publiée seulement après dix MP3 conformes. Clé ajoutée : HTTP 429 / `insufficient_quota` confirmé dans le run `38605552834`. L’utilisateur doit activer la facturation API ou ajouter des crédits / vérifier ses limites avant relance ; aucun nouveau MP3 ni comparatif OpenAI publié. Jamal conservée ; aucun lot de 50 ou de 3 511 sans décision suivante. Voir `docs/openai-tts/README.md`.
+- Test OpenAI autorisé (2026-10-14) : pilote de dix mots difficiles prêt avec `gpt-4o-mini-tts-2025-12-15` / Cedar, entrée latine, contrôles et reprise sans retry payant ; page autonome `/test-audio-openai/` publiée seulement après dix MP3 conformes. Clé ajoutée : HTTP 429 / `insufficient_quota` confirmé dans le run `38605552834`. L’utilisateur déclare désormais le crédit ajouté ; relance des mêmes dix mots, publication et contrôle en cours. Jamal conservée ; aucun lot de 50 ou de 3 511 sans décision suivante. Voir `docs/openai-tts/README.md`.
 
 - Comparatif en ligne : build, test mobile et contrôle HTTP des 100 MP3 réussis. L’utilisateur a refusé la voix HADRA ; corpus interrompu, génération automatique désactivée, fichiers expérimentaux conservés séparément.
 

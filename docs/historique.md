@@ -50,6 +50,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-14 | Clé OpenAI disponible mais synthèse refusée HTTP 429 / insufficient_quota ; aucun MP3 généré, comparatif en attente du quota API | `docs/openai-tts/pilot-status.json`, `docs/openai-tts/README.md` |
 
+| 2026-10-14 | Relance du pilote OpenAI de dix mots après déclaration d’ajout de crédit API, avec le diagnostic de quota et la reprise existants | `.github/workflows/openai-tts-resume.yml` |
+
 ## Décisions
 
 - 2026-10-14 : contrôle HTTP réussi sur la page, les scripts et les 100 MP3 (50 avant/après) ; distinguer la disponibilité du test de l'avancement du corpus complet, dont les jobs sont observés sans interrompre les calculs.
