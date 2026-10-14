@@ -120,3 +120,12 @@ navigateur ; aucune opinion ni progression n’est envoyée au serveur.
 La reprise utilise un cache distinct, réutilise ses candidats intacts et garde
 les tentatives incertaines bloquées. Aucun essai de 50 ni activation dans les
 exercices avant une décision suivante.
+
+Résultat V2 : quatre nouveaux fichiers conformes, six SHA-256 conservés, lecture
+des trois lecteurs vérifiée sur les vrais MP3 en Chromium mobile. Publication
+Pages `38642664847` réussie. Les durées/pauses de `we99e3` et `3tchan` restent
+inhabituelles ; un diagnostic Common Voice non calibré suggère encore une lecture
+des chiffres de `we99e3` comme des nombres. Ce mot ne doit pas être considéré
+comme corrigé. Voir `revision-2-review-queue.json` ; le diagnostic ne certifie
+pas les autres mots. Attendre le choix entre transcription phonétique latine
+pour le TTS (latin affiché conservé) et maintien de Jamal pour les mots non fiables.

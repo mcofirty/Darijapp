@@ -1,0 +1,143 @@
+{
+  "revision": 2,
+  "review_id": "06ccf904608b1378848eede716104d6995357c38132fde97e245247e719f00e5",
+  "model": "gpt-4o-mini-tts-2025-12-15",
+  "voice": "cedar",
+  "linguistic_certification": false,
+  "confidence": null,
+  "diagnostic_limit": "Reconnaisseur Common Voice non calibré pour le darija ; hypothèses de phonèmes, pas une certification.",
+  "entries": [
+    {
+      "entry_id": "nourriture-001",
+      "latin": "khobz",
+      "audio_sha256": "0f7867cac4e724d3799a2e3c29b413d7080e4ed46b48e086245f9407e59e28b2",
+      "pronunciation_status": "uncertain",
+      "confidence": null,
+      "reasons": [
+        "awaiting_user_review"
+      ]
+    },
+    {
+      "entry_id": "chiffres-017",
+      "latin": "ch7al?",
+      "audio_sha256": "e4911aca6cf9ed1765c86a3ae052569819259e4d1cd4ba9acbfa929324b33dc3",
+      "pronunciation_status": "uncertain",
+      "confidence": null,
+      "reasons": [
+        "awaiting_user_review",
+        "long_edge_silence"
+      ]
+    },
+    {
+      "entry_id": "verbes-085",
+      "latin": "we99e3",
+      "audio_sha256": "434d03853587e89f14072f60b48de29cdea8cb50c6afbbcc9a3593b5b8eda93d",
+      "pronunciation_status": "uncertain",
+      "confidence": null,
+      "reasons": [
+        "awaiting_user_review",
+        "long_internal_silence",
+        "possible_literal_digit_reading"
+      ]
+    },
+    {
+      "entry_id": "adjectifs-052",
+      "latin": "3tchan",
+      "audio_sha256": "b85823362d5e69422c2bf87367ec90cb6b1a48ff2b1bbfa2ec347dac6d50d416",
+      "pronunciation_status": "uncertain",
+      "confidence": null,
+      "reasons": [
+        "awaiting_user_review",
+        "long_edge_silence",
+        "long_internal_silence"
+      ]
+    }
+  ],
+  "suspected_digit_reading_diagnostic": {
+    "key": "verbes-085",
+    "prompt": "we99e3",
+    "analyses": [
+      {
+        "origin": "openai_v2",
+        "decoded_tokens": [
+          "w",
+          "eɪ",
+          "n",
+          "aɪ",
+          "n",
+          "n",
+          "aɪ",
+          "n",
+          "iː",
+          "θ",
+          "ɹ",
+          "i"
+        ],
+        "uncalibrated_gop_score": 3,
+        "special_sounds": [
+          {
+            "expected": "9",
+            "uncalibrated_probability": 2.712596590891803e-05,
+            "preferred_alternative": "n"
+          },
+          {
+            "expected": "3",
+            "uncalibrated_probability": 0.00026122123576165294,
+            "preferred_alternative": "n"
+          }
+        ]
+      },
+      {
+        "origin": "openai_v1",
+        "decoded_tokens": [
+          "w",
+          "i",
+          "n",
+          "aɪ",
+          "n",
+          "n",
+          "aɪ",
+          "n",
+          "iː",
+          "f",
+          "ɹ"
+        ],
+        "uncalibrated_gop_score": 0,
+        "special_sounds": [
+          {
+            "expected": "9",
+            "uncalibrated_probability": 5.805555336646727e-05,
+            "preferred_alternative": "n"
+          },
+          {
+            "expected": "3",
+            "uncalibrated_probability": 0.0010715771905670912,
+            "preferred_alternative": "i"
+          }
+        ]
+      },
+      {
+        "origin": "jamal",
+        "decoded_tokens": [
+          "w",
+          "a",
+          "q",
+          "aː"
+        ],
+        "uncalibrated_gop_score": 40,
+        "special_sounds": [
+          {
+            "expected": "9",
+            "uncalibrated_probability": 0.7117663496051359,
+            "preferred_alternative": null
+          },
+          {
+            "expected": "3",
+            "uncalibrated_probability": 0.014696247540273353,
+            "preferred_alternative": null
+          }
+        ]
+      }
+    ]
+  }
+}

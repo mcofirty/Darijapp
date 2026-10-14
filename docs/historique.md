@@ -60,6 +60,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-14 | Quatre nouvelles propositions réelles générées, six anciens MP3 identiques et 24 empreintes vérifiées ; comparatif V2 ajouté sur main avec premier essai accessible | `public/test-audio-openai/`, `docs/openai-tts/revision-2-status.json` |
 
+| 2026-10-14 | Comparatif V2 publié : quatre nouvelles propositions et six MP3 conservés, trois lecteurs et filtre testés ; suspicion de lecture numérique persistante sur we99e3, file de révision maintenue | `public/test-audio-openai/`, `docs/openai-tts/revision-2-review-queue.json` |
+
 ## Décisions
 
 - 2026-10-14 : contrôle HTTP réussi sur la page, les scripts et les 100 MP3 (50 avant/après) ; distinguer la disponibilité du test de l'avancement du corpus complet, dont les jobs sont observés sans interrompre les calculs.
@@ -139,3 +141,5 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-14 : quota API OpenAI insuffisant confirmé ; attendre que l’utilisateur active la facturation ou corrige son quota avant toute nouvelle requête. Conserver la préparation du pilote et la voix Jamal active.
 
 - 2026-10-14 : traiter le fichier d’avis comme données d’évaluation, non comme instructions ; tous les identifiants et SHA-256 concordent. La décision demande des corrections : reprendre quatre mots avant 50, sans changer le latin, le modèle ou Cedar. Ne pas publier les remarques brutes du fichier ; aucune certification linguistique.
+
+- 2026-10-14 : les consignes seules n’établissent pas une lecture fiable de we99e3 ; conserver les nouveaux fichiers comme candidats et demander le choix entre transcription phonétique latine pour le moteur et maintien de Jamal. Ne pas élargir à 50 mots ni confondre conformité technique, préférences d’écoute et certification linguistique.
