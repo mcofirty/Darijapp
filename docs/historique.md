@@ -30,6 +30,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 | 2026-10-12 | Animation d'ouverture : vidéo de 3 s de l'utilisateur sur fond sombre à chaque lancement, passée d'un toucher, image finale avec Réduire les animations ou si la vidéo ne démarre pas | `public/lancement.mp4`, `public/lancement-fin.jpg`, `src/app/lancement.ts`, `index.html` |
 | 2026-10-14 | Harmonisation de 176 champs latins dans les mots, exemples et dialogues, sans modifier les aides de prononciation ; tests de correspondance étendus à tous les textes JSON et 80 références du score recalculées | `src/data/`, `public/modele/references.json`, `docs/corrections-latin.md` |
 
+| 2026-10-14 | Espace de test audio autonome : 50 mots réels, lecteurs Avant/Jamal et Après/HADRA latin, avis et export local ; voix des exercices conservée | `public/test-audio/` |
+
 ## Décisions
 
 
@@ -65,3 +67,5 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-13 : zellige à 7 endroits choisis par l'utilisateur (jeux et menus), un seul module (`src/ui/zellige.tsx`, carreaux SVG en `data:` pour les fonds CSS et les `<pattern>` du Taxi) ; fond émaillé clair sous chaque motif pour qu'il reste visible en mode sombre ; bande d'en-tête à 40 % et courte, pour ne pas gêner le grand titre.
 - 2026-10-13 : bande de zellige en haut des onglets retirée à la demande de l'utilisateur ; le zellige reste sur les cartes, barres, bilans, jeux et passeport.
 - 2026-10-14 : harmonisation des champs `latin` sur le corpus complet (3 516 textes), à la demande de l'utilisateur, sans prendre les aides `prononciation` comme référence ni les modifier. Les graphies françaises ambiguës sont remplacées par des formes explicites adaptées au darija ; le mot séparé lah devient allah par choix d'écriture, sans qualifier les contractions attestées de fautes. Arabe, français, identifiants et MP3 sont conservés ; 80 références du score sont recalculées pour suivre les nouveaux sons attendus. Les variantes de voyelles et les questions de sens/accord incertaines ne sont pas corrigées automatiquement.
+
+- 2026-10-14 : comparatif HADRA publié dans un sous-dossier autonome du site existant, sans toucher aux MP3 actifs, aux lecteurs ni à IndexedDB ; les contrôles techniques ne certifient pas la prononciation.

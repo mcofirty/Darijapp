@@ -245,6 +245,8 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 
 ## Points en suspens
 
+- Test audio HADRA (2026-10-14) : 50 mots avant/après sur `/test-audio/`, cible latine, avis local indépendant de la progression. Voix HADRA expérimentale ; aucun remplacement de `public/audio` ni des références du score. Activation dans les exercices uniquement après décision explicite de l'utilisateur.
+
 - Latin (2026-10-14) : les aides `prononciation` n'ont pas été utilisées ni réécrites pour cette harmonisation ; certaines explications restent à revoir séparément. Les questions de sens/accord relevées par l'audit (`lbab khedra`) restent distinctes de la correction des seules graphies latines ; ne pas modifier arbitrairement l'arabe ou les traductions pour faire disparaître une alerte.
 
 - Voix : MP3 Jamal générés par l'Action « Audio » (secrets `AZURE_SPEECH_KEY` et `AZURE_SPEECH_REGION`) ; si Azure refuse (401/403), vérifier la clé, la région et le niveau F0. Tant qu'un MP3 manque, la voix de l'iPhone lit (arabe standard). La voix reste un peu « littéraire » (arabe standard) : pour un mot qui sonne mal, corriger son champ `arabe` (orthographe darija) et supprimer son MP3.
