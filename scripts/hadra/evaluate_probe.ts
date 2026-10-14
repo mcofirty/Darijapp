@@ -11,6 +11,10 @@ const report = JSON.parse(readFileSync(`${root}/docs/hadra/probe/report.json`, '
 const session = await ort.InferenceSession.create(Buffer.concat(infos.morceaux.map((name: string) => readFileSync(`${root}/public/modele/${name}`))), { intraOpNumThreads: 2 })
 const outputs = []
 for (const record of report.records) {
+  if (!record.mp3) {
+    outputs.push({ key: record.key, prompt: record.prompt, analyses: [], unavailable: 'technical_rejection' })
+    continue
+  }
   const candidates = [{ origin: 'hadra', path: `${root}/docs/hadra/probe/${record.mp3}` }, { origin: 'jamal', path: `${root}/public/${record.audio}` }]
   const analyses = []
   for (const candidate of candidates) {

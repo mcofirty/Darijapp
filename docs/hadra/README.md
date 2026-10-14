@@ -77,6 +77,8 @@ Une exécution manuelle peut sélectionner 1–50 entrées. CPU : runner héberg
 GPU : runner **déjà enregistré** avec les labels `self-hosted`, `linux`, `gpu` ; aucun
 service GPU n'est provisionné ni facturé par cette intégration.
 Les poids et les masters intacts sont mis en cache entre exécutions ; les rapports et audios sont des artifacts conservés 14 jours.
+Le cache Actions peut être évincé : il accélère la reprise mais n'est pas une archive
+permanente des masters. Les MP3 de contrôle restent versionnés sur la branche.
 La branche de travail conserve aussi les sons de contrôle dans `docs/hadra/probe/`.
 
 La bibliothèque actuellement servie, l'Action Azure « Audio », les lecteurs, les caches
@@ -109,5 +111,21 @@ npx tsx scripts/hadra/evaluate_probe.ts artifacts/hadra/phonetic-diagnostic.json
 Prévoir initialement 4–8 Gio de RAM CPU et 5–10 Gio de disque (dépendances, poids,
 cache et masters), à confirmer par `probe/resources.txt`. Pour GPU, commencer par
 un worker existant de 8–16 Gio VRAM, batch 1 ; aucune mesure GPU n'a été réalisée.
-Le RTF observé à 8 étapes n'est pas une mesure à 32 étapes ni une estimation fiable
-pour les phrases ; le pilote doit préciser ces écarts avant tout lot complet.
+Le RTF observé sur des mots courts n'est pas une estimation fiable pour les phrases ;
+le pilote doit préciser ces écarts avant tout lot complet.
+
+L'Action [38578065237](https://github.com/mcofirty/Darijapp/actions/runs/38578065237)
+a ensuite produit cinq candidats à **32 étapes**, avec deux graines pour `9elb` et
+`khobz`. Contrôles techniques : cinq conformes. Synthèse : 91–99 s par fichier court,
+RTF 74–87 ; génération complète 8 min 13 s, pic mémoire 2,63 Gio sur deux threads CPU.
+Mesures originales : `probe/benchmark-32steps.resources.txt` ; diagnostic :
+`probe/diagnostic-32steps.json`. Les écarts détectés sur les consonnes ciblées
+persistent : augmenter le nombre d'étapes n'a pas établi une lecture fiable du latin.
+
+**Conclusion du prétest : générateur opérationnel, compatibilité linguistique Arabizi
+non validée.** Les huit fichiers sont des candidats expérimentaux, jamais des références
+certifiées. Une adaptation au latin ou un checkpoint qui connaît cette convention doit
+être évalué avant activation ; les cibles ne sont pas réécrites en arabe. Le protocole
+de 50 entrées reste disponible, mais aucun lot complet ou massif n'a été exécuté.
+L'Action borne la génération à 30 min pour garder du temps de sauvegarde ; fractionner
+les futurs lots selon les mesures, après résolution de la lecture latine.

@@ -32,7 +32,11 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-14 | Générateur expérimental HADRA lisant directement le latin, pilote de 50 entrées avec variantes, bibliothèque incrémentale WAV/MP3 et contrôles techniques ; tests d'inventaire, d'intégrité et de rejet, essai CPU séparé de la production | `scripts/hadra/`, `.github/workflows/hadra.yml`, `docs/hadra/README.md` |
 
+| 2026-10-14 | Essais HADRA réels à 8/32 étapes sur trois mots latins (huit fichiers), mesure CPU et diagnostic phonétique reproductible hors connexion ; file de révision enrichie des avertissements et sauvegarde après budget de génération | `docs/hadra/probe/`, `scripts/hadra/evaluate_probe.ts`, `scripts/hadra/generate.py`, `.github/workflows/hadra.yml` |
+
 ## Décisions
+
+- 2026-10-14 : essai à 32 étapes réussi techniquement sur cinq candidats (deux graines pour 9elb et khobz), 8 min 13 s de génération, 2,6 Gio de mémoire et 91–99 s par fichier. Les écarts phonétiques persistent ; HADRA reste expérimental, sans conversion des cibles latines en arabe ni génération massive. La génération est bornée à 30 min dans un job de 40 min pour conserver les résultats partiels.
 
 - 2026-10-14 : premier essai HADRA CPU réussi sur 9elb, khobz et 3afak à 8 étapes (20–22 s par fichier, RTF 16–19) ; contrôles techniques passés avec silence initial long. Diagnostic XLSR indépendant conservé : écarts sur les sons ciblés, scores non calibrés et aucune certification ; comparaison à 32 étapes avant choix de voix.
 

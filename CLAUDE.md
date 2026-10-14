@@ -72,7 +72,7 @@ src/
   db/             schéma Dexie et migrations, plan et enregistrement des sessions, mots ajoutés, résumé en direct
   data/           un fichier JSON par thème, liste des thèmes, sons du darija, paires de sons (`sons/paires.json`), grammaire et dialogues (`parler/`)
 scripts/
-  generate_audio.py, modele/ (export du modèle de sons, voix de test)
+  generate_audio.py, modele/ (export du modèle de sons, voix de test), hadra/ (pilote TTS latin expérimental)
 public/audio/     MP3 générés par l'Action (voix Jamal) ; public/modele/ : modèle de sons (ONNX int8 en morceaux, `xlsr.json`)
 docs/
   cahier-des-charges.md   demande d'origine
@@ -202,7 +202,7 @@ Profil : en plus des réglages, `micro` (Dis-le avec score), `parler` et `ecoute
 
 Jalon en cours : **4 — Jeu** (contenu du jeu terminé). Les jalons 1 à 3 sont en ligne sur https://mcofirty.github.io/Darijapp/ (score de prononciation à éprouver sur iPhone avec une vraie voix).
 
-Voix HADRA : générateur expérimental opérationnel sur `feat/hadra-tts` ; trois mots latins synthétisés sur CPU, contrôles techniques passés mais écarts phonétiques signalés. Comparaison à 32 étapes en cours avant activation éventuelle.
+Voix HADRA : générateur expérimental opérationnel sur `feat/hadra-tts` ; trois mots latins testés à 8 puis 32 étapes, contrôles techniques passés mais écarts phonétiques persistants. Lecture fiable de l'Arabizi non établie, génération massive suspendue.
 
 | Jalon | Durée estimée | Contenu | Statut |
 | --- | --- | --- | --- |
@@ -226,6 +226,7 @@ Liste complète, ligne par ligne : `docs/historique.md`.
 | 2026-10-13 | Sauvegarde protégée et rappelée, audio hors ligne, oral d'abord (nouveau mot redit de mémoire, phrases du mode écoute), `CLAUDE.md` résumé, zellige du souk dans toute l'appli | `src/app/stockage.ts`, `src/audio/horsLigne.ts`, `src/exercices/ecoute.ts`, `src/ui/zellige.tsx`, `docs/` |
 | 2026-10-13 | Façon Duolingo (1) : force du mot, mustawa d nnbta, gel et réparation de la série, double XP, combo, défi du mois, bilan de la semaine | `src/gamification/serie.ts`, `src/gamification/combo.ts`, `src/gamification/defis.ts`, `src/gamification/semaine.ts`, `src/db/serie.ts`, `src/features/jeu/Motivation.tsx`, `src/ui/ForceMot.tsx` |
 | 2026-10-14 | Harmonisation du latin : 176 champs dans 22 fichiers, emprunts explicités, allah séparé développé, ordre de 3tchan et gémination de we99e3 corrigés ; 80 références du score recalculées, contrôles étendus à tous les textes JSON | `src/data/`, `public/modele/references.json`, `docs/corrections-latin.md` |
+| 2026-10-14 | Pilote HADRA latin opérationnel avec reprises, variantes et contrôles ; essais CPU et diagnostic non certifiant, sans activation dans l'application | `scripts/hadra/`, `.github/workflows/hadra.yml`, `docs/hadra/` |
 
 ## Décisions
 
@@ -249,7 +250,7 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 
 - Dépendances HADRA : PyArrow récent exige NumPy 2 ; combinaison figée avec NumPy 2.2.6 vérifiée en inférence CPU dans l'Action (2026-10-14).
 
-- HADRA (2026-10-14) : adaptateur F5-TTS et pilote de 50 entrées sur `feat/hadra-tts`, voir `docs/hadra/README.md`. Cible latine directe, poids/vocodeur figés et vérifiés, référence synthétique Jamal existante, contrôles techniques et reprise par empreinte ; aucune promotion linguistique automatique. Les candidats restent hors de `public/audio` ; l'application utilise toujours Jamal. Le vocabulaire contient l'Arabizi mais sa prononciation par HADRA doit être évaluée. L'accès Hugging Face est bloqué dans ce cloud ; les essais passent par GitHub Actions CPU ou un GPU self-hosted déjà disponible.
+- HADRA (2026-10-14) : adaptateur F5-TTS et protocole de 50 entrées sur `feat/hadra-tts`, voir `docs/hadra/README.md`. 8 fichiers de trois mots latins réellement synthétisés (8/32 étapes) ; technique conforme mais écarts phonétiques persistants, sans certification. Pic CPU mesuré 2,6 Gio ; à 32 étapes, 91–99 s par fichier court. Reprise par empreinte, file de révision avec avertissements, budget de 30 min par génération. Le latin fiable nécessite une adaptation du modèle ou un autre checkpoint à évaluer, sans conversion des cibles en arabe. L'application utilise toujours Jamal ; aucune génération massive ni activation HADRA. Hugging Face est bloqué dans ce cloud, ouvert sur GitHub Actions.
 
 - Latin (2026-10-14) : les aides `prononciation` n'ont pas été utilisées ni réécrites pour cette harmonisation ; certaines explications restent à revoir séparément. Les questions de sens/accord relevées par l'audit (`lbab khedra`) restent distinctes de la correction des seules graphies latines ; ne pas modifier arbitrairement l'arabe ou les traductions pour faire disparaître une alerte.
 

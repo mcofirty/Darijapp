@@ -63,6 +63,7 @@ jobs:
           key: hadra-library-v1-${{ github.ref_name }}-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: hadra-library-v1-${{ github.ref_name }}-
       - name: Générer le pilote latin sans remplacer les MP3 actuels
+        timeout-minutes: 30
         env:
           HADRA_DEVICE: ${{ inputs.device || 'cpu' }}
           HADRA_LIMIT: ${{ inputs.limit || '3' }}

@@ -1,0 +1,221 @@
+{
+  "evaluator": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+  "linguistic_certification": false,
+  "calibrated_confidence": null,
+  "limits": [
+    "Common Voice model, not a darija pronunciation validator",
+    "Gemination folded by existing scoring code",
+    "Jamal is synthetic and not linguistic ground truth",
+    "Greedy tokens and GOP scores are diagnostic, not certified IPA"
+  ],
+  "records": [
+    {
+      "key": "b8f318606f3abb22f329122c8cfcb21e894588e273071b04258eabd9766170d7",
+      "prompt": "9elb",
+      "analyses": [
+        {
+          "origin": "hadra",
+          "decoded_tokens": [
+            "s",
+            "aː",
+            "t"
+          ],
+          "uncalibrated_gop_score": 0,
+          "special_sounds": [
+            {
+              "expected": "9",
+              "uncalibrated_probability": 0.0001306918964539383,
+              "preferred_alternative": "s"
+            }
+          ]
+        },
+        {
+          "origin": "jamal",
+          "decoded_tokens": [
+            "q",
+            "a",
+            "l",
+            "b"
+          ],
+          "uncalibrated_gop_score": 85,
+          "special_sounds": [
+            {
+              "expected": "9",
+              "uncalibrated_probability": 0.8685371862362924,
+              "preferred_alternative": "kh"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "8346314c158d476e4d5ecaa4f8d824aae44efefb88a1c9fd67a35d4abaf36a0c",
+      "prompt": "9elb",
+      "analyses": [
+        {
+          "origin": "hadra",
+          "decoded_tokens": [
+            "l",
+            "a",
+            "l",
+            "q"
+          ],
+          "uncalibrated_gop_score": 18,
+          "special_sounds": [
+            {
+              "expected": "9",
+              "uncalibrated_probability": 0.000010530202361798694,
+              "preferred_alternative": "l"
+            }
+          ]
+        },
+        {
+          "origin": "jamal",
+          "decoded_tokens": [
+            "q",
+            "a",
+            "l",
+            "b"
+          ],
+          "uncalibrated_gop_score": 85,
+          "special_sounds": [
+            {
+              "expected": "9",
+              "uncalibrated_probability": 0.8685371862362924,
+              "preferred_alternative": "kh"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "cd8eceff08c46b3da83c946d32231343805d8854fb15dd06738b0e4abae0ba5c",
+      "prompt": "khobz",
+      "analyses": [
+        {
+          "origin": "hadra",
+          "decoded_tokens": [
+            "k",
+            "a",
+            "h",
+            "o",
+            "k",
+            "a",
+            "s"
+          ],
+          "uncalibrated_gop_score": 4,
+          "special_sounds": [
+            {
+              "expected": "kh",
+              "uncalibrated_probability": 0.013650598607856886,
+              "preferred_alternative": "h"
+            }
+          ]
+        },
+        {
+          "origin": "jamal",
+          "decoded_tokens": [
+            "x",
+            "u",
+            "d",
+            "s"
+          ],
+          "uncalibrated_gop_score": 50,
+          "special_sounds": [
+            {
+              "expected": "kh",
+              "uncalibrated_probability": 0.7797140497963815,
+              "preferred_alternative": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "b73b93f2fcc22e81993f4297d454df4ddcd62841ba890fb63e30943b1be4eec5",
+      "prompt": "khobz",
+      "analyses": [
+        {
+          "origin": "hadra",
+          "decoded_tokens": [
+            "o",
+            "h",
+            "u",
+            "k",
+            "ə",
+            "s"
+          ],
+          "uncalibrated_gop_score": 4,
+          "special_sounds": [
+            {
+              "expected": "kh",
+              "uncalibrated_probability": 0.00441066581757977,
+              "preferred_alternative": "h"
+            }
+          ]
+        },
+        {
+          "origin": "jamal",
+          "decoded_tokens": [
+            "x",
+            "u",
+            "d",
+            "s"
+          ],
+          "uncalibrated_gop_score": 50,
+          "special_sounds": [
+            {
+              "expected": "kh",
+              "uncalibrated_probability": 0.7797140497963815,
+              "preferred_alternative": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "c238d86ce253d8146fa6f25afbf36f7339ac3183ba5f9415cbb4292aab57b89f",
+      "prompt": "3afak",
+      "analyses": [
+        {
+          "origin": "hadra",
+          "decoded_tokens": [
+            "s",
+            "ɛ",
+            "f",
+            "ə",
+            "k"
+          ],
+          "uncalibrated_gop_score": 36,
+          "special_sounds": [
+            {
+              "expected": "3",
+              "uncalibrated_probability": 0.00008232148408984444,
+              "preferred_alternative": "s"
+            }
+          ]
+        },
+        {
+          "origin": "jamal",
+          "decoded_tokens": [
+            "b",
+            "aː",
+            "r",
+            "f",
+            "a",
+            "u",
+            "k"
+          ],
+          "uncalibrated_gop_score": 30,
+          "special_sounds": [
+            {
+              "expected": "3",
+              "uncalibrated_probability": 0.0004860092566399907,
+              "preferred_alternative": "b"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

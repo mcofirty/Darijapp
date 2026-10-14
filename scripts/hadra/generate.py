@@ -110,7 +110,10 @@ def generate(jobs, spec, reference, reference_audio, output, args):
                   "technical": technical, "encoded": encoded, "quality_version": QUALITY_VERSION,
                   "technical_status": "passed" if passed else "failed",
                   "pronunciation_status": "uncertain", "confidence": None,
-                  "revision_reasons": ["latin_darija_pronunciation_not_verified"],
+                  "revision_reasons": list(dict.fromkeys(
+                      ["latin_darija_pronunciation_not_verified"]
+                      + technical["failures"] + technical["warnings"]
+                      + (encoded or {}).get("failures", []) + (encoded or {}).get("warnings", []))),
                   "source_script": "latin", "reference_is_synthetic": True,
                   "synthesis_seconds": synthesis_seconds,
                   "rtf": synthesis_seconds / max(technical.get("duration_seconds", 0), 0.001),
@@ -120,7 +123,7 @@ def generate(jobs, spec, reference, reference_audio, output, args):
         atomic_json(output / "report.json", {"model_id": spec["model_id"], "model_revision": spec["revision"],
                     "linguistic_certification": False, "records": results})
         atomic_json(output / "revision-queue.json", [{"key": r["key"], "entry_id": r.get("entry_id"),
-                    "prompt": r["prompt"], "reasons": r["revision_reasons"] + r["technical"]["failures"]}
+                    "prompt": r["prompt"], "reasons": r["revision_reasons"]}
                     for r in results])
         print(f"[{index}/{len(jobs)}] {job['prompt']} : technique={record['technical_status']}, prononciation=incertaine, reprise={reused}", flush=True)
     return 0 if results and all(r["technical_status"] == "passed" for r in results) else 2
