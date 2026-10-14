@@ -32,10 +32,19 @@ def verify(site, checkout):
             raise ValueError("Candidat incomplet ou validation linguistique indue")
         if file_sha256(checkout / "public" / current["audio"]) != entry["before_sha256"]:
             raise ValueError("La voix actuelle a changé ; comparaison à actualiser")
-        for label in ["before", "after"]:
+        for label in ["before", "after"] + (["previous"] if entry.get("previous") else []):
             path = (site / entry[label]).resolve()
             if site.resolve() not in path.parents or file_sha256(path) != entry[f"{label}_sha256"]:
                 raise ValueError("L’intégrité des MP3 du comparatif n’est pas établie")
+    if manifest.get("revision"):
+        revised = {e["id"] for e in manifest["entries"] if e.get("revised")}
+        if manifest["revision"] != 2 or revised != {"nourriture-001", "chiffres-017", "verbes-085", "adjectifs-052"}:
+            raise ValueError("La correction doit être limitée aux quatre mots sélectionnés")
+        previous = json.loads((checkout / "public/test-audio-openai/manifest.json").read_text())
+        old = {e["id"]: e for e in previous["entries"]}
+        for entry in manifest["entries"]:
+            if not entry.get("revised") and entry["after_sha256"] != old[entry["id"]]["after_sha256"]:
+                raise ValueError("Un des six MP3 conservés a changé")
     return manifest
 
 
@@ -47,6 +56,9 @@ def publish(site, checkout):
         shutil.rmtree(destination)  # Sous-dossier réservé à ce seul test.
     shutil.copytree(site, destination)
     note = "- Test vocal OpenAI (2026-10-14) : dix mots difficiles sur `/test-audio-openai/`, Cedar lisant le latin, avis locaux ; les MP3 passent les contrôles techniques sans certification de prononciation. Jamal reste active ; attendre l’avis sur ce pilote avant un essai de 50 mots. HADRA a été refusée et son corpus arrêté."
+    revised = json.loads((site / "manifest.json").read_text()).get("revision") == 2
+    if revised:
+        note = "- Test vocal OpenAI, deuxième essai (2026-10-14) : quatre propositions reprises pour khobz, ch7al?, we99e3 et 3tchan sur `/test-audio-openai/`, entrée latine conservée et consignes phonétiques ciblées. Les six autres MP3 sont identiques ; premier essai accessible, avis locaux. Jamal reste active, prononciation non certifiée et avis attendu avant 50 mots."
     if note not in memory:
         memory = memory.replace("## Points en suspens\n", "## Points en suspens\n\n" + note + "\n", 1)
         if len(memory.splitlines()) >= 300 or len(memory) >= 45000:
@@ -55,6 +67,8 @@ def publish(site, checkout):
     history = checkout / "docs/historique.md"
     text = history.read_text()
     row = "| 2026-10-14 | Comparatif OpenAI autonome de dix mots, voix Cedar depuis le latin, vingt MP3 et avis locaux ; Jamal conservée dans les exercices | `public/test-audio-openai/` |\n"
+    if revised:
+        row = "| 2026-10-14 | Deuxième essai OpenAI : quatre nouvelles propositions depuis le latin et six MP3 conservés à l’identique ; premier essai accessible et Jamal active | `public/test-audio-openai/` |\n"
     if row not in text:
         text = text.replace("## Décisions", row + "\n## Décisions", 1)
         text += "\n- 2026-10-14 : après refus de HADRA, essai limité à dix mots avec OpenAI ; aucun changement de voix dans les exercices ni génération massive. La préférence d’écoute ne vaut pas certification linguistique.\n"
@@ -66,7 +80,8 @@ def publish(site, checkout):
     if any(p not in ["CLAUDE.md", "docs/historique.md"] and not p.startswith("public/test-audio-openai/") for p in paths):
         raise ValueError("Le commit contiendrait des changements hors du comparatif")
     if paths:
-        run("git", "commit", "-m", "test: publie dix comparaisons OpenAI sans changer la voix active", cwd=checkout)
+        title = "test: publie quatre propositions OpenAI reprises sans changer la voix active" if revised else "test: publie dix comparaisons OpenAI sans changer la voix active"
+        run("git", "commit", "-m", title, cwd=checkout)
         for attempt in range(4):
             verify(site, checkout)
             result = subprocess.run(["git", "push", "origin", "HEAD:main"], cwd=checkout, capture_output=True, text=True)

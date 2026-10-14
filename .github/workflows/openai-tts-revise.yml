@@ -1,0 +1,87 @@
+name: Reprendre quatre mots OpenAI
+on:
+  push:
+    branches: [feat/hadra-tts]
+    paths: [.github/workflows/openai-tts-revise.yml]
+concurrency:
+  group: openai-tts-pilot-10
+  cancel-in-progress: false
+permissions:
+  contents: write
+  actions: write
+jobs:
+  revise:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: b8c50ee77e4ddbcd5895f9c94f14be951125e25c
+          path: baseline-site
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/cache/restore@v4
+        with:
+          path: artifacts/openai-revision-2
+          key: openai-revision-2-${{ hashFiles('scripts/openai_tts/revision-2.json') }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            openai-revision-2-${{ hashFiles('scripts/openai_tts/revision-2.json') }}-
+      - run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends ffmpeg
+          python -m pip install numpy==2.2.6
+      - name: Tester la conservation des six MP3 et le plafond de quatre appels
+        run: python -m unittest discover -s scripts/openai_tts -p 'test_*.py'
+      - name: Conserver six MP3 et générer uniquement les quatre propositions
+        env:
+          DARIJA_TTS_KEY: ${{ secrets.DARIJA_TTS_KEY || secrets.OPENAI_API_KEY }}
+        run: python scripts/openai_tts/revision.py generate --baseline baseline-site/public/test-audio-openai
+      - name: Préparer le comparatif et les quatre anciens essais
+        run: python scripts/openai_tts/revision.py review --baseline baseline-site/public/test-audio-openai
+      - uses: actions/upload-artifact@v4
+        with:
+          name: openai-corrections-offline
+          path: artifacts/openai-review
+          retention-days: 30
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main-site
+      - name: Lire CLAUDE et publier uniquement le comparatif
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/openai_tts/publish_review.py --site artifacts/openai-review --checkout main-site
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: artifacts/openai-revision-2
+          key: openai-revision-2-${{ hashFiles('scripts/openai_tts/revision-2.json') }}-${{ github.run_id }}-${{ github.run_attempt }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: openai-corrections-diagnostics
+          path: artifacts/openai-revision-2
+          retention-days: 30
+      - name: Enregistrer le bilan sans secret
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          python - <<'PY'
+          import json,pathlib,subprocess,base64,os
+          path=pathlib.Path('artifacts/openai-revision-2/status.json')
+          result=json.loads(path.read_text()) if path.exists() else {'status':'setup_failed','revision':2}
+          result['run_id']=os.environ['RUN_ID']
+          target='repos/mcofirty/Darijapp/contents/docs/openai-tts/revision-2-status.json'
+          body={'branch':'feat/hadra-tts','message':'docs: relève les quatre propositions OpenAI reprises',
+                'content':base64.b64encode(json.dumps(result,ensure_ascii=False,indent=2).encode()).decode()}
+          old=subprocess.run(['gh','api',target+'?ref=feat/hadra-tts','--jq','.sha'],capture_output=True,text=True)
+          if old.returncode==0:body['sha']=old.stdout.strip()
+          temp=pathlib.Path('/tmp/openai-revision-status.json');temp.write_text(json.dumps(body))
+          subprocess.run(['gh','api','--method','PUT',target,'--input',str(temp)],check=True,stdout=subprocess.DEVNULL)
+          print(json.dumps(result,ensure_ascii=False))
+          PY

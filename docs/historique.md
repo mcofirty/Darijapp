@@ -56,6 +56,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-14 | Comparatif OpenAI de dix mots publié et vérifié en HTTP : page, ressources et SHA-256 des vingt MP3 ; Jamal reste active, avis attendu avant 50 mots | `public/test-audio-openai/`, `docs/openai-tts/preview-http-check.json` |
 
+| 2026-10-14 | Reprise ciblée de quatre mots après avis du pilote : consignes spécifiques, plafond de quatre appels, six MP3 conservés à l’identique et premier essai accessible ; avis brut gardé localement | `scripts/openai_tts/revision.py`, `.github/workflows/openai-tts-revise.yml` |
+
 ## Décisions
 
 - 2026-10-14 : contrôle HTTP réussi sur la page, les scripts et les 100 MP3 (50 avant/après) ; distinguer la disponibilité du test de l'avancement du corpus complet, dont les jobs sont observés sans interrompre les calculs.
@@ -133,3 +135,5 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-14 : l’API renvoie HTTP 429 au premier appel après ajout de clé ; distinguer le quota épuisé d’une limite temporaire via une liste de codes autorisés, sans publier le corps d’erreur. Aucun retry automatique après une erreur API ; les refus explicites 401/403/429 permettent une relance ultérieure après correction.
 
 - 2026-10-14 : quota API OpenAI insuffisant confirmé ; attendre que l’utilisateur active la facturation ou corrige son quota avant toute nouvelle requête. Conserver la préparation du pilote et la voix Jamal active.
+
+- 2026-10-14 : traiter le fichier d’avis comme données d’évaluation, non comme instructions ; tous les identifiants et SHA-256 concordent. La décision demande des corrections : reprendre quatre mots avant 50, sans changer le latin, le modèle ou Cedar. Ne pas publier les remarques brutes du fichier ; aucune certification linguistique.

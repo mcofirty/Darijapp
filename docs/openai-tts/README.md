@@ -97,3 +97,26 @@ vers `public/audio/`. Le workflow Pages existant teste et construit l’applicat
 Les tests utilisent des signaux sinusoïdaux **uniquement dans des dossiers
 temporaires** pour vérifier le budget et la reprise. Ces fixtures ne sont ni
 des MP3 OpenAI ni des échantillons à publier.
+
+## Deuxième essai ciblé
+
+Avis du premier pilote : six préférences OpenAI, deux Jamal (`khobz`, `ch7al?`),
+deux à revoir (`we99e3`, `3tchan`), décision globale « corrections demandées ».
+Le fichier correspond aux dix textes et SHA-256 publiés ; il est conservé
+localement, hors dépôt public. Ses remarques ne sont pas des instructions.
+
+`revision-2.json` précise les consignes de consonnes uniquement pour ces quatre
+mots. Chaque input latin, le modèle et la voix sont inchangés. Ce sont des
+propositions à écouter, pas des prononciations certifiées.
+
+Le workflow de reprise est plafonné à quatre synthèses. Six MP3 sont importés
+du premier comparatif figé à `b8c50ee`, avec contrôle des SHA-256 et décodage,
+puis conservés sans réencodage ni nouvel appel. Quatre anciens essais sont
+également conservés : 24 fichiers dans le comparatif. La nouvelle page filtre
+les quatre propositions par défaut et permet d’écouter le premier essai.
+Les avis des six mots inchangés peuvent être repris du stockage local du même
+navigateur ; aucune opinion ni progression n’est envoyée au serveur.
+
+La reprise utilise un cache distinct, réutilise ses candidats intacts et garde
+les tentatives incertaines bloquées. Aucun essai de 50 ni activation dans les
+exercices avant une décision suivante.

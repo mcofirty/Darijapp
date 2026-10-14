@@ -97,15 +97,21 @@ def synthesize(payload, api_key):
         raise PilotError("openai_connection_failed_no_automatic_retry") from None
 
 
-def report_status(output, status, error=None, provider_code=None):
+def report_status(output, status, error=None, provider_code=None, current_plan=None):
     records = []
     for path in sorted((output / "records").glob("*.json")):
-        records.append(json.loads(path.read_text()))
+        record = json.loads(path.read_text())
+        if current_plan is None or record.get("key") in {e["key"] for e in current_plan["entries"]}:
+            records.append(record)
     result = {"status": status, "model": "gpt-4o-mini-tts-2025-12-15", "voice": "cedar",
               "expected": LIMIT, "attempted": len(records),
               "technically_ready": sum(r.get("technical_status") == "passed" for r in records),
               "error": error, "provider_error_code": provider_code,
               "linguistic_certification": False, "production_voice": "Jamal"}
+    if current_plan and current_plan.get("revision"):
+        result.update(revision=current_plan["revision"], maximum_paid_requests=4,
+                      new_candidates=sum(bool(r.get("api_synthesized")) for r in records),
+                      retained_candidates=sum(bool(r.get("imported_from_review")) for r in records))
     atomic_json(output / "status.json", result)
     return result
 
@@ -129,9 +135,12 @@ def recover_rejected_429(output, pilot):
     path.unlink()
 
 
-def generate(output, recover_429=False):
+def generate(output, recover_429=False, pilot_plan=None, new_entry_ids=None, max_new_requests=LIMIT):
     output = output_path(output)
-    pilot = plan()
+    pilot = pilot_plan or plan()
+    if len(pilot["entries"]) != LIMIT or not 0 <= max_new_requests <= LIMIT:
+        raise PilotError("invalid_generation_budget")
+    paid_requests = 0
     if recover_429:
         recover_rejected_429(output, pilot)
     atomic_json(output / "plan.json", pilot)
@@ -160,7 +169,19 @@ def generate(output, recover_429=False):
                 if previous.get("raw_sha256") != file_sha256(raw):
                     raise PilotError("cached_audio_corrupt_no_paid_regeneration")
                 record = previous
+                if record.get("technical_status") == "passed":
+                    cached = (output / record["mp3"]).resolve()
+                    if output not in cached.parents or not cached.is_file() or file_sha256(cached) != record["mp3_sha256"]:
+                        raise PilotError("cached_export_corrupt_no_paid_regeneration")
+                    if not verify_encoded(cached, "word")["passed"]:
+                        raise PilotError("cached_export_technical_failure")
+                    print(f"{entry['entry_id']}: MP3 conservé sans modification", flush=True)
+                    continue
             else:
+                if new_entry_ids is not None and entry["entry_id"] not in new_entry_ids:
+                    raise PilotError("retained_candidate_missing_no_paid_regeneration")
+                if paid_requests >= max_new_requests:
+                    raise PilotError("paid_request_budget_exceeded")
                 if not api_key:
                     raise PilotError("missing_api_key")
                 if raw.exists():
@@ -169,6 +190,7 @@ def generate(output, recover_429=False):
                 # Record the attempt before calling: an uncertain timeout must not cause a paid retry.
                 atomic_json(record_path, record)
                 try:
+                    paid_requests += 1
                     audio = synthesize(entry["request"], api_key)
                 except PilotError as exc:
                     if exc.code in ["openai_http_401", "openai_http_403", "openai_http_429"]:
@@ -182,6 +204,8 @@ def generate(output, recover_429=False):
                 temporary.write_bytes(audio)
                 temporary.replace(raw)
                 record["raw_sha256"] = file_sha256(raw)
+                record["api_synthesized"] = True
+                record["instructions"] = entry["request"]["instructions"]
                 atomic_json(record_path, record)
             record["raw_quality"] = verify_encoded(raw, "word")
             if record["raw_quality"]["passed"]:
@@ -197,20 +221,20 @@ def generate(output, recover_429=False):
                 record["technical_status"] = "failed"
             atomic_json(record_path, record)
             print(f"{entry['entry_id']}: {record['technical_status']} (prononciation à écouter)", flush=True)
-        result = report_status(output, "ready")
+        result = report_status(output, "ready", current_plan=pilot)
         if result["technically_ready"] != LIMIT:
             raise PilotError("technical_rejections_no_automatic_regeneration")
         return result
     except PilotError as exc:
-        report_status(output, "blocked", exc.code, exc.provider_code)
+        report_status(output, "blocked", exc.code, exc.provider_code, pilot)
         raise
     except Exception:
-        report_status(output, "blocked", "technical_processing_failed")
+        report_status(output, "blocked", "technical_processing_failed", current_plan=pilot)
         raise PilotError("technical_processing_failed") from None
 
 
-def build_review(reports, output):
-    pilot = plan()
+def build_review(reports, output, pilot_plan=None):
+    pilot = pilot_plan or plan()
     entries = []
     # Validate all ten first; no incomplete/fake audio page is ever published.
     for entry in pilot["entries"]:
@@ -223,12 +247,23 @@ def build_review(reports, output):
         after = (reports / record["mp3"]).resolve()
         if reports.resolve() not in after.parents or file_sha256(after) != record["mp3_sha256"]:
             raise PilotError("review_audio_integrity_failed")
+        if entry.get("retained_sha256") and record["mp3_sha256"] != entry["retained_sha256"]:
+            raise PilotError("retained_candidate_was_modified")
         entries.append({"id": entry["entry_id"], "latin": entry["latin"], "arabe": entry["arabe"],
                         "fr": entry["fr"], "theme": entry["theme"], "tts_text": record["prompt"],
                         "before": f"before/{entry['entry_id']}.mp3", "after": f"after/{basename}.mp3",
                         "before_sha256": entry["before_sha256"], "after_sha256": record["mp3_sha256"],
                         "technical_status": "passed", "pronunciation_status": "uncertain", "confidence": None,
                         "warnings": sorted(set(record["raw_quality"]["warnings"] + record["encoded_quality"]["warnings"]))})
+        entries[-1]["instructions"] = entry["request"]["instructions"]
+        if pilot.get("revision"):
+            entries[-1]["revised"] = entry["entry_id"] in pilot["revised_ids"]
+            if entries[-1]["revised"]:
+                previous = reports / "previous" / f"{entry['entry_id']}.mp3"
+                if file_sha256(previous) != entry["previous_sha256"]:
+                    raise PilotError("previous_candidate_integrity_failed")
+                entries[-1].update(previous=f"previous/{entry['entry_id']}.mp3",
+                                   previous_sha256=entry["previous_sha256"])
     output.mkdir(parents=True, exist_ok=True)
     for entry in entries:
         for label, source in [("before", ROOT / "public" / "audio" / f"{entry['id']}.mp3"),
@@ -236,6 +271,10 @@ def build_review(reports, output):
             destination = output / entry[label]
             destination.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(source, destination)
+        if entry.get("previous"):
+            destination = output / entry["previous"]
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(reports / entry["previous"], destination)
     templates = ROOT / "scripts/hadra/review-site"
     html = (templates / "index.html").read_text().replace("50 MOTS", "10 MOTS").replace("sur 50", "sur 10").replace('max="50"', 'max="10"').replace("HADRA", "OpenAI")
     html = html.replace("OpenAI · lecture du latin", "OpenAI · Cedar · lecture du latin")
@@ -243,6 +282,24 @@ def build_review(reports, output):
     html = html.replace("Je valide la nouvelle voix", "Je valide ce premier test").replace("Je refuse le déploiement", "Je refuse cette voix")
     html = html.replace("Vos avis restent dans ce navigateur.", "Votre avis permet de décider du test de 50 mots. Il ne déclenche aucun déploiement. Vos avis restent dans ce navigateur.")
     js = (templates / "review.js").read_text().replace("HADRA_REVIEW", "OPENAI_REVIEW").replace("darija-hadra-review-", "darija-openai-review-").replace("${count} avis sur 50", "${count} avis sur ${data.count}").replace("avis-hadra-50-mots.json", "avis-openai-10-mots.json")
+    if pilot.get("revision"):
+        html = html.replace('ESPACE DE TEST · 10 MOTS', 'ESPACE DE TEST · 4 MOTS REPRIS')
+        html = html.replace('Comparez la voix actuelle avec OpenAI lisant le latin, puis choisissez la suite.', 'Quatre nouvelles propositions pour khobz, ch7al?, we99e3 et 3tchan. Les six autres MP3 sont conservés à l’identique ; écoutez ces corrections avant de décider de la suite.')
+        html = html.replace('<section class="filters"', '<label class="small"><input id="only-revised" type="checkbox" checked> Afficher seulement les quatre mots repris</label>\n    <section class="filters"')
+        html = html.replace('<fieldset>', '<details id="previous-sample" hidden><summary>Écouter le premier essai OpenAI</summary><audio id="previous-audio" controls preload="none" aria-label="Écouter le premier essai OpenAI"></audio></details>\n      <fieldset>', 1)
+        html = html.replace('OpenAI · Cedar · lecture du latin', 'OpenAI · Cedar · nouvel essai pour les mots repris')
+        html = html.replace('Je valide ce premier test', 'Je valide ce test corrigé')
+        html = html.replace('0 avis sur 10', '0 avis sur 4').replace('max="10"', 'max="4"')
+        js = js.replace("const players = [el('before'), el('after')]", "const players = [el('before'), el('after'), el('previous-audio')]")
+        js = js.replace("el('after').src = entry.after", "el('after').src = entry.after\n    el('previous-sample').hidden = !entry.previous\n    if (entry.previous) el('previous-audio').src = entry.previous\n    else el('previous-audio').removeAttribute('src')")
+        js = js.replace("(!theme || entry.theme === theme)", "(!el('only-revised').checked || entry.revised) && (!theme || entry.theme === theme)")
+        js = js.replace("el('search').addEventListener('input', filter)", "el('only-revised').addEventListener('change', filter)\n  el('search').addEventListener('input', filter)")
+        js = js.replace("  render()\n})()", "  filter()\n})()")
+        js = js.replace("avis-openai-10-mots.json", "avis-openai-corrections.json")
+        js = js.replace("`${count} avis sur ${data.count}`", "`${count} avis sur 4`")
+        js = js.replace("data.entries.filter(entry => state.votes[entry.id]).length", "data.entries.filter(entry => entry.revised && state.votes[entry.id]).length")
+        js = js.replace("data.entries.filter(entry => state.votes[entry.id] === choice).length", "data.entries.filter(entry => entry.revised && state.votes[entry.id] === choice).length")
+        js = js.replace("if (saved && typeof saved.votes === 'object' && typeof saved.notes === 'object') state = saved", "if (saved && typeof saved.votes === 'object' && typeof saved.notes === 'object') state = saved\n    else if (data.baseline_review_id) {\n      const previous = JSON.parse(localStorage.getItem(`darija-openai-review-${data.baseline_review_id}`) || 'null')\n      if (previous) data.entries.filter(entry => !entry.revised).forEach(entry => {\n        if (previous.votes?.[entry.id]) state.votes[entry.id] = previous.votes[entry.id]\n        if (previous.notes?.[entry.id]) state.notes[entry.id] = previous.notes[entry.id]\n      })\n    }")
     (output / "index.html").write_text(html)
     (output / "review.js").write_text(js)
     shutil.copyfile(templates / "review.css", output / "review.css")
@@ -251,6 +308,8 @@ def build_review(reports, output):
                 "instructions": INSTRUCTIONS.read_text().strip(), "entries": entries,
                 "themes": dict(re.findall(r"id: '([^']+)', titre: '([^']+)'", (ROOT / "src/data/themes.ts").read_text()))}
     manifest["review_id"] = hashlib.sha256(json.dumps(manifest, sort_keys=True).encode()).hexdigest()
+    if pilot.get("revision"):
+        manifest.update(revision=pilot["revision"], baseline_review_id=pilot["baseline_review_id"])
     atomic_json(output / "manifest.json", manifest)
     (output / "data.js").write_text("window.OPENAI_REVIEW = " + json.dumps(manifest, ensure_ascii=False) + ";\n")
     print("10 mots, 20 MP3 vérifiés ; comparatif OpenAI prêt")

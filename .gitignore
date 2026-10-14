@@ -27,3 +27,4 @@ artifacts/hadra/
 .venv-hadra/
 artifacts/openai-tts/
 artifacts/openai-review/
+artifacts/openai-revision-2/
