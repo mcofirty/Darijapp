@@ -202,7 +202,7 @@ Profil : en plus des réglages, `micro` (Dis-le avec score), `parler` et `ecoute
 
 Jalon en cours : **4 — Jeu** (contenu du jeu terminé). Les jalons 1 à 3 sont en ligne sur https://mcofirty.github.io/Darijapp/ (score de prononciation à éprouver sur iPhone avec une vraie voix).
 
-Test OpenAI : avis reçu et vérifié, six préférences OpenAI, deux Jamal, deux à revoir ; décision « corrections demandées ». Deuxième essai ciblé sur khobz, ch7al?, we99e3 et 3tchan : quatre appels maximum, six MP3 conservés octet pour octet, premier essai accessible. Génération/publication en cours ; Jamal reste active, prononciation non certifiée.
+Test OpenAI : avis reçu et vérifié, six préférences OpenAI, deux Jamal, deux à revoir ; décision « corrections demandées ». Deuxième essai ciblé sur khobz, ch7al?, we99e3 et 3tchan : quatre appels maximum, six MP3 conservés octet pour octet, premier essai accessible. Quatre nouveaux MP3 générés, six inchangés et 24 empreintes vérifiées ; comparatif V2 ajouté sur main, publication et contrôle HTTP en cours. Jamal reste active, prononciation non certifiée.
 
 Voix HADRA refusée par l’utilisateur le 2026-10-14 après écoute des 50 mots : arrêt du corpus et suppression du déclenchement automatique. Le comparatif `/test-audio/` reste disponible. Jamal reste la voix active ; aucun déploiement de HADRA et aucune reprise sans nouvelle demande explicite.
 

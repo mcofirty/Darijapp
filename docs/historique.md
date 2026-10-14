@@ -58,6 +58,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-14 | Reprise ciblée de quatre mots après avis du pilote : consignes spécifiques, plafond de quatre appels, six MP3 conservés à l’identique et premier essai accessible ; avis brut gardé localement | `scripts/openai_tts/revision.py`, `.github/workflows/openai-tts-revise.yml` |
 
+| 2026-10-14 | Quatre nouvelles propositions réelles générées, six anciens MP3 identiques et 24 empreintes vérifiées ; comparatif V2 ajouté sur main avec premier essai accessible | `public/test-audio-openai/`, `docs/openai-tts/revision-2-status.json` |
+
 ## Décisions
 
 - 2026-10-14 : contrôle HTTP réussi sur la page, les scripts et les 100 MP3 (50 avant/après) ; distinguer la disponibilité du test de l'avancement du corpus complet, dont les jobs sont observés sans interrompre les calculs.

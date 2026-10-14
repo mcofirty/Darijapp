@@ -12,55 +12,57 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
-      - name: Vérifier la page et les vingt fichiers réellement servis
+      - name: Vérifier les quatre propositions et les six MP3 conservés
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
           python - <<'PY'
           import urllib.request,json,hashlib,base64,pathlib,subprocess,time
-          for attempt in range(75):
-              raw=subprocess.check_output(['gh','api','repos/mcofirty/Darijapp/actions/runs/38639506745'],text=True)
-              publication=json.loads(raw)
-              if publication['status']=='completed':
-                  assert publication['conclusion']=='success', 'La publication Pages a échoué : contrôler son run'
-                  break
-              if attempt==74:raise RuntimeError('Publication Pages encore en cours')
-              time.sleep(10)
           url='https://mcofirty.github.io/Darijapp/test-audio-openai/'
           def read(path):
               with urllib.request.urlopen(url+path,timeout=30) as response:
                   return response.read()
-          for attempt in range(4):
+          for attempt in range(75):
               try:
                   page=read('').decode()
-                  assert 'Écouter avant / après' in page
+                  assert '4 MOTS REPRIS' in page
                   manifest=json.loads(read('manifest.json'))
                   assert len(manifest['entries'])==10
+                  assert manifest.get('revision')==2
+                  assert sum(bool(e.get('revised')) for e in manifest['entries'])==4
                   assert manifest['model']=='gpt-4o-mini-tts-2025-12-15'
                   assert manifest['voice']=='cedar'
                   assert manifest['source_script']=='latin'
                   assert manifest['linguistic_certification'] is False
                   break
               except Exception:
-                  if attempt==3:raise
+                  if attempt==74:raise
                   time.sleep(10)
+          baseline=json.loads(urllib.request.urlopen('https://raw.githubusercontent.com/mcofirty/Darijapp/b8c50ee77e4ddbcd5895f9c94f14be951125e25c/public/test-audio-openai/manifest.json',timeout=30).read())
+          originals={e['id']:e for e in baseline['entries']}
+          assert manifest['baseline_review_id']==baseline['review_id']
           checked=0
           for entry in manifest['entries']:
-              for side in ['before','after']:
+              for side in ['before','after']+(['previous'] if entry.get('previous') else []):
                   assert hashlib.sha256(read(entry[side])).hexdigest()==entry[side+'_sha256']
                   checked+=1
+              if entry.get('revised'):
+                  assert entry['previous_sha256']==originals[entry['id']]['after_sha256']
+                  assert entry['after_sha256']!=entry['previous_sha256']
+              else:
+                  assert entry['after_sha256']==originals[entry['id']]['after_sha256']
           for asset in ['review.js','review.css','data.js']:
               assert read(asset)
-          result={'url':url,'status':'passed','entries':10,'audio_files_checked':checked,
-                  'checks':['HTTP page','ressources JS/CSS','SHA-256 des 20 MP3'],
+          result={'url':url,'status':'passed','entries':10,'audio_files_checked':checked,'revision':2,'new_candidates':4,'retained_candidates':6,
+                  'checks':['HTTP page','ressources JS/CSS','SHA-256 des 24 MP3 et conservation des six fichiers'],
                   'linguistic_certification':False}
           target='repos/mcofirty/Darijapp/contents/docs/openai-tts/preview-http-check.json'
-          body={'message':'test: vérifie les dix comparaisons audio réellement publiées',
+          body={'message':'test: vérifie les quatre propositions et six MP3 conservés en ligne',
                 'branch':'feat/hadra-tts','content':base64.b64encode(json.dumps(result,ensure_ascii=False,indent=2).encode()).decode()}
           old=subprocess.run(['gh','api',target+'?ref=feat/hadra-tts','--jq','.sha'],capture_output=True,text=True)
           if old.returncode==0:body['sha']=old.stdout.strip()
           path=pathlib.Path('/tmp/openai-http-check-body.json');path.write_text(json.dumps(body))
           subprocess.run(['gh','api','--method','PUT',target,'--input',str(path)],check=True,stdout=subprocess.DEVNULL)
-          print('Page de test et 20 MP3 servis : vérifiés')
+          print('Page de test et 24 MP3 servis : vérifiés')
           PY
