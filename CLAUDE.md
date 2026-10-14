@@ -245,6 +245,8 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 
 ## Points en suspens
 
+- Test vocal OpenAI (2026-10-14) : dix mots difficiles sur `/test-audio-openai/`, Cedar lisant le latin, avis locaux ; les MP3 passent les contrôles techniques sans certification de prononciation. Jamal reste active ; attendre l’avis sur ce pilote avant un essai de 50 mots. HADRA a été refusée et son corpus arrêté.
+
 - Test audio HADRA (2026-10-14) : 50 mots avant/après sur `/test-audio/`, cible latine, avis local indépendant de la progression. Voix HADRA expérimentale ; aucun remplacement de `public/audio` ni des références du score. Activation dans les exercices uniquement après décision explicite de l'utilisateur.
 
 - Latin (2026-10-14) : les aides `prononciation` n'ont pas été utilisées ni réécrites pour cette harmonisation ; certaines explications restent à revoir séparément. Les questions de sens/accord relevées par l'audit (`lbab khedra`) restent distinctes de la correction des seules graphies latines ; ne pas modifier arbitrairement l'arabe ou les traductions pour faire disparaître une alerte.

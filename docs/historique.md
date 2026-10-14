@@ -32,6 +32,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-14 | Espace de test audio autonome : 50 mots réels, lecteurs Avant/Jamal et Après/HADRA latin, avis et export local ; voix des exercices conservée | `public/test-audio/` |
 
+| 2026-10-14 | Comparatif OpenAI autonome de dix mots, voix Cedar depuis le latin, vingt MP3 et avis locaux ; Jamal conservée dans les exercices | `public/test-audio-openai/` |
+
 ## Décisions
 
 
@@ -69,3 +71,5 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-14 : harmonisation des champs `latin` sur le corpus complet (3 516 textes), à la demande de l'utilisateur, sans prendre les aides `prononciation` comme référence ni les modifier. Les graphies françaises ambiguës sont remplacées par des formes explicites adaptées au darija ; le mot séparé lah devient allah par choix d'écriture, sans qualifier les contractions attestées de fautes. Arabe, français, identifiants et MP3 sont conservés ; 80 références du score sont recalculées pour suivre les nouveaux sons attendus. Les variantes de voyelles et les questions de sens/accord incertaines ne sont pas corrigées automatiquement.
 
 - 2026-10-14 : comparatif HADRA publié dans un sous-dossier autonome du site existant, sans toucher aux MP3 actifs, aux lecteurs ni à IndexedDB ; les contrôles techniques ne certifient pas la prononciation.
+
+- 2026-10-14 : après refus de HADRA, essai limité à dix mots avec OpenAI ; aucun changement de voix dans les exercices ni génération massive. La préférence d’écoute ne vaut pas certification linguistique.
