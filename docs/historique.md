@@ -44,6 +44,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-14 | Pilote OpenAI de dix mots latins avec Cedar, contrôles et cache MP3, page mobile avant/après et publication isolée prête ; clé API absente, aucune synthèse réelle | `scripts/openai_tts/`, `.github/workflows/openai-tts-pilot.yml`, `docs/openai-tts/` |
 
+| 2026-10-14 | Reprise du même pilote OpenAI de dix mots après déclaration d’ajout de la clé API par l’utilisateur, sans élargissement du budget | `.github/workflows/openai-tts-resume.yml` |
+
 ## Décisions
 
 - 2026-10-14 : contrôle HTTP réussi sur la page, les scripts et les 100 MP3 (50 avant/après) ; distinguer la disponibilité du test de l'avancement du corpus complet, dont les jobs sont observés sans interrompre les calculs.
