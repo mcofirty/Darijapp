@@ -1,0 +1,272 @@
+{
+  "model_id": "Jip7e/habibi-tts-doda-darija",
+  "model_revision": "0f9beec11b1185934e0da95c0e298f1b0457eef4",
+  "linguistic_certification": false,
+  "requested_entries": 3,
+  "records": [
+    {
+      "entry_id": "nourriture-001",
+      "app_id": "nourriture-001",
+      "audio": "audio/nourriture-001.mp3",
+      "latin": "khobz",
+      "arabe": "خبز",
+      "fr": "pain",
+      "theme": "nourriture",
+      "source": "src/data/nourriture.json",
+      "pilot_id": "nourriture-001",
+      "prompt": "khobz",
+      "kind": "word",
+      "complex": false,
+      "key": "15438398075ca8503af2ff53338948d8253488652f2361e580d09bf283c96d54",
+      "parameters": {
+        "nfe_step": 16,
+        "speed": 0.95,
+        "cfg_strength": 2.0,
+        "seed": 0,
+        "device": "cpu"
+      },
+      "variant": 0,
+      "model_id": "Jip7e/habibi-tts-doda-darija",
+      "model_revision": "0f9beec11b1185934e0da95c0e298f1b0457eef4",
+      "reference": {
+        "audio": "audio/dia-taxi-1.mp3",
+        "sha256": "a78eaab3e87566d1540b72ce349c6e0590d1ed3cd6eb1dd808dac8d5c1017af5",
+        "text": "salam, wach t9der twsselni l lmdina l9dima?",
+        "origin": "existing_azure_jamal"
+      },
+      "versions": {
+        "f5-tts": "1.1.22",
+        "torch": "2.8.0+cpu",
+        "torchaudio": "2.8.0+cpu",
+        "torchcodec": "0.7.0",
+        "huggingface-hub": "0.36.0",
+        "vocos": "0.1.0"
+      },
+      "master": "masters/15438398075ca8503af2ff53338948d8253488652f2361e580d09bf283c96d54.wav",
+      "master_sha256": "20f0a4f125d1c92c0db5d0fcf14e29d2d1905246f1a59ae8c294348102546f93",
+      "mp3": "audio/15438398075ca8503af2ff53338948d8253488652f2361e580d09bf283c96d54.mp3",
+      "mp3_sha256": "ef29d9389079348e49c0807b1ad8061dca3a7bea234f9e61b32100f6fbf4bf64",
+      "technical": {
+        "passed": true,
+        "failures": [],
+        "warnings": [
+          "long_edge_silence"
+        ],
+        "duration_seconds": 1.3226666666666667,
+        "sample_rate": 24000,
+        "peak": 0.32744672894477844,
+        "rms_dbfs": -29.473438088161977,
+        "clipped_fraction": 0.0,
+        "leading_silence_seconds": 0.58,
+        "trailing_silence_seconds": 0.08,
+        "max_internal_silence_seconds": 0.03,
+        "quality_version": 1
+      },
+      "encoded": {
+        "passed": true,
+        "failures": [],
+        "warnings": [
+          "long_edge_silence"
+        ],
+        "duration_seconds": 1.3226666666666667,
+        "sample_rate": 24000,
+        "peak": 0.2485453486442566,
+        "rms_dbfs": -31.866413977334048,
+        "clipped_fraction": 0.0,
+        "leading_silence_seconds": 0.58,
+        "trailing_silence_seconds": 0.08,
+        "max_internal_silence_seconds": 0.03,
+        "quality_version": 1
+      },
+      "quality_version": 1,
+      "technical_status": "passed",
+      "pronunciation_status": "uncertain",
+      "confidence": null,
+      "revision_reasons": [
+        "latin_darija_pronunciation_not_verified",
+        "long_edge_silence"
+      ],
+      "source_script": "latin",
+      "reference_is_synthetic": true,
+      "synthesis_seconds": 53.68385176699999,
+      "rtf": 40.58758954158266,
+      "reused_master": true
+    },
+    {
+      "entry_id": "salutations-012",
+      "app_id": "salutations-012",
+      "audio": "audio/salutations-012.mp3",
+      "latin": "3afak",
+      "arabe": "عافاك",
+      "fr": "s'il te plaît",
+      "theme": "salutations",
+      "source": "src/data/salutations.json",
+      "pilot_id": "salutations-012",
+      "prompt": "3afak",
+      "kind": "word",
+      "complex": false,
+      "key": "5309760773cf21d2af025c5525f9a98ff65b7b6a493ed97084c98035dfb5dc67",
+      "parameters": {
+        "nfe_step": 16,
+        "speed": 0.95,
+        "cfg_strength": 2.0,
+        "seed": 0,
+        "device": "cpu"
+      },
+      "variant": 0,
+      "model_id": "Jip7e/habibi-tts-doda-darija",
+      "model_revision": "0f9beec11b1185934e0da95c0e298f1b0457eef4",
+      "reference": {
+        "audio": "audio/dia-taxi-1.mp3",
+        "sha256": "a78eaab3e87566d1540b72ce349c6e0590d1ed3cd6eb1dd808dac8d5c1017af5",
+        "text": "salam, wach t9der twsselni l lmdina l9dima?",
+        "origin": "existing_azure_jamal"
+      },
+      "versions": {
+        "f5-tts": "1.1.22",
+        "torch": "2.8.0+cpu",
+        "torchaudio": "2.8.0+cpu",
+        "torchcodec": "0.7.0",
+        "huggingface-hub": "0.36.0",
+        "vocos": "0.1.0"
+      },
+      "master": "masters/5309760773cf21d2af025c5525f9a98ff65b7b6a493ed97084c98035dfb5dc67.wav",
+      "master_sha256": "c4ba81fa2612db773b292e7e76f0451b0a7b36b60bd185c68bffdbe427f01c4a",
+      "mp3": "audio/5309760773cf21d2af025c5525f9a98ff65b7b6a493ed97084c98035dfb5dc67.mp3",
+      "mp3_sha256": "08d2511413443c7d01a108c4c8312e4e8511e8d2f2795cbaa26171010de42b93",
+      "technical": {
+        "passed": true,
+        "failures": [],
+        "warnings": [
+          "long_edge_silence"
+        ],
+        "duration_seconds": 1.3226666666666667,
+        "sample_rate": 24000,
+        "peak": 0.6319084763526917,
+        "rms_dbfs": -27.143906828616995,
+        "clipped_fraction": 0.0,
+        "leading_silence_seconds": 0.53,
+        "trailing_silence_seconds": 0.21,
+        "max_internal_silence_seconds": 0.04,
+        "quality_version": 1
+      },
+      "encoded": {
+        "passed": true,
+        "failures": [],
+        "warnings": [
+          "long_edge_silence"
+        ],
+        "duration_seconds": 1.3226666666666667,
+        "sample_rate": 24000,
+        "peak": 0.4784199595451355,
+        "rms_dbfs": -29.508249511730092,
+        "clipped_fraction": 0.0,
+        "leading_silence_seconds": 0.53,
+        "trailing_silence_seconds": 0.21,
+        "max_internal_silence_seconds": 0.04,
+        "quality_version": 1
+      },
+      "quality_version": 1,
+      "technical_status": "passed",
+      "pronunciation_status": "uncertain",
+      "confidence": null,
+      "revision_reasons": [
+        "latin_darija_pronunciation_not_verified",
+        "long_edge_silence"
+      ],
+      "source_script": "latin",
+      "reference_is_synthetic": true,
+      "synthesis_seconds": 53.81754544299997,
+      "rtf": 40.68866842968748,
+      "reused_master": true
+    },
+    {
+      "entry_id": "corps-041",
+      "app_id": "corps-041",
+      "audio": "audio/corps-041.mp3",
+      "latin": "9elb",
+      "arabe": "قلب",
+      "fr": "cœur",
+      "theme": "corps",
+      "source": "src/data/corps.json",
+      "pilot_id": "corps-041",
+      "prompt": "9elb",
+      "kind": "word",
+      "complex": false,
+      "key": "bbf14ae9eede4789821e483f9471c42f2d2d9cc1204735928b64d0cd64586311",
+      "parameters": {
+        "nfe_step": 16,
+        "speed": 0.95,
+        "cfg_strength": 2.0,
+        "seed": 0,
+        "device": "cpu"
+      },
+      "variant": 0,
+      "model_id": "Jip7e/habibi-tts-doda-darija",
+      "model_revision": "0f9beec11b1185934e0da95c0e298f1b0457eef4",
+      "reference": {
+        "audio": "audio/dia-taxi-1.mp3",
+        "sha256": "a78eaab3e87566d1540b72ce349c6e0590d1ed3cd6eb1dd808dac8d5c1017af5",
+        "text": "salam, wach t9der twsselni l lmdina l9dima?",
+        "origin": "existing_azure_jamal"
+      },
+      "versions": {
+        "f5-tts": "1.1.22",
+        "torch": "2.8.0+cpu",
+        "torchaudio": "2.8.0+cpu",
+        "torchcodec": "0.7.0",
+        "huggingface-hub": "0.36.0",
+        "vocos": "0.1.0"
+      },
+      "master": "masters/bbf14ae9eede4789821e483f9471c42f2d2d9cc1204735928b64d0cd64586311.wav",
+      "master_sha256": "917214e4e684ee3078d1b05a7bf0cec1ad6150d6089abacd16e37ee451181079",
+      "mp3": "audio/bbf14ae9eede4789821e483f9471c42f2d2d9cc1204735928b64d0cd64586311.mp3",
+      "mp3_sha256": "33176f29a177a577d231235fc7a08b7c9f7cb856f0a5681a94eafc3510962423",
+      "technical": {
+        "passed": true,
+        "failures": [],
+        "warnings": [
+          "long_edge_silence"
+        ],
+        "duration_seconds": 1.056,
+        "sample_rate": 24000,
+        "peak": 0.3292597830295563,
+        "rms_dbfs": -28.239662387177628,
+        "clipped_fraction": 0.0,
+        "leading_silence_seconds": 0.45,
+        "trailing_silence_seconds": 0.14,
+        "max_internal_silence_seconds": 0.0,
+        "quality_version": 1
+      },
+      "encoded": {
+        "passed": true,
+        "failures": [],
+        "warnings": [
+          "long_edge_silence"
+        ],
+        "duration_seconds": 1.056,
+        "sample_rate": 24000,
+        "peak": 0.250063419342041,
+        "rms_dbfs": -30.61085744858709,
+        "clipped_fraction": 0.0,
+        "leading_silence_seconds": 0.45,
+        "trailing_silence_seconds": 0.14,
+        "max_internal_silence_seconds": 0.0,
+        "quality_version": 1
+      },
+      "quality_version": 1,
+      "technical_status": "passed",
+      "pronunciation_status": "uncertain",
+      "confidence": null,
+      "revision_reasons": [
+        "latin_darija_pronunciation_not_verified",
+        "long_edge_silence"
+      ],
+      "source_script": "latin",
+      "reference_is_synthetic": true,
+      "synthesis_seconds": 50.74540510100002,
+      "rtf": 48.0543608910985,
+      "reused_master": true
+    }
+  ]
+}
