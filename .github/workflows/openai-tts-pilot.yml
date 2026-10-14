@@ -34,10 +34,15 @@ jobs:
           python -m pip install numpy==2.2.6
       - name: Tester le pilote sans appel API
         run: python -m unittest discover -s scripts/openai_tts -p 'test_*.py'
-      - name: Générer au plus dix MP3 depuis le latin
+      - name: Diagnostiquer le rejet 429 puis générer au plus dix MP3 latins
         env:
           DARIJA_TTS_KEY: ${{ secrets.DARIJA_TTS_KEY || secrets.OPENAI_API_KEY }}
-        run: python scripts/openai_tts/pilot.py generate
+        run: |
+          if python -c "import json,pathlib; p=pathlib.Path('artifacts/openai-tts/status.json'); s=json.loads(p.read_text()) if p.exists() else {}; raise SystemExit(0 if s.get('error')=='openai_http_429' and s.get('attempted')==1 and s.get('technically_ready')==0 else 1)"; then
+            python scripts/openai_tts/pilot.py generate --recover-rejected-429
+          else
+            python scripts/openai_tts/pilot.py generate
+          fi
       - name: Construire le comparatif complet avant publication
         run: python scripts/openai_tts/pilot.py review --output artifacts/openai-review
       - uses: actions/upload-artifact@v4

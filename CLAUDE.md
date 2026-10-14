@@ -202,7 +202,7 @@ Profil : en plus des réglages, `micro` (Dis-le avec score), `parler` et `ecoute
 
 Jalon en cours : **4 — Jeu** (contenu du jeu terminé). Les jalons 1 à 3 sont en ligne sur https://mcofirty.github.io/Darijapp/ (score de prononciation à éprouver sur iPhone avec une vraie voix).
 
-Test OpenAI : pilote de dix mots implémenté et testé, limité à l’écoute comparative ; l’utilisateur déclare la clé GitHub ajoutée, relance et vérification en cours.
+Test OpenAI : clé GitHub disponible, premier appel refusé par OpenAI (HTTP 429), aucun MP3 généré ; diagnostic quota/limite en cours, pilote limité aux mêmes dix entrées.
 
 Voix HADRA refusée par l’utilisateur le 2026-10-14 après écoute des 50 mots : arrêt du corpus et suppression du déclenchement automatique. Le comparatif `/test-audio/` reste disponible. Jamal reste la voix active ; aucun déploiement de HADRA et aucune reprise sans nouvelle demande explicite.
 
@@ -253,7 +253,7 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 
 ## Points en suspens
 
-- Test OpenAI autorisé (2026-10-14) : pilote de dix mots difficiles prêt avec `gpt-4o-mini-tts-2025-12-15` / Cedar, entrée latine, contrôles et reprise sans retry payant ; page autonome `/test-audio-openai/` publiée seulement après dix MP3 conformes. Premier essai bloqué sans clé ; l’utilisateur déclare le secret `DARIJA_TTS_KEY` ajouté, reprise du même pilote et vérification en cours. Jamal conservée ; aucun lot de 50 ou de 3 511 sans décision suivante. Voir `docs/openai-tts/README.md`.
+- Test OpenAI autorisé (2026-10-14) : pilote de dix mots difficiles prêt avec `gpt-4o-mini-tts-2025-12-15` / Cedar, entrée latine, contrôles et reprise sans retry payant ; page autonome `/test-audio-openai/` publiée seulement après dix MP3 conformes. Clé ajoutée : premier appel refusé HTTP 429. Diagnostic limité au code d’erreur public du fournisseur ; une reprise explicite du rejet confirmé conserve sa trace et ne rejoue aucun audio généré. Jamal conservée ; aucun lot de 50 ou de 3 511 sans décision suivante. Voir `docs/openai-tts/README.md`.
 
 - Comparatif en ligne : build, test mobile et contrôle HTTP des 100 MP3 réussis. L’utilisateur a refusé la voix HADRA ; corpus interrompu, génération automatique désactivée, fichiers expérimentaux conservés séparément.
 

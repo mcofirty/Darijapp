@@ -46,6 +46,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-14 | Reprise du même pilote OpenAI de dix mots après déclaration d’ajout de la clé API par l’utilisateur, sans élargissement du budget | `.github/workflows/openai-tts-resume.yml` |
 
+| 2026-10-14 | Diagnostic sûr des rejets API OpenAI : code de quota sans message externe, reprise explicite du premier 429 confirmé et trace conservée ; aucune sortie audio écrasée | `scripts/openai_tts/`, `.github/workflows/openai-tts-pilot.yml` |
+
 ## Décisions
 
 - 2026-10-14 : contrôle HTTP réussi sur la page, les scripts et les 100 MP3 (50 avant/après) ; distinguer la disponibilité du test de l'avancement du corpus complet, dont les jobs sont observés sans interrompre les calculs.
@@ -119,3 +121,5 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-14 : à la demande de l’utilisateur, préparer un essai OpenAI lisant le latin ; limiter le premier essai à dix entrées avant tout élargissement et garder Jamal active.
 
 - 2026-10-14 : modèle API figé `gpt-4o-mini-tts-2025-12-15`, voix Cedar, dix inputs latins exacts et consignes Arabizi explicites ; budget limité au pilote, aucun retry payant ni certification automatique. L’appel OpenAI a lieu uniquement dans GitHub Actions ; la clé et l’API ne sont jamais intégrées à l’application.
+
+- 2026-10-14 : l’API renvoie HTTP 429 au premier appel après ajout de clé ; distinguer le quota épuisé d’une limite temporaire via une liste de codes autorisés, sans publier le corps d’erreur. Aucun retry automatique après une erreur API ; les refus explicites 401/403/429 permettent une relance ultérieure après correction.

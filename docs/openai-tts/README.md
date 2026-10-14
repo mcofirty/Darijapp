@@ -48,6 +48,11 @@ Ce pilote est limité dans le code à dix entrées et une seule voix. Aucun lot 
 sur une erreur API. Les requêtes dont l’issue est incertaine ne sont pas rejouées
 automatiquement ; elles demandent une vérification du diagnostic avant reprise.
 Le plafond est un nombre de synthèses, pas une estimation contractuelle de prix.
+Les codes publics de rejet (par exemple `insufficient_quota`) sont enregistrés
+sans conserver le message externe ni les en-têtes. Les refus 401/403/429
+interrompent le run sans retry ; une relance ultérieure est possible après
+correction de la clé ou du quota. La reprise explicite du premier ancien 429
+non accepté conserve sa trace et refuse de supprimer tout audio déjà généré.
 
 La clé de cache inclut modèle, voix, latin, instructions et paramètres. Les MP3
 bruts et leurs empreintes sont conservés ; une reprise vérifie et réutilise les

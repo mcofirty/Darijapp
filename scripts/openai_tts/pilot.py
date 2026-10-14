@@ -23,9 +23,10 @@ LIMIT = 10
 
 
 class PilotError(RuntimeError):
-    def __init__(self, code):
+    def __init__(self, code, provider_code=None):
         super().__init__(code)
         self.code = code
+        self.provider_code = provider_code
 
 
 def plan():
@@ -80,26 +81,59 @@ def synthesize(payload, api_key):
         return audio
     except urllib.error.HTTPError as exc:
         # Never dump headers, request contents, or external response bodies.
-        raise PilotError(f"openai_http_{exc.code}") from None
+        provider_code = None
+        try:
+            error = json.loads(exc.read(4096)).get("error", {})
+            allowed = {"insufficient_quota", "rate_limit_exceeded", "billing_hard_limit_reached",
+                       "billing_not_active", "model_not_found", "invalid_api_key"}
+            for field in ["code", "type"]:
+                if error.get(field) in allowed:
+                    provider_code = error[field]
+                    break
+        except Exception:
+            pass
+        raise PilotError(f"openai_http_{exc.code}", provider_code) from None
     except (urllib.error.URLError, TimeoutError, OSError):
         raise PilotError("openai_connection_failed_no_automatic_retry") from None
 
 
-def report_status(output, status, error=None):
+def report_status(output, status, error=None, provider_code=None):
     records = []
     for path in sorted((output / "records").glob("*.json")):
         records.append(json.loads(path.read_text()))
     result = {"status": status, "model": "gpt-4o-mini-tts-2025-12-15", "voice": "cedar",
               "expected": LIMIT, "attempted": len(records),
               "technically_ready": sum(r.get("technical_status") == "passed" for r in records),
-              "error": error, "linguistic_certification": False, "production_voice": "Jamal"}
+              "error": error, "provider_error_code": provider_code,
+              "linguistic_certification": False, "production_voice": "Jamal"}
     atomic_json(output / "status.json", result)
     return result
 
 
-def generate(output):
+def recover_rejected_429(output, pilot):
+    """Reprise explicite du premier appel dont le rejet 429 a été confirmé."""
+    status = json.loads((output / "status.json").read_text())
+    if (status.get("error") != "openai_http_429" or status.get("attempted") != 1
+            or status.get("technically_ready") != 0):
+        raise PilotError("recovery_requires_confirmed_first_request_429")
+    first = pilot["entries"][0]
+    basename = f"{first['entry_id']}-{first['key'][:12]}"
+    path = output / "records" / f"{basename}.json"
+    record = json.loads(path.read_text())
+    if (record.get("key") != first["key"] or record.get("technical_status") != "pending"
+            or len(list((output / "records").glob("*.json"))) != 1
+            or (output / "raw" / f"{basename}.mp3").exists()
+            or (output / "audio" / f"{basename}.mp3").exists()):
+        raise PilotError("recovery_cannot_discard_generated_audio_or_uncertain_request")
+    atomic_json(output / "rejections" / f"{basename}-confirmed-429.json", {"record": record, "status": status})
+    path.unlink()
+
+
+def generate(output, recover_429=False):
     output = output_path(output)
     pilot = plan()
+    if recover_429:
+        recover_rejected_429(output, pilot)
     atomic_json(output / "plan.json", pilot)
     # The key is never persisted; only the public request specification is cached.
     api_key = os.environ.get("DARIJA_TTS_KEY") or os.environ.get("OPENAI_API_KEY")
@@ -137,9 +171,11 @@ def generate(output):
                 try:
                     audio = synthesize(entry["request"], api_key)
                 except PilotError as exc:
-                    if exc.code in ["openai_http_401", "openai_http_403"]:
-                        # Explicit authentication rejection: no synthesis accepted.
-                        # Stop now, but permit a manual rerun after correcting the key.
+                    if exc.code in ["openai_http_401", "openai_http_403", "openai_http_429"]:
+                        # Explicit API rejection: no synthesis accepted. Stop this run;
+                        # permit a later manual rerun after correcting key/quota.
+                        atomic_json(output / "rejections" / f"{basename}.json",
+                                    {"record": record, "error": exc.code, "provider_error_code": exc.provider_code})
                         record_path.unlink()
                     raise
                 temporary = raw.with_suffix(".tmp")
@@ -166,7 +202,7 @@ def generate(output):
             raise PilotError("technical_rejections_no_automatic_regeneration")
         return result
     except PilotError as exc:
-        report_status(output, "blocked", exc.code)
+        report_status(output, "blocked", exc.code, exc.provider_code)
         raise
     except Exception:
         report_status(output, "blocked", "technical_processing_failed")
@@ -226,12 +262,13 @@ def main():
     parser.add_argument("command", choices=["plan", "generate", "review"])
     parser.add_argument("--output", type=Path, default=ROOT / "artifacts/openai-tts")
     parser.add_argument("--reports", type=Path, default=ROOT / "artifacts/openai-tts")
+    parser.add_argument("--recover-rejected-429", action="store_true")
     args = parser.parse_args()
     try:
         if args.command == "plan":
             print(json.dumps(plan(), ensure_ascii=False, indent=2))
         elif args.command == "generate":
-            generate(args.output)
+            generate(args.output, args.recover_rejected_429)
         else:
             build_review(args.reports, args.output)
     except PilotError as exc:

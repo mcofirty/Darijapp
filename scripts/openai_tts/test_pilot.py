@@ -6,6 +6,7 @@ import os
 import subprocess
 import tempfile
 import unittest
+import urllib.error
 from pathlib import Path
 from unittest.mock import patch
 
@@ -116,6 +117,47 @@ class PilotTests(unittest.TestCase):
             path.write_text(pilot.INSTRUCTIONS.read_text() + " Speak gently.")
             with patch.object(pilot, "INSTRUCTIONS", path):
                 self.assertNotEqual(old, pilot.plan()["entries"][0]["key"])
+
+    def test_api_error_exposes_quota_code_without_external_message(self):
+        body = {"error": {"code": "insufficient_quota", "message": "secret text never retained"}}
+        failure = urllib.error.HTTPError(pilot.ENDPOINT, 429, "Too Many Requests", {},
+                                         io.BytesIO(json.dumps(body).encode()))
+        with patch.object(pilot.urllib.request, "build_opener") as opener:
+            opener.return_value.open.side_effect = failure
+            with self.assertRaises(pilot.PilotError) as caught:
+                pilot.synthesize(pilot.plan()["entries"][0]["request"], "test-only-dummy")
+            self.assertEqual(caught.exception.provider_code, "insufficient_quota")
+            self.assertEqual(str(caught.exception), "openai_http_429")
+            self.assertNotIn("secret", str(caught.exception))
+
+    def test_quota_rejection_stops_without_automatic_retry(self):
+        with tempfile.TemporaryDirectory() as tmp, patch.dict(os.environ, {"DARIJA_TTS_KEY": "dummy"}, clear=True), patch.object(pilot, "synthesize", side_effect=pilot.PilotError("openai_http_429", "insufficient_quota")) as api:
+            with self.assertRaises(pilot.PilotError):
+                pilot.generate(Path(tmp))
+            self.assertEqual(api.call_count, 1)
+            status = json.loads((Path(tmp) / "status.json").read_text())
+            self.assertEqual(status["provider_error_code"], "insufficient_quota")
+            self.assertEqual(status["technically_ready"], 0)
+            self.assertFalse(list((Path(tmp) / "records").glob("*.json")))
+
+    def test_recovery_of_confirmed_rejection_keeps_audit_and_refuses_audio(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            output = Path(tmp)
+            plan = pilot.plan();first = plan["entries"][0]
+            basename = f"{first['entry_id']}-{first['key'][:12]}"
+            record = {"key": first["key"], "technical_status": "pending"}
+            path = output / "records" / f"{basename}.json"
+            pilot.atomic_json(path, record)
+            pilot.atomic_json(output / "status.json", {"error": "openai_http_429", "attempted": 1, "technically_ready": 0})
+            raw = output / "raw" / f"{basename}.mp3"
+            raw.parent.mkdir();raw.write_bytes(self.audio)
+            with self.assertRaises(pilot.PilotError):
+                pilot.recover_rejected_429(output, plan)
+            self.assertTrue(path.exists())
+            raw.unlink()
+            pilot.recover_rejected_429(output, plan)
+            self.assertFalse(path.exists())
+            self.assertTrue(list((output / "rejections").glob("*.json")))
 
     def test_generation_cannot_replace_public_audio(self):
         with self.assertRaisesRegex(pilot.PilotError, "outside_public"):
