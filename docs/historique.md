@@ -34,6 +34,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 ## Décisions
 
+- 2026-10-14 : NumPy 2.2.6 pour HADRA après un échec réel d'import PyArrow avec 1.26.4 ; cache des masters et rapports individuels entre exécutions Actions pour permettre la reprise incrémentale, y compris après une interruption partielle.
+
 - 2026-10-14 : adaptateur HADRA basé sur l'interface F5-TTS réellement inspectée, cibles latines directes et référence synthétique existante ; génération limitée au pilote, hashes des poids/vocodeur, WAV conservés et MP3 contrôlés après encodage. Les candidats techniquement conformes restent linguistiquement incertains et hors de l'application tant que le latin darija n'est pas évalué ; aucun repli silencieux vers une cible arabe.
 
 - 2026-10-14 : inspection initiale de HADRA sur une branche dédiée avec GitHub Actions, sans télécharger les poids ni exécuter de code distant, pour établir l'interface réelle et la compatibilité du latin avant la génération pilote. Les métadonnées sont figées sur un SHA du modèle et conservées sur cette branche ; aucune publication Pages ni modification de la bibliothèque audio.

@@ -247,6 +247,8 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 
 ## Points en suspens
 
+- Dépendances HADRA : le premier essai distant a échoué avant chargement, car PyArrow récent exige NumPy 2. NumPy est figé à 2.2.6 ; la combinaison doit passer l'essai d'inférence.
+
 - HADRA (2026-10-14) : adaptateur F5-TTS et pilote de 50 entrées sur `feat/hadra-tts`, voir `docs/hadra/README.md`. Cible latine directe, poids/vocodeur figés et vérifiés, référence synthétique Jamal existante, contrôles techniques et reprise par empreinte ; aucune promotion linguistique automatique. Les candidats restent hors de `public/audio` ; l'application utilise toujours Jamal. Le vocabulaire contient l'Arabizi mais sa prononciation par HADRA doit être évaluée. L'accès Hugging Face est bloqué dans ce cloud ; les essais passent par GitHub Actions CPU ou un GPU self-hosted déjà disponible.
 
 - Latin (2026-10-14) : les aides `prononciation` n'ont pas été utilisées ni réécrites pour cette harmonisation ; certaines explications restent à revoir séparément. Les questions de sens/accord relevées par l'audit (`lbab khedra`) restent distinctes de la correction des seules graphies latines ; ne pas modifier arbitrairement l'arabe ou les traductions pour faire disparaître une alerte.

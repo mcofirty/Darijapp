@@ -54,6 +54,14 @@ jobs:
         with:
           path: ~/.cache/huggingface
           key: hadra-0f9beec11-vocos-0feb3fdd9
+      - uses: actions/cache/restore@v4
+        id: library-cache
+        with:
+          path: |
+            artifacts/hadra/masters
+            artifacts/hadra/records
+          key: hadra-library-v1-${{ github.ref_name }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: hadra-library-v1-${{ github.ref_name }}-
       - name: Générer le pilote latin sans remplacer les MP3 actuels
         env:
           HADRA_DEVICE: ${{ inputs.device || 'cpu' }}
@@ -64,6 +72,13 @@ jobs:
           else
             python scripts/hadra/generate.py generate --limit "$HADRA_LIMIT" --steps 16 --device "$HADRA_DEVICE"
           fi
+      - uses: actions/cache/save@v4
+        if: always() && hashFiles('artifacts/hadra/records/*.json') != ''
+        with:
+          path: |
+            artifacts/hadra/masters
+            artifacts/hadra/records
+          key: ${{ steps.library-cache.outputs.cache-primary-key }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -75,6 +90,9 @@ jobs:
         if: always() && github.ref == 'refs/heads/feat/hadra-tts'
         run: |
           mkdir -p docs/hadra/probe
+          if [ '${{ job.status }}' = 'success' ]; then
+            rm -f docs/hadra/probe/error.json docs/hadra/probe/install-error.txt
+          fi
           if [ -f artifacts/hadra/error.json ]; then cp artifacts/hadra/error.json docs/hadra/probe/; fi
           if [ '${{ job.status }}' != 'success' ] && [ -f artifacts/hadra/install.log ]; then
             tail -100 artifacts/hadra/install.log > docs/hadra/probe/install-error.txt

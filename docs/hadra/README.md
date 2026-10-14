@@ -74,7 +74,7 @@ un nombre. Une incertitude persistante peut nécessiter une adaptation du modèl
 Une exécution manuelle peut sélectionner 1–50 entrées. CPU : runner hébergé standard.
 GPU : runner **déjà enregistré** avec les labels `self-hosted`, `linux`, `gpu` ; aucun
 service GPU n'est provisionné ni facturé par cette intégration.
-Les poids sont mis en cache ; les rapports et audios sont des artifacts conservés 14 jours.
+Les poids et les masters intacts sont mis en cache entre exécutions ; les rapports et audios sont des artifacts conservés 14 jours.
 La branche de travail conserve aussi les sons de contrôle dans `docs/hadra/probe/`.
 
 La bibliothèque actuellement servie, l'Action Azure « Audio », les lecteurs, les caches
