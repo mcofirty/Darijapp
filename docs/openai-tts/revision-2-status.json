@@ -1,0 +1,17 @@
+{
+  "status": "ready",
+  "model": "gpt-4o-mini-tts-2025-12-15",
+  "voice": "cedar",
+  "expected": 10,
+  "attempted": 10,
+  "technically_ready": 10,
+  "error": null,
+  "provider_error_code": null,
+  "linguistic_certification": false,
+  "production_voice": "Jamal",
+  "revision": 2,
+  "maximum_paid_requests": 4,
+  "new_candidates": 4,
+  "retained_candidates": 6,
+  "run_id": "38642485937"
+}
