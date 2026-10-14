@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Tester les règles d'inspection
-        run: python3 -m unittest discover -s scripts/hadra -p 'test_*.py'
+        run: python3 -m unittest discover -s scripts/hadra -p 'test_inspect_model.py'
       - name: Lire la carte et les configurations publiques, sans charger de code distant
         run: python3 scripts/hadra/inspect_model.py --output docs/hadra/model-inspection.json
       - name: Conserver les métadonnées sur la branche de travail uniquement

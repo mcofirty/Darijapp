@@ -1,0 +1,412 @@
+{
+  "source": "Existing application data plus explicitly constructed segment probes",
+  "linguistic_certification": false,
+  "entries": [
+    {
+      "pilot_id": "p01",
+      "kind": "letter_name",
+      "latin": "3ayn",
+      "arabe": "ع",
+      "target_ipa": null,
+      "isolation": false,
+      "complex": false
+    },
+    {
+      "pilot_id": "p02",
+      "kind": "letter_name",
+      "latin": "7a",
+      "arabe": "ح",
+      "target_ipa": null,
+      "isolation": false,
+      "complex": false
+    },
+    {
+      "pilot_id": "p03",
+      "kind": "letter_name",
+      "latin": "9af",
+      "arabe": "ق",
+      "target_ipa": null,
+      "isolation": false,
+      "complex": false
+    },
+    {
+      "pilot_id": "p04",
+      "kind": "letter_name",
+      "latin": "kha",
+      "arabe": "خ",
+      "target_ipa": null,
+      "isolation": false,
+      "complex": false
+    },
+    {
+      "pilot_id": "p05",
+      "kind": "letter_name",
+      "latin": "ghayn",
+      "arabe": "غ",
+      "target_ipa": null,
+      "isolation": false,
+      "complex": false
+    },
+    {
+      "pilot_id": "p06",
+      "kind": "letter_name",
+      "latin": "chin",
+      "arabe": "ش",
+      "target_ipa": null,
+      "isolation": false,
+      "complex": false
+    },
+    {
+      "pilot_id": "p07",
+      "kind": "phoneme_in_context",
+      "latin": "3a",
+      "arabe": "ع",
+      "target_ipa": "ʕ",
+      "isolation": false,
+      "contexts": [
+        "3a",
+        "3i",
+        "a3a"
+      ],
+      "complex": true
+    },
+    {
+      "pilot_id": "p08",
+      "kind": "phoneme_in_context",
+      "latin": "7a",
+      "arabe": "ح",
+      "target_ipa": "ħ",
+      "isolation": false,
+      "contexts": [
+        "7a",
+        "7i",
+        "a7a"
+      ],
+      "complex": true
+    },
+    {
+      "pilot_id": "p09",
+      "kind": "phoneme_in_context",
+      "latin": "9a",
+      "arabe": "ق",
+      "target_ipa": "q",
+      "isolation": false,
+      "contexts": [
+        "9a",
+        "9i",
+        "a9a"
+      ],
+      "complex": true
+    },
+    {
+      "pilot_id": "p10",
+      "kind": "phoneme_in_context",
+      "latin": "kha",
+      "arabe": "خ",
+      "target_ipa": "x",
+      "isolation": false,
+      "contexts": [
+        "kha",
+        "khi",
+        "akha"
+      ],
+      "complex": true
+    },
+    {
+      "pilot_id": "p11",
+      "kind": "phoneme_in_context",
+      "latin": "gha",
+      "arabe": "غ",
+      "target_ipa": "ɣ",
+      "isolation": false,
+      "contexts": [
+        "gha",
+        "ghi",
+        "agha"
+      ],
+      "complex": true
+    },
+    {
+      "pilot_id": "p12",
+      "kind": "phoneme_in_context",
+      "latin": "cha",
+      "arabe": "ش",
+      "target_ipa": "ʃ",
+      "isolation": false,
+      "contexts": [
+        "cha",
+        "chi",
+        "acha"
+      ],
+      "complex": true
+    },
+    {
+      "pilot_id": "p13",
+      "kind": "phoneme_in_context",
+      "latin": "ka",
+      "arabe": "ك",
+      "target_ipa": "k",
+      "isolation": false,
+      "contexts": [
+        "ka",
+        "ki",
+        "aka"
+      ],
+      "complex": true
+    },
+    {
+      "pilot_id": "p14",
+      "kind": "phoneme_in_context",
+      "latin": "ha",
+      "arabe": "ه",
+      "target_ipa": "h",
+      "isolation": false,
+      "contexts": [
+        "ha",
+        "hi",
+        "aha"
+      ],
+      "complex": true
+    },
+    {
+      "pilot_id": "p15",
+      "kind": "syllable",
+      "latin": "3a",
+      "arabe": "عا",
+      "target_ipa": "ʕa",
+      "isolation": false,
+      "complex": false
+    },
+    {
+      "pilot_id": "p16",
+      "kind": "syllable",
+      "latin": "3i",
+      "arabe": "عي",
+      "target_ipa": "ʕi",
+      "isolation": false,
+      "complex": false
+    },
+    {
+      "pilot_id": "p17",
+      "kind": "syllable",
+      "latin": "7a",
+      "arabe": "حا",
+      "target_ipa": "ħa",
+      "isolation": false,
+      "complex": false
+    },
+    {
+      "pilot_id": "p18",
+      "kind": "syllable",
+      "latin": "7i",
+      "arabe": "حي",
+      "target_ipa": "ħi",
+      "isolation": false,
+      "complex": false
+    },
+    {
+      "pilot_id": "p19",
+      "kind": "syllable",
+      "latin": "9a",
+      "arabe": "قا",
+      "target_ipa": "qa",
+      "isolation": false,
+      "complex": false
+    },
+    {
+      "pilot_id": "p20",
+      "kind": "syllable",
+      "latin": "kha",
+      "arabe": "خا",
+      "target_ipa": "xa",
+      "isolation": false,
+      "complex": false
+    },
+    {
+      "pilot_id": "p21",
+      "kind": "syllable",
+      "latin": "gha",
+      "arabe": "غا",
+      "target_ipa": "ɣa",
+      "isolation": false,
+      "complex": false
+    },
+    {
+      "pilot_id": "p22",
+      "kind": "syllable",
+      "latin": "cha",
+      "arabe": "شا",
+      "target_ipa": "ʃa",
+      "isolation": false,
+      "complex": false
+    },
+    {
+      "pilot_id": "p23",
+      "kind": "word",
+      "entry_id": "son-9elb",
+      "complex": true
+    },
+    {
+      "pilot_id": "p24",
+      "kind": "word",
+      "entry_id": "son-kelb",
+      "complex": false
+    },
+    {
+      "pilot_id": "p25",
+      "kind": "word",
+      "entry_id": "son-3la",
+      "complex": false
+    },
+    {
+      "pilot_id": "p26",
+      "kind": "word",
+      "entry_id": "son-la",
+      "complex": false
+    },
+    {
+      "pilot_id": "p27",
+      "kind": "word",
+      "entry_id": "son-3ar",
+      "complex": false
+    },
+    {
+      "pilot_id": "p28",
+      "kind": "word",
+      "entry_id": "son-7ar",
+      "complex": false
+    },
+    {
+      "pilot_id": "p29",
+      "kind": "word",
+      "entry_id": "son-7al",
+      "complex": true
+    },
+    {
+      "pilot_id": "p30",
+      "kind": "word",
+      "entry_id": "son-hal",
+      "complex": false
+    },
+    {
+      "pilot_id": "p31",
+      "kind": "word",
+      "entry_id": "son-7ell",
+      "complex": false
+    },
+    {
+      "pilot_id": "p32",
+      "kind": "word",
+      "entry_id": "son-khell",
+      "complex": true
+    },
+    {
+      "pilot_id": "p33",
+      "kind": "word",
+      "entry_id": "son-khass",
+      "complex": false
+    },
+    {
+      "pilot_id": "p34",
+      "kind": "word",
+      "entry_id": "son-kass",
+      "complex": false
+    },
+    {
+      "pilot_id": "p35",
+      "kind": "word",
+      "entry_id": "son-ghir",
+      "complex": false
+    },
+    {
+      "pilot_id": "p36",
+      "kind": "word",
+      "entry_id": "son-khir",
+      "complex": false
+    },
+    {
+      "pilot_id": "p37",
+      "kind": "word",
+      "entry_id": "nourriture-001",
+      "complex": true
+    },
+    {
+      "pilot_id": "p38",
+      "kind": "word",
+      "entry_id": "salutations-012",
+      "complex": false
+    },
+    {
+      "pilot_id": "p39",
+      "kind": "word",
+      "entry_id": "jours-006",
+      "complex": true
+    },
+    {
+      "pilot_id": "p40",
+      "kind": "word",
+      "entry_id": "jours-008",
+      "complex": false
+    },
+    {
+      "pilot_id": "p41",
+      "kind": "word",
+      "entry_id": "maison-016",
+      "complex": true
+    },
+    {
+      "pilot_id": "p42",
+      "kind": "word",
+      "entry_id": "grammaire-038",
+      "complex": true
+    },
+    {
+      "pilot_id": "p43",
+      "kind": "phrase",
+      "entry_id": "gram-negation-2",
+      "complex": false
+    },
+    {
+      "pilot_id": "p44",
+      "kind": "phrase",
+      "entry_id": "gram-present-1",
+      "complex": false
+    },
+    {
+      "pilot_id": "p45",
+      "kind": "phrase",
+      "entry_id": "gram-present-2",
+      "complex": false
+    },
+    {
+      "pilot_id": "p46",
+      "kind": "phrase",
+      "entry_id": "gram-futur-1",
+      "complex": false
+    },
+    {
+      "pilot_id": "p47",
+      "kind": "phrase",
+      "entry_id": "gram-passe-2",
+      "complex": false
+    },
+    {
+      "pilot_id": "p48",
+      "kind": "phrase",
+      "entry_id": "gram-questions-2",
+      "complex": false
+    },
+    {
+      "pilot_id": "p49",
+      "kind": "phrase",
+      "entry_id": "dia-cafe-1",
+      "complex": false
+    },
+    {
+      "pilot_id": "p50",
+      "kind": "phrase",
+      "entry_id": "dia-cafe-2",
+      "complex": false
+    }
+  ]
+}

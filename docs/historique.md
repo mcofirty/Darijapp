@@ -30,7 +30,11 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 | 2026-10-12 | Animation d'ouverture : vidéo de 3 s de l'utilisateur sur fond sombre à chaque lancement, passée d'un toucher, image finale avec Réduire les animations ou si la vidéo ne démarre pas | `public/lancement.mp4`, `public/lancement-fin.jpg`, `src/app/lancement.ts`, `index.html` |
 | 2026-10-14 | Harmonisation de 176 champs latins dans les mots, exemples et dialogues, sans modifier les aides de prononciation ; tests de correspondance étendus à tous les textes JSON et 80 références du score recalculées | `src/data/`, `public/modele/references.json`, `docs/corrections-latin.md` |
 
+| 2026-10-14 | Générateur expérimental HADRA lisant directement le latin, pilote de 50 entrées avec variantes, bibliothèque incrémentale WAV/MP3 et contrôles techniques ; tests d'inventaire, d'intégrité et de rejet, essai CPU séparé de la production | `scripts/hadra/`, `.github/workflows/hadra.yml`, `docs/hadra/README.md` |
+
 ## Décisions
+
+- 2026-10-14 : adaptateur HADRA basé sur l'interface F5-TTS réellement inspectée, cibles latines directes et référence synthétique existante ; génération limitée au pilote, hashes des poids/vocodeur, WAV conservés et MP3 contrôlés après encodage. Les candidats techniquement conformes restent linguistiquement incertains et hors de l'application tant que le latin darija n'est pas évalué ; aucun repli silencieux vers une cible arabe.
 
 - 2026-10-14 : inspection initiale de HADRA sur une branche dédiée avec GitHub Actions, sans télécharger les poids ni exécuter de code distant, pour établir l'interface réelle et la compatibilité du latin avant la génération pilote. Les métadonnées sont figées sur un SHA du modèle et conservées sur cette branche ; aucune publication Pages ni modification de la bibliothèque audio.
 

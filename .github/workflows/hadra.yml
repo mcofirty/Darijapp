@@ -1,0 +1,93 @@
+name: Audio HADRA (pilote)
+
+on:
+  push:
+    branches: ['feat/hadra-tts']
+    paths: ['scripts/hadra/**', '.github/workflows/hadra.yml']
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Nombre d’entrées du pilote (1 à 50)'
+        default: '3'
+        required: true
+      device:
+        description: 'CPU hébergé ou GPU déjà enregistré comme runner self-hosted'
+        type: choice
+        options: ['cpu', 'cuda']
+        default: 'cpu'
+
+concurrency:
+  group: hadra-pilot-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  pilot:
+    runs-on: ${{ inputs.device == 'cuda' && fromJSON('["self-hosted", "linux", "gpu"]') || 'ubuntu-latest' }}
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Installer ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends ffmpeg
+      - name: Installer PyTorch CPU ou CUDA depuis l’index officiel
+        env:
+          HADRA_DEVICE: ${{ inputs.device || 'cpu' }}
+        run: |
+          if [ "$HADRA_DEVICE" = 'cuda' ]; then
+            python -m pip install torch==2.8.0 torchaudio==2.8.0 torchcodec==0.7.0 --index-url https://download.pytorch.org/whl/cu128
+          else
+            python -m pip install torch==2.8.0 torchaudio==2.8.0 torchcodec==0.7.0 --index-url https://download.pytorch.org/whl/cpu
+          fi
+      - name: Installer F5-TTS et les dépendances déclarées
+        shell: bash
+        run: |
+          mkdir -p artifacts/hadra
+          python -m pip install -r scripts/hadra/requirements.txt 2>&1 | tee artifacts/hadra/install.log
+      - name: Tester l’inventaire, les empreintes et les refus techniques
+        run: python -m unittest discover -s scripts/hadra -p 'test_*.py'
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hadra-0f9beec11-vocos-0feb3fdd9
+      - name: Générer le pilote latin sans remplacer les MP3 actuels
+        env:
+          HADRA_DEVICE: ${{ inputs.device || 'cpu' }}
+          HADRA_LIMIT: ${{ inputs.limit || '3' }}
+        run: |
+          if [ '${{ github.event_name }}' = 'push' ]; then
+            python scripts/hadra/generate.py generate --ids salutations-012,nourriture-001,son-9elb --limit 3 --steps 8 --device "$HADRA_DEVICE"
+          else
+            python scripts/hadra/generate.py generate --limit "$HADRA_LIMIT" --steps 16 --device "$HADRA_DEVICE"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hadra-pilot-${{ github.run_id }}
+          path: artifacts/hadra/
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Conserver le rapport et les trois sons de contrôle sur la branche de travail
+        if: always() && github.ref == 'refs/heads/feat/hadra-tts'
+        run: |
+          mkdir -p docs/hadra/probe
+          if [ -f artifacts/hadra/error.json ]; then cp artifacts/hadra/error.json docs/hadra/probe/; fi
+          if [ '${{ job.status }}' != 'success' ] && [ -f artifacts/hadra/install.log ]; then
+            tail -100 artifacts/hadra/install.log > docs/hadra/probe/install-error.txt
+          fi
+          if [ -f artifacts/hadra/report.json ]; then
+            cp artifacts/hadra/report.json docs/hadra/probe/report.json
+            cp artifacts/hadra/revision-queue.json docs/hadra/probe/revision-queue.json
+            if [ -d artifacts/hadra/audio ]; then cp -r artifacts/hadra/audio docs/hadra/probe/; fi
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/hadra/probe
+          if ! git diff --cached --quiet; then
+            git commit -m 'test: conserve les résultats du pilote HADRA latin'
+            git push origin HEAD:feat/hadra-tts
+          fi

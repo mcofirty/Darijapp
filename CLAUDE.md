@@ -202,6 +202,8 @@ Profil : en plus des réglages, `micro` (Dis-le avec score), `parler` et `ecoute
 
 Jalon en cours : **4 — Jeu** (contenu du jeu terminé). Les jalons 1 à 3 sont en ligne sur https://mcofirty.github.io/Darijapp/ (score de prononciation à éprouver sur iPhone avec une vraie voix).
 
+Voix HADRA : intégration expérimentale en cours sur `feat/hadra-tts` ; pilote latin de 50 entrées, sans activation dans l'application avant évaluation.
+
 | Jalon | Durée estimée | Contenu | Statut |
 | --- | --- | --- | --- |
 | 1. Socle | Semaine 1 | PWA, 5 onglets, script audio, 1 thème de 10 mots (fait : 8 thèmes, 152 mots, 304 MP3) | Terminé |
@@ -245,7 +247,7 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 
 ## Points en suspens
 
-- HADRA (2026-10-14) : intégration en cours sur `feat/hadra-tts`. L'Action « Inspecter HADRA » lit la carte et les configurations publiques sans exécuter de code du modèle. Le latin est requis par l'utilisateur ; vérifier son support avant de synthétiser ou remplacer des MP3. L'accès Hugging Face est bloqué dans ce cloud ; l'inspection passe par GitHub Actions. Aucun nouvel audio n'est encore activé dans l'application.
+- HADRA (2026-10-14) : adaptateur F5-TTS et pilote de 50 entrées sur `feat/hadra-tts`, voir `docs/hadra/README.md`. Cible latine directe, poids/vocodeur figés et vérifiés, référence synthétique Jamal existante, contrôles techniques et reprise par empreinte ; aucune promotion linguistique automatique. Les candidats restent hors de `public/audio` ; l'application utilise toujours Jamal. Le vocabulaire contient l'Arabizi mais sa prononciation par HADRA doit être évaluée. L'accès Hugging Face est bloqué dans ce cloud ; les essais passent par GitHub Actions CPU ou un GPU self-hosted déjà disponible.
 
 - Latin (2026-10-14) : les aides `prononciation` n'ont pas été utilisées ni réécrites pour cette harmonisation ; certaines explications restent à revoir séparément. Les questions de sens/accord relevées par l'audit (`lbab khedra`) restent distinctes de la correction des seules graphies latines ; ne pas modifier arbitrairement l'arabe ou les traductions pour faire disparaître une alerte.
 
