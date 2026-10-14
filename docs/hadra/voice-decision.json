@@ -1,0 +1,11 @@
+{
+  "run_id": 38592396345,
+  "status": "completed",
+  "conclusion": "cancelled",
+  "checked_at": "2026-10-14T16:34:17.784684+00:00",
+  "user_decision": "rejected",
+  "automatic_generation": "disabled",
+  "production_voice": "Jamal",
+  "hadra_activated": false,
+  "reason": "L’utilisateur refuse la nouvelle voix après écoute du comparatif."
+}
