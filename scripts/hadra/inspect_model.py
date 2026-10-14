@@ -7,6 +7,8 @@ import urllib.request
 from pathlib import Path
 
 MODEL_ID = "Jip7e/habibi-tts-doda-darija"
+MODEL_REVISION = "0f9beec11b1185934e0da95c0e298f1b0457eef4"
+VOCODER_ID = "charactr/vocos-mel-24khz"
 
 
 def read_url(url: str) -> bytes:
@@ -18,7 +20,7 @@ def read_url(url: str) -> bytes:
 
 
 def inspect_model() -> dict:
-    metadata = json.loads(read_url(f"https://huggingface.co/api/models/{MODEL_ID}"))
+    metadata = json.loads(read_url(f"https://huggingface.co/api/models/{MODEL_ID}/revision/{MODEL_REVISION}?blobs=true"))
     revision = metadata["sha"]
     if not re.fullmatch(r"[0-9a-f]{40}", revision):
         raise ValueError("Révision du modèle invalide")
@@ -31,7 +33,11 @@ def inspect_model() -> dict:
         if filename in filenames:
             text = read_url(f"https://huggingface.co/{MODEL_ID}/resolve/{revision}/{filename}").decode("utf-8")
             files[filename] = json.loads(text) if filename.endswith(".json") else text
-    return {"model_id": MODEL_ID, "revision": revision, "metadata": metadata, "files": files}
+    vocoder = json.loads(read_url(f"https://huggingface.co/api/models/{VOCODER_ID}?blobs=true"))
+    if not re.fullmatch(r"[0-9a-f]{40}", vocoder["sha"]):
+        raise ValueError("Révision du vocodeur invalide")
+    return {"model_id": MODEL_ID, "revision": revision, "metadata": metadata, "files": files,
+            "vocoder": {"model_id": VOCODER_ID, "revision": vocoder["sha"], "metadata": vocoder}}
 
 
 def main() -> None:
