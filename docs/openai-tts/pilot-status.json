@@ -3,10 +3,11 @@
   "model": "gpt-4o-mini-tts-2025-12-15",
   "voice": "cedar",
   "expected": 10,
-  "attempted": 1,
+  "attempted": 0,
   "technically_ready": 0,
   "error": "openai_http_429",
+  "provider_error_code": "insufficient_quota",
   "linguistic_certification": false,
   "production_voice": "Jamal",
-  "run_id": "38603701783"
+  "run_id": "38605552834"
 }
