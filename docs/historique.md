@@ -36,6 +36,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 ## Décisions
 
+- 2026-10-14 : reprise HADRA réellement vérifiée sur les cinq masters à 32 étapes : aucun nouveau calcul TTS, contrôle et réencodage en 1,26 s, avertissements présents dans la file de révision. Le workflow manuel ne sera disponible qu'après ajout du fichier dans la branche par défaut ; les essais de cette branche sont déclenchés par push.
+
 - 2026-10-14 : essai à 32 étapes réussi techniquement sur cinq candidats (deux graines pour 9elb et khobz), 8 min 13 s de génération, 2,6 Gio de mémoire et 91–99 s par fichier. Les écarts phonétiques persistent ; HADRA reste expérimental, sans conversion des cibles latines en arabe ni génération massive. La génération est bornée à 30 min dans un job de 40 min pour conserver les résultats partiels.
 
 - 2026-10-14 : premier essai HADRA CPU réussi sur 9elb, khobz et 3afak à 8 étapes (20–22 s par fichier, RTF 16–19) ; contrôles techniques passés avec silence initial long. Diagnostic XLSR indépendant conservé : écarts sur les sons ciblés, scores non calibrés et aucune certification ; comparaison à 32 étapes avant choix de voix.

@@ -73,7 +73,10 @@ un nombre. Une incertitude persistante peut nécessiter une adaptation du modèl
 « Audio HADRA (pilote) » teste puis synthétise trois mots sur la branche de travail.
 Après le premier essai à 8 étapes, l'essai automatique utilise 32 étapes et deux
 graines pour les mots complexes (cinq candidats pour ces trois mots).
-Une exécution manuelle peut sélectionner 1–50 entrées. CPU : runner hébergé standard.
+Après intégration du workflow dans la branche par défaut, une exécution manuelle pourra
+sélectionner 1–50 entrées. Sur la branche expérimentale actuelle, les essais sont lancés
+par push ; `workflow_dispatch` exige que son fichier existe dans la branche par défaut.
+CPU : runner hébergé standard.
 GPU : runner **déjà enregistré** avec les labels `self-hosted`, `linux`, `gpu` ; aucun
 service GPU n'est provisionné ni facturé par cette intégration.
 Les poids et les masters intacts sont mis en cache entre exécutions ; les rapports et audios sont des artifacts conservés 14 jours.
@@ -129,3 +132,9 @@ certifiées. Une adaptation au latin ou un checkpoint qui connaît cette convent
 de 50 entrées reste disponible, mais aucun lot complet ou massif n'a été exécuté.
 L'Action borne la génération à 30 min pour garder du temps de sauvegarde ; fractionner
 les futurs lots selon les mesures, après résolution de la lecture latine.
+
+La reprise a été vérifiée dans l'Action
+[38580044942](https://github.com/mcofirty/Darijapp/actions/runs/38580044942) : les cinq
+masters ont été réutilisés, contrôlés et réencodés en **1,26 s**, sans charger HADRA
+ni effectuer de nouvelle synthèse. Les avertissements de silence sont conservés dans
+la file de révision. Le job complet prend 3 min 19 s, installation et caches compris.

@@ -202,7 +202,7 @@ Profil : en plus des réglages, `micro` (Dis-le avec score), `parler` et `ecoute
 
 Jalon en cours : **4 — Jeu** (contenu du jeu terminé). Les jalons 1 à 3 sont en ligne sur https://mcofirty.github.io/Darijapp/ (score de prononciation à éprouver sur iPhone avec une vraie voix).
 
-Voix HADRA : générateur expérimental opérationnel sur `feat/hadra-tts` ; trois mots latins testés à 8 puis 32 étapes, contrôles techniques passés mais écarts phonétiques persistants. Lecture fiable de l'Arabizi non établie, génération massive suspendue.
+Voix HADRA : générateur expérimental opérationnel sur `feat/hadra-tts` ; trois mots latins testés à 8 puis 32 étapes, contrôles techniques et reprise vérifiés mais écarts phonétiques persistants. Lecture fiable de l'Arabizi non établie, génération massive suspendue.
 
 | Jalon | Durée estimée | Contenu | Statut |
 | --- | --- | --- | --- |
