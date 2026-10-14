@@ -40,6 +40,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 ## Décisions
 
+- 2026-10-14 : reprise du déploiement Pages réussie en 3 min 33 s avec l'artifact existant, sans nouveaux calculs audio ; relancer le contrôle HTTP de la page et des 100 MP3 après la mise en ligne effective.
+
 - 2026-10-14 : première mise en ligne du comparatif expirée dans deploy-pages après 10 min, build réussi ; relancer seulement les jobs en échec avec le même artifact pour conserver les MP3 et éviter des recalculs.
 
 - 2026-10-14 : vérifier aussi les 100 fichiers effectivement servis par GitHub Pages depuis un runner, le proxy cloud bloquant ce domaine ; ne déduire aucune certification linguistique des checks HTTP ou du test mobile.
