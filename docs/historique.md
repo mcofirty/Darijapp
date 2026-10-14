@@ -54,6 +54,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-14 | Dix MP3 OpenAI réels générés depuis le latin, vingt empreintes et lecture avant/après mobile vérifiées ; comparatif ajouté sur main, contrôle HTTP après publication | `public/test-audio-openai/`, `.github/workflows/openai-tts-preview-check.yml` |
 
+| 2026-10-14 | Comparatif OpenAI de dix mots publié et vérifié en HTTP : page, ressources et SHA-256 des vingt MP3 ; Jamal reste active, avis attendu avant 50 mots | `public/test-audio-openai/`, `docs/openai-tts/preview-http-check.json` |
+
 ## Décisions
 
 - 2026-10-14 : contrôle HTTP réussi sur la page, les scripts et les 100 MP3 (50 avant/après) ; distinguer la disponibilité du test de l'avancement du corpus complet, dont les jobs sont observés sans interrompre les calculs.

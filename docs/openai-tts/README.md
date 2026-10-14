@@ -8,9 +8,13 @@ fonctionnement de l’application n’est modifié.
 
 Après ajout de crédit, la relance du run `38605552834` a généré les dix MP3
 réels. Vingt empreintes et dix décodages audio sont vérifiés ; la lecture,
-les avis et l’export fonctionnent en Chromium mobile. Le comparatif est ajouté
-sur main (`b8c50ee`), publication Pages et contrôle HTTP en cours.
-Jamal reste active. La prononciation n’est pas certifiée.
+les avis et l’export fonctionnent en Chromium mobile. Le comparatif est publié
+sur main (`b8c50ee`) :
+https://mcofirty.github.io/Darijapp/test-audio-openai/
+La publication Pages `38639506745` a réussi en 3 min 5 s ; contrôle HTTP
+des vingt MP3 et de leurs SHA-256 réussi (`preview-http-check.json`).
+Jamal reste active. La prononciation n’est pas certifiée ; attendre l’avis
+de l’utilisateur avant un comparatif de 50 mots.
 
 ## Modèle et mots
 
@@ -79,8 +83,8 @@ L’écoute des dix mots décide si un comparatif de 50 mérite d’être prépa
 
 ## Comparatif isolé
 
-La page sera publiée à `/test-audio-openai/` seulement lorsque les dix nouveaux
-MP3 sont prêts : vingt fichiers Avant/Jamal et Après/OpenAI, deux lecteurs,
+La page est publiée à `/test-audio-openai/` avec les dix nouveaux
+MP3 techniquement conformes : vingt fichiers Avant/Jamal et Après/OpenAI, deux lecteurs,
 filtres, vitesse, avis locaux et export JSON. Le test identifie explicitement
 la voix générée par OpenAI. Sa clé de stockage est distincte du test HADRA
 et de la progression. Aucun avis du navigateur ne déclenche un déploiement.
