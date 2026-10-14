@@ -81,7 +81,7 @@
   },
   {
     "id": "cuisine-006",
-    "latin": "forchetta",
+    "latin": "forchita",
     "arabe": "فورشيطة",
     "fr": "fourchette",
     "theme": "cuisine",
@@ -89,7 +89,7 @@
     "prononciation": "for-chet-ta : « ch » de « chat ».",
     "audio": "audio/cuisine-006.mp3",
     "exemple": {
-      "latin": "jib lia forchetta",
+      "latin": "jib lia forchita",
       "arabe": "جيب ليا فورشيطة",
       "fr": "Apporte-moi une fourchette",
       "audio": "audio/cuisine-006-ex.mp3"

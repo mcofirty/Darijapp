@@ -65,7 +65,7 @@
   },
   {
     "id": "restaurant-005",
-    "latin": "bghit lmenu",
+    "latin": "bghit lmino",
     "arabe": "بغيت المينو",
     "fr": "je voudrais le menu",
     "theme": "restaurant",
@@ -73,7 +73,7 @@
     "prononciation": "bghit l-me-nu : « gh » grasseyé.",
     "audio": "audio/restaurant-005.mp3",
     "exemple": {
-      "latin": "bghit lmenu, chokran",
+      "latin": "bghit lmino, chokran",
       "arabe": "بغيت المينو، شكرا",
       "fr": "Je voudrais le menu, merci",
       "audio": "audio/restaurant-005-ex.mp3"
@@ -81,7 +81,7 @@
   },
   {
     "id": "restaurant-006",
-    "latin": "wach 3ndkom lmenu?",
+    "latin": "wach 3ndkom lmino?",
     "arabe": "واش عندكم المينو؟",
     "fr": "vous avez un menu ?",
     "theme": "restaurant",
@@ -89,7 +89,7 @@
     "prononciation": "wach 3nd-kom l-me-nu : 3 serré.",
     "audio": "audio/restaurant-006.mp3",
     "exemple": {
-      "latin": "wach 3ndkom lmenu b lfransawiya?",
+      "latin": "wach 3ndkom lmino b lfransawiya?",
       "arabe": "واش عندكم المينو بالفرنساوية؟",
       "fr": "Vous avez un menu en français ?",
       "audio": "audio/restaurant-006-ex.mp3"
@@ -113,7 +113,7 @@
   },
   {
     "id": "restaurant-008",
-    "latin": "achno lplat d lyom?",
+    "latin": "achno lpla d lyom?",
     "arabe": "اشنو البلا د اليوم؟",
     "fr": "quel est le plat du jour ?",
     "theme": "restaurant",
@@ -121,7 +121,7 @@
     "prononciation": "ach-no l-pla d l-yom : « ch » de « chat ».",
     "audio": "audio/restaurant-008.mp3",
     "exemple": {
-      "latin": "achno lplat d lyom? ljem3a kayn lkouskous",
+      "latin": "achno lpla d lyom? ljem3a kayn lkouskous",
       "arabe": "اشنو البلا د اليوم؟ الجمعة كاين الكسكسو",
       "fr": "Quel est le plat du jour ? Le vendredi, c'est couscous",
       "audio": "audio/restaurant-008-ex.mp3"
@@ -633,7 +633,7 @@
     "prononciation": "bach na-khod m3a-ya, 3a-fak : « kh » et 3.",
     "audio": "audio/restaurant-040.mp3",
     "exemple": {
-      "latin": "jouj sandwich, bach nakhod m3aya, 3afak",
+      "latin": "jouj sandwitch, bach nakhod m3aya, 3afak",
       "arabe": "جوج ساندويتش، باش ناخد معايا، عافاك",
       "fr": "Deux sandwichs à emporter, s'il vous plaît",
       "audio": "audio/restaurant-040-ex.mp3"

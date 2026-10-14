@@ -1,7 +1,7 @@
 [
   {
     "id": "transports-001",
-    "latin": "taxi",
+    "latin": "taksi",
     "arabe": "طاكسي",
     "fr": "taxi",
     "theme": "transports",
@@ -9,7 +9,7 @@
     "prononciation": "ta-k-si : « t » appuyé, langue en arrière.",
     "audio": "audio/transports-001.mp3",
     "exemple": {
-      "latin": "fin kayn taxi?",
+      "latin": "fin kayn taksi?",
       "arabe": "فين كاين طاكسي؟",
       "fr": "Où y a-t-il un taxi ?",
       "audio": "audio/transports-001-ex.mp3"
@@ -321,7 +321,7 @@
   },
   {
     "id": "transports-021",
-    "latin": "petit taxi",
+    "latin": "poti taksi",
     "arabe": "بوتي طاكسي",
     "fr": "petit taxi",
     "theme": "transports",
@@ -329,7 +329,7 @@
     "prononciation": "pe-ti ta-xi : comme en français.",
     "audio": "audio/transports-021.mp3",
     "exemple": {
-      "latin": "chedd petit taxi l lma7atta",
+      "latin": "chedd poti taksi l lma7atta",
       "arabe": "شد بوتي طاكسي ل المحطة",
       "fr": "Prends un petit taxi jusqu'à la gare",
       "audio": "audio/transports-021-ex.mp3"
@@ -337,7 +337,7 @@
   },
   {
     "id": "transports-022",
-    "latin": "grand taxi",
+    "latin": "grand taksi",
     "arabe": "گراند طاكسي",
     "fr": "grand taxi",
     "theme": "transports",
@@ -345,7 +345,7 @@
     "prononciation": "grand ta-xi : comme en français.",
     "audio": "audio/transports-022.mp3",
     "exemple": {
-      "latin": "grand taxi kaymchi l fes",
+      "latin": "grand taksi kaymchi l fes",
       "arabe": "گراند طاكسي كيمشي ل فاس",
       "fr": "Le grand taxi va à Fès",
       "audio": "audio/transports-022-ex.mp3"
@@ -433,7 +433,7 @@
   },
   {
     "id": "transports-028",
-    "latin": "scooter",
+    "latin": "skouter",
     "arabe": "سكوتر",
     "fr": "scooter",
     "theme": "transports",
@@ -441,7 +441,7 @@
     "prononciation": "skou-ter : comme « scooter ».",
     "audio": "audio/transports-028.mp3",
     "exemple": {
-      "latin": "scooter sghir w khfif",
+      "latin": "skouter sghir w khfif",
       "arabe": "سكوتر صغير و خفيف",
       "fr": "Le scooter est petit et léger",
       "audio": "audio/transports-028-ex.mp3"
@@ -481,7 +481,7 @@
   },
   {
     "id": "transports-031",
-    "latin": "chauffeur",
+    "latin": "chifour",
     "arabe": "شيفور",
     "fr": "conducteur",
     "theme": "transports",
@@ -489,7 +489,7 @@
     "prononciation": "chi-for : « ch » de « chat ».",
     "audio": "audio/transports-031.mp3",
     "exemple": {
-      "latin": "chauffeur dyal ttaxi driyef",
+      "latin": "chifour dyal ttaksi driyef",
       "arabe": "شيفور ديال الطاكسي ضريف",
       "fr": "Le chauffeur du taxi est gentil",
       "audio": "audio/transports-031-ex.mp3"
@@ -529,7 +529,7 @@
   },
   {
     "id": "transports-034",
-    "latin": "reservation",
+    "latin": "rezervasyon",
     "arabe": "ريزيرفاسيون",
     "fr": "réservation",
     "theme": "transports",
@@ -537,7 +537,7 @@
     "prononciation": "re-zer-va-syon : comme en français.",
     "audio": "audio/transports-034.mp3",
     "exemple": {
-      "latin": "3ndi reservation f lotel",
+      "latin": "3ndi rezervasyon f lotel",
       "arabe": "عندي ريزيرفاسيون ف الوطيل",
       "fr": "J'ai une réservation à l'hôtel",
       "audio": "audio/transports-034-ex.mp3"
@@ -953,7 +953,7 @@
     "prononciation": "tle3 : le 3 serré à la fin.",
     "audio": "audio/transports-060.mp3",
     "exemple": {
-      "latin": "tle3 f ttaxi",
+      "latin": "tle3 f ttaksi",
       "arabe": "طلع ف الطاكسي",
       "fr": "Monte dans le taxi",
       "audio": "audio/transports-060-ex.mp3"

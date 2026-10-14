@@ -177,7 +177,7 @@
   },
   {
     "id": "ville-012",
-    "latin": "supermarché",
+    "latin": "soupermarchi",
     "arabe": "سوبيرمارشي",
     "fr": "supermarché",
     "theme": "ville",
@@ -185,7 +185,7 @@
     "prononciation": "su-per-mar-ché : comme en français.",
     "audio": "audio/ville-012.mp3",
     "exemple": {
-      "latin": "chrit kolchi men supermarché",
+      "latin": "chrit kolchi men soupermarchi",
       "arabe": "شريت كلشي من سوبيرمارشي",
       "fr": "J'ai tout acheté au supermarché",
       "audio": "audio/ville-012-ex.mp3"
@@ -281,7 +281,7 @@
     "prononciation": "o-til : comme « hôtel ».",
     "audio": "audio/ville-018.mp3",
     "exemple": {
-      "latin": "lotil dyalna fih piscine",
+      "latin": "lotil dyalna fih pisin",
       "arabe": "الأوطيل ديالنا فيه بيسين",
       "fr": "Notre hôtel a une piscine",
       "audio": "audio/ville-018-ex.mp3"
@@ -321,7 +321,7 @@
   },
   {
     "id": "ville-021",
-    "latin": "guichet otomatik",
+    "latin": "gichi otomatik",
     "arabe": "گيشي أوطوماتيك",
     "fr": "distributeur de billets",
     "theme": "ville",
@@ -329,7 +329,7 @@
     "prononciation": "gi-chi o-to-ma-tik : comme en français.",
     "audio": "audio/ville-021.mp3",
     "exemple": {
-      "latin": "fin kayn chi guichet otomatik?",
+      "latin": "fin kayn chi gichi otomatik?",
       "arabe": "فين كاين شي گيشي أوطوماتيك؟",
       "fr": "Où y a-t-il un distributeur de billets ?",
       "audio": "audio/ville-021-ex.mp3"
@@ -385,7 +385,7 @@
   },
   {
     "id": "ville-025",
-    "latin": "jendarmerie",
+    "latin": "jondarmri",
     "arabe": "جوندارمري",
     "fr": "gendarmerie",
     "theme": "ville",
@@ -393,7 +393,7 @@
     "prononciation": "jon-dar-me-ri : comme « gendarmerie ».",
     "audio": "audio/ville-025.mp3",
     "exemple": {
-      "latin": "ljendarmerie f lmdakhel dyal lmdina",
+      "latin": "ljondarmri f lmdakhel dyal lmdina",
       "arabe": "الجوندارمري ف المداخل ديال المدينة",
       "fr": "La gendarmerie est aux entrées de la ville",
       "audio": "audio/ville-025-ex.mp3"
@@ -529,7 +529,7 @@
   },
   {
     "id": "ville-034",
-    "latin": "stade",
+    "latin": "stad",
     "arabe": "سطاد",
     "fr": "stade",
     "theme": "ville",
@@ -537,7 +537,7 @@
     "prononciation": "stad : comme « stade ».",
     "audio": "audio/ville-034.mp3",
     "exemple": {
-      "latin": "mchina l stade nchoufo lmatch",
+      "latin": "mchina l stad nchoufo lmatch",
       "arabe": "مشينا ل سطاد نشوفو الماتش",
       "fr": "Nous sommes allés au stade voir le match",
       "audio": "audio/ville-034-ex.mp3"
@@ -553,7 +553,7 @@
     "prononciation": "pi-sin : comme « piscine ».",
     "audio": "audio/ville-035.mp3",
     "exemple": {
-      "latin": "ddrari f lpiscine",
+      "latin": "ddrari f lpisin",
       "arabe": "الدراري ف البيسين",
       "fr": "Les enfants sont à la piscine",
       "audio": "audio/ville-035-ex.mp3"
@@ -561,7 +561,7 @@
   },
   {
     "id": "ville-036",
-    "latin": "sala d sport",
+    "latin": "sala d spor",
     "arabe": "صالة د سبور",
     "fr": "salle de sport",
     "theme": "ville",
@@ -569,7 +569,7 @@
     "prononciation": "sa-la d spor : un « s » épais.",
     "audio": "audio/ville-036.mp3",
     "exemple": {
-      "latin": "kanmchi l sala d sport tlata d lmrat",
+      "latin": "kanmchi l sala d spor tlata d lmrat",
       "arabe": "كنمشي ل صالة د سبور تلاتة د المرات",
       "fr": "Je vais à la salle de sport trois fois",
       "audio": "audio/ville-036-ex.mp3"
@@ -577,7 +577,7 @@
   },
   {
     "id": "ville-037",
-    "latin": "jardin",
+    "latin": "jardan",
     "arabe": "جاردان",
     "fr": "parc",
     "theme": "ville",
@@ -585,7 +585,7 @@
     "prononciation": "jar-dan : comme « jardin ».",
     "audio": "audio/ville-037.mp3",
     "exemple": {
-      "latin": "tmechina f jardin",
+      "latin": "tmechina f jardan",
       "arabe": "تمشينا ف جاردان",
       "fr": "Nous nous sommes promenés au parc",
       "audio": "audio/ville-037-ex.mp3"
@@ -673,7 +673,7 @@
   },
   {
     "id": "ville-043",
-    "latin": "ma7atta d train",
+    "latin": "ma7atta d tran",
     "arabe": "محطة د تران",
     "fr": "gare",
     "theme": "ville",
@@ -681,7 +681,7 @@
     "prononciation": "ma-7at-ta d train : souffle chaud (7).",
     "audio": "audio/ville-043.mp3",
     "exemple": {
-      "latin": "ma7atta d train 9riba men lotil",
+      "latin": "ma7atta d tran 9riba men lotil",
       "arabe": "محطة د تران قريبة من الأوطيل",
       "fr": "La gare est près de l'hôtel",
       "audio": "audio/ville-043-ex.mp3"
@@ -689,7 +689,7 @@
   },
   {
     "id": "ville-044",
-    "latin": "station d lessans",
+    "latin": "stasyon d lessans",
     "arabe": "سطاسيون د ليصانص",
     "fr": "station-service",
     "theme": "ville",
@@ -697,7 +697,7 @@
     "prononciation": "sta-syon d les-sans : comme « station d'essence ».",
     "audio": "audio/ville-044.mp3",
     "exemple": {
-      "latin": "w9ef f station d lessans",
+      "latin": "w9ef f stasyon d lessans",
       "arabe": "وقف ف سطاسيون د ليصانص",
       "fr": "Arrête-toi à la station-service",
       "audio": "audio/ville-044-ex.mp3"
@@ -785,7 +785,7 @@
   },
   {
     "id": "ville-050",
-    "latin": "rond-point",
+    "latin": "rond pwan",
     "arabe": "روند بوان",
     "fr": "rond-point",
     "theme": "ville",
@@ -793,7 +793,7 @@
     "prononciation": "rond-pwan : comme « rond-point ».",
     "audio": "audio/ville-050.mp3",
     "exemple": {
-      "latin": "men b3d rond-point, dour 3la limen",
+      "latin": "men b3d rond pwan, dour 3la limen",
       "arabe": "من بعد روند بوان، دور على ليمن",
       "fr": "Après le rond-point, tourne à droite",
       "audio": "audio/ville-050-ex.mp3"
@@ -817,7 +817,7 @@
   },
   {
     "id": "ville-052",
-    "latin": "passage piéton",
+    "latin": "pasaj piton",
     "arabe": "باساج بيطون",
     "fr": "passage piéton",
     "theme": "ville",
@@ -825,7 +825,7 @@
     "prononciation": "pa-saj pi-ton : comme « passage piéton ».",
     "audio": "audio/ville-052.mp3",
     "exemple": {
-      "latin": "9te3 men passage piéton",
+      "latin": "9te3 men pasaj piton",
       "arabe": "قطع من باساج بيطون",
       "fr": "Traverse sur le passage piéton",
       "audio": "audio/ville-052-ex.mp3"

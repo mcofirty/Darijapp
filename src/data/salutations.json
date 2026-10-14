@@ -249,7 +249,7 @@
     "prononciation": "sme7 li-a : le « e » est très bref ; le 7 (ح) final est un souffle chaud.",
     "audio": "audio/salutations-016.mp3",
     "exemple": {
-      "latin": "sme7 lia, fin kayn taxi?",
+      "latin": "sme7 lia, fin kayn taksi?",
       "arabe": "سمح ليا، فين كاين طاكسي؟",
       "fr": "Excusez-moi, où y a-t-il un taxi ?",
       "audio": "audio/salutations-016-ex.mp3"
@@ -546,7 +546,7 @@
   },
   {
     "id": "salutations-035",
-    "latin": "lah yjazik bikhir",
+    "latin": "allah yjazik bikhir",
     "arabe": "الله يجازيك بخير",
     "fr": "que Dieu te récompense",
     "theme": "salutations",
@@ -554,7 +554,7 @@
     "prononciation": "lah y-ja-zik bi-khir : finis par un raclement léger (kh).",
     "audio": "audio/salutations-035.mp3",
     "exemple": {
-      "latin": "lah yjazik bikhir 3la had lkhedma",
+      "latin": "allah yjazik bikhir 3la had lkhedma",
       "arabe": "الله يجازيك بخير على هاد الخدمة",
       "fr": "Que Dieu te récompense pour ce travail",
       "audio": "audio/salutations-035-ex.mp3"
@@ -626,7 +626,7 @@
   },
   {
     "id": "salutations-040",
-    "latin": "lah y3awnek",
+    "latin": "allah y3awnek",
     "arabe": "الله يعاونك",
     "fr": "bon courage",
     "theme": "salutations",
@@ -634,7 +634,7 @@
     "prononciation": "lah y3aw-nek : le 3 serré au fond de la gorge.",
     "audio": "audio/salutations-040.mp3",
     "exemple": {
-      "latin": "lah y3awnek f lkhedma",
+      "latin": "allah y3awnek f lkhedma",
       "arabe": "الله يعاونك ف الخدمة",
       "fr": "Bon courage au travail",
       "audio": "audio/salutations-040-ex.mp3"

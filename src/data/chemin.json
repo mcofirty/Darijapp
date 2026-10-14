@@ -1,7 +1,7 @@
 [
   {
     "id": "chemin-001",
-    "latin": "fin kayna lma7atta d train?",
+    "latin": "fin kayna lma7atta d tran?",
     "arabe": "فين كاينة المحطة د تران؟",
     "fr": "où est la gare ?",
     "theme": "chemin",
@@ -9,7 +9,7 @@
     "prononciation": "fin kay-na l-ma-7at-ta d train : souffle chaud (7) dans « lma7atta ».",
     "audio": "audio/chemin-001.mp3",
     "exemple": {
-      "latin": "sme7 lia, fin kayna lma7atta d train?",
+      "latin": "sme7 lia, fin kayna lma7atta d tran?",
       "arabe": "سمح ليا، فين كاينة المحطة د تران؟",
       "fr": "Pardon, où est la gare ?",
       "audio": "audio/chemin-001-ex.mp3"
@@ -121,7 +121,7 @@
     "prononciation": "ch7al men d9i-9a : « ch » puis 7, deux 9.",
     "audio": "audio/chemin-008.mp3",
     "exemple": {
-      "latin": "ch7al men d9i9a b ttaxi?",
+      "latin": "ch7al men d9i9a b ttaksi?",
       "arabe": "شحال من دقيقة ب الطاكسي؟",
       "fr": "C'est à combien de minutes en taxi ?",
       "audio": "audio/chemin-008-ex.mp3"
@@ -289,7 +289,7 @@
   },
   {
     "id": "chemin-019",
-    "latin": "kan-9elleb 3la taxi",
+    "latin": "kan-9elleb 3la taksi",
     "arabe": "كنقلب على طاكسي",
     "fr": "je cherche un taxi",
     "theme": "chemin",
@@ -297,7 +297,7 @@
     "prononciation": "kan-9el-leb 3la ta-xi : 9 du fond de la gorge, 3 serré.",
     "audio": "audio/chemin-019.mp3",
     "exemple": {
-      "latin": "kan9elleb 3la taxi l lmatar",
+      "latin": "kan9elleb 3la taksi l lmatar",
       "arabe": "كنقلب على طاكسي ل المطار",
       "fr": "Je cherche un taxi pour l'aéroport",
       "audio": "audio/chemin-019-ex.mp3"
@@ -313,7 +313,7 @@
     "prononciation": "ch7al bach nmchi l-tem-ma : « ch » et 7.",
     "audio": "audio/chemin-020.mp3",
     "exemple": {
-      "latin": "ch7al bach nmchi ltemma b ttaxi?",
+      "latin": "ch7al bach nmchi ltemma b ttaksi?",
       "arabe": "شحال باش نمشي لتما ب الطاكسي؟",
       "fr": "Ça coûte combien pour aller là-bas en taxi ?",
       "audio": "audio/chemin-020-ex.mp3"
@@ -321,7 +321,7 @@
   },
   {
     "id": "chemin-021",
-    "latin": "ch3el lcompteur, 3afak",
+    "latin": "ch3el lkontor, 3afak",
     "arabe": "شعل الكونطور، عافاك",
     "fr": "mettez le compteur, s'il vous plaît",
     "theme": "chemin",
@@ -329,7 +329,7 @@
     "prononciation": "ch3el l-kon-tor, 3a-fak : « ch » puis 3 serré.",
     "audio": "audio/chemin-021.mp3",
     "exemple": {
-      "latin": "ch3el lcompteur, 3afak, ma bghitch ntkhasem",
+      "latin": "ch3el lkontor, 3afak, ma bghitch ntkhasem",
       "arabe": "شعل الكونطور، عافاك، ما بغيتش نتخاصم",
       "fr": "Mettez le compteur, s'il vous plaît, je ne veux pas me disputer",
       "audio": "audio/chemin-021-ex.mp3"
@@ -369,7 +369,7 @@
   },
   {
     "id": "chemin-024",
-    "latin": "tiki dyal l'aller",
+    "latin": "tiki dyal lali",
     "arabe": "تيكي ديال لالي",
     "fr": "un billet aller simple",
     "theme": "chemin",
@@ -377,7 +377,7 @@
     "prononciation": "ti-ki dyal l'al-le : comme « aller » en français.",
     "audio": "audio/chemin-024.mp3",
     "exemple": {
-      "latin": "bghit tiki dyal l'aller l fes",
+      "latin": "bghit tiki dyal lali l fes",
       "arabe": "بغيت تيكي ديال لالي ل فاس",
       "fr": "Je voudrais un aller simple pour Fès",
       "audio": "audio/chemin-024-ex.mp3"
@@ -385,7 +385,7 @@
   },
   {
     "id": "chemin-025",
-    "latin": "tiki aller-retour",
+    "latin": "tiki ali-rotor",
     "arabe": "تيكي ألي روتور",
     "fr": "un billet aller-retour",
     "theme": "chemin",
@@ -393,7 +393,7 @@
     "prononciation": "ti-ki al-le-re-tour : comme « aller-retour ».",
     "audio": "audio/chemin-025.mp3",
     "exemple": {
-      "latin": "ch7al tiki aller-retour l tanja?",
+      "latin": "ch7al tiki ali-rotor l tanja?",
       "arabe": "شحال تيكي ألي روتور ل طنجة؟",
       "fr": "Combien coûte un aller-retour pour Tanger ?",
       "audio": "audio/chemin-025-ex.mp3"
@@ -401,7 +401,7 @@
   },
   {
     "id": "chemin-026",
-    "latin": "fo9ach kaykherrej train?",
+    "latin": "fo9ach kaykherrej tran?",
     "arabe": "فوقاش كيخرج تران؟",
     "fr": "quand part le train ?",
     "theme": "chemin",
@@ -409,7 +409,7 @@
     "prononciation": "fo9-ach kay-kher-rej train : 9 du fond de la gorge, raclement (kh).",
     "audio": "audio/chemin-026.mp3",
     "exemple": {
-      "latin": "fo9ach kaykherrej train l mrrakech?",
+      "latin": "fo9ach kaykherrej tran l mrrakech?",
       "arabe": "فوقاش كيخرج تران ل مراكش؟",
       "fr": "Quand part le train pour Marrakech ?",
       "audio": "audio/chemin-026-ex.mp3"
@@ -449,7 +449,7 @@
   },
   {
     "id": "chemin-029",
-    "latin": "bghit nrezerver",
+    "latin": "bghit nrezervi",
     "arabe": "بغيت نريزيرفي",
     "fr": "je veux réserver",
     "theme": "chemin",
@@ -465,7 +465,7 @@
   },
   {
     "id": "chemin-030",
-    "latin": "3ndi reservation",
+    "latin": "3ndi rezervasyon",
     "arabe": "عندي ريزيرفاسيون",
     "fr": "j'ai une réservation",
     "theme": "chemin",
@@ -473,7 +473,7 @@
     "prononciation": "3ndi re-zer-va-syon : le 3 serré au début.",
     "audio": "audio/chemin-030.mp3",
     "exemple": {
-      "latin": "3ndi reservation b smiti",
+      "latin": "3ndi rezervasyon b smiti",
       "arabe": "عندي ريزيرفاسيون ب سميتي",
       "fr": "J'ai une réservation à mon nom",
       "audio": "audio/chemin-030-ex.mp3"

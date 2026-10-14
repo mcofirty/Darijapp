@@ -130,7 +130,7 @@
   },
   {
     "id": "maison-009",
-    "latin": "couloir",
+    "latin": "koulwar",
     "arabe": "كولوار",
     "fr": "couloir",
     "theme": "maison",
@@ -138,7 +138,7 @@
     "prononciation": "kou-lwar : comme « couloir ».",
     "audio": "audio/maison-009.mp3",
     "exemple": {
-      "latin": "7ett ssebbat f lcouloir",
+      "latin": "7ett ssebbat f lkoulwar",
       "arabe": "حط الصباط ف الكولوار",
       "fr": "Pose les chaussures dans le couloir",
       "audio": "audio/maison-009-ex.mp3"
@@ -146,7 +146,7 @@
   },
   {
     "id": "maison-010",
-    "latin": "balcon",
+    "latin": "balkon",
     "arabe": "بالكون",
     "fr": "balcon",
     "theme": "maison",
@@ -154,7 +154,7 @@
     "prononciation": "bal-kon : comme « balcon ».",
     "audio": "audio/maison-010.mp3",
     "exemple": {
-      "latin": "kanchreb atay f lbalcon",
+      "latin": "kanchreb atay f lbalkon",
       "arabe": "كنشرب أتاي ف البالكون",
       "fr": "Je bois le thé sur le balcon",
       "audio": "audio/maison-010-ex.mp3"
@@ -530,7 +530,7 @@
   },
   {
     "id": "maison-034",
-    "latin": "placar",
+    "latin": "plakar",
     "arabe": "بلاكار",
     "fr": "placard",
     "theme": "maison",
@@ -538,7 +538,7 @@
     "prononciation": "pla-kar : comme « placard ».",
     "audio": "audio/maison-034.mp3",
     "exemple": {
-      "latin": "7ett lvaliza f lplacar",
+      "latin": "7ett lvaliza f lplakar",
       "arabe": "حط الفاليزة ف البلاكار",
       "fr": "Mets la valise dans le placard",
       "audio": "audio/maison-034-ex.mp3"
@@ -674,7 +674,7 @@
   },
   {
     "id": "maison-043",
-    "latin": "kongelator",
+    "latin": "konjilator",
     "arabe": "كونجيلاتور",
     "fr": "congélateur",
     "theme": "maison",
@@ -682,7 +682,7 @@
     "prononciation": "kon-ji-la-tor : comme « congélateur ».",
     "audio": "audio/maison-043.mp3",
     "exemple": {
-      "latin": "l7em f lkongelator",
+      "latin": "l7em f lkonjilator",
       "arabe": "اللحم ف الكونجيلاتور",
       "fr": "La viande est dans le congélateur",
       "audio": "audio/maison-043-ex.mp3"
@@ -818,7 +818,7 @@
   },
   {
     "id": "maison-052",
-    "latin": "chauffage",
+    "latin": "choufaj",
     "arabe": "شوفاج",
     "fr": "chauffage",
     "theme": "maison",
@@ -826,7 +826,7 @@
     "prononciation": "chou-faj : « ch » de « chat ».",
     "audio": "audio/maison-052.mp3",
     "exemple": {
-      "latin": "ch3el chauffage, kayn lberd",
+      "latin": "ch3el choufaj, kayn lberd",
       "arabe": "شعل الشوفاج، كاين البرد",
       "fr": "Allume le chauffage, il fait froid",
       "audio": "audio/maison-052-ex.mp3"
@@ -866,7 +866,7 @@
   },
   {
     "id": "maison-055",
-    "latin": "saché d zbala",
+    "latin": "sachi d zbala",
     "arabe": "ساشي د زبالة",
     "fr": "sac-poubelle",
     "theme": "maison",
@@ -874,7 +874,7 @@
     "prononciation": "sa-chi d zba-la : « ch » de « chat ».",
     "audio": "audio/maison-055.mp3",
     "exemple": {
-      "latin": "chri saché d zbala men l7anout",
+      "latin": "chri sachi d zbala men l7anout",
       "arabe": "شري ساشي د زبالة من الحانوت",
       "fr": "Achète des sacs-poubelle à la boutique",
       "audio": "audio/maison-055-ex.mp3"

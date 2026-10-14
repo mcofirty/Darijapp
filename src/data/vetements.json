@@ -97,7 +97,7 @@
   },
   {
     "id": "vetements-007",
-    "latin": "sweat",
+    "latin": "swit",
     "arabe": "سويت",
     "fr": "sweat-shirt",
     "theme": "vetements",
@@ -105,7 +105,7 @@
     "prononciation": "swit : comme « sweat ».",
     "audio": "audio/vetements-007.mp3",
     "exemple": {
-      "latin": "had sweat skhoun bzaf",
+      "latin": "had swit skhoun bzaf",
       "arabe": "هاد سويت سخون بزاف",
       "fr": "Ce sweat est très chaud",
       "audio": "audio/vetements-007-ex.mp3"
@@ -145,7 +145,7 @@
   },
   {
     "id": "vetements-010",
-    "latin": "blouson",
+    "latin": "blouzon",
     "arabe": "بلوزون",
     "fr": "blouson",
     "theme": "vetements",
@@ -153,7 +153,7 @@
     "prononciation": "blou-zon : comme « blouson ».",
     "audio": "audio/vetements-010.mp3",
     "exemple": {
-      "latin": "lbes lblouson dyal ljeld",
+      "latin": "lbes lblouzon dyal ljeld",
       "arabe": "لبس البلوزون ديال الجلد",
       "fr": "Mets le blouson en cuir",
       "audio": "audio/vetements-010-ex.mp3"
@@ -305,7 +305,7 @@
   },
   {
     "id": "vetements-020",
-    "latin": "sbabat sport",
+    "latin": "sbabat spor",
     "arabe": "صبابط سبور",
     "fr": "basket (chaussure)",
     "theme": "vetements",
@@ -313,7 +313,7 @@
     "prononciation": "sba-bet spor : comme « sport ».",
     "audio": "audio/vetements-020.mp3",
     "exemple": {
-      "latin": "bghit sbabet sport l ljri",
+      "latin": "bghit sbabet spor l ljri",
       "arabe": "بغيت صبابط سبور ل الجري",
       "fr": "Je veux des baskets pour courir",
       "audio": "audio/vetements-020-ex.mp3"
@@ -417,7 +417,7 @@
   },
   {
     "id": "vetements-027",
-    "latin": "boné",
+    "latin": "boni",
     "arabe": "بوني",
     "fr": "bonnet",
     "theme": "vetements",
@@ -425,7 +425,7 @@
     "prononciation": "bo-ni : comme « bonnet ».",
     "audio": "audio/vetements-027.mp3",
     "exemple": {
-      "latin": "lbes boné, kayn ttelj",
+      "latin": "lbes boni, kayn ttelj",
       "arabe": "لبس بوني، كاين التلج",
       "fr": "Mets un bonnet, il neige",
       "audio": "audio/vetements-027-ex.mp3"
@@ -513,7 +513,7 @@
   },
   {
     "id": "vetements-033",
-    "latin": "sac",
+    "latin": "sak",
     "arabe": "صاك",
     "fr": "sac",
     "theme": "vetements",
@@ -529,7 +529,7 @@
   },
   {
     "id": "vetements-034",
-    "latin": "sac d dher",
+    "latin": "sak d dher",
     "arabe": "صاك د الضهر",
     "fr": "sac à dos",
     "theme": "vetements",
@@ -769,7 +769,7 @@
   },
   {
     "id": "vetements-049",
-    "latin": "taille",
+    "latin": "tay",
     "arabe": "طاي",
     "fr": "taille (de vêtement)",
     "theme": "vetements",
@@ -777,7 +777,7 @@
     "prononciation": "tay : comme « taille ».",
     "audio": "audio/vetements-049.mp3",
     "exemple": {
-      "latin": "chmen taille kat9iss?",
+      "latin": "chmen tay kat9iss?",
       "arabe": "شمن طاي كتقيس؟",
       "fr": "Quelle taille fais-tu ?",
       "audio": "audio/vetements-049-ex.mp3"
@@ -793,7 +793,7 @@
     "prononciation": "mtwas-set : un « s » épais.",
     "audio": "audio/vetements-050.mp3",
     "exemple": {
-      "latin": "bghit taille mtwasset",
+      "latin": "bghit tay mtwasset",
       "arabe": "بغيت طاي متوسط",
       "fr": "Je voudrais une taille M",
       "audio": "audio/vetements-050-ex.mp3"

@@ -17,7 +17,7 @@
   },
   {
     "id": "numerique-002",
-    "latin": "portable",
+    "latin": "portabl",
     "arabe": "بورطابل",
     "fr": "téléphone portable",
     "theme": "numerique",
@@ -25,7 +25,7 @@
     "prononciation": "por-tabl : comme « portable ».",
     "audio": "audio/numerique-002.mp3",
     "exemple": {
-      "latin": "nsit lportable f ttaxi",
+      "latin": "nsit lportabl f ttaksi",
       "arabe": "نسيت البورطابل ف الطاكسي",
       "fr": "J'ai oublié mon portable dans le taxi",
       "audio": "audio/numerique-002-ex.mp3"
@@ -65,7 +65,7 @@
   },
   {
     "id": "numerique-005",
-    "latin": "portable PC",
+    "latin": "portabl pi si",
     "arabe": "بورطابل بي سي",
     "fr": "ordinateur portable",
     "theme": "numerique",
@@ -73,7 +73,7 @@
     "prononciation": "por-tabl pi-si : comme en français.",
     "audio": "audio/numerique-005.mp3",
     "exemple": {
-      "latin": "kankhdem b portable PC f ddar",
+      "latin": "kankhdem b portabl pi si f ddar",
       "arabe": "كنخدم ب بورطابل بي سي ف الدار",
       "fr": "Je travaille sur un ordinateur portable à la maison",
       "audio": "audio/numerique-005-ex.mp3"
@@ -97,7 +97,7 @@
   },
   {
     "id": "numerique-007",
-    "latin": "écran",
+    "latin": "ikran",
     "arabe": "إيكران",
     "fr": "écran",
     "theme": "numerique",
@@ -105,7 +105,7 @@
     "prononciation": "e-kran : comme « écran ».",
     "audio": "audio/numerique-007.mp3",
     "exemple": {
-      "latin": "lécran therres",
+      "latin": "likran therres",
       "arabe": "الإيكران تهرس",
       "fr": "L'écran s'est cassé",
       "audio": "audio/numerique-007-ex.mp3"
@@ -161,7 +161,7 @@
   },
   {
     "id": "numerique-011",
-    "latin": "chargeur",
+    "latin": "charjour",
     "arabe": "شارجور",
     "fr": "chargeur",
     "theme": "numerique",
@@ -169,7 +169,7 @@
     "prononciation": "char-jor : « ch » de « chat ».",
     "audio": "audio/numerique-011.mp3",
     "exemple": {
-      "latin": "3ndek chi chargeur?",
+      "latin": "3ndek chi charjour?",
       "arabe": "عندك شي شارجور؟",
       "fr": "Tu as un chargeur ?",
       "audio": "audio/numerique-011-ex.mp3"
@@ -209,7 +209,7 @@
   },
   {
     "id": "numerique-014",
-    "latin": "casque",
+    "latin": "kask",
     "arabe": "كاسك",
     "fr": "casque audio",
     "theme": "numerique",
@@ -217,7 +217,7 @@
     "prononciation": "kask : comme « casque ».",
     "audio": "audio/numerique-014.mp3",
     "exemple": {
-      "latin": "lbes lcasque w sme3",
+      "latin": "lbes lkask w sme3",
       "arabe": "لبس الكاسك و سمع",
       "fr": "Mets le casque et écoute",
       "audio": "audio/numerique-014-ex.mp3"
@@ -369,7 +369,7 @@
   },
   {
     "id": "numerique-024",
-    "latin": "rézo",
+    "latin": "rizo",
     "arabe": "ريزو",
     "fr": "réseau",
     "theme": "numerique",
@@ -377,7 +377,7 @@
     "prononciation": "re-zo : comme « réseau ».",
     "audio": "audio/numerique-024.mp3",
     "exemple": {
-      "latin": "ma kaynch rrézo hna",
+      "latin": "ma kaynch rrizo hna",
       "arabe": "ما كاينش الريزو هنا",
       "fr": "Il n'y a pas de réseau ici",
       "audio": "audio/numerique-024-ex.mp3"
@@ -393,7 +393,7 @@
     "prononciation": "wi-fi : comme « wifi ».",
     "audio": "audio/numerique-025.mp3",
     "exemple": {
-      "latin": "ch7al lcode dyal lwifi?",
+      "latin": "ch7al lkod dyal lwifi?",
       "arabe": "شحال الكود ديال الويفي؟",
       "fr": "C'est quoi le code du wifi ?",
       "audio": "audio/numerique-025-ex.mp3"
@@ -401,7 +401,7 @@
   },
   {
     "id": "numerique-026",
-    "latin": "code secret",
+    "latin": "kod sikri",
     "arabe": "كود سيكري",
     "fr": "mot de passe",
     "theme": "numerique",
@@ -409,7 +409,7 @@
     "prononciation": "kod si-kri : comme « code secret ».",
     "audio": "audio/numerique-026.mp3",
     "exemple": {
-      "latin": "nsit lcode secret dyali",
+      "latin": "nsit lkod sikri dyali",
       "arabe": "نسيت الكود سيكري ديالي",
       "fr": "J'ai oublié mon mot de passe",
       "audio": "audio/numerique-026-ex.mp3"
@@ -417,7 +417,7 @@
   },
   {
     "id": "numerique-027",
-    "latin": "compte",
+    "latin": "kont",
     "arabe": "كونط",
     "fr": "compte (numérique)",
     "theme": "numerique",
@@ -425,7 +425,7 @@
     "prononciation": "kont : comme « compte ».",
     "audio": "audio/numerique-027.mp3",
     "exemple": {
-      "latin": "7ell compte jdid",
+      "latin": "7ell kont jdid",
       "arabe": "حل كونط جديد",
       "fr": "Ouvre un nouveau compte",
       "audio": "audio/numerique-027-ex.mp3"
@@ -433,7 +433,7 @@
   },
   {
     "id": "numerique-028",
-    "latin": "connexion",
+    "latin": "koniksyon",
     "arabe": "كونيكسيون",
     "fr": "connexion",
     "theme": "numerique",
@@ -441,7 +441,7 @@
     "prononciation": "ko-nek-syon : comme « connexion ».",
     "audio": "audio/numerique-028.mp3",
     "exemple": {
-      "latin": "lconnexion d3ifa bzaf",
+      "latin": "lkoniksyon d3ifa bzaf",
       "arabe": "الكونيكسيون ضعيفة بزاف",
       "fr": "La connexion est très faible",
       "audio": "audio/numerique-028-ex.mp3"
@@ -489,7 +489,7 @@
     "prononciation": "lyan : comme « lien ».",
     "audio": "audio/numerique-031.mp3",
     "exemple": {
-      "latin": "sift lia llien f lwhatsapp",
+      "latin": "sift lia llien f lwatsap",
       "arabe": "صيفط ليا الليان ف الواتساب",
       "fr": "Envoie-moi le lien sur WhatsApp",
       "audio": "audio/numerique-031-ex.mp3"
@@ -497,7 +497,7 @@
   },
   {
     "id": "numerique-032",
-    "latin": "telecharger",
+    "latin": "tilicharji",
     "arabe": "تيليشارجي",
     "fr": "télécharger",
     "theme": "numerique",
@@ -505,7 +505,7 @@
     "prononciation": "te-le-char-ji : « ch » de « chat ».",
     "audio": "audio/numerique-032.mp3",
     "exemple": {
-      "latin": "ghadi ntelecharger lfilm",
+      "latin": "ghadi ntilicharji lfilm",
       "arabe": "غادي نتيليشارجي الفيلم",
       "fr": "Je vais télécharger le film",
       "audio": "audio/numerique-032-ex.mp3"
@@ -521,7 +521,7 @@
     "prononciation": "sift : un « s » épais.",
     "audio": "audio/numerique-033.mp3",
     "exemple": {
-      "latin": "sift lia lmesaj daba",
+      "latin": "sift lia lmisaj daba",
       "arabe": "صيفط ليا الميساج دابا",
       "fr": "Envoie-moi le message maintenant",
       "audio": "audio/numerique-033-ex.mp3"
@@ -561,7 +561,7 @@
   },
   {
     "id": "numerique-036",
-    "latin": "copier",
+    "latin": "kopiye",
     "arabe": "كوبيي",
     "fr": "copier",
     "theme": "numerique",
@@ -569,7 +569,7 @@
     "prononciation": "ko-pi-ye : comme « copier ».",
     "audio": "audio/numerique-036.mp3",
     "exemple": {
-      "latin": "copier ladresse w sifteha",
+      "latin": "kopiye ladris w sifteha",
       "arabe": "كوبيي لادريس و صيفطها",
       "fr": "Copie l'adresse et envoie-la",
       "audio": "audio/numerique-036-ex.mp3"
@@ -577,7 +577,7 @@
   },
   {
     "id": "numerique-037",
-    "latin": "coller",
+    "latin": "koli",
     "arabe": "كولي",
     "fr": "coller",
     "theme": "numerique",
@@ -585,7 +585,7 @@
     "prononciation": "ko-li : comme « coller ».",
     "audio": "audio/numerique-037.mp3",
     "exemple": {
-      "latin": "coller lmessage hna",
+      "latin": "koli lmisaj hna",
       "arabe": "كولي الميساج هنا",
       "fr": "Colle le message ici",
       "audio": "audio/numerique-037-ex.mp3"
@@ -657,7 +657,7 @@
   },
   {
     "id": "numerique-042",
-    "latin": "supprimer",
+    "latin": "souprimi",
     "arabe": "سوبريمي",
     "fr": "supprimer",
     "theme": "numerique",
@@ -665,7 +665,7 @@
     "prononciation": "sou-pri-mi : comme « supprimer ».",
     "audio": "audio/numerique-042.mp3",
     "exemple": {
-      "latin": "supprimer lmesaj l9dim",
+      "latin": "souprimi lmisaj l9dim",
       "arabe": "سوبريمي الميساج القديم",
       "fr": "Supprime l'ancien message",
       "audio": "audio/numerique-042-ex.mp3"
@@ -833,7 +833,7 @@
   },
   {
     "id": "numerique-053",
-    "latin": "rézo sosyo",
+    "latin": "rizo sosyo",
     "arabe": "ريزو سوسيو",
     "fr": "réseaux sociaux",
     "theme": "numerique",
@@ -841,7 +841,7 @@
     "prononciation": "re-zo sos-yo : comme « réseaux sociaux ».",
     "audio": "audio/numerique-053.mp3",
     "exemple": {
-      "latin": "kaydouz lw9t f rrézo sosyo",
+      "latin": "kaydouz lw9t f rrizo sosyo",
       "arabe": "كيدوز الوقت ف الريزو سوسيو",
       "fr": "Il passe son temps sur les réseaux sociaux",
       "audio": "audio/numerique-053-ex.mp3"

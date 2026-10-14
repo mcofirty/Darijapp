@@ -385,7 +385,7 @@
   },
   {
     "id": "travail-025",
-    "latin": "congé",
+    "latin": "konji",
     "arabe": "كونجي",
     "fr": "congé",
     "theme": "travail",
@@ -393,7 +393,7 @@
     "prononciation": "kon-ji : comme « congé ».",
     "audio": "audio/travail-025.mp3",
     "exemple": {
-      "latin": "khdit congé dyal simana",
+      "latin": "khdit konji dyal simana",
       "arabe": "خديت كونجي ديال سيمانة",
       "fr": "J'ai pris une semaine de congé",
       "audio": "audio/travail-025-ex.mp3"
@@ -481,7 +481,7 @@
   },
   {
     "id": "travail-031",
-    "latin": "mesaj",
+    "latin": "misaj",
     "arabe": "ميساج",
     "fr": "message",
     "theme": "travail",
@@ -489,7 +489,7 @@
     "prononciation": "me-saj : comme « message ».",
     "audio": "audio/travail-031.mp3",
     "exemple": {
-      "latin": "khelli lia mesaj",
+      "latin": "khelli lia misaj",
       "arabe": "خلي ليا ميساج",
       "fr": "Laisse-moi un message",
       "audio": "audio/travail-031-ex.mp3"

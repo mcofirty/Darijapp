@@ -331,7 +331,7 @@
     "prononciation": "khda : raclement (kh).",
     "audio": "audio/verbes-021.mp3",
     "exemple": {
-      "latin": "khda ttaxi l lmatar",
+      "latin": "khda ttaksi l lmatar",
       "arabe": "خدا الطاكسي ل المطار",
       "fr": "Il a pris le taxi pour l'aéroport",
       "audio": "audio/verbes-021-ex.mp3"
@@ -347,7 +347,7 @@
     "prononciation": "twes-sel : le « s » doublé.",
     "audio": "audio/verbes-022.mp3",
     "exemple": {
-      "latin": "twesselt b lmesaj dyalek",
+      "latin": "twesselt b lmisaj dyalek",
       "arabe": "توصلت بالميساج ديالك",
       "fr": "J'ai reçu ton message",
       "audio": "audio/verbes-022-ex.mp3"
@@ -1315,7 +1315,7 @@
   },
   {
     "id": "verbes-083",
-    "latin": "rezerver",
+    "latin": "rezervi",
     "arabe": "ريزيرفي",
     "fr": "réserver",
     "theme": "verbes",
@@ -1339,7 +1339,7 @@
     "prononciation": "lgha : « gh » grasseyé.",
     "audio": "audio/verbes-084.mp3",
     "exemple": {
-      "latin": "lgha rrendez-vous dyalo",
+      "latin": "lgha rrondi vou dyalo",
       "arabe": "لغى الروندي ڤو ديالو",
       "fr": "Il a annulé son rendez-vous",
       "audio": "audio/verbes-084-ex.mp3"
@@ -1347,7 +1347,7 @@
   },
   {
     "id": "verbes-085",
-    "latin": "we9e3",
+    "latin": "we99e3",
     "arabe": "وقع",
     "fr": "signer",
     "theme": "verbes",
@@ -1355,7 +1355,7 @@
     "prononciation": "we-9e3 : 9 et 3.",
     "audio": "audio/verbes-085.mp3",
     "exemple": {
-      "latin": "we9e3 hna 3afak",
+      "latin": "we99e3 hna 3afak",
       "arabe": "وقع هنا عافاك",
       "fr": "Signez ici, s'il vous plaît",
       "audio": "audio/verbes-085-ex.mp3"

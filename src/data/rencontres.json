@@ -273,7 +273,7 @@
   },
   {
     "id": "rencontres-018",
-    "latin": "sift lia mesaj",
+    "latin": "sift lia misaj",
     "arabe": "صيفط ليا ميساج",
     "fr": "envoie-moi un message",
     "theme": "rencontres",
@@ -281,7 +281,7 @@
     "prononciation": "sift li-a me-saj : un « s » épais.",
     "audio": "audio/rencontres-018.mp3",
     "exemple": {
-      "latin": "sift lia mesaj mlli twsel",
+      "latin": "sift lia misaj mlli twsel",
       "arabe": "صيفط ليا ميساج ملي توصل",
       "fr": "Envoie-moi un message quand tu arrives",
       "audio": "audio/rencontres-018-ex.mp3"

@@ -481,7 +481,7 @@
   },
   {
     "id": "souk-031",
-    "latin": "reçu",
+    "latin": "rousi",
     "arabe": "روسي",
     "fr": "reçu",
     "theme": "souk",
@@ -489,7 +489,7 @@
     "prononciation": "re-çu : comme le français « reçu ».",
     "audio": "audio/souk-031.mp3",
     "exemple": {
-      "latin": "3tini reçu 3afak",
+      "latin": "3tini rousi 3afak",
       "arabe": "عطيني روسي عافاك",
       "fr": "Donne-moi un reçu, s'il te plaît",
       "audio": "audio/souk-031-ex.mp3"
@@ -497,7 +497,7 @@
   },
   {
     "id": "souk-032",
-    "latin": "tiki d caisse",
+    "latin": "tiki d kis",
     "arabe": "تيكي د الكيس",
     "fr": "ticket de caisse",
     "theme": "souk",
@@ -505,7 +505,7 @@
     "prononciation": "ti-ki d caisse : comme en français.",
     "audio": "audio/souk-032.mp3",
     "exemple": {
-      "latin": "khelli tiki d caisse m3ak",
+      "latin": "khelli tiki d kis m3ak",
       "arabe": "خلي تيكي د الكيس معاك",
       "fr": "Garde le ticket de caisse avec toi",
       "audio": "audio/souk-032-ex.mp3"
@@ -561,7 +561,7 @@
   },
   {
     "id": "souk-036",
-    "latin": "promotion",
+    "latin": "promosyon",
     "arabe": "بروموسيون",
     "fr": "promotion",
     "theme": "souk",
@@ -569,7 +569,7 @@
     "prononciation": "pro-mo-syon : comme « promotion ».",
     "audio": "audio/souk-036.mp3",
     "exemple": {
-      "latin": "had lmontouj f promotion",
+      "latin": "had lmontouj f promosyon",
       "arabe": "هاد المنتوج ف بروموسيون",
       "fr": "Ce produit est en promotion",
       "audio": "audio/souk-036-ex.mp3"
@@ -881,7 +881,7 @@
   },
   {
     "id": "souk-056",
-    "latin": "caisse",
+    "latin": "kis",
     "arabe": "كيس",
     "fr": "caisse",
     "theme": "souk",
@@ -889,7 +889,7 @@
     "prononciation": "caisse : comme en français.",
     "audio": "audio/souk-056.mp3",
     "exemple": {
-      "latin": "khelles f caisse",
+      "latin": "khelles f kis",
       "arabe": "خلص ف الكيس",
       "fr": "Paie à la caisse",
       "audio": "audio/souk-056-ex.mp3"
@@ -1249,7 +1249,7 @@
   },
   {
     "id": "souk-079",
-    "latin": "fin kaynin kabinat dyal l'essayage?",
+    "latin": "fin kaynin kabinat dyal lissayaj?",
     "arabe": "فين كاينين كابينات ديال ليساياج؟",
     "fr": "où sont les cabines d'essayage ?",
     "theme": "souk",
@@ -1257,7 +1257,7 @@
     "prononciation": "fin kay-nin ka-bi-nat dyal l'es-sa-yaj : comme en français pour « l'essayage ».",
     "audio": "audio/souk-079.mp3",
     "exemple": {
-      "latin": "sme7 lia, fin kaynin kabinat dyal l'essayage?",
+      "latin": "sme7 lia, fin kaynin kabinat dyal lissayaj?",
       "arabe": "سمح ليا، فين كاينين كابينات ديال ليساياج؟",
       "fr": "Pardon, où sont les cabines d'essayage ?",
       "audio": "audio/souk-079-ex.mp3"
@@ -1345,7 +1345,7 @@
   },
   {
     "id": "souk-085",
-    "latin": "bghit reçu",
+    "latin": "bghit rousi",
     "arabe": "بغيت روسي",
     "fr": "je veux un reçu",
     "theme": "souk",
@@ -1353,7 +1353,7 @@
     "prononciation": "bghit re-çu : « gh » grasseyé.",
     "audio": "audio/souk-085.mp3",
     "exemple": {
-      "latin": "bghit reçu bach nrje3 ssel3a",
+      "latin": "bghit rousi bach nrje3 ssel3a",
       "arabe": "بغيت روسي باش نرجع السلعة",
       "fr": "Je veux un reçu pour pouvoir rendre l'article",
       "audio": "audio/souk-085-ex.mp3"
@@ -1489,7 +1489,7 @@
   },
   {
     "id": "souk-094",
-    "latin": "wach 3ndek sac?",
+    "latin": "wach 3ndek sak?",
     "arabe": "واش عندك صاك؟",
     "fr": "avez-vous un sac ?",
     "theme": "souk",
@@ -1497,7 +1497,7 @@
     "prononciation": "wach 3ndek sac : comme « sac » en français.",
     "audio": "audio/souk-094.mp3",
     "exemple": {
-      "latin": "wach 3ndek sac kbir?",
+      "latin": "wach 3ndek sak kbir?",
       "arabe": "واش عندك صاك كبير؟",
       "fr": "Vous avez un grand sac ?",
       "audio": "audio/souk-094-ex.mp3"

@@ -14,6 +14,27 @@ const parFichier = fichiers.map((f) => ({
 }))
 const tous = parFichier.flatMap((p) => p.mots)
 
+/** Inclut aussi les prix du souk, les formes de grammaire et les dialogues féminins. */
+function textesLatins(valeur: unknown): { latin: string; arabe: string }[] {
+  if (Array.isArray(valeur)) return valeur.flatMap(textesLatins)
+  if (!valeur || typeof valeur !== 'object') return []
+  const objet = valeur as Record<string, unknown>
+  const ici = typeof objet.latin === 'string' && typeof objet.arabe === 'string'
+    ? [{ latin: objet.latin, arabe: objet.arabe }]
+    : []
+  return [...ici, ...Object.values(objet).flatMap(textesLatins)]
+}
+
+function lireTousLesTextes(dossier: string): { latin: string; arabe: string }[] {
+  return readdirSync(dossier, { withFileTypes: true }).flatMap((entree) => {
+    const chemin = join(dossier, entree.name)
+    if (entree.isDirectory()) return lireTousLesTextes(chemin)
+    return entree.name.endsWith('.json') ? textesLatins(JSON.parse(readFileSync(chemin, 'utf8'))) : []
+  })
+}
+
+const tousLesTextes = lireTousLesTextes(dossier)
+
 // Lettres latines (accents des mots empruntés au français), chiffres de la translittération (2 = hamza)
 // et ponctuation simple.
 const LATIN_AUTORISE = /^[a-z2379 éèçï?!.,'’—/-]+$/i
@@ -68,12 +89,20 @@ describe('fichiers de mots', () => {
   it('chaque son de l’arabe a sa graphie latine, et inversement', () => {
     const correspondances: [string, string][] = [['ح', '7'], ['ع', '3'], ['ق', '9'], ['خ', 'kh'], ['غ', 'gh'], ['ش', 'ch']]
     const compter = (texte: string, motif: string) => texte.split(motif).length - 1
-    for (const m of tous) {
-      for (const [latin, arabe] of [[m.latin, m.arabe], [m.exemple.latin, m.exemple.arabe]]) {
-        for (const [lettre, code] of correspondances) {
-          expect(compter(latin, code), `${m.id} : ${latin} / ${arabe} (${lettre} = ${code})`).toBe(compter(arabe, lettre))
-        }
+    for (const { latin, arabe } of tousLesTextes) {
+      for (const [lettre, code] of correspondances) {
+        // Une consonne géminée reste la même lettre arabe, dont la chadda est souvent omise.
+        const unitesLatines = latin.toLowerCase().replace(new RegExp(`(?:${code})+`, 'g'), code)
+        const unitesArabes = arabe.replace(new RegExp(`(?:${lettre})+`, 'g'), lettre)
+        expect(compter(unitesLatines, code), `${latin} / ${arabe} (${lettre} = ${code})`).toBe(compter(unitesArabes, lettre))
       }
+    }
+  })
+
+  it('utilise une graphie latine explicite plutôt que c, x ou les accents français', () => {
+    for (const { latin } of tousLesTextes) {
+      // « ch » est le digramme de ش ; c et x seuls ne fixent pas un son en darija.
+      expect(latin.replace(/ch/gi, ''), latin).not.toMatch(/[cxéèçï]/i)
     }
   })
 

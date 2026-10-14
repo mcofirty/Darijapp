@@ -257,7 +257,7 @@
   },
   {
     "id": "organisation-017",
-    "latin": "wach twesslek lmesaj dyali?",
+    "latin": "wach twesslek lmisaj dyali?",
     "arabe": "واش توصلك الميساج ديالي؟",
     "fr": "tu as reçu mon message ?",
     "theme": "organisation",
@@ -265,7 +265,7 @@
     "prononciation": "wach twes-slek l-me-saj dya-li : « ch » de « chat ».",
     "audio": "audio/organisation-017.mp3",
     "exemple": {
-      "latin": "wach twesslek lmesaj dyali lbare7?",
+      "latin": "wach twesslek lmisaj dyali lbare7?",
       "arabe": "واش توصلك الميساج ديالي البارح؟",
       "fr": "Tu as reçu mon message d'hier ?",
       "audio": "audio/organisation-017-ex.mp3"
@@ -505,7 +505,7 @@
     "prononciation": "had-chi ma kay-khdem-ch : « ch », « kh », « ch ».",
     "audio": "audio/organisation-032.mp3",
     "exemple": {
-      "latin": "hadchi ma kaykhdemch, 3awed chargih",
+      "latin": "hadchi ma kaykhdemch, 3awed charjih",
       "arabe": "هادشي ما كيخدمش، عاود شارجيه",
       "fr": "Ça ne fonctionne pas, recharge-le",
       "audio": "audio/organisation-032-ex.mp3"

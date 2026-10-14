@@ -1,7 +1,7 @@
 [
   {
     "id": "loisirs-001",
-    "latin": "sport",
+    "latin": "spor",
     "arabe": "سبور",
     "fr": "sport",
     "theme": "loisirs",
@@ -9,7 +9,7 @@
     "prononciation": "spor : comme « sport », le r roulé.",
     "audio": "audio/loisirs-001.mp3",
     "exemple": {
-      "latin": "kandir sport kol nhar",
+      "latin": "kandir spor kol nhar",
       "arabe": "كندير سبور كل نهار",
       "fr": "Je fais du sport tous les jours",
       "audio": "audio/loisirs-001-ex.mp3"
@@ -113,7 +113,7 @@
   },
   {
     "id": "loisirs-008",
-    "latin": "but",
+    "latin": "bi",
     "arabe": "بي",
     "fr": "but (football)",
     "theme": "loisirs",
@@ -121,7 +121,7 @@
     "prononciation": "bi : comme « but » à la marocaine.",
     "audio": "audio/loisirs-008.mp3",
     "exemple": {
-      "latin": "dkhel wa7ed lbut zwin",
+      "latin": "dkhel wa7ed lbi zwin",
       "arabe": "دخل واحد البي زوين",
       "fr": "Il a marqué un beau but",
       "audio": "audio/loisirs-008-ex.mp3"
@@ -401,7 +401,7 @@
   },
   {
     "id": "loisirs-026",
-    "latin": "musculation",
+    "latin": "mouskolasyon",
     "arabe": "موسكولاسيون",
     "fr": "musculation",
     "theme": "loisirs",
@@ -409,7 +409,7 @@
     "prononciation": "mous-ko-la-syon : comme en français.",
     "audio": "audio/loisirs-026.mp3",
     "exemple": {
-      "latin": "kandir musculation f lsalle",
+      "latin": "kandir mouskolasyon f lsal",
       "arabe": "كندير موسكولاسيون ف الصال",
       "fr": "Je fais de la musculation à la salle",
       "audio": "audio/loisirs-026-ex.mp3"
@@ -497,7 +497,7 @@
   },
   {
     "id": "loisirs-032",
-    "latin": "boxe",
+    "latin": "boks",
     "arabe": "بوكس",
     "fr": "boxe",
     "theme": "loisirs",
@@ -505,7 +505,7 @@
     "prononciation": "boks : comme « boxe ».",
     "audio": "audio/loisirs-032.mp3",
     "exemple": {
-      "latin": "khoya kaydir boxe",
+      "latin": "khoya kaydir boks",
       "arabe": "خويا كيدير بوكس",
       "fr": "Mon frère fait de la boxe",
       "audio": "audio/loisirs-032-ex.mp3"

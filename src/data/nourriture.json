@@ -625,7 +625,7 @@
   },
   {
     "id": "nourriture-040",
-    "latin": "raïb",
+    "latin": "rayb",
     "arabe": "رايب",
     "fr": "yaourt",
     "theme": "nourriture",
@@ -721,7 +721,7 @@
   },
   {
     "id": "nourriture-046",
-    "latin": "sandwich",
+    "latin": "sandwitch",
     "arabe": "ساندويتش",
     "fr": "sandwich",
     "theme": "nourriture",
@@ -729,7 +729,7 @@
     "prononciation": "sand-witch : comme en français.",
     "audio": "audio/nourriture-046.mp3",
     "exemple": {
-      "latin": "bghit sandwich b ttoun",
+      "latin": "bghit sandwitch b ttoun",
       "arabe": "بغيت ساندويتش ب الطون",
       "fr": "Je veux un sandwich au thon",
       "audio": "audio/nourriture-046-ex.mp3"
@@ -737,7 +737,7 @@
   },
   {
     "id": "nourriture-047",
-    "latin": "pizza",
+    "latin": "pitsa",
     "arabe": "بيتزا",
     "fr": "pizza",
     "theme": "nourriture",
@@ -745,7 +745,7 @@
     "prononciation": "pi-tsa : comme en français.",
     "audio": "audio/nourriture-047.mp3",
     "exemple": {
-      "latin": "chrina pizza kbira",
+      "latin": "chrina pitsa kbira",
       "arabe": "شرينا بيتزا كبيرة",
       "fr": "Nous avons acheté une grande pizza",
       "audio": "audio/nourriture-047-ex.mp3"
@@ -1649,7 +1649,7 @@
   },
   {
     "id": "nourriture-104",
-    "latin": "glace",
+    "latin": "glas",
     "arabe": "گلاص",
     "fr": "glace",
     "theme": "nourriture",
@@ -1657,7 +1657,7 @@
     "prononciation": "glas : comme « glace ».",
     "audio": "audio/nourriture-104.mp3",
     "exemple": {
-      "latin": "glace b chokola 3afak",
+      "latin": "glas b chokola 3afak",
       "arabe": "گلاص ب شوكولا عافاك",
       "fr": "Une glace au chocolat, s'il te plaît",
       "audio": "audio/nourriture-104-ex.mp3"
@@ -1665,7 +1665,7 @@
   },
   {
     "id": "nourriture-105",
-    "latin": "dessert",
+    "latin": "disir",
     "arabe": "ديسير",
     "fr": "dessert",
     "theme": "nourriture",
@@ -1673,7 +1673,7 @@
     "prononciation": "di-ser : comme « dessert ».",
     "audio": "audio/nourriture-105.mp3",
     "exemple": {
-      "latin": "chnou kayn f dessert?",
+      "latin": "chnou kayn f disir?",
       "arabe": "شنو كاين ف ديسير؟",
       "fr": "Qu'est-ce qu'il y a en dessert ?",
       "audio": "audio/nourriture-105-ex.mp3"
