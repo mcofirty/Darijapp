@@ -4,6 +4,14 @@ L’utilisateur a autorisé ce premier comparatif après avoir refusé la voix H
 Jamal reste la voix des exercices. Aucun fichier actif, référence de score ou
 fonctionnement de l’application n’est modifié.
 
+## État du pilote
+
+Le secret GitHub est disponible. La relance `38605552834` a confirmé le refus
+API **HTTP 429 / `insufficient_quota`** : aucun nouveau MP3, aucun comparatif
+OpenAI publié. Attendre que l’utilisateur active la facturation, ajoute des
+crédits API ou corrige ses limites de quota avant tout nouvel appel.
+L’abonnement ChatGPT ne fournit pas les crédits de cette API.
+
 ## Modèle et mots
 
 Modèle figé : `gpt-4o-mini-tts-2025-12-15` ; voix : `cedar` ; sortie API : MP3.
