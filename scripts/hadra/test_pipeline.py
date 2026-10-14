@@ -3,16 +3,46 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
 
 import numpy as np
 
-from catalog import ROOT, file_sha256, job_key, latin_prompt, read_catalog, read_pilot
-from engine import verify_download
-from generate import cached_record
+from catalog import ROOT, corpus_records, file_sha256, job_key, latin_prompt, read_catalog, read_pilot
+from engine import resolve_precision, verify_download
+from generate import cached_record, select_records
 from quality import waveform_metrics
 
 
 class CatalogTests(unittest.TestCase):
+    def test_full_corpus_and_review_cover_real_words_without_examples(self):
+        catalog = read_catalog()
+        self.assertEqual(len(corpus_records(catalog, "all")), 3511)
+        words = corpus_records(catalog, "words")
+        self.assertEqual(len(words), 1682)
+        ids = json.loads((ROOT / "scripts/hadra/review-50.json").read_text())["entry_ids"]
+        self.assertEqual(len(set(ids)), 50)
+        self.assertTrue(set(ids) <= {w["entry_id"] for w in words})
+        self.assertEqual(len({catalog[i]["theme"] for i in ids}), 31)
+
+    def test_auto_precision_requires_cpu_instruction_support(self):
+        self.assertEqual(resolve_precision("cpu", "auto", "avx2"), "float32")
+        self.assertEqual(resolve_precision("cpu", "auto", "avx512_bf16"), "bfloat16")
+        self.assertEqual(resolve_precision("cpu", "float32", "amx_bf16"), "float32")
+
+    def test_shards_cover_every_non_review_entry_once(self):
+        catalog = read_catalog()
+        args = SimpleNamespace(scope="all", selection=None, exclude_selection=ROOT / "scripts/hadra/review-50.json",
+                               ids=None, shard_count=40, shard_index=0, limit=None)
+        shards = []
+        for index in range(40):
+            args.shard_index = index
+            shards.append({r["entry_id"] for r in select_records(catalog, args)})
+        union = set().union(*shards)
+        review = set(json.loads(args.exclude_selection.read_text())["entry_ids"])
+        self.assertEqual(sum(map(len, shards)), len(union))
+        self.assertFalse(union & review)
+        self.assertEqual(union | review, set(catalog))
+
     def test_all_existing_audio_entries_are_enumerated_with_current_latin(self):
         catalog = read_catalog()
         self.assertEqual(len(catalog), 3511)

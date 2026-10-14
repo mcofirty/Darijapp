@@ -1,0 +1,170 @@
+name: HADRA corpus latin et test 50 mots
+on:
+  push:
+    branches: [feat/hadra-tts]
+    paths: [.github/workflows/hadra-corpus.yml, scripts/hadra/run-corpus.json]
+concurrency:
+  group: hadra-corpus
+  cancel-in-progress: false
+permissions:
+  contents: write
+  actions: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      precision: ${{ steps.probe.outputs.precision }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/hadra-runtime
+      - run: python -m unittest discover -s scripts/hadra -p 'test_*.py'
+      - id: probe
+        shell: bash
+        run: |
+          mkdir -p artifacts/hadra
+          if ! /usr/bin/time -v -o artifacts/hadra/resources.txt python scripts/hadra/generate.py generate --scope all --ids salutations-012,nourriture-001,corps-041 --steps 16 --precision auto --threads 4; then
+            python scripts/hadra/generate.py generate --scope all --ids salutations-012,nourriture-001,corps-041 --steps 16 --precision float32 --threads 4 --retries 2
+          fi
+          python -c "import json,os; p=json.load(open('artifacts/hadra/plan.json')); open(os.environ['GITHUB_OUTPUT'],'a').write('precision='+p['jobs'][0]['parameters'].get('precision','float32')+'\n')"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hadra-corpus-probe
+          path: artifacts/hadra
+          retention-days: 14
+      - name: Conserver le diagnostic du chargement
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p docs/hadra/corpus-probe
+          for name in report.json error.json resources.txt; do
+            if [ -f "artifacts/hadra/$name" ]; then cp "artifacts/hadra/$name" "docs/hadra/corpus-probe/$name"; fi
+          done
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/hadra/corpus-probe
+          if ! git diff --cached --quiet; then
+            git commit -m 'test: mesure HADRA CPU pour le corpus latin'
+            git push origin HEAD:feat/hadra-tts
+          fi
+  review:
+    needs: probe
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      max-parallel: 10
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/hadra-runtime
+      - name: Générer cinq mots de comparaison
+        env:
+          HADRA_SHARD: ${{ matrix.shard }}
+          HADRA_PRECISION: ${{ needs.probe.outputs.precision }}
+        run: python scripts/hadra/generate.py generate --scope all --selection scripts/hadra/review-50.json --shard-count 10 --shard-index "$HADRA_SHARD" --steps 16 --precision "$HADRA_PRECISION" --threads 4 --retries 2 --max-seconds 2700
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hadra-review-${{ matrix.shard }}
+          path: |
+            artifacts/hadra/audio/
+            artifacts/hadra/report.json
+            artifacts/hadra/plan.json
+            artifacts/hadra/error.json
+          retention-days: 30
+  corpus:
+    needs: probe
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/hadra-runtime
+      - uses: actions/cache/restore@v4
+        id: library
+        with:
+          path: |
+            artifacts/hadra/masters
+            artifacts/hadra/records
+          key: hadra-corpus-v1-${{ matrix.shard }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: hadra-corpus-v1-${{ matrix.shard }}-
+      - name: Générer le corpus, sans les 50 mots déjà prévus pour le test
+        timeout-minutes: 320
+        env:
+          HADRA_SHARD: ${{ matrix.shard }}
+          HADRA_PRECISION: ${{ needs.probe.outputs.precision }}
+        run: python scripts/hadra/generate.py generate --scope all --exclude-selection scripts/hadra/review-50.json --shard-count 40 --shard-index "$HADRA_SHARD" --steps 16 --precision "$HADRA_PRECISION" --threads 4 --retries 2 --max-seconds 18000
+      - uses: actions/cache/save@v4
+        if: always() && hashFiles('artifacts/hadra/records/*.json') != ''
+        with:
+          path: |
+            artifacts/hadra/masters
+            artifacts/hadra/records
+          key: ${{ steps.library.outputs.cache-primary-key }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hadra-corpus-${{ matrix.shard }}
+          path: |
+            artifacts/hadra/audio/
+            artifacts/hadra/report.json
+            artifacts/hadra/plan.json
+            artifacts/hadra/error.json
+          retention-days: 30
+  publish-review:
+    needs: review
+    if: always() && needs.review.result != 'skipped'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: hadra-review-*
+          path: artifacts/review
+      - run: python scripts/hadra/build_review.py --reports artifacts/review --output artifacts/test-audio
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hadra-test-50-offline
+          path: artifacts/test-audio
+          retention-days: 30
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main-site
+      - name: Publier uniquement l’espace de comparaison sur main
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/hadra/publish_review.py --site artifacts/test-audio --checkout main-site --run-id "${{ github.run_id }}"
+  collect:
+    needs: [corpus, publish-review]
+    if: always() && needs.corpus.result != 'skipped'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/hadra-tts
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: hadra-corpus-*
+          path: artifacts/corpus
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: hadra-review-*
+          path: artifacts/corpus
+      - run: python scripts/hadra/collect_corpus.py --reports artifacts/corpus --output docs/hadra/library
+      - name: Conserver tous les candidats et le bilan sur la branche de test
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/hadra/library
+          git commit -m 'audio: conserve le corpus HADRA latin expérimental'
+          git push origin HEAD:feat/hadra-tts

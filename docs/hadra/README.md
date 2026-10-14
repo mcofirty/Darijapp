@@ -1,5 +1,37 @@
 # HADRA : génération expérimentale depuis le latin
 
+## Génération complète et écoute avant/après
+
+À la demande de l'utilisateur, `HADRA corpus latin et test 50 mots` produit les
+**3 511 textes** (mots, exemples et phrases) à 16 étapes, directement depuis le latin.
+Un préflight mesure trois mots et le chargement : BF16 seulement sur CPU compatible,
+limité au sampling pour garder le vocodeur en FP32 ; retour déclaré à FP32 si l'essai échoue.
+Le modèle, le vocodeur et leurs hashes restent ceux décrits ci-dessous. Aucune cible arabe.
+
+Les 50 vrais mots de `review-50.json` couvrent les 31 thèmes et sont prioritaires.
+Le reste est réparti en 40 lots, sans doublons, avec 20 jobs CPU simultanés au plus,
+des budgets explicites et deux retries supplémentaires pour les rejets techniques.
+Le manifeste final donne les comptes attendus, tentés, conformes et manquants ;
+les sorties rejetées ne sont pas présentées comme prêtes. Les candidats restent
+linguistiquement incertains, même quand leurs fichiers sont techniquement conformes.
+
+Le comparatif se publie sur `https://mcofirty.github.io/Darijapp/test-audio/` :
+100 MP3, deux lecteurs par mot, filtres, vitesse, notes et avis locaux exportables.
+Ce sous-dossier autonome partage l'hébergement, sans utiliser la progression ou
+changer la voix des exercices. Sa publication est autorisée par la demande de test ;
+**l'activation de HADRA dans l'application attend la décision de l'utilisateur**.
+Le commit de la page sur main est suivi d'un dispatch explicite de « Publier »,
+car les commits effectués avec GITHUB_TOKEN ne déclenchent pas les Actions push.
+
+La bibliothèque complète reste dans `docs/hadra/library/` sur `feat/hadra-tts`.
+Les artifacts de génération sont conservés 30 jours, et les MP3 rassemblés sont
+versionnés pour être réutilisables hors connexion. Aucun service GPU payant n'est utilisé.
+
+```bash
+python scripts/hadra/generate.py plan --scope all
+python scripts/hadra/generate.py generate --scope all --shard-count 40 --shard-index 0 --steps 16 --precision auto --threads 4 --retries 2 --max-seconds 18000
+```
+
 Cette intégration utilise `Jip7e/habibi-tts-doda-darija` à la révision
 `0f9beec11b1185934e0da95c0e298f1b0457eef4`, avec F5-TTS 1.1.22 et Vocos 24 kHz
 à la révision `0feb3fdd929bcd6649e0e7c5a688cf7dd012ef21`.

@@ -33,7 +33,8 @@ def read_catalog(root: Path = ROOT) -> dict[str, dict]:
                     raise ValueError(f"Chemin audio non pris en charge : {audio}")
                 record = {"entry_id": audio.removeprefix("audio/").removesuffix(".mp3"),
                           "app_id": entry_id, "audio": audio, "latin": value["latin"],
-                          "arabe": value.get("arabe", ""), "source": source}
+                          "arabe": value.get("arabe", ""), "fr": value.get("fr", ""),
+                          "theme": value.get("theme", Path(source).stem), "source": source}
                 if record["entry_id"] in entries and entries[record["entry_id"]] != record:
                     raise ValueError(f"Audio partagé par des textes différents : {audio}")
                 entries[record["entry_id"]] = record
@@ -44,6 +45,18 @@ def read_catalog(root: Path = ROOT) -> dict[str, dict]:
     for path in sorted((root / "src/data").rglob("*.json")):
         walk(json.loads(path.read_text(encoding="utf-8")), str(path.relative_to(root)))
     return entries
+
+
+def corpus_records(catalog: dict, scope: str) -> list[dict]:
+    records = []
+    for entry in catalog.values():
+        is_word = entry["entry_id"] == entry["app_id"] and len(Path(entry["source"]).parts) == 3
+        if scope == "words" and not is_word:
+            continue
+        records.append({**entry, "pilot_id": entry["entry_id"],
+                        "prompt": latin_prompt(entry["latin"]),
+                        "kind": "word" if is_word else "phrase", "complex": False})
+    return sorted(records, key=lambda record: record["entry_id"])
 
 
 def read_pilot(catalog: dict[str, dict], path: Path) -> list[dict]:

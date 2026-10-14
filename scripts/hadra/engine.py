@@ -6,6 +6,30 @@ from pathlib import Path
 from catalog import file_sha256, latin_prompt
 
 
+def resolve_precision(device: str, requested: str, flags: str | None = None) -> str:
+    if requested != "auto":
+        return requested
+    if device != "cpu":
+        return "float32"
+    if flags is None:
+        path = Path("/proc/cpuinfo")
+        flags = path.read_text() if path.exists() else ""
+    return "bfloat16" if any(flag in flags.split() for flag in
+                              ["amx_bf16", "avx512_bf16", "avx512bf16"]) else "float32"
+
+
+class SamplingPrecision:
+    """L'autocast reste limité à l'échantillonnage, hors FFT du vocodeur."""
+
+    def __init__(self, model, torch, precision: str, device: str):
+        self.model, self.torch, self.precision, self.device = model, torch, precision, device
+
+    def sample(self, **kwargs):
+        with self.torch.autocast(self.device, dtype=self.torch.bfloat16,
+                                 enabled=self.precision == "bfloat16"):
+            return self.model.sample(**kwargs)
+
+
 def verify_download(path: Path, descriptor: dict) -> None:
     expected_size = descriptor.get("size")
     if expected_size is not None and path.stat().st_size != expected_size:
@@ -65,7 +89,8 @@ class HadraEngine:
         self.torch.manual_seed(parameters["seed"])
         with self.torch.inference_mode():
             samples, rate, _ = infer_process(
-                self.reference_audio, self.reference_text, text, self.model, self.vocoder,
+                self.reference_audio, self.reference_text, text,
+                SamplingPrecision(self.model, self.torch, parameters.get("precision", "float32"), self.device), self.vocoder,
                 nfe_step=parameters["nfe_step"], speed=parameters["speed"],
                 cfg_strength=parameters["cfg_strength"], sway_sampling_coef=-1.0,
                 device=self.device,

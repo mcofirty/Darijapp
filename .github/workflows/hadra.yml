@@ -1,9 +1,6 @@
 name: Audio HADRA (pilote)
 
 on:
-  push:
-    branches: ['feat/hadra-tts']
-    paths: ['scripts/hadra/**', '.github/workflows/hadra.yml']
   workflow_dispatch:
     inputs:
       limit:

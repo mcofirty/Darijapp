@@ -202,7 +202,7 @@ Profil : en plus des réglages, `micro` (Dis-le avec score), `parler` et `ecoute
 
 Jalon en cours : **4 — Jeu** (contenu du jeu terminé). Les jalons 1 à 3 sont en ligne sur https://mcofirty.github.io/Darijapp/ (score de prononciation à éprouver sur iPhone avec une vraie voix).
 
-Voix HADRA : générateur expérimental opérationnel sur `feat/hadra-tts` ; trois mots latins testés à 8 puis 32 étapes, contrôles techniques et reprise vérifiés mais écarts phonétiques persistants. Lecture fiable de l'Arabizi non établie, génération massive suspendue.
+Voix HADRA : génération des 3 511 candidats autorisée par l'utilisateur, à 16 étapes, cible latine directe ; comparaison de 50 vrais mots avant/après en préparation sur `/test-audio/`. Les fichiers expérimentaux restent séparés des MP3 actifs et l'activation de la nouvelle voix attend sa décision explicite.
 
 | Jalon | Durée estimée | Contenu | Statut |
 | --- | --- | --- | --- |
@@ -250,7 +250,7 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 
 - Dépendances HADRA : PyArrow récent exige NumPy 2 ; combinaison figée avec NumPy 2.2.6 vérifiée en inférence CPU dans l'Action (2026-10-14).
 
-- HADRA (2026-10-14) : adaptateur F5-TTS et protocole de 50 entrées sur `feat/hadra-tts`, voir `docs/hadra/README.md`. 8 fichiers de trois mots latins réellement synthétisés (8/32 étapes) ; technique conforme mais écarts phonétiques persistants, sans certification. Pic CPU mesuré 2,6 Gio ; à 32 étapes, 91–99 s par fichier court. Reprise par empreinte, file de révision avec avertissements, budget de 30 min par génération. Le latin fiable nécessite une adaptation du modèle ou un autre checkpoint à évaluer, sans conversion des cibles en arabe. L'application utilise toujours Jamal ; aucune génération massive ni activation HADRA. Hugging Face est bloqué dans ce cloud, ouvert sur GitHub Actions.
+- HADRA (2026-10-14) : le prétest a signalé des écarts phonétiques persistants, sans certification. À la demande suivante de l'utilisateur : chaîne de 3 511 MP3 candidats à 16 étapes, 40 lots CPU et 50 mots réels prioritaires couvrant 31 thèmes. BF16 limité à l'échantillonnage si compatible, contrôle préalable et retour FP32 déclaré si nécessaire ; retries techniques bornés, bilan explicite des manquants. Comparatif autonome sur `/test-audio/` avec avis locaux et export, sans remplacer les MP3 ni les références actifs. Attendre une décision de l'utilisateur pour l'activation de HADRA dans les exercices. Voir `docs/hadra/README.md`.
 
 - Latin (2026-10-14) : les aides `prononciation` n'ont pas été utilisées ni réécrites pour cette harmonisation ; certaines explications restent à revoir séparément. Les questions de sens/accord relevées par l'audit (`lbab khedra`) restent distinctes de la correction des seules graphies latines ; ne pas modifier arbitrairement l'arabe ou les traductions pour faire disparaître une alerte.
 

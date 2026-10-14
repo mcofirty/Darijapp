@@ -34,7 +34,11 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-14 | Essais HADRA réels à 8/32 étapes sur trois mots latins (huit fichiers), mesure CPU et diagnostic phonétique reproductible hors connexion ; file de révision enrichie des avertissements et sauvegarde après budget de génération | `docs/hadra/probe/`, `scripts/hadra/evaluate_probe.ts`, `scripts/hadra/generate.py`, `.github/workflows/hadra.yml` |
 
+| 2026-10-14 | Chaîne de génération HADRA depuis le latin pour les 3 511 textes, lots CPU et reprises techniques ; espace autonome avant/après de 50 mots réels avec lecteurs, avis et export | `scripts/hadra/`, `.github/workflows/hadra-corpus.yml` |
+
 ## Décisions
+
+- 2026-10-14 : l'utilisateur demande explicitement de générer les 3 511 MP3 et d'écouter 50 mots avant de décider du déploiement. Les candidats sont conservés sur la branche expérimentale ; seule la page de comparaison et ses 100 MP3 sont ajoutés sous `/test-audio/`, sans modifier les lecteurs, les fichiers actifs ou les références de score. 16 étapes, quatre threads et BF16 conditionnel pour maîtriser les ressources ; aucune certification linguistique déduite du contrôle technique.
 
 - 2026-10-14 : reprise HADRA réellement vérifiée sur les cinq masters à 32 étapes : aucun nouveau calcul TTS, contrôle et réencodage en 1,26 s, avertissements présents dans la file de révision. Le workflow manuel ne sera disponible qu'après ajout du fichier dans la branche par défaut ; les essais de cette branche sont déclenchés par push.
 
