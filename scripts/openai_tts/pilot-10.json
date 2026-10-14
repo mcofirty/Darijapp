@@ -1,0 +1,16 @@
+{
+  "model": "gpt-4o-mini-tts-2025-12-15",
+  "voice": "cedar",
+  "entry_ids": [
+    "salutations-012",
+    "corps-041",
+    "nourriture-001",
+    "nourriture-006",
+    "jours-002",
+    "chiffres-017",
+    "verbes-085",
+    "jours-006",
+    "adjectifs-052",
+    "salutations-035"
+  ]
+}

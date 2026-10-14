@@ -1,0 +1,88 @@
+name: Test OpenAI latin — 10 mots
+on:
+  push:
+    branches: [feat/hadra-tts]
+    paths: [.github/workflows/openai-tts-pilot.yml]
+# Premier pilote autorisé ; les changements de scripts ne lancent pas de synthèse.
+  workflow_dispatch:
+concurrency:
+  group: openai-tts-pilot-10
+  cancel-in-progress: false
+permissions:
+  contents: write
+  actions: write
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Restaurer les dix candidats sans nouvelle facturation
+        uses: actions/cache/restore@v4
+        with:
+          path: artifacts/openai-tts
+          key: openai-tts-10-${{ hashFiles('scripts/openai_tts/pilot-10.json', 'scripts/openai_tts/instructions.txt', 'src/data/**/*.json') }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            openai-tts-10-${{ hashFiles('scripts/openai_tts/pilot-10.json', 'scripts/openai_tts/instructions.txt', 'src/data/**/*.json') }}-
+      - name: Installer uniquement les contrôles audio
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends ffmpeg
+          python -m pip install numpy==2.2.6
+      - name: Tester le pilote sans appel API
+        run: python -m unittest discover -s scripts/openai_tts -p 'test_*.py'
+      - name: Générer au plus dix MP3 depuis le latin
+        env:
+          DARIJA_TTS_KEY: ${{ secrets.DARIJA_TTS_KEY || secrets.OPENAI_API_KEY }}
+        run: python scripts/openai_tts/pilot.py generate
+      - name: Construire le comparatif complet avant publication
+        run: python scripts/openai_tts/pilot.py review --output artifacts/openai-review
+      - uses: actions/upload-artifact@v4
+        with:
+          name: openai-test-10-offline
+          path: artifacts/openai-review
+          retention-days: 30
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main-site
+      - name: Publier seulement les vingt MP3 de comparaison
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/openai_tts/publish_review.py --site artifacts/openai-review --checkout main-site
+      - name: Conserver les sorties partielles sans nouvelle synthèse
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: artifacts/openai-tts
+          key: openai-tts-10-${{ hashFiles('scripts/openai_tts/pilot-10.json', 'scripts/openai_tts/instructions.txt', 'src/data/**/*.json') }}-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Conserver les diagnostics techniques
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: openai-pilot-diagnostics
+          path: artifacts/openai-tts
+          retention-days: 30
+      - name: Enregistrer l’état sans secret
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          python - <<'PY'
+          import os, json, pathlib, subprocess, base64
+          path = pathlib.Path('artifacts/openai-tts/status.json')
+          result = json.loads(path.read_text()) if path.exists() else {'status': 'setup_failed', 'expected': 10, 'technically_ready': 0}
+          result['run_id'] = os.environ['RUN_ID']
+          target = 'repos/mcofirty/Darijapp/contents/docs/openai-tts/pilot-status.json'
+          body = {'branch': 'feat/hadra-tts', 'message': 'docs: relève l’état du pilote OpenAI de dix mots',
+                  'content': base64.b64encode(json.dumps(result, ensure_ascii=False, indent=2).encode()).decode()}
+          old = subprocess.run(['gh', 'api', target + '?ref=feat/hadra-tts', '--jq', '.sha'], capture_output=True, text=True)
+          if old.returncode == 0: body['sha'] = old.stdout.strip()
+          temp = pathlib.Path('/tmp/openai-pilot-status.json'); temp.write_text(json.dumps(body))
+          subprocess.run(['gh', 'api', '--method', 'PUT', target, '--input', str(temp)], check=True, stdout=subprocess.DEVNULL)
+          print(json.dumps(result, ensure_ascii=False))
+          PY

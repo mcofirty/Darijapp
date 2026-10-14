@@ -72,7 +72,7 @@ src/
   db/             schéma Dexie et migrations, plan et enregistrement des sessions, mots ajoutés, résumé en direct
   data/           un fichier JSON par thème, liste des thèmes, sons du darija, paires de sons (`sons/paires.json`), grammaire et dialogues (`parler/`)
 scripts/
-  generate_audio.py, modele/ (export du modèle de sons, voix de test), hadra/ (pilote TTS latin expérimental)
+  generate_audio.py, modele/ (export du modèle de sons, voix de test), hadra/ (TTS refusé), openai_tts/ (test latin de dix mots)
 public/audio/     MP3 générés par l'Action (voix Jamal) ; public/modele/ : modèle de sons (ONNX int8 en morceaux, `xlsr.json`)
 docs/
   cahier-des-charges.md   demande d'origine
@@ -202,6 +202,8 @@ Profil : en plus des réglages, `micro` (Dis-le avec score), `parler` et `ecoute
 
 Jalon en cours : **4 — Jeu** (contenu du jeu terminé). Les jalons 1 à 3 sont en ligne sur https://mcofirty.github.io/Darijapp/ (score de prononciation à éprouver sur iPhone avec une vraie voix).
 
+Test OpenAI : pilote de dix mots implémenté et testé, limité à l’écoute comparative ; génération et mise en ligne en attente de la clé API GitHub.
+
 Voix HADRA refusée par l’utilisateur le 2026-10-14 après écoute des 50 mots : arrêt du corpus et suppression du déclenchement automatique. Le comparatif `/test-audio/` reste disponible. Jamal reste la voix active ; aucun déploiement de HADRA et aucune reprise sans nouvelle demande explicite.
 
 | Jalon | Durée estimée | Contenu | Statut |
@@ -226,6 +228,7 @@ Liste complète, ligne par ligne : `docs/historique.md`.
 | 2026-10-13 | Sauvegarde protégée et rappelée, audio hors ligne, oral d'abord (nouveau mot redit de mémoire, phrases du mode écoute), `CLAUDE.md` résumé, zellige du souk dans toute l'appli | `src/app/stockage.ts`, `src/audio/horsLigne.ts`, `src/exercices/ecoute.ts`, `src/ui/zellige.tsx`, `docs/` |
 | 2026-10-13 | Façon Duolingo (1) : force du mot, mustawa d nnbta, gel et réparation de la série, double XP, combo, défi du mois, bilan de la semaine | `src/gamification/serie.ts`, `src/gamification/combo.ts`, `src/gamification/defis.ts`, `src/gamification/semaine.ts`, `src/db/serie.ts`, `src/features/jeu/Motivation.tsx`, `src/ui/ForceMot.tsx` |
 | 2026-10-14 | Harmonisation du latin : 176 champs dans 22 fichiers, emprunts explicités, allah séparé développé, ordre de 3tchan et gémination de we99e3 corrigés ; 80 références du score recalculées, contrôles étendus à tous les textes JSON | `src/data/`, `public/modele/references.json`, `docs/corrections-latin.md` |
+| 2026-10-14 | Pilote OpenAI limité à dix mots latins, contrôles techniques, cache et comparatif isolé ; génération en attente de clé API | `scripts/openai_tts/`, `.github/workflows/openai-tts-pilot.yml`, `docs/openai-tts/` |
 | 2026-10-14 | Pilote HADRA latin opérationnel avec reprises, variantes et contrôles ; essais CPU et diagnostic non certifiant, sans activation dans l'application | `scripts/hadra/`, `.github/workflows/hadra.yml`, `docs/hadra/` |
 
 ## Décisions
@@ -250,7 +253,7 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 
 ## Points en suspens
 
-- Test OpenAI autorisé (2026-10-14) : préparer dix mots difficiles en latin avec `gpt-4o-mini-tts`, vérifier la présence d’une clé GitHub sans afficher sa valeur. Génération limitée à ce test, Jamal conservée ; aucun lot de 50 ou de 3 511 sans décision suivante.
+- Test OpenAI autorisé (2026-10-14) : pilote de dix mots difficiles prêt avec `gpt-4o-mini-tts-2025-12-15` / Cedar, entrée latine, contrôles et reprise sans retry payant ; page autonome `/test-audio-openai/` publiée seulement après dix MP3 conformes. Vérification GitHub : clé absente, génération bloquée jusqu’à ajout du secret `DARIJA_TTS_KEY`. Jamal conservée ; aucun lot de 50 ou de 3 511 sans décision suivante. Voir `docs/openai-tts/README.md`.
 
 - Comparatif en ligne : build, test mobile et contrôle HTTP des 100 MP3 réussis. L’utilisateur a refusé la voix HADRA ; corpus interrompu, génération automatique désactivée, fichiers expérimentaux conservés séparément.
 

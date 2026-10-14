@@ -42,6 +42,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-14 | Vérification de présence de la clé GitHub pour le comparatif OpenAI autorisé de dix mots, sans appel payant ni affichage du secret | `.github/workflows/openai-tts-key-check.yml` |
 
+| 2026-10-14 | Pilote OpenAI de dix mots latins avec Cedar, contrôles et cache MP3, page mobile avant/après et publication isolée prête ; clé API absente, aucune synthèse réelle | `scripts/openai_tts/`, `.github/workflows/openai-tts-pilot.yml`, `docs/openai-tts/` |
+
 ## Décisions
 
 - 2026-10-14 : contrôle HTTP réussi sur la page, les scripts et les 100 MP3 (50 avant/après) ; distinguer la disponibilité du test de l'avancement du corpus complet, dont les jobs sont observés sans interrompre les calculs.
@@ -113,3 +115,5 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-14 : l’utilisateur refuse la voix HADRA après écoute du comparatif ; interrompre le corpus, empêcher les relances automatiques et conserver Jamal en production. Aucun nouveau candidat ni activation sans nouvelle demande explicite.
 
 - 2026-10-14 : à la demande de l’utilisateur, préparer un essai OpenAI lisant le latin ; limiter le premier essai à dix entrées avant tout élargissement et garder Jamal active.
+
+- 2026-10-14 : modèle API figé `gpt-4o-mini-tts-2025-12-15`, voix Cedar, dix inputs latins exacts et consignes Arabizi explicites ; budget limité au pilote, aucun retry payant ni certification automatique. L’appel OpenAI a lieu uniquement dans GitHub Actions ; la clé et l’API ne sont jamais intégrées à l’application.
