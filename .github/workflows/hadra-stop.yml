@@ -1,0 +1,54 @@
+name: Arrêter la voix HADRA refusée
+on:
+  push:
+    branches: [feat/hadra-tts]
+    paths: [.github/workflows/hadra-stop.yml]
+permissions:
+  actions: write
+  contents: write
+jobs:
+  stop:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Arrêter le corpus et enregistrer le refus
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64, datetime, json, pathlib, subprocess, time
+          repo = 'repos/mcofirty/Darijapp'
+          run_id = 38592396345
+          endpoint = f'{repo}/actions/runs/{run_id}'
+          def read_run():
+              return json.loads(subprocess.check_output(['gh', 'api', endpoint], text=True))
+          run = read_run()
+          if run['status'] != 'completed':
+              subprocess.run(['gh', 'api', '--method', 'POST', endpoint + '/force-cancel'], check=True)
+          for attempt in range(24):
+              run = read_run()
+              if run['status'] == 'completed':
+                  break
+              time.sleep(5)
+          if run['status'] != 'completed':
+              raise RuntimeError('Annulation non confirmée : consulter le workflow HADRA')
+          result = {
+              'run_id': run_id, 'status': run['status'], 'conclusion': run['conclusion'],
+              'checked_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              'user_decision': 'rejected', 'automatic_generation': 'disabled',
+              'production_voice': 'Jamal', 'hadra_activated': False,
+              'reason': 'L’utilisateur refuse la nouvelle voix après écoute du comparatif.'
+          }
+          target = repo + '/contents/docs/hadra/voice-decision.json'
+          body = {'message': 'docs: confirme l’arrêt de HADRA après refus de la voix',
+                  'branch': 'feat/hadra-tts',
+                  'content': base64.b64encode(json.dumps(result, ensure_ascii=False, indent=2).encode()).decode()}
+          old = subprocess.run(['gh', 'api', target + '?ref=feat/hadra-tts', '--jq', '.sha'], capture_output=True, text=True)
+          if old.returncode == 0:
+              body['sha'] = old.stdout.strip()
+          path = pathlib.Path('/tmp/hadra-stop-body.json')
+          path.write_text(json.dumps(body))
+          subprocess.run(['gh', 'api', '--method', 'PUT', target, '--input', str(path)], check=True, stdout=subprocess.DEVNULL)
+          print(json.dumps(result, ensure_ascii=False))
+          PY

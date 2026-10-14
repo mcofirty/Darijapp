@@ -38,6 +38,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-14 | Comparatif réel de 50 mots et 100 MP3 publié sous `/test-audio/` ; empreintes, deux lecteurs, arrêt mutuel, filtres, avis persistants et export vérifiés en Chromium mobile | `public/test-audio/`, `scripts/hadra/review-site/` |
 
+| 2026-10-14 | Arrêt du corpus HADRA après refus de la voix et suppression du lancement automatique ; maintien de Jamal et du comparatif expérimental | `.github/workflows/hadra-stop.yml`, `.github/workflows/hadra-corpus.yml`, `docs/hadra/` |
+
 ## Décisions
 
 - 2026-10-14 : contrôle HTTP réussi sur la page, les scripts et les 100 MP3 (50 avant/après) ; distinguer la disponibilité du test de l'avancement du corpus complet, dont les jobs sont observés sans interrompre les calculs.
@@ -105,3 +107,5 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-13 : zellige à 7 endroits choisis par l'utilisateur (jeux et menus), un seul module (`src/ui/zellige.tsx`, carreaux SVG en `data:` pour les fonds CSS et les `<pattern>` du Taxi) ; fond émaillé clair sous chaque motif pour qu'il reste visible en mode sombre ; bande d'en-tête à 40 % et courte, pour ne pas gêner le grand titre.
 - 2026-10-13 : bande de zellige en haut des onglets retirée à la demande de l'utilisateur ; le zellige reste sur les cartes, barres, bilans, jeux et passeport.
 - 2026-10-14 : harmonisation des champs `latin` sur le corpus complet (3 516 textes), à la demande de l'utilisateur, sans prendre les aides `prononciation` comme référence ni les modifier. Les graphies françaises ambiguës sont remplacées par des formes explicites adaptées au darija ; le mot séparé lah devient allah par choix d'écriture, sans qualifier les contractions attestées de fautes. Arabe, français, identifiants et MP3 sont conservés ; 80 références du score sont recalculées pour suivre les nouveaux sons attendus. Les variantes de voyelles et les questions de sens/accord incertaines ne sont pas corrigées automatiquement.
+
+- 2026-10-14 : l’utilisateur refuse la voix HADRA après écoute du comparatif ; interrompre le corpus, empêcher les relances automatiques et conserver Jamal en production. Aucun nouveau candidat ni activation sans nouvelle demande explicite.

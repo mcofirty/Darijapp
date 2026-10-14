@@ -202,7 +202,7 @@ Profil : en plus des réglages, `micro` (Dis-le avec score), `parler` et `ecoute
 
 Jalon en cours : **4 — Jeu** (contenu du jeu terminé). Les jalons 1 à 3 sont en ligne sur https://mcofirty.github.io/Darijapp/ (score de prononciation à éprouver sur iPhone avec une vraie voix).
 
-Voix HADRA : 50 mots de comparaison réellement générés, page `/test-audio/` ajoutée sur main et vérifiée en Chromium mobile (lecture, avis, notes, filtres, sauvegarde et export). Le corpus de 3 511 fichiers à 16 étapes continue par 40 lots, 18 jobs au plus. Les MP3 actifs et les scores restent inchangés ; activation uniquement après décision explicite de l'utilisateur.
+Voix HADRA refusée par l’utilisateur le 2026-10-14 après écoute des 50 mots : arrêt du corpus et suppression du déclenchement automatique. Le comparatif `/test-audio/` reste disponible. Jamal reste la voix active ; aucun déploiement de HADRA et aucune reprise sans nouvelle demande explicite.
 
 | Jalon | Durée estimée | Contenu | Statut |
 | --- | --- | --- | --- |
@@ -230,6 +230,8 @@ Liste complète, ligne par ligne : `docs/historique.md`.
 
 ## Décisions
 
+- 2026-10-14 : voix HADRA depuis le latin refusée après écoute ; arrêter la génération, garder Jamal et ne pas relancer sans nouvelle demande explicite.
+
 Les principales, qui encadrent le travail à venir ; toutes, datées et avec leur raison : `docs/historique.md`.
 
 - Appli 100 % locale sur GitHub Pages, repo public (aucune donnée personnelle hors demandes de l'utilisateur) ; MP3 et publication par GitHub Actions, l'utilisateur n'ayant que son iPhone.
@@ -248,7 +250,7 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 
 ## Points en suspens
 
-- Comparatif en ligne : build, test mobile et contrôle HTTP des 100 MP3 réussis ; après un premier timeout Pages de 10 min, la reprise a publié le test sans nouveau build. Corpus complet traité par lots, état relevé séparément sans arrêter les inférences.
+- Comparatif en ligne : build, test mobile et contrôle HTTP des 100 MP3 réussis. L’utilisateur a refusé la voix HADRA ; corpus interrompu, génération automatique désactivée, fichiers expérimentaux conservés séparément.
 
 - Assemblage du comparatif : helpers JSON déplacés dans le catalogue stdlib pour que les jobs de publication ne chargent pas NumPy. Les 50 exports déjà générés sont réutilisés après vérification des textes, paramètres et SHA-256.
 
@@ -256,7 +258,7 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 
 - Dépendances HADRA : PyArrow récent exige NumPy 2 ; combinaison figée avec NumPy 2.2.6 vérifiée en inférence CPU dans l'Action (2026-10-14).
 
-- HADRA (2026-10-14) : le prétest a signalé des écarts phonétiques persistants, sans certification. À la demande suivante de l'utilisateur : chaîne de 3 511 MP3 candidats à 16 étapes, 40 lots CPU et 50 mots réels prioritaires couvrant 31 thèmes. BF16 limité à l'échantillonnage si compatible, contrôle préalable et retour FP32 déclaré si nécessaire ; retries techniques bornés, bilan explicite des manquants. Comparatif autonome sur `/test-audio/` avec avis locaux et export, sans remplacer les MP3 ni les références actifs. Attendre une décision de l'utilisateur pour l'activation de HADRA dans les exercices. Voir `docs/hadra/README.md`.
+- HADRA (2026-10-14) : le prétest a signalé des écarts phonétiques persistants, sans certification. À la demande suivante de l'utilisateur : chaîne de 3 511 MP3 candidats à 16 étapes, 40 lots CPU et 50 mots réels prioritaires couvrant 31 thèmes. BF16 limité à l'échantillonnage si compatible, contrôle préalable et retour FP32 déclaré si nécessaire ; retries techniques bornés, bilan explicite des manquants. Comparatif autonome sur `/test-audio/` avec avis locaux et export, sans remplacer les MP3 ni les références actifs. L’utilisateur a ensuite refusé cette voix : ne pas activer HADRA dans les exercices ni reprendre la génération sans nouvelle demande explicite. Voir `docs/hadra/README.md`.
 
 - Latin (2026-10-14) : les aides `prononciation` n'ont pas été utilisées ni réécrites pour cette harmonisation ; certaines explications restent à revoir séparément. Les questions de sens/accord relevées par l'audit (`lbab khedra`) restent distinctes de la correction des seules graphies latines ; ne pas modifier arbitrairement l'arabe ou les traductions pour faire disparaître une alerte.
 

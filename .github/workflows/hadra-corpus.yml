@@ -1,8 +1,7 @@
 name: HADRA corpus latin et test 50 mots
 on:
-  push:
-    branches: [feat/hadra-tts]
-    paths: [.github/workflows/hadra-corpus.yml, scripts/hadra/run-corpus.json]
+  workflow_dispatch:
+# Voix refusée le 2026-10-14 : aucun lancement automatique.
 concurrency:
   group: hadra-corpus
   cancel-in-progress: true

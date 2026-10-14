@@ -1,15 +1,22 @@
 # HADRA : génération expérimentale depuis le latin
 
+## Voix refusée après écoute
+
+Le 2026-10-14, l’utilisateur a refusé la nouvelle voix du comparatif. Le corpus
+est interrompu et son déclenchement automatique supprimé. Les fichiers expérimentaux
+et les 50 comparaisons restent disponibles pour diagnostic. Jamal reste active.
+Aucune reprise ni activation de HADRA sans nouvelle demande explicite.
+
 ## Génération complète et écoute avant/après
 
-À la demande de l'utilisateur, `HADRA corpus latin et test 50 mots` produit les
+Le workflow expérimental `HADRA corpus latin et test 50 mots` avait pour objectif les
 **3 511 textes** (mots, exemples et phrases) à 16 étapes, directement depuis le latin.
 Un préflight mesure trois mots et le chargement : BF16 seulement sur CPU compatible,
 limité au sampling pour garder le vocodeur en FP32 ; retour déclaré à FP32 si l'essai échoue.
 Le modèle, le vocodeur et leurs hashes restent ceux décrits ci-dessous. Aucune cible arabe.
 
 Les 50 vrais mots de `review-50.json` couvrent les 31 thèmes et sont prioritaires.
-Le reste est réparti en 40 lots, sans doublons, avec 20 jobs CPU simultanés au plus,
+Le reste est réparti en 40 lots, sans doublons, avec 18 jobs CPU simultanés au plus,
 des budgets explicites et deux retries supplémentaires pour les rejets techniques.
 Le manifeste final donne les comptes attendus, tentés, conformes et manquants ;
 les sorties rejetées ne sont pas présentées comme prêtes. Les candidats restent
@@ -19,11 +26,11 @@ Le comparatif se publie sur `https://mcofirty.github.io/Darijapp/test-audio/` :
 100 MP3, deux lecteurs par mot, filtres, vitesse, notes et avis locaux exportables.
 Ce sous-dossier autonome partage l'hébergement, sans utiliser la progression ou
 changer la voix des exercices. Sa publication est autorisée par la demande de test ;
-**l'activation de HADRA dans l'application attend la décision de l'utilisateur**.
+**l’utilisateur a refusé HADRA : aucune activation dans l’application**.
 Le commit de la page sur main est suivi d'un dispatch explicite de « Publier »,
 car les commits effectués avec GITHUB_TOKEN ne déclenchent pas les Actions push.
 
-La bibliothèque complète reste dans `docs/hadra/library/` sur `feat/hadra-tts`.
+La bibliothèque partielle reste dans `docs/hadra/library/` sur `feat/hadra-tts`.
 Les artifacts de génération sont conservés 30 jours, et les MP3 rassemblés sont
 versionnés pour être réutilisables hors connexion. Aucun service GPU payant n'est utilisé.
 
