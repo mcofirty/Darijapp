@@ -23,7 +23,9 @@
       "confidence": null,
       "warnings": [
         "long_edge_silence"
-      ]
+      ],
+      "instructions": "Speak Moroccan Darija, with a natural Moroccan accent and clear diction for a beginner learning pronunciation. Read only the supplied input, exactly once. Do not translate it, explain it, add an introduction, or speak these instructions. The input is Moroccan Darija written in Latin/Arabizi, not French or English. Within words, the digits represent consonants, never spoken numbers: 3 is ع /ʕ/, 7 is ح /ħ/, 9 is ق /q/, and 2 is hamza /ʔ/. The digraph kh is خ /x/, gh is غ /ɣ/, and ch is ش /ʃ/. Preserve doubled consonants as geminates. Pronounce allah in full where written. Keep the word's Moroccan Darija vowels and rhythm, without converting the utterance to Modern Standard Arabic. Speak at a comfortable natural pace, without exaggerating or spelling the letters. Output only the word or expression provided.",
+      "revised": false
     },
     {
       "id": "corps-041",
@@ -41,7 +43,9 @@
       "confidence": null,
       "warnings": [
         "long_edge_silence"
-      ]
+      ],
+      "instructions": "Speak Moroccan Darija, with a natural Moroccan accent and clear diction for a beginner learning pronunciation. Read only the supplied input, exactly once. Do not translate it, explain it, add an introduction, or speak these instructions. The input is Moroccan Darija written in Latin/Arabizi, not French or English. Within words, the digits represent consonants, never spoken numbers: 3 is ع /ʕ/, 7 is ح /ħ/, 9 is ق /q/, and 2 is hamza /ʔ/. The digraph kh is خ /x/, gh is غ /ɣ/, and ch is ش /ʃ/. Preserve doubled consonants as geminates. Pronounce allah in full where written. Keep the word's Moroccan Darija vowels and rhythm, without converting the utterance to Modern Standard Arabic. Speak at a comfortable natural pace, without exaggerating or spelling the letters. Output only the word or expression provided.",
+      "revised": false
     },
     {
       "id": "nourriture-001",
@@ -51,13 +55,17 @@
       "theme": "nourriture",
       "tts_text": "khobz",
       "before": "before/nourriture-001.mp3",
-      "after": "after/nourriture-001-70da27afbb48.mp3",
+      "after": "after/nourriture-001-118531d9e4e1.mp3",
       "before_sha256": "20296d1a52948751dce5030501724f22128587bd282dad99ab7f0c03a1399970",
-      "after_sha256": "a07cc203fd6100dd8e8c8ab84c9f0b97210c5de7169ff7371f6a2a9e96f07a91",
+      "after_sha256": "0f7867cac4e724d3799a2e3c29b413d7080e4ed46b48e086245f9407e59e28b2",
       "technical_status": "passed",
       "pronunciation_status": "uncertain",
       "confidence": null,
-      "warnings": []
+      "warnings": [],
+      "instructions": "Speak Moroccan Darija, with a natural Moroccan accent and clear diction for a beginner learning pronunciation. Read only the supplied input, exactly once. Do not translate it, explain it, add an introduction, or speak these instructions. The input is Moroccan Darija written in Latin/Arabizi, not French or English. Within words, the digits represent consonants, never spoken numbers: 3 is ع /ʕ/, 7 is ح /ħ/, 9 is ق /q/, and 2 is hamza /ʔ/. The digraph kh is خ /x/, gh is غ /ɣ/, and ch is ش /ʃ/. Preserve doubled consonants as geminates. Pronounce allah in full where written. Keep the word's Moroccan Darija vowels and rhythm, without converting the utterance to Modern Standard Arabic. Speak at a comfortable natural pace, without exaggerating or spelling the letters. Output only the word or expression provided.\n\nFor this word, kh is a single voiceless velar fricative /x/, like the final sound in Scottish loch, never an ordinary k and never k followed by h. Keep the vowel short. Finish with b immediately followed by voiced z, without adding a vowel between them and without changing z to s. Read the single supplied Moroccan word only.",
+      "revised": true,
+      "previous": "previous/nourriture-001.mp3",
+      "previous_sha256": "a07cc203fd6100dd8e8c8ab84c9f0b97210c5de7169ff7371f6a2a9e96f07a91"
     },
     {
       "id": "nourriture-006",
@@ -75,7 +83,9 @@
       "confidence": null,
       "warnings": [
         "long_edge_silence"
-      ]
+      ],
+      "instructions": "Speak Moroccan Darija, with a natural Moroccan accent and clear diction for a beginner learning pronunciation. Read only the supplied input, exactly once. Do not translate it, explain it, add an introduction, or speak these instructions. The input is Moroccan Darija written in Latin/Arabizi, not French or English. Within words, the digits represent consonants, never spoken numbers: 3 is ع /ʕ/, 7 is ح /ħ/, 9 is ق /q/, and 2 is hamza /ʔ/. The digraph kh is خ /x/, gh is غ /ɣ/, and ch is ش /ʃ/. Preserve doubled consonants as geminates. Pronounce allah in full where written. Keep the word's Moroccan Darija vowels and rhythm, without converting the utterance to Modern Standard Arabic. Speak at a comfortable natural pace, without exaggerating or spelling the letters. Output only the word or expression provided.",
+      "revised": false
     },
     {
       "id": "jours-002",
@@ -93,7 +103,9 @@
       "confidence": null,
       "warnings": [
         "long_edge_silence"
-      ]
+      ],
+      "instructions": "Speak Moroccan Darija, with a natural Moroccan accent and clear diction for a beginner learning pronunciation. Read only the supplied input, exactly once. Do not translate it, explain it, add an introduction, or speak these instructions. The input is Moroccan Darija written in Latin/Arabizi, not French or English. Within words, the digits represent consonants, never spoken numbers: 3 is ع /ʕ/, 7 is ح /ħ/, 9 is ق /q/, and 2 is hamza /ʔ/. The digraph kh is خ /x/, gh is غ /ɣ/, and ch is ش /ʃ/. Preserve doubled consonants as geminates. Pronounce allah in full where written. Keep the word's Moroccan Darija vowels and rhythm, without converting the utterance to Modern Standard Arabic. Speak at a comfortable natural pace, without exaggerating or spelling the letters. Output only the word or expression provided.",
+      "revised": false
     },
     {
       "id": "chiffres-017",
@@ -103,15 +115,19 @@
       "theme": "chiffres",
       "tts_text": "ch7al?",
       "before": "before/chiffres-017.mp3",
-      "after": "after/chiffres-017-5c49749e2d95.mp3",
+      "after": "after/chiffres-017-53fc8a53ab87.mp3",
       "before_sha256": "c93a10ca7b74efeebc30fbd5ffd17862ee3c9ddcdd0ab760f90e03a05aeaa2ee",
-      "after_sha256": "ff4db6acb95b829f14d1e945d6c76df6fced4da0e01060330bfa656a0e0cc993",
+      "after_sha256": "e4911aca6cf9ed1765c86a3ae052569819259e4d1cd4ba9acbfa929324b33dc3",
       "technical_status": "passed",
       "pronunciation_status": "uncertain",
       "confidence": null,
       "warnings": [
         "long_edge_silence"
-      ]
+      ],
+      "instructions": "Speak Moroccan Darija, with a natural Moroccan accent and clear diction for a beginner learning pronunciation. Read only the supplied input, exactly once. Do not translate it, explain it, add an introduction, or speak these instructions. The input is Moroccan Darija written in Latin/Arabizi, not French or English. Within words, the digits represent consonants, never spoken numbers: 3 is ع /ʕ/, 7 is ح /ħ/, 9 is ق /q/, and 2 is hamza /ʔ/. The digraph kh is خ /x/, gh is غ /ɣ/, and ch is ش /ʃ/. Preserve doubled consonants as geminates. Pronounce allah in full where written. Keep the word's Moroccan Darija vowels and rhythm, without converting the utterance to Modern Standard Arabic. Speak at a comfortable natural pace, without exaggerating or spelling the letters. Output only the word or expression provided.\n\nFor this word, start with ch /ʃ/ immediately followed by the deep voiceless pharyngeal fricative 7 /ħ/. The 7 is a consonant, never seven, sept, or an ordinary h. Finish the Moroccan question with al and a clear final l. Do not spell the characters or insert an extra word; read the supplied word once.",
+      "revised": true,
+      "previous": "previous/chiffres-017.mp3",
+      "previous_sha256": "ff4db6acb95b829f14d1e945d6c76df6fced4da0e01060330bfa656a0e0cc993"
     },
     {
       "id": "verbes-085",
@@ -121,13 +137,19 @@
       "theme": "verbes",
       "tts_text": "we99e3",
       "before": "before/verbes-085.mp3",
-      "after": "after/verbes-085-1d513b58ddef.mp3",
+      "after": "after/verbes-085-9ba9962e83a0.mp3",
       "before_sha256": "e6362f58d83be89af051870ca0bf0499beacc5e50d5740b108964f4eb235f817",
-      "after_sha256": "8b55fa7b3a0bb01fde3b443294e728bb2e35dc64841258e5a97450134d945cf7",
+      "after_sha256": "434d03853587e89f14072f60b48de29cdea8cb50c6afbbcc9a3593b5b8eda93d",
       "technical_status": "passed",
       "pronunciation_status": "uncertain",
       "confidence": null,
-      "warnings": []
+      "warnings": [
+        "long_internal_silence"
+      ],
+      "instructions": "Speak Moroccan Darija, with a natural Moroccan accent and clear diction for a beginner learning pronunciation. Read only the supplied input, exactly once. Do not translate it, explain it, add an introduction, or speak these instructions. The input is Moroccan Darija written in Latin/Arabizi, not French or English. Within words, the digits represent consonants, never spoken numbers: 3 is ع /ʕ/, 7 is ح /ħ/, 9 is ق /q/, and 2 is hamza /ʔ/. The digraph kh is خ /x/, gh is غ /ɣ/, and ch is ش /ʃ/. Preserve doubled consonants as geminates. Pronounce allah in full where written. Keep the word's Moroccan Darija vowels and rhythm, without converting the utterance to Modern Standard Arabic. Speak at a comfortable natural pace, without exaggerating or spelling the letters. Output only the word or expression provided.\n\nThis is one Moroccan verb, meaning to sign. Start with consonant w and a very short unstressed vowel. The sequence 99 is one sustained geminate uvular stop /qː/, never ninety-nine, nine nine, or letters pronounced separately. After a short unstressed vowel, finish with the voiced pharyngeal consonant 3 /ʕ/, not a numeral and not a vowel replacing that consonant. Keep all these sounds within one word. Read only the supplied Latin word once; do not speak this guidance.",
+      "revised": true,
+      "previous": "previous/verbes-085.mp3",
+      "previous_sha256": "8b55fa7b3a0bb01fde3b443294e728bb2e35dc64841258e5a97450134d945cf7"
     },
     {
       "id": "jours-006",
@@ -143,7 +165,9 @@
       "technical_status": "passed",
       "pronunciation_status": "uncertain",
       "confidence": null,
-      "warnings": []
+      "warnings": [],
+      "instructions": "Speak Moroccan Darija, with a natural Moroccan accent and clear diction for a beginner learning pronunciation. Read only the supplied input, exactly once. Do not translate it, explain it, add an introduction, or speak these instructions. The input is Moroccan Darija written in Latin/Arabizi, not French or English. Within words, the digits represent consonants, never spoken numbers: 3 is ع /ʕ/, 7 is ح /ħ/, 9 is ق /q/, and 2 is hamza /ʔ/. The digraph kh is خ /x/, gh is غ /ɣ/, and ch is ش /ʃ/. Preserve doubled consonants as geminates. Pronounce allah in full where written. Keep the word's Moroccan Darija vowels and rhythm, without converting the utterance to Modern Standard Arabic. Speak at a comfortable natural pace, without exaggerating or spelling the letters. Output only the word or expression provided.",
+      "revised": false
     },
     {
       "id": "adjectifs-052",
@@ -153,15 +177,20 @@
       "theme": "adjectifs",
       "tts_text": "3tchan",
       "before": "before/adjectifs-052.mp3",
-      "after": "after/adjectifs-052-db5997ecc538.mp3",
+      "after": "after/adjectifs-052-6c00e8b2e768.mp3",
       "before_sha256": "583b771538e0be6bf916a979fe68516cb0f9148e52e589a3fb6e56730e7b13fe",
-      "after_sha256": "430db1d3ae0a0dca37e60d56cee595c146e4c002e1a1fa0edb821503def1c702",
+      "after_sha256": "b85823362d5e69422c2bf87367ec90cb6b1a48ff2b1bbfa2ec347dac6d50d416",
       "technical_status": "passed",
       "pronunciation_status": "uncertain",
       "confidence": null,
       "warnings": [
-        "long_edge_silence"
-      ]
+        "long_edge_silence",
+        "long_internal_silence"
+      ],
+      "instructions": "Speak Moroccan Darija, with a natural Moroccan accent and clear diction for a beginner learning pronunciation. Read only the supplied input, exactly once. Do not translate it, explain it, add an introduction, or speak these instructions. The input is Moroccan Darija written in Latin/Arabizi, not French or English. Within words, the digits represent consonants, never spoken numbers: 3 is ع /ʕ/, 7 is ح /ħ/, 9 is ق /q/, and 2 is hamza /ʔ/. The digraph kh is خ /x/, gh is غ /ɣ/, and ch is ش /ʃ/. Preserve doubled consonants as geminates. Pronounce allah in full where written. Keep the word's Moroccan Darija vowels and rhythm, without converting the utterance to Modern Standard Arabic. Speak at a comfortable natural pace, without exaggerating or spelling the letters. Output only the word or expression provided.\n\nThis Moroccan word means thirsty. Begin with the voiced pharyngeal consonant 3 /ʕ/, never the word three or trois. Preserve the following t and ch /ʃ/ in sequence, then a and a clear final n. Do not omit the first consonant or the t, do not spell the Latin characters, and do not substitute a French or English word. Read the supplied Moroccan word once.",
+      "revised": true,
+      "previous": "previous/adjectifs-052.mp3",
+      "previous_sha256": "430db1d3ae0a0dca37e60d56cee595c146e4c002e1a1fa0edb821503def1c702"
     },
     {
       "id": "salutations-035",
@@ -177,7 +206,9 @@
       "technical_status": "passed",
       "pronunciation_status": "uncertain",
       "confidence": null,
-      "warnings": []
+      "warnings": [],
+      "instructions": "Speak Moroccan Darija, with a natural Moroccan accent and clear diction for a beginner learning pronunciation. Read only the supplied input, exactly once. Do not translate it, explain it, add an introduction, or speak these instructions. The input is Moroccan Darija written in Latin/Arabizi, not French or English. Within words, the digits represent consonants, never spoken numbers: 3 is ع /ʕ/, 7 is ح /ħ/, 9 is ق /q/, and 2 is hamza /ʔ/. The digraph kh is خ /x/, gh is غ /ɣ/, and ch is ش /ʃ/. Preserve doubled consonants as geminates. Pronounce allah in full where written. Keep the word's Moroccan Darija vowels and rhythm, without converting the utterance to Modern Standard Arabic. Speak at a comfortable natural pace, without exaggerating or spelling the letters. Output only the word or expression provided.",
+      "revised": false
     }
   ],
   "themes": {
@@ -213,5 +244,7 @@
     "organisation": "Organisation et apprentissage",
     "tournures": "Négations et tournures"
   },
-  "review_id": "1f8890675b6a721d7a82e11adbde5946d71d087ed76e5c0fe6759cf93235e795"
+  "review_id": "06ccf904608b1378848eede716104d6995357c38132fde97e245247e719f00e5",
+  "revision": 2,
+  "baseline_review_id": "1f8890675b6a721d7a82e11adbde5946d71d087ed76e5c0fe6759cf93235e795"
 }

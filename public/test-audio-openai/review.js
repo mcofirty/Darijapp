@@ -7,19 +7,26 @@
   try {
     const saved = JSON.parse(localStorage.getItem(storageKey) || 'null')
     if (saved && typeof saved.votes === 'object' && typeof saved.notes === 'object') state = saved
+    else if (data.baseline_review_id) {
+      const previous = JSON.parse(localStorage.getItem(`darija-openai-review-${data.baseline_review_id}`) || 'null')
+      if (previous) data.entries.filter(entry => !entry.revised).forEach(entry => {
+        if (previous.votes?.[entry.id]) state.votes[entry.id] = previous.votes[entry.id]
+        if (previous.notes?.[entry.id]) state.notes[entry.id] = previous.notes[entry.id]
+      })
+    }
   } catch { el('storage-message').textContent = 'La sauvegarde locale est indisponible ; vous pouvez télécharger votre avis.' }
   let position = 0
   let visible = data.entries
-  const players = [el('before'), el('after')]
+  const players = [el('before'), el('after'), el('previous-audio')]
   const persist = () => {
     try { localStorage.setItem(storageKey, JSON.stringify(state)) }
     catch { el('storage-message').textContent = 'Téléchargez votre avis pour le conserver.' }
   }
   const summary = () => {
-    const count = data.entries.filter(entry => state.votes[entry.id]).length
-    el('review-count').textContent = `${count} avis sur ${data.count}`
+    const count = data.entries.filter(entry => entry.revised && state.votes[entry.id]).length
+    el('review-count').textContent = `${count} avis sur 4`
     el('progress').value = count
-    const preferred = choice => data.entries.filter(entry => state.votes[entry.id] === choice).length
+    const preferred = choice => data.entries.filter(entry => entry.revised && state.votes[entry.id] === choice).length
     el('summary').textContent = `${preferred('after')} préférences pour après · ${preferred('before')} pour avant · ${preferred('review')} à revoir.`
   }
   const render = () => {
@@ -38,6 +45,9 @@
     el('position').textContent = `${position + 1} / ${visible.length}`
     el('before').src = entry.before
     el('after').src = entry.after
+    el('previous-sample').hidden = !entry.previous
+    if (entry.previous) el('previous-audio').src = entry.previous
+    else el('previous-audio').removeAttribute('src')
     players.forEach(player => { player.playbackRate = Number(el('speed').value) })
     el('previous').disabled = position === 0
     el('next').disabled = position === visible.length - 1
@@ -50,7 +60,7 @@
   const filter = () => {
     const query = el('search').value.toLocaleLowerCase('fr')
     const theme = el('theme').value
-    visible = data.entries.filter(entry => (!theme || entry.theme === theme) && `${entry.latin} ${entry.fr}`.toLocaleLowerCase('fr').includes(query))
+    visible = data.entries.filter(entry => (!el('only-revised').checked || entry.revised) && (!theme || entry.theme === theme) && `${entry.latin} ${entry.fr}`.toLocaleLowerCase('fr').includes(query))
     position = 0
     render()
   }
@@ -69,6 +79,7 @@
   el('note').addEventListener('input', () => { state.notes[visible[position].id] = el('note').value; persist() })
   el('previous').addEventListener('click', () => { position--; render() })
   el('next').addEventListener('click', () => { position++; render() })
+  el('only-revised').addEventListener('change', filter)
   el('search').addEventListener('input', filter)
   el('theme').addEventListener('change', filter)
   el('speed').addEventListener('change', () => players.forEach(player => { player.playbackRate = Number(el('speed').value) }))
@@ -88,8 +99,8 @@
         vote: state.votes[entry.id] || 'unreviewed', note: state.notes[entry.id] || '' })) }
     const url = URL.createObjectURL(new Blob([JSON.stringify(result, null, 2)], { type: 'application/json' }))
     const link = document.createElement('a')
-    link.href = url; link.download = 'avis-openai-10-mots.json'; link.click()
+    link.href = url; link.download = 'avis-openai-corrections.json'; link.click()
     setTimeout(() => URL.revokeObjectURL(url), 30000)
   })
-  render()
+  filter()
 })()

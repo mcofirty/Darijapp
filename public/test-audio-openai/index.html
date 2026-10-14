@@ -8,24 +8,26 @@
 <body>
   <main>
     <a class="back" href="../">‹ Application actuelle</a>
-    <p class="eyebrow">ESPACE DE TEST · 10 MOTS</p><h1>Écouter avant / après</h1>
-    <p class="intro">Comparez la voix actuelle avec OpenAI lisant le latin, puis choisissez la suite.</p>
+    <p class="eyebrow">ESPACE DE TEST · 4 MOTS REPRIS</p><h1>Écouter avant / après</h1>
+    <p class="intro">Quatre nouvelles propositions pour khobz, ch7al?, we99e3 et 3tchan. Les six autres MP3 sont conservés à l’identique ; écoutez ces corrections avant de décider de la suite.</p>
     <details><summary>Ce que vous écoutez</summary><p>Avant : les MP3 actuellement utilisés. Après : une voix générée par OpenAI lit le latin, avec les chiffres 3, 7 et 9. Les fichiers passent des contrôles techniques ; leur prononciation reste à évaluer. La voix des exercices reste celle d’avant.</p></details>
+    <label class="small"><input id="only-revised" type="checkbox" checked> Afficher seulement les quatre mots repris</label>
     <section class="filters" aria-label="Choisir un mot">
       <label>Rechercher<input id="search" type="search" placeholder="Latin ou français" autocomplete="off"></label>
       <label>Thème<select id="theme"><option value="">Tous les thèmes</option></select></label>
     </section>
-    <div class="progress"><span id="review-count">0 avis sur 10</span><progress id="progress" max="10" value="0"></progress></div>
+    <div class="progress"><span id="review-count">0 avis sur 4</span><progress id="progress" max="4" value="0"></progress></div>
     <p id="empty" hidden>Aucun mot ne correspond à cette recherche.</p>
     <article id="card">
       <div class="card-top"><span id="category"></span><span id="position"></span></div>
       <h2 id="latin"></h2><p id="translation"></p><p id="arabic" lang="ar" dir="rtl"></p>
       <div class="players">
         <section><h3>Avant</h3><p>Voix actuelle · Jamal</p><audio id="before" controls preload="none" aria-label="Écouter avant"></audio></section>
-        <section><h3>Après</h3><p>OpenAI · Cedar · lecture du latin</p><audio id="after" controls preload="none" aria-label="Écouter après"></audio></section>
+        <section><h3>Après</h3><p>OpenAI · Cedar · nouvel essai pour les mots repris</p><audio id="after" controls preload="none" aria-label="Écouter après"></audio></section>
       </div>
       <label class="speed">Vitesse d’écoute<select id="speed"><option value="1">Normale</option><option value="0.8">Un peu plus lente</option><option value="0.65">Lente</option></select></label>
       <p id="alert" class="alert" hidden></p><p id="playback-error" class="alert" role="status" hidden></p>
+      <details id="previous-sample" hidden><summary>Écouter le premier essai OpenAI</summary><audio id="previous-audio" controls preload="none" aria-label="Écouter le premier essai OpenAI"></audio></details>
       <fieldset><legend>Votre avis sur ce mot</legend><div class="votes">
         <button type="button" data-vote="before">Je préfère avant</button>
         <button type="button" data-vote="after">Je préfère après</button>
@@ -36,7 +38,7 @@
     </article>
     <section class="decision">
       <h2>Votre décision</h2><p id="summary">Écoutez les mots qui vous intéressent, puis donnez votre avis global.</p>
-      <label>Avis global<select id="decision"><option value="pending">Je n’ai pas encore décidé</option><option value="approve">Je valide ce premier test</option><option value="reject">Je refuse cette voix</option><option value="revise">Je demande des corrections</option></select></label>
+      <label>Avis global<select id="decision"><option value="pending">Je n’ai pas encore décidé</option><option value="approve">Je valide ce test corrigé</option><option value="reject">Je refuse cette voix</option><option value="revise">Je demande des corrections</option></select></label>
       <button id="export" class="primary" type="button">Télécharger mon avis</button>
       <p class="small">Votre avis permet de décider du test de 50 mots. Il ne déclenche aucun déploiement. Vos avis restent dans ce navigateur. Envoyez votre décision ou le fichier d’avis dans notre conversation pour confirmer la suite.</p>
       <p id="storage-message" class="small" role="status"></p>
