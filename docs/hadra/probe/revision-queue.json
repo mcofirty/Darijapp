@@ -4,7 +4,8 @@
     "entry_id": "son-9elb",
     "prompt": "9elb",
     "reasons": [
-      "latin_darija_pronunciation_not_verified"
+      "latin_darija_pronunciation_not_verified",
+      "long_edge_silence"
     ]
   },
   {
@@ -12,7 +13,8 @@
     "entry_id": "son-9elb",
     "prompt": "9elb",
     "reasons": [
-      "latin_darija_pronunciation_not_verified"
+      "latin_darija_pronunciation_not_verified",
+      "long_edge_silence"
     ]
   },
   {
@@ -20,7 +22,8 @@
     "entry_id": "nourriture-001",
     "prompt": "khobz",
     "reasons": [
-      "latin_darija_pronunciation_not_verified"
+      "latin_darija_pronunciation_not_verified",
+      "long_edge_silence"
     ]
   },
   {
@@ -28,7 +31,8 @@
     "entry_id": "nourriture-001",
     "prompt": "khobz",
     "reasons": [
-      "latin_darija_pronunciation_not_verified"
+      "latin_darija_pronunciation_not_verified",
+      "long_edge_silence"
     ]
   },
   {
@@ -36,7 +40,8 @@
     "entry_id": "salutations-012",
     "prompt": "3afak",
     "reasons": [
-      "latin_darija_pronunciation_not_verified"
+      "latin_darija_pronunciation_not_verified",
+      "long_edge_silence"
     ]
   }
 ]

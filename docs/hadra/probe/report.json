@@ -80,13 +80,14 @@
       "pronunciation_status": "uncertain",
       "confidence": null,
       "revision_reasons": [
-        "latin_darija_pronunciation_not_verified"
+        "latin_darija_pronunciation_not_verified",
+        "long_edge_silence"
       ],
       "source_script": "latin",
       "reference_is_synthetic": true,
       "synthesis_seconds": 91.60868183699998,
       "rtf": 86.75064567897725,
-      "reused_master": false
+      "reused_master": true
     },
     {
       "entry_id": "son-9elb",
@@ -165,13 +166,14 @@
       "pronunciation_status": "uncertain",
       "confidence": null,
       "revision_reasons": [
-        "latin_darija_pronunciation_not_verified"
+        "latin_darija_pronunciation_not_verified",
+        "long_edge_silence"
       ],
       "source_script": "latin",
       "reference_is_synthetic": true,
       "synthesis_seconds": 91.07314639399999,
       "rtf": 86.24350984280302,
-      "reused_master": false
+      "reused_master": true
     },
     {
       "entry_id": "nourriture-001",
@@ -250,13 +252,14 @@
       "pronunciation_status": "uncertain",
       "confidence": null,
       "revision_reasons": [
-        "latin_darija_pronunciation_not_verified"
+        "latin_darija_pronunciation_not_verified",
+        "long_edge_silence"
       ],
       "source_script": "latin",
       "reference_is_synthetic": true,
       "synthesis_seconds": 99.15513870900003,
       "rtf": 74.96608269329639,
-      "reused_master": false
+      "reused_master": true
     },
     {
       "entry_id": "nourriture-001",
@@ -335,13 +338,14 @@
       "pronunciation_status": "uncertain",
       "confidence": null,
       "revision_reasons": [
-        "latin_darija_pronunciation_not_verified"
+        "latin_darija_pronunciation_not_verified",
+        "long_edge_silence"
       ],
       "source_script": "latin",
       "reference_is_synthetic": true,
       "synthesis_seconds": 98.32231486999996,
       "rtf": 74.33642757308465,
-      "reused_master": false
+      "reused_master": true
     },
     {
       "entry_id": "salutations-012",
@@ -420,13 +424,14 @@
       "pronunciation_status": "uncertain",
       "confidence": null,
       "revision_reasons": [
-        "latin_darija_pronunciation_not_verified"
+        "latin_darija_pronunciation_not_verified",
+        "long_edge_silence"
       ],
       "source_script": "latin",
       "reference_is_synthetic": true,
       "synthesis_seconds": 98.4601264800001,
       "rtf": 74.44061981854846,
-      "reused_master": false
+      "reused_master": true
     }
   ]
 }
