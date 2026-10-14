@@ -32,6 +32,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 ## Décisions
 
+- 2026-10-14 : inspection initiale de HADRA sur une branche dédiée avec GitHub Actions, sans télécharger les poids ni exécuter de code distant, pour établir l'interface réelle et la compatibilité du latin avant la génération pilote. Les métadonnées sont figées sur un SHA du modèle et conservées sur cette branche ; aucune publication Pages ni modification de la bibliothèque audio.
+
 
 - 2026-10-11 : appli 100 % locale publiée sur GitHub Pages (pas de serveur ni de compte), repo public pour que Pages soit gratuit (aucune donnée personnelle dans le repo hors demandes de l'utilisateur) ; publication et MP3 par GitHub Actions, pour que tout se fasse sans ordinateur (l'utilisateur n'utilise que son iPhone).
 - 2026-10-11 : score par comparaison acoustique MFCC + DTW sur l'appareil (hors ligne, la voix reste privée) ; rappel quotidien par fichier .ics (une notification push exigerait un serveur) ; pas de routeur, navigation par état React (2026-10-10). Listes de mots affichées par tranches (60, puis 120 à l'approche du bas, `IntersectionObserver`) au lieu des 1 682 lignes d'un coup.

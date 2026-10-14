@@ -245,6 +245,8 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 
 ## Points en suspens
 
+- HADRA (2026-10-14) : intégration en cours sur `feat/hadra-tts`. L'Action « Inspecter HADRA » lit la carte et les configurations publiques sans exécuter de code du modèle. Le latin est requis par l'utilisateur ; vérifier son support avant de synthétiser ou remplacer des MP3. L'accès Hugging Face est bloqué dans ce cloud ; l'inspection passe par GitHub Actions. Aucun nouvel audio n'est encore activé dans l'application.
+
 - Latin (2026-10-14) : les aides `prononciation` n'ont pas été utilisées ni réécrites pour cette harmonisation ; certaines explications restent à revoir séparément. Les questions de sens/accord relevées par l'audit (`lbab khedra`) restent distinctes de la correction des seules graphies latines ; ne pas modifier arbitrairement l'arabe ou les traductions pour faire disparaître une alerte.
 
 - Voix : MP3 Jamal générés par l'Action « Audio » (secrets `AZURE_SPEECH_KEY` et `AZURE_SPEECH_REGION`) ; si Azure refuse (401/403), vérifier la clé, la région et le niveau F0. Tant qu'un MP3 manque, la voix de l'iPhone lit (arabe standard). La voix reste un peu « littéraire » (arabe standard) : pour un mot qui sonne mal, corriger son champ `arabe` (orthographe darija) et supprimer son MP3.

@@ -1,0 +1,31 @@
+name: Inspecter HADRA
+
+on:
+  push:
+    branches: ['feat/hadra-tts']
+    paths: ['.github/workflows/hadra-inspect.yml', 'scripts/hadra/inspect_model.py']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tester les règles d'inspection
+        run: python3 -m unittest discover -s scripts/hadra -p 'test_*.py'
+      - name: Lire la carte et les configurations publiques, sans charger de code distant
+        run: python3 scripts/hadra/inspect_model.py --output docs/hadra/model-inspection.json
+      - name: Conserver les métadonnées sur la branche de travail uniquement
+        if: github.ref == 'refs/heads/feat/hadra-tts'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/hadra/model-inspection.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'docs: inspecte les fichiers publics de HADRA'
+            git push origin HEAD:feat/hadra-tts
+          fi
