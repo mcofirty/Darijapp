@@ -36,7 +36,11 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-14 | Chaîne de génération HADRA depuis le latin pour les 3 511 textes, lots CPU et reprises techniques ; espace autonome avant/après de 50 mots réels avec lecteurs, avis et export | `scripts/hadra/`, `.github/workflows/hadra-corpus.yml` |
 
+| 2026-10-14 | Comparatif réel de 50 mots et 100 MP3 publié sous `/test-audio/` ; empreintes, deux lecteurs, arrêt mutuel, filtres, avis persistants et export vérifiés en Chromium mobile | `public/test-audio/`, `scripts/hadra/review-site/` |
+
 ## Décisions
+
+- 2026-10-14 : vérifier aussi les 100 fichiers effectivement servis par GitHub Pages depuis un runner, le proxy cloud bloquant ce domaine ; ne déduire aucune certification linguistique des checks HTTP ou du test mobile.
 
 - 2026-10-14 : isoler les fonctions JSON de toute dépendance à NumPy pour la publication ; vérifier les CLIs avec Python sans site-packages. Réutiliser les 50 exports calculés, faire dépendre le corpus de la page publiée et limiter les lots à 18 pour réserver des slots à « Publier ».
 
