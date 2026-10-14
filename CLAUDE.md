@@ -248,7 +248,7 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 
 ## Points en suspens
 
-- Comparatif en ligne : build et test mobile réussis ; après un premier timeout Pages de 10 min, le déploiement a réussi en 3 min 33 s sans nouveau build. Vérification HTTP des 100 fichiers en cours.
+- Comparatif en ligne : build, test mobile et contrôle HTTP des 100 MP3 réussis ; après un premier timeout Pages de 10 min, la reprise a publié le test sans nouveau build. Corpus complet traité par lots, état relevé séparément sans arrêter les inférences.
 
 - Assemblage du comparatif : helpers JSON déplacés dans le catalogue stdlib pour que les jobs de publication ne chargent pas NumPy. Les 50 exports déjà générés sont réutilisés après vérification des textes, paramètres et SHA-256.
 

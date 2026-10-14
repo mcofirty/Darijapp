@@ -1,0 +1,36 @@
+name: État des lots HADRA
+on:
+  push:
+    branches: [feat/hadra-tts]
+    paths: [.github/workflows/hadra-status.yml]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Lire l'avancement des lots sans toucher aux inférences
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import subprocess,json,collections,base64,pathlib,datetime
+          repo='repos/mcofirty/Darijapp'
+          raw=subprocess.check_output(['gh','api',repo+'/actions/runs/38592396345/jobs?per_page=100'],text=True)
+          jobs=[j for j in json.loads(raw)['jobs'] if j['name'].startswith('corpus (')]
+          result={'run_id':38592396345,'checked_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),
+                  'job_counts':dict(collections.Counter(j['status'] for j in jobs)),
+                  'jobs':[{'name':j['name'],'status':j['status'],'conclusion':j['conclusion'],
+                           'current_steps':[s['name'] for s in j['steps'] if s['status']=='in_progress']} for j in jobs]}
+          target=repo+'/contents/docs/hadra/corpus-status.json'
+          body={'message':'test: relève l’avancement du corpus HADRA latin','branch':'feat/hadra-tts',
+                'content':base64.b64encode(json.dumps(result,ensure_ascii=False,indent=2).encode()).decode()}
+          old=subprocess.run(['gh','api',target+'?ref=feat/hadra-tts','--jq','.sha'],capture_output=True,text=True)
+          if old.returncode==0:body['sha']=old.stdout.strip()
+          path=pathlib.Path('/tmp/hadra-status-body.json');path.write_text(json.dumps(body))
+          subprocess.run(['gh','api','--method','PUT',target,'--input',str(path)],check=True,stdout=subprocess.DEVNULL)
+          print(result['job_counts'])
+          PY
