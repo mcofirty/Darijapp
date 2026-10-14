@@ -1,5 +1,0 @@
-{
-  "type": "ImportError",
-  "message": "pyarrow requires NumPy 2.0 or newer, found 1.26.4",
-  "linguistic_certification": false
-}

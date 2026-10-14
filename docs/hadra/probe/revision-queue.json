@@ -1,0 +1,26 @@
+[
+  {
+    "key": "054a01dd2ca831bc35dbf1f14c2127525893fb0df43b21766661eda94ca28548",
+    "entry_id": "son-9elb",
+    "prompt": "9elb",
+    "reasons": [
+      "latin_darija_pronunciation_not_verified"
+    ]
+  },
+  {
+    "key": "9630e288e68f2b56b1c7afafe0b9890edd901e7cd52270debcb6f26d0256c51b",
+    "entry_id": "nourriture-001",
+    "prompt": "khobz",
+    "reasons": [
+      "latin_darija_pronunciation_not_verified"
+    ]
+  },
+  {
+    "key": "1a2b90c9c549402a7d8c3c4892d79f2025c71cb47a50c05e380281dc7da185dc",
+    "entry_id": "salutations-012",
+    "prompt": "3afak",
+    "reasons": [
+      "latin_darija_pronunciation_not_verified"
+    ]
+  }
+]
