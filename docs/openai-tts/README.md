@@ -6,11 +6,11 @@ fonctionnement de l’application n’est modifié.
 
 ## État du pilote
 
-Le secret GitHub est disponible. La relance `38605552834` a confirmé le refus
-API **HTTP 429 / `insufficient_quota`** : aucun nouveau MP3, aucun comparatif
-OpenAI publié. Attendre que l’utilisateur active la facturation, ajoute des
-crédits API ou corrige ses limites de quota avant tout nouvel appel.
-L’abonnement ChatGPT ne fournit pas les crédits de cette API.
+Après ajout de crédit, la relance du run `38605552834` a généré les dix MP3
+réels. Vingt empreintes et dix décodages audio sont vérifiés ; la lecture,
+les avis et l’export fonctionnent en Chromium mobile. Le comparatif est ajouté
+sur main (`b8c50ee`), publication Pages et contrôle HTTP en cours.
+Jamal reste active. La prononciation n’est pas certifiée.
 
 ## Modèle et mots
 

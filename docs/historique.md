@@ -52,6 +52,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-14 | Relance du pilote OpenAI de dix mots après déclaration d’ajout de crédit API, avec le diagnostic de quota et la reprise existants | `.github/workflows/openai-tts-resume.yml` |
 
+| 2026-10-14 | Dix MP3 OpenAI réels générés depuis le latin, vingt empreintes et lecture avant/après mobile vérifiées ; comparatif ajouté sur main, contrôle HTTP après publication | `public/test-audio-openai/`, `.github/workflows/openai-tts-preview-check.yml` |
+
 ## Décisions
 
 - 2026-10-14 : contrôle HTTP réussi sur la page, les scripts et les 100 MP3 (50 avant/après) ; distinguer la disponibilité du test de l'avancement du corpus complet, dont les jobs sont observés sans interrompre les calculs.
