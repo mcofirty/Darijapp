@@ -3,9 +3,9 @@
   "model": "gpt-4o-mini-tts-2025-12-15",
   "voice": "cedar",
   "expected": 10,
-  "attempted": 0,
+  "attempted": 1,
   "technically_ready": 0,
-  "error": "missing_api_key",
+  "error": "openai_http_429",
   "linguistic_certification": false,
   "production_voice": "Jamal",
   "run_id": "38603701783"
