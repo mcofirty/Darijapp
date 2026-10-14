@@ -1,0 +1,38 @@
+name: Diagnostic HADRA corpus
+on:
+  push:
+    branches: [feat/hadra-tts]
+    paths: [.github/workflows/hadra-diagnostic.yml]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lire le résultat du prétest sans refaire d'inférence
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 38584885931 --repo mcofirty/Darijapp --name hadra-corpus-probe --dir artifacts/previous-probe
+      - name: Conserver le diagnostic avec l'API GitHub
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64,json,pathlib,subprocess
+          root=pathlib.Path('artifacts/previous-probe')
+          result={'files':[str(p.relative_to(root)) for p in root.rglob('*') if p.is_file()]}
+          for name in ['report.json','error.json','resources.txt','plan.json']:
+              found=list(root.rglob(name))
+              if found:
+                  data=found[0].read_text()
+                  result[name]=json.loads(data) if name.endswith('.json') else data
+          body={'message':'test: conserve le diagnostic du prétest corpus HADRA',
+                'branch':'feat/hadra-tts',
+                'content':base64.b64encode(json.dumps(result,ensure_ascii=False,indent=2).encode()).decode()}
+          path=pathlib.Path('/tmp/hadra-diagnostic-body.json');path.write_text(json.dumps(body))
+          subprocess.run(['gh','api','--method','PUT','repos/mcofirty/Darijapp/contents/docs/hadra/corpus-diagnostic.json','--input',str(path)],check=True,stdout=subprocess.DEVNULL)
+          PY

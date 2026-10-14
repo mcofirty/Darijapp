@@ -38,6 +38,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 ## Décisions
 
+- 2026-10-14 : récupérer le diagnostic de l'Action corpus depuis son artifact avec un job dédié avant relance, pour distinguer un défaut d'inférence d'un défaut du workflow sans gaspiller les calculs des 40 lots.
+
 - 2026-10-14 : l'utilisateur demande explicitement de générer les 3 511 MP3 et d'écouter 50 mots avant de décider du déploiement. Les candidats sont conservés sur la branche expérimentale ; seule la page de comparaison et ses 100 MP3 sont ajoutés sous `/test-audio/`, sans modifier les lecteurs, les fichiers actifs ou les références de score. 16 étapes, quatre threads et BF16 conditionnel pour maîtriser les ressources ; aucune certification linguistique déduite du contrôle technique.
 
 - 2026-10-14 : reprise HADRA réellement vérifiée sur les cinq masters à 32 étapes : aucun nouveau calcul TTS, contrôle et réencodage en 1,26 s, avertissements présents dans la file de révision. Le workflow manuel ne sera disponible qu'après ajout du fichier dans la branche par défaut ; les essais de cette branche sont déclenchés par push.

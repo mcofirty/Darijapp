@@ -248,6 +248,8 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 
 ## Points en suspens
 
+- Prétest corpus HADRA : première Action arrêtée avant les matrices ; diagnostic d'artifact récupéré séparément sans relancer les inférences pour identifier l'erreur exacte.
+
 - Dépendances HADRA : PyArrow récent exige NumPy 2 ; combinaison figée avec NumPy 2.2.6 vérifiée en inférence CPU dans l'Action (2026-10-14).
 
 - HADRA (2026-10-14) : le prétest a signalé des écarts phonétiques persistants, sans certification. À la demande suivante de l'utilisateur : chaîne de 3 511 MP3 candidats à 16 étapes, 40 lots CPU et 50 mots réels prioritaires couvrant 31 thèmes. BF16 limité à l'échantillonnage si compatible, contrôle préalable et retour FP32 déclaré si nécessaire ; retries techniques bornés, bilan explicite des manquants. Comparatif autonome sur `/test-audio/` avec avis locaux et export, sans remplacer les MP3 ni les références actifs. Attendre une décision de l'utilisateur pour l'activation de HADRA dans les exercices. Voir `docs/hadra/README.md`.
