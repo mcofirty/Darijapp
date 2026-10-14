@@ -2,11 +2,14 @@
   "url": "https://mcofirty.github.io/Darijapp/test-audio-openai/",
   "status": "passed",
   "entries": 10,
-  "audio_files_checked": 20,
+  "audio_files_checked": 24,
+  "revision": 2,
+  "new_candidates": 4,
+  "retained_candidates": 6,
   "checks": [
     "HTTP page",
     "ressources JS/CSS",
-    "SHA-256 des 20 MP3"
+    "SHA-256 des 24 MP3 et conservation des six fichiers"
   ],
   "linguistic_certification": false
 }
