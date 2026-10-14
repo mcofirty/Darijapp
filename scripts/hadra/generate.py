@@ -12,16 +12,9 @@ import sys
 import time
 from pathlib import Path
 
-from catalog import ROOT, corpus_records, file_sha256, job_key, latin_prompt, read_catalog, read_pilot
+from catalog import ROOT, atomic_json, corpus_records, file_sha256, job_key, latin_prompt, read_catalog, read_pilot
 from engine import resolve_precision
 from quality import QUALITY_VERSION, verify_encoded, waveform_metrics
-
-
-def atomic_json(path: Path, value) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_suffix(".tmp")
-    temporary.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    temporary.replace(path)
 
 
 def select_records(catalog, args):

@@ -202,7 +202,7 @@ Profil : en plus des réglages, `micro` (Dis-le avec score), `parler` et `ecoute
 
 Jalon en cours : **4 — Jeu** (contenu du jeu terminé). Les jalons 1 à 3 sont en ligne sur https://mcofirty.github.io/Darijapp/ (score de prononciation à éprouver sur iPhone avec une vraie voix).
 
-Voix HADRA : génération des 3 511 candidats autorisée par l'utilisateur, à 16 étapes, cible latine directe ; les 50 vrais mots de comparaison précèdent les 40 lots complets afin de garantir leur disponibilité sur `/test-audio/`. Les fichiers restent séparés des MP3 actifs et l'activation attend sa décision explicite.
+Voix HADRA : génération des 3 511 candidats autorisée par l'utilisateur, à 16 étapes, cible latine directe ; les 50 MP3 de comparaison sont générés et leur page `/test-audio/` doit être publiée avant les 40 lots complets (18 jobs au plus, place réservée à la publication). Les fichiers restent séparés des MP3 actifs et l'activation attend sa décision explicite.
 
 | Jalon | Durée estimée | Contenu | Statut |
 | --- | --- | --- | --- |
@@ -247,6 +247,8 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 - 2026-10-13 : fonctions façon Duolingo calculées depuis l'historique comme le reste (défi du mois, bilan de la semaine, mustawa) ; seuls les jours couverts de la série, la fin du double XP et le bilan fermé sont stockés (profil, sans migration) ; gels et réparations passent par la table `achats` (ids `gel-…`, `reparation-…`) pour que le solde de dirhams reste un simple calcul. Pas de cœurs (refusés).
 
 ## Points en suspens
+
+- Assemblage du comparatif : helpers JSON déplacés dans le catalogue stdlib pour que les jobs de publication ne chargent pas NumPy. Les 50 exports déjà générés sont réutilisés après vérification des textes, paramètres et SHA-256.
 
 - Prétest corpus HADRA : trois MP3 conformes à 16 étapes, 51–54 s par mot en FP32. Premier workflow arrêté sur une erreur serveur GitHub 500 pendant la sauvegarde du diagnostic ; réutilisation des masters, étape de diagnostic non bloquante et tentatives de publication bornées.
 

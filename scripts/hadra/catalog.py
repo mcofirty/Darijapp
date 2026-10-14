@@ -10,6 +10,13 @@ ROOT = Path(__file__).resolve().parents[2]
 NORMALIZATION_VERSION = 1
 
 
+def atomic_json(path: Path, value) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(".tmp")
+    temporary.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    temporary.replace(path)
+
+
 def latin_prompt(text: str) -> str:
     text = unicodedata.normalize("NFC", text).strip()
     if not text or re.search(r"[\u0600-\u06ff]", text):

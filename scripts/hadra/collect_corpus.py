@@ -4,8 +4,7 @@ import json
 import shutil
 from pathlib import Path
 
-from catalog import ROOT, file_sha256, latin_prompt, read_catalog
-from generate import atomic_json
+from catalog import ROOT, atomic_json, file_sha256, latin_prompt, read_catalog
 
 
 def verified_records(reports: Path):

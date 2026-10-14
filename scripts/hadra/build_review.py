@@ -6,9 +6,8 @@ import re
 import shutil
 from pathlib import Path
 
-from catalog import ROOT, file_sha256, read_catalog
+from catalog import ROOT, atomic_json, file_sha256, read_catalog
 from collect_corpus import verified_records
-from generate import atomic_json
 
 
 def build(reports: Path, output: Path):

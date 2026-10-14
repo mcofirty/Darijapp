@@ -5,7 +5,7 @@ on:
     paths: [.github/workflows/hadra-corpus.yml, scripts/hadra/run-corpus.json]
 concurrency:
   group: hadra-corpus
-  cancel-in-progress: false
+  cancel-in-progress: true
 permissions:
   contents: write
   actions: write
@@ -64,8 +64,20 @@ jobs:
         shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     steps:
       - uses: actions/checkout@v4
+      - id: previous
+        name: Réutiliser les cinq MP3 déjà générés
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HADRA_SHARD: ${{ matrix.shard }}
+        shell: bash
+        run: |
+          if gh run download 38588757715 --repo mcofirty/Darijapp --name "hadra-review-$HADRA_SHARD" --dir artifacts/hadra && python -S scripts/hadra/check_export.py --root artifacts/hadra --selection scripts/hadra/review-50.json --shard-count 10 --shard-index "$HADRA_SHARD"; then
+            echo 'reused=true' >> "$GITHUB_OUTPUT"
+          fi
       - uses: ./.github/actions/hadra-runtime
+        if: steps.previous.outputs.reused != 'true'
       - name: Générer cinq mots de comparaison
+        if: steps.previous.outputs.reused != 'true'
         env:
           HADRA_SHARD: ${{ matrix.shard }}
           HADRA_PRECISION: ${{ needs.probe.outputs.precision }}
@@ -81,12 +93,12 @@ jobs:
             artifacts/hadra/error.json
           retention-days: 30
   corpus:
-    needs: [probe, review]
+    needs: [probe, publish-review]
     runs-on: ubuntu-latest
     timeout-minutes: 350
     strategy:
       fail-fast: false
-      max-parallel: 20
+      max-parallel: 18
       matrix:
         shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
     steps:

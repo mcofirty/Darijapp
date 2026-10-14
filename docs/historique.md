@@ -38,6 +38,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 ## Décisions
 
+- 2026-10-14 : isoler les fonctions JSON de toute dépendance à NumPy pour la publication ; vérifier les CLIs avec Python sans site-packages. Réutiliser les 50 exports calculés, faire dépendre le corpus de la page publiée et limiter les lots à 18 pour réserver des slots à « Publier ».
+
 - 2026-10-14 : dépendance explicite des lots complets sur les 50 comparaisons, pour que la limite de concurrence GitHub ne laisse pas la page d'écoute attendre derrière les longs lots. Redémarrer le run encore en attente avec cette priorité garantie.
 
 - 2026-10-14 : erreur GitHub 500 au push du diagnostic après trois synthèses conformes ; réutiliser l'artifact vérifié et rendre cette télémétrie non bloquante. Les publications essentielles ont des retries bornés ; aucun changement de modèle ni nouvelle génération des trois sons déjà calculés.
