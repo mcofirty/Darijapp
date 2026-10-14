@@ -71,6 +71,8 @@ un nombre. Une incertitude persistante peut nécessiter une adaptation du modèl
 ## GitHub Actions et application
 
 « Audio HADRA (pilote) » teste puis synthétise trois mots sur la branche de travail.
+Après le premier essai à 8 étapes, l'essai automatique utilise 32 étapes et deux
+graines pour les mots complexes (cinq candidats pour ces trois mots).
 Une exécution manuelle peut sélectionner 1–50 entrées. CPU : runner hébergé standard.
 GPU : runner **déjà enregistré** avec les labels `self-hosted`, `linux`, `gpu` ; aucun
 service GPU n'est provisionné ni facturé par cette intégration.
@@ -86,3 +88,26 @@ score et prévoir l'invalidation du cache audio ; une conversion de format ne su
 La carte du modèle annonce Apache-2.0. Ses affirmations de qualité et de corpus
 d'entraînement sont celles de l'auteur, pas des mesures réalisées ici. Les droits du
 vocodeur, du corpus et des références restent à respecter séparément.
+
+## Essai CPU mesuré et diagnostic
+
+L'Action [38577195775](https://github.com/mcofirty/Darijapp/actions/runs/38577195775)
+a réellement synthétisé `9elb`, `khobz`, `3afak` à 8 étapes : 20,4–21,9 s de calcul
+par fichier, durées 1,06–1,32 s, RTF 16,4–19,3. Les trois MP3 passent les contrôles
+techniques, avec 0,51–0,59 s de silence initial signalé. C'est un essai de fonctionnement.
+
+`probe/diagnostic-8steps.json` contient un diagnostic du modèle Common Voice XLSR
+déjà utilisé dans l'application. Il signale des écarts sur q/x/ʕ ; il se trompe aussi
+sur certains sons chez Jamal, notamment ʕ. Ses scores GOP non calibrés ne sont ni une
+probabilité de justesse darija ni une certification ; aucun candidat n'est promu.
+Pour le reproduire, avec les dépendances npm, le modèle ONNX existant et ffmpeg :
+
+```bash
+npx tsx scripts/hadra/evaluate_probe.ts artifacts/hadra/phonetic-diagnostic.json
+```
+
+Prévoir initialement 4–8 Gio de RAM CPU et 5–10 Gio de disque (dépendances, poids,
+cache et masters), à confirmer par `probe/resources.txt`. Pour GPU, commencer par
+un worker existant de 8–16 Gio VRAM, batch 1 ; aucune mesure GPU n'a été réalisée.
+Le RTF observé à 8 étapes n'est pas une mesure à 32 étapes ni une estimation fiable
+pour les phrases ; le pilote doit préciser ces écarts avant tout lot complet.

@@ -202,7 +202,7 @@ Profil : en plus des réglages, `micro` (Dis-le avec score), `parler` et `ecoute
 
 Jalon en cours : **4 — Jeu** (contenu du jeu terminé). Les jalons 1 à 3 sont en ligne sur https://mcofirty.github.io/Darijapp/ (score de prononciation à éprouver sur iPhone avec une vraie voix).
 
-Voix HADRA : intégration expérimentale en cours sur `feat/hadra-tts` ; pilote latin de 50 entrées, sans activation dans l'application avant évaluation.
+Voix HADRA : générateur expérimental opérationnel sur `feat/hadra-tts` ; trois mots latins synthétisés sur CPU, contrôles techniques passés mais écarts phonétiques signalés. Comparaison à 32 étapes en cours avant activation éventuelle.
 
 | Jalon | Durée estimée | Contenu | Statut |
 | --- | --- | --- | --- |
@@ -247,7 +247,7 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 
 ## Points en suspens
 
-- Dépendances HADRA : le premier essai distant a échoué avant chargement, car PyArrow récent exige NumPy 2. NumPy est figé à 2.2.6 ; la combinaison doit passer l'essai d'inférence.
+- Dépendances HADRA : PyArrow récent exige NumPy 2 ; combinaison figée avec NumPy 2.2.6 vérifiée en inférence CPU dans l'Action (2026-10-14).
 
 - HADRA (2026-10-14) : adaptateur F5-TTS et pilote de 50 entrées sur `feat/hadra-tts`, voir `docs/hadra/README.md`. Cible latine directe, poids/vocodeur figés et vérifiés, référence synthétique Jamal existante, contrôles techniques et reprise par empreinte ; aucune promotion linguistique automatique. Les candidats restent hors de `public/audio` ; l'application utilise toujours Jamal. Le vocabulaire contient l'Arabizi mais sa prononciation par HADRA doit être évaluée. L'accès Hugging Face est bloqué dans ce cloud ; les essais passent par GitHub Actions CPU ou un GPU self-hosted déjà disponible.
 

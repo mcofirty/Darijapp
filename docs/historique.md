@@ -34,6 +34,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 ## Décisions
 
+- 2026-10-14 : premier essai HADRA CPU réussi sur 9elb, khobz et 3afak à 8 étapes (20–22 s par fichier, RTF 16–19) ; contrôles techniques passés avec silence initial long. Diagnostic XLSR indépendant conservé : écarts sur les sons ciblés, scores non calibrés et aucune certification ; comparaison à 32 étapes avant choix de voix.
+
 - 2026-10-14 : NumPy 2.2.6 pour HADRA après un échec réel d'import PyArrow avec 1.26.4 ; cache des masters et rapports individuels entre exécutions Actions pour permettre la reprise incrémentale, y compris après une interruption partielle.
 
 - 2026-10-14 : adaptateur HADRA basé sur l'interface F5-TTS réellement inspectée, cibles latines directes et référence synthétique existante ; génération limitée au pilote, hashes des poids/vocodeur, WAV conservés et MP3 contrôlés après encodage. Les candidats techniquement conformes restent linguistiquement incertains et hors de l'application tant que le latin darija n'est pas évalué ; aucun repli silencieux vers une cible arabe.
