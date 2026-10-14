@@ -1,0 +1,16 @@
+name: Reprendre la publication du test audio
+on:
+  push:
+    branches: [feat/hadra-tts]
+    paths: [.github/workflows/hadra-retry-preview.yml]
+permissions:
+  actions: write
+jobs:
+  retry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Relancer seulement le déploiement Pages ayant expiré
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run rerun 38593473008 --failed --repo mcofirty/Darijapp

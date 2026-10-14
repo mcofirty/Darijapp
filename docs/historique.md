@@ -40,6 +40,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 ## Décisions
 
+- 2026-10-14 : première mise en ligne du comparatif expirée dans deploy-pages après 10 min, build réussi ; relancer seulement les jobs en échec avec le même artifact pour conserver les MP3 et éviter des recalculs.
+
 - 2026-10-14 : vérifier aussi les 100 fichiers effectivement servis par GitHub Pages depuis un runner, le proxy cloud bloquant ce domaine ; ne déduire aucune certification linguistique des checks HTTP ou du test mobile.
 
 - 2026-10-14 : isoler les fonctions JSON de toute dépendance à NumPy pour la publication ; vérifier les CLIs avec Python sans site-packages. Réutiliser les 50 exports calculés, faire dépendre le corpus de la page publiée et limiter les lots à 18 pour réserver des slots à « Publier ».

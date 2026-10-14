@@ -248,6 +248,8 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 
 ## Points en suspens
 
+- Comparatif en ligne : build et test mobile réussis, premier déploiement Pages expiré après 10 min ; relancer uniquement le job deploy avec l'artifact existant avant de déclarer le lien prêt.
+
 - Assemblage du comparatif : helpers JSON déplacés dans le catalogue stdlib pour que les jobs de publication ne chargent pas NumPy. Les 50 exports déjà générés sont réutilisés après vérification des textes, paramètres et SHA-256.
 
 - Prétest corpus HADRA : trois MP3 conformes à 16 étapes, 51–54 s par mot en FP32. Premier workflow arrêté sur une erreur serveur GitHub 500 pendant la sauvegarde du diagnostic ; réutilisation des masters, étape de diagnostic non bloquante et tentatives de publication bornées.
