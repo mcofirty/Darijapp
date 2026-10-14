@@ -250,6 +250,8 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 
 ## Points en suspens
 
+- Test OpenAI autorisé (2026-10-14) : préparer dix mots difficiles en latin avec `gpt-4o-mini-tts`, vérifier la présence d’une clé GitHub sans afficher sa valeur. Génération limitée à ce test, Jamal conservée ; aucun lot de 50 ou de 3 511 sans décision suivante.
+
 - Comparatif en ligne : build, test mobile et contrôle HTTP des 100 MP3 réussis. L’utilisateur a refusé la voix HADRA ; corpus interrompu, génération automatique désactivée, fichiers expérimentaux conservés séparément.
 
 - Assemblage du comparatif : helpers JSON déplacés dans le catalogue stdlib pour que les jobs de publication ne chargent pas NumPy. Les 50 exports déjà générés sont réutilisés après vérification des textes, paramètres et SHA-256.

@@ -40,6 +40,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-14 | Arrêt du corpus HADRA après refus de la voix et suppression du lancement automatique ; maintien de Jamal et du comparatif expérimental | `.github/workflows/hadra-stop.yml`, `.github/workflows/hadra-corpus.yml`, `docs/hadra/` |
 
+| 2026-10-14 | Vérification de présence de la clé GitHub pour le comparatif OpenAI autorisé de dix mots, sans appel payant ni affichage du secret | `.github/workflows/openai-tts-key-check.yml` |
+
 ## Décisions
 
 - 2026-10-14 : contrôle HTTP réussi sur la page, les scripts et les 100 MP3 (50 avant/après) ; distinguer la disponibilité du test de l'avancement du corpus complet, dont les jobs sont observés sans interrompre les calculs.
@@ -109,3 +111,5 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-14 : harmonisation des champs `latin` sur le corpus complet (3 516 textes), à la demande de l'utilisateur, sans prendre les aides `prononciation` comme référence ni les modifier. Les graphies françaises ambiguës sont remplacées par des formes explicites adaptées au darija ; le mot séparé lah devient allah par choix d'écriture, sans qualifier les contractions attestées de fautes. Arabe, français, identifiants et MP3 sont conservés ; 80 références du score sont recalculées pour suivre les nouveaux sons attendus. Les variantes de voyelles et les questions de sens/accord incertaines ne sont pas corrigées automatiquement.
 
 - 2026-10-14 : l’utilisateur refuse la voix HADRA après écoute du comparatif ; interrompre le corpus, empêcher les relances automatiques et conserver Jamal en production. Aucun nouveau candidat ni activation sans nouvelle demande explicite.
+
+- 2026-10-14 : à la demande de l’utilisateur, préparer un essai OpenAI lisant le latin ; limiter le premier essai à dix entrées avant tout élargissement et garder Jamal active.
