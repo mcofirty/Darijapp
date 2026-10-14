@@ -3,6 +3,7 @@ import argparse
 import json
 import shutil
 import subprocess
+import time
 from pathlib import Path
 
 from catalog import file_sha256, read_catalog
@@ -10,6 +11,19 @@ from catalog import file_sha256, read_catalog
 
 def run(*args, cwd=None):
     return subprocess.check_output(args, cwd=cwd, text=True).strip()
+
+
+def push_main(checkout):
+    for attempt in range(4):
+        result = subprocess.run(["git", "push", "origin", "HEAD:main"], cwd=checkout,
+                                capture_output=True, text=True)
+        if result.returncode == 0:
+            return
+        if "non-fast-forward" in result.stderr or "fetch first" in result.stderr:
+            run("git", "fetch", "origin", "main", cwd=checkout)
+            run("git", "rebase", "FETCH_HEAD", cwd=checkout)
+        time.sleep(2 * (attempt + 1))
+    raise RuntimeError("GitHub a refusé la publication du comparatif après quatre essais")
 
 
 def main():
@@ -49,7 +63,7 @@ def main():
     run("git", "add", "public/test-audio", "CLAUDE.md", "docs/historique.md", cwd=checkout)
     if run("git", "diff", "--cached", "--name-only", cwd=checkout):
         run("git", "commit", "-m", "test: publie 50 comparaisons vocales sans activer HADRA", cwd=checkout)
-        run("git", "push", "origin", "HEAD:main", cwd=checkout)
+        push_main(checkout)
     # Les commits GITHUB_TOKEN ne déclenchent pas les Actions push : dispatch explicite.
     repo = "mcofirty/Darijapp"
     run("gh", "api", "--method", "POST", f"repos/{repo}/actions/workflows/publier.yml/dispatches", "-f", "ref=main")

@@ -20,10 +20,14 @@ jobs:
       - uses: ./.github/actions/hadra-runtime
       - run: python -m unittest discover -s scripts/hadra -p 'test_*.py'
       - id: probe
+        env:
+          GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
           mkdir -p artifacts/hadra
-          if ! /usr/bin/time -v -o artifacts/hadra/resources.txt python scripts/hadra/generate.py generate --scope all --ids salutations-012,nourriture-001,corps-041 --steps 16 --precision auto --threads 4; then
+          if gh run download 38584885931 --repo mcofirty/Darijapp --name hadra-corpus-probe --dir artifacts/hadra; then
+            python scripts/hadra/generate.py generate --scope all --ids salutations-012,nourriture-001,corps-041 --steps 16 --precision float32 --threads 4 --retries 2
+          elif ! /usr/bin/time -v -o artifacts/hadra/resources.txt python scripts/hadra/generate.py generate --scope all --ids salutations-012,nourriture-001,corps-041 --steps 16 --precision auto --threads 4; then
             python scripts/hadra/generate.py generate --scope all --ids salutations-012,nourriture-001,corps-041 --steps 16 --precision float32 --threads 4 --retries 2
           fi
           python -c "import json,os; p=json.load(open('artifacts/hadra/plan.json')); open(os.environ['GITHUB_OUTPUT'],'a').write('precision='+p['jobs'][0]['parameters'].get('precision','float32')+'\n')"
@@ -35,6 +39,7 @@ jobs:
           retention-days: 14
       - name: Conserver le diagnostic du chargement
         if: always()
+        continue-on-error: true
         shell: bash
         run: |
           mkdir -p docs/hadra/corpus-probe
@@ -167,4 +172,8 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add docs/hadra/library
           git commit -m 'audio: conserve le corpus HADRA latin expérimental'
-          git push origin HEAD:feat/hadra-tts
+          for attempt in 1 2 3 4; do
+            if git push origin HEAD:feat/hadra-tts; then exit 0; fi
+            sleep "$((attempt * 2))"
+          done
+          exit 1

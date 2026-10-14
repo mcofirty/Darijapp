@@ -248,7 +248,7 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 
 ## Points en suspens
 
-- Prétest corpus HADRA : les trois mots sont générés à 16 étapes et techniquement conformes ; arrêt ultérieur du workflow à diagnostiquer avant les matrices. Artifact et journal du seul job en échec récupérés sans nouvelle inférence.
+- Prétest corpus HADRA : trois MP3 conformes à 16 étapes, 51–54 s par mot en FP32. Premier workflow arrêté sur une erreur serveur GitHub 500 pendant la sauvegarde du diagnostic ; réutilisation des masters, étape de diagnostic non bloquante et tentatives de publication bornées.
 
 - Dépendances HADRA : PyArrow récent exige NumPy 2 ; combinaison figée avec NumPy 2.2.6 vérifiée en inférence CPU dans l'Action (2026-10-14).
 
