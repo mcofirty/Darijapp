@@ -81,7 +81,7 @@ jobs:
             artifacts/hadra/error.json
           retention-days: 30
   corpus:
-    needs: probe
+    needs: [probe, review]
     runs-on: ubuntu-latest
     timeout-minutes: 350
     strategy:

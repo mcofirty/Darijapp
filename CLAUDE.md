@@ -202,7 +202,7 @@ Profil : en plus des réglages, `micro` (Dis-le avec score), `parler` et `ecoute
 
 Jalon en cours : **4 — Jeu** (contenu du jeu terminé). Les jalons 1 à 3 sont en ligne sur https://mcofirty.github.io/Darijapp/ (score de prononciation à éprouver sur iPhone avec une vraie voix).
 
-Voix HADRA : génération des 3 511 candidats autorisée par l'utilisateur, à 16 étapes, cible latine directe ; comparaison de 50 vrais mots avant/après en préparation sur `/test-audio/`. Les fichiers expérimentaux restent séparés des MP3 actifs et l'activation de la nouvelle voix attend sa décision explicite.
+Voix HADRA : génération des 3 511 candidats autorisée par l'utilisateur, à 16 étapes, cible latine directe ; les 50 vrais mots de comparaison précèdent les 40 lots complets afin de garantir leur disponibilité sur `/test-audio/`. Les fichiers restent séparés des MP3 actifs et l'activation attend sa décision explicite.
 
 | Jalon | Durée estimée | Contenu | Statut |
 | --- | --- | --- | --- |

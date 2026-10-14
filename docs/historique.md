@@ -38,6 +38,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 ## Décisions
 
+- 2026-10-14 : dépendance explicite des lots complets sur les 50 comparaisons, pour que la limite de concurrence GitHub ne laisse pas la page d'écoute attendre derrière les longs lots. Redémarrer le run encore en attente avec cette priorité garantie.
+
 - 2026-10-14 : erreur GitHub 500 au push du diagnostic après trois synthèses conformes ; réutiliser l'artifact vérifié et rendre cette télémétrie non bloquante. Les publications essentielles ont des retries bornés ; aucun changement de modèle ni nouvelle génération des trois sons déjà calculés.
 
 - 2026-10-14 : le diagnostic confirme que la synthèse du prétest a réussi (environ 51–54 s par mot en FP32), et situe l'arrêt après l'inférence ; récupérer le journal du job en échec avant correction du workflow.

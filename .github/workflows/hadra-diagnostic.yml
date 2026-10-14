@@ -5,13 +5,17 @@ on:
     paths: [.github/workflows/hadra-diagnostic.yml]
 permissions:
   contents: write
-  actions: read
+  actions: write
 jobs:
   diagnostic:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+      - name: Redémarrer le lot avec priorité garantie aux 50 mots
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run cancel 38587820952 --repo mcofirty/Darijapp
       - name: Lire le résultat du prétest sans refaire d'inférence
         env:
           GH_TOKEN: ${{ github.token }}
