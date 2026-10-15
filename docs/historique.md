@@ -43,6 +43,7 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 | 2026-10-15 | « Ma progression » : la ligne « Mon jardin » fusionnée dans la carte de niveau (plante et « Voir mon jardin »), un seul bouton au lieu de deux | `src/features/jeu/CarteNiveau.tsx`, `src/features/apprendre/Apprendre.tsx` |
 | 2026-10-15 | Direction « Playful Premium » : corail, énergie et menthe, anthracite chaud en sombre, carte Session du jour colorée avec une situation concrète (« Aujourd'hui, commande ton premier thé »), quêtes à icônes, couleurs et jauges animées, flamme, théière et badges en relief qui évoluent, carte de niveau à un anneau avec acquis vérifiés séparés de l'activité, lentille corail de la barre d'onglets, cartes en cascade, célébration à trois intensités, retours haptiques, sons et haptique désactivables | `src/index.css`, `src/features/session/CarteSessionDuJour.tsx`, `src/exercices/situation.ts`, `src/data/situations/`, `src/features/jeu/QuetesDuJour.tsx`, `src/features/jeu/CarteNiveau.tsx`, `src/ui/recompenses.tsx`, `src/ui/Anneau.tsx`, `src/ui/haptique.ts`, `src/features/session/Bilan.tsx` |
 | 2026-10-15 | Appli sans zoom (pincement, double toucher) et en portrait seulement : écran « Remets ton téléphone à la verticale » en paysage | `index.html`, `src/app/zoom.ts`, `src/index.css` |
+| 2026-10-15 | Correctif : pastille du combo (« 5 d'affilée ! ») placée sous « Bravo ! » au lieu de l'écraser sur la même ligne | `src/features/session/Session.tsx` |
 
 ## Décisions
 

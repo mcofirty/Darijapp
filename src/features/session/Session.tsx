@@ -306,12 +306,13 @@ function SessionEnCours({ etapes: depart, nouveaux, entrainement, activite, lege
                           <CircleCheck className="coche-pop h-6 w-6" strokeWidth={2.5} aria-hidden /> Bravo !
                         </p>
                         <PhraseDeMascotte humeur="bravo" cle={retour} />
+                        {/* Sous le texte, jamais à côté : sur la même ligne, il écrasait la colonne. */}
+                        {fete && (
+                          <span className="combo-fete t-appel mt-2 inline-flex max-w-full items-center gap-1 rounded-full bg-[#fff3e0] px-3 py-1 font-semibold text-[#e65100] dark:bg-[#4a2a00] dark:text-[#ffb74d]">
+                            <Flame className="h-4 w-4 shrink-0" strokeWidth={2.4} fill="currentColor" aria-hidden /> {fete} d’affilée ! +1 XP par réponse
+                          </span>
+                        )}
                       </div>
-                      {fete && (
-                        <span className="combo-fete t-appel ml-auto flex items-center gap-1 rounded-full bg-[#fff3e0] px-3 py-1 font-semibold text-[#e65100] dark:bg-[#4a2a00] dark:text-[#ffb74d]">
-                          <Flame className="h-4 w-4" strokeWidth={2.4} fill="currentColor" aria-hidden /> {fete} d’affilée ! +1 XP par réponse
-                        </span>
-                      )}
                     </div>
                   )}
                   {retour?.juste === false && (
