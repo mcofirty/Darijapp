@@ -1,0 +1,59 @@
+name: Vérifier les lectures sans chiffres publiées
+on:
+  push:
+    branches: [feat/hadra-tts]
+    paths: [.github/workflows/openai-tts-phonetic-check.yml]
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Vérifier la page et les trois MP3 servis
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import urllib.request,json,hashlib,base64,pathlib,subprocess,time
+          url='https://mcofirty.github.io/Darijapp/test-audio-phonetic/'
+          def read(path):
+              with urllib.request.urlopen(url+path,timeout=30) as response:return response.read()
+          for attempt in range(75):
+              try:
+                  page=read('').decode()
+                  assert 'we99e3' in page and page.count('<audio ')==3
+                  spec=json.loads(read('manifest.json'))
+                  assert spec['entry_id']=='verbes-085' and spec['latin']=='we99e3'
+                  assert spec['maximum_paid_requests']==2 and len(spec['records'])==2
+                  assert spec['model']=='gpt-4o-mini-tts-2025-12-15' and spec['voice']=='cedar'
+                  assert spec['linguistic_certification'] is False and spec['complete_ipa'] is False
+                  assert [r['request']['input'] for r in spec['records']]==['weqqeʿ','weqqeʕ']
+                  break
+              except Exception:
+                  if attempt==74:raise
+                  time.sleep(10)
+          baseline=json.loads(urllib.request.urlopen('https://raw.githubusercontent.com/mcofirty/Darijapp/eb84bf8f0b92afca3f768714238bdc6393708053/public/test-audio-openai/manifest.json',timeout=30).read())
+          original=next(e for e in baseline['entries'] if e['id']==spec['entry_id'])
+          assert original['after_sha256']==spec['original_sha256']
+          assert hashlib.sha256(read('original.mp3')).hexdigest()==spec['original_sha256']
+          for record in spec['records']:
+              assert record['technical_status']=='passed' and record['pronunciation_status']=='uncertain'
+              assert record['confidence'] is None
+              assert not any(c.isdigit() for c in record['request']['input'])
+              assert hashlib.sha256(read(record['audio'])).hexdigest()==record['sha256']
+          assert read('review.css')
+          result={'url':url,'status':'passed','entry_id':spec['entry_id'],'test_id':spec['test_id'],
+                  'audio_files_checked':3,'new_candidates':2,'original_preserved':True,
+                  'checks':['HTTP page et CSS','trois SHA-256 MP3','latin affiché conservé','entrées TTS sans chiffres'],
+                  'linguistic_certification':False}
+          target='repos/mcofirty/Darijapp/contents/docs/openai-tts/phonetic-probe-http-check.json'
+          body={'message':'test: vérifie les trois lectures de we99e3 en ligne','branch':'feat/hadra-tts',
+                'content':base64.b64encode(json.dumps(result,ensure_ascii=False,indent=2).encode()).decode()}
+          old=subprocess.run(['gh','api',target+'?ref=feat/hadra-tts','--jq','.sha'],capture_output=True,text=True)
+          if old.returncode==0:body['sha']=old.stdout.strip()
+          path=pathlib.Path('/tmp/openai-phonetic-http.json');path.write_text(json.dumps(body))
+          subprocess.run(['gh','api','--method','PUT',target,'--input',str(path)],check=True,stdout=subprocess.DEVNULL)
+          print('Page et trois MP3 servis : vérifiés, sans certification de prononciation')
+          PY
