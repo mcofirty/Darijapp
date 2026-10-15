@@ -1,0 +1,21 @@
+{
+  "status": "ready",
+  "model": "gpt-realtime-2.1",
+  "voice": "cedar",
+  "entries": 5,
+  "new_candidates": 10,
+  "retained_audio_files": 10,
+  "maximum_new_responses": 10,
+  "linguistic_certification": false,
+  "pronunciation_status": "uncertain",
+  "confidence": null,
+  "run_id": "38789473070",
+  "http_check": {
+    "url": "https://mcofirty.github.io/Darijapp/test-audio-son-9/",
+    "review_id": "1fede1669e6473062646d072943a8cb4ea21ec852e2141425fe99839cd9e2ac2",
+    "status": "passed",
+    "entries": 5,
+    "audio_files_checked": 20,
+    "linguistic_certification": false
+  }
+}
