@@ -325,3 +325,38 @@ Le modèle est visible via ses métadonnées (HTTP 200) ; cela ne suffit pas à
 comparatif fictif publié et aucun MP3 actif modifié. Le prochain essai demande
 un candidat compatible avec une interface audio. Diagnostic :
 `astra-probe-status.json`, https://github.com/mcofirty/Darijapp/actions/runs/38761821579.
+
+
+## Jamal, ancien OpenAI et nouveau Realtime
+
+L’utilisateur demande maintenant une comparaison sur plusieurs mots entre trois
+voix. Le nouveau candidat annoncé est **gpt-realtime-2.1**, après le refus audio
+d’Astra ; il ne sera jamais présenté comme un échantillon d’Astra.
+`three-voices.json` sélectionne dix entrées du comparatif de 50, notamment les
+sons ʕ/ħ/q/x/ɣ/ʃ, we99e3, les mots moins appréciés et la phrase signalée avec
+un accent anglais. Les vingt MP3 Jamal/ancien OpenAI sont importés depuis
+`b68bd13` et conservés octet pour octet : aucun appel pour les remplacer.
+
+Le nouveau modèle reçoit exactement le même texte consonantique caché et les
+mêmes consignes que l’ancien OpenAI, voix Cedar demandée dans les deux cas.
+L’API Realtime renvoie du PCM mono 24 kHz, sauvegardé en WAV puis exporté en
+MP3 mono 24 kHz/64 kbit/s avec le même gain que les essais précédents. Le modèle
+réellement annoncé par la session doit correspondre à gpt-realtime-2.1 ou à
+une version datée ; une variante mini ou un autre modèle est refusé.
+
+Plafond : dix réponses nouvelles, une par entrée. Le premier refus ou échec
+technique arrête le lot ; aucun retry après une réponse ou une issue incertaine.
+Le cache inclut modèle, texte, consignes et format ; la reprise contrôle les
+empreintes des WAV/MP3 et leur décodage. Les changements de plan bloquent.
+Les contrôles de saturation, durée et silence sont séparés de l’évaluation
+linguistique ; confiance `null` et prononciation incertaine. Une transcription
+renvoyée par le générateur n’est pas une validation indépendante.
+
+Le comparatif autonome `/test-audio-trois-voix/` contient trente fichiers et
+trois lecteurs exclusifs, recherche, thèmes, vitesse, votes Jamal/ancien/nouveau/
+à revoir, avis global et export `avis-trois-voix.json`. Les avis restent locaux,
+distincts de tous les anciens tests et de la progression. Aucun avis ne déploie
+une voix automatiquement. Avant publication : CLAUDE.md complet lu sur main,
+latins et voix actuelle recontrôlés, trente SHA-256 vérifiés, puis vérification
+HTTP exacte de la page, des ressources et des trente fichiers servis.
+Les exercices, MP3 actifs et références restent inchangés.

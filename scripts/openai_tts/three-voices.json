@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "model": "gpt-realtime-2.1",
+  "voice": "cedar",
+  "entry_ids": [
+    "verbes-085",
+    "salutations-012",
+    "corps-041",
+    "nourriture-001",
+    "nourriture-006",
+    "jours-002",
+    "chiffres-017",
+    "adjectifs-052",
+    "salutations-035",
+    "conversation-001"
+  ],
+  "maximum_new_responses": 10,
+  "baseline_review_id": "49c0e1694b75cb17aa75fc58ebe3fe3e69728c715dd9f2d4633b81a33fba7303",
+  "baseline_commit": "b68bd133c2ce09a1c7657d66dfbbb06534caa159"
+}

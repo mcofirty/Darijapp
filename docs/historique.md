@@ -78,6 +78,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-15 | Tests réels Astra terminés : modèle visible, TTS 404, audio conversationnel 400 et Realtime invalid_model ; zéro audio, aucun changement applicatif | `docs/openai-tts/astra-probe-status.json` |
 
+| 2026-10-15 | Comparatif trois voix préparé sur dix entrées : Jamal et ancien OpenAI conservés, dix nouveaux Realtime maximum, mêmes textes/consignes OpenAI, avis locaux indépendants | `scripts/openai_tts/three_voices.py`, `.github/workflows/openai-three-voices.yml` |
+
 ## Décisions
 
 - 2026-10-14 : contrôle HTTP réussi sur la page, les scripts et les 100 MP3 (50 avant/après) ; distinguer la disponibilité du test de l'avancement du corpus complet, dont les jobs sont observés sans interrompre les calculs.
@@ -183,3 +185,5 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-15 : le test local positif de décodage Realtime dépend de NumPy et ffmpeg ; les installer avant les tests sur le runner. L’échec précédent est intervenu avant l’appel Realtime, les diagnostics HTTP restent en cache.
 
 - 2026-10-15 : Astra ne renvoie aucun audio via les trois interfaces effectivement testées avec l’accès actuel ; ne pas attribuer de performance darija ni publier de faux échantillon. Conserver les diagnostics et Jamal active ; un prochain test doit utiliser un candidat audio compatible.
+
+- 2026-10-15 : à la demande de comparaison entre Jamal et ancien/nouveau OpenAI, choisir gpt-realtime-2.1 comme nouveau candidat vocal après refus d’Astra, annoncé à l’utilisateur ; conserver vingt fichiers et générer au plus dix réponses avec la même voix Cedar et les mêmes textes/consignes. Ne pas confondre préférence, contrôle technique et certification des sons.
