@@ -16,8 +16,17 @@ import { Profil } from '../features/profil/Profil'
 import { Progres } from '../features/progres/Progres'
 import { Quiz } from '../features/quiz/Quiz'
 import { appliquerApparence, appliquerCouleur } from './apparence'
-import { BarreOnglets } from './BarreOnglets'
-import { actionDuBalayage, departGlisse, retourValide, sensDuBalayage } from './glisser'
+import { BarreOnglets, placerLentille } from './BarreOnglets'
+import {
+  actionDuBalayage,
+  decalageOnglet,
+  departGlisse,
+  departGlisseOnglet,
+  lentillePendantGlisse,
+  ongletVise,
+  retourValide,
+  sensDuBalayage,
+} from './glisser'
 import { faireRetour, retourDisponible } from './retour'
 import { ONGLETS, type Onglet } from './onglets'
 
@@ -27,7 +36,8 @@ interface Toucher {
   t: number
   // Une page ouverte peut-elle revenir en arrière ? (sinon le balayage change d'onglet)
   retour: boolean
-  // Retour glissé : en attente du premier mouvement, en cours (la page suit le doigt) ou sans objet.
+  // Glissement : en attente du premier mouvement, en cours (la page suit le doigt) ou sans objet.
+  // Depuis une page ouverte, c'est le retour ; depuis l'accueil d'un onglet, le passage à l'onglet voisin.
   mode: 'attente' | 'glisse' | 'non'
 }
 
@@ -90,7 +100,7 @@ export default function App() {
     window.scrollTo(0, 0)
   }
 
-  function changer(cible: Onglet) {
+  function changer(cible: Onglet, animer = true) {
     const de = ONGLETS.findIndex((o) => o.id === onglet)
     const vers = ONGLETS.findIndex((o) => o.id === cible)
     if (de === vers) {
@@ -100,7 +110,7 @@ export default function App() {
       window.scrollTo(0, 0)
       return
     }
-    setEntree(vers > de ? 'entree-droite' : 'entree-gauche')
+    setEntree(!animer ? '' : vers > de ? 'entree-droite' : 'entree-gauche')
     setOnglet(cible)
     window.scrollTo(0, 0)
   }
@@ -115,26 +125,72 @@ export default function App() {
     depart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY, t: e.timeStamp, retour: retourDisponible(), mode: 'attente' }
   }
 
-  /** Retour glissé : la page suit le doigt vers la droite, comme sur iOS. */
+  /**
+   * La page suit le doigt, comme sur iOS : depuis une page ouverte, vers la droite pour revenir ;
+   * depuis l'accueil d'un onglet, dans les deux sens pour passer à l'onglet voisin (la lentille suit).
+   */
   function deplacerToucher(e: TouchEvent) {
     const d = depart.current
     const el = page.current
-    if (!d || !el || !d.retour || d.mode === 'non') return
+    if (!d || !el || d.mode === 'non') return
     const dx = e.touches[0].clientX - d.x
     if (d.mode === 'attente') {
-      d.mode = departGlisse(dx, e.touches[0].clientY - d.y)
+      const dy = e.touches[0].clientY - d.y
+      d.mode = d.retour ? departGlisse(dx, dy) : departGlisseOnglet(dx, dy)
       if (d.mode !== 'glisse') return
       el.style.transition = 'none'
       el.style.willChange = 'transform'
       el.style.background = 'var(--fond)'
-      el.style.boxShadow = '-10px 0 28px rgba(0, 0, 0, 0.22)'
     }
-    el.style.transform = `translateX(${Math.max(0, dx)}px)`
+    if (d.retour) {
+      el.style.boxShadow = '-10px 0 28px rgba(0, 0, 0, 0.22)'
+      el.style.transform = `translateX(${Math.max(0, dx)}px)`
+      return
+    }
+    const index = ONGLETS.findIndex((o) => o.id === onglet)
+    const decalage = decalageOnglet(dx, index, ONGLETS.length)
+    el.style.boxShadow = `${decalage < 0 ? 10 : -10}px 0 28px rgba(0, 0, 0, 0.22)`
+    el.style.transform = `translateX(${decalage}px)`
+    placerLentille(lentillePendantGlisse(decalage, index, window.innerWidth, ONGLETS.length))
   }
 
   /** Remet la page à sa place, sans animation en cours. */
   function reposer(el: HTMLElement) {
     for (const p of ['transition', 'transform', 'willChange', 'background', 'boxShadow'] as const) el.style[p] = ''
+  }
+
+  /** Fin du glissement d'une page d'onglet : l'onglet voisin arrive, ou la page revient à sa place. */
+  function finirGlisseOnglet(el: HTMLElement, dx: number, duree: number) {
+    const calme = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const largeur = window.innerWidth
+    const index = ONGLETS.findIndex((o) => o.id === onglet)
+    const vers = ongletVise(dx, index, ONGLETS.length)
+    if (vers === null || !retourValide(Math.abs(dx), largeur, duree)) {
+      placerLentille(null)
+      el.style.transition = calme ? 'none' : 'transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1)'
+      el.style.transform = 'translateX(0)'
+      window.setTimeout(() => reposer(el), calme ? 0 : 240)
+      return
+    }
+    // La page sort du côté du geste, puis l'onglet voisin arrive de l'autre côté.
+    const sens = dx < 0 ? -1 : 1
+    el.style.transition = calme ? 'none' : 'transform 0.2s cubic-bezier(0.3, 0.7, 0.4, 1)'
+    el.style.transform = `translateX(${sens * largeur}px)`
+    window.setTimeout(
+      () => {
+        flushSync(() => changer(ONGLETS[vers].id, false))
+        placerLentille(null)
+        const nouvelle = page.current
+        if (calme || !nouvelle) return
+        nouvelle.style.transition = 'none'
+        nouvelle.style.transform = `translateX(${-sens * 30}%)`
+        void nouvelle.offsetWidth
+        nouvelle.style.transition = 'transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1)'
+        nouvelle.style.transform = 'translateX(0)'
+        window.setTimeout(() => reposer(nouvelle), 320)
+      },
+      calme ? 0 : 200,
+    )
   }
 
   function finirGlisse(el: HTMLElement, dx: number, duree: number) {
@@ -169,7 +225,7 @@ export default function App() {
   function annulerToucher() {
     const d = depart.current
     depart.current = null
-    if (d?.mode === 'glisse' && page.current) finirGlisse(page.current, 0, 1000)
+    if (d?.mode === 'glisse' && page.current) (d.retour ? finirGlisse : finirGlisseOnglet)(page.current, 0, 1000)
   }
 
   function finToucher(e: TouchEvent) {
@@ -177,7 +233,7 @@ export default function App() {
     depart.current = null
     if (!d) return
     const t = e.changedTouches[0]
-    if (d.mode === 'glisse' && page.current) return finirGlisse(page.current, t.clientX - d.x, e.timeStamp - d.t)
+    if (d.mode === 'glisse' && page.current) return (d.retour ? finirGlisse : finirGlisseOnglet)(page.current, t.clientX - d.x, e.timeStamp - d.t)
     const sens = sensDuBalayage(t.clientX - d.x, t.clientY - d.y, e.timeStamp - d.t)
     if (sens === 0) return
     const action = actionDuBalayage(sens, retourDisponible())

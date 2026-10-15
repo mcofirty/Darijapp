@@ -54,3 +54,25 @@ export function departGlisse(dx: number, dy: number): 'attente' | 'glisse' | 'no
 export function retourValide(dx: number, largeur: number, duree: number): boolean {
   return dx > largeur * 0.35 || (dx > 50 && dx / Math.max(duree, 1) > 0.5)
 }
+
+/** Début d'un glissement entre onglets : surtout horizontal, dans un sens ou dans l'autre. */
+export function departGlisseOnglet(dx: number, dy: number): 'attente' | 'glisse' | 'non' {
+  if (Math.abs(dx) < 10 && Math.abs(dy) < 10) return 'attente'
+  return Math.abs(dx) > 1.5 * Math.abs(dy) ? 'glisse' : 'non'
+}
+
+/** Onglet voisin vers lequel on tire (1 = suivant, en tirant vers la gauche), ou null s'il n'y en a pas. */
+export function ongletVise(dx: number, index: number, nombre: number): number | null {
+  const vers = index + (dx < 0 ? 1 : -1)
+  return dx !== 0 && vers >= 0 && vers < nombre ? vers : null
+}
+
+/** Décalage de la page sous le doigt : suit le doigt, mais résiste (élastique) au bout des onglets. */
+export function decalageOnglet(dx: number, index: number, nombre: number): number {
+  return ongletVise(dx, index, nombre) === null ? dx * 0.3 : dx
+}
+
+/** Position de la lentille pendant le glissement d'une page d'onglet, bornée aux onglets existants. */
+export function lentillePendantGlisse(decalage: number, index: number, largeur: number, nombre: number): number {
+  return Math.min(Math.max(index - decalage / largeur, 0), nombre - 1)
+}

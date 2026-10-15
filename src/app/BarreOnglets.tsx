@@ -18,6 +18,14 @@ interface Glissement {
 
 const N = ONGLETS.length
 
+// Glissement d'une page d'onglet : la lentille suit la page, sans redessiner l'appli à chaque mouvement.
+let suivreLaPage: ((position: number | null) => void) | null = null
+
+/** Place la lentille pendant le glissement d'une page (position continue), ou la rend à l'onglet actif (null). */
+export function placerLentille(position: number | null) {
+  suivreLaPage?.(position)
+}
+
 /**
  * Barre d'onglets flottante façon « liquid glass » : une lentille de verre marque l'onglet actif.
  * On peut toucher un onglet ou faire glisser le doigt le long de la barre : la lentille suit,
@@ -28,11 +36,24 @@ export function BarreOnglets({ actif, onChange }: Props) {
   const [position, setPosition] = useState(indexActif)
   const [etire, setEtire] = useState(1)
   const [glisse, setGlisse] = useState(false)
+  // Vrai pendant que la lentille suit une page glissée au doigt (sans ressort, pour coller au geste).
+  const [suitPage, setSuitPage] = useState(false)
   const rail = useRef<HTMLUListElement>(null)
   const geste = useRef<Glissement | null>(null)
 
   useEffect(() => {
     if (!geste.current) setPosition(indexActif)
+  }, [indexActif])
+
+  useEffect(() => {
+    suivreLaPage = (p) => {
+      if (geste.current) return
+      setSuitPage(p !== null)
+      setPosition(p ?? indexActif)
+    }
+    return () => {
+      suivreLaPage = null
+    }
   }, [indexActif])
 
   function positionDe(x: number): number {
@@ -99,7 +120,7 @@ export function BarreOnglets({ actif, onChange }: Props) {
         <li
           aria-hidden
           className={`lentille pointer-events-none absolute inset-y-0 -left-[5px] rounded-full ${
-            glisse ? 'lentille-goutte' : 'lentille-active lentille-ressort'
+            glisse ? 'lentille-goutte' : suitPage ? 'lentille-active' : 'lentille-active lentille-ressort'
           }`}
           style={{
             width: `calc(${100 / N}% + 10px)`,
@@ -107,7 +128,7 @@ export function BarreOnglets({ actif, onChange }: Props) {
           }}
         />
         {ONGLETS.map((o, i) => {
-          const estActif = glisse ? ongletLePlusProche(position, N) === i : i === indexActif
+          const estActif = glisse || suitPage ? ongletLePlusProche(position, N) === i : i === indexActif
           return (
             <li key={o.id} className="relative flex flex-1">
               <button

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { etirement, grossissement, ongletLePlusProche, positionSousLeDoigt, sensDuBalayage, actionDuBalayage, departGlisse, retourValide } from './glisser'
+import { etirement, grossissement, ongletLePlusProche, positionSousLeDoigt, sensDuBalayage, actionDuBalayage, departGlisse, retourValide, departGlisseOnglet, ongletVise, decalageOnglet, lentillePendantGlisse } from './glisser'
 
 describe('positionSousLeDoigt', () => {
   it('place le centre de chaque onglet sur un entier', () => {
@@ -91,5 +91,31 @@ describe('retourValide', () => {
   it('valide un geste vif même court, mais pas un frôlement', () => {
     expect(retourValide(80, 390, 120)).toBe(true)
     expect(retourValide(30, 390, 20)).toBe(false)
+  })
+})
+
+describe('glissement entre onglets', () => {
+  it('démarre sur un geste horizontal, dans les deux sens', () => {
+    expect(departGlisseOnglet(4, 3)).toBe('attente')
+    expect(departGlisseOnglet(-30, 5)).toBe('glisse')
+    expect(departGlisseOnglet(30, 5)).toBe('glisse')
+    expect(departGlisseOnglet(12, 30)).toBe('non')
+  })
+  it('vise l’onglet voisin, sauf au bout', () => {
+    expect(ongletVise(-40, 0, 5)).toBe(1)
+    expect(ongletVise(40, 2, 5)).toBe(1)
+    expect(ongletVise(40, 0, 5)).toBeNull()
+    expect(ongletVise(-40, 4, 5)).toBeNull()
+    expect(ongletVise(0, 2, 5)).toBeNull()
+  })
+  it('suit le doigt, élastique au bout des onglets', () => {
+    expect(decalageOnglet(-100, 0, 5)).toBe(-100)
+    expect(decalageOnglet(100, 0, 5)).toBe(30)
+    expect(decalageOnglet(-100, 4, 5)).toBe(-30)
+  })
+  it('déplace la lentille avec la page, dans les bornes', () => {
+    expect(lentillePendantGlisse(-195, 1, 390, 5)).toBe(1.5)
+    expect(lentillePendantGlisse(195, 1, 390, 5)).toBe(0.5)
+    expect(lentillePendantGlisse(100, 0, 390, 5)).toBe(0)
   })
 })
