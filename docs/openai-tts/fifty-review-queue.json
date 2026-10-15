@@ -1,0 +1,444 @@
+{
+  "review_id": "49c0e1694b75cb17aa75fc58ebe3fe3e69728c715dd9f2d4633b81a33fba7303",
+  "linguistic_certification": false,
+  "entries": [
+    {
+      "id": "verbes-085",
+      "tts_text": "weqqeʕ",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "salutations-012",
+      "tts_text": "ʕafak",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "corps-041",
+      "tts_text": "qelb",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "nourriture-001",
+      "tts_text": "xobz",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "nourriture-006",
+      "tts_text": "ħlib",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "jours-002",
+      "tts_text": "ɣedda",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "chiffres-017",
+      "tts_text": "ʃħal?",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "jours-006",
+      "tts_text": "ssbaħ",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-052",
+      "tts_text": "ʕtʃan",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "salutations-035",
+      "tts_text": "allah yjazik bixir",
+      "warnings": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adverbes-002",
+      "tts_text": "lfouq",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "chemin-001",
+      "tts_text": "fin kayna lmaħatta d tran?",
+      "warnings": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "conversation-001",
+      "tts_text": "w nta, ʃno smitek?",
+      "warnings": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "couleurs-004",
+      "tts_text": "keħel",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "cuisine-006",
+      "tts_text": "forʃita",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "emotions-001",
+      "tts_text": "ferħan",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "expressions-001",
+      "tts_text": "waxa",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "famille-002",
+      "tts_text": "ʃno smitek?",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "grammaire-005",
+      "tts_text": "ħna",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "loisirs-003",
+      "tts_text": "matʃ",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "maison-003",
+      "tts_text": "ʕimara",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "nature-001",
+      "tts_text": "ttabiʕa",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "numerique-011",
+      "tts_text": "ʃarjour",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "organisation-001",
+      "tts_text": "ʕndi ijtimaʕ",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "questions-001",
+      "tts_text": "aʃ?",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "rencontres-001",
+      "tts_text": "kifaʃ daz nharek?",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "restaurant-002",
+      "tts_text": "nmʃiw l restoran?",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "sante-001",
+      "tts_text": "sseħa",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "souk-001",
+      "tts_text": "ɣali",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "tournures-001",
+      "tts_text": "ma bɣitʃ",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "transports-003",
+      "tts_text": "ʕla limen",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "travail-001",
+      "tts_text": "xdma",
+      "warnings": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "vetements-001",
+      "tts_text": "ħwayej",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "ville-003",
+      "tts_text": "ħouma",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-017",
+      "tts_text": "mteʔkked",
+      "warnings": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-039",
+      "tts_text": "btiʔ",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "nature-043",
+      "tts_text": "kelb",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "numerique-039",
+      "tts_text": "ħell",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "cuisine-031",
+      "tts_text": "xell",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "grammaire-054",
+      "tts_text": "ɣir",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "corps-006",
+      "tts_text": "ʕin",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "jours-008",
+      "tts_text": "llil",
+      "warnings": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "nourriture-019",
+      "tts_text": "bɣit",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-014",
+      "tts_text": "sħiħ",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-005",
+      "tts_text": "sʕib",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-007",
+      "tts_text": "mʕeqed",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-020",
+      "tts_text": "nqi",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-027",
+      "tts_text": "xfif",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-042",
+      "tts_text": "ɣni",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-062",
+      "tts_text": "ʃjaʕ",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    }
+  ]
+}
