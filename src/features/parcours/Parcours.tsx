@@ -19,6 +19,7 @@ import { Page } from '../../ui/Page'
 import type { SessionPrete } from '../session/lancer'
 import { Session } from '../session/Session'
 import { Passeport } from './Passeport'
+import { CarteMaroc } from './CarteMaroc'
 
 /** Décalage horizontal des nœuds, en pt : le chemin serpente comme une route. */
 const DECALAGES = [0, 70, 100, 70, 0, -70, -100, -70]
@@ -26,6 +27,8 @@ const HAUTEUR_ETAPE = 128
 const HAUTEUR_TRESOR = 88
 /** Largeur de référence de la carte : sur un écran plus étroit, tout se resserre à la même échelle. */
 const LARGEUR = 360
+/** Marge en haut et en bas de la carte, pour la pastille « Prochaine étape » et la dernière étiquette. */
+const MARGE_CARTE = 40
 
 type Vue = { type: 'carte' } | { type: 'etape'; index: number } | { type: 'passeport' }
 
@@ -35,13 +38,13 @@ function Anneau({ part, taille, clair }: { part: number; taille: number; clair: 
   const c = 2 * Math.PI * r
   return (
     <svg width={taille} height={taille} className="absolute inset-0 -rotate-90" aria-hidden>
-      <circle cx={taille / 2} cy={taille / 2} r={r} fill="none" stroke={clair ? 'rgba(255,255,255,0.3)' : 'var(--remplissage)'} strokeWidth="5" />
+      <circle cx={taille / 2} cy={taille / 2} r={r} fill="none" stroke={clair ? 'rgba(255,255,255,0.3)' : 'rgba(201,58,38,0.15)'} strokeWidth="5" />
       <circle
         cx={taille / 2}
         cy={taille / 2}
         r={r}
         fill="none"
-        stroke={clair ? '#fff' : 'var(--accent)'}
+        stroke={clair ? '#fff' : 'var(--accent-plein)'}
         strokeWidth="5"
         strokeLinecap="round"
         strokeDasharray={`${c * part} ${c}`}
@@ -185,7 +188,7 @@ export function Parcours() {
 
   // Positions des nœuds sur la carte : une étape, puis un trésor, et ainsi de suite.
   const noeuds: { type: 'etape' | 'tresor'; index: number; y: number; x: number }[] = []
-  let y = 0
+  let y = MARGE_CARTE
   ETAPES.forEach((_, i) => {
     noeuds.push({ type: 'etape', index: i, y: y + 44, x: DECALAGES[(2 * i) % DECALAGES.length] })
     y += HAUTEUR_ETAPE
@@ -194,6 +197,9 @@ export function Parcours() {
       y += HAUTEUR_TRESOR
     }
   })
+  y += MARGE_CARTE
+  const points = noeuds.map((n) => ({ x: LARGEUR / 2 + n.x, y: n.y }))
+  const pointsEtapes = noeuds.filter((n) => n.type === 'etape').map((n) => ({ x: LARGEUR / 2 + n.x, y: n.y }))
 
   return (
     <Page titre="Parcours">
@@ -211,19 +217,9 @@ export function Parcours() {
           {gain}
         </p>
       )}
-      <div className="relative mx-auto mb-10 w-full" style={{ height: y, maxWidth: LARGEUR }}>
-        {/* Route en pointillés reliant les nœuds (même échelle horizontale que les nœuds). */}
-        <svg className="absolute inset-0 h-full w-full overflow-visible" viewBox={`0 0 ${LARGEUR} ${y}`} preserveAspectRatio="none" aria-hidden>
-          <polyline
-            points={noeuds.map((n) => `${LARGEUR / 2 + n.x},${n.y}`).join(' ')}
-            vectorEffect="non-scaling-stroke"
-            fill="none"
-            stroke="var(--separateur)"
-            strokeWidth="4"
-            strokeDasharray="2 10"
-            strokeLinecap="round"
-          />
-        </svg>
+      {/* Carte illustrée : le sol change avec le voyage, du nord vert au désert. */}
+      <div className="relative mx-auto mb-10 w-full overflow-hidden rounded-[32px]" style={{ height: y, maxWidth: LARGEUR }}>
+        <CarteMaroc noeuds={points} etapes={pointsEtapes} largeur={LARGEUR} hauteur={y} />
         {noeuds.map((n) =>
           n.type === 'etape' ? (
             <NoeudEtape
@@ -252,21 +248,28 @@ function NoeudEtape({ etat, conseillee, style, onClick }: { etat: EtatEtape; con
   const part = etat.total > 0 ? etat.retenus / etat.total : 0
   return (
     <div className="absolute flex w-36 -translate-x-1/2 -translate-y-1/2 flex-col items-center" style={style}>
-      {conseillee && <span className="t-legende mb-1 rounded-full bg-accent-plein px-2 py-0.5 font-semibold text-white">Prochaine étape</span>}
+      {conseillee && <span className="t-legende mb-1.5 rounded-full bg-accent-plein px-2.5 py-0.5 font-semibold text-white shadow-[0_2px_6px_rgba(0,0,0,0.2)]">Prochaine étape</span>}
       <button
         type="button"
         onClick={onClick}
         aria-label={`${etat.etape.ville} : ${etat.retenus} mots retenus sur ${etat.total}${etat.tampon ? ', tampon obtenu' : ''}`}
         className={`pressable relative flex h-[72px] w-[72px] items-center justify-center rounded-full ${
-          etat.tampon ? 'bg-vert-plein text-white' : conseillee ? 'bg-accent-plein text-white' : 'bg-carte text-accent'
+          etat.tampon
+            ? 'bg-vert-plein text-white shadow-[0_4px_0_#06573a,0_8px_14px_-6px_rgba(60,40,10,0.45)]'
+            : conseillee
+              ? 'bg-accent-plein text-white shadow-[0_4px_0_#8f2516,0_8px_16px_-6px_rgba(60,20,10,0.5)]'
+              : 'bg-[#fffaf0] text-accent-plein shadow-[0_4px_0_#c9b48a,0_8px_14px_-6px_rgba(60,40,10,0.45)]'
         }`}
       >
         {!etat.tampon && part > 0 && <Anneau part={part} taille={72} clair={conseillee} />}
         {etat.tampon ? <Check className="h-8 w-8" strokeWidth={3} aria-hidden /> : <MapPin className="relative h-8 w-8" strokeWidth={2.4} aria-hidden />}
       </button>
-      <span className="t-gras mt-1.5 rounded-md bg-fond px-1">{etat.etape.ville}</span>
-      <span className="t-legende rounded-md bg-fond px-1 text-texte-2">
-        {etat.retenus}/{etat.total} retenus
+      {/* Étiquette crème, lisible sur tous les sols de la carte. */}
+      <span className="mt-2 flex flex-col items-center rounded-[12px] bg-[#fffaf0]/95 px-2.5 py-0.5 text-[#1b1918] shadow-[0_2px_6px_-2px_rgba(60,40,10,0.3)]">
+        <span className="t-gras">{etat.etape.ville}</span>
+        <span className="t-legende text-[#6b625b]">
+          {etat.retenus}/{etat.total} retenus
+        </span>
       </span>
     </div>
   )
@@ -282,7 +285,11 @@ function NoeudTresor({ ouvert, ouvrable, style, onClick }: { ouvert: boolean; ou
         disabled={!ouvrable}
         aria-label={ouvert ? 'Trésor ouvert' : ouvrable ? `Ouvrir le trésor : +${XP_TRESOR} XP` : 'Trésor : obtiens le tampon de l’étape d’avant'}
         className={`pressable flex h-[52px] w-[52px] items-center justify-center rounded-full ${
-          ouvrable ? 'tresor-pret bg-[#ffcc00] text-white' : ouvert ? 'bg-[#ffcc00]/30 text-[#b38600]' : 'bg-remplissage text-texte-3'
+          ouvrable
+            ? 'tresor-pret bg-[#ffcc00] text-white shadow-[0_3px_0_#c99a2e,0_6px_10px_-4px_rgba(60,40,10,0.4)]'
+            : ouvert
+              ? 'bg-[#fff3c4] text-[#b38600] shadow-[0_3px_0_#d9c27a,0_6px_10px_-4px_rgba(60,40,10,0.3)]'
+              : 'bg-[#f4dc8a] text-[#8a6420] shadow-[0_3px_0_#c99a2e,0_6px_10px_-4px_rgba(60,40,10,0.4)]'
         }`}
       >
         {ouvert ? <Check className="h-6 w-6" strokeWidth={3} aria-hidden /> : ouvrable ? <Gem className="h-6 w-6" strokeWidth={2.4} aria-hidden /> : <Lock className="h-5 w-5" strokeWidth={2.4} aria-hidden />}
