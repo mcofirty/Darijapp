@@ -66,6 +66,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-15 | Avis du test sans chiffres vérifié : préférence pour les symboles consonantiques sur we99e3 ; référence conservée pour les prochains essais | `docs/openai-tts/phonetic-probe-feedback.json` |
 
+| 2026-10-15 | Comparatif OpenAI de 50 entrées préparé à la demande de l’utilisateur : 31 thèmes, texte consonantique caché, 49 appels maximum et candidat préféré conservé | `scripts/openai_tts/fifty.py`, `scripts/openai_tts/pilot-50.json`, `.github/workflows/openai-tts-fifty.yml` |
+
 ## Décisions
 
 - 2026-10-14 : contrôle HTTP réussi sur la page, les scripts et les 100 MP3 (50 avant/après) ; distinguer la disponibilité du test de l'avancement du corpus complet, dont les jobs sont observés sans interrompre les calculs.
@@ -155,3 +157,5 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-15 : comparatif phonétique publié (Pages `38659125219`) et contrôlé par HTTP (page/CSS/trois SHA-256), sans activation dans les exercices ; l’avis d’écoute reste requis pour juger ces candidats.
 
 - 2026-10-15 : avis d’écoute vérifié en faveur de `consonant_symbols` (`weqqeʕ`) pour we99e3 ; conserver cette préférence sans la convertir en certification linguistique globale ou autorisation de déploiement. Aucun nouvel appel API ni changement de voix active.
+
+- 2026-10-15 : demande explicite de génération du test de 50 entrées après préférence pour les symboles consonantiques ; réutiliser le MP3 weqqeʕ préféré sans réencodage, générer seulement les 49 autres, conserver Jamal avant et publier un comparatif autonome avec avis locaux. Pas de génération massive ni activation automatique.

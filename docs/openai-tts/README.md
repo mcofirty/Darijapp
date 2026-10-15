@@ -1,4 +1,4 @@
-# Test vocal OpenAI : dix mots depuis le latin
+# Essais vocaux OpenAI depuis le latin
 
 L’utilisateur a autorisé ce premier comparatif après avoir refusé la voix HADRA.
 Jamal reste la voix des exercices. Aucun fichier actif, référence de score ou
@@ -196,3 +196,48 @@ préférence pour **Symboles consonantiques**, `weqqeʕ` (`consonant_symbols`).
 Voir `phonetic-probe-feedback.json`. Ce résultat porte sur we99e3 seulement ;
 il ne certifie pas la méthode sur tout le corpus et n’active aucun MP3 dans les
 exercices. Le fichier original reste hors dépôt public ; aucun nouvel appel API.
+
+
+## Comparatif demandé de 50 entrées
+
+Demande explicite de l’utilisateur le 2026-10-15 : générer le test proposé après
+son choix `consonant_symbols`. `pilot-50.json` fige 50 mots et expressions en
+31 thèmes : les dix premiers essais, 2/3/7/9, kh/gh/ch, les consonnes doublées,
+des groupes de consonnes, des emprunts et quelques expressions courantes.
+Le latin affiché reste celui du programme ; seul le texte audio caché est envoyé
+au moteur, sans chiffres-sons et sans arabe. Ce profil n’est pas de l’IPA complet.
+
+Modèle et voix inchangés : `gpt-4o-mini-tts-2025-12-15` / Cedar. Le MP3
+`weqqeʕ` préféré est importé depuis main `caa427c`, avec les mêmes instructions,
+paramètres et SHA-256 ; il est conservé sans nouvel appel ni réencodage. Les
+49 autres utilisent des consignes générales de darija et de symboles phonétiques,
+avec le sens français en contexte non prononcé. Ne pas propager la consigne
+spécifique « signer » aux autres entrées.
+
+`fifty.py` orchestre cinq lots de dix via le générateur existant, dont le plafond
+initial reste dix. Budget global : **49 nouvelles synthèses maximum**, pas de
+variante ni retry payant. Toute tentative incertaine ou tout fichier corrompu
+bloque la reprise au lieu de provoquer une nouvelle facture. Les MP3 bruts,
+exports, textes, paramètres, empreintes et avertissements sont sauvegardés.
+Le cache GitHub peut expirer ; les artifacts (30 jours) et les fichiers publiés
+permettent de conserver la bibliothèque indépendamment du cache.
+
+Le nouveau comparatif `/test-audio-openai-50/` contient 100 MP3 : 50 Jamal avant,
+49 nouveaux OpenAI après et le candidat préféré réutilisé. Navigation, recherche,
+thèmes, vitesse d’écoute, avis par mot, décision globale et export
+`avis-openai-50-mots.json` restent locaux, avec un stockage distinct des essais
+précédents. Aucun avis ne déclenche de déploiement automatique.
+
+Avant publication, le script lit tout le CLAUDE.md de main, vérifie les 50 latins,
+textes TTS, paramètres et 100 empreintes ; il n’écrit que le dossier du test et
+la mémoire/historique. Les MP3 actifs et références de score restent inchangés.
+Le workflow vérifie ensuite par HTTP la page, les ressources et les 100 MP3
+exactement servis. Les contrôles de format, décodage, durée, silence et saturation
+n’établissent pas la fidélité linguistique : tous les candidats restent incertains,
+confiance `null`, avec file de révision et avertissements visibles.
+
+```bash
+python scripts/openai_tts/fifty.py plan
+python scripts/openai_tts/fifty.py generate --baseline CHEMIN/public/test-audio-phonetic
+python scripts/openai_tts/fifty.py build
+```
