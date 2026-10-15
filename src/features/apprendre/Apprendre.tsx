@@ -38,7 +38,6 @@ import { HISTOIRES } from '../../exercices/histoires'
 import { LECONS_GRAMMAIRE } from '../../exercices/grammaire'
 import { GuideSons } from './GuideSons'
 import { ListeSpeciale } from './ListeSpeciale'
-import { useZellige } from '../../ui/zellige'
 import { Flamme } from '../../ui/recompenses'
 import { CarteNiveau } from '../jeu/CarteNiveau'
 
@@ -75,7 +74,6 @@ function Serie() {
 
 export function Apprendre() {
   const [vue, setVue] = useState<Vue>({ type: 'accueil' })
-  const zellige = useZellige()
   const [mot, setMot] = useState<Mot | null>(null)
   const [session, setSession] = useState<SessionPrete | null>(null)
   const [numero, setNumero] = useState(0)
@@ -195,7 +193,7 @@ export function Apprendre() {
         />
       </Section>
 
-      <Section titre="Parler" zellige={zellige}>
+      <Section titre="Parler">
         <Ligne
           tuile={<Tuile icone={MessagesSquare} couleur="#34c759" />}
           titre="Dialogues"

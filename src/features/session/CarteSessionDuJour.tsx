@@ -7,7 +7,6 @@ import { OBJECTIF_MOTS } from '../../gamification/collection'
 import { Anneau } from '../../ui/Anneau'
 import { Bouton } from '../../ui/Boutons'
 import { MotifEtoiles } from '../../ui/motif'
-import { BandeZellige, useZellige } from '../../ui/zellige'
 
 /** Mots repris en entraînement libre, quand rien n'est nouveau ni dû (voir lancer.ts). */
 const MOTS_ENTRAINEMENT = 8
@@ -21,7 +20,6 @@ export function CarteSessionDuJour({ onCommencer }: { onCommencer: () => void })
   const { sessionsAujourdhui, motsVus, xpAujourdhui } = useResume()
   const plan = useLiveQuery(() => planDeSession(), [sessionsAujourdhui])
   const faite = sessionsAujourdhui > 0
-  const zellige = useZellige()
 
   const situation = plan ? situationDuPlan(plan) : null
   const nouveaux = plan?.nouveaux.length ?? 0
@@ -34,7 +32,6 @@ export function CarteSessionDuJour({ onCommencer }: { onCommencer: () => void })
 
   return (
     <section className="carte-phare relative mb-[26px] overflow-hidden rounded-carte p-marge text-white">
-      <BandeZellige z={zellige} className="-mx-marge -mt-marge mb-marge h-10" />
       <MotifEtoiles className="pointer-events-none absolute -right-8 -top-6 h-44 w-44 text-white opacity-20" />
       <div className="relative flex items-start gap-3">
         <div className="min-w-0 flex-1">
