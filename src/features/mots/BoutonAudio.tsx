@@ -1,6 +1,7 @@
 import { Snail, Volume2 } from 'lucide-react'
 import { jouer } from '../../audio/lecteur'
 import { Bouton } from '../../ui/Boutons'
+import { useLegendaire } from '../../ui/legendaire'
 
 interface Props {
   chemin: string
@@ -12,6 +13,9 @@ interface Props {
 
 /** Bouton de lecture : capsule avec libellé, ou rond compact quand le libellé est vide. */
 export function BoutonAudio({ chemin, arabe, vitesse = 1, libelle, grand = false }: Props) {
+  // Épreuve légendaire : pas de ralenti.
+  const legendaire = useLegendaire()
+  if (legendaire && vitesse < 1) return null
   const Icone = vitesse < 1 ? Snail : Volume2
   const lire = (e: React.MouseEvent) => {
     e.stopPropagation()

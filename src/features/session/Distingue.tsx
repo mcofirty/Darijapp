@@ -1,5 +1,6 @@
 import { CircleCheck, CircleX, Snail, Volume2 } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
+import { useLegendaire } from '../../ui/legendaire'
 import { jouer } from '../../audio/lecteur'
 import type { MotSon, PaireSons } from '../../data/pairesSons'
 import { useProfil } from '../../db/useProfil'
@@ -15,6 +16,7 @@ interface Props {
 
 /** « Distingue les sons » : on entend un mot (9elb ou kelb ?) et on choisit lequel. */
 export function Distingue({ paire, cible, onRepondu, onPasMaintenant }: Props) {
+  const legendaire = useLegendaire()
   const { afficherArabe } = useProfil()
   const [choisi, setChoisi] = useState<string | null>(null)
   // Ordre d'affichage tiré une fois : la bonne réponse n'est pas toujours au même endroit.
@@ -46,14 +48,16 @@ export function Distingue({ paire, cible, onRepondu, onPasMaintenant }: Props) {
         >
           <Volume2 className="h-10 w-10" strokeWidth={2.2} aria-hidden />
         </button>
-        <button
-          type="button"
-          onClick={() => jouer(cible.audio, cible.arabe, 0.75)}
-          className="pressable flex h-14 w-14 items-center justify-center rounded-full bg-accent-doux text-accent"
-          aria-label="Réécouter au ralenti"
-        >
-          <Snail className="h-6 w-6" strokeWidth={2.2} aria-hidden />
-        </button>
+        {!legendaire && (
+          <button
+            type="button"
+            onClick={() => jouer(cible.audio, cible.arabe, 0.75)}
+            className="pressable flex h-14 w-14 items-center justify-center rounded-full bg-accent-doux text-accent"
+            aria-label="Réécouter au ralenti"
+          >
+            <Snail className="h-6 w-6" strokeWidth={2.2} aria-hidden />
+          </button>
+        )}
       </div>
       <ul className="grid grid-cols-2 gap-3">
         {choix.map((m) => {

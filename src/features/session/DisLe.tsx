@@ -14,6 +14,7 @@ import { SEUIL_SON, sonRate, type DetailSon } from '../../scoring/sons/prononcia
 import { AnneauScore } from '../../ui/AnneauScore'
 import { BoutonMicro } from '../../ui/BoutonMicro'
 import { PhraseTouchable } from '../../ui/PhraseTouchable'
+import { useLegendaire } from '../../ui/legendaire'
 import { Bouton } from '../../ui/Boutons'
 import { BoutonAudio } from '../mots/BoutonAudio'
 import { PasMaintenant } from './PasMaintenant'
@@ -61,6 +62,7 @@ type Etat =
  */
 export function DisLe({ mot, inverse = false, phrase = false, titre, consigne, enonce, onPret, onRepondu, onPasMaintenant }: Props) {
   const profil = useProfil()
+  const legendaire = useLegendaire()
   const [etat, setEtat] = useState<Etat>({ type: 'pret' })
   const [niveau, setNiveau] = useState(0)
   // Mode inverse : 0 = français seul, 1 = indice (début du mot), 2 = darija montré.
@@ -199,7 +201,7 @@ export function DisLe({ mot, inverse = false, phrase = false, titre, consigne, e
             <BoutonAudio chemin={mot.audio} arabe={mot.arabe} vitesse={0.75} libelle="Ralenti" />
           </div>
         ) : (
-          aide < 2 && (
+          aide < 2 && !legendaire && (
             <Bouton variante="teinte" className="mt-4" onClick={() => setAide(aide + 1)}>
               <Lightbulb className="h-5 w-5" strokeWidth={2.4} aria-hidden /> {aide === 0 ? 'Indice' : 'Voir le darija'}
             </Bouton>

@@ -1,5 +1,6 @@
 import { Snail, Volume2 } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { useLegendaire } from '../../ui/legendaire'
 import { jouer, jouerAuto } from '../../audio/lecteur'
 import type { Mot } from '../../data/types'
 import { useProfil } from '../../db/useProfil'
@@ -14,6 +15,7 @@ interface Props {
 
 /** « Construis la phrase » : on entend l'exemple, on voit sa traduction et on remet ses mots dans l'ordre. */
 export function Construis({ mot, morceaux, onRepondu }: Props) {
+  const legendaire = useLegendaire()
   const { afficherArabe } = useProfil()
   const ex = mot.exemple
   // Indices des morceaux choisis, dans l'ordre de la réponse.
@@ -54,14 +56,16 @@ export function Construis({ mot, morceaux, onRepondu }: Props) {
         >
           <Volume2 className="h-7 w-7" strokeWidth={2.2} aria-hidden />
         </button>
-        <button
-          type="button"
-          onClick={() => jouer(ex.audio, ex.arabe, 0.75)}
-          className="pressable flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent-doux text-accent"
-          aria-label="Réécouter au ralenti"
-        >
-          <Snail className="h-5 w-5" strokeWidth={2.2} aria-hidden />
-        </button>
+        {!legendaire && (
+          <button
+            type="button"
+            onClick={() => jouer(ex.audio, ex.arabe, 0.75)}
+            className="pressable flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent-doux text-accent"
+            aria-label="Réécouter au ralenti"
+          >
+            <Snail className="h-5 w-5" strokeWidth={2.2} aria-hidden />
+          </button>
+        )}
         <p className="t-titre-3 min-w-0 flex-1">{ex.fr}</p>
       </div>
 

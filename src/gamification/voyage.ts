@@ -34,20 +34,31 @@ export interface EtatEtape {
   vus: number
   /** Mots réussis à leur dernière révision (boîte 2 ou plus). */
   retenus: number
+  /** Tampon : 80 % des mots retenus, ou épreuve de l'étape réussie. */
   tampon: boolean
+  /** Tampon doré : épreuve légendaire réussie. */
+  legendaire: boolean
 }
 
 export function motsDeLEtape(etape: Etape, tous: Mot[]): Mot[] {
   return etape.themes.flatMap((t) => tous.filter((m) => m.theme === t))
 }
 
-export function etatsDuVoyage(tous: Mot[], progressions: { id: string; boite: number }[]): EtatEtape[] {
+export function etatsDuVoyage(
+  tous: Mot[],
+  progressions: { id: string; boite: number }[],
+  validees: Iterable<string> = [],
+  legendaires: Iterable<string> = [],
+): EtatEtape[] {
+  const ok = new Set(validees)
+  const or = new Set(legendaires)
   const boites = new Map(progressions.map((p) => [p.id, p.boite]))
   return ETAPES.map((etape) => {
     const mots = motsDeLEtape(etape, tous)
     const vus = mots.filter((m) => boites.has(m.id)).length
     const retenus = mots.filter((m) => (boites.get(m.id) ?? 0) >= 2).length
-    return { etape, total: mots.length, vus, retenus, tampon: mots.length > 0 && retenus >= Math.ceil(mots.length * SEUIL_TAMPON) }
+    const tampon = ok.has(etape.id) || (mots.length > 0 && retenus >= Math.ceil(mots.length * SEUIL_TAMPON))
+    return { etape, total: mots.length, vus, retenus, tampon, legendaire: tampon && or.has(etape.id) }
   })
 }
 

@@ -60,6 +60,11 @@ export interface Profil {
   doubleXpJusqua: number | null
   /** Lundi du dernier bilan de la semaine fermé. */
   bilanSemaineVu: string | null
+  /** Étapes du Parcours validées par leur épreuve (tampon), et réussies en légendaire (tampon doré). */
+  etapesValidees: string[]
+  etapesLegendaires: string[]
+  /** Test de niveau : fait, refusé, ou pas encore proposé. */
+  testNiveau: 'fait' | 'refuse' | null
   /** Dialogues : meilleur nombre de répliques réussies par scène. */
   dialogues: Record<string, number>
   /** Horodatage du dernier export de la progression (rappel tous les 7 jours), null si jamais. */
@@ -168,6 +173,9 @@ export const PROFIL_DEFAUT: Profil = {
   joursRepares: [],
   doubleXpJusqua: null,
   bilanSemaineVu: null,
+  etapesValidees: [],
+  etapesLegendaires: [],
+  testNiveau: null,
   dialogues: {},
   derniereSauvegarde: null,
 }

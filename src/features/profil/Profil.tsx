@@ -1,4 +1,4 @@
-import { AudioLines, Ear, Flag, Languages, Mic, Speech, SunMoon, UserRound } from 'lucide-react'
+import { AudioLines, Ear, Flag, Languages, Mic, Speech, SunMoon, UserRound, Gauge } from 'lucide-react'
 import { useState } from 'react'
 import { modifierProfil, reglerMode, type Apparence } from '../../db/db'
 import { useModes, useProfil } from '../../db/useProfil'
@@ -10,6 +10,7 @@ import { MotsSignales } from './MotsSignales'
 import { AudioHorsLigne } from './AudioHorsLigne'
 import { RappelEtSauvegarde } from './RappelEtSauvegarde'
 import { ReglageVoix } from './ReglageVoix'
+import { TestNiveau } from '../onboarding/TestNiveau'
 import { ScorePrecis } from './ScorePrecis'
 
 const APPARENCES: { id: Apparence; libelle: string }[] = [
@@ -39,9 +40,11 @@ export function Profil() {
   useModes()
   const [signales, setSignales] = useState(false)
   const [reglage, setReglage] = useState(false)
+  const [test, setTest] = useState(false)
   const nbSignales = [...useMarques().values()].filter((m) => m.signale).length
   if (signales) return <MotsSignales onRetour={() => setSignales(false)} />
   if (reglage) return <ReglageVoix onRetour={() => setReglage(false)} />
+  if (test) return <TestNiveau onRetour={() => setTest(false)} />
   return (
     <Page titre="Profil">
       <Section titre="Apparence" arrondi="rounded-segmente" note="Automatique suit le réglage clair ou sombre de l'iPhone.">
@@ -111,6 +114,9 @@ export function Profil() {
       </Section>
       <AudioHorsLigne />
       <RappelEtSauvegarde />
+      <Section titre="Niveau" note="Le test fait passer en révision les mots que tu connais déjà ; on peut le refaire à tout moment.">
+        <Ligne tuile={<Tuile icone={Gauge} couleur="#5856d6" />} titre="Test de niveau" valeur={profil.testNiveau === 'fait' ? 'Fait' : undefined} chevron onClick={() => setTest(true)} />
+      </Section>
       <Section titre="Contenu">
         <Ligne
           tuile={<Tuile icone={Flag} couleur="#ff9500" />}

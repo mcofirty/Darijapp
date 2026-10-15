@@ -44,6 +44,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-15 | Façon Duolingo (2) : phrase à trou (écrite ou dite) et indice au toucher (traduction d'un mot dans les phrases en darija) | `src/exercices/trou.ts`, `src/exercices/glossaire.ts`, `src/features/session/Trou.tsx`, `src/ui/PhraseTouchable.tsx` |
 
+| 2026-10-15 | Façon Duolingo (3) : test de niveau (Apprendre et Profil), épreuve « Passer l'étape », épreuve légendaire et tampon doré, guide de l'étape | `src/exercices/epreuves.ts`, `src/features/onboarding/TestNiveau.tsx`, `src/features/parcours/`, `src/ui/legendaire.ts` |
+
 ## Décisions
 
 

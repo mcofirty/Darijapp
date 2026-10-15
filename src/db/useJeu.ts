@@ -65,7 +65,7 @@ export function useJeu(): Jeu {
         grammaire: compter('grammaire'),
         marchandages: compter('marchandage'),
         taxis: compter('taxi'),
-        tampons: etatsDuVoyage(mots, progressions).filter((e) => e.tampon).length,
+        tampons: etatsDuVoyage(mots, progressions, profil.etapesValidees, profil.etapesLegendaires).filter((e) => e.tampon).length,
         theieres: journaux.filter((j) => j.coffre).length,
         achats,
         motsAjoutes,

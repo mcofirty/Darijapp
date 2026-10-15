@@ -20,6 +20,7 @@ import { DisLe, type ResultatDire } from './DisLe'
 import { Distingue } from './Distingue'
 import { Paires } from './Paires'
 import { Trou } from './Trou'
+import { ModeLegendaire } from '../../ui/legendaire'
 import { PhraseTouchable } from '../../ui/PhraseTouchable'
 import { RemplissageBarre } from '../../ui/zellige'
 
@@ -32,6 +33,12 @@ interface Props {
    * l'activité est enregistrée comme telle avec son propre bilan.
    */
   activite?: 'quiz' | 'grammaire'
+  /** Épreuve légendaire : pas de ralenti ni d'indice. */
+  legendaire?: boolean
+  /** Titre du bilan d'un quiz (épreuves du Parcours, test de niveau). */
+  titreBilan?: (justes: number, total: number) => string
+  /** Résultat d'un quiz, une fois enregistré. */
+  onResultat?: (justes: number, total: number) => void
   onFermer: () => void
   onEncore: () => void
 }
@@ -48,7 +55,7 @@ export function Session(props: Props) {
   return <SessionEnCours {...props} modesDepart={modes} />
 }
 
-function SessionEnCours({ etapes: depart, nouveaux, entrainement, activite, onFermer, onEncore, modesDepart }: Props & { modesDepart: Modes }) {
+function SessionEnCours({ etapes: depart, nouveaux, entrainement, activite, legendaire = false, titreBilan, onResultat, onFermer, onEncore, modesDepart }: Props & { modesDepart: Modes }) {
   const quiz = activite !== undefined
   const [etapes, setEtapes] = useState(() => adapterEtapes(depart, modesDepart))
   const modes = useRef(modesDepart)
@@ -130,6 +137,7 @@ function SessionEnCours({ etapes: depart, nouveaux, entrainement, activite, onFe
         ? await enregistrerActivite(activite, { bonnes: q.justes, mauvaises: q.total - q.justes, combo: combo.current.bonus })
         : await enregistrerSession(r.parMot(), { bonnes: r.bonnes, mauvaises: r.mauvaises, nouveaux, entrainement, scores: r.scores, combo: combo.current.bonus }),
     )
+    if (quiz) onResultat?.(q.justes, q.total)
   }
 
   if (bilan) {
@@ -137,7 +145,7 @@ function SessionEnCours({ etapes: depart, nouveaux, entrainement, activite, onFe
     const q = questions.current
     return quiz ? (
       <Bilan
-        titre={q.justes === q.total ? 'Sans faute !' : activite === 'grammaire' ? 'Leçon terminée' : 'Quiz terminé'}
+        titre={titreBilan ? titreBilan(q.justes, q.total) : q.justes === q.total ? 'Sans faute !' : activite === 'grammaire' ? 'Leçon terminée' : 'Quiz terminé'}
         sousTitre={`${q.justes} bonne${q.justes > 1 ? 's' : ''} réponse${q.justes > 1 ? 's' : ''} sur ${q.total}`}
         xp={bilan.xp}
         activite={bilan}
@@ -170,161 +178,163 @@ function SessionEnCours({ etapes: depart, nouveaux, entrainement, activite, onFe
   const aDire = etape.type === 'disle' || (etape.type === 'trou' && etape.oral)
 
   return (
-    <div data-sans-balayage className="fixed inset-0 z-30 flex flex-col bg-fond">
-      {/* Barre du haut en verre, au-dessus du contenu qui défile dessous (bord flou d'iOS 26). */}
-      <div className="bord-flou visible absolute inset-x-0 top-0 z-10 pt-[env(safe-area-inset-top)]">
-        <div className="mx-auto flex w-full max-w-xl items-center gap-2 px-marge py-2">
-          <button
-            type="button"
-            onClick={() => setConfirmer(true)}
-            aria-label={activite === 'quiz' ? 'Quitter le quiz' : activite === 'grammaire' ? 'Quitter la leçon' : 'Quitter la session'}
-            className="verre verre-fin pressable flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
-          >
-            <X className="h-5 w-5" strokeWidth={2.4} aria-hidden />
-          </button>
-          <div className="verre verre-fin flex h-11 flex-1 items-center rounded-full px-4">
-            <div
-              className="h-2 flex-1 overflow-hidden rounded-full bg-remplissage"
-              role="progressbar"
-              aria-valuenow={index}
-              aria-valuemax={etapes.length}
-              aria-label="Progression de la session"
+    <ModeLegendaire.Provider value={legendaire}>
+      <div data-sans-balayage className="fixed inset-0 z-30 flex flex-col bg-fond">
+        {/* Barre du haut en verre, au-dessus du contenu qui défile dessous (bord flou d'iOS 26). */}
+        <div className="bord-flou visible absolute inset-x-0 top-0 z-10 pt-[env(safe-area-inset-top)]">
+          <div className="mx-auto flex w-full max-w-xl items-center gap-2 px-marge py-2">
+            <button
+              type="button"
+              onClick={() => setConfirmer(true)}
+              aria-label={activite === 'quiz' ? 'Quitter le quiz' : activite === 'grammaire' ? 'Quitter la leçon' : 'Quitter la session'}
+              className="verre verre-fin pressable flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
             >
-              <RemplissageBarre fraction={index / etapes.length} />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="mx-auto w-full max-w-xl flex-1 overflow-y-auto px-marge pb-6 pt-[calc(env(safe-area-inset-top)+4.5rem)]">
-        <div key={`${index}-${version}`} className="entree-droite">
-          {etape.type === 'decouverte' && <Decouverte mot={etape.mot} />}
-          {(etape.type === 'ecoute' || etape.type === 'traduis') && (
-            <Choix
-              type={etape.type}
-              mot={etape.mot}
-              choix={etape.choix}
-              onRepondu={(j) => repondre(j, etape.mot, etape.mot.id)}
-              onPasMaintenant={() => pasMaintenant('ecouter')}
-            />
-          )}
-          {etape.type === 'distingue' && (
-            <Distingue
-              paire={etape.paire}
-              cible={etape.cible}
-              onRepondu={(j) => repondre(j, etape.cible, null)}
-              onPasMaintenant={() => pasMaintenant('ecouter')}
-            />
-          )}
-          {etape.type === 'disle' && (
-            <DisLe
-              mot={etape.mot}
-              inverse={etape.inverse}
-              phrase={etape.phrase}
-              onPret={setDire}
-              onRepondu={(r) => valider(etape.mot, r)}
-              onPasMaintenant={() => pasMaintenant('parler')}
-            />
-          )}
-          {etape.type === 'trou' && !etape.oral && (
-            <Trou mot={etape.mot} morceaux={etape.morceaux} trou={etape.trou} choix={etape.choix} onRepondu={(j) => repondre(j, etape.mot, etape.mot.id)} />
-          )}
-          {etape.type === 'trou' && etape.oral && (
-            <DisLe
-              mot={etape.mot}
-              inverse
-              titre="Phrase à trou"
-              consigne="Dis à voix haute le mot qui manque."
-              enonce={
-                <div className="mb-3">
-                  <p className="t-titre-2 leading-snug">
-                    <PhraseTouchable latin={etape.morceaux.join(' ')} trou={etape.trou} />
-                  </p>
-                  <p className="t-sous-titre mt-2 text-texte-2">{etape.mot.exemple.fr}</p>
-                </div>
-              }
-              onPret={setDire}
-              onRepondu={(r) => valider(etape.mot, r)}
-              onPasMaintenant={() => pasMaintenant('parler')}
-            />
-          )}
-          {etape.type === 'phrase' && (
-            <Construis mot={etape.mot} morceaux={etape.morceaux} onRepondu={(j) => repondre(j, etape.mot.exemple, etape.mot.id)} />
-          )}
-          {etape.type === 'paires' && (
-            <Paires
-              mots={etape.mots}
-              onErreur={(id) => {
-                resultats.current.noter(id, false)
-                questions.current.erreurPaires = true
-              }}
-              onTermine={() => {
-                etape.mots.forEach((m) => resultats.current.noter(m.id, true))
-                compterQuestion(!questions.current.erreurPaires)
-                questions.current.erreurPaires = false
-                setRetour({ juste: true })
-              }}
-            />
-          )}
-        </div>
-      </div>
-
-      {(retour !== null || etape.type === 'decouverte' || (aDire && dire)) && (
-        <div className="px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2">
-          {/* Panneau de commandes en Liquid Glass : il s'ouvre pour donner le résultat. */}
-          <div className="verre mx-auto max-w-xl rounded-panneau p-3">
-            <div className={`deplier ${retour ? 'ouvert' : ''}`} aria-live="polite">
-              <div>
-                {retour?.juste === true && (
-                  <p className="t-titre-3 flex flex-wrap items-center gap-2 px-2 pb-3 pt-1 text-vert">
-                    <CircleCheck className="h-6 w-6" strokeWidth={2.5} aria-hidden /> Bravo !
-                    {fete && (
-                      <span className="combo-fete t-appel ml-auto flex items-center gap-1 rounded-full bg-[#fff3e0] px-3 py-1 font-semibold text-[#e65100] dark:bg-[#4a2a00] dark:text-[#ffb74d]">
-                        <Flame className="h-4 w-4" strokeWidth={2.4} fill="currentColor" aria-hidden /> {fete} d’affilée ! +1 XP par réponse
-                      </span>
-                    )}
-                  </p>
-                )}
-                {retour?.juste === false && (
-                  <div className="px-2 pb-3 pt-1 text-rouge">
-                    <p className="t-titre-3 flex items-center gap-2">
-                      <CircleX className="h-6 w-6" strokeWidth={2.5} aria-hidden /> Bonne réponse :
-                    </p>
-                    <p className="t-corps mt-1 text-texte">
-                      <span className="font-semibold">{retour.mot.latin}</span> = {retour.mot.fr}
-                    </p>
-                  </div>
-                )}
+              <X className="h-5 w-5" strokeWidth={2.4} aria-hidden />
+            </button>
+            <div className="verre verre-fin flex h-11 flex-1 items-center rounded-full px-4">
+              <div
+                className="h-2 flex-1 overflow-hidden rounded-full bg-remplissage"
+                role="progressbar"
+                aria-valuenow={index}
+                aria-valuemax={etapes.length}
+                aria-label="Progression de la session"
+              >
+                <RemplissageBarre fraction={index / etapes.length} />
               </div>
             </div>
-            <Bouton
-              grand
-              className={`w-full ${retour?.juste || dire?.juste ? '!bg-vert-plein' : ''}`}
-              onClick={() => (aDire && dire ? valider(etape.mot, dire) : void suivant())}
-            >
-              Continuer
-            </Bouton>
           </div>
         </div>
-      )}
 
-      {confirmer && (
-        <Alerte
-          titre={activite === 'quiz' ? 'Quitter le quiz ?' : activite === 'grammaire' ? 'Quitter la leçon ?' : 'Quitter la session ?'}
-          message={
-            activite === 'quiz'
-              ? 'Ce quiz ne sera pas compté.'
-              : activite === 'grammaire'
-                ? 'Cette leçon ne sera pas comptée.'
-                : 'Les réponses de cette session ne seront pas enregistrées.'
-          }
-          onAnnuler={() => setConfirmer(false)}
-          actions={[
-            { libelle: 'Continuer', role: 'annuler', action: () => setConfirmer(false) },
-            { libelle: 'Quitter', role: 'destructif', action: onFermer },
-          ]}
-        />
-      )}
-    </div>
+        <div className="mx-auto w-full max-w-xl flex-1 overflow-y-auto px-marge pb-6 pt-[calc(env(safe-area-inset-top)+4.5rem)]">
+          <div key={`${index}-${version}`} className="entree-droite">
+            {etape.type === 'decouverte' && <Decouverte mot={etape.mot} />}
+            {(etape.type === 'ecoute' || etape.type === 'traduis') && (
+              <Choix
+                type={etape.type}
+                mot={etape.mot}
+                choix={etape.choix}
+                onRepondu={(j) => repondre(j, etape.mot, etape.mot.id)}
+                onPasMaintenant={() => pasMaintenant('ecouter')}
+              />
+            )}
+            {etape.type === 'distingue' && (
+              <Distingue
+                paire={etape.paire}
+                cible={etape.cible}
+                onRepondu={(j) => repondre(j, etape.cible, null)}
+                onPasMaintenant={() => pasMaintenant('ecouter')}
+              />
+            )}
+            {etape.type === 'disle' && (
+              <DisLe
+                mot={etape.mot}
+                inverse={etape.inverse}
+                phrase={etape.phrase}
+                onPret={setDire}
+                onRepondu={(r) => valider(etape.mot, r)}
+                onPasMaintenant={() => pasMaintenant('parler')}
+              />
+            )}
+            {etape.type === 'trou' && !etape.oral && (
+              <Trou mot={etape.mot} morceaux={etape.morceaux} trou={etape.trou} choix={etape.choix} onRepondu={(j) => repondre(j, etape.mot, etape.mot.id)} />
+            )}
+            {etape.type === 'trou' && etape.oral && (
+              <DisLe
+                mot={etape.mot}
+                inverse
+                titre="Phrase à trou"
+                consigne="Dis à voix haute le mot qui manque."
+                enonce={
+                  <div className="mb-3">
+                    <p className="t-titre-2 leading-snug">
+                      <PhraseTouchable latin={etape.morceaux.join(' ')} trou={etape.trou} />
+                    </p>
+                    <p className="t-sous-titre mt-2 text-texte-2">{etape.mot.exemple.fr}</p>
+                  </div>
+                }
+                onPret={setDire}
+                onRepondu={(r) => valider(etape.mot, r)}
+                onPasMaintenant={() => pasMaintenant('parler')}
+              />
+            )}
+            {etape.type === 'phrase' && (
+              <Construis mot={etape.mot} morceaux={etape.morceaux} onRepondu={(j) => repondre(j, etape.mot.exemple, etape.mot.id)} />
+            )}
+            {etape.type === 'paires' && (
+              <Paires
+                mots={etape.mots}
+                onErreur={(id) => {
+                  resultats.current.noter(id, false)
+                  questions.current.erreurPaires = true
+                }}
+                onTermine={() => {
+                  etape.mots.forEach((m) => resultats.current.noter(m.id, true))
+                  compterQuestion(!questions.current.erreurPaires)
+                  questions.current.erreurPaires = false
+                  setRetour({ juste: true })
+                }}
+              />
+            )}
+          </div>
+        </div>
+
+        {(retour !== null || etape.type === 'decouverte' || (aDire && dire)) && (
+          <div className="px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2">
+            {/* Panneau de commandes en Liquid Glass : il s'ouvre pour donner le résultat. */}
+            <div className="verre mx-auto max-w-xl rounded-panneau p-3">
+              <div className={`deplier ${retour ? 'ouvert' : ''}`} aria-live="polite">
+                <div>
+                  {retour?.juste === true && (
+                    <p className="t-titre-3 flex flex-wrap items-center gap-2 px-2 pb-3 pt-1 text-vert">
+                      <CircleCheck className="h-6 w-6" strokeWidth={2.5} aria-hidden /> Bravo !
+                      {fete && (
+                        <span className="combo-fete t-appel ml-auto flex items-center gap-1 rounded-full bg-[#fff3e0] px-3 py-1 font-semibold text-[#e65100] dark:bg-[#4a2a00] dark:text-[#ffb74d]">
+                          <Flame className="h-4 w-4" strokeWidth={2.4} fill="currentColor" aria-hidden /> {fete} d’affilée ! +1 XP par réponse
+                        </span>
+                      )}
+                    </p>
+                  )}
+                  {retour?.juste === false && (
+                    <div className="px-2 pb-3 pt-1 text-rouge">
+                      <p className="t-titre-3 flex items-center gap-2">
+                        <CircleX className="h-6 w-6" strokeWidth={2.5} aria-hidden /> Bonne réponse :
+                      </p>
+                      <p className="t-corps mt-1 text-texte">
+                        <span className="font-semibold">{retour.mot.latin}</span> = {retour.mot.fr}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
+              <Bouton
+                grand
+                className={`w-full ${retour?.juste || dire?.juste ? '!bg-vert-plein' : ''}`}
+                onClick={() => (aDire && dire ? valider(etape.mot, dire) : void suivant())}
+              >
+                Continuer
+              </Bouton>
+            </div>
+          </div>
+        )}
+
+        {confirmer && (
+          <Alerte
+            titre={activite === 'quiz' ? 'Quitter le quiz ?' : activite === 'grammaire' ? 'Quitter la leçon ?' : 'Quitter la session ?'}
+            message={
+              activite === 'quiz'
+                ? 'Ce quiz ne sera pas compté.'
+                : activite === 'grammaire'
+                  ? 'Cette leçon ne sera pas comptée.'
+                  : 'Les réponses de cette session ne seront pas enregistrées.'
+            }
+            onAnnuler={() => setConfirmer(false)}
+            actions={[
+              { libelle: 'Continuer', role: 'annuler', action: () => setConfirmer(false) },
+              { libelle: 'Quitter', role: 'destructif', action: onFermer },
+            ]}
+          />
+        )}
+      </div>
+    </ModeLegendaire.Provider>
   )
 }

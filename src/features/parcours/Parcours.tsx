@@ -1,9 +1,13 @@
 import { useLiveQuery } from 'dexie-react-hooks'
-import { Check, Gem, Lock, MapPin, Stamp } from 'lucide-react'
+import { BookOpenText, Check, Crown, Gem, Lock, MapPin, Stamp, Swords } from 'lucide-react'
 import { useState } from 'react'
 import { PAIRES_SONS } from '../../data/pairesSons'
 import { THEMES } from '../../data/themes'
-import { db } from '../../db/db'
+import { db, modifierProfil } from '../../db/db'
+import { useProfil } from '../../db/useProfil'
+import { QUESTIONS_EPREUVE, QUESTIONS_LEGENDAIRE, REUSSITE_EPREUVE, REUSSITE_LEGENDAIRE, composerEpreuve, composerLegendaire, guideDeLEtape } from '../../exercices/epreuves'
+import { Alerte } from '../../ui/Alerte'
+import { BoutonAudio } from '../mots/BoutonAudio'
 import { ouvrirTresor } from '../../db/journal'
 import { useMots } from '../../db/motsPerso'
 import { DIRE_PAR_SESSION, composerSession, melanger } from '../../exercices/session'
@@ -53,10 +57,12 @@ export function Parcours() {
   const bonus = useLiveQuery(() => db.bonus.toArray(), [])
   const [vue, setVue] = useState<Vue>({ type: 'carte' })
   const zellige = useZellige()
-  const [session, setSession] = useState<(SessionPrete & { numero: number; etape: number }) | null>(null)
+  const [session, setSession] = useState<(SessionPrete & { numero: number; etape: number; epreuve?: 'validation' | 'legendaire' }) | null>(null)
   const [gain, setGain] = useState<string | null>(null)
+  const [verdict, setVerdict] = useState<{ titre: string; message: string } | null>(null)
+  const { etapesValidees, etapesLegendaires } = useProfil()
 
-  const etats = etatsDuVoyage(MOTS, progressions ?? [])
+  const etats = etatsDuVoyage(MOTS, progressions ?? [], etapesValidees, etapesLegendaires)
   const ouverts = new Set((bonus ?? []).map((b) => b.cle).filter((c): c is string => !!c))
   const conseillee = prochaineEtape(etats)
   const tampons = etats.filter((e) => e.tampon).length
@@ -71,6 +77,29 @@ export function Parcours() {
     setSession((s) => ({ etapes, nouveaux: plan.nouveaux.length, entrainement, numero: (s?.numero ?? 0) + 1, etape: index }))
   }
 
+  /** Épreuve d'une étape (valide l'étape d'un coup) ou épreuve légendaire (tampon doré). */
+  function lancerEpreuve(index: number, epreuve: 'validation' | 'legendaire') {
+    const etapes = epreuve === 'validation' ? composerEpreuve(ETAPES[index], MOTS) : composerLegendaire(ETAPES[index], MOTS)
+    setSession((s) => ({ etapes, nouveaux: 0, entrainement: true, numero: (s?.numero ?? 0) + 1, etape: index, epreuve }))
+  }
+
+  /** Résultat d'une épreuve : l'étape est validée (ou dorée) si le seuil est atteint. */
+  function resultatEpreuve(index: number, epreuve: 'validation' | 'legendaire', justes: number) {
+    const etape = ETAPES[index]
+    const seuil = epreuve === 'validation' ? REUSSITE_EPREUVE : REUSSITE_LEGENDAIRE
+    if (justes < seuil) {
+      setVerdict({ titre: 'Pas encore', message: `Il faut ${seuil} bonnes réponses. Révise l’étape et retente ta chance !` })
+      return
+    }
+    if (epreuve === 'validation') void modifierProfil({ etapesValidees: [...new Set([...etapesValidees, etape.id])] })
+    else void modifierProfil({ etapesLegendaires: [...new Set([...etapesLegendaires, etape.id])] })
+    setVerdict(
+      epreuve === 'validation'
+        ? { titre: `Tampon de ${etape.ville} !`, message: 'Étape validée : tu peux passer à la suivante.' }
+        : { titre: `${etape.ville} légendaire !`, message: 'Tampon doré ajouté à ton passeport.' },
+    )
+  }
+
   async function ouvrir(i: number) {
     const xp = await ouvrirTresor(cleTresor(i), XP_TRESOR)
     if (xp > 0) setGain(`Trésor de ${ETAPES[i].ville} : +${xp} XP !`)
@@ -83,8 +112,21 @@ export function Parcours() {
         etapes={session.etapes}
         nouveaux={session.nouveaux}
         entrainement={session.entrainement}
+        activite={session.epreuve ? 'quiz' : undefined}
+        legendaire={session.epreuve === 'legendaire'}
+        titreBilan={
+          session.epreuve
+            ? (justes) =>
+                justes >= (session.epreuve === 'validation' ? REUSSITE_EPREUVE : REUSSITE_LEGENDAIRE)
+                  ? session.epreuve === 'validation'
+                    ? 'Étape validée !'
+                    : 'Légendaire !'
+                  : 'Pas encore'
+            : undefined
+        }
+        onResultat={session.epreuve ? (justes) => resultatEpreuve(session.etape, session.epreuve!, justes) : undefined}
         onFermer={() => setSession(null)}
-        onEncore={() => lancerLecon(session.etape)}
+        onEncore={() => (session.epreuve ? lancerEpreuve(session.etape, session.epreuve) : lancerLecon(session.etape))}
       />
     )
 
@@ -110,7 +152,28 @@ export function Parcours() {
           <Bouton grand className="mt-4 w-full" onClick={() => lancerLecon(vue.index)}>
             {e.vus === e.total ? 'Réviser cette étape' : 'Commencer une leçon'}
           </Bouton>
+          {!e.tampon && (
+            <Bouton grand variante="teinte" className="mt-2 w-full" onClick={() => lancerEpreuve(vue.index, 'validation')}>
+              <Swords className="h-5 w-5" strokeWidth={2.4} aria-hidden /> Passer l’étape ({REUSSITE_EPREUVE}/{QUESTIONS_EPREUVE})
+            </Bouton>
+          )}
+          {e.tampon && !e.legendaire && (
+            <Bouton grand variante="teinte" className="mt-2 w-full" onClick={() => lancerEpreuve(vue.index, 'legendaire')}>
+              <Crown className="h-5 w-5" strokeWidth={2.4} aria-hidden /> Épreuve légendaire ({REUSSITE_LEGENDAIRE}/{QUESTIONS_LEGENDAIRE})
+            </Bouton>
+          )}
+          {e.legendaire && (
+            <p className="t-appel mt-3 flex items-center justify-center gap-2 font-semibold text-[#b8860b]">
+              <Crown className="h-5 w-5" strokeWidth={2.4} fill="currentColor" aria-hidden /> Étape légendaire : tampon doré
+            </p>
+          )}
+          <p className="t-note mt-2 text-texte-2">
+            {e.tampon
+              ? 'Légendaire : sans ralenti ni indice, traductions, phrases à trou, phrases à construire et darija de mémoire.'
+              : 'Passer l’étape : un test de 10 questions sur ses mots ; réussi, il donne le tampon tout de suite.'}
+          </p>
         </section>
+        <GuideEtape index={vue.index} />
         <Section titre="Thèmes de l’étape">
           {e.etape.themes.map((t) => {
             const mots = MOTS.filter((m) => m.theme === t)
@@ -118,6 +181,7 @@ export function Parcours() {
             return <Ligne key={t} titre={THEMES.find((x) => x.id === t)?.titre ?? t} valeur={`${vus}/${mots.length}`} />
           })}
         </Section>
+        {verdict && <Alerte titre={verdict.titre} message={verdict.message} onAnnuler={() => setVerdict(null)} actions={[{ libelle: 'OK', action: () => setVerdict(null) }]} />}
       </Page>
     )
   }
@@ -227,5 +291,31 @@ function NoeudTresor({ ouvert, ouvrable, style, onClick }: { ouvert: boolean; ou
         {ouvert ? <Check className="h-6 w-6" strokeWidth={3} aria-hidden /> : ouvrable ? <Gem className="h-6 w-6" strokeWidth={2.4} aria-hidden /> : <Lock className="h-5 w-5" strokeWidth={2.4} aria-hidden />}
       </button>
     </div>
+  )
+}
+
+/** Guide de l'étape : mots clés à écouter et conseil de prononciation. */
+function GuideEtape({ index }: { index: number }) {
+  const MOTS = useMots()
+  const guide = guideDeLEtape(ETAPES[index], MOTS)
+  return (
+    <>
+      {guide.son && (
+        <Section titre="Guide : le son de l’étape">
+          <Ligne
+            tuile={<Tuile couleur="#af52de" texte={guide.son.latin} />}
+            titre={`${guide.son.latin} · ${guide.son.arabe}`}
+            sousTitre={guide.son.explication}
+            fin={guide.exemple ? <BoutonAudio chemin={guide.exemple.audio} arabe={guide.exemple.arabe} libelle="" /> : undefined}
+          />
+          {guide.exemple && <Ligne titre={guide.exemple.latin} sousTitre={`Pour l’entendre : ${guide.exemple.fr}`} />}
+        </Section>
+      )}
+      <Section titre="Guide : mots clés" note="Les premiers mots de chaque thème de l’étape, à écouter avant de commencer.">
+        {guide.cles.map((m) => (
+          <Ligne key={m.id} tuile={<Tuile icone={BookOpenText} couleur="#34c759" />} titre={<span className="font-semibold">{m.latin}</span>} sousTitre={m.fr} fin={<BoutonAudio chemin={m.audio} arabe={m.arabe} libelle="" />} />
+        ))}
+      </Section>
+    </>
   )
 }

@@ -1,12 +1,13 @@
 import { useLiveQuery } from 'dexie-react-hooks'
-import { BookOpenText, Coins, Flame, Headphones, MessagesSquare, Star, TriangleAlert } from 'lucide-react'
+import { BookOpenText, Coins, Flame, Gauge, Headphones, MessagesSquare, Star, TriangleAlert } from 'lucide-react'
 import { useState } from 'react'
 import { motsDuTheme } from '../../data'
 import { SONS } from '../../data/sons'
 import { PAIRES_SONS } from '../../data/pairesSons'
 import { THEMES } from '../../data/themes'
 import type { Mot } from '../../data/types'
-import { db } from '../../db/db'
+import { db, modifierProfil } from '../../db/db'
+import { TestNiveau } from '../onboarding/TestNiveau'
 import { useMarques } from '../../db/marques'
 import { useMots } from '../../db/motsPerso'
 import { DIRE_PAR_SESSION, composerSession, melanger } from '../../exercices/session'
@@ -48,6 +49,7 @@ type Vue =
   | { type: 'grammaire' }
   | { type: 'dialogues' }
   | { type: 'theme'; themeId: string }
+  | { type: 'test' }
 
 /** Une révision de favoris ou de mots difficiles reprend 8 mots au hasard. */
 const MOTS_PAR_REVISION = 8
@@ -75,7 +77,7 @@ export function Apprendre() {
   const { niveau, xpTotal } = useResume()
   const MOTS = useMots()
   const { solde } = usePorteMonnaie()
-  const { pot, espece } = useProfil()
+  const { pot, espece, testNiveau } = useProfil()
   const marques = useMarques()
   const progressions = useLiveQuery(() => db.progression.toArray(), []) ?? []
   const favoris = MOTS.filter((m) => marques.get(m.id)?.favori)
@@ -112,6 +114,7 @@ export function Apprendre() {
     )
   }
 
+  if (vue.type === 'test') return <TestNiveau onRetour={() => setVue({ type: 'accueil' })} />
   if (vue.type === 'dialogues') return <Dialogues onRetour={() => setVue({ type: 'accueil' })} />
   if (vue.type === 'grammaire') return <Grammaire onRetour={() => setVue({ type: 'accueil' })} />
   if (vue.type === 'sons') return <GuideSons onRetour={() => setVue({ type: 'accueil' })} />
@@ -157,6 +160,12 @@ export function Apprendre() {
   return (
     <Page titre="Apprendre" accessoire={<Serie />}>
       <AnnoncesDuJour />
+      {progressions.length === 0 && testNiveau === null && (
+        <Section titre="Tu connais déjà un peu de darija ?" note="Le test fait passer en révision les mots que tu connais : ils ne te seront pas présentés comme nouveaux.">
+          <Ligne tuile={<Tuile icone={Gauge} couleur="#5856d6" />} titre="Passer le test de niveau" sousTitre="3 questions par étape, 5 minutes au plus" chevron onClick={() => ouvrir({ type: 'test' })} />
+          <Ligne titre="Je débute" sousTitre="Commencer par le début du programme" chevron onClick={() => void modifierProfil({ testNiveau: 'refuse' })} />
+        </Section>
+      )}
       <CarteSessionDuJour onCommencer={() => void lancer()} />
       <QuetesDuJour />
 

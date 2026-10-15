@@ -1,5 +1,6 @@
 import { CircleCheck, CircleX, Snail, Volume2 } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { useLegendaire } from '../../ui/legendaire'
 import { jouer } from '../../audio/lecteur'
 import type { Mot } from '../../data/types'
 import { useProfil } from '../../db/useProfil'
@@ -19,6 +20,7 @@ interface Props {
 
 /** « Écoute et choisis » (audio → français) ou « Traduis » (français → darija). */
 export function Choix({ type, mot, choix, onRepondu, onPasMaintenant }: Props) {
+  const legendaire = useLegendaire()
   const { afficherArabe } = useProfil()
   const [choisi, setChoisi] = useState<string | null>(null)
 
@@ -45,14 +47,16 @@ export function Choix({ type, mot, choix, onRepondu, onPasMaintenant }: Props) {
           >
             <Volume2 className="h-10 w-10" strokeWidth={2.2} aria-hidden />
           </button>
-          <button
-            type="button"
-            onClick={() => jouer(mot.audio, mot.arabe, 0.75)}
-            className="pressable flex h-14 w-14 items-center justify-center rounded-full bg-accent-doux text-accent"
-            aria-label="Réécouter au ralenti"
-          >
-            <Snail className="h-6 w-6" strokeWidth={2.2} aria-hidden />
-          </button>
+          {!legendaire && (
+            <button
+              type="button"
+              onClick={() => jouer(mot.audio, mot.arabe, 0.75)}
+              className="pressable flex h-14 w-14 items-center justify-center rounded-full bg-accent-doux text-accent"
+              aria-label="Réécouter au ralenti"
+            >
+              <Snail className="h-6 w-6" strokeWidth={2.2} aria-hidden />
+            </button>
+          )}
         </div>
       ) : (
         <p className="t-titre-1 mb-[26px] rounded-liste bg-carte px-marge py-6 text-center">{mot.fr}</p>
