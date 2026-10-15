@@ -39,5 +39,23 @@
   "model_lookup": {
     "http_status": 200
   },
-  "run_id": "38761513169"
+  "realtime": {
+    "requested_model": "gpt-6-astra",
+    "interface": "realtime",
+    "tts_text": "weqqeʕ",
+    "maximum_responses": 1,
+    "attempted_responses": 0,
+    "audio_files_generated": 0,
+    "status": "api_rejected",
+    "linguistic_certification": false,
+    "confidence": null,
+    "rejection": {
+      "http_status": null,
+      "provider_code": "invalid_model",
+      "parameter": null,
+      "mentions_audio_limitation": false,
+      "mentions_model_limitation": true
+    }
+  },
+  "run_id": "38761821579"
 }
