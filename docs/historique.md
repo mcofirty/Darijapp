@@ -59,6 +59,7 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 | 2026-10-15 | Comparatif de dix entrées à trois voix : Jamal, ancien OpenAI et nouveau Realtime ; trente MP3, avis locaux et export, exercices conservés | `public/test-audio-trois-voix/` |
 
 | 2026-10-15 | Test ciblé du son 9 : cinq mots, dix nouveaux candidats Realtime et dix audios précédents conservés ; comparatif à quatre lecteurs sans activation | `public/test-audio-son-9/` |
+| 2026-10-15 | Vidéo de présentation (Remotion, 1080x1920, 30 i/s, 45 s) : six scènes (accroche, problème, révélation, démo dans un iPhone, bénéfices, appel à l'action) assemblées par `<Series>`, textes, couleurs et durées dans `video/src/config.ts` ; rendu MP4 en attente de validation | `video/` |
 
 ## Décisions
 
@@ -119,3 +120,4 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-15 : avatar et emojis retirés à la demande de l'utilisateur (« cela fait trop IA ») ; les dessins (mascotte, plante, carte, médailles, zellige) et les ★ typographiques du passeport restent ; champs `avatar` et `avatarFond` laissés en base sans migration, simplement plus lus.
 - 2026-10-15 : lumière des fonds du jardin par un filtre SVG `feColorMatrix` sur les objets et la plante (une matrice par fond, aucune en plein jour), plutôt que des couleurs propres à chaque fond : un seul dessin par objet.
 - 2026-10-15 : pendant le balayage entre onglets, la lentille est déplacée par un simple abonnement exporté de `BarreOnglets` (`placerLentille`), pas par un état d'`App` qui redessinerait tout l'onglet à chaque mouvement ; l'onglet voisin n'est pas affiché pendant le geste (la carte du Parcours serait lourde à garder montée en parallèle).
+- 2026-10-15 : vidéo dans un projet Remotion séparé (`video/`, ses propres dépendances) et police Inter embarquée (licence OFL) : l'appli reste intacte et le rendu ne dépend pas de Google Fonts, injoignable depuis le navigateur de rendu de l'environnement cloud

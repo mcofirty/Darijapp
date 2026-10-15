@@ -39,6 +39,7 @@ Ne modifie jamais cette section sans demande explicite.
 npm run dev                         # serveur local (http://localhost:5173/Darijapp/)
 npm test                            # tests Vitest
 npm run build                       # build de production dans dist/
+cd video && npm run dev             # vidéo de présentation (Remotion Studio)
 python scripts/generate_audio.py    # génère les MP3 manquants avec Azure (clés en variables d'environnement ; options --theme, --force, --apercu, --moteur mms)
 ```
 
@@ -73,6 +74,7 @@ src/
   data/           un fichier JSON par thème, liste des thèmes, sons du darija, paires de sons (`sons/paires.json`), grammaire, dialogues et histoires (`parler/`), phrases de la mascotte (`jeux/mascotte.json`)
 scripts/
   generate_audio.py, modele/ (export du modèle de sons, voix de test)
+video/            vidéo de présentation (Remotion), textes dans src/config.ts
 public/audio/     MP3 générés par l'Action (voix Jamal) ; public/modele/ : modèle de sons (ONNX int8 en morceaux, `xlsr.json`)
 docs/
   cahier-des-charges.md   demande d'origine
