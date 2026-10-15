@@ -46,6 +46,7 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 | 2026-10-15 | Correctif : pastille du combo (« 5 d'affilée ! ») placée sous « Bravo ! » au lieu de l'écraser sur la même ligne | `src/features/session/Session.tsx` |
 | 2026-10-15 | Accueil d'Apprendre resserré (6 écrans → moins de 2) : quêtes en une carte repliable, grille « Pratiquer » de 6 tuiles, niveau en une ligne, thèmes en carrousel (en cours d'abord) et page « Thèmes » par étape avec recherche ; défi du mois, mustawa et souk laissés à Progrès | `src/features/apprendre/BlocsAccueil.tsx`, `src/features/apprendre/TousLesThemes.tsx`, `src/features/jeu/QuetesDuJour.tsx`, `src/exercices/selections.ts`, `src/ui/ChampRecherche.tsx` |
 | 2026-10-15 | Carte illustrée du Parcours : sol qui suit le voyage du nord vert au désert, monument de chaque ville, Atlas, rivière, décor semé par région (graine fixe), étapes et trésors en relief, crépuscule en mode sombre | `src/features/parcours/CarteMaroc.tsx`, `src/features/parcours/decor.ts`, `src/features/parcours/Parcours.tsx`, `src/index.css` |
+| 2026-10-15 | Parcours en plein écran : carte d'un bord à l'autre, sous l'heure et sous la barre d'onglets, à la largeur réelle de l'écran ; titre et passeport flottants en haut | `src/features/parcours/Parcours.tsx` |
 
 ## Décisions
 

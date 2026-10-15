@@ -1,6 +1,6 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import { BookOpenText, Check, Crown, Gem, Lock, MapPin, Stamp, Swords } from 'lucide-react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { PAIRES_SONS } from '../../data/pairesSons'
 import { THEMES } from '../../data/themes'
 import { db, modifierProfil } from '../../db/db'
@@ -25,10 +25,23 @@ import { CarteMaroc } from './CarteMaroc'
 const DECALAGES = [0, 70, 100, 70, 0, -70, -100, -70]
 const HAUTEUR_ETAPE = 128
 const HAUTEUR_TRESOR = 88
-/** Largeur de référence de la carte : sur un écran plus étroit, tout se resserre à la même échelle. */
-const LARGEUR = 360
-/** Marge en haut et en bas de la carte, pour la pastille « Prochaine étape » et la dernière étiquette. */
-const MARGE_CARTE = 40
+/** Largeur la plus grande de la carte (celle du contenu des autres onglets, `max-w-xl`). */
+const LARGEUR_MAX = 576
+/** Haut de la carte, sous l'heure et la barre du titre ; bas, sous la barre d'onglets. */
+const MARGE_HAUT = 150
+const MARGE_BAS = 170
+
+/** Largeur de l'écran, suivie à la rotation et au redimensionnement : la carte occupe toute la largeur. */
+function useLargeurEcran(): number {
+  const lire = () => Math.min(window.innerWidth, LARGEUR_MAX)
+  const [largeur, setLargeur] = useState(lire)
+  useEffect(() => {
+    const suivre = () => setLargeur(lire())
+    window.addEventListener('resize', suivre)
+    return () => window.removeEventListener('resize', suivre)
+  }, [])
+  return largeur
+}
 
 type Vue = { type: 'carte' } | { type: 'etape'; index: number } | { type: 'passeport' }
 
@@ -186,61 +199,99 @@ export function Parcours() {
     )
   }
 
+  return (
+    <CartePleinEcran
+      etats={etats}
+      conseillee={conseillee}
+      ouverts={ouverts}
+      tampons={tampons}
+      gain={gain}
+      onEtape={(index) => setVue({ type: 'etape', index })}
+      onPasseport={() => setVue({ type: 'passeport' })}
+      onTresor={(index) => void ouvrir(index)}
+    />
+  )
+}
+
+interface PropsCarte {
+  etats: EtatEtape[]
+  conseillee: number | null
+  ouverts: Set<string>
+  tampons: number
+  gain: string | null
+  onEtape: (index: number) => void
+  onPasseport: () => void
+  onTresor: (index: number) => void
+}
+
+/**
+ * La carte occupe tout l'écran, d'un bord à l'autre et du haut (sous l'heure) jusque sous la barre d'onglets.
+ * Le titre et le passeport flottent par-dessus, en haut.
+ */
+function CartePleinEcran({ etats, conseillee, ouverts, tampons, gain, onEtape, onPasseport, onTresor }: PropsCarte) {
+  const largeur = useLargeurEcran()
   // Positions des nœuds sur la carte : une étape, puis un trésor, et ainsi de suite.
   const noeuds: { type: 'etape' | 'tresor'; index: number; y: number; x: number }[] = []
-  let y = MARGE_CARTE
+  let y = MARGE_HAUT
   ETAPES.forEach((_, i) => {
-    noeuds.push({ type: 'etape', index: i, y: y + 44, x: DECALAGES[(2 * i) % DECALAGES.length] })
+    noeuds.push({ type: 'etape', index: i, y: y + 44, x: largeur / 2 + DECALAGES[(2 * i) % DECALAGES.length] })
     y += HAUTEUR_ETAPE
     if (i < ETAPES.length - 1) {
-      noeuds.push({ type: 'tresor', index: i, y: y + 30, x: DECALAGES[(2 * i + 1) % DECALAGES.length] })
+      noeuds.push({ type: 'tresor', index: i, y: y + 30, x: largeur / 2 + DECALAGES[(2 * i + 1) % DECALAGES.length] })
       y += HAUTEUR_TRESOR
     }
   })
-  y += MARGE_CARTE
-  const points = noeuds.map((n) => ({ x: LARGEUR / 2 + n.x, y: n.y }))
-  const pointsEtapes = noeuds.filter((n) => n.type === 'etape').map((n) => ({ x: LARGEUR / 2 + n.x, y: n.y }))
+  y += MARGE_BAS
+  const pointsEtapes = noeuds.filter((n) => n.type === 'etape')
 
   return (
-    <Page titre="Parcours">
-      <Section>
-        <Ligne
-          tuile={<Tuile icone={Stamp} couleur="#c1272d" />}
-          titre="Mon passeport"
-          sousTitre={`${tampons} tampon${tampons > 1 ? 's' : ''} sur ${ETAPES.length} · ${ouverts.size} trésor${ouverts.size > 1 ? 's' : ''}`}
-          chevron
-          onClick={() => setVue({ type: 'passeport' })}
-        />
-      </Section>
-      {gain && (
-        <p className="t-appel mb-4 rounded-liste bg-vert-doux px-marge py-3 font-semibold text-vert" role="status">
-          {gain}
-        </p>
+    // -mb-32 : la carte descend sous la barre d'onglets, à la place de la marge du bas de l'appli.
+    <div className="relative mx-auto -mb-32 w-full overflow-hidden" style={{ height: y, maxWidth: LARGEUR_MAX }}>
+      <CarteMaroc noeuds={noeuds} etapes={pointsEtapes} largeur={largeur} hauteur={y} />
+      {noeuds.map((n) =>
+        n.type === 'etape' ? (
+          <NoeudEtape
+            key={`e${n.index}`}
+            etat={etats[n.index]}
+            conseillee={n.index === conseillee}
+            style={{ left: n.x, top: n.y }}
+            onClick={() => onEtape(n.index)}
+          />
+        ) : (
+          <NoeudTresor
+            key={`t${n.index}`}
+            ouvert={ouverts.has(cleTresor(n.index))}
+            ouvrable={tresorOuvrable(n.index, etats, ouverts)}
+            style={{ left: n.x, top: n.y }}
+            onClick={() => onTresor(n.index)}
+          />
+        ),
       )}
-      {/* Carte illustrée : le sol change avec le voyage, du nord vert au désert. */}
-      <div className="relative mx-auto mb-10 w-full overflow-hidden rounded-[32px]" style={{ height: y, maxWidth: LARGEUR }}>
-        <CarteMaroc noeuds={points} etapes={pointsEtapes} largeur={LARGEUR} hauteur={y} />
-        {noeuds.map((n) =>
-          n.type === 'etape' ? (
-            <NoeudEtape
-              key={`e${n.index}`}
-              etat={etats[n.index]}
-              conseillee={n.index === conseillee}
-              style={{ left: `${((LARGEUR / 2 + n.x) / LARGEUR) * 100}%`, top: n.y }}
-              onClick={() => setVue({ type: 'etape', index: n.index })}
-            />
-          ) : (
-            <NoeudTresor
-              key={`t${n.index}`}
-              ouvert={ouverts.has(cleTresor(n.index))}
-              ouvrable={tresorOuvrable(n.index, etats, ouverts)}
-              style={{ left: `${((LARGEUR / 2 + n.x) / LARGEUR) * 100}%`, top: n.y }}
-              onClick={() => void ouvrir(n.index)}
-            />
-          ),
+      {/* Titre et passeport, qui restent en haut pendant le défilement. */}
+      <header className="fixed inset-x-0 top-0 z-10 pt-[calc(env(safe-area-inset-top)+0.5rem)]">
+        <div className="mx-auto flex max-w-xl items-center justify-between gap-3 px-marge">
+          <h1 className="t-titre-1 rounded-full bg-[#fffaf0]/95 px-4 py-1 font-bold text-[#1b1918] shadow-[0_2px_8px_-2px_rgba(60,40,10,0.35)]">Parcours</h1>
+          <button
+            type="button"
+            onClick={onPasseport}
+            aria-label={`Mon passeport : ${tampons} tampon${tampons > 1 ? 's' : ''} sur ${ETAPES.length}, ${ouverts.size} trésor${ouverts.size > 1 ? 's' : ''}`}
+            className="verre pressable flex h-11 items-center gap-2 rounded-full pl-1.5 pr-3.5"
+          >
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#c1272d] text-white" aria-hidden>
+              <Stamp className="h-[18px] w-[18px]" strokeWidth={2.2} />
+            </span>
+            <span className="t-appel font-semibold tabular-nums">
+              {tampons}/{ETAPES.length}
+            </span>
+          </button>
+        </div>
+        {gain && (
+          <p className="t-appel mx-auto mt-2 w-fit max-w-[calc(100%-40px)] rounded-full bg-[#fffaf0]/95 px-4 py-2 text-center font-semibold text-[#0b7a50] shadow-[0_2px_8px_-2px_rgba(60,40,10,0.35)]" role="status">
+            {gain}
+          </p>
         )}
-      </div>
-    </Page>
+      </header>
+    </div>
   )
 }
 
