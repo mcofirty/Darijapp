@@ -7,6 +7,7 @@ import type { Etape } from '../../exercices/session'
 import { Bouton } from '../../ui/Boutons'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
+import { PhraseTouchable } from '../../ui/PhraseTouchable'
 import { BoutonAudio } from '../mots/BoutonAudio'
 import { Session } from '../session/Session'
 
@@ -91,7 +92,7 @@ function LigneForme({ forme }: { forme: FormeGrammaire }) {
     <Ligne
       titre={
         <span className="block">
-          <span className="block font-semibold">{forme.latin}</span>
+          <PhraseTouchable latin={forme.latin} className="block font-semibold" />
           {afficherArabe && (
             <span className="arabe block text-left text-[1.15rem] text-texte-2" dir="rtl" lang="ar">
               {forme.arabe}

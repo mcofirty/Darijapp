@@ -50,6 +50,7 @@ export function finDePause(maintenant: number): number {
 export function adapterEtapes(etapes: Etape[], modes: Modes): Etape[] {
   return etapes.flatMap((e): Etape[] => {
     if (e.type === 'disle' && !modes.parler) return []
+    if (e.type === 'trou' && e.oral && !modes.parler) return [{ ...e, oral: false }]
     if (e.type === 'distingue' && !modes.ecouter) return []
     if (e.type === 'ecoute' && !modes.ecouter) return [{ ...e, type: 'traduis' }]
     return [e]

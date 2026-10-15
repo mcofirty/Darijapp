@@ -2,6 +2,7 @@ import type { MotSon, PaireSons } from '../data/pairesSons'
 import { sonsDuMot } from '../data/sons'
 import type { Mot } from '../data/types'
 import { morceauxDePhrase, phraseConstructible } from './phrases'
+import { questionTrou, trouPossible } from './trou'
 
 /** Moteur d'exercices (logique pure) : compose une session et suit ses résultats. */
 
@@ -19,6 +20,8 @@ export type Etape =
   | { type: 'disle'; mot: Mot; inverse?: boolean; phrase?: boolean }
   /** Construis la phrase : on remet dans l'ordre les mots de l'exemple du mot (avec des intrus). */
   | { type: 'phrase'; mot: Mot; morceaux: string[] }
+  /** Phrase à trou : l'exemple du mot sans le mot, à choisir parmi 4 (écrit) ou à dire (oral). */
+  | { type: 'trou'; mot: Mot; morceaux: string[]; trou: number; choix: string[]; oral: boolean }
 
 export type Aleatoire = () => number
 
@@ -79,6 +82,8 @@ export interface OptionsSession {
    * darija ») : le retrouver quelques minutes après l'avoir appris l'ancre mieux que de le relire.
    */
   rappel?: boolean
+  /** Ajoute une phrase à trou (sur une révision, sinon un nouveau mot), une fois sur deux à l'oral. */
+  trou?: boolean
 }
 
 /** Une question « Construis la phrase » sur l'exemple du mot. */
@@ -122,6 +127,10 @@ export function composerSession(
     const pourPhrase = melange.find(phraseConstructible) ?? nouveaux.find(phraseConstructible)
     if (pourPhrase) etapes.push(questionPhrase(pourPhrase, tous, alea))
   }
+  if (options.trou) {
+    const pourTrou = melange.find((m) => trouPossible(m) && !etapes.some((e) => e.type === 'phrase' && e.mot === m)) ?? nouveaux.find(trouPossible)
+    if (pourTrou) etapes.push(questionTrou(pourTrou, tous, alea, alea() < 0.5))
+  }
   const inverse = melange.find((m) => options.connus?.has(m.id) && !dits.includes(m))
   if (inverse) etapes.push({ type: 'disle', mot: inverse, inverse: true })
   if (options.rappel && nouveaux.length > 0) etapes.push({ type: 'disle', mot: nouveaux[0], inverse: true })
@@ -136,6 +145,7 @@ export function etapeARefaire(etape: Etape, tous: Mot[], alea: Aleatoire = Math.
   }
   if (etape.type === 'distingue') return questionDistingue(etape.paire, alea)
   if (etape.type === 'phrase') return questionPhrase(etape.mot, tous, alea)
+  if (etape.type === 'trou' && !etape.oral) return questionTrou(etape.mot, tous, alea)
   return null
 }
 

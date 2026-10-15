@@ -95,7 +95,7 @@ export function Apprendre() {
   /** Entraînement libre sur une liste : il ne change pas la répétition espacée. */
   function reviser(mots: Mot[]) {
     const choisis = melanger(mots).slice(0, MOTS_PAR_REVISION)
-    setSession({ etapes: composerSession([], choisis, MOTS, Math.random, PAIRES_SONS, DIRE_PAR_SESSION, { phrase: true }), nouveaux: 0, entrainement: true })
+    setSession({ etapes: composerSession([], choisis, MOTS, Math.random, PAIRES_SONS, DIRE_PAR_SESSION, { phrase: true, trou: true }), nouveaux: 0, entrainement: true })
     setNumero((n) => n + 1)
   }
 

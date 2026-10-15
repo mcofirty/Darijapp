@@ -11,6 +11,7 @@ import { MOTIFS } from '../../exercices/selections'
 import { Alerte } from '../../ui/Alerte'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
 import { ForceMot } from '../../ui/ForceMot'
+import { PhraseTouchable } from '../../ui/PhraseTouchable'
 import { Page } from '../../ui/Page'
 import { BoutonAudio } from './BoutonAudio'
 import { BandeZellige, useZellige } from '../../ui/zellige'
@@ -67,7 +68,7 @@ export function FicheMot({ mot, retour }: Props) {
       {mot.exemple.latin && (
       <Section titre="Exemple">
         <Ligne
-          titre={<span className="font-semibold">{mot.exemple.latin}</span>}
+          titre={<PhraseTouchable latin={mot.exemple.latin} className="font-semibold" />}
           sousTitre={
             <>
               {afficherArabe && (

@@ -19,6 +19,8 @@ import { Decouverte } from './Decouverte'
 import { DisLe, type ResultatDire } from './DisLe'
 import { Distingue } from './Distingue'
 import { Paires } from './Paires'
+import { Trou } from './Trou'
+import { PhraseTouchable } from '../../ui/PhraseTouchable'
 import { RemplissageBarre } from '../../ui/zellige'
 
 interface Props {
@@ -164,6 +166,8 @@ function SessionEnCours({ etapes: depart, nouveaux, entrainement, activite, onFe
 
   // Dernière étape passée (« Je ne peux pas… maintenant ») : le bilan arrive.
   if (!etape) return <div data-sans-balayage className="fixed inset-0 z-30 bg-fond" />
+  // Étape à dire (Dis-le, phrase à trou à l'oral) : validée par « Continuer » une fois le résultat affiché.
+  const aDire = etape.type === 'disle' || (etape.type === 'trou' && etape.oral)
 
   return (
     <div data-sans-balayage className="fixed inset-0 z-30 flex flex-col bg-fond">
@@ -222,6 +226,28 @@ function SessionEnCours({ etapes: depart, nouveaux, entrainement, activite, onFe
               onPasMaintenant={() => pasMaintenant('parler')}
             />
           )}
+          {etape.type === 'trou' && !etape.oral && (
+            <Trou mot={etape.mot} morceaux={etape.morceaux} trou={etape.trou} choix={etape.choix} onRepondu={(j) => repondre(j, etape.mot, etape.mot.id)} />
+          )}
+          {etape.type === 'trou' && etape.oral && (
+            <DisLe
+              mot={etape.mot}
+              inverse
+              titre="Phrase à trou"
+              consigne="Dis à voix haute le mot qui manque."
+              enonce={
+                <div className="mb-3">
+                  <p className="t-titre-2 leading-snug">
+                    <PhraseTouchable latin={etape.morceaux.join(' ')} trou={etape.trou} />
+                  </p>
+                  <p className="t-sous-titre mt-2 text-texte-2">{etape.mot.exemple.fr}</p>
+                </div>
+              }
+              onPret={setDire}
+              onRepondu={(r) => valider(etape.mot, r)}
+              onPasMaintenant={() => pasMaintenant('parler')}
+            />
+          )}
           {etape.type === 'phrase' && (
             <Construis mot={etape.mot} morceaux={etape.morceaux} onRepondu={(j) => repondre(j, etape.mot.exemple, etape.mot.id)} />
           )}
@@ -243,7 +269,7 @@ function SessionEnCours({ etapes: depart, nouveaux, entrainement, activite, onFe
         </div>
       </div>
 
-      {(retour !== null || etape.type === 'decouverte' || (etape.type === 'disle' && dire)) && (
+      {(retour !== null || etape.type === 'decouverte' || (aDire && dire)) && (
         <div className="px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2">
           {/* Panneau de commandes en Liquid Glass : il s'ouvre pour donner le résultat. */}
           <div className="verre mx-auto max-w-xl rounded-panneau p-3">
@@ -274,7 +300,7 @@ function SessionEnCours({ etapes: depart, nouveaux, entrainement, activite, onFe
             <Bouton
               grand
               className={`w-full ${retour?.juste || dire?.juste ? '!bg-vert-plein' : ''}`}
-              onClick={() => (etape.type === 'disle' && dire ? valider(etape.mot, dire) : void suivant())}
+              onClick={() => (aDire && dire ? valider(etape.mot, dire) : void suivant())}
             >
               Continuer
             </Bouton>

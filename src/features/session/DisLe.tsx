@@ -1,5 +1,5 @@
 import { Ear, Eye, Lightbulb, RotateCcw, Volume2 } from 'lucide-react'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { jouer, jouerAuto } from '../../audio/lecteur'
 import { modelePresent, noterParSons, ouvrirModele } from '../../audio/modeleSons'
 import { SILENCE_MOT, SILENCE_PHRASE, decoder16k, enregistrer, microDisponible, preparerMicro, referenceDuMot, rejouer, type Enregistrement } from '../../audio/micro'
@@ -13,6 +13,7 @@ import { ajouterReglage, appreciation, decalageVoix, distanceEssai, scoreDeDista
 import { SEUIL_SON, sonRate, type DetailSon } from '../../scoring/sons/prononciation'
 import { AnneauScore } from '../../ui/AnneauScore'
 import { BoutonMicro } from '../../ui/BoutonMicro'
+import { PhraseTouchable } from '../../ui/PhraseTouchable'
 import { Bouton } from '../../ui/Boutons'
 import { BoutonAudio } from '../mots/BoutonAudio'
 import { PasMaintenant } from './PasMaintenant'
@@ -34,6 +35,8 @@ interface Props {
   phrase?: boolean
   /** Titre et consigne à la place de « Dis-le » (dialogues). */
   titre?: string
+  /** Mode inverse : ce qui est montré à la place du français (phrase à trou à l'oral). */
+  enonce?: ReactNode
   consigne?: string
   /** Résultat prêt à valider (le bouton « Continuer » apparaît), ou null pendant un nouvel essai. */
   onPret: (r: ResultatDire | null) => void
@@ -56,7 +59,7 @@ type Etat =
  * Dis-le : on écoute le mot, on le dit, et le score compare à la voix de Jamal.
  * En mode inverse, on part du français : rien n'est lu avant l'essai, un indice donne le début.
  */
-export function DisLe({ mot, inverse = false, phrase = false, titre, consigne, onPret, onRepondu, onPasMaintenant }: Props) {
+export function DisLe({ mot, inverse = false, phrase = false, titre, consigne, enonce, onPret, onRepondu, onPasMaintenant }: Props) {
   const profil = useProfil()
   const [etat, setEtat] = useState<Etat>({ type: 'pret' })
   const [niveau, setNiveau] = useState(0)
@@ -176,10 +179,10 @@ export function DisLe({ mot, inverse = false, phrase = false, titre, consigne, o
               : `Écoute, puis dis ${cible} à voix haute.`)}
       </p>
       <div className="mb-6 rounded-liste bg-carte px-marge py-5 text-center">
-        {inverse && <p className="t-titre-2 mb-3">{mot.fr}</p>}
+        {inverse && (enonce ?? <p className="t-titre-2 mb-3">{mot.fr}</p>)}
         {montre ? (
           <>
-            <p className={phrase ? 't-titre-2' : 't-titre-1'}>{mot.latin}</p>
+            <p className={phrase ? 't-titre-2' : 't-titre-1'}>{phrase ? <PhraseTouchable latin={mot.latin} /> : mot.latin}</p>
             {profil.afficherArabe && (
               <p className={`arabe mt-1 leading-tight ${phrase ? 'text-[1.6rem]' : 'text-[2rem]'}`} dir="rtl" lang="ar">
                 {mot.arabe}

@@ -40,6 +40,10 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-15 | Comparatif OpenAI de 50 entrées avec notation cachée, 49 nouveaux fichiers et candidat préféré conservé ; 100 MP3 avant/après, avis locaux et export | `public/test-audio-openai-50/` |
 
+| 2026-10-13 | Façon Duolingo (1) : force du mot, mustawa d nnbta, gel et réparation de la série, double XP, combo, défi du mois, bilan de la semaine | `src/gamification/serie.ts`, `src/gamification/combo.ts`, `src/gamification/defis.ts`, `src/gamification/semaine.ts`, `src/db/serie.ts`, `src/features/jeu/Motivation.tsx`, `src/ui/ForceMot.tsx` |
+
+| 2026-10-15 | Façon Duolingo (2) : phrase à trou (écrite ou dite) et indice au toucher (traduction d'un mot dans les phrases en darija) | `src/exercices/trou.ts`, `src/exercices/glossaire.ts`, `src/features/session/Trou.tsx`, `src/ui/PhraseTouchable.tsx` |
+
 ## Décisions
 
 
