@@ -1,0 +1,18 @@
+{
+  "status": "ready",
+  "model": "gpt-realtime-2.1",
+  "voice": "cedar",
+  "new_candidates": 10,
+  "retained_audio_files": 20,
+  "maximum_new_responses": 10,
+  "linguistic_certification": false,
+  "run_id": "38780274475",
+  "http_check": {
+    "url": "https://mcofirty.github.io/Darijapp/test-audio-trois-voix/",
+    "review_id": "251c0ad12aecba178742f3e6243bb385d3560cb221b94900df4d3b5062d11cd1",
+    "status": "passed",
+    "entries": 10,
+    "audio_files_checked": 30,
+    "linguistic_certification": false
+  }
+}
