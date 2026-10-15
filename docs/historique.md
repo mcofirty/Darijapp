@@ -72,6 +72,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-15 | Test réel de compatibilité audio Astra préparé : accès au modèle et deux interfaces sur un mot, plafond de deux requêtes, sans substitution ni activation | `scripts/openai_tts/astra_probe.py`, `.github/workflows/openai-astra-probe.yml` |
 
+| 2026-10-15 | Premiers tests Astra réels : accès modèle confirmé, TTS 404 et sortie audio conversationnelle 400 ; vérification Realtime ajoutée sans rejouer ces requêtes | `scripts/openai_tts/astra_realtime_probe.py`, `docs/openai-tts/astra-probe-status.json` |
+
 ## Décisions
 
 - 2026-10-14 : contrôle HTTP réussi sur la page, les scripts et les 100 MP3 (50 avant/après) ; distinguer la disponibilité du test de l'avancement du corpus complet, dont les jobs sont observés sans interrompre les calculs.
@@ -171,3 +173,5 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-15 : avis du comparatif de 50 partiel et décision globale en attente ; distinguer les votes de préférence et les réserves de qualité (six débit/naturel, un accent anglais). Conserver les commentaires bruts hors dépôt public et Jamal active ; aucune génération massive ni activation déduite.
 
 - 2026-10-15 : demande explicite de tests du moteur Astra ; tester le modèle exact gpt-6-astra avec une entrée consonantique cachée et deux interfaces API au maximum. En cas de refus, rendre le diagnostic d’accès/compatibilité sans fabriquer de comparatif ni substituer un autre modèle.
+
+- 2026-10-15 : le modèle Astra étant accessible mais les deux interfaces HTTP n’ayant renvoyé aucun audio, vérifier également Realtime avec une session et une seule réponse au maximum. Réutiliser les diagnostics HTTP en cache et refuser toute substitution de modèle.

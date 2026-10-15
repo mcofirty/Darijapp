@@ -296,3 +296,18 @@ Un audio réel éventuel est conservé hors public et contrôlé techniquement ;
 un comparatif plus large ne sera préparé que si la sortie fonctionne.
 Un refus d’API ne mesure pas la qualité de l’accent et ne prouve pas l’absence
 d’Astra dans toutes les offres OpenAI. Jamal reste active.
+
+
+Premiers résultats réels (`38760813825`, 1 min 22 s) : accès aux métadonnées
+Astra réussi (HTTP 200), synthèse `/audio/speech` refusée (404),
+`/chat/completions` avec sortie audio refusée (400, paramètre `modalities`).
+Zéro audio, donc aucune évaluation de l’accent possible à cette étape.
+
+Le modèle étant bien visible, une dernière interface est vérifiée : Realtime,
+avec `gpt-6-astra` exactement, une connexion et une seule réponse maximum sur
+weqqeʕ si la session accepte la sortie audio. Les diagnostics HTTP précédents
+sont restaurés du cache et ne sont pas rejoués. Un refus de session ne provoque
+aucune génération. Pas de redirection WebSocket avec la clé, pas de logs bruts
+d’erreur, pas de retry après une issue incertaine ni de substitution par Realtime 2.1.
+Le test positif local utilise un signal synthétique dans un dossier temporaire
+uniquement ; il n’est jamais publié comme échantillon d’Astra.

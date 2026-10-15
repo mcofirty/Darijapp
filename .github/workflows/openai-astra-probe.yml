@@ -23,15 +23,19 @@ jobs:
           key: astra-audio-probe-v1-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: astra-audio-probe-v1-
       - name: Tester l’identité du modèle, le plafond et l’absence de retry
-        run: python -m unittest discover -s scripts/openai_tts -p 'test_astra_probe.py'
+        run: python -m unittest discover -s scripts/openai_tts -p 'test_astra*.py'
       - run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq --no-install-recommends ffmpeg
-          python -m pip install numpy==2.2.6
+          python -m pip install numpy==2.2.6 websocket-client==1.8.0
       - name: Vérifier le modèle puis essayer un mot sur deux interfaces au maximum
         env:
           DARIJA_TTS_KEY: ${{ secrets.DARIJA_TTS_KEY || secrets.OPENAI_API_KEY }}
         run: python scripts/openai_tts/astra_probe.py
+      - name: Vérifier aussi Realtime avec Astra, une réponse maximum
+        env:
+          DARIJA_TTS_KEY: ${{ secrets.DARIJA_TTS_KEY || secrets.OPENAI_API_KEY }}
+        run: python scripts/openai_tts/astra_realtime_probe.py
       - uses: actions/cache/save@v4
         if: always()
         with:
@@ -53,6 +57,11 @@ jobs:
           import json,pathlib,subprocess,base64,os
           path=pathlib.Path('artifacts/astra-probe/status.json')
           result=json.loads(path.read_text()) if path.exists() else {'status':'setup_failed','requested_model':'gpt-6-astra'}
+          realtime=path.parent/'realtime-status.json'
+          if realtime.exists():
+              result['realtime']=json.loads(realtime.read_text())
+              result['audio_files_generated']=result.get('audio_files_generated',0)+result['realtime']['audio_files_generated']
+              if result['realtime']['status']=='audio_ready_for_pilot':result['status']='audio_ready_via_realtime'
           result['run_id']=os.environ['RUN_ID']
           target='repos/mcofirty/Darijapp/contents/docs/openai-tts/astra-probe-status.json'
           body={'branch':'feat/hadra-tts','message':'docs: relève les tests réels de sortie audio Astra',
