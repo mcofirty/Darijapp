@@ -70,6 +70,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-15 | Avis partiel des 50 entrées vérifié : 20 préférences OpenAI dont 7 avec réserves, 3 Jamal, 1 à revoir, 26 sans vote ; problèmes de débit/naturel et accent distingués | `docs/openai-tts/fifty-feedback.json` |
 
+| 2026-10-15 | Test réel de compatibilité audio Astra préparé : accès au modèle et deux interfaces sur un mot, plafond de deux requêtes, sans substitution ni activation | `scripts/openai_tts/astra_probe.py`, `.github/workflows/openai-astra-probe.yml` |
+
 ## Décisions
 
 - 2026-10-14 : contrôle HTTP réussi sur la page, les scripts et les 100 MP3 (50 avant/après) ; distinguer la disponibilité du test de l'avancement du corpus complet, dont les jobs sont observés sans interrompre les calculs.
@@ -167,3 +169,5 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-15 : publication des 50 entrées réussie (Pages `38665785482`) ; génération et contrôle HTTP `38665517802` réussis, cent MP3 et ressources servis à l’identique. Avis utilisateur attendu, sans activation dans les exercices.
 
 - 2026-10-15 : avis du comparatif de 50 partiel et décision globale en attente ; distinguer les votes de préférence et les réserves de qualité (six débit/naturel, un accent anglais). Conserver les commentaires bruts hors dépôt public et Jamal active ; aucune génération massive ni activation déduite.
+
+- 2026-10-15 : demande explicite de tests du moteur Astra ; tester le modèle exact gpt-6-astra avec une entrée consonantique cachée et deux interfaces API au maximum. En cas de refus, rendre le diagnostic d’accès/compatibilité sans fabriquer de comparatif ni substituer un autre modèle.

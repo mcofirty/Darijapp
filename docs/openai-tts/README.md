@@ -276,3 +276,23 @@ pas la correction d’un accent. La suite recommandée porte sur ces problèmes
 ciblés, en conservant les autres candidats et la voix Jamal des exercices.
 Aucune nouvelle synthèse, certification linguistique ou activation n’est déduite
 de cet avis partiel.
+
+
+## Vérification réelle du candidat Astra
+
+L’utilisateur demande explicitement des essais audio avec Astra. Le SDK ne le
+référençant pas parmi les moteurs TTS/Realtime consultés, `astra_probe.py`
+commence par une requête de métadonnées `/v1/models/gpt-6-astra`, puis essaie au
+plus **deux POST** sur un seul mot : `/v1/audio/speech`, puis
+`/v1/chat/completions` avec sortie audio explicite si la première interface
+refuse définitivement la requête. Le modèle reste exactement `gpt-6-astra`,
+Cedar demandée, input `weqqeʕ` ; aucun autre modèle n’est substitué.
+
+Pas de retry après délai dépassé, réponse acceptée ou issue incertaine. Une
+relance conserve le résultat du diagnostic au lieu de répéter les appels.
+Les erreurs ne conservent que statut, code autorisé, paramètre et indicateurs
+de limitation ; ni corps/messages externes, ni en-têtes, ni clé ne sont publiés.
+Un audio réel éventuel est conservé hors public et contrôlé techniquement ;
+un comparatif plus large ne sera préparé que si la sortie fonctionne.
+Un refus d’API ne mesure pas la qualité de l’accent et ne prouve pas l’absence
+d’Astra dans toutes les offres OpenAI. Jamal reste active.
