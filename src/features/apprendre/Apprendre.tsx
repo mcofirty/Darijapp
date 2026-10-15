@@ -1,5 +1,5 @@
 import { useLiveQuery } from 'dexie-react-hooks'
-import { BookMarked, BookOpenText, Coins, Flame, Gauge, Headphones, MessagesSquare, Star, TriangleAlert } from 'lucide-react'
+import { BookMarked, BookOpenText, Coins, Gauge, Headphones, MessagesSquare, Star, TriangleAlert } from 'lucide-react'
 import { useState } from 'react'
 import { motsDuTheme } from '../../data'
 import { SONS } from '../../data/sons'
@@ -39,6 +39,8 @@ import { LECONS_GRAMMAIRE } from '../../exercices/grammaire'
 import { GuideSons } from './GuideSons'
 import { ListeSpeciale } from './ListeSpeciale'
 import { useZellige } from '../../ui/zellige'
+import { Flamme } from '../../ui/recompenses'
+import { CarteNiveau } from '../jeu/CarteNiveau'
 
 type Vue =
   | { type: 'accueil' }
@@ -57,15 +59,15 @@ type Vue =
 /** Une révision de favoris ou de mots difficiles reprend 8 mots au hasard. */
 const MOTS_PAR_REVISION = 8
 
-/** Pastille de série, à droite du grand titre. */
+/** Pastille de série, à droite du grand titre : la flamme grandit avec la série, ternie tant qu'elle n'est pas sécurisée. */
 function Serie() {
   const { serie } = useResume()
   return (
     <span
-      className={`t-appel inline-flex items-center gap-1 px-3 py-1 font-semibold ${serie.aujourdhui ? 'text-accent' : 'text-texte-2'}`}
-      aria-label={`Série : ${serie.jours} jours`}
+      className={`t-appel inline-flex items-center gap-1 px-3 py-1 font-semibold tabular-nums ${serie.aujourdhui ? 'text-energie' : 'text-texte-2'}`}
+      aria-label={`Série : ${serie.jours} jours${serie.aujourdhui ? ', sécurisée aujourd’hui' : ''}`}
     >
-      <Flame className="h-4 w-4" strokeWidth={2.5} fill={serie.aujourdhui ? 'currentColor' : 'none'} aria-hidden />
+      <Flamme jours={serie.jours} active={serie.aujourdhui} taille={17} />
       {serie.jours}
     </span>
   )
@@ -77,7 +79,7 @@ export function Apprendre() {
   const [mot, setMot] = useState<Mot | null>(null)
   const [session, setSession] = useState<SessionPrete | null>(null)
   const [numero, setNumero] = useState(0)
-  const { niveau, xpTotal } = useResume()
+  const { xpTotal } = useResume()
   const MOTS = useMots()
   const { solde } = usePorteMonnaie()
   const { pot, espece, testNiveau } = useProfil()
@@ -174,24 +176,11 @@ export function Apprendre() {
       <QuetesDuJour />
 
       <Section titre="Ma progression">
+        <CarteNiveau onClick={() => ouvrir({ type: 'jardin' })} />
         <Ligne
           tuile={<Plante stade={croissance(xpTotal).stade} avancement={croissance(xpTotal).avancement} espece={espece} pot={pot} taille={48} />}
-          titre={
-            <span className="block">
-              <span className="flex items-baseline justify-between">
-                <span>
-                  Niveau {niveau.niveau} · <span className="font-semibold">{niveau.nom}</span>
-                </span>
-                <span className="t-sous-titre text-texte-2">
-                  {niveau.xp}/{niveau.objectif} XP
-                </span>
-              </span>
-              <span className="mt-2 block h-1.5 overflow-hidden rounded-full bg-remplissage" aria-hidden>
-                <span className="block h-full rounded-full bg-accent transition-[width] duration-700" style={{ width: `${(niveau.xp / niveau.objectif) * 100}%` }} />
-              </span>
-            </span>
-          }
-          sousTitre={`${xpTotal} XP au total · Mon jardin`}
+          titre="Mon jardin"
+          sousTitre={croissance(xpTotal).nomPalier}
           chevron
           onClick={() => ouvrir({ type: 'jardin' })}
         />

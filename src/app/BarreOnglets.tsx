@@ -98,7 +98,7 @@ export function BarreOnglets({ actif, onChange }: Props) {
         <li
           aria-hidden
           className={`lentille pointer-events-none absolute inset-y-0 -left-[5px] rounded-full ${
-            glisse ? 'lentille-goutte' : 'bg-remplissage lentille-ressort'
+            glisse ? 'lentille-goutte' : 'lentille-active lentille-ressort'
           }`}
           style={{
             width: `calc(${100 / N}% + 10px)`,
@@ -117,12 +117,12 @@ export function BarreOnglets({ actif, onChange }: Props) {
                 }}
                 aria-current={i === indexActif ? 'page' : undefined}
                 className={`flex w-full flex-col items-center justify-center gap-[2px] rounded-full text-[11px] font-medium leading-none tracking-[0.01em] transition-colors duration-200 ${
-                  estActif ? 'text-accent' : 'text-texte'
+                  estActif ? 'font-semibold text-accent' : 'text-texte'
                 }`}
               >
                 <span
-                  className="transition-transform duration-150"
-                  style={{ transform: `scale(${glisse ? grossissement(i - position) : 1})` }}
+                  className={`transition-[transform,filter] duration-200 ${estActif && !glisse ? 'drop-shadow-[0_0_6px_color-mix(in_srgb,var(--accent)_45%,transparent)]' : ''}`}
+                  style={{ transform: `scale(${glisse ? grossissement(i - position) : estActif ? 1.06 : 1})` }}
                 >
                   <IconeOnglet onglet={o.id} />
                 </span>

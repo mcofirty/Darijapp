@@ -24,6 +24,7 @@ import { ModeLegendaire } from '../../ui/legendaire'
 import { PhraseTouchable } from '../../ui/PhraseTouchable'
 import { RemplissageBarre } from '../../ui/zellige'
 import { Mascotte, PhraseDeMascotte } from '../../ui/Mascotte'
+import { vibrer } from '../../ui/haptique'
 
 interface Props {
   etapes: Etape[]
@@ -48,6 +49,17 @@ interface Props {
 type Reponse = Pick<Mot, 'latin' | 'arabe' | 'fr' | 'audio'>
 type Retour = { juste: true } | { juste: false; mot: Reponse }
 
+/**
+ * Sous-titre du bilan : ce qui a été retrouvé de mémoire d'abord (un acquis vérifié), puis les découvertes.
+ * Un mot découvert aujourd'hui n'est pas dit « appris » : il le sera quand il aura été retrouvé.
+ */
+function sousTitreSession(nouveaux: number, retrouvees: number): string {
+  const parties: string[] = []
+  if (retrouvees > 0) parties.push(`Tu as retrouvé ${retrouvees} expression${retrouvees > 1 ? 's' : ''} sans erreur`)
+  if (nouveaux > 0) parties.push(`${nouveaux} nouvelle${nouveaux > 1 ? 's' : ''} découverte${nouveaux > 1 ? 's' : ''}`)
+  return parties.length > 0 ? `${parties.join(' · ')}.` : 'Révision terminée'
+}
+
 /** Session plein écran : une étape à la fois, retour immédiat, étapes ratées refaites à la fin. */
 export function Session(props: Props) {
   // Les étapes sont adaptées aux modes (sans parler, sans écouter) : on attend la lecture du profil.
@@ -69,6 +81,8 @@ function SessionEnCours({ etapes: depart, nouveaux, entrainement, activite, lege
   // Dis-le : résultat affiché, validé par « Continuer ».
   const [dire, setDire] = useState<ResultatDire | null>(null)
   const resultats = useRef(new Resultats())
+  // Mots découverts dans cette session : ils ne comptent pas parmi les expressions « retrouvées ».
+  const decouverts = useRef(new Set(depart.flatMap((e) => (e.type === 'decouverte' ? [e.mot.id] : []))))
   // Bonnes réponses d'affilée : dès la 5e, chacune rapporte 1 XP de plus ; chaque palier de 5 est fêté.
   const combo = useRef(new Combo())
   const [fete, setFete] = useState<number | null>(null)
@@ -78,6 +92,8 @@ function SessionEnCours({ etapes: depart, nouveaux, entrainement, activite, lege
   const etape = etapes[index]
 
   function compterQuestion(juste: boolean) {
+    // Bonne réponse : validation discrète (un « tic »), la fête est gardée pour le bilan.
+    if (juste) vibrer('leger')
     questions.current.total++
     if (juste) questions.current.justes++
     setFete(combo.current.noter(juste))
@@ -158,13 +174,10 @@ function SessionEnCours({ etapes: depart, nouveaux, entrainement, activite, lege
     ) : (
       <Bilan
         titre="Session terminée"
-        sousTitre={
-          bilan.nouveaux > 0
-            ? `${bilan.nouveaux} nouveau${bilan.nouveaux > 1 ? 'x' : ''} mot${bilan.nouveaux > 1 ? 's' : ''} appris`
-            : 'Révision terminée'
-        }
+        sousTitre={sousTitreSession(bilan.nouveaux, r.retrouvees(decouverts.current))}
         xp={bilan.xp}
         activite={bilan}
+        retrouvees={r.retrouvees(decouverts.current)}
         taux={r.taux}
         libelleEncore="Encore une session"
         onFermer={onFermer}
@@ -290,7 +303,7 @@ function SessionEnCours({ etapes: depart, nouveaux, entrainement, activite, lege
                       <Mascotte humeur="bravo" className="h-12 w-12" />
                       <div className="min-w-0 flex-1">
                         <p className="t-titre-3 flex flex-wrap items-center gap-2 text-vert">
-                          <CircleCheck className="h-6 w-6" strokeWidth={2.5} aria-hidden /> Bravo !
+                          <CircleCheck className="coche-pop h-6 w-6" strokeWidth={2.5} aria-hidden /> Bravo !
                         </p>
                         <PhraseDeMascotte humeur="bravo" cle={retour} />
                       </div>

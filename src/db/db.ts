@@ -38,6 +38,10 @@ export interface Profil {
   /** Sons de réponse et confettis du bilan, choisis au souk. */
   sons: string
   confettis: string
+  /** Sons des réponses et des célébrations (jeu choisi au souk) ; coupés, l'appli reste muette hors mots. */
+  effets: boolean
+  /** Retours haptiques légers (bonne réponse, fin d'activité, palier). */
+  haptique: boolean
   /** XP total la dernière fois que « Mon jardin » a été ouvert : la plante pousse en animation depuis là. */
   jardinXpVu: number | null
   /** Dis-le avec le micro et un score ; sinon, auto-évaluation (mode sans micro). */
@@ -166,6 +170,8 @@ export const PROFIL_DEFAUT: Profil = {
   objets: [],
   sons: 'classique',
   confettis: 'papiers',
+  effets: true,
+  haptique: true,
   jardinXpVu: null,
   micro: true,
   parler: true,

@@ -177,3 +177,25 @@ export const BADGES: Badge[] = [
   b('souk', 'achats', 25, 'achat-25', 'Grand décorateur', 'Achète 25 articles au souk'),
   b('souk', 'motsAjoutes', 1, 'mot-ajoute', 'Mot de famille', 'Ajoute un mot dans « Mes mots »'),
 ]
+
+/**
+ * Acquis vérifiés : mots retrouvés lors d'une révision ultérieure (boîte 3 ou plus). Un mot réussi une
+ * seule fois, le jour de sa découverte, n'est qu'en boîte 2 : il ne compte pas encore.
+ */
+export function acquisVerifies(progressions: { boite: number }[]): number {
+  return progressions.filter((p) => p.boite >= 3).length
+}
+
+/**
+ * Rang d'un badge dans sa mesure (0 bronze, 1 argent, 2 or, 3 platine) : les badges d'une même mesure,
+ * rangés par seuil, montent en gamme ; le premier est en bronze, le dernier au plus haut.
+ */
+export function rangBadge(badge: Badge, tous: Badge[] = BADGES): 0 | 1 | 2 | 3 {
+  const meme = tous.filter((x) => x.mesure === badge.mesure).sort((x, y) => x.seuil - y.seuil)
+  const i = meme.findIndex((x) => x.id === badge.id)
+  if (meme.length <= 1 || i < 0) return 0
+  return Math.round((i / (meme.length - 1)) * 3) as 0 | 1 | 2 | 3
+}
+
+/** Couleurs de l'anneau des badges selon leur rang. */
+export const COULEURS_RANG = ['#c47f3b', '#b9bfc5', '#e8b923', '#9fd8e6'] as const

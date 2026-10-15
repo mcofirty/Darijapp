@@ -61,7 +61,7 @@ export function Page({ titre, retour, accessoire, children }: Props) {
           </h1>
           {accessoire && <div className="mb-1.5 rounded-full bg-carte">{accessoire}</div>}
         </div>
-        {children}
+        <div className="cascade">{children}</div>
       </div>
     </div>
   )

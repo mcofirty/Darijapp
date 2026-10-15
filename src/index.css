@@ -14,7 +14,7 @@
 
 /*
  * Système de design d'après les Human Interface Guidelines d'Apple (iOS 26).
- * Couleurs sémantiques système ; accent aux couleurs du drapeau marocain.
+ * Couleurs sémantiques système ; accent corail, énergie et menthe (direction « Playful Premium »).
  * Apparence : réglage du Profil (attribut data-theme sur <html>) — « clair », « sombre »,
  * ou « systeme » qui suit le réglage de l'iPhone.
  */
@@ -28,16 +28,25 @@
   --texte-2: rgba(60, 60, 67, 0.6); /* secondaryLabel */
   --texte-3: rgba(60, 60, 67, 0.3);
   --separateur: rgba(60, 60, 67, 0.29);
-  /* Couleurs du drapeau marocain : rouge #C1272D (5,8:1 sur blanc) et vert #006233 (7,5:1). */
-  --accent: #c1272d;
-  --accent-plein: #c1272d;
-  --accent-doux: rgba(193, 39, 45, 0.1);
-  --vert: #006233;
-  --vert-vif: #00813f;
-  --vert-plein: #006233; /* fond de bouton, texte blanc à 7,5:1 */
-  --vert-doux: rgba(0, 98, 51, 0.12);
-  --rouge: #c1272d;
-  --rouge-doux: rgba(193, 39, 45, 0.1);
+
+  /*
+   * Direction « Playful Premium » : corail (accent, action), énergie (XP, série, récompenses),
+   * menthe (réussites). Les couleurs vives sont réservées à ce qui a un sens.
+   * Corail #C93A26 : 5,1:1 avec du blanc ; menthe #0B7A50 : 5,4:1 ; énergie #9A5A00 : 5,3:1 sur blanc.
+   */
+  --accent: #c93a26;
+  --accent-plein: #c93a26;
+  --accent-doux: rgba(201, 58, 38, 0.1);
+  --corail-clair: #f0654c;
+  --energie: #9a5a00;
+  --energie-plein: #f5a524;
+  --energie-doux: rgba(245, 165, 36, 0.16);
+  --vert: #0b7a50;
+  --vert-vif: #12a06a;
+  --vert-plein: #0b7a50; /* fond de bouton, texte blanc à 5,4:1 */
+  --vert-doux: rgba(18, 160, 106, 0.12);
+  --rouge: #d93a4a;
+  --rouge-doux: rgba(217, 58, 74, 0.1);
   --verre: rgba(255, 255, 255, 0.5);
   --verre-haut: rgba(255, 255, 255, 0.45);
   --verre-reflet: rgba(255, 255, 255, 0.95);
@@ -48,81 +57,101 @@
   --verre-curseur: rgba(255, 255, 255, 0.78);
   /* Fond émaillé sous le motif de zellige (barres de progression). */
   --zellige-fond: #fbf6ec;
+  /* Ombre portée des récompenses en relief (flamme, badges, théière). */
+  --ombre-relief: rgba(120, 60, 20, 0.25);
   color-scheme: light;
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Mode sombre : anthracite légèrement chaud plutôt que noir pur. */
 :root[data-theme="sombre"] {
-  --fond: #000000;
-  --carte: #1c1c1e;
-  --carte-2: #2c2c2e;
-  --remplissage: rgba(118, 118, 128, 0.24);
-  --segment-actif: #636366;
-  --texte: #ffffff;
-  --texte-2: rgba(235, 235, 245, 0.6);
-  --texte-3: rgba(235, 235, 245, 0.3);
-  --separateur: rgba(84, 84, 88, 0.65);
-  /* Rouge et vert éclaircis pour le texte sur fond sombre (6:1 et plus). */
-  --accent: #ff6961;
-  --accent-plein: #c1272d;
-  --accent-doux: rgba(255, 105, 97, 0.16);
-  --vert: #2fd27f;
-  --vert-vif: #00a352;
-  --vert-plein: #006233;
-  --vert-doux: rgba(47, 210, 127, 0.18);
-  --rouge: #ff6961;
-  --rouge-doux: rgba(255, 105, 97, 0.18);
-  --verre: rgba(40, 40, 44, 0.45);
+  --fond: #1b1918;
+  --carte: #26221f;
+  --carte-2: #322d29;
+  --remplissage: rgba(140, 128, 118, 0.26);
+  --segment-actif: #5a524c;
+  --texte: #fbf7f3;
+  --texte-2: rgba(240, 232, 225, 0.62);
+  --texte-3: rgba(240, 232, 225, 0.3);
+  --separateur: rgba(96, 88, 81, 0.65);
+
+  /* Corail et menthe éclaircis pour le texte sur l'anthracite (6:1 et plus) ; boutons pleins inchangés. */
+  --accent: #ff7f6b;
+  --accent-plein: #c93a26;
+  --accent-doux: rgba(255, 127, 107, 0.16);
+  --corail-clair: #f0654c;
+  --energie: #ffb340;
+  --energie-plein: #f5a524;
+  --energie-doux: rgba(255, 179, 64, 0.16);
+  --vert: #44d9a0;
+  --vert-vif: #17a874;
+  --vert-plein: #0b7a50;
+  --vert-doux: rgba(68, 217, 160, 0.16);
+  --rouge: #ff6b7a;
+  --rouge-doux: rgba(255, 107, 122, 0.18);
+  --verre: rgba(46, 41, 37, 0.48);
   --verre-haut: rgba(255, 255, 255, 0.1);
   --verre-reflet: rgba(255, 255, 255, 0.35);
   --verre-reflet-bas: rgba(255, 255, 255, 0.1);
   --verre-bord: rgba(255, 255, 255, 0.12);
-  --verre-epais: rgba(37, 37, 40, 0.72);
+  --verre-epais: rgba(42, 38, 35, 0.76);
   --voile: rgba(0, 0, 0, 0.45);
   --verre-curseur: rgba(255, 255, 255, 0.2);
   --zellige-fond: #e6dcc6;
+  --ombre-relief: rgba(0, 0, 0, 0.45);
   color-scheme: dark;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="clair"]) {
-    --fond: #000000;
-    --carte: #1c1c1e;
-    --carte-2: #2c2c2e;
-    --remplissage: rgba(118, 118, 128, 0.24);
-    --segment-actif: #636366;
-    --texte: #ffffff;
-    --texte-2: rgba(235, 235, 245, 0.6);
-    --texte-3: rgba(235, 235, 245, 0.3);
-    --separateur: rgba(84, 84, 88, 0.65);
-    /* Rouge et vert éclaircis pour le texte sur fond sombre (6:1 et plus). */
-    --accent: #ff6961;
-    --accent-plein: #c1272d;
-    --accent-doux: rgba(255, 105, 97, 0.16);
-    --vert: #2fd27f;
-    --vert-vif: #00a352;
-    --vert-plein: #006233;
-    --vert-doux: rgba(47, 210, 127, 0.18);
-    --rouge: #ff6961;
-    --rouge-doux: rgba(255, 105, 97, 0.18);
-    --verre: rgba(40, 40, 44, 0.45);
+    --fond: #1b1918;
+    --carte: #26221f;
+    --carte-2: #322d29;
+    --remplissage: rgba(140, 128, 118, 0.26);
+    --segment-actif: #5a524c;
+    --texte: #fbf7f3;
+    --texte-2: rgba(240, 232, 225, 0.62);
+    --texte-3: rgba(240, 232, 225, 0.3);
+    --separateur: rgba(96, 88, 81, 0.65);
+
+    /* Corail et menthe éclaircis pour le texte sur l'anthracite (6:1 et plus) ; boutons pleins inchangés. */
+    --accent: #ff7f6b;
+    --accent-plein: #c93a26;
+    --accent-doux: rgba(255, 127, 107, 0.16);
+    --corail-clair: #f0654c;
+    --energie: #ffb340;
+    --energie-plein: #f5a524;
+    --energie-doux: rgba(255, 179, 64, 0.16);
+    --vert: #44d9a0;
+    --vert-vif: #17a874;
+    --vert-plein: #0b7a50;
+    --vert-doux: rgba(68, 217, 160, 0.16);
+    --rouge: #ff6b7a;
+    --rouge-doux: rgba(255, 107, 122, 0.18);
+    --verre: rgba(46, 41, 37, 0.48);
     --verre-haut: rgba(255, 255, 255, 0.1);
     --verre-reflet: rgba(255, 255, 255, 0.35);
     --verre-reflet-bas: rgba(255, 255, 255, 0.1);
     --verre-bord: rgba(255, 255, 255, 0.12);
-    --verre-epais: rgba(37, 37, 40, 0.72);
+    --verre-epais: rgba(42, 38, 35, 0.76);
     --voile: rgba(0, 0, 0, 0.45);
     --verre-curseur: rgba(255, 255, 255, 0.2);
-  --zellige-fond: #e6dcc6;
+    --zellige-fond: #e6dcc6;
+    --ombre-relief: rgba(0, 0, 0, 0.45);
     color-scheme: dark;
   }
 }
 
 /*
- * Couleurs achetées au souk (attribut data-couleur sur <html>) : elles remplacent l'accent rouge du drapeau.
+ * Couleurs achetées au souk (attribut data-couleur sur <html>) : elles remplacent l'accent corail.
  * Les erreurs restent rouges. Contrastes vérifiés : 5,4:1 et plus pour le blanc sur le fond plein et pour
  * le texte d'accent, en clair comme en sombre.
  */
+:root[data-couleur="rouge-drapeau"] { --accent: #c1272d; --accent-plein: #c1272d; --accent-doux: rgba(193, 39, 45, 0.1); --vert: #006233; --vert-plein: #006233; }
+:root[data-couleur="rouge-drapeau"][data-theme="sombre"] { --accent: #ff6961; --accent-doux: rgba(255, 105, 97, 0.16); --vert: #2fd27f; }
+@media (prefers-color-scheme: dark) {
+  :root[data-couleur="rouge-drapeau"]:not([data-theme="clair"]) { --accent: #ff6961; --accent-doux: rgba(255, 105, 97, 0.16); --vert: #2fd27f; }
+}
 :root[data-couleur="chefchaouen"] { --accent: #2563c9; --accent-plein: #2563c9; --accent-doux: rgba(37, 99, 201, 0.1); }
 :root[data-couleur="chefchaouen"][data-theme="sombre"] { --accent: #7fb0ff; --accent-doux: rgba(127, 176, 255, 0.16); }
 @media (prefers-color-scheme: dark) {
@@ -181,6 +210,10 @@
   --color-vert-vif: var(--vert-vif);
   --color-vert-plein: var(--vert-plein);
   --color-vert-doux: var(--vert-doux);
+  --color-corail-clair: var(--corail-clair);
+  --color-energie: var(--energie);
+  --color-energie-plein: var(--energie-plein);
+  --color-energie-doux: var(--energie-doux);
   --color-rouge: var(--rouge);
   --color-rouge-doux: var(--rouge-doux);
 }
@@ -388,6 +421,17 @@ body {
       0 6px 18px -6px rgba(0, 0, 0, 0.35);
   }
 
+  /* Lentille au repos sur l'onglet actif : un verre teinté d'accent, avec une lueur douce. */
+  .lentille-active {
+    background:
+      radial-gradient(90% 120% at 50% 0%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 70%),
+      var(--accent-doux);
+    box-shadow:
+      inset 0 1px 0.5px rgba(255, 255, 255, 0.5),
+      inset 0 0 0 0.5px color-mix(in srgb, var(--accent) 35%, transparent),
+      0 0 18px -4px color-mix(in srgb, var(--accent) 55%, transparent);
+  }
+
   @media (prefers-reduced-transparency: reduce) {
     .lentille-goutte {
       background: var(--segment-actif);
@@ -474,8 +518,8 @@ body {
 @keyframes depuis-gauche {
   from { transform: translateX(-24px); opacity: 0; }
 }
-.entree-droite { animation: depuis-droite 0.25s ease-out; }
-.entree-gauche { animation: depuis-gauche 0.25s ease-out; }
+.entree-droite { animation: depuis-droite 0.32s cubic-bezier(0.22, 1, 0.36, 1); }
+.entree-gauche { animation: depuis-gauche 0.32s cubic-bezier(0.22, 1, 0.36, 1); }
 
 /* Trésor du Parcours prêt à ouvrir : il sautille doucement. */
 .tresor-pret {
@@ -696,4 +740,73 @@ body {
   .plante-vivante { animation: none; }
   .plante-pop, .etincelle { animation: none; }
   .gain-xp { opacity: 1; animation: none; }
+}
+
+/*
+ * Carte phare (Session du jour) : surface colorée et stable, en dégradé de l'accent (corail, ou la couleur
+ * du souk). Pas de verre : le Liquid Glass reste réservé aux commandes. Le texte blanc est posé sur la
+ * moitié foncée du dégradé (5:1 et plus sur l'accent plein).
+ */
+.carte-phare {
+  background:
+    radial-gradient(120% 90% at 100% 0%, color-mix(in srgb, var(--accent-plein) 55%, #ffd2a6) 0%, transparent 55%),
+    linear-gradient(150deg, color-mix(in srgb, var(--accent-plein) 82%, #ffffff) 0%, var(--accent-plein) 50%, color-mix(in srgb, var(--accent-plein) 78%, #000000) 100%);
+  box-shadow: 0 18px 36px -20px color-mix(in srgb, var(--accent-plein) 85%, transparent);
+}
+
+/*
+ * Mouvement « Playful Premium » : le dynamisme vient des interactions, jamais d'animations permanentes.
+ * Tout est coupé par « Réduire les animations ».
+ */
+
+/* Cartes d'un écran : elles apparaissent l'une après l'autre à l'ouverture (fondu et légère montée). */
+@keyframes apparition {
+  from { opacity: 0; transform: translateY(10px); }
+}
+/* `backwards` seulement : après l'animation, ni opacité ni transformation ne restent (le verre et les
+   éléments fixés à l'intérieur fonctionnent normalement). */
+.cascade > * { animation: apparition 0.42s cubic-bezier(0.22, 1, 0.36, 1) backwards; }
+.cascade > :nth-child(2) { animation-delay: 0.04s; }
+.cascade > :nth-child(3) { animation-delay: 0.08s; }
+.cascade > :nth-child(4) { animation-delay: 0.12s; }
+.cascade > :nth-child(5) { animation-delay: 0.16s; }
+.cascade > :nth-child(6) { animation-delay: 0.2s; }
+.cascade > :nth-child(n + 7) { animation-delay: 0.24s; }
+
+/* Jauges (quêtes) : remplissage fluide depuis zéro. */
+.jauge { transition: width 0.9s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s; }
+
+/* Quête validée : la tuile rebondit, un « +1 verre » monte et s'efface. */
+.quete-pop { animation: quete-pop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1); }
+@keyframes quete-pop {
+  0% { transform: scale(0.6); }
+  60% { transform: scale(1.18); }
+  100% { transform: scale(1); }
+}
+.gain-quete { animation: gain-quete 1.8s ease-out forwards; }
+@keyframes gain-quete {
+  0% { opacity: 0; transform: translateY(6px) scale(0.9); }
+  15% { opacity: 1; transform: translateY(0) scale(1); }
+  75% { opacity: 1; transform: translateY(-4px); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* Bonne réponse : la coche « Bravo » fait un petit bond, sans plus. */
+.coche-pop { animation: quete-pop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1); }
+
+/* Vrai palier (niveau, série) : la récompense arrive en grossissant. */
+.celebration-pop { animation: celebration-pop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) backwards; animation-delay: 0.15s; }
+@keyframes celebration-pop {
+  0% { opacity: 0; transform: scale(0.5); }
+  60% { opacity: 1; transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* Vapeur de la théière prête : elle apparaît une fois, puis reste immobile. */
+.vapeur { animation: apparition 0.8s ease-out backwards; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cascade > *, .quete-pop, .coche-pop, .celebration-pop, .vapeur, .entree-droite, .entree-gauche { animation: none; }
+  .gain-quete { animation: none; opacity: 0; }
+  .jauge { transition: none; }
 }

@@ -195,3 +195,15 @@ describe('Dis-le', () => {
     expect(r.scores.get('a')).toEqual([72, 85])
   })
 })
+
+describe('Resultats.retrouvees', () => {
+  it('compte les mots déjà connus répondus sans erreur', () => {
+    const r = new Resultats()
+    r.noter('a', true) // nouveau
+    r.noter('b', true) // révision réussie
+    r.noter('c', true)
+    r.noter('c', false) // révision avec une erreur
+    r.noter('d', true)
+    expect(r.retrouvees(new Set(['a']))).toBe(2)
+  })
+})
