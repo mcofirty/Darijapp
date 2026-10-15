@@ -16,7 +16,8 @@ import { Progres } from '../features/progres/Progres'
 import { Quiz } from '../features/quiz/Quiz'
 import { appliquerApparence, appliquerCouleur } from './apparence'
 import { BarreOnglets } from './BarreOnglets'
-import { sensDuBalayage } from './glisser'
+import { actionDuBalayage, sensDuBalayage } from './glisser'
+import { faireRetour, retourDisponible } from './retour'
 import { ONGLETS, type Onglet } from './onglets'
 
 interface Toucher {
@@ -40,6 +41,8 @@ export default function App() {
 
   const [onglet, setOnglet] = useState<Onglet>('apprendre')
   const [entree, setEntree] = useState<'entree-droite' | 'entree-gauche' | ''>('')
+  // Change à chaque appui sur l'onglet déjà ouvert : l'onglet repart de sa page d'accueil.
+  const [accueil, setAccueil] = useState(0)
   const depart = useRef<Toucher | null>(null)
   const { apparence, couleur, sons, scorePrecis, effets, haptique } = useProfil()
   useEffect(() => appliquerCouleur(couleur), [couleur])
@@ -84,7 +87,13 @@ export default function App() {
   function changer(cible: Onglet) {
     const de = ONGLETS.findIndex((o) => o.id === onglet)
     const vers = ONGLETS.findIndex((o) => o.id === cible)
-    if (de === vers) return
+    if (de === vers) {
+      // Appui sur l'onglet ouvert : retour à sa page d'accueil, en haut.
+      setEntree('')
+      setAccueil((n) => n + 1)
+      window.scrollTo(0, 0)
+      return
+    }
     setEntree(vers > de ? 'entree-droite' : 'entree-gauche')
     setOnglet(cible)
     window.scrollTo(0, 0)
@@ -107,6 +116,13 @@ export default function App() {
     const t = e.changedTouches[0]
     const sens = sensDuBalayage(t.clientX - d.x, t.clientY - d.y, e.timeStamp - d.t)
     if (sens === 0) return
+    const action = actionDuBalayage(sens, retourDisponible())
+    if (action === 'retour') {
+      faireRetour()
+      window.scrollTo(0, 0)
+      return
+    }
+    if (action === 'rien') return
     const vers = ONGLETS.findIndex((o) => o.id === onglet) + sens
     if (vers >= 0 && vers < ONGLETS.length) changer(ONGLETS[vers].id)
   }
@@ -129,7 +145,7 @@ export default function App() {
 
   return (
     <div className="min-h-dvh overflow-x-clip" onTouchStart={debutToucher} onTouchEnd={finToucher}>
-      <main key={onglet} className={`pb-32 ${entree}`}>
+      <main key={`${onglet}-${accueil}`} className={`pb-32 ${entree}`}>
         {onglet === 'apprendre' && <Apprendre />}
         {onglet === 'parcours' && <Parcours />}
         {onglet === 'quiz' && <Quiz />}

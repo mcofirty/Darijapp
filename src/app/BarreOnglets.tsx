@@ -70,7 +70,8 @@ export function BarreOnglets({ actif, onChange }: Props) {
     setGlisse(false)
     setEtire(1)
     setPosition(cible)
-    if (cible !== indexActif) onChange(ONGLETS[cible].id)
+    // Un appui sur l'onglet déjà ouvert le ramène à sa page d'accueil ; un glissement qui s'y arrête ne change rien.
+    if (cible !== indexActif || !g.a_bouge) onChange(ONGLETS[cible].id)
   }
 
   function annulation() {

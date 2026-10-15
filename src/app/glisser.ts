@@ -30,3 +30,13 @@ export function sensDuBalayage(dx: number, dy: number, duree: number): -1 | 0 | 
   if (Math.abs(dx) < 60 || Math.abs(dx) < 1.5 * Math.abs(dy) || duree > 700) return 0
   return dx < 0 ? 1 : -1
 }
+
+/**
+ * Ce que fait un balayage : vers la droite, le retour d'une page ouverte (sinon l'onglet précédent) ;
+ * vers la gauche, l'onglet suivant, mais pas depuis une page ouverte (on n'y perd pas sa place).
+ */
+export function actionDuBalayage(sens: -1 | 0 | 1, retourDisponible: boolean): 'retour' | 'precedent' | 'suivant' | 'rien' {
+  if (sens === 0) return 'rien'
+  if (sens === -1) return retourDisponible ? 'retour' : 'precedent'
+  return retourDisponible ? 'rien' : 'suivant'
+}

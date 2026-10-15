@@ -1,5 +1,6 @@
 import { ChevronLeft } from 'lucide-react'
 import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { enregistrerRetour } from '../app/retour'
 
 interface Props {
   titre: string
@@ -18,6 +19,11 @@ interface Props {
 export function Page({ titre, retour, accessoire, children }: Props) {
   const repere = useRef<HTMLHeadingElement>(null)
   const [compact, setCompact] = useState(false)
+  // Le balayage vers la droite fait le même retour que le bouton : l'action la plus récente est lue au moment du geste.
+  const action = useRef(retour?.action)
+  action.current = retour?.action
+  const aRetour = retour !== undefined
+  useEffect(() => (aRetour ? enregistrerRetour(() => action.current) : undefined), [aRetour])
 
   useEffect(() => {
     const el = repere.current

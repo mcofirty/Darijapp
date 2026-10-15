@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { etirement, grossissement, ongletLePlusProche, positionSousLeDoigt, sensDuBalayage } from './glisser'
+import { etirement, grossissement, ongletLePlusProche, positionSousLeDoigt, sensDuBalayage, actionDuBalayage } from './glisser'
 
 describe('positionSousLeDoigt', () => {
   it('place le centre de chaque onglet sur un entier', () => {
@@ -50,5 +50,22 @@ describe('sensDuBalayage', () => {
     expect(sensDuBalayage(-30, 0, 200)).toBe(0)
     expect(sensDuBalayage(-100, 90, 200)).toBe(0)
     expect(sensDuBalayage(-100, 0, 1200)).toBe(0)
+  })
+})
+
+describe('actionDuBalayage', () => {
+  it('vers la droite : retour d’une page ouverte, sinon onglet précédent', () => {
+    expect(actionDuBalayage(-1, true)).toBe('retour')
+    expect(actionDuBalayage(-1, false)).toBe('precedent')
+  })
+
+  it('vers la gauche : onglet suivant, sauf depuis une page ouverte', () => {
+    expect(actionDuBalayage(1, false)).toBe('suivant')
+    expect(actionDuBalayage(1, true)).toBe('rien')
+  })
+
+  it('rien sans balayage net', () => {
+    expect(actionDuBalayage(0, true)).toBe('rien')
+    expect(actionDuBalayage(0, false)).toBe('rien')
   })
 })
