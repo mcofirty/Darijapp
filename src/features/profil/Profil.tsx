@@ -12,8 +12,6 @@ import { RappelEtSauvegarde } from './RappelEtSauvegarde'
 import { ReglageVoix } from './ReglageVoix'
 import { TestNiveau } from '../onboarding/TestNiveau'
 import { ScorePrecis } from './ScorePrecis'
-import { MonAvatar } from './MonAvatar'
-import { Avatar } from '../../ui/Avatar'
 
 const APPARENCES: { id: Apparence; libelle: string }[] = [
   { id: 'systeme', libelle: 'Automatique' },
@@ -43,22 +41,25 @@ export function Profil() {
   const [signales, setSignales] = useState(false)
   const [reglage, setReglage] = useState(false)
   const [test, setTest] = useState(false)
-  const [avatar, setAvatar] = useState(false)
   const nbSignales = [...useMarques().values()].filter((m) => m.signale).length
   if (signales) return <MotsSignales onRetour={() => setSignales(false)} />
   if (reglage) return <ReglageVoix onRetour={() => setReglage(false)} />
   if (test) return <TestNiveau onRetour={() => setTest(false)} />
-  if (avatar) return <MonAvatar onRetour={() => setAvatar(false)} />
   return (
     <Page titre="Profil">
-      <Section>
-        <Ligne
-          tuile={<Avatar visage={profil.avatar} fond={profil.avatarFond} taille={60} />}
-          titre={<span className="t-titre-3">{profil.prenom.trim() || 'Ton prénom'}</span>}
-          sousTitre="Avatar et prénom"
-          chevron
-          onClick={() => setAvatar(true)}
-        />
+      <Section titre="Prénom" note="Pour te saluer dans l’appli. Il reste sur ton iPhone.">
+        <label className="block px-marge py-2">
+          <span className="sr-only">Prénom</span>
+          <input
+            data-sans-balayage
+            value={profil.prenom}
+            placeholder="Ton prénom"
+            maxLength={30}
+            autoComplete="given-name"
+            onChange={(e) => void modifierProfil({ prenom: e.target.value })}
+            className="t-corps block min-h-11 w-full bg-transparent outline-none placeholder:text-texte-3"
+          />
+        </label>
       </Section>
       <Section titre="Apparence" arrondi="rounded-segmente" note="Automatique suit le réglage clair ou sombre de l'iPhone.">
         <Ligne tuile={<Tuile icone={SunMoon} couleur="#5856d6" />} titre="Thème" />

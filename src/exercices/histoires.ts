@@ -7,8 +7,6 @@ export interface LigneHistoire {
   id: string
   /** Qui parle : « Narrateur » ou le nom du personnage. */
   qui: string
-  /** Illustration de la ligne (emoji). */
-  image: string
   latin: string
   arabe: string
   fr: string
@@ -28,7 +26,6 @@ export interface Histoire {
   id: string
   titre: string
   resume: string
-  illustration: string
   couleur: string
   lignes: LigneHistoire[]
   questions: QuestionHistoire[]

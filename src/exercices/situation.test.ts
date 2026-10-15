@@ -21,7 +21,6 @@ describe('situationDuPlan', () => {
       expect(s, t.id).toBeDefined()
       expect(s.texte[0]).toBe(s.texte[0].toLowerCase())
       expect(s.texte).not.toMatch(/(^|\s)(vous|votre|vos)(\s|$)/)
-      expect(s.emoji.length).toBeGreaterThan(0)
     }
     expect(Object.keys(SITUATIONS).sort()).toEqual(THEMES.map((t) => t.id).sort())
   })

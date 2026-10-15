@@ -73,9 +73,6 @@ export interface Profil {
   dialogues: Record<string, number>
   /** Histoires : meilleur nombre de bonnes réponses par histoire. */
   histoires: Record<string, number>
-  /** Avatar (avec `prenom`) : visage (emoji) et couleur de fond. */
-  avatar: string
-  avatarFond: string
   /** Horodatage du dernier export de la progression (rappel tous les 7 jours), null si jamais. */
   derniereSauvegarde: number | null
 }
@@ -189,8 +186,6 @@ export const PROFIL_DEFAUT: Profil = {
   testNiveau: null,
   dialogues: {},
   histoires: {},
-  avatar: '🧑',
-  avatarFond: '#c1272d',
   derniereSauvegarde: null,
 }
 

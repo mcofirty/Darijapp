@@ -9,7 +9,6 @@ describe('histoires', () => {
         expect(l.id).toBe(`his-${h.id}-${i + 1}`)
         expect(l.audio).toBe(`audio/${l.id}.mp3`)
         expect(l.qui.trim()).not.toBe('')
-        expect(l.image.trim()).not.toBe('')
       })
   })
 

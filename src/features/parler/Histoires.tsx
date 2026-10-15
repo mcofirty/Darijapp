@@ -1,4 +1,4 @@
-import { BookOpen, CircleCheck, CircleX, Languages, X } from 'lucide-react'
+import { BookOpen, CircleCheck, CircleX, Languages, Volume2, X } from 'lucide-react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { arreterLecture, jouer, jouerAuto } from '../../audio/lecteur'
 import { sonReponse } from '../../audio/effets'
@@ -40,8 +40,8 @@ export function Histoires({ onRetour }: { onRetour: () => void }) {
             <Ligne
               key={h.id}
               tuile={
-                <span className="flex h-[29px] w-[29px] shrink-0 items-center justify-center rounded-tuile text-[17px]" style={{ backgroundColor: h.couleur }} aria-hidden>
-                  {h.illustration}
+                <span className="flex h-[29px] w-[29px] shrink-0 items-center justify-center rounded-tuile text-white" style={{ backgroundColor: h.couleur }} aria-hidden>
+                  <BookOpen className="h-[18px] w-[18px]" strokeWidth={2.2} />
                 </span>
               }
               titre={h.titre}
@@ -134,11 +134,9 @@ function LectureHistoire({ histoire, onFermer, onEncore }: { histoire: Histoire;
       </div>
 
       <div className="mx-auto w-full max-w-xl flex-1 overflow-y-auto px-marge pb-6 pt-2">
-        {/* Couverture illustrée */}
+        {/* Couverture */}
         <div className="relative mb-5 overflow-hidden rounded-carte px-marge py-6 text-center" style={{ backgroundColor: `color-mix(in srgb, ${histoire.couleur} 22%, var(--carte))` }}>
-          <p className="relative mt-2 text-[56px] leading-none" aria-hidden>
-            {histoire.illustration}
-          </p>
+          <BookOpen className="relative mx-auto mt-2 h-14 w-14" style={{ color: histoire.couleur }} strokeWidth={1.8} aria-hidden />
           <p className="t-titre-2 relative mt-3">{histoire.titre}</p>
           <p className="t-sous-titre relative mt-1 text-texte-2">{histoire.resume}</p>
         </div>
@@ -232,7 +230,7 @@ function LectureHistoire({ histoire, onFermer, onEncore }: { histoire: Histoire;
   )
 }
 
-/** Une ligne de l'histoire : narration ou réplique, illustrée ; la toucher la relit, la traduction est à la demande. */
+/** Une ligne de l'histoire : narration ou réplique ; la toucher la relit, la traduction est à la demande. */
 function LigneLue({ ligne, arabe, traduite, onTraduire }: { ligne: LigneHistoire; arabe: boolean; traduite: boolean; onTraduire: () => void }) {
   const narration = ligne.qui === NARRATEUR
   return (
@@ -241,9 +239,9 @@ function LigneLue({ ligne, arabe, traduite, onTraduire }: { ligne: LigneHistoire
         type="button"
         onClick={() => jouer(ligne.audio, ligne.arabe)}
         aria-label={`Réécouter : ${ligne.latin}`}
-        className="pressable flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-carte text-[26px]"
+        className="pressable flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-carte text-accent"
       >
-        <span aria-hidden>{ligne.image}</span>
+        <Volume2 className="h-6 w-6" strokeWidth={2.2} aria-hidden />
       </button>
       <div className={`min-w-0 flex-1 px-4 py-3 ${narration ? 'rounded-liste bg-carte' : 'rounded-[22px] rounded-tl-md bg-accent-doux'}`}>
         {!narration && <p className="t-note font-semibold text-texte-2">{ligne.qui}</p>}

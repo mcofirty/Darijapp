@@ -15,7 +15,6 @@ import { FicheMot } from '../mots/FicheMot'
 import { Dictionnaire } from './Dictionnaire'
 import { CarteNiveau } from '../jeu/CarteNiveau'
 import { useProfil } from '../../db/useProfil'
-import { Avatar } from '../../ui/Avatar'
 import { Mascotte } from '../../ui/Mascotte'
 
 export function Progres() {
@@ -59,7 +58,6 @@ export function Progres() {
       ) : (
         <>
           <div className="mb-[26px] flex items-center gap-4 px-1">
-            <Avatar visage={profil.avatar} fond={profil.avatarFond} taille={64} />
             <div className="min-w-0 flex-1">
               <p className="t-titre-2 truncate">{profil.prenom.trim() ? `Salam, ${profil.prenom.trim()} !` : 'Salam !'}</p>
               <p className="t-sous-titre text-texte-2">Voici où tu en es.</p>

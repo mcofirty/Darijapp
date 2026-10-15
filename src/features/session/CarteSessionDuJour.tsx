@@ -47,7 +47,7 @@ export function CarteSessionDuJour({ onCommencer }: { onCommencer: () => void })
             <h2 className="t-titre-2 mt-1 text-balance">
               {situation ? (
                 <>
-                  Aujourd’hui, {situation.texte} <span aria-hidden>{situation.emoji}</span>
+                  Aujourd’hui, {situation.texte}
                 </>
               ) : (
                 'Entraîne-toi sur les mots déjà vus'
@@ -56,7 +56,7 @@ export function CarteSessionDuJour({ onCommencer }: { onCommencer: () => void })
           )}
           {faite && situation && (
             <p className="t-appel mt-1 text-white/90">
-              Ensuite : {situation.texte} <span aria-hidden>{situation.emoji}</span>
+              Ensuite : {situation.texte}
             </p>
           )}
         </div>

@@ -2,7 +2,6 @@
 import SITUATIONS_JSON from '../data/situations/situations.json'
 
 export interface Situation {
-  emoji: string
   /** À lire après « Aujourd'hui, » : « commande ton premier thé ». */
   texte: string
 }
@@ -10,7 +9,7 @@ export interface Situation {
 export const SITUATIONS = SITUATIONS_JSON as Record<string, Situation>
 
 /** Situation de repli : mots ajoutés à la main, thème sans situation. */
-export const SITUATION_LIBRE: Situation = { emoji: '💬', texte: 'parle un peu plus darija' }
+export const SITUATION_LIBRE: Situation = { texte: 'parle un peu plus darija' }
 
 /**
  * Situation de la prochaine session : le thème du premier nouveau mot (l'ordre du programme),
