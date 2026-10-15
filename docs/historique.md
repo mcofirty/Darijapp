@@ -80,7 +80,7 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-15 | Comparatif trois voix préparé sur dix entrées : Jamal et ancien OpenAI conservés, dix nouveaux Realtime maximum, mêmes textes/consignes OpenAI, avis locaux indépendants | `scripts/openai_tts/three_voices.py`, `.github/workflows/openai-three-voices.yml` |
 
-| 2026-10-15 | Analyse de l’avis trois voix (7 Realtime, 2 Jamal, 1 ancien OpenAI) et test ciblé du son 9 : cinq mots, deux variantes Realtime par mot, cache et comparatif autonome préparés | `scripts/openai_tts/q_focus.py`, `.github/workflows/openai-q-focus.yml`, `docs/openai-tts/` |
+| 2026-10-15 | Analyse de l’avis trois voix (7 Realtime, 2 Jamal, 1 ancien OpenAI) et test ciblé du son 9 : cinq mots, deux variantes Realtime par mot, cache et comparatif autonome publiés et vérifiés | `scripts/openai_tts/q_focus.py`, `.github/workflows/openai-q-focus.yml`, `docs/openai-tts/` |
 
 ## Décisions
 
@@ -193,3 +193,7 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-15 : comparatif trois voix effectivement publié sur main `879d403` sous `/test-audio-trois-voix/` : dix vrais MP3 gpt-realtime-2.1/Cedar, vingt Jamal/ancien OpenAI conservés. Génération `38780274475` et Pages `38780561357` réussies ; trente décodages, empreintes HTTP, lecteur mobile et export vérifiés. Neuf alertes de silence périphérique et une interne restent visibles ; aucune certification linguistique ni modification des exercices, avis attendu.
 
 - 2026-10-15 : après signalement du son 9, reprendre uniquement cinq mots déjà testés avec q renforcé ou ḳ expérimental, même voix Cedar, dix réponses maximum. Garder les dix anciens audios, dont le dernier Realtime pour 9elb/we99e3 et mini-TTS pour les trois autres, étiqueter leurs modèles et publier seulement un test autonome. Les tokens du diagnostic Common Voice restent des indices non calibrés, aucune validation linguistique ni modification du latin affiché.
+
+- 2026-10-15 : dix nouveaux essais du son 9 générés et publiés sur main `a58078f` (run `38789473070`) ; vingt décodages et dix fichiers conservés vérifiés, quatre lecteurs et export testés sur mobile. Diagnostic Common Voice non calibré : aucun q retrouvé dans les dix candidats ; correction non établie, tous restent à revoir, plafond atteint sans nouvel appel. Aucun remplacement d’exercice.
+
+- 2026-10-15 : test du son 9 en ligne, génération `38789473070` et Pages `38789781638` réussies ; vingt empreintes HTTP et ressources identiques. File de révision enrichie d’un indice phonétique non calibré, distinct des contrôles techniques ; aucune correction linguistique ni activation déduite.

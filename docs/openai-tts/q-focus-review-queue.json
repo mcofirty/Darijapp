@@ -9,7 +9,9 @@
         "long_edge_silence"
       ],
       "pronunciation_status": "uncertain",
-      "confidence": null
+      "confidence": null,
+      "phonetic_review_required": true,
+      "phonetic_reason": "q_not_found_by_uncalibrated_recognizer"
     },
     {
       "id": "adjectifs-020",
@@ -18,7 +20,9 @@
         "long_edge_silence"
       ],
       "pronunciation_status": "uncertain",
-      "confidence": null
+      "confidence": null,
+      "phonetic_review_required": true,
+      "phonetic_reason": "q_not_found_by_uncalibrated_recognizer"
     },
     {
       "id": "adjectifs-007",
@@ -27,7 +31,9 @@
         "long_edge_silence"
       ],
       "pronunciation_status": "uncertain",
-      "confidence": null
+      "confidence": null,
+      "phonetic_review_required": true,
+      "phonetic_reason": "q_not_found_by_uncalibrated_recognizer"
     },
     {
       "id": "adverbes-002",
@@ -36,7 +42,9 @@
         "long_edge_silence"
       ],
       "pronunciation_status": "uncertain",
-      "confidence": null
+      "confidence": null,
+      "phonetic_review_required": true,
+      "phonetic_reason": "q_not_found_by_uncalibrated_recognizer"
     },
     {
       "id": "verbes-085",
@@ -45,7 +53,16 @@
         "long_edge_silence"
       ],
       "pronunciation_status": "uncertain",
-      "confidence": null
+      "confidence": null,
+      "phonetic_review_required": true,
+      "phonetic_reason": "q_not_found_by_uncalibrated_recognizer"
     }
-  ]
+  ],
+  "phonetic_diagnostic": {
+    "report": "q-focus-phonetic-diagnostic.json",
+    "calibrated": false,
+    "linguistic_certification": false,
+    "confidence": null,
+    "interpretation": "Aucun token q retrouvé dans les dix nouveaux rendus ; indice de difficulté, pas une transcription certifiée."
+  }
 }

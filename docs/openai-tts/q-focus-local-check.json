@@ -1,0 +1,38 @@
+{
+  "review_id": "1fede1669e6473062646d072943a8cb4ea21ec852e2141425fe99839cd9e2ac2",
+  "technical_status": "passed",
+  "audio_files_decoded": 20,
+  "retained_audio_files_verified": 10,
+  "new_candidates": 10,
+  "actual_models": [
+    "gpt-realtime-2.1"
+  ],
+  "warning_counts": {
+    "long_edge_silence": 8
+  },
+  "browser_check": {
+    "engine": "Chromium",
+    "viewport_width": 393,
+    "entries": 5,
+    "exclusive_audio_players": 4,
+    "speed": "passed",
+    "search": "passed",
+    "themes": "passed",
+    "local_vote_persistence": "passed",
+    "json_export_with_four_hashes_and_two_tts_texts": "passed",
+    "horizontal_overflow": false,
+    "javascript_errors": 0
+  },
+  "linguistic_certification": false,
+  "confidence": null,
+  "pronunciation_status": "uncertain",
+  "active_app_changed": false,
+  "http_check": {
+    "url": "https://mcofirty.github.io/Darijapp/test-audio-son-9/",
+    "review_id": "1fede1669e6473062646d072943a8cb4ea21ec852e2141425fe99839cd9e2ac2",
+    "status": "passed",
+    "entries": 5,
+    "audio_files_checked": 20,
+    "linguistic_certification": false
+  }
+}

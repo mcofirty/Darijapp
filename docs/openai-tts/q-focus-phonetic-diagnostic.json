@@ -1,0 +1,312 @@
+{
+  "review_id": "1fede1669e6473062646d072943a8cb4ea21ec852e2141425fe99839cd9e2ac2",
+  "evaluator": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+  "linguistic_certification": false,
+  "confidence": null,
+  "limits": [
+    "Uncalibrated multilingual Common Voice phonetic recognizer, not a Darija validator",
+    "Greedy decoded tokens are not verified IPA",
+    "Synthetic Jamal audio is not linguistic ground truth",
+    "Cannot establish accent quality or consonant place of articulation with this diagnostic alone"
+  ],
+  "entries": [
+    {
+      "id": "corps-041",
+      "latin": "9elb",
+      "voice": "jamal",
+      "model": "ar-MA-JamalNeural",
+      "tts_text": "قلب",
+      "sha256": "157d8a985d957da51e88094a1d2f14adc1f1b0064aa34999da3feb427565223b",
+      "uncalibrated_decoded_tokens": [
+        "q",
+        "a",
+        "l",
+        "b"
+      ]
+    },
+    {
+      "id": "corps-041",
+      "latin": "9elb",
+      "voice": "baseline",
+      "model": "gpt-realtime-2.1",
+      "tts_text": null,
+      "sha256": "746fde5e4bebabdac00ea5613dede3c5265fb4d597cee05c9f862f80075a0e70",
+      "uncalibrated_decoded_tokens": [
+        "k",
+        "ɛ",
+        "l",
+        "b"
+      ]
+    },
+    {
+      "id": "corps-041",
+      "latin": "9elb",
+      "voice": "a",
+      "model": "gpt-realtime-2.1",
+      "tts_text": "qelb",
+      "sha256": "7a0924e3e8f5a96d1946d73211e6bfa3cc07da3749d14970f7b85264e7eac2f9",
+      "uncalibrated_decoded_tokens": [
+        "k",
+        "a",
+        "l",
+        "b"
+      ]
+    },
+    {
+      "id": "corps-041",
+      "latin": "9elb",
+      "voice": "b",
+      "model": "gpt-realtime-2.1",
+      "tts_text": "ḳelb",
+      "sha256": "d8c10958fc3d8f8300ba6e09c9ce687d7bc38f7af7148b270b9dd144e8bb3605",
+      "uncalibrated_decoded_tokens": [
+        "k",
+        "a",
+        "l",
+        "b"
+      ]
+    },
+    {
+      "id": "adjectifs-020",
+      "latin": "n9i",
+      "voice": "jamal",
+      "model": "ar-MA-JamalNeural",
+      "tts_text": "نقي",
+      "sha256": "44108ce88292544ef8669513f6aaacacae012ea50b9db3a4743aee40d072826c",
+      "uncalibrated_decoded_tokens": [
+        "n",
+        "a",
+        "q",
+        "i"
+      ]
+    },
+    {
+      "id": "adjectifs-020",
+      "latin": "n9i",
+      "voice": "baseline",
+      "model": "gpt-4o-mini-tts-2025-12-15",
+      "tts_text": null,
+      "sha256": "3e63eec5695267f7589cbaa126fab87fff5753500babf0767ce2ceb7e3cbeecc",
+      "uncalibrated_decoded_tokens": [
+        "ɪ",
+        "n",
+        "t",
+        "i"
+      ]
+    },
+    {
+      "id": "adjectifs-020",
+      "latin": "n9i",
+      "voice": "a",
+      "model": "gpt-realtime-2.1",
+      "tts_text": "nqi",
+      "sha256": "f4f7e530e8e0581539d8d5f14142331f674d4a38f7c2590cafbf62627de33bac",
+      "uncalibrated_decoded_tokens": [
+        "m",
+        "u",
+        "k",
+        "aɪ"
+      ]
+    },
+    {
+      "id": "adjectifs-020",
+      "latin": "n9i",
+      "voice": "b",
+      "model": "gpt-realtime-2.1",
+      "tts_text": "nḳi",
+      "sha256": "496655db79f9e40b99edf5df608a9e433aa28311b75349d4accd81ca5a4bf1cd",
+      "uncalibrated_decoded_tokens": [
+        "t",
+        "e"
+      ]
+    },
+    {
+      "id": "adjectifs-007",
+      "latin": "m3e9ed",
+      "voice": "jamal",
+      "model": "ar-MA-JamalNeural",
+      "tts_text": "معقد",
+      "sha256": "d3a44527e8de9dc1bf39a76af65b09702b23ddea7a0997c21b636e86b00e6a85",
+      "uncalibrated_decoded_tokens": [
+        "m",
+        "ʕ",
+        "a",
+        "q",
+        "d"
+      ]
+    },
+    {
+      "id": "adjectifs-007",
+      "latin": "m3e9ed",
+      "voice": "baseline",
+      "model": "gpt-4o-mini-tts-2025-12-15",
+      "tts_text": null,
+      "sha256": "89a14a7761246a36af9f9fd0a6d670c33d858397a560bf04695b4075e2ad8444",
+      "uncalibrated_decoded_tokens": [
+        "m",
+        "aː",
+        "ɡ",
+        "d"
+      ]
+    },
+    {
+      "id": "adjectifs-007",
+      "latin": "m3e9ed",
+      "voice": "a",
+      "model": "gpt-realtime-2.1",
+      "tts_text": "mʕeqed",
+      "sha256": "a72584f7498d5e8e92bf1d986f577e48f9cc39adb63c14671304d0128967aa80",
+      "uncalibrated_decoded_tokens": [
+        "n",
+        "aɪ",
+        "k",
+        "k",
+        "ɪ",
+        "d"
+      ]
+    },
+    {
+      "id": "adjectifs-007",
+      "latin": "m3e9ed",
+      "voice": "b",
+      "model": "gpt-realtime-2.1",
+      "tts_text": "mʕeḳed",
+      "sha256": "6f6a4f6383295ecf10e2a38c4e604b7eaf16ad478780a8000770f699406f8ce1",
+      "uncalibrated_decoded_tokens": [
+        "n",
+        "aː",
+        "ɡ",
+        "ə",
+        "d"
+      ]
+    },
+    {
+      "id": "adverbes-002",
+      "latin": "lfou9",
+      "voice": "jamal",
+      "model": "ar-MA-JamalNeural",
+      "tts_text": "الفوق",
+      "sha256": "3841cfa84b833c4df67f9387d4b2fd4c1e3de8a5bbba6f2a61e4f7464a74f220",
+      "uncalibrated_decoded_tokens": [
+        "ʔ",
+        "l",
+        "f",
+        "a",
+        "q"
+      ]
+    },
+    {
+      "id": "adverbes-002",
+      "latin": "lfou9",
+      "voice": "baseline",
+      "model": "gpt-4o-mini-tts-2025-12-15",
+      "tts_text": null,
+      "sha256": "18f19a44db2c108b001e4f60b7a45e58a040f4aaf90d05845a41e22ffbaa151e",
+      "uncalibrated_decoded_tokens": [
+        "a",
+        "l",
+        "f",
+        "o",
+        "k"
+      ]
+    },
+    {
+      "id": "adverbes-002",
+      "latin": "lfou9",
+      "voice": "a",
+      "model": "gpt-realtime-2.1",
+      "tts_text": "lfouq",
+      "sha256": "ad69f7c228b78ce9fc0a2b1c63adc772092de3fc65f4c1292fd52e94cebccd7a",
+      "uncalibrated_decoded_tokens": [
+        "n",
+        "f",
+        "uː",
+        "ɡ"
+      ]
+    },
+    {
+      "id": "adverbes-002",
+      "latin": "lfou9",
+      "voice": "b",
+      "model": "gpt-realtime-2.1",
+      "tts_text": "lfouḳ",
+      "sha256": "ec668419b1f199d010618b407248831f014de86dfb6b8a9589087f4093bc23d4",
+      "uncalibrated_decoded_tokens": [
+        "n",
+        "ɪ",
+        "ʃ",
+        "f",
+        "oː",
+        "k"
+      ]
+    },
+    {
+      "id": "verbes-085",
+      "latin": "we99e3",
+      "voice": "jamal",
+      "model": "ar-MA-JamalNeural",
+      "tts_text": "وقع",
+      "sha256": "e6362f58d83be89af051870ca0bf0499beacc5e50d5740b108964f4eb235f817",
+      "uncalibrated_decoded_tokens": [
+        "w",
+        "a",
+        "q",
+        "aː"
+      ]
+    },
+    {
+      "id": "verbes-085",
+      "latin": "we99e3",
+      "voice": "baseline",
+      "model": "gpt-realtime-2.1",
+      "tts_text": null,
+      "sha256": "31722e3f3a20c2f61b6f5b0874fdc88d71509791d32bb8a790755763d301a05e",
+      "uncalibrated_decoded_tokens": [
+        "w",
+        "ɔ",
+        "t",
+        "t",
+        "t",
+        "aː"
+      ]
+    },
+    {
+      "id": "verbes-085",
+      "latin": "we99e3",
+      "voice": "a",
+      "model": "gpt-realtime-2.1",
+      "tts_text": "weqqeʕ",
+      "sha256": "cf664422fbbb0abf14d63cd07934fa5e8acae708f9f90bf7fec0d29aa467ede1",
+      "uncalibrated_decoded_tokens": [
+        "w",
+        "a",
+        "t",
+        "ɡ",
+        "ɛ",
+        "r"
+      ]
+    },
+    {
+      "id": "verbes-085",
+      "latin": "we99e3",
+      "voice": "b",
+      "model": "gpt-realtime-2.1",
+      "tts_text": "weḳḳeʕ",
+      "sha256": "a0c38715cfd6d5f92304a5c1a058bdca98e126869adcfb7122ec894eab175b63",
+      "uncalibrated_decoded_tokens": [
+        "w",
+        "ɛ",
+        "t",
+        "ɡ",
+        "a"
+      ]
+    }
+  ],
+  "conclusion": "Le décodeur non calibré ne retrouve q dans aucun des dix nouveaux rendus. Aucune correction du son 9 n’est établie ; écoute requise. Ce diagnostic ne certifie pas les cinq rendus Jamal.",
+  "q_token_counts": {
+    "jamal": 5,
+    "baseline": 0,
+    "a": 0,
+    "b": 0
+  }
+}

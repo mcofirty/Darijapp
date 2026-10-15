@@ -410,3 +410,26 @@ maximum, cache sans nouvel appel, anciens fichiers conservés, corruption et ref
 sans régénération. Les contrôles techniques sont distincts de la prononciation,
 confiance `null`, candidats en révision. Aucun changement d’exercice, de MP3 actif
 ou de référence de score ; publication isolée après lecture de CLAUDE sur main.
+
+
+Résultat réel de la reprise : dix candidats générés, tous annoncés exactement
+`gpt-realtime-2.1`, vingt MP3 décodables et dix anciens fichiers identiques.
+Main `a58078f`, génération `38789473070`, Pages `38789781638`. Lecteur mobile
+393 px vérifié : quatre lectures exclusives, vitesse, filtres, persistance et
+export avec quatre empreintes et deux textes TTS. Huit nouveaux rendus gardent
+un avertissement de silence périphérique ; aucun fichier actif n’est remplacé.
+
+Le diagnostic Common Voice **non calibré** ne retrouve aucun token q dans les
+dix nouveaux candidats (0/5 pour A et B), contre cinq rendus Jamal avec q.
+Sur 9elb, les deux essais restent décodés k. Cela n’établit pas une transcription
+phonétique exacte, ni la correction de tous les rendus Jamal ; les essais restent
+à revoir et ne sont pas présentés comme une correction réussie du son 9.
+Voir `q-focus-phonetic-diagnostic.json` et `q-focus-local-check.json`.
+Aucune génération supplémentaire automatique : le plafond de dix est atteint.
+
+
+Publication vérifiée : run `38789473070` réussi, Pages `38789781638` réussie
+en 3 min 9 s ; contrôle HTTP exact de la page, des ressources et des vingt MP3
+réussi. Test : https://mcofirty.github.io/Darijapp/test-audio-son-9/
+Cette disponibilité ne valide pas le son 9 ; les dix nouveaux candidats restent
+en révision, avec diagnostic phonétique séparé des alertes techniques de silence.
