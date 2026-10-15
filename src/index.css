@@ -535,10 +535,11 @@ body {
   .tresor-pret { animation: none; }
 }
 
-/* Carte du Parcours en mode sombre : mêmes couleurs, assombries comme au crépuscule (rien de verre dedans). */
-:root[data-theme="sombre"] .carte-maroc { filter: brightness(0.7) saturate(0.95) hue-rotate(-6deg); }
+/* Route de la carte du Parcours : terre battue en clair, anthracite en sombre (la carte, elle, garde ses couleurs). */
+.carte-maroc { --route-bord: #d4c09a; --route-piste: #e7d6b4; --route-tirets: #fff8e6; }
+:root[data-theme="sombre"] .carte-maroc { --route-bord: #141211; --route-piste: #2b2725; --route-tirets: #8a817a; }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="clair"]) .carte-maroc { filter: brightness(0.7) saturate(0.95) hue-rotate(-6deg); }
+  :root:not([data-theme="clair"]) .carte-maroc { --route-bord: #141211; --route-piste: #2b2725; --route-tirets: #8a817a; }
 }
 
 /* Combo dans les sessions : la pastille « 5 d'affilée ! » arrive en rebondissant. */

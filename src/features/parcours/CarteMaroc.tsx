@@ -5,7 +5,7 @@ import { REGIONS_ETAPES, cheminDeLaRoute, placeVignette, semerDecor, type Elemen
  * Fond illustré de la carte du Parcours, dans le style plat de « Mon jardin » : le sol change avec le voyage
  * (prairies du nord, montagnes du Rif, oliveraies, côte atlantique, plaine ocre de Marrakech, arganiers,
  * Haut Atlas, dunes de Merzouga), un monument par ville, une route de terre battue et un décor semé
- * selon la région. Repère : largeur de la carte, en pt, et y vers le bas ; un élément est posé sur son sol.
+ * selon la région ; mêmes couleurs en mode sombre, seule la route passe à l'anthracite. Repère : largeur de la carte, en pt, et y vers le bas ; un élément est posé sur son sol.
  */
 
 /** Couleur du sol de chaque région. */
@@ -421,10 +421,10 @@ export function CarteMaroc({ noeuds, etapes, largeur, hauteur }: Props) {
             {DECOR[e.type]}
           </g>
         ))}
-      {/* Route de terre battue : bord, piste, pointillés clairs. */}
-      <path d={route} stroke="#d4c09a" strokeWidth="26" fill="none" strokeLinecap="round" />
-      <path d={route} stroke="#e7d6b4" strokeWidth="20" fill="none" strokeLinecap="round" />
-      <path d={route} stroke="#fff8e6" strokeWidth="3" strokeDasharray="2 10" fill="none" strokeLinecap="round" />
+      {/* Route : bord, piste, pointillés ; terre battue en clair, anthracite en sombre (couleurs dans index.css). */}
+      <path d={route} style={{ stroke: 'var(--route-bord)' }} strokeWidth="26" fill="none" strokeLinecap="round" />
+      <path d={route} style={{ stroke: 'var(--route-piste)' }} strokeWidth="20" fill="none" strokeLinecap="round" />
+      <path d={route} style={{ stroke: 'var(--route-tirets)' }} strokeWidth="3" strokeDasharray="2 10" fill="none" strokeLinecap="round" />
       {etapes.map((e, i) => {
         const v = placeVignette(e, i, largeur)
         return (

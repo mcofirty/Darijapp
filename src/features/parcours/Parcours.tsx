@@ -51,13 +51,13 @@ function Anneau({ part, taille, clair }: { part: number; taille: number; clair: 
   const c = 2 * Math.PI * r
   return (
     <svg width={taille} height={taille} className="absolute inset-0 -rotate-90" aria-hidden>
-      <circle cx={taille / 2} cy={taille / 2} r={r} fill="none" stroke={clair ? 'rgba(255,255,255,0.3)' : 'rgba(201,58,38,0.15)'} strokeWidth="5" />
+      <circle cx={taille / 2} cy={taille / 2} r={r} fill="none" stroke={clair ? 'rgba(255,255,255,0.3)' : 'rgba(201,58,38,0.2)'} strokeWidth="5" />
       <circle
         cx={taille / 2}
         cy={taille / 2}
         r={r}
         fill="none"
-        stroke={clair ? '#fff' : 'var(--accent-plein)'}
+        stroke={clair ? '#fff' : 'var(--accent)'}
         strokeWidth="5"
         strokeLinecap="round"
         strokeDasharray={`${c * part} ${c}`}
@@ -270,7 +270,7 @@ function CartePleinEcran({ etats, conseillee, ouverts, tampons, gain, onEtape, o
       {/* Titre et passeport, qui restent en haut pendant le défilement. */}
       <header className="fixed inset-x-0 top-0 z-10 pt-[calc(env(safe-area-inset-top)+0.5rem)]">
         <div className="mx-auto flex max-w-xl items-center justify-between gap-3 px-marge">
-          <h1 className="t-titre-1 rounded-full bg-[#fffaf0]/95 px-4 py-1 font-bold text-[#1b1918] shadow-[0_2px_8px_-2px_rgba(60,40,10,0.35)]">Parcours</h1>
+          <h1 className="t-titre-1 rounded-full bg-[#fffaf0]/95 px-4 py-1 font-bold text-[#1b1918] shadow-[0_2px_8px_-2px_rgba(60,40,10,0.35)] dark:bg-[#262321]/95 dark:text-white">Parcours</h1>
           <button
             type="button"
             onClick={onPasseport}
@@ -286,7 +286,7 @@ function CartePleinEcran({ etats, conseillee, ouverts, tampons, gain, onEtape, o
           </button>
         </div>
         {gain && (
-          <p className="t-appel mx-auto mt-2 w-fit max-w-[calc(100%-40px)] rounded-full bg-[#fffaf0]/95 px-4 py-2 text-center font-semibold text-[#0b7a50] shadow-[0_2px_8px_-2px_rgba(60,40,10,0.35)]" role="status">
+          <p className="t-appel mx-auto mt-2 w-fit max-w-[calc(100%-40px)] rounded-full bg-[#fffaf0]/95 px-4 py-2 text-center font-semibold text-[#0b7a50] dark:bg-[#262321]/95 dark:text-vert shadow-[0_2px_8px_-2px_rgba(60,40,10,0.35)]" role="status">
             {gain}
           </p>
         )}
@@ -309,16 +309,16 @@ function NoeudEtape({ etat, conseillee, style, onClick }: { etat: EtatEtape; con
             ? 'bg-vert-plein text-white shadow-[0_4px_0_#06573a,0_8px_14px_-6px_rgba(60,40,10,0.45)]'
             : conseillee
               ? 'bg-accent-plein text-white shadow-[0_4px_0_#8f2516,0_8px_16px_-6px_rgba(60,20,10,0.5)]'
-              : 'bg-[#fffaf0] text-accent-plein shadow-[0_4px_0_#c9b48a,0_8px_14px_-6px_rgba(60,40,10,0.45)]'
+              : 'bg-[#fffaf0] text-accent-plein shadow-[0_4px_0_#c9b48a,0_8px_14px_-6px_rgba(60,40,10,0.45)] dark:bg-[#262321] dark:text-accent dark:shadow-[0_4px_0_#0d0b0a,0_8px_14px_-6px_rgba(0,0,0,0.6)]'
         }`}
       >
         {!etat.tampon && part > 0 && <Anneau part={part} taille={72} clair={conseillee} />}
         {etat.tampon ? <Check className="h-8 w-8" strokeWidth={3} aria-hidden /> : <MapPin className="relative h-8 w-8" strokeWidth={2.4} aria-hidden />}
       </button>
       {/* Étiquette crème, lisible sur tous les sols de la carte. */}
-      <span className="mt-2 flex flex-col items-center rounded-[12px] bg-[#fffaf0]/95 px-2.5 py-0.5 text-[#1b1918] shadow-[0_2px_6px_-2px_rgba(60,40,10,0.3)]">
+      <span className="mt-2 flex flex-col items-center rounded-[12px] bg-[#fffaf0]/95 px-2.5 py-0.5 text-[#1b1918] shadow-[0_2px_6px_-2px_rgba(60,40,10,0.3)] dark:bg-[#262321]/95 dark:text-white">
         <span className="t-gras">{etat.etape.ville}</span>
-        <span className="t-legende text-[#6b625b]">
+        <span className="t-legende text-[#6b625b] dark:text-[#a8a29e]">
           {etat.retenus}/{etat.total} retenus
         </span>
       </span>
