@@ -1,4 +1,4 @@
-import { AudioLines, BookOpen, Check, Headphones, Sparkles, Sprout, Target, Zap, type LucideIcon } from 'lucide-react'
+import { AudioLines, BookOpen, Check, ChevronDown, Headphones, Sparkles, Sprout, Target, Zap, type LucideIcon } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { lireXpTotal } from '../../db/apprentissage'
 import { ouvrirCoffre } from '../../db/journal'
@@ -96,8 +96,31 @@ function LigneQuete({ q, fetee, faites, total }: { q: Avancement; fetee: boolean
   )
 }
 
-/** Les 3 quêtes du jour ; chacune allume une perle de la théière, les 3 ouvrent la théière (+60 XP). */
-export function QuetesDuJour() {
+/** Pastille d'une quête dans la carte repliée : icône colorée (coche une fois faite) et petite jauge dessous. */
+function PastilleQuete({ q, fetee }: { q: Avancement; fetee: boolean }) {
+  const { icone: Icone, couleur } = STYLE_QUETE[q.quete.mesure]
+  const fond = q.faite ? 'var(--vert-vif)' : couleur
+  return (
+    <span className="flex w-[30px] flex-col items-center gap-1.5" aria-hidden>
+      <span
+        className={`flex h-[30px] w-[30px] items-center justify-center rounded-tuile text-white ${fetee ? 'quete-pop' : ''}`}
+        style={{ background: fond, boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.35), 0 2px 4px -2px var(--ombre-relief)' }}
+      >
+        {q.faite ? <Check className="h-[18px] w-[18px]" strokeWidth={3} /> : <Icone className="h-[17px] w-[17px]" strokeWidth={2.4} />}
+      </span>
+      <span className="block h-1 w-full overflow-hidden rounded-full bg-remplissage">
+        <span className="jauge block h-full rounded-full" style={{ width: `${Math.min(1, q.valeur / q.quete.objectif) * 100}%`, background: fond }} />
+      </span>
+    </span>
+  )
+}
+
+/**
+ * Les 3 quêtes du jour ; chacune allume une perle de la théière, les 3 ouvrent la théière (+60 XP).
+ * `compacte` (accueil d'Apprendre) : une seule ligne de pastilles, qui se déplie au toucher pour le détail.
+ */
+export function QuetesDuJour({ compacte = false }: { compacte?: boolean }) {
+  const [deplie, setDeplie] = useState(false)
   const { quetes, coffreOuvert } = useJeu()
   const [gagne, setGagne] = useState(0)
   const [arrosage, setArrosage] = useState<{ xpAvant: number; gain: number } | null>(null)
@@ -108,6 +131,71 @@ export function QuetesDuJour() {
   if (quetes.length === 0) return null
   const faites = quetes.filter((q) => q.faite).length
   const toutes = faites === quetes.length
+
+  async function ouvrir() {
+    // La théière arrose la plante : elle pousse avec l'XP de la théière.
+    const xpAvant = await lireXpTotal()
+    const gain = await ouvrirCoffre()
+    setGagne(gain)
+    if (gain > 0) {
+      vibrer('succes')
+      setArrosage({ xpAvant, gain })
+    }
+  }
+
+  if (compacte)
+    return (
+      <section className="mb-[26px] overflow-hidden rounded-liste bg-carte">
+        <button
+          type="button"
+          onClick={() => setDeplie((d) => !d)}
+          aria-expanded={deplie}
+          className="ligne-pressable flex w-full items-center gap-2.5 py-3.5 pl-4 pr-3 text-left"
+        >
+          <span className="flex shrink-0 gap-1">
+            {quetes.map((q) => (
+              <PastilleQuete key={q.quete.id} q={q} fetee={fetees.has(q.quete.id)} />
+            ))}
+          </span>
+          <span className="min-w-0 flex-1">
+            <span className="t-gras block truncate">Quêtes du jour</span>
+            <span className="t-sous-titre block text-texte-2">
+              {coffreOuvert ? (
+                <span className="font-semibold text-vert">{gagne > 0 ? `+${gagne} XP, bravo !` : 'Théière ouverte'}</span>
+              ) : (
+                <>
+                  {faites}/{quetes.length} · <span className="font-semibold text-energie">+{XP_COFFRE} XP</span>
+                </>
+              )}
+            </span>
+          </span>
+          <span role="img" aria-label={`Théière : ${faites} quête${faites > 1 ? 's' : ''} faite${faites > 1 ? 's' : ''} sur ${quetes.length}`}>
+            <Theiere faites={faites} total={quetes.length} ouverte={coffreOuvert} taille={34} />
+          </span>
+          <ChevronDown className={`h-5 w-5 shrink-0 text-texte-3 transition-transform ${deplie ? 'rotate-180' : ''}`} strokeWidth={2.4} aria-hidden />
+        </button>
+        {toutes && !coffreOuvert && (
+          <div className="px-marge pb-3.5">
+            <Bouton variante="plein" className="w-full" onClick={() => void ouvrir()}>
+              Ouvrir la théière
+            </Bouton>
+          </div>
+        )}
+        <div className={`deplier ${deplie ? 'ouvert' : ''}`}>
+          <div>
+            <div className="liste border-t border-separateur">
+              {quetes.map((q) => (
+                <LigneQuete key={q.quete.id} q={q} fetee={false} faites={faites} total={quetes.length} />
+              ))}
+            </div>
+            <p className="t-note px-marge pb-3 text-texte-2">
+              Les {quetes.length} quêtes ouvrent la théière : +{XP_COFFRE} XP. Nouvelles quêtes à minuit.
+            </p>
+          </div>
+        </div>
+        {arrosage && <Arrosage xpAvant={arrosage.xpAvant} gain={arrosage.gain} onFin={() => setArrosage(null)} />}
+      </section>
+    )
 
   return (
     <Section
@@ -127,16 +215,7 @@ export function QuetesDuJour() {
           ) : toutes ? (
             <Bouton
               variante="plein"
-              onClick={async () => {
-                // La théière arrose la plante : elle pousse avec l'XP de la théière.
-                const xpAvant = await lireXpTotal()
-                const gain = await ouvrirCoffre()
-                setGagne(gain)
-                if (gain > 0) {
-                  vibrer('succes')
-                  setArrosage({ xpAvant, gain })
-                }
-              }}
+              onClick={() => void ouvrir()}
             >
               Ouvrir la théière
             </Bouton>

@@ -1,8 +1,7 @@
 import { useLiveQuery } from 'dexie-react-hooks'
-import { BookMarked, BookOpenText, Coins, Gauge, Headphones, MessagesSquare, Star, TriangleAlert } from 'lucide-react'
+import { BookMarked, BookOpenText, Gauge, Headphones, MessagesSquare, Star, TriangleAlert } from 'lucide-react'
 import { useState } from 'react'
 import { motsDuTheme } from '../../data'
-import { SONS } from '../../data/sons'
 import { PAIRES_SONS } from '../../data/pairesSons'
 import { THEMES } from '../../data/themes'
 import type { Mot } from '../../data/types'
@@ -14,16 +13,17 @@ import { DIRE_PAR_SESSION, composerSession, melanger } from '../../exercices/ses
 import { motsDifficiles } from '../../exercices/selections'
 import { useResume } from '../../db/useResume'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
+import { CarrouselThemes, GrillePratiquer, LigneNiveau } from './BlocsAccueil'
+import { TousLesThemes } from './TousLesThemes'
 import { Page } from '../../ui/Page'
-import { VISUELS_THEMES, VISUEL_SONS } from '../../ui/visuels'
+import { VISUEL_SONS } from '../../ui/visuels'
 import { ModeEcoute } from '../ecoute/ModeEcoute'
 import { Plante } from '../jeu/Plante'
 import { QuetesDuJour } from '../jeu/QuetesDuJour'
-import { AnnoncesDuJour, LignesMotivation } from '../jeu/Motivation'
+import { AnnoncesDuJour } from '../jeu/Motivation'
 import { Souk } from '../jeu/Souk'
 import { MonJardin } from '../jeu/MonJardin'
 import { croissance } from '../../gamification/jardin'
-import { usePorteMonnaie } from '../../db/souk'
 import { useProfil } from '../../db/useProfil'
 import { FicheMot } from '../mots/FicheMot'
 import { ListeMots } from '../mots/ListeMots'
@@ -39,7 +39,6 @@ import { LECONS_GRAMMAIRE } from '../../exercices/grammaire'
 import { GuideSons } from './GuideSons'
 import { ListeSpeciale } from './ListeSpeciale'
 import { Flamme } from '../../ui/recompenses'
-import { CarteNiveau } from '../jeu/CarteNiveau'
 
 type Vue =
   | { type: 'accueil' }
@@ -52,7 +51,8 @@ type Vue =
   | { type: 'grammaire' }
   | { type: 'dialogues' }
   | { type: 'histoires' }
-  | { type: 'theme'; themeId: string }
+  | { type: 'theme'; themeId: string; depuisListe?: boolean }
+  | { type: 'themes' }
   | { type: 'test' }
 
 /** Une révision de favoris ou de mots difficiles reprend 8 mots au hasard. */
@@ -79,7 +79,6 @@ export function Apprendre() {
   const [numero, setNumero] = useState(0)
   const { xpTotal } = useResume()
   const MOTS = useMots()
-  const { solde } = usePorteMonnaie()
   const { pot, espece, testNiveau } = useProfil()
   const marques = useMarques()
   const progressions = useLiveQuery(() => db.progression.toArray(), []) ?? []
@@ -111,12 +110,31 @@ export function Apprendre() {
     const theme = THEMES.find((t) => t.id === vue.themeId)!
     if (mot) return <FicheMot mot={mot} retour={{ libelle: 'Mots', action: () => setMot(null) }} />
     return (
-      <Page titre={theme.titre} retour={{ libelle: 'Apprendre', action: () => setVue({ type: 'accueil' }) }}>
+      <Page
+        titre={theme.titre}
+        retour={
+          vue.depuisListe
+            ? { libelle: 'Thèmes', action: () => ouvrir({ type: 'themes' }) }
+            : { libelle: 'Apprendre', action: () => setVue({ type: 'accueil' }) }
+        }
+      >
         <ListeMots mots={motsDuTheme(theme.id)} onChoisir={setMot} />
       </Page>
     )
   }
 
+  if (vue.type === 'themes') {
+    if (mot) return <FicheMot mot={mot} retour={{ libelle: 'Thèmes', action: () => setMot(null) }} />
+    return (
+      <TousLesThemes
+        favoris={favoris.length}
+        onRetour={() => setVue({ type: 'accueil' })}
+        onTheme={(id) => ouvrir({ type: 'theme', themeId: id, depuisListe: true })}
+        onFavoris={() => ouvrir({ type: 'favoris' })}
+        onMot={setMot}
+      />
+    )
+  }
   if (vue.type === 'test') return <TestNiveau onRetour={() => setVue({ type: 'accueil' })} />
   if (vue.type === 'dialogues') return <Dialogues onRetour={() => setVue({ type: 'accueil' })} />
   if (vue.type === 'histoires') return <Histoires onRetour={() => setVue({ type: 'accueil' })} />
@@ -146,7 +164,8 @@ export function Apprendre() {
         titre="Mes favoris"
         mots={favoris}
         vide={{ icone: <Star className="h-12 w-12" strokeWidth={1.6} />, titre: 'Aucun favori', texte: 'Touche « Ajouter aux favoris » sur la fiche d’un mot.' }}
-        onRetour={() => setVue({ type: 'accueil' })}
+        retour="Thèmes"
+        onRetour={() => ouvrir({ type: 'themes' })}
         onReviser={reviser}
       />
     )
@@ -171,91 +190,33 @@ export function Apprendre() {
         </Section>
       )}
       <CarteSessionDuJour onCommencer={() => void lancer()} />
-      <QuetesDuJour />
+      <QuetesDuJour compacte />
 
-      <Section titre="Ma progression">
-        <CarteNiveau
-          onClick={() => ouvrir({ type: 'jardin' })}
-          plante={<Plante stade={croissance(xpTotal).stade} avancement={croissance(xpTotal).avancement} espece={espece} pot={pot} taille={44} />}
-        />
-        <LignesMotivation />
-        <Ligne
-          tuile={<Tuile icone={Coins} couleur="#ffcc00" />}
-          titre="Le souk"
-          sousTitre="Dépense tes dirhams en décor"
-          valeur={`${solde} DH`}
-          chevron
-          onClick={() => ouvrir({ type: 'souk' })}
-        />
-      </Section>
+      <GrillePratiquer
+        raccourcis={[
+          { id: 'dialogues', titre: 'Dialogues', detail: `${SCENES.length} scènes`, icone: MessagesSquare, couleur: '#12a06a', action: () => ouvrir({ type: 'dialogues' }) },
+          { id: 'histoires', titre: 'Histoires', detail: `${HISTOIRES.length} récits`, icone: BookMarked, couleur: '#f5a524', action: () => ouvrir({ type: 'histoires' }) },
+          { id: 'grammaire', titre: 'Grammaire', detail: `${LECONS_GRAMMAIRE.length} fiches`, icone: BookOpenText, couleur: '#7a5af5', action: () => ouvrir({ type: 'grammaire' }) },
+          { id: 'ecoute', titre: 'Écoute', detail: 'Mains libres', icone: Headphones, couleur: '#2f8fe0', action: () => ouvrir({ type: 'ecoute' }) },
+          {
+            id: 'difficiles',
+            titre: 'À revoir',
+            detail: difficiles.length > 0 ? `${difficiles.length} mot${difficiles.length > 1 ? 's' : ''}` : 'Aucun mot',
+            icone: TriangleAlert,
+            couleur: '#e5533c',
+            badge: difficiles.length,
+            action: () => ouvrir({ type: 'difficiles' }),
+          },
+          { id: 'sons', titre: 'Les sons', detail: '3, 7, 9, kh, gh', icone: VISUEL_SONS.icone, couleur: VISUEL_SONS.couleur, action: () => ouvrir({ type: 'sons' }) },
+        ]}
+      />
 
-      <Section titre="Parler">
-        <Ligne
-          tuile={<Tuile icone={MessagesSquare} couleur="#34c759" />}
-          titre="Dialogues"
-          sousTitre="Au café, en taxi, chez l’épicier…"
-          valeur={SCENES.length}
-          chevron
-          onClick={() => ouvrir({ type: 'dialogues' })}
-        />
-        <Ligne
-          tuile={<Tuile icone={BookMarked} couleur="#ff9500" />}
-          titre="Histoires"
-          sousTitre="De courts récits à écouter et à comprendre"
-          valeur={HISTOIRES.length}
-          chevron
-          onClick={() => ouvrir({ type: 'histoires' })}
-        />
-        <Ligne
-          tuile={<Tuile icone={BookOpenText} couleur="#5856d6" />}
-          titre="Grammaire orale"
-          sousTitre="ma…ch, dari, ka-, ghadi, le passé, les questions"
-          valeur={LECONS_GRAMMAIRE.length}
-          chevron
-          onClick={() => ouvrir({ type: 'grammaire' })}
-        />
-      </Section>
+      <LigneNiveau
+        onClick={() => ouvrir({ type: 'jardin' })}
+        plante={<Plante stade={croissance(xpTotal).stade} avancement={croissance(xpTotal).avancement} espece={espece} pot={pot} taille={40} />}
+      />
 
-      <Section titre="Explorer">
-        <Ligne
-          tuile={<Tuile icone={Headphones} couleur="#ff3b30" />}
-          titre="Mode écoute"
-          sousTitre="Tes mots à voix haute, mains libres"
-          chevron
-          onClick={() => ouvrir({ type: 'ecoute' })}
-        />
-        <Ligne
-          tuile={<Tuile icone={Star} couleur="#ffcc00" />}
-          titre="Mes favoris"
-          valeur={favoris.length}
-          chevron
-          onClick={() => ouvrir({ type: 'favoris' })}
-        />
-        <Ligne
-          tuile={<Tuile icone={TriangleAlert} couleur="#ff9500" />}
-          titre="Mots difficiles"
-          valeur={difficiles.length}
-          chevron
-          onClick={() => ouvrir({ type: 'difficiles' })}
-        />
-        <Ligne
-          tuile={<Tuile {...VISUEL_SONS} />}
-          titre="Les sons du darija"
-          sousTitre={SONS.map((s) => s.latin).join(', ')}
-          chevron
-          onClick={() => ouvrir({ type: 'sons' })}
-        />
-        {THEMES.map((t) => (
-          <Ligne
-            key={t.id}
-            tuile={<Tuile {...VISUELS_THEMES[t.id]} />}
-            titre={t.titre}
-            valeur={motsDuTheme(t.id).length}
-            chevron
-            onClick={() => ouvrir({ type: 'theme', themeId: t.id })}
-          />
-        ))}
-      </Section>
+      <CarrouselThemes onTheme={(id) => ouvrir({ type: 'theme', themeId: id })} onTout={() => ouvrir({ type: 'themes' })} />
     </Page>
   )
 }

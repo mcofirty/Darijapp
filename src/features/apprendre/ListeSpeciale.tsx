@@ -11,12 +11,14 @@ interface Props {
   titre: string
   mots: Mot[]
   vide: { icone: React.ReactNode; titre: string; texte: string }
+  /** Libellé du bouton retour (écran d'où l'on vient). */
+  retour?: string
   onRetour: () => void
   onReviser: (mots: Mot[]) => void
 }
 
 /** Favoris ou mots difficiles : la liste, à réviser en session ou à écouter mains libres. */
-export function ListeSpeciale({ titre, mots, vide, onRetour, onReviser }: Props) {
+export function ListeSpeciale({ titre, mots, vide, retour = 'Apprendre', onRetour, onReviser }: Props) {
   const [mot, setMot] = useState<Mot | null>(null)
   const [ecoute, setEcoute] = useState(false)
 
@@ -24,7 +26,7 @@ export function ListeSpeciale({ titre, mots, vide, onRetour, onReviser }: Props)
   if (mot) return <FicheMot mot={mot} retour={{ libelle: titre, action: () => setMot(null) }} />
 
   return (
-    <Page titre={titre} retour={{ libelle: 'Apprendre', action: onRetour }}>
+    <Page titre={titre} retour={{ libelle: retour, action: onRetour }}>
       {mots.length === 0 ? (
         <Vide {...vide} />
       ) : (

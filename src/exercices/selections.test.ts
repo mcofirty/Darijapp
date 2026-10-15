@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { MOTS } from '../data'
-import { motsDifficiles, texteSignalements } from './selections'
+import { motsDifficiles, ordonnerThemes, texteSignalements } from './selections'
 
 const etat = (id: string, boite: number, echecs: number, reussites = 0) => ({ id, boite, echecs, reussites, prochaineRevision: '2026-10-12' })
 
@@ -25,5 +25,22 @@ describe('texteSignalements', () => {
       'Mots signalés dans Darijaapp (1) :',
       `- ${MOTS[0].id} : ${MOTS[0].latin} / ${MOTS[0].arabe} = ${MOTS[0].fr} → à vérifier : la traduction`,
     ])
+  })
+})
+
+describe('ordonnerThemes', () => {
+  const themes = [
+    { id: 'a', mots: ['a1', 'a2'] },
+    { id: 'b', mots: ['b1', 'b2', 'b3', 'b4'] },
+    { id: 'c', mots: ['c1', 'c2'] },
+    { id: 'd', mots: ['d1', 'd2', 'd3', 'd4'] },
+    { id: 'e', mots: ['e1'] },
+  ]
+  it('en cours d’abord (les plus avancés en tête), puis à commencer dans l’ordre, puis terminés', () => {
+    const vus = new Set(['a1', 'a2', 'b1', 'd1', 'd2', 'd3'])
+    expect(ordonnerThemes(themes, vus).map((t) => t.id)).toEqual(['d', 'b', 'c', 'e', 'a'])
+  })
+  it('sans mot vu : l’ordre du programme, avec le nombre de mots vus', () => {
+    expect(ordonnerThemes(themes, new Set())).toEqual(themes.map((t) => ({ id: t.id, total: t.mots.length, vus: 0 })))
   })
 })

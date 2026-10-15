@@ -34,3 +34,22 @@ export function texteSignalements(signales: { id: string; motif: MotifSignalemen
     .filter((l): l is string => l !== null)
   return [`Mots signalés dans Darijaapp (${lignes.length}) :`, ...lignes].join('\n')
 }
+
+export interface AvanceeTheme {
+  id: string
+  total: number
+  vus: number
+}
+
+/**
+ * Ordre des thèmes de l'accueil : ceux en cours d'abord (les plus avancés en tête), puis ceux pas encore
+ * commencés dans l'ordre du programme, enfin ceux dont tous les mots sont vus.
+ */
+export function ordonnerThemes(themes: { id: string; mots: string[] }[], vus: Set<string>): AvanceeTheme[] {
+  const avancees = themes.map((t) => ({ id: t.id, total: t.mots.length, vus: t.mots.filter((id) => vus.has(id)).length }))
+  const rang = (a: AvanceeTheme) => (a.vus === 0 ? 1 : a.vus >= a.total ? 2 : 0)
+  return avancees
+    .map((a, i) => ({ a, i }))
+    .sort((x, y) => rang(x.a) - rang(y.a) || (rang(x.a) === 0 ? y.a.vus / y.a.total - x.a.vus / x.a.total : 0) || x.i - y.i)
+    .map(({ a }) => a)
+}

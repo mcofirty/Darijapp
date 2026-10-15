@@ -10,7 +10,7 @@ export function motsDuTheme(themeId: string): Mot[] {
   return MOTS.filter((m) => m.theme === themeId)
 }
 
-function normaliser(texte: string): string {
+export function normaliser(texte: string): string {
   return texte
     .toLowerCase()
     .normalize('NFD')
