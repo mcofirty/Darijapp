@@ -1,0 +1,604 @@
+{
+  "version": 1,
+  "received_on": "2026-10-15",
+  "review_id": "49c0e1694b75cb17aa75fc58ebe3fe3e69728c715dd9f2d4633b81a33fba7303",
+  "model": "gpt-4o-mini-tts-2025-12-15",
+  "feedback_source_sha256": "889d1e84ccdca866280b9ecde35c58a52c20a0732f1b8aafbb1d688ac47f088a",
+  "identity_and_50_samples_verified": true,
+  "decision": "pending",
+  "reviewed_entries": 24,
+  "total_entries": 50,
+  "counts": {
+    "after": 20,
+    "before": 3,
+    "review": 1,
+    "unreviewed": 26
+  },
+  "preferred_after_without_notes": 13,
+  "preferred_after_with_reservations": 7,
+  "issue_counts": {
+    "slow_or_unnatural_delivery_reported": 6,
+    "english_accent_reported": 1,
+    "listener_uncertain_unreviewed": 1
+  },
+  "linguistic_certification": false,
+  "automatic_activation": false,
+  "confidence": null,
+  "scope": "Partial listening preferences, global decision pending; notes are assessment data, not executable instructions. No synthesis or deployment approval inferred.",
+  "entries": [
+    {
+      "id": "verbes-085",
+      "latin": "we99e3",
+      "tts_text": "weqqeʕ",
+      "profile": "consonant_symbols",
+      "after_sha256": "da53fc99dd25b8350140a0cbcd488f77918b65b08a06f40b0f1a04cea19f5c95",
+      "vote": "after",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "salutations-012",
+      "latin": "3afak",
+      "tts_text": "ʕafak",
+      "profile": "consonant_symbols",
+      "after_sha256": "e00b444822c6d6d8ce1475566a842a655eb636d3c16aeb9a631d394f9cb7e121",
+      "vote": "after",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "corps-041",
+      "latin": "9elb",
+      "tts_text": "qelb",
+      "profile": "consonant_symbols",
+      "after_sha256": "015fa0c615ebc62f147940197bd1df6ea992ffc81368887fc32f32294df9788b",
+      "vote": "after",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "nourriture-001",
+      "latin": "khobz",
+      "tts_text": "xobz",
+      "profile": "consonant_symbols",
+      "after_sha256": "45136269f9153b208cd00aaf4bd61405ece45087b7e4963e68c1a90e2cbb28a0",
+      "vote": "after",
+      "issue_tags": [
+        "slow_or_unnatural_delivery_reported"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "nourriture-006",
+      "latin": "7lib",
+      "tts_text": "ħlib",
+      "profile": "consonant_symbols",
+      "after_sha256": "9dfdb6840a4503619d1e85616e228080ec18911ae07758afcd0c54ebdd38f2ed",
+      "vote": "after",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "jours-002",
+      "latin": "ghedda",
+      "tts_text": "ɣedda",
+      "profile": "consonant_symbols",
+      "after_sha256": "07a3fb888e4bcb73acffcca2fe650e588a6d94bed516b250b0ba36b67e657230",
+      "vote": "after",
+      "issue_tags": [
+        "slow_or_unnatural_delivery_reported"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "chiffres-017",
+      "latin": "ch7al?",
+      "tts_text": "ʃħal?",
+      "profile": "consonant_symbols",
+      "after_sha256": "74f09d8d36e8788dbfa7036030f855aadc9aa1c633c04d90ba18b532207256bc",
+      "vote": "before",
+      "issue_tags": [
+        "prefers_current_jamal"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "jours-006",
+      "latin": "ssba7",
+      "tts_text": "ssbaħ",
+      "profile": "consonant_symbols",
+      "after_sha256": "f39f8f531674e46f82d7bbb88be754bc46ac2ed86789d0e4cb5927ac9d77451f",
+      "vote": "after",
+      "issue_tags": [
+        "slow_or_unnatural_delivery_reported"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-052",
+      "latin": "3tchan",
+      "tts_text": "ʕtʃan",
+      "profile": "consonant_symbols",
+      "after_sha256": "2c2e9046d06cbbc1cfaec9f09cec6bb29148027d5872fcc338a1c855ad4cff0a",
+      "vote": "before",
+      "issue_tags": [
+        "prefers_current_jamal"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "salutations-035",
+      "latin": "allah yjazik bikhir",
+      "tts_text": "allah yjazik bixir",
+      "profile": "consonant_symbols",
+      "after_sha256": "cb4ccb3d1c403144c2841c8c2268ccc5de8e90cbcfb36a71047e757b2aa96d33",
+      "vote": "review",
+      "issue_tags": [
+        "listener_requests_review"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adverbes-002",
+      "latin": "lfou9",
+      "tts_text": "lfouq",
+      "profile": "consonant_symbols",
+      "after_sha256": "18f19a44db2c108b001e4f60b7a45e58a040f4aaf90d05845a41e22ffbaa151e",
+      "vote": "after",
+      "issue_tags": [
+        "slow_or_unnatural_delivery_reported"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "chemin-001",
+      "latin": "fin kayna lma7atta d tran?",
+      "tts_text": "fin kayna lmaħatta d tran?",
+      "profile": "consonant_symbols",
+      "after_sha256": "1014d8cc24c3e3ed3a47e62dcb50ca919069326d6648d453e6de6f980f4829f6",
+      "vote": "after",
+      "issue_tags": [
+        "slow_or_unnatural_delivery_reported"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "conversation-001",
+      "latin": "w nta, chno smitek?",
+      "tts_text": "w nta, ʃno smitek?",
+      "profile": "consonant_symbols",
+      "after_sha256": "8aa3ea00d2c52690b8d508daa0e23ada3d7d4b2bd424aa263f25811358bfd014",
+      "vote": "after",
+      "issue_tags": [
+        "english_accent_reported"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "couleurs-004",
+      "latin": "ke7el",
+      "tts_text": "keħel",
+      "profile": "consonant_symbols",
+      "after_sha256": "8f7b1efbae1ace0941cc9c3bb45f5429d6f75cb31629d8bc340d807ee6383309",
+      "vote": "after",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "cuisine-006",
+      "latin": "forchita",
+      "tts_text": "forʃita",
+      "profile": "consonant_symbols",
+      "after_sha256": "1f741bf19843e3c95ada0c328f9b95bf9151acd2cd978ebcda45c8bdc7a2b067",
+      "vote": "after",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "emotions-001",
+      "latin": "fer7an",
+      "tts_text": "ferħan",
+      "profile": "consonant_symbols",
+      "after_sha256": "add4d7e8a3c2a1abb7ed98a7c94e232c70a7ad838fb5f0b42f113b0c3521c71a",
+      "vote": "after",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "expressions-001",
+      "latin": "wakha",
+      "tts_text": "waxa",
+      "profile": "consonant_symbols",
+      "after_sha256": "2a26e739d0fd029087580bf029942a04374cb5ef26e3ef3aa5b82f6dffec9a90",
+      "vote": "after",
+      "issue_tags": [
+        "slow_or_unnatural_delivery_reported"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "famille-002",
+      "latin": "chno smitek?",
+      "tts_text": "ʃno smitek?",
+      "profile": "consonant_symbols",
+      "after_sha256": "f1bb8705434eae2e0f0c8783d8cc56d91cf6474b165de9d37ebc9115d62d8ee5",
+      "vote": "after",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "grammaire-005",
+      "latin": "7na",
+      "tts_text": "ħna",
+      "profile": "consonant_symbols",
+      "after_sha256": "b8d6a0614c9f12583b8b8134e5c2b181cc6656a73650eccb3fa8d27be6977522",
+      "vote": "after",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "loisirs-003",
+      "latin": "match",
+      "tts_text": "matʃ",
+      "profile": "consonant_symbols",
+      "after_sha256": "2c8af5d322c769b7fcd7c06e8d6a25cbe22cfbd48896e59aac788f9fd48a12c0",
+      "vote": "after",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "maison-003",
+      "latin": "3imara",
+      "tts_text": "ʕimara",
+      "profile": "consonant_symbols",
+      "after_sha256": "d082ea63ed3ed65c9d1f601c9a4cfd745d095c5cc3a88f76b42ac4767e676295",
+      "vote": "after",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "nature-001",
+      "latin": "ttabi3a",
+      "tts_text": "ttabiʕa",
+      "profile": "consonant_symbols",
+      "after_sha256": "95aa392c66931eb5c6e0afd281a4d8b9e3205493a9dc91ba88bca09902140276",
+      "vote": "unreviewed",
+      "issue_tags": [
+        "listener_uncertain"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "numerique-011",
+      "latin": "charjour",
+      "tts_text": "ʃarjour",
+      "profile": "consonant_symbols",
+      "after_sha256": "3e6eb2f4f8e2faf64ba327ceafaf1454437763e0ee5a12fdf47b36425835d816",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "organisation-001",
+      "latin": "3ndi ijtima3",
+      "tts_text": "ʕndi ijtimaʕ",
+      "profile": "consonant_symbols",
+      "after_sha256": "f6a0514ed72dee700ff933322f94ccdd5c447d66d14fdac8f2021a7c05a0616f",
+      "vote": "after",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "questions-001",
+      "latin": "ach?",
+      "tts_text": "aʃ?",
+      "profile": "consonant_symbols",
+      "after_sha256": "95b07299fec625c738e2c3a9ff4a9443eaa9d5ffcb2a0790d7e933623f92d9e9",
+      "vote": "before",
+      "issue_tags": [
+        "prefers_current_jamal"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "rencontres-001",
+      "latin": "kifach daz nharek?",
+      "tts_text": "kifaʃ daz nharek?",
+      "profile": "consonant_symbols",
+      "after_sha256": "eee2e6e258f9c88f2f1e8af5972dd5ccb80324fa01c505a85327987782e38c93",
+      "vote": "after",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "restaurant-002",
+      "latin": "nmchiw l restoran?",
+      "tts_text": "nmʃiw l restoran?",
+      "profile": "consonant_symbols",
+      "after_sha256": "09312c3d762f834d82b09e0b8b880c172e8093bd15ea8e27ab377a5ea812345a",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "sante-001",
+      "latin": "sse7a",
+      "tts_text": "sseħa",
+      "profile": "consonant_symbols",
+      "after_sha256": "71e13eab66aba51d378b4fc7c002e42e031e8faf90f5986bd12a67ec7ffdf45a",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "souk-001",
+      "latin": "ghali",
+      "tts_text": "ɣali",
+      "profile": "consonant_symbols",
+      "after_sha256": "62669ddaef9a241b878d66b9a5230221f9e1af61698ff786cda520092a58e2e3",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "tournures-001",
+      "latin": "ma bghitch",
+      "tts_text": "ma bɣitʃ",
+      "profile": "consonant_symbols",
+      "after_sha256": "e2af3628ea37968ac142f66e6e5344f18a386b347388403ef152bdeedd293ffa",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "transports-003",
+      "latin": "3la limen",
+      "tts_text": "ʕla limen",
+      "profile": "consonant_symbols",
+      "after_sha256": "7e5eb17931eb90ea76c26f9e44fa74240cedccfde72d04bc7b0295493ec41425",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "travail-001",
+      "latin": "khdma",
+      "tts_text": "xdma",
+      "profile": "consonant_symbols",
+      "after_sha256": "0e632588030c056d74e55b8b7956a47d9f38a4ee5d555f567ef7fd5682133c00",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "vetements-001",
+      "latin": "7wayej",
+      "tts_text": "ħwayej",
+      "profile": "consonant_symbols",
+      "after_sha256": "b44a528f35fa51b29d54a61809129412a095bc3b048cbd95dd0672f4aa929643",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "ville-003",
+      "latin": "7ouma",
+      "tts_text": "ħouma",
+      "profile": "consonant_symbols",
+      "after_sha256": "012e9c74dcf90ecffa71910dc5280f0ff272dbdeed609186632a49d033451004",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-017",
+      "latin": "mte2kked",
+      "tts_text": "mteʔkked",
+      "profile": "consonant_symbols",
+      "after_sha256": "1970e8393a0d73c3507b8b1b1bd090e1a2bff5032e3cc8f784f51b3605443e21",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-039",
+      "latin": "bti2",
+      "tts_text": "btiʔ",
+      "profile": "consonant_symbols",
+      "after_sha256": "b75d4c3f34f8ef577a1b38eaa2ea93c3ec785f9d7b13062d876e33f7f4044271",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "nature-043",
+      "latin": "kelb",
+      "tts_text": "kelb",
+      "profile": "consonant_symbols",
+      "after_sha256": "305f973e6ea11c79eca01fce5aac89897d4e4bbaedb7e992e5f73305cc03323b",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "numerique-039",
+      "latin": "7ell",
+      "tts_text": "ħell",
+      "profile": "consonant_symbols",
+      "after_sha256": "b0702018a62ea80f23084e099245e5b6a0d71bb04129df064ce3e08309b0c868",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "cuisine-031",
+      "latin": "khell",
+      "tts_text": "xell",
+      "profile": "consonant_symbols",
+      "after_sha256": "7a7b8b3d68449dced8395049add5d3bfa6ada5f0af4b575c19fe1de08b462657",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "grammaire-054",
+      "latin": "ghir",
+      "tts_text": "ɣir",
+      "profile": "consonant_symbols",
+      "after_sha256": "e1dcbd275a9516a4eff8cfceba934369a9947daa444d1646a90f8f23ebb2b913",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "corps-006",
+      "latin": "3in",
+      "tts_text": "ʕin",
+      "profile": "consonant_symbols",
+      "after_sha256": "d4908a3eaee0e6472d9c0d40752cbe0e80e32f13fae763e994f5ee39746135b8",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "jours-008",
+      "latin": "llil",
+      "tts_text": "llil",
+      "profile": "consonant_symbols",
+      "after_sha256": "493996a6840e67311d0819600dbbbbdd6aaafd1912fdbc99a2c26ed3a9aa6005",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "nourriture-019",
+      "latin": "bghit",
+      "tts_text": "bɣit",
+      "profile": "consonant_symbols",
+      "after_sha256": "6101c18208e70a8d96105c8b2d0f5e8a2d73f5f3d896b6596cd1b85adee8a2fa",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-014",
+      "latin": "s7i7",
+      "tts_text": "sħiħ",
+      "profile": "consonant_symbols",
+      "after_sha256": "9b3c489e77020bb4453f731d2b99b4dca6ddbd6826aa5885e15e80cc30b17af5",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-005",
+      "latin": "s3ib",
+      "tts_text": "sʕib",
+      "profile": "consonant_symbols",
+      "after_sha256": "e18ce0713d4e586e9ab8b6a51e16294ca2b533adb51ca964bf140688f45e861d",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-007",
+      "latin": "m3e9ed",
+      "tts_text": "mʕeqed",
+      "profile": "consonant_symbols",
+      "after_sha256": "89a14a7761246a36af9f9fd0a6d670c33d858397a560bf04695b4075e2ad8444",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-020",
+      "latin": "n9i",
+      "tts_text": "nqi",
+      "profile": "consonant_symbols",
+      "after_sha256": "3e63eec5695267f7589cbaa126fab87fff5753500babf0767ce2ceb7e3cbeecc",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-027",
+      "latin": "khfif",
+      "tts_text": "xfif",
+      "profile": "consonant_symbols",
+      "after_sha256": "07d6c3e391d4cd343ead0b082ad699b4e3930d1601788a829b5355b5fb1d2716",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-042",
+      "latin": "ghni",
+      "tts_text": "ɣni",
+      "profile": "consonant_symbols",
+      "after_sha256": "1ef500239773f3d737493e4b5be8c1e639fc4016ad394a9871bcb27d6c039785",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-062",
+      "latin": "chja3",
+      "tts_text": "ʃjaʕ",
+      "profile": "consonant_symbols",
+      "after_sha256": "fe5f0af13e9aae70769d64bbcb8332d549b0b4cb54b839616c32d929cffa0734",
+      "vote": "unreviewed",
+      "issue_tags": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    }
+  ]
+}

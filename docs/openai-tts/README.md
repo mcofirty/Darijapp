@@ -257,3 +257,22 @@ et vérification `38665517802` réussi en 6 min 48 s. Contrôle HTTP complet pas
 manifest courant, page, CSS/JS et les cent SHA-256 des MP3 effectivement servis
 (`fifty-status.json`). Comparatif prêt :
 https://mcofirty.github.io/Darijapp/test-audio-openai-50/
+
+
+### Avis partiel sur les 50 entrées
+
+Fichier reçu le 2026-10-15 : review_id, modèle et les 50 identifiants, latins,
+textes TTS, profils et empreintes correspondent exactement au comparatif.
+Décision globale `pending` : **24 votes renseignés, 26 sans vote**.
+Vingt préférences OpenAI, trois Jamal (`ch7al?`, `3tchan`, `ach?`) et une entrée
+à revoir (`allah yjazik bikhir`). Sept préférences OpenAI comportent des réserves :
+six sur le débit/naturel et une sur un accent anglais. Ne pas les transformer
+en sept validations sans réserve. L’incertitude sur `ttabi3a` reste sans vote.
+Voir `fifty-feedback.json` ; le fichier brut et ses commentaires restent hors dépôt public.
+
+Les symboles peuvent aider la lecture des consonnes sans imposer un accent ou
+une prosodie au modèle. Un réglage de vitesse ou un retrait de silence ne garantit
+pas la correction d’un accent. La suite recommandée porte sur ces problèmes
+ciblés, en conservant les autres candidats et la voix Jamal des exercices.
+Aucune nouvelle synthèse, certification linguistique ou activation n’est déduite
+de cet avis partiel.

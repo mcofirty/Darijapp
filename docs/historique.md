@@ -68,6 +68,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-15 | Comparatif OpenAI de 50 entrées généré, publié et vérifié en HTTP : 31 thèmes, texte consonantique caché, 49 nouveaux MP3 et candidat préféré conservé | `scripts/openai_tts/fifty.py`, `scripts/openai_tts/pilot-50.json`, `.github/workflows/openai-tts-fifty.yml` |
 
+| 2026-10-15 | Avis partiel des 50 entrées vérifié : 20 préférences OpenAI dont 7 avec réserves, 3 Jamal, 1 à revoir, 26 sans vote ; problèmes de débit/naturel et accent distingués | `docs/openai-tts/fifty-feedback.json` |
+
 ## Décisions
 
 - 2026-10-14 : contrôle HTTP réussi sur la page, les scripts et les 100 MP3 (50 avant/après) ; distinguer la disponibilité du test de l'avancement du corpus complet, dont les jobs sont observés sans interrompre les calculs.
@@ -163,3 +165,5 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-15 : test de 50 effectivement généré dans main `b68bd13` : 49 nouveaux MP3, weqqeʕ préféré conservé, cent empreintes/décodages et lecteur mobile vérifiés. Quarante-quatre avertissements de silence périphérique restent visibles ; les cinquante prononciations restent à évaluer. Aucun MP3 actif ni score modifié.
 
 - 2026-10-15 : publication des 50 entrées réussie (Pages `38665785482`) ; génération et contrôle HTTP `38665517802` réussis, cent MP3 et ressources servis à l’identique. Avis utilisateur attendu, sans activation dans les exercices.
+
+- 2026-10-15 : avis du comparatif de 50 partiel et décision globale en attente ; distinguer les votes de préférence et les réserves de qualité (six débit/naturel, un accent anglais). Conserver les commentaires bruts hors dépôt public et Jamal active ; aucune génération massive ni activation déduite.
