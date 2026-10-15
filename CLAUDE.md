@@ -72,7 +72,7 @@ src/
   db/             schéma Dexie et migrations, plan et enregistrement des sessions, mots ajoutés, résumé en direct
   data/           un fichier JSON par thème, liste des thèmes, sons du darija, paires de sons (`sons/paires.json`), grammaire et dialogues (`parler/`)
 scripts/
-  generate_audio.py, modele/ (export du modèle de sons, voix de test), hadra/ (TTS refusé), openai_tts/ (test latin de dix mots)
+  generate_audio.py, modele/ (export du modèle de sons, voix de test), hadra/ (TTS refusé), openai_tts/ (pilote vocal, textes audio cachés et essai phonétique)
 public/audio/     MP3 générés par l'Action (voix Jamal) ; public/modele/ : modèle de sons (ONNX int8 en morceaux, `xlsr.json`)
 docs/
   cahier-des-charges.md   demande d'origine
@@ -202,7 +202,7 @@ Profil : en plus des réglages, `micro` (Dis-le avec score), `parler` et `ecoute
 
 Jalon en cours : **4 — Jeu** (contenu du jeu terminé). Les jalons 1 à 3 sont en ligne sur https://mcofirty.github.io/Darijapp/ (score de prononciation à éprouver sur iPhone avec une vraie voix).
 
-Test OpenAI : avis reçu et vérifié, six préférences OpenAI, deux Jamal, deux à revoir ; décision « corrections demandées ». Deuxième essai ciblé sur khobz, ch7al?, we99e3 et 3tchan : quatre appels maximum, six MP3 conservés octet pour octet, premier essai accessible. Quatre nouveaux MP3 générés, six inchangés et 24 empreintes vérifiées ; comparatif V2 publié et testé en mobile. `we99e3` reste suspect (lecture des chiffres suggérée par un diagnostic non calibré), `3tchan` a encore des pauses ; file de révision et choix d’une entrée phonétique latine ou maintien de Jamal en attente. Jamal reste active, prononciation non certifiée.
+Test OpenAI : dix mots puis quatre reprises publiés ; six préférences OpenAI, deux Jamal, deux à revoir. Les consignes seules n’évitent pas la lecture numérique de we99e3. À la demande de l’utilisateur (2026-10-15), référentiel caché `audio-texts.json` pour 3 511 textes, deux notations consonantiques candidates et exceptions par entrée, distincts du latin affiché. Audit : 650 mots / 1 818 textes avec chiffres-sons (risques, pas erreurs établies). Essai limité à deux lectures de we99e3 avant élargissement ; Jamal reste active et aucune prononciation n’est certifiée.
 
 Voix HADRA refusée par l’utilisateur le 2026-10-14 après écoute des 50 mots : arrêt du corpus et suppression du déclenchement automatique. Le comparatif `/test-audio/` reste disponible. Jamal reste la voix active ; aucun déploiement de HADRA et aucune reprise sans nouvelle demande explicite.
 
@@ -228,7 +228,7 @@ Liste complète, ligne par ligne : `docs/historique.md`.
 | 2026-10-13 | Sauvegarde protégée et rappelée, audio hors ligne, oral d'abord (nouveau mot redit de mémoire, phrases du mode écoute), `CLAUDE.md` résumé, zellige du souk dans toute l'appli | `src/app/stockage.ts`, `src/audio/horsLigne.ts`, `src/exercices/ecoute.ts`, `src/ui/zellige.tsx`, `docs/` |
 | 2026-10-13 | Façon Duolingo (1) : force du mot, mustawa d nnbta, gel et réparation de la série, double XP, combo, défi du mois, bilan de la semaine | `src/gamification/serie.ts`, `src/gamification/combo.ts`, `src/gamification/defis.ts`, `src/gamification/semaine.ts`, `src/db/serie.ts`, `src/features/jeu/Motivation.tsx`, `src/ui/ForceMot.tsx` |
 | 2026-10-14 | Harmonisation du latin : 176 champs dans 22 fichiers, emprunts explicités, allah séparé développé, ordre de 3tchan et gémination de we99e3 corrigés ; 80 références du score recalculées, contrôles étendus à tous les textes JSON | `src/data/`, `public/modele/references.json`, `docs/corrections-latin.md` |
-| 2026-10-14 | Pilote OpenAI : dix vrais MP3 latins, comparatif isolé publié, contrôles techniques, test mobile et HTTP des vingt fichiers passés | `scripts/openai_tts/`, `.github/workflows/openai-tts-pilot.yml`, `docs/openai-tts/` |
+| 2026-10-14 et 15 | Pilote OpenAI : dix mots puis quatre reprises publiés ; textes audio cachés par entrée, audit des chiffres-sons et test de deux notations avant élargissement | `scripts/openai_tts/`, `.github/workflows/openai-tts-*.yml`, `docs/openai-tts/` |
 | 2026-10-14 | Pilote HADRA latin opérationnel avec reprises, variantes et contrôles ; essais CPU et diagnostic non certifiant, sans activation dans l'application | `scripts/hadra/`, `.github/workflows/hadra.yml`, `docs/hadra/` |
 
 ## Décisions
@@ -252,6 +252,8 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 - 2026-10-13 : fonctions façon Duolingo calculées depuis l'historique comme le reste (défi du mois, bilan de la semaine, mustawa) ; seuls les jours couverts de la série, la fin du double XP et le bilan fermé sont stockés (profil, sans migration) ; gels et réparations passent par la table `achats` (ids `gel-…`, `reparation-…`) pour que le solde de dirhams reste un simple calcul. Pas de cœurs (refusés).
 
 ## Points en suspens
+
+- Texte audio caché (2026-10-15) : deux propositions par entrée, chiffres-sons convertis selon un lexique fermé ; vrais nombres conservés, nouveaux tokens mixtes bloqués, exceptions explicites par mot. Ni IPA complet ni interprétation garantie par OpenAI. Essai de deux lectures sans chiffres sur we99e3 ; avis d’écoute attendu avant 50 mots ou génération massive.
 
 - Test OpenAI autorisé (2026-10-14) : pilote de dix mots difficiles prêt avec `gpt-4o-mini-tts-2025-12-15` / Cedar, entrée latine, contrôles et reprise sans retry payant ; page autonome `/test-audio-openai/` publiée seulement après dix MP3 conformes. Clé ajoutée : HTTP 429 / `insufficient_quota` confirmé dans le run `38605552834`. Crédit ajouté : dix MP3 générés, test publié sur main et contrôle HTTP des vingt fichiers réussi. Avis reçu : six préférences OpenAI, deux Jamal, deux à revoir. Reprise ciblée de quatre mots avec consignes spécifiques et conservation des six autres ; attendre le nouvel avis avant 50 mots. Jamal conservée ; aucun lot de 50 ou de 3 511 sans décision suivante. Voir `docs/openai-tts/README.md`.
 

@@ -127,5 +127,52 @@ Pages `38642664847` réussie. Les durées/pauses de `we99e3` et `3tchan` restent
 inhabituelles ; un diagnostic Common Voice non calibré suggère encore une lecture
 des chiffres de `we99e3` comme des nombres. Ce mot ne doit pas être considéré
 comme corrigé. Voir `revision-2-review-queue.json` ; le diagnostic ne certifie
-pas les autres mots. Attendre le choix entre transcription phonétique latine
-pour le TTS (latin affiché conservé) et maintien de Jamal pour les mots non fiables.
+pas les autres mots. L’utilisateur demande désormais une écriture phonétique cachée par entrée ;
+Jamal reste active pendant cet essai.
+
+
+## Texte audio caché par entrée
+
+Le latin montré à l’apprenant reste inchangé. Le générateur dispose d’un texte
+séparé pour chaque mot, exemple et phrase : `scripts/openai_tts/audio-texts.json`
+contient les 3 511 entrées, sans ajout à l’interface ni à la base de progression.
+Ce sont des **propositions**, pas 3 511 transcriptions linguistiquement validées.
+`audio_texts.py` les reconstruit depuis le catalogue ; les corrections particulières
+vont dans `audio-text-overrides.json`, avec le latin source pour bloquer une exception périmée.
+
+Exemple : `latin: "we99e3"`, `audio_text.latin_phonetic: "weqqeʿ"`,
+`audio_text.consonant_symbols: "weqqeʕ"`.
+Le premier profil remplace 2/3/7/9 par ʾ/ʿ/ḥ/q ; le second par ʔ/ʕ/ħ/q,
+avec kh/gh/ch → x/ɣ/ʃ. Les consonnes doublées sont conservées. Les voyelles
+ne sont pas devinées : **aucun des profils n’est une transcription IPA complète**.
+Le modèle peut encore ignorer ces symboles ; une notation différente ne garantit
+pas une meilleure prononciation.
+
+L’audit (`arabizi-audit.json`) trouve 650 mots sur 1 682 et 1 818 textes audio sur
+3 511 contenant des chiffres-sons : ce sont des risques de lecture, pas autant
+d’erreurs avérées. Le lexique figé de 834 tokens provient du corpus existant,
+sans prétendre à une validation native. Les nombres isolés et identifiants
+comme MP3 restent des nombres ; un nouveau token alphanumérique inconnu bloque
+sa proposition et rejoint la révision plutôt que de recevoir une conversion aveugle.
+La confiance reste `null`, la prononciation incertaine, la certification linguistique fausse.
+
+```bash
+python scripts/openai_tts/phonetic.py --audit-output docs/openai-tts/arabizi-audit.json
+python scripts/openai_tts/audio_texts.py --output scripts/openai_tts/audio-texts.json
+python -m unittest discover -s scripts/openai_tts -p 'test_*.py'
+```
+
+### Essai préalable sur we99e3
+
+`phonetic_probe.py` compare deux nouvelles lectures seulement : `weqqeʿ` et
+`weqqeʕ`, même modèle/Cedar, avec l’ancien MP3 chiffré conservé par SHA-256
+depuis le comparatif V2 figé à `eb84bf8`. Ni le texte d’entrée ni les nouvelles
+consignes ne demandent de lire les chiffres. Plafond : **deux appels API**,
+aucun retry payant ; réutilisation des fichiers intacts et arrêt sur tentative incertaine.
+Les contrôles MP3 sont effectués avant et après l’export mono 24 kHz / 64 kbit/s.
+
+Le workflow `openai-tts-phonetic.yml` prépare un test autonome à trois lecteurs
+sur `/test-audio-phonetic/`, avec avis locaux et export JSON. Il lit le CLAUDE.md
+complet de main avant publication, vérifie les empreintes et ne touche qu’au
+nouveau dossier de test et à la mémoire du projet. Aucun remplacement des MP3
+actifs, aucun lot de 50 ou de 3 511 avant un résultat convaincant et une décision suivante.

@@ -1,0 +1,87 @@
+name: Comparer deux lectures sans chiffres
+on:
+  push:
+    branches: [feat/hadra-tts]
+    paths: [.github/workflows/openai-tts-phonetic.yml]
+concurrency:
+  group: openai-tts-pilot-10
+  cancel-in-progress: false
+permissions:
+  contents: write
+  actions: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: eb84bf8f0b92afca3f768714238bdc6393708053
+          path: baseline-site
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/cache/restore@v4
+        with:
+          path: artifacts/openai-phonetic
+          key: openai-phonetic-v1-${{ hashFiles('scripts/openai_tts/phonetic_probe.py', 'scripts/openai_tts/phonetic.py', 'scripts/openai_tts/audio-text-overrides.json') }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            openai-phonetic-v1-${{ hashFiles('scripts/openai_tts/phonetic_probe.py', 'scripts/openai_tts/phonetic.py', 'scripts/openai_tts/audio-text-overrides.json') }}-
+      - run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends ffmpeg
+          python -m pip install numpy==2.2.6
+      - name: Vérifier la séparation affichage et voix, les vrais nombres et la reprise
+        run: python -m unittest discover -s scripts/openai_tts -p 'test_*.py'
+      - name: Générer seulement deux lectures de we99e3 sans chiffres
+        env:
+          DARIJA_TTS_KEY: ${{ secrets.DARIJA_TTS_KEY || secrets.OPENAI_API_KEY }}
+        run: python scripts/openai_tts/phonetic_probe.py generate --baseline baseline-site/public/test-audio-openai
+      - name: Construire le test isolé à trois lecteurs
+        run: python scripts/openai_tts/phonetic_probe.py build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: openai-phonetic-offline
+          path: artifacts/openai-phonetic-site
+          retention-days: 30
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main-site
+      - name: Lire CLAUDE et publier uniquement le test
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/openai_tts/phonetic_probe.py publish --checkout main-site
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: artifacts/openai-phonetic
+          key: openai-phonetic-v1-${{ hashFiles('scripts/openai_tts/phonetic_probe.py', 'scripts/openai_tts/phonetic.py', 'scripts/openai_tts/audio-text-overrides.json') }}-${{ github.run_id }}-${{ github.run_attempt }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: openai-phonetic-diagnostics
+          path: artifacts/openai-phonetic
+          retention-days: 30
+      - name: Enregistrer un bilan sans secret
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          python - <<'PY'
+          import json,pathlib,subprocess,base64,os
+          path=pathlib.Path('artifacts/openai-phonetic/status.json')
+          result=json.loads(path.read_text()) if path.exists() else {'status':'setup_failed'}
+          result['run_id']=os.environ['RUN_ID']
+          target='repos/mcofirty/Darijapp/contents/docs/openai-tts/phonetic-probe-status.json'
+          body={'branch':'feat/hadra-tts','message':'docs: relève les deux lectures sans chiffres',
+                'content':base64.b64encode(json.dumps(result,ensure_ascii=False,indent=2).encode()).decode()}
+          old=subprocess.run(['gh','api',target+'?ref=feat/hadra-tts','--jq','.sha'],capture_output=True,text=True)
+          if old.returncode==0:body['sha']=old.stdout.strip()
+          temp=pathlib.Path('/tmp/openai-phonetic-status.json');temp.write_text(json.dumps(body))
+          subprocess.run(['gh','api','--method','PUT',target,'--input',str(temp)],check=True,stdout=subprocess.DEVNULL)
+          print(json.dumps(result,ensure_ascii=False))
+          PY

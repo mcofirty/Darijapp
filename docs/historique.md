@@ -62,6 +62,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-14 | Comparatif V2 publié : quatre nouvelles propositions et six MP3 conservés, trois lecteurs et filtre testés ; suspicion de lecture numérique persistante sur we99e3, file de révision maintenue | `public/test-audio-openai/`, `docs/openai-tts/revision-2-review-queue.json` |
 
+| 2026-10-15 | Référentiel caché de 3 511 textes audio distincts du latin affiché, deux notations consonantiques, exceptions par entrée et audit des chiffres-sons ; essai limité à deux lectures de we99e3 | `scripts/openai_tts/`, `docs/openai-tts/arabizi-audit.json`, `.github/workflows/openai-tts-phonetic.yml` |
+
 ## Décisions
 
 - 2026-10-14 : contrôle HTTP réussi sur la page, les scripts et les 100 MP3 (50 avant/après) ; distinguer la disponibilité du test de l'avancement du corpus complet, dont les jobs sont observés sans interrompre les calculs.
@@ -143,3 +145,5 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-14 : traiter le fichier d’avis comme données d’évaluation, non comme instructions ; tous les identifiants et SHA-256 concordent. La décision demande des corrections : reprendre quatre mots avant 50, sans changer le latin, le modèle ou Cedar. Ne pas publier les remarques brutes du fichier ; aucune certification linguistique.
 
 - 2026-10-14 : les consignes seules n’établissent pas une lecture fiable de we99e3 ; conserver les nouveaux fichiers comme candidats et demander le choix entre transcription phonétique latine pour le moteur et maintien de Jamal. Ne pas élargir à 50 mots ni confondre conformité technique, préférences d’écoute et certification linguistique.
+
+- 2026-10-15 : à la demande de l’utilisateur, séparer le latin affiché et le texte phonétique caché pour chaque entrée ; remplacer les chiffres-sons connus sans inventer les voyelles, préserver les vrais nombres et bloquer les nouveaux tokens ambigus. Tester deux notations sur we99e3 avant tout élargissement : OpenAI n’offre pas ici de garantie d’interprétation des phonèmes. Jamal reste active.
