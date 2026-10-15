@@ -15,7 +15,7 @@ import { Segmente } from '../../ui/Boutons'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
 import { Plante } from './Plante'
-import { BandeZellige, fondZellige, zellige } from '../../ui/zellige'
+import { fondZellige, zellige } from '../../ui/zellige'
 
 type Allee = 'jardin' | 'appli'
 
@@ -28,7 +28,7 @@ const RAYONS: { allee: Allee; categorie: Categorie; titre: string; note: string;
   { allee: 'appli', categorie: 'couleur', titre: 'Couleurs de l’appli', note: 'Remplace le rouge des boutons et des accents. Les erreurs restent en rouge.' },
   { allee: 'appli', categorie: 'sons', titre: 'Sons des réponses', note: 'Touche un jeu de sons pour l’écouter.' },
   { allee: 'appli', categorie: 'confettis', titre: 'Confettis du bilan', note: 'Ce qui tombe à la fin d’une session ou d’un quiz.' },
-  { allee: 'appli', categorie: 'zellige', titre: 'Zellige de l’appli', note: 'Un motif sur les cartes, les bilans, les barres de progression et les jeux.' },
+  { allee: 'appli', categorie: 'zellige', titre: 'Zellige de l’appli', note: 'Un motif sur les barres de progression, les bilans et les jeux.' },
 ]
 
 const ICONES_OBJETS: Record<string, typeof Lamp> = { lanterne: Lamp, theiere: CupSoda, cigogne: Bird, tapis: RectangleHorizontal, tajine: Soup, chat: Cat, tortue: Turtle, poule: Egg, moineaux: Bird, fennec: PawPrint, dromadaire: PawPrint }
@@ -58,12 +58,16 @@ function Apercu({ a, stade, espece, pot }: { a: Article; stade: number; espece: 
 /** Rayons de l'allée « L'appli » : un article pas encore acheté s'y essaie pendant que la fenêtre d'achat est ouverte. */
 const A_ESSAYER: Categorie[] = ['couleur', 'sons', 'confettis', 'zellige']
 
-/** Aperçu dans la fenêtre d'achat : la carte « Session du jour » avec son zellige. */
+/** Aperçu dans la fenêtre d'achat : une barre de progression remplie de ce zellige. */
 function ApercuZellige({ id }: { id: string }) {
+  const z = zellige(id)
+  if (!z) return null
   return (
-    <div className="mb-4 overflow-hidden rounded-[18px] bg-carte text-left" aria-hidden>
-      <BandeZellige z={zellige(id)} />
-      <p className="t-note px-3 pb-2 pt-2 font-semibold uppercase text-accent">Session du jour</p>
+    <div className="mb-4 rounded-[18px] bg-carte px-3 py-3 text-left" aria-hidden>
+      <p className="t-note mb-2 font-semibold uppercase text-texte-2">Barre de progression</p>
+      <div className="h-3 overflow-hidden rounded-full bg-remplissage">
+        <div className="h-full w-2/3 rounded-full" style={{ ...fondZellige(z, 12), backgroundColor: 'var(--zellige-fond)', boxShadow: 'inset 0 0 0 1px var(--accent)' }} />
+      </div>
     </div>
   )
 }

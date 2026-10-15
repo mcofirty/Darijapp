@@ -19,7 +19,6 @@ import { Page } from '../../ui/Page'
 import type { SessionPrete } from '../session/lancer'
 import { Session } from '../session/Session'
 import { Passeport } from './Passeport'
-import { BandeZellige, useZellige } from '../../ui/zellige'
 
 /** Décalage horizontal des nœuds, en pt : le chemin serpente comme une route. */
 const DECALAGES = [0, 70, 100, 70, 0, -70, -100, -70]
@@ -56,7 +55,6 @@ export function Parcours() {
   const progressions = useLiveQuery(() => db.progression.toArray(), [])
   const bonus = useLiveQuery(() => db.bonus.toArray(), [])
   const [vue, setVue] = useState<Vue>({ type: 'carte' })
-  const zellige = useZellige()
   const [session, setSession] = useState<(SessionPrete & { numero: number; etape: number; epreuve?: 'validation' | 'legendaire' }) | null>(null)
   const [gain, setGain] = useState<string | null>(null)
   const [verdict, setVerdict] = useState<{ titre: string; message: string } | null>(null)
@@ -137,7 +135,6 @@ export function Parcours() {
     return (
       <Page titre={e.etape.ville} retour={{ libelle: 'Parcours', action: () => setVue({ type: 'carte' }) }}>
         <section className="mb-[26px] overflow-hidden rounded-carte bg-carte p-marge">
-          <BandeZellige z={zellige} className="-mx-marge -mt-marge mb-marge h-8" />
           <p className="t-note font-semibold uppercase text-accent">
             Étape {vue.index + 1} sur {ETAPES.length}
             {e.tampon ? ' · tampon obtenu' : ''}

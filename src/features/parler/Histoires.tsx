@@ -13,7 +13,7 @@ import { Ligne, Section } from '../../ui/Liste'
 import { Mascotte, PhraseDeMascotte } from '../../ui/Mascotte'
 import { Page } from '../../ui/Page'
 import { PhraseTouchable } from '../../ui/PhraseTouchable'
-import { BandeZellige, RemplissageBarre, useZellige } from '../../ui/zellige'
+import { RemplissageBarre } from '../../ui/zellige'
 import { Bilan } from '../session/Bilan'
 
 /** Liste des histoires, puis une histoire en plein écran. */
@@ -60,7 +60,6 @@ export function Histoires({ onRetour }: { onRetour: () => void }) {
 /** Une histoire : les lignes arrivent une à une (lues par la voix), coupées de questions de compréhension. */
 function LectureHistoire({ histoire, onFermer, onEncore }: { histoire: Histoire; onFermer: () => void; onEncore: () => void }) {
   const profil = useProfil()
-  const zellige = useZellige()
   const morceaux = useMemo(() => deroule(histoire), [histoire])
   // Réponses mélangées une fois pour toutes, par morceau.
   const reponses = useMemo(() => morceaux.map((m) => (m.type === 'question' ? reponsesMelangees(m.question) : null)), [morceaux])
@@ -137,7 +136,6 @@ function LectureHistoire({ histoire, onFermer, onEncore }: { histoire: Histoire;
       <div className="mx-auto w-full max-w-xl flex-1 overflow-y-auto px-marge pb-6 pt-2">
         {/* Couverture illustrée */}
         <div className="relative mb-5 overflow-hidden rounded-carte px-marge py-6 text-center" style={{ backgroundColor: `color-mix(in srgb, ${histoire.couleur} 22%, var(--carte))` }}>
-          <BandeZellige z={zellige} className="pointer-events-none absolute inset-x-0 top-0 h-6" />
           <p className="relative mt-2 text-[56px] leading-none" aria-hidden>
             {histoire.illustration}
           </p>

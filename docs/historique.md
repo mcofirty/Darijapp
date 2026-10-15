@@ -29,24 +29,16 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 | 2026-10-13 | Zellige retiré de l'en-tête des onglets (demande de l'utilisateur) | `src/ui/Page.tsx` |
 | 2026-10-12 | Animation d'ouverture : vidéo de 3 s de l'utilisateur sur fond sombre à chaque lancement, passée d'un toucher, image finale avec Réduire les animations ou si la vidéo ne démarre pas | `public/lancement.mp4`, `public/lancement-fin.jpg`, `src/app/lancement.ts`, `index.html` |
 | 2026-10-14 | Harmonisation de 176 champs latins dans les mots, exemples et dialogues, sans modifier les aides de prononciation ; tests de correspondance étendus à tous les textes JSON et 80 références du score recalculées | `src/data/`, `public/modele/references.json`, `docs/corrections-latin.md` |
-
 | 2026-10-14 | Espace de test audio autonome : 50 mots réels, lecteurs Avant/Jamal et Après/HADRA latin, avis et export local ; voix des exercices conservée | `public/test-audio/` |
-
 | 2026-10-14 | Comparatif OpenAI autonome de dix mots, voix Cedar depuis le latin, vingt MP3 et avis locaux ; Jamal conservée dans les exercices | `public/test-audio-openai/` |
-
 | 2026-10-14 | Deuxième essai OpenAI : quatre nouvelles propositions depuis le latin et six MP3 conservés à l’identique ; premier essai accessible et Jamal active | `public/test-audio-openai/` |
-
 | 2026-10-15 | Essai de deux notations phonétiques sans chiffres sur we99e3, avec lecture chiffrée de référence et avis locaux ; application conservée | `public/test-audio-phonetic/` |
-
 | 2026-10-15 | Comparatif OpenAI de 50 entrées avec notation cachée, 49 nouveaux fichiers et candidat préféré conservé ; 100 MP3 avant/après, avis locaux et export | `public/test-audio-openai-50/` |
-
 | 2026-10-13 | Façon Duolingo (1) : force du mot, mustawa d nnbta, gel et réparation de la série, double XP, combo, défi du mois, bilan de la semaine | `src/gamification/serie.ts`, `src/gamification/combo.ts`, `src/gamification/defis.ts`, `src/gamification/semaine.ts`, `src/db/serie.ts`, `src/features/jeu/Motivation.tsx`, `src/ui/ForceMot.tsx` |
-
 | 2026-10-15 | Façon Duolingo (2) : phrase à trou (écrite ou dite) et indice au toucher (traduction d'un mot dans les phrases en darija) | `src/exercices/trou.ts`, `src/exercices/glossaire.ts`, `src/features/session/Trou.tsx`, `src/ui/PhraseTouchable.tsx` |
-
 | 2026-10-15 | Façon Duolingo (3) : test de niveau (Apprendre et Profil), épreuve « Passer l'étape », épreuve légendaire et tampon doré, guide de l'étape | `src/exercices/epreuves.ts`, `src/features/onboarding/TestNiveau.tsx`, `src/features/parcours/`, `src/ui/legendaire.ts` |
-
 | 2026-10-15 | Façon Duolingo (4) : Bellarej la cigogne (réagit aux réponses, félicite dans les bilans), avatar et prénom (Profil, salut dans Progrès), 6 histoires illustrées avec questions de compréhension | `src/ui/Mascotte.tsx`, `src/gamification/mascotte.ts`, `src/ui/Avatar.tsx`, `src/features/profil/MonAvatar.tsx`, `src/features/parler/Histoires.tsx`, `src/exercices/histoires.ts`, `src/data/parler/histoires.json` |
+| 2026-10-15 | Zellige retiré en bandeau des cartes et des listes (Session du jour, Quiz, Parler, étape du Parcours, fiche mot, Nouveau mot, couverture des histoires) ; aperçu du souk sur une barre de progression | `src/ui/Liste.tsx`, `src/features/jeu/Souk.tsx` |
 | 2026-10-15 | Direction « Playful Premium » : corail, énergie et menthe, anthracite chaud en sombre, carte Session du jour colorée avec une situation concrète (« Aujourd'hui, commande ton premier thé »), quêtes à icônes, couleurs et jauges animées, flamme, théière et badges en relief qui évoluent, carte de niveau à un anneau avec acquis vérifiés séparés de l'activité, lentille corail de la barre d'onglets, cartes en cascade, célébration à trois intensités, retours haptiques, sons et haptique désactivables | `src/index.css`, `src/features/session/CarteSessionDuJour.tsx`, `src/exercices/situation.ts`, `src/data/situations/`, `src/features/jeu/QuetesDuJour.tsx`, `src/features/jeu/CarteNiveau.tsx`, `src/ui/recompenses.tsx`, `src/ui/Anneau.tsx`, `src/ui/haptique.ts`, `src/features/session/Bilan.tsx` |
 | 2026-10-15 | Appli sans zoom (pincement, double toucher) et en portrait seulement : écran « Remets ton téléphone à la verticale » en paysage | `index.html`, `src/app/zoom.ts`, `src/index.css` |
 
@@ -101,3 +93,4 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-15 : retours haptiques sans bibliothèque : `navigator.vibrate` où il existe, sinon l'interrupteur natif `<input type="checkbox" switch>` basculé, seule voie connue sur Safari iOS 18 ; réglages `effets` et `haptique` ajoutés au profil sans migration.
 - 2026-10-15 : animations d'apparition en `animation-fill-mode: backwards` seulement, pour qu'aucune opacité ni transformation ne reste sur les cartes (verre et éléments fixés intacts).
 - 2026-10-15 : Safari sur iPhone ignore `user-scalable=no` et l'orientation `portrait` du manifeste ; le zoom est donc aussi bloqué par `touch-action` et l'annulation des gestes, et le paysage est couvert par un écran en CSS pur (présent avant React), qui garde l'activité en cours au lieu de la démonter.
+- 2026-10-15 : zellige retiré des cartes et des listes à la demande de l'utilisateur (« plus à des endroits comme ça », capture de la section Parler) ; gardé là où il fait partie d'un jeu ou d'une récompense : barres de progression, bilans, auvent du marchand, plan du Taxi, bordure du passeport. Le prop `zellige` de `Section` est supprimé.
