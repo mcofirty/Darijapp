@@ -76,6 +76,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-15 | Ordre CI du test Astra corrigé : installer NumPy/ffmpeg avant le test PCM, sans rejouer les requêtes HTTP déjà refusées | `.github/workflows/openai-astra-probe.yml` |
 
+| 2026-10-15 | Tests réels Astra terminés : modèle visible, TTS 404, audio conversationnel 400 et Realtime invalid_model ; zéro audio, aucun changement applicatif | `docs/openai-tts/astra-probe-status.json` |
+
 ## Décisions
 
 - 2026-10-14 : contrôle HTTP réussi sur la page, les scripts et les 100 MP3 (50 avant/après) ; distinguer la disponibilité du test de l'avancement du corpus complet, dont les jobs sont observés sans interrompre les calculs.
@@ -179,3 +181,5 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-15 : le modèle Astra étant accessible mais les deux interfaces HTTP n’ayant renvoyé aucun audio, vérifier également Realtime avec une session et une seule réponse au maximum. Réutiliser les diagnostics HTTP en cache et refuser toute substitution de modèle.
 
 - 2026-10-15 : le test local positif de décodage Realtime dépend de NumPy et ffmpeg ; les installer avant les tests sur le runner. L’échec précédent est intervenu avant l’appel Realtime, les diagnostics HTTP restent en cache.
+
+- 2026-10-15 : Astra ne renvoie aucun audio via les trois interfaces effectivement testées avec l’accès actuel ; ne pas attribuer de performance darija ni publier de faux échantillon. Conserver les diagnostics et Jamal active ; un prochain test doit utiliser un candidat audio compatible.

@@ -311,3 +311,17 @@ aucune génération. Pas de redirection WebSocket avec la clé, pas de logs brut
 d’erreur, pas de retry après une issue incertaine ni de substitution par Realtime 2.1.
 Le test positif local utilise un signal synthétique dans un dossier temporaire
 uniquement ; il n’est jamais publié comme échantillon d’Astra.
+
+
+Résultat final réel : run `38761821579` réussi en 49 s (neuf tests de contrôle
+passés, requêtes de compatibilité exécutées). Realtime refuse `gpt-6-astra` avec
+`invalid_model`, avant toute création de réponse. Les deux refus HTTP précédents
+ont été conservés sans nouvel appel. **Zéro fichier audio produit** sur les
+trois interfaces testées avec cet accès : aucune mesure de prononciation,
+d’accent marocain ou de supériorité d’Astra n’est possible.
+
+Le modèle est visible via ses métadonnées (HTTP 200) ; cela ne suffit pas à
+établir une compatibilité audio. Aucun autre modèle n’a été substitué, aucun
+comparatif fictif publié et aucun MP3 actif modifié. Le prochain essai demande
+un candidat compatible avec une interface audio. Diagnostic :
+`astra-probe-status.json`, https://github.com/mcofirty/Darijapp/actions/runs/38761821579.
