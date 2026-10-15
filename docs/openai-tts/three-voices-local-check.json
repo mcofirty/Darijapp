@@ -1,0 +1,145 @@
+{
+  "review_id": "251c0ad12aecba178742f3e6243bb385d3560cb221b94900df4d3b5062d11cd1",
+  "technical_status": "passed",
+  "audio_files_decoded": 30,
+  "retained_audio_files_verified": 20,
+  "new_candidates": 10,
+  "warning_counts": {
+    "long_edge_silence": 9,
+    "long_internal_silence": 1
+  },
+  "entries": [
+    {
+      "id": "verbes-085",
+      "latin": "we99e3",
+      "actual_model": "gpt-realtime-2.1",
+      "duration_seconds": 0.95,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "salutations-012",
+      "latin": "3afak",
+      "actual_model": "gpt-realtime-2.1",
+      "duration_seconds": 0.75,
+      "warnings": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "corps-041",
+      "latin": "9elb",
+      "actual_model": "gpt-realtime-2.1",
+      "duration_seconds": 0.8,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "nourriture-001",
+      "latin": "khobz",
+      "actual_model": "gpt-realtime-2.1",
+      "duration_seconds": 1.1,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "nourriture-006",
+      "latin": "7lib",
+      "actual_model": "gpt-realtime-2.1",
+      "duration_seconds": 1.0,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "jours-002",
+      "latin": "ghedda",
+      "actual_model": "gpt-realtime-2.1",
+      "duration_seconds": 0.9,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "chiffres-017",
+      "latin": "ch7al?",
+      "actual_model": "gpt-realtime-2.1",
+      "duration_seconds": 0.85,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-052",
+      "latin": "3tchan",
+      "actual_model": "gpt-realtime-2.1",
+      "duration_seconds": 1.15,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "salutations-035",
+      "latin": "allah yjazik bikhir",
+      "actual_model": "gpt-realtime-2.1",
+      "duration_seconds": 2.7,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "conversation-001",
+      "latin": "w nta, chno smitek?",
+      "actual_model": "gpt-realtime-2.1",
+      "duration_seconds": 2.45,
+      "warnings": [
+        "long_edge_silence",
+        "long_internal_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    }
+  ],
+  "linguistic_certification": false,
+  "browser_check": {
+    "engine": "Chromium",
+    "viewport_width": 393,
+    "entries": 10,
+    "exclusive_audio_players": 3,
+    "speed": "passed",
+    "search": "passed",
+    "themes": "passed",
+    "local_vote_persistence": "passed",
+    "json_export_with_three_hashes": "passed",
+    "horizontal_overflow": false,
+    "javascript_errors": 0
+  },
+  "http_check": {
+    "url": "https://mcofirty.github.io/Darijapp/test-audio-trois-voix/",
+    "review_id": "251c0ad12aecba178742f3e6243bb385d3560cb221b94900df4d3b5062d11cd1",
+    "status": "passed",
+    "entries": 10,
+    "audio_files_checked": 30,
+    "linguistic_certification": false
+  },
+  "active_app_changed": false
+}

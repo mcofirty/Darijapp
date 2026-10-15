@@ -360,3 +360,22 @@ une voix automatiquement. Avant publication : CLAUDE.md complet lu sur main,
 latins et voix actuelle recontrôlés, trente SHA-256 vérifiés, puis vérification
 HTTP exacte de la page, des ressources et des trente fichiers servis.
 Les exercices, MP3 actifs et références restent inchangés.
+
+
+Résultat réel : dix nouvelles synthèses terminées, modèle de session exact
+`gpt-realtime-2.1` pour chacune ; vingt anciens fichiers conservés octet pour
+octet. Publication main `879d403`, génération `38780274475` réussie en 5 min 21 s,
+Pages `38780561357` réussie en 3 min 5 s. Page, ressources et les trente MP3
+servis ont passé le contrôle HTTP exact :
+https://mcofirty.github.io/Darijapp/test-audio-trois-voix/
+
+Contrôles locaux : trente décodages complets, empreintes et conservation du
+baseline vérifiés ; Chromium mobile (393 px), trois lecteurs exclusifs, vitesse,
+recherche, thèmes, persistance des avis et export des dix entrées avec trois
+empreintes testés. Neuf nouveaux fichiers ont un avertissement de silence
+périphérique ; la phrase conversation-001 a aussi un silence interne long.
+Ces alertes restent en révision. Voir `three-voices-status.json`,
+`three-voices-review-queue.json` et `three-voices-local-check.json`.
+La transcription renvoyée correspond au texte demandé mais ne constitue pas
+un contrôle indépendant des sons. Prononciation incertaine, confiance `null`,
+avis utilisateur attendu ; aucun exercice ni MP3 actif n’a été remplacé.
