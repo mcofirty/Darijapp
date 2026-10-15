@@ -1,0 +1,350 @@
+{
+  "version": 1,
+  "model": "gpt-realtime-2.1",
+  "voice": "cedar",
+  "count": 10,
+  "maximum_new_responses": 10,
+  "source_script": "latin",
+  "profile": "consonant_symbols",
+  "linguistic_certification": false,
+  "confidence": null,
+  "complete_ipa": false,
+  "baseline_review_id": "49c0e1694b75cb17aa75fc58ebe3fe3e69728c715dd9f2d4633b81a33fba7303",
+  "entries": [
+    {
+      "id": "verbes-085",
+      "latin": "we99e3",
+      "arabe": "وقع",
+      "fr": "signer",
+      "theme": "verbes",
+      "tts_text": "weqqeʕ",
+      "instructions": "Speak Moroccan Darija with a natural Moroccan accent. Read only the supplied verb meaning 'to sign', exactly once, with no introduction, explanation, spelling, or translation. The input is a Latin phonetic rendering, not an English word. The characters ʿ and ʕ represent the voiced pharyngeal consonant ayn /ʕ/, ʾ and ʔ represent a glottal stop, ḥ and ħ represent a voiceless pharyngeal /ħ/, and q represents a uvular stop /q/, never the English name of a letter. A doubled q is a sustained consonant, not two words. Start with consonant w and a short unstressed vowel, preserve the doubled consonant and the final pharyngeal consonant. Output only the Moroccan word, without speaking the names of the symbols.",
+      "jamal_sha256": "e6362f58d83be89af051870ca0bf0499beacc5e50d5740b108964f4eb235f817",
+      "previous_sha256": "da53fc99dd25b8350140a0cbcd488f77918b65b08a06f40b0f1a04cea19f5c95",
+      "previous_warnings": [
+        "long_edge_silence"
+      ],
+      "key": "4ca5740acf24a311f387191e63d3184da6d4f70f94ed29322ad97c21369c185f",
+      "new_sha256": "31722e3f3a20c2f61b6f5b0874fdc88d71509791d32bb8a790755763d301a05e",
+      "actual_model": "gpt-realtime-2.1",
+      "technical_status": "passed",
+      "pronunciation_status": "uncertain",
+      "confidence": null,
+      "new_warnings": [
+        "long_edge_silence"
+      ],
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "generated_transcript_not_independent_validation": "weqqeʕ",
+      "jamal": "jamal/verbes-085.mp3",
+      "previous": "previous/verbes-085.mp3",
+      "new": "new/verbes-085.mp3"
+    },
+    {
+      "id": "salutations-012",
+      "latin": "3afak",
+      "arabe": "عافاك",
+      "fr": "s'il te plaît",
+      "theme": "salutations",
+      "tts_text": "ʕafak",
+      "instructions": "Speak only Moroccan Darija with a natural Moroccan accent. Read the supplied Latin phonetic text exactly once, without introduction, explanation, spelling, symbol names, or translation. The input is not English or French. ʕ is the voiced pharyngeal consonant ayn; ħ is a voiceless pharyngeal consonant; ʔ is a glottal stop; q is a uvular stop, x is the sound kh, ɣ is gh, and ʃ is sh. Preserve doubled consonants as gemination, including qq, and preserve short vowels and consonant clusters. Say only the supplied Darija word or expression. The following French meaning is context only and must not be spoken: s'il te plaît",
+      "jamal_sha256": "a821450f819fb142a389faa436abd8f31c4aa4dd9db3bcc7997a014c2fe79379",
+      "previous_sha256": "e00b444822c6d6d8ce1475566a842a655eb636d3c16aeb9a631d394f9cb7e121",
+      "previous_warnings": [
+        "long_edge_silence"
+      ],
+      "key": "d8e1f8dde57482bc0525030c9be60975f05c8216f74313db150795978a740510",
+      "new_sha256": "e401b4d429c96a6ef813ba7579622ed9ab9e77c04732efacc6aa5398579b1ce6",
+      "actual_model": "gpt-realtime-2.1",
+      "technical_status": "passed",
+      "pronunciation_status": "uncertain",
+      "confidence": null,
+      "new_warnings": [],
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "generated_transcript_not_independent_validation": "ʕafak",
+      "jamal": "jamal/salutations-012.mp3",
+      "previous": "previous/salutations-012.mp3",
+      "new": "new/salutations-012.mp3"
+    },
+    {
+      "id": "corps-041",
+      "latin": "9elb",
+      "arabe": "قلب",
+      "fr": "cœur",
+      "theme": "corps",
+      "tts_text": "qelb",
+      "instructions": "Speak only Moroccan Darija with a natural Moroccan accent. Read the supplied Latin phonetic text exactly once, without introduction, explanation, spelling, symbol names, or translation. The input is not English or French. ʕ is the voiced pharyngeal consonant ayn; ħ is a voiceless pharyngeal consonant; ʔ is a glottal stop; q is a uvular stop, x is the sound kh, ɣ is gh, and ʃ is sh. Preserve doubled consonants as gemination, including qq, and preserve short vowels and consonant clusters. Say only the supplied Darija word or expression. The following French meaning is context only and must not be spoken: cœur",
+      "jamal_sha256": "157d8a985d957da51e88094a1d2f14adc1f1b0064aa34999da3feb427565223b",
+      "previous_sha256": "015fa0c615ebc62f147940197bd1df6ea992ffc81368887fc32f32294df9788b",
+      "previous_warnings": [
+        "long_edge_silence"
+      ],
+      "key": "c210c27af8639b93a3c8b9ff0eaca0432c45665242b9652378f8276c4ce352ae",
+      "new_sha256": "746fde5e4bebabdac00ea5613dede3c5265fb4d597cee05c9f862f80075a0e70",
+      "actual_model": "gpt-realtime-2.1",
+      "technical_status": "passed",
+      "pronunciation_status": "uncertain",
+      "confidence": null,
+      "new_warnings": [
+        "long_edge_silence"
+      ],
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "generated_transcript_not_independent_validation": "qelb",
+      "jamal": "jamal/corps-041.mp3",
+      "previous": "previous/corps-041.mp3",
+      "new": "new/corps-041.mp3"
+    },
+    {
+      "id": "nourriture-001",
+      "latin": "khobz",
+      "arabe": "خبز",
+      "fr": "pain",
+      "theme": "nourriture",
+      "tts_text": "xobz",
+      "instructions": "Speak only Moroccan Darija with a natural Moroccan accent. Read the supplied Latin phonetic text exactly once, without introduction, explanation, spelling, symbol names, or translation. The input is not English or French. ʕ is the voiced pharyngeal consonant ayn; ħ is a voiceless pharyngeal consonant; ʔ is a glottal stop; q is a uvular stop, x is the sound kh, ɣ is gh, and ʃ is sh. Preserve doubled consonants as gemination, including qq, and preserve short vowels and consonant clusters. Say only the supplied Darija word or expression. The following French meaning is context only and must not be spoken: pain",
+      "jamal_sha256": "20296d1a52948751dce5030501724f22128587bd282dad99ab7f0c03a1399970",
+      "previous_sha256": "45136269f9153b208cd00aaf4bd61405ece45087b7e4963e68c1a90e2cbb28a0",
+      "previous_warnings": [
+        "long_edge_silence"
+      ],
+      "key": "19cda1b7587e7a924b2a0d870c85b4ce2548aacbd48312b14a59f1cb4673afc7",
+      "new_sha256": "27944bd327f26438f18ecbabe9a46d8b3259e20886796dde032b630e3fe451dc",
+      "actual_model": "gpt-realtime-2.1",
+      "technical_status": "passed",
+      "pronunciation_status": "uncertain",
+      "confidence": null,
+      "new_warnings": [
+        "long_edge_silence"
+      ],
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "generated_transcript_not_independent_validation": "xobz",
+      "jamal": "jamal/nourriture-001.mp3",
+      "previous": "previous/nourriture-001.mp3",
+      "new": "new/nourriture-001.mp3"
+    },
+    {
+      "id": "nourriture-006",
+      "latin": "7lib",
+      "arabe": "حليب",
+      "fr": "lait",
+      "theme": "nourriture",
+      "tts_text": "ħlib",
+      "instructions": "Speak only Moroccan Darija with a natural Moroccan accent. Read the supplied Latin phonetic text exactly once, without introduction, explanation, spelling, symbol names, or translation. The input is not English or French. ʕ is the voiced pharyngeal consonant ayn; ħ is a voiceless pharyngeal consonant; ʔ is a glottal stop; q is a uvular stop, x is the sound kh, ɣ is gh, and ʃ is sh. Preserve doubled consonants as gemination, including qq, and preserve short vowels and consonant clusters. Say only the supplied Darija word or expression. The following French meaning is context only and must not be spoken: lait",
+      "jamal_sha256": "6f816ecbeff3835c9f88121f554cf7c8690700ee9e4883e121ed18779d6d5197",
+      "previous_sha256": "9dfdb6840a4503619d1e85616e228080ec18911ae07758afcd0c54ebdd38f2ed",
+      "previous_warnings": [
+        "long_edge_silence"
+      ],
+      "key": "53e36e3942a0e3536e43b1c6b83847dfe15824512bef2226685f6f83e3c4d44a",
+      "new_sha256": "010fe5b15c0925d1ced9029dde2676078057362f02414fc2f2795f204a9e9344",
+      "actual_model": "gpt-realtime-2.1",
+      "technical_status": "passed",
+      "pronunciation_status": "uncertain",
+      "confidence": null,
+      "new_warnings": [
+        "long_edge_silence"
+      ],
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "generated_transcript_not_independent_validation": "ħlib",
+      "jamal": "jamal/nourriture-006.mp3",
+      "previous": "previous/nourriture-006.mp3",
+      "new": "new/nourriture-006.mp3"
+    },
+    {
+      "id": "jours-002",
+      "latin": "ghedda",
+      "arabe": "غدا",
+      "fr": "demain",
+      "theme": "jours",
+      "tts_text": "ɣedda",
+      "instructions": "Speak only Moroccan Darija with a natural Moroccan accent. Read the supplied Latin phonetic text exactly once, without introduction, explanation, spelling, symbol names, or translation. The input is not English or French. ʕ is the voiced pharyngeal consonant ayn; ħ is a voiceless pharyngeal consonant; ʔ is a glottal stop; q is a uvular stop, x is the sound kh, ɣ is gh, and ʃ is sh. Preserve doubled consonants as gemination, including qq, and preserve short vowels and consonant clusters. Say only the supplied Darija word or expression. The following French meaning is context only and must not be spoken: demain",
+      "jamal_sha256": "250df2d6642e5ebe5b51395a78c100588669dac5747c9ca183f637a8deffa2fc",
+      "previous_sha256": "07a3fb888e4bcb73acffcca2fe650e588a6d94bed516b250b0ba36b67e657230",
+      "previous_warnings": [
+        "long_edge_silence"
+      ],
+      "key": "f643c42561ef4d69fd7330766a0e3eb05967b193ad8f19d3ace9e3d8b28f84f5",
+      "new_sha256": "7d2b76758e9c4b511f9f6b72fd78c575cc31239f72271b64079bce6b552b47e9",
+      "actual_model": "gpt-realtime-2.1",
+      "technical_status": "passed",
+      "pronunciation_status": "uncertain",
+      "confidence": null,
+      "new_warnings": [
+        "long_edge_silence"
+      ],
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "generated_transcript_not_independent_validation": "ɣedda",
+      "jamal": "jamal/jours-002.mp3",
+      "previous": "previous/jours-002.mp3",
+      "new": "new/jours-002.mp3"
+    },
+    {
+      "id": "chiffres-017",
+      "latin": "ch7al?",
+      "arabe": "شحال؟",
+      "fr": "combien ?",
+      "theme": "chiffres",
+      "tts_text": "ʃħal?",
+      "instructions": "Speak only Moroccan Darija with a natural Moroccan accent. Read the supplied Latin phonetic text exactly once, without introduction, explanation, spelling, symbol names, or translation. The input is not English or French. ʕ is the voiced pharyngeal consonant ayn; ħ is a voiceless pharyngeal consonant; ʔ is a glottal stop; q is a uvular stop, x is the sound kh, ɣ is gh, and ʃ is sh. Preserve doubled consonants as gemination, including qq, and preserve short vowels and consonant clusters. Say only the supplied Darija word or expression. The following French meaning is context only and must not be spoken: combien ?",
+      "jamal_sha256": "c93a10ca7b74efeebc30fbd5ffd17862ee3c9ddcdd0ab760f90e03a05aeaa2ee",
+      "previous_sha256": "74f09d8d36e8788dbfa7036030f855aadc9aa1c633c04d90ba18b532207256bc",
+      "previous_warnings": [
+        "long_edge_silence"
+      ],
+      "key": "3cbed0e3b3344b662bbf722792bb08205d0249958447dc2996dd676172d3c7da",
+      "new_sha256": "78f25f3291e8f833af8ecdfc61bea7b1449e56c673fa95a7ef171a52b9b12626",
+      "actual_model": "gpt-realtime-2.1",
+      "technical_status": "passed",
+      "pronunciation_status": "uncertain",
+      "confidence": null,
+      "new_warnings": [
+        "long_edge_silence"
+      ],
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "generated_transcript_not_independent_validation": "ʃħal?",
+      "jamal": "jamal/chiffres-017.mp3",
+      "previous": "previous/chiffres-017.mp3",
+      "new": "new/chiffres-017.mp3"
+    },
+    {
+      "id": "adjectifs-052",
+      "latin": "3tchan",
+      "arabe": "عطشان",
+      "fr": "assoiffé",
+      "theme": "adjectifs",
+      "tts_text": "ʕtʃan",
+      "instructions": "Speak only Moroccan Darija with a natural Moroccan accent. Read the supplied Latin phonetic text exactly once, without introduction, explanation, spelling, symbol names, or translation. The input is not English or French. ʕ is the voiced pharyngeal consonant ayn; ħ is a voiceless pharyngeal consonant; ʔ is a glottal stop; q is a uvular stop, x is the sound kh, ɣ is gh, and ʃ is sh. Preserve doubled consonants as gemination, including qq, and preserve short vowels and consonant clusters. Say only the supplied Darija word or expression. The following French meaning is context only and must not be spoken: assoiffé",
+      "jamal_sha256": "583b771538e0be6bf916a979fe68516cb0f9148e52e589a3fb6e56730e7b13fe",
+      "previous_sha256": "2c2e9046d06cbbc1cfaec9f09cec6bb29148027d5872fcc338a1c855ad4cff0a",
+      "previous_warnings": [
+        "long_edge_silence"
+      ],
+      "key": "7727404a27791c97f9667b98ecc2fd40def2f0537e363ab4881988107c407e75",
+      "new_sha256": "61d69118eb656fb31cbaafd39bb0d23561b5a2b8b3cc2ce7260ada18ee6bd8ea",
+      "actual_model": "gpt-realtime-2.1",
+      "technical_status": "passed",
+      "pronunciation_status": "uncertain",
+      "confidence": null,
+      "new_warnings": [
+        "long_edge_silence"
+      ],
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "generated_transcript_not_independent_validation": "ʕtʃan",
+      "jamal": "jamal/adjectifs-052.mp3",
+      "previous": "previous/adjectifs-052.mp3",
+      "new": "new/adjectifs-052.mp3"
+    },
+    {
+      "id": "salutations-035",
+      "latin": "allah yjazik bikhir",
+      "arabe": "الله يجازيك بخير",
+      "fr": "que Dieu te récompense",
+      "theme": "salutations",
+      "tts_text": "allah yjazik bixir",
+      "instructions": "Speak only Moroccan Darija with a natural Moroccan accent. Read the supplied Latin phonetic text exactly once, without introduction, explanation, spelling, symbol names, or translation. The input is not English or French. ʕ is the voiced pharyngeal consonant ayn; ħ is a voiceless pharyngeal consonant; ʔ is a glottal stop; q is a uvular stop, x is the sound kh, ɣ is gh, and ʃ is sh. Preserve doubled consonants as gemination, including qq, and preserve short vowels and consonant clusters. Say only the supplied Darija word or expression. The following French meaning is context only and must not be spoken: que Dieu te récompense",
+      "jamal_sha256": "4b9bde1f9d3ee763076ab6a2d1c4fcc34fb230ff57e68b5ab3701ba942447088",
+      "previous_sha256": "cb4ccb3d1c403144c2841c8c2268ccc5de8e90cbcfb36a71047e757b2aa96d33",
+      "previous_warnings": [],
+      "key": "551d1ae3a517e73ff7e4b8922ef75156dfadf8f8bcf2bc6615c414258797ade3",
+      "new_sha256": "8ce640f1eff7b79c7c3ea455281cad090e207648350957a7f029001019e2bf51",
+      "actual_model": "gpt-realtime-2.1",
+      "technical_status": "passed",
+      "pronunciation_status": "uncertain",
+      "confidence": null,
+      "new_warnings": [
+        "long_edge_silence"
+      ],
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "generated_transcript_not_independent_validation": "allah yjazik bixir",
+      "jamal": "jamal/salutations-035.mp3",
+      "previous": "previous/salutations-035.mp3",
+      "new": "new/salutations-035.mp3"
+    },
+    {
+      "id": "conversation-001",
+      "latin": "w nta, chno smitek?",
+      "arabe": "و نتا، شنو سميتك؟",
+      "fr": "et vous, comment vous appelez-vous ?",
+      "theme": "conversation",
+      "tts_text": "w nta, ʃno smitek?",
+      "instructions": "Speak only Moroccan Darija with a natural Moroccan accent. Read the supplied Latin phonetic text exactly once, without introduction, explanation, spelling, symbol names, or translation. The input is not English or French. ʕ is the voiced pharyngeal consonant ayn; ħ is a voiceless pharyngeal consonant; ʔ is a glottal stop; q is a uvular stop, x is the sound kh, ɣ is gh, and ʃ is sh. Preserve doubled consonants as gemination, including qq, and preserve short vowels and consonant clusters. Say only the supplied Darija word or expression. The following French meaning is context only and must not be spoken: et vous, comment vous appelez-vous ?",
+      "jamal_sha256": "41b38e39a0c48149c1556c2dd5a5e4e09d01384d10de83d767228088f6ccd375",
+      "previous_sha256": "8aa3ea00d2c52690b8d508daa0e23ada3d7d4b2bd424aa263f25811358bfd014",
+      "previous_warnings": [],
+      "key": "00907f1a7127586bbc5bc5cd4015748da18a774633e2810bc3d99d677751fde3",
+      "new_sha256": "4f4e8c5b6ee14c3515665fcb8793d81ba99364618be367f447db294c7c8f6cae",
+      "actual_model": "gpt-realtime-2.1",
+      "technical_status": "passed",
+      "pronunciation_status": "uncertain",
+      "confidence": null,
+      "new_warnings": [
+        "long_edge_silence",
+        "long_internal_silence"
+      ],
+      "warnings": [
+        "long_edge_silence",
+        "long_internal_silence"
+      ],
+      "generated_transcript_not_independent_validation": "w nta, ʃno smitek?",
+      "jamal": "jamal/conversation-001.mp3",
+      "previous": "previous/conversation-001.mp3",
+      "new": "new/conversation-001.mp3"
+    }
+  ],
+  "models": {
+    "jamal": "ar-MA-JamalNeural",
+    "previous": "gpt-4o-mini-tts-2025-12-15",
+    "new": "gpt-realtime-2.1"
+  },
+  "themes": {
+    "salutations": "Salutations et politesse",
+    "chiffres": "Chiffres et prix",
+    "nourriture": "Nourriture et boissons",
+    "souk": "Au souk et marchandage",
+    "transports": "Transports et directions",
+    "famille": "Se présenter et famille",
+    "jours": "Jours et moments",
+    "expressions": "Expressions utiles",
+    "questions": "Questions essentielles",
+    "grammaire": "Pronoms, liens et grammaire",
+    "corps": "Corps et apparence",
+    "sante": "Santé et besoins",
+    "emotions": "Sentiments et émotions",
+    "maison": "Maison et mobilier",
+    "cuisine": "Cuisine et vaisselle",
+    "vetements": "Vêtements et accessoires",
+    "couleurs": "Couleurs et formes",
+    "ville": "Ville et services",
+    "travail": "Travail et études",
+    "numerique": "Numérique et communication",
+    "nature": "Nature, météo et animaux",
+    "loisirs": "Sports et loisirs",
+    "verbes": "Verbes indispensables",
+    "adjectifs": "Adjectifs et descriptions",
+    "adverbes": "Adverbes et directions",
+    "conversation": "Conversation courante",
+    "restaurant": "Au restaurant",
+    "chemin": "Demander son chemin",
+    "rencontres": "Amitié et rencontres",
+    "organisation": "Organisation et apprentissage",
+    "tournures": "Négations et tournures"
+  },
+  "review_id": "251c0ad12aecba178742f3e6243bb385d3560cb221b94900df4d3b5062d11cd1"
+}

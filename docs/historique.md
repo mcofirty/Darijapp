@@ -56,6 +56,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 | 2026-10-15 | Mon jardin : objets posés au sol sur tous les fonds (lanterne et dromadaire ne flottent plus, chat sur l'horizon), théière, chat et cigogne écartés, ombres au sol, lumière du fond (nuit bleutée avec halo de lanterne, contre-jour aux dunes) | `src/features/jeu/Plante.tsx` |
 | 2026-10-15 | Balayage entre onglets au doigt : depuis l'accueil d'un onglet, la page suit le doigt dans les deux sens, la lentille de la barre glisse avec elle, l'onglet voisin arrive au relâcher, élastique au bout | `src/app/App.tsx`, `src/app/glisser.ts`, `src/app/BarreOnglets.tsx` |
 
+| 2026-10-15 | Comparatif de dix entrées à trois voix : Jamal, ancien OpenAI et nouveau Realtime ; trente MP3, avis locaux et export, exercices conservés | `public/test-audio-trois-voix/` |
+
 ## Décisions
 
 

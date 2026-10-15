@@ -251,6 +251,8 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 
 ## Points en suspens
 
+- Comparatif trois voix (2026-10-15) : `/test-audio-trois-voix/`, dix entrées avec Jamal, ancien OpenAI/Cedar et gpt-realtime-2.1/Cedar. Dix nouveaux MP3, vingt anciens conservés ; avis locaux et export, sans activation dans les exercices ni certification de prononciation.
+
 - Direction « Playful Premium » (2026-10-15) : vérifiée dans Chromium (clair, sombre), pas sur iPhone. Nouvel accueil d'Apprendre et carte illustrée du Parcours (même jour) aussi ; carte : vérifier la fluidité du défilement sur iPhone (quelques centaines de formes SVG). À éprouver : le « tic » haptique d'iOS 18, la lisibilité du dégradé corail, l'envie donnée par les phrases de situation (direction éditoriale à tester).
 
 - Test OpenAI de 50 entrées demandé et généré (2026-10-15) : `/test-audio-openai-50/`, Cedar avec texte consonantique caché sans chiffres-sons ; 49 nouveaux MP3 et weqqeʕ préféré conservé à l’identique, 50 MP3 Jamal avant. Avis locaux et export ; prononciation à évaluer, aucune activation dans les exercices ni génération massive.
