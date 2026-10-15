@@ -245,6 +245,8 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 
 ## Points en suspens
 
+- Test OpenAI de 50 entrées demandé et généré (2026-10-15) : `/test-audio-openai-50/`, Cedar avec texte consonantique caché sans chiffres-sons ; 49 nouveaux MP3 et weqqeʕ préféré conservé à l’identique, 50 MP3 Jamal avant. Avis locaux et export ; prononciation à évaluer, aucune activation dans les exercices ni génération massive.
+
 - Test sans chiffres (2026-10-15) : `/test-audio-phonetic/` compare deux transcriptions latines/phonétiques de we99e3 avec la lecture chiffrée. Aucun latin affiché ni MP3 actif modifié ; symboles non garantis par OpenAI, avis attendu avant tout élargissement.
 
 - Test vocal OpenAI, deuxième essai (2026-10-14) : quatre propositions reprises pour khobz, ch7al?, we99e3 et 3tchan sur `/test-audio-openai/`, entrée latine conservée et consignes phonétiques ciblées. Les six autres MP3 sont identiques ; premier essai accessible, avis locaux. Jamal reste active, prononciation non certifiée et avis attendu avant 50 mots.

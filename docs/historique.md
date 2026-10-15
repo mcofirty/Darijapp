@@ -38,6 +38,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-15 | Essai de deux notations phonétiques sans chiffres sur we99e3, avec lecture chiffrée de référence et avis locaux ; application conservée | `public/test-audio-phonetic/` |
 
+| 2026-10-15 | Comparatif OpenAI de 50 entrées avec notation cachée, 49 nouveaux fichiers et candidat préféré conservé ; 100 MP3 avant/après, avis locaux et export | `public/test-audio-openai-50/` |
+
 ## Décisions
 
 
