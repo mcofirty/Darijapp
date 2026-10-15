@@ -1,0 +1,16 @@
+{
+  "url": "https://mcofirty.github.io/Darijapp/test-audio-phonetic/",
+  "status": "passed",
+  "entry_id": "verbes-085",
+  "test_id": "1c77d4d070e58b4e50b7964cf74144ab5aa52824aeff0d75e10e9fe20395a32d",
+  "audio_files_checked": 3,
+  "new_candidates": 2,
+  "original_preserved": true,
+  "checks": [
+    "HTTP page et CSS",
+    "trois SHA-256 MP3",
+    "latin affiché conservé",
+    "entrées TTS sans chiffres"
+  ],
+  "linguistic_certification": false
+}
