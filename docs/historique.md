@@ -149,3 +149,5 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-15 : à la demande de l’utilisateur, séparer le latin affiché et le texte phonétique caché pour chaque entrée ; remplacer les chiffres-sons connus sans inventer les voyelles, préserver les vrais nombres et bloquer les nouveaux tokens ambigus. Tester deux notations sur we99e3 avant tout élargissement : OpenAI n’offre pas ici de garantie d’interprétation des phonèmes. Jamal reste active.
 
 - 2026-10-15 : essai phonétique réel limité à deux MP3 sur we99e3 ; diagnostic sans motif numérique apparent mais q/ayn/gémination non établis, avertissements de silence conservés. Publier seulement le comparatif autonome à trois lecteurs, garder les candidats en révision et Jamal active.
+
+- 2026-10-15 : comparatif phonétique publié (Pages `38659125219`) et contrôlé par HTTP (page/CSS/trois SHA-256), sans activation dans les exercices ; l’avis d’écoute reste requis pour juger ces candidats.

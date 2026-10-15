@@ -185,3 +185,8 @@ Les deux propositions ont un avertissement de silence périphérique ; elles ne
 sont pas certifiées. Le diagnostic Common Voice ne retrouve plus la séquence
 de lecture numérique, mais ne confirme ni q, ni ayn, ni la gémination. Voir
 `phonetic-probe-review-queue.json`. Aucun résultat n’est extrapolé aux 3 511 entrées.
+
+Publication Pages `38659125219` réussie en 3 min 1 s. Contrôle HTTP
+`38659065319` passé : page, CSS et trois SHA-256 servis conformes
+(`phonetic-probe-http-check.json`). Écoute :
+https://mcofirty.github.io/Darijapp/test-audio-phonetic/
