@@ -379,3 +379,34 @@ Ces alertes restent en révision. Voir `three-voices-status.json`,
 La transcription renvoyée correspond au texte demandé mais ne constitue pas
 un contrôle indépendant des sons. Prononciation incertaine, confiance `null`,
 avis utilisateur attendu ; aucun exercice ni MP3 actif n’a été remplacé.
+
+
+## Reprise ciblée du son 9
+
+Avis trois voix vérifié : dix identités et trente empreintes correspondent au
+test, préférence globale Realtime, sept votes pour Realtime, deux pour Jamal
+(9elb, khobz), un pour mini-TTS (ch7al?). Aucun commentaire ; cela ne certifie
+pas les phonèmes. L’utilisateur signale ensuite le son 9 incorrect. Un diagnostic
+Common Voice local non calibré donne k pour 9elb chez les deux OpenAI, q chez
+Jamal ; il ne détermine pas à lui seul la justesse du darija.
+
+`q-focus.json` choisit 9elb, n9i, m3e9ed, lfou9 et we99e3 : position initiale,
+groupe consonantique, milieu, finale et consonne doublée. Realtime 2.1/Cedar,
+dix nouvelles réponses maximum, deux par mot. A conserve le texte consonantique
+avec q et renforce la consigne articulatoire ; B essaie ḳ avec une consigne
+française. Cette notation est expérimentale, pas de l’IPA complet, et son
+interprétation par OpenAI n’est pas garantie. Voyelles et latin affiché conservés.
+
+Les cinq audios Jamal et cinq anciens OpenAI sont repris octet pour octet depuis
+main `879d403`. Pour 9elb/we99e3, l’ancien rendu est le dernier Realtime ; pour
+les trois autres, il s’agit du mini-TTS du comparatif de 50. Le modèle est affiché
+à chaque entrée. La page `/test-audio-son-9/` comporte quatre lecteurs exclusifs,
+vitesse, recherche, thèmes, avis locaux et export `avis-son-9.json` contenant les
+quatre empreintes et les deux textes TTS pour identifier exactement les candidats.
+
+Le cache vérifie modèle, consignes, texte, WAV/MP3 et décodage. Une issue incertaine
+n’est pas rejouée ; le premier refus interrompt le lot. Tests des dix appels
+maximum, cache sans nouvel appel, anciens fichiers conservés, corruption et refus
+sans régénération. Les contrôles techniques sont distincts de la prononciation,
+confiance `null`, candidats en révision. Aucun changement d’exercice, de MP3 actif
+ou de référence de score ; publication isolée après lecture de CLAUDE sur main.

@@ -1,0 +1,33 @@
+{
+  "review_id": "251c0ad12aecba178742f3e6243bb385d3560cb221b94900df4d3b5062d11cd1",
+  "entry_identity_check": "passed",
+  "audio_hashes_verified": 30,
+  "votes": {
+    "new": 7,
+    "jamal": 2,
+    "previous": 1
+  },
+  "global_preference": "new",
+  "notes_count": 0,
+  "preferences": {
+    "new": [
+      "we99e3",
+      "3afak",
+      "7lib",
+      "ghedda",
+      "3tchan",
+      "allah yjazik bikhir",
+      "w nta, chno smitek?"
+    ],
+    "jamal": [
+      "9elb",
+      "khobz"
+    ],
+    "previous": [
+      "ch7al?"
+    ],
+    "review": []
+  },
+  "linguistic_certification": false,
+  "deployment_authorized_by_upload": false
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex"><meta name="theme-color" content="#C1272D">
+  <title>Test audio · Darija</title><link rel="stylesheet" href="review.css">
+</head>
+<body>
+  <main>
+    <a class="back" href="../">‹ Application actuelle</a>
+    <p class="eyebrow">ESPACE DE TEST · 5 MOTS · SON 9</p><h1>Retravailler le son 9</h1>
+    <p class="intro">Comparez deux nouvelles propositions OpenAI au rendu précédent et à Jamal. Le son recherché est le 9 (ق), distinct de k.</p>
+    <details><summary>Ce que vous écoutez</summary><p>Les essais A et B utilisent Realtime 2.1 avec Cedar et deux indications différentes du son 9. B emploie une notation latine expérimentale : elle ne garantit pas le son. Le rendu OpenAI précédent est conservé à l’identique ; son modèle est indiqué pour chaque mot. Les contrôles techniques ne valident pas la prononciation. Jamal reste dans les exercices.</p></details>
+    <section class="filters" aria-label="Choisir un mot">
+      <label>Rechercher<input id="search" type="search" placeholder="Latin ou français" autocomplete="off"></label>
+      <label>Thème<select id="theme"><option value="">Tous les thèmes</option></select></label>
+    </section>
+    <div class="progress"><span id="review-count">0 avis sur 5</span><progress id="progress" max="5" value="0"></progress></div>
+    <p id="empty" hidden>Aucun mot ne correspond à cette recherche.</p>
+    <article id="card">
+      <div class="card-top"><span id="category"></span><span id="position"></span></div>
+      <h2 id="latin"></h2><p id="translation"></p><p id="arabic" lang="ar" dir="rtl"></p>
+      <div class="players">
+        <section><h3>Jamal</h3><p>Voix actuelle · lecture de l’arabe</p><audio id="jamal" controls preload="none" aria-label="Écouter Jamal"></audio></section>
+        <section><h3>OpenAI avant reprise</h3><p id="baseline-model"></p><audio id="baseline" controls preload="none" aria-label="Écouter OpenAI avant reprise"></audio></section>
+        <section><h3>Essai A</h3><p>Realtime 2.1 · Cedar · consigne renforcée</p><audio id="a" controls preload="none" aria-label="Écouter Essai A"></audio></section>
+        <section><h3>Essai B</h3><p>Realtime 2.1 · Cedar · notation alternative</p><audio id="b" controls preload="none" aria-label="Écouter Essai B"></audio></section>
+      </div>
+      <label class="speed">Vitesse d’écoute<select id="speed"><option value="1">Normale</option><option value="0.8">Un peu plus lente</option><option value="0.65">Lente</option></select></label>
+      <p id="alert" class="alert" hidden></p><p id="playback-error" class="alert" role="status" hidden></p>
+      <fieldset><legend>Votre avis sur ce mot</legend><div class="votes">
+        <button type="button" data-vote="jamal">Jamal</button>
+        <button type="button" data-vote="baseline">OpenAI avant reprise</button>
+        <button type="button" data-vote="a">Essai A</button>
+        <button type="button" data-vote="b">Essai B</button>
+        <button type="button" data-vote="review">Aucun : à revoir</button>
+      </div></fieldset>
+      <label>Une remarque ?<textarea id="note" rows="2" placeholder="Facultatif : son, accent, mot mal lu…"></textarea></label>
+      <div class="navigation"><button id="previous" type="button">‹ Précédent</button><button id="next" type="button">Suivant ›</button></div>
+    </article>
+    <section class="decision">
+      <h2>Votre décision</h2><p id="summary">Écoutez les mots qui vous intéressent, puis donnez votre avis global.</p>
+      <label>Avis global<select id="decision"><option value="pending">Je n’ai pas encore décidé</option><option value="a">Je préfère A</option><option value="b">Je préfère B</option><option value="mixed">Choisir selon le mot</option><option value="revise">Je demande des corrections</option></select></label>
+      <button id="export" class="primary" type="button">Télécharger mon avis</button>
+      <p class="small">Aucun avis ne déclenche de déploiement automatique. Vos avis restent dans ce navigateur. Envoyez votre décision ou le fichier d’avis dans notre conversation pour confirmer la suite.</p>
+      <p id="storage-message" class="small" role="status"></p>
+    </section>
+  </main>
+  <script src="data.js"></script><script src="review.js"></script>
+</body>
+</html>

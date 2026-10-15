@@ -1,0 +1,96 @@
+name: Retravailler le son 9 sur cinq mots
+on:
+  push:
+    branches: [feat/hadra-tts]
+    paths: [.github/workflows/openai-q-focus.yml]
+concurrency:
+  group: openai-tts-pilot-10
+  cancel-in-progress: false
+permissions:
+  contents: write
+  actions: write
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: 879d40384b45d7afb83c6250f3dc12d00e21e99d
+          path: baseline-site
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/cache/restore@v4
+        with:
+          path: artifacts/q-focus
+          key: q-focus-v1-${{ hashFiles('scripts/openai_tts/q-focus.json') }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            q-focus-v1-${{ hashFiles('scripts/openai_tts/q-focus.json') }}-
+      - run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends ffmpeg
+          python -m pip install numpy==2.2.6 websocket-client==1.8.0
+      - name: Tester les budgets, les variantes, le cache et les fichiers conservés
+        run: python -m unittest discover -s scripts/openai_tts -p 'test_*.py'
+      - name: Générer seulement dix variantes ciblées Realtime
+        env:
+          DARIJA_TTS_KEY: ${{ secrets.DARIJA_TTS_KEY || secrets.OPENAI_API_KEY }}
+        run: python scripts/openai_tts/q_focus.py generate --baseline baseline-site/public
+      - name: Construire les vingt fichiers et les quatre lecteurs
+        run: python scripts/openai_tts/q_focus.py build --baseline baseline-site/public
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q-focus-offline
+          path: artifacts/q-focus-site
+          retention-days: 30
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main-site
+      - name: Lire CLAUDE et publier seulement le comparatif autonome
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/openai_tts/q_focus.py publish --baseline baseline-site/public --checkout main-site
+      - name: Vérifier la page et les vingt MP3 effectivement servis
+        run: python scripts/openai_tts/q_focus.py check --baseline baseline-site/public
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: artifacts/q-focus
+          key: q-focus-v1-${{ hashFiles('scripts/openai_tts/q-focus.json') }}-${{ github.run_id }}-${{ github.run_attempt }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q-focus-diagnostics
+          path: artifacts/q-focus
+          retention-days: 30
+      - name: Enregistrer les bilans sans secret
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          python - <<'PY'
+          import json,pathlib,subprocess,base64,os
+          root=pathlib.Path('artifacts/q-focus')
+          path=root/'status.json'
+          result=json.loads(path.read_text()) if path.exists() else {'status':'setup_failed'}
+          result['run_id']=os.environ['RUN_ID']
+          if (root/'http-check.json').exists():result['http_check']=json.loads((root/'http-check.json').read_text())
+          for name,data in [('q-focus-status.json',result),('q-focus-review-queue.json',None)]:
+              if data is None:
+                  queue=root/'review-queue.json'
+                  if not queue.exists():continue
+                  data=json.loads(queue.read_text())
+              target='repos/mcofirty/Darijapp/contents/docs/openai-tts/'+name
+              body={'branch':'feat/hadra-tts','message':'docs: relève le test ciblé du son 9',
+                    'content':base64.b64encode(json.dumps(data,ensure_ascii=False,indent=2).encode()).decode()}
+              old=subprocess.run(['gh','api',target+'?ref=feat/hadra-tts','--jq','.sha'],capture_output=True,text=True)
+              if old.returncode==0:body['sha']=old.stdout.strip()
+              temp=pathlib.Path('/tmp/'+name);temp.write_text(json.dumps(body))
+              subprocess.run(['gh','api','--method','PUT',target,'--input',str(temp)],check=True,stdout=subprocess.DEVNULL)
+          print(json.dumps(result,ensure_ascii=False))
+          PY

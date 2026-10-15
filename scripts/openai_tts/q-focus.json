@@ -1,0 +1,9 @@
+{
+  "model": "gpt-realtime-2.1",
+  "voice": "cedar",
+  "maximum_new_responses": 10,
+  "entry_ids": ["corps-041", "adjectifs-020", "adjectifs-007", "adverbes-002", "verbes-085"],
+  "baseline_commit": "879d40384b45d7afb83c6250f3dc12d00e21e99d",
+  "fifty_review_id": "49c0e1694b75cb17aa75fc58ebe3fe3e69728c715dd9f2d4633b81a33fba7303",
+  "three_review_id": "251c0ad12aecba178742f3e6243bb385d3560cb221b94900df4d3b5062d11cd1"
+}
