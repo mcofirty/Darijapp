@@ -1,0 +1,18 @@
+{
+  "status": "ready",
+  "entries": 50,
+  "maximum_paid_requests": 49,
+  "new_candidates": 49,
+  "retained_candidates": 1,
+  "profile": "consonant_symbols",
+  "linguistic_certification": false,
+  "run_id": "38665517802",
+  "http_check": {
+    "url": "https://mcofirty.github.io/Darijapp/test-audio-openai-50/",
+    "review_id": "49c0e1694b75cb17aa75fc58ebe3fe3e69728c715dd9f2d4633b81a33fba7303",
+    "status": "passed",
+    "entries": 50,
+    "audio_files_checked": 100,
+    "linguistic_certification": false
+  }
+}
