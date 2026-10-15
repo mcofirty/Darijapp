@@ -241,3 +241,19 @@ python scripts/openai_tts/fifty.py plan
 python scripts/openai_tts/fifty.py generate --baseline CHEMIN/public/test-audio-phonetic
 python scripts/openai_tts/fifty.py build
 ```
+
+
+Résultat réel du test de 50 : 49 nouveaux MP3 et le candidat préféré réutilisé,
+main `b68bd13`, run `38665517802`. Cent SHA-256 et décodages locaux vérifiés ;
+50 candidats conformes techniquement. Quarante-quatre portent l’avertissement
+`long_edge_silence`, sans rognage automatique. La conformité ne certifie aucun
+son. Le lecteur Chromium mobile (393 × 852), les deux lectures exclusives,
+la vitesse, la recherche, les thèmes, les avis persistants et l’export des
+50 entrées sont vérifiés sur les vrais MP3 (`fifty-local-check.json`).
+Le code applicatif, `public/audio/` et les références de score sont inchangés.
+
+Publication Pages `38665785482` réussie en 3 min 29 s ; workflow de génération
+et vérification `38665517802` réussi en 6 min 48 s. Contrôle HTTP complet passé :
+manifest courant, page, CSS/JS et les cent SHA-256 des MP3 effectivement servis
+(`fifty-status.json`). Comparatif prêt :
+https://mcofirty.github.io/Darijapp/test-audio-openai-50/

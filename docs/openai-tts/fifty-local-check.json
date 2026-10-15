@@ -1,0 +1,472 @@
+{
+  "review_id": "49c0e1694b75cb17aa75fc58ebe3fe3e69728c715dd9f2d4633b81a33fba7303",
+  "technical_status": "passed",
+  "audio_files_decoded": 100,
+  "warning_counts": {
+    "long_edge_silence": 44
+  },
+  "entries": [
+    {
+      "id": "verbes-085",
+      "duration_seconds": 1.416,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "salutations-012",
+      "duration_seconds": 1.8,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "corps-041",
+      "duration_seconds": 1.416,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "nourriture-001",
+      "duration_seconds": 1.32,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "nourriture-006",
+      "duration_seconds": 1.608,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "jours-002",
+      "duration_seconds": 1.152,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "chiffres-017",
+      "duration_seconds": 1.056,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "jours-006",
+      "duration_seconds": 1.2,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-052",
+      "duration_seconds": 1.8,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "salutations-035",
+      "duration_seconds": 3.0,
+      "warnings": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adverbes-002",
+      "duration_seconds": 1.512,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "chemin-001",
+      "duration_seconds": 3.312,
+      "warnings": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "conversation-001",
+      "duration_seconds": 2.064,
+      "warnings": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "couleurs-004",
+      "duration_seconds": 1.704,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "cuisine-006",
+      "duration_seconds": 1.656,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "emotions-001",
+      "duration_seconds": 1.368,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "expressions-001",
+      "duration_seconds": 1.512,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "famille-002",
+      "duration_seconds": 1.656,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "grammaire-005",
+      "duration_seconds": 1.968,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "loisirs-003",
+      "duration_seconds": 1.056,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "maison-003",
+      "duration_seconds": 1.2,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "nature-001",
+      "duration_seconds": 1.656,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "numerique-011",
+      "duration_seconds": 1.56,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "organisation-001",
+      "duration_seconds": 1.704,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "questions-001",
+      "duration_seconds": 0.864,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "rencontres-001",
+      "duration_seconds": 2.712,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "restaurant-002",
+      "duration_seconds": 2.352,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "sante-001",
+      "duration_seconds": 1.92,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "souk-001",
+      "duration_seconds": 1.464,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "tournures-001",
+      "duration_seconds": 1.752,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "transports-003",
+      "duration_seconds": 2.016,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "travail-001",
+      "duration_seconds": 1.368,
+      "warnings": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "vetements-001",
+      "duration_seconds": 1.752,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "ville-003",
+      "duration_seconds": 1.32,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-017",
+      "duration_seconds": 1.704,
+      "warnings": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-039",
+      "duration_seconds": 0.96,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "nature-043",
+      "duration_seconds": 1.2,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "numerique-039",
+      "duration_seconds": 1.104,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "cuisine-031",
+      "duration_seconds": 1.656,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "grammaire-054",
+      "duration_seconds": 1.2,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "corps-006",
+      "duration_seconds": 1.2,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "jours-008",
+      "duration_seconds": 0.864,
+      "warnings": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "nourriture-019",
+      "duration_seconds": 1.416,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-014",
+      "duration_seconds": 1.104,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-005",
+      "duration_seconds": 1.608,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-007",
+      "duration_seconds": 1.656,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-020",
+      "duration_seconds": 1.512,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-027",
+      "duration_seconds": 2.256,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-042",
+      "duration_seconds": 1.248,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-062",
+      "duration_seconds": 3.0,
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    }
+  ],
+  "linguistic_certification": false,
+  "mobile_smoke_test": {
+    "browser": "Chromium",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "status": "passed",
+    "checks": [
+      "50 entrées et 31 thèmes",
+      "lecture des vrais MP3 et pause du lecteur précédent",
+      "vitesse",
+      "recherche et filtres",
+      "avis locaux persistants",
+      "export de 50 avis avec textes TTS et empreintes",
+      "absence de débordement horizontal"
+    ]
+  },
+  "source_commit": "b68bd133c2ce09a1c7657d66dfbbb06534caa159",
+  "generation_run_id": "38665517802",
+  "application_voice_unchanged": "Jamal",
+  "new_samples": 49,
+  "retained_samples": 1,
+  "retained_sha256": "da53fc99dd25b8350140a0cbcd488f77918b65b08a06f40b0f1a04cea19f5c95"
+}

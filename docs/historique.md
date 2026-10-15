@@ -66,7 +66,7 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-15 | Avis du test sans chiffres vérifié : préférence pour les symboles consonantiques sur we99e3 ; référence conservée pour les prochains essais | `docs/openai-tts/phonetic-probe-feedback.json` |
 
-| 2026-10-15 | Comparatif OpenAI de 50 entrées préparé à la demande de l’utilisateur : 31 thèmes, texte consonantique caché, 49 appels maximum et candidat préféré conservé | `scripts/openai_tts/fifty.py`, `scripts/openai_tts/pilot-50.json`, `.github/workflows/openai-tts-fifty.yml` |
+| 2026-10-15 | Comparatif OpenAI de 50 entrées généré, publié et vérifié en HTTP : 31 thèmes, texte consonantique caché, 49 nouveaux MP3 et candidat préféré conservé | `scripts/openai_tts/fifty.py`, `scripts/openai_tts/pilot-50.json`, `.github/workflows/openai-tts-fifty.yml` |
 
 ## Décisions
 
@@ -159,3 +159,7 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-15 : avis d’écoute vérifié en faveur de `consonant_symbols` (`weqqeʕ`) pour we99e3 ; conserver cette préférence sans la convertir en certification linguistique globale ou autorisation de déploiement. Aucun nouvel appel API ni changement de voix active.
 
 - 2026-10-15 : demande explicite de génération du test de 50 entrées après préférence pour les symboles consonantiques ; réutiliser le MP3 weqqeʕ préféré sans réencodage, générer seulement les 49 autres, conserver Jamal avant et publier un comparatif autonome avec avis locaux. Pas de génération massive ni activation automatique.
+
+- 2026-10-15 : test de 50 effectivement généré dans main `b68bd13` : 49 nouveaux MP3, weqqeʕ préféré conservé, cent empreintes/décodages et lecteur mobile vérifiés. Quarante-quatre avertissements de silence périphérique restent visibles ; les cinquante prononciations restent à évaluer. Aucun MP3 actif ni score modifié.
+
+- 2026-10-15 : publication des 50 entrées réussie (Pages `38665785482`) ; génération et contrôle HTTP `38665517802` réussis, cent MP3 et ressources servis à l’identique. Avis utilisateur attendu, sans activation dans les exercices.
