@@ -40,3 +40,17 @@ export function actionDuBalayage(sens: -1 | 0 | 1, retourDisponible: boolean): '
   if (sens === -1) return retourDisponible ? 'retour' : 'precedent'
   return retourDisponible ? 'rien' : 'suivant'
 }
+
+/**
+ * Début d'un retour glissé : après 10 px de mouvement, le geste est un glissement si c'est surtout
+ * horizontal et vers la droite, sinon ce n'est pas pour nous (défilement, balayage vers la gauche).
+ */
+export function departGlisse(dx: number, dy: number): 'attente' | 'glisse' | 'non' {
+  if (Math.abs(dx) < 10 && Math.abs(dy) < 10) return 'attente'
+  return dx > 0 && Math.abs(dx) > 1.5 * Math.abs(dy) ? 'glisse' : 'non'
+}
+
+/** Le retour est validé au relâchement : page tirée de plus d'un tiers de l'écran, ou geste vif. */
+export function retourValide(dx: number, largeur: number, duree: number): boolean {
+  return dx > largeur * 0.35 || (dx > 50 && dx / Math.max(duree, 1) > 0.5)
+}

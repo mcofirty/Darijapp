@@ -50,6 +50,7 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 | 2026-10-15 | Parcours en mode sombre : plus de voile sur la carte, route, étapes, étiquettes et titre en sombre | `src/features/parcours/Parcours.tsx`, `src/features/parcours/CarteMaroc.tsx`, `src/index.css` |
 | 2026-10-15 | Parcours : ligne « Mon passeport » remise en haut de la page, sous le titre, à la place du petit bouton flottant | `src/features/parcours/Parcours.tsx` |
 | 2026-10-15 | Gestes : balayage vers la droite = retour de la page ouverte (sinon onglet précédent), balayage vers la gauche = onglet suivant depuis un accueil d'onglet ; appui sur l'onglet ouvert = retour à sa page d'accueil | `src/app/retour.ts`, `src/app/glisser.ts`, `src/app/App.tsx`, `src/app/BarreOnglets.tsx`, `src/ui/Page.tsx` |
+| 2026-10-15 | Retour par balayage animé : la page suit le doigt, sort à droite au relâchement puis la page d'avant arrive de la gauche, ou revient en place si le geste est trop court | `src/app/App.tsx`, `src/app/glisser.ts` |
 
 ## Décisions
 
@@ -106,3 +107,4 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-15 : Apprendre ne garde que ce qui fait pratiquer (session, quêtes, raccourcis, thèmes) ; les mesures (défi du mois, mustawa, carte de niveau complète) et le souk restent dans Progrès, pour un accueil de moins de deux écrans sans doublon.
 - 2026-10-15 : carte du Parcours dessinée en SVG dans le code comme « Mon jardin » (rien à télécharger, hors ligne) ; décor placé par un hasard à graine fixe pour rester identique à chaque visite ; en sombre, la carte garde ses couleurs (voile sombre retiré à la demande de l'utilisateur), seuls la route et les éléments clairs passent en sombre.
 - 2026-10-15 : le retour par balayage passe par une pile d'actions inscrites par `Page` (rien à changer dans chaque écran) ; depuis une page ouverte, le balayage vers la gauche ne change pas d'onglet, pour ne pas perdre sa place ; `overscroll-behavior-x: none` car Chromium recule sinon dans l'historique (page blanche).
+- 2026-10-15 : l'animation du retour agit directement sur le style de `<main>` (pas d'état React à chaque mouvement) ; la page d'avant n'existe pas sous celle qu'on tire (navigation par état), d'où le fond de l'appli et l'ombre derrière, puis son arrivée de la gauche après le retour.

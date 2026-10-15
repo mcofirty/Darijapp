@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type TouchEvent } from 'react'
+import { flushSync } from 'react-dom'
 import { useModes, useProfil } from '../db/useProfil'
 import { reglerLectureAutomatique } from '../audio/lecteur'
 import { motDuLien } from '../data/motsPerso'
@@ -16,7 +17,7 @@ import { Progres } from '../features/progres/Progres'
 import { Quiz } from '../features/quiz/Quiz'
 import { appliquerApparence, appliquerCouleur } from './apparence'
 import { BarreOnglets } from './BarreOnglets'
-import { actionDuBalayage, sensDuBalayage } from './glisser'
+import { actionDuBalayage, departGlisse, retourValide, sensDuBalayage } from './glisser'
 import { faireRetour, retourDisponible } from './retour'
 import { ONGLETS, type Onglet } from './onglets'
 
@@ -24,6 +25,10 @@ interface Toucher {
   x: number
   y: number
   t: number
+  // Une page ouverte peut-elle revenir en arrière ? (sinon le balayage change d'onglet)
+  retour: boolean
+  // Retour glissé : en attente du premier mouvement, en cours (la page suit le doigt) ou sans objet.
+  mode: 'attente' | 'glisse' | 'non'
 }
 
 /** Page cachée d'ajout de mots : accessible seulement par le lien « …/Darijapp/#ajout ». */
@@ -44,6 +49,7 @@ export default function App() {
   // Change à chaque appui sur l'onglet déjà ouvert : l'onglet repart de sa page d'accueil.
   const [accueil, setAccueil] = useState(0)
   const depart = useRef<Toucher | null>(null)
+  const page = useRef<HTMLElement>(null)
   const { apparence, couleur, sons, scorePrecis, effets, haptique } = useProfil()
   useEffect(() => appliquerCouleur(couleur), [couleur])
   useEffect(() => choisirSons(sons), [sons])
@@ -106,7 +112,64 @@ export default function App() {
       depart.current = null
       return
     }
-    depart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY, t: e.timeStamp }
+    depart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY, t: e.timeStamp, retour: retourDisponible(), mode: 'attente' }
+  }
+
+  /** Retour glissé : la page suit le doigt vers la droite, comme sur iOS. */
+  function deplacerToucher(e: TouchEvent) {
+    const d = depart.current
+    const el = page.current
+    if (!d || !el || !d.retour || d.mode === 'non') return
+    const dx = e.touches[0].clientX - d.x
+    if (d.mode === 'attente') {
+      d.mode = departGlisse(dx, e.touches[0].clientY - d.y)
+      if (d.mode !== 'glisse') return
+      el.style.transition = 'none'
+      el.style.willChange = 'transform'
+      el.style.background = 'var(--fond)'
+      el.style.boxShadow = '-10px 0 28px rgba(0, 0, 0, 0.22)'
+    }
+    el.style.transform = `translateX(${Math.max(0, dx)}px)`
+  }
+
+  /** Remet la page à sa place, sans animation en cours. */
+  function reposer(el: HTMLElement) {
+    for (const p of ['transition', 'transform', 'willChange', 'background', 'boxShadow'] as const) el.style[p] = ''
+  }
+
+  function finirGlisse(el: HTMLElement, dx: number, duree: number) {
+    const calme = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const largeur = window.innerWidth
+    if (!retourValide(dx, largeur, duree)) {
+      // Pas assez tiré : la page revient à sa place.
+      el.style.transition = calme ? 'none' : 'transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1)'
+      el.style.transform = 'translateX(0)'
+      window.setTimeout(() => reposer(el), calme ? 0 : 240)
+      return
+    }
+    // La page sort à droite, puis celle d'avant arrive de la gauche en glissant.
+    el.style.transition = calme ? 'none' : 'transform 0.2s cubic-bezier(0.3, 0.7, 0.4, 1)'
+    el.style.transform = `translateX(${largeur}px)`
+    window.setTimeout(
+      () => {
+        flushSync(() => faireRetour())
+        window.scrollTo(0, 0)
+        if (calme) return reposer(el)
+        el.style.transition = 'none'
+        el.style.transform = 'translateX(-22%)'
+        void el.offsetWidth
+        el.style.transition = 'transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1)'
+        el.style.transform = 'translateX(0)'
+        window.setTimeout(() => reposer(el), 320)
+      },
+      calme ? 0 : 200,
+    )
+  }
+
+  function annulerToucher() {
+    const d = depart.current
+    depart.current = null
+    if (d?.mode === 'glisse' && page.current) finirGlisse(page.current, 0, 1000)
   }
 
   function finToucher(e: TouchEvent) {
@@ -114,6 +177,7 @@ export default function App() {
     depart.current = null
     if (!d) return
     const t = e.changedTouches[0]
+    if (d.mode === 'glisse' && page.current) return finirGlisse(page.current, t.clientX - d.x, e.timeStamp - d.t)
     const sens = sensDuBalayage(t.clientX - d.x, t.clientY - d.y, e.timeStamp - d.t)
     if (sens === 0) return
     const action = actionDuBalayage(sens, retourDisponible())
@@ -144,8 +208,8 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-dvh overflow-x-clip" onTouchStart={debutToucher} onTouchEnd={finToucher}>
-      <main key={`${onglet}-${accueil}`} className={`pb-32 ${entree}`}>
+    <div className="min-h-dvh overflow-x-clip" onTouchStart={debutToucher} onTouchMove={deplacerToucher} onTouchEnd={finToucher} onTouchCancel={annulerToucher}>
+      <main ref={page} key={`${onglet}-${accueil}`} className={`pb-32 ${entree}`}>
         {onglet === 'apprendre' && <Apprendre />}
         {onglet === 'parcours' && <Parcours />}
         {onglet === 'quiz' && <Quiz />}

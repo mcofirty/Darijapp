@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { etirement, grossissement, ongletLePlusProche, positionSousLeDoigt, sensDuBalayage, actionDuBalayage } from './glisser'
+import { etirement, grossissement, ongletLePlusProche, positionSousLeDoigt, sensDuBalayage, actionDuBalayage, departGlisse, retourValide } from './glisser'
 
 describe('positionSousLeDoigt', () => {
   it('place le centre de chaque onglet sur un entier', () => {
@@ -67,5 +67,29 @@ describe('actionDuBalayage', () => {
   it('rien sans balayage net', () => {
     expect(actionDuBalayage(0, true)).toBe('rien')
     expect(actionDuBalayage(0, false)).toBe('rien')
+  })
+})
+
+describe('departGlisse', () => {
+  it('attend un vrai mouvement', () => {
+    expect(departGlisse(4, 3)).toBe('attente')
+  })
+  it('glisse vers la droite, surtout horizontal', () => {
+    expect(departGlisse(20, 5)).toBe('glisse')
+  })
+  it('pas pour nous : vers la gauche ou en défilement', () => {
+    expect(departGlisse(-20, 2)).toBe('non')
+    expect(departGlisse(12, 30)).toBe('non')
+  })
+})
+
+describe('retourValide', () => {
+  it('valide au-delà d’un tiers de l’écran', () => {
+    expect(retourValide(150, 390, 900)).toBe(true)
+    expect(retourValide(100, 390, 900)).toBe(false)
+  })
+  it('valide un geste vif même court, mais pas un frôlement', () => {
+    expect(retourValide(80, 390, 120)).toBe(true)
+    expect(retourValide(30, 390, 20)).toBe(false)
   })
 })
