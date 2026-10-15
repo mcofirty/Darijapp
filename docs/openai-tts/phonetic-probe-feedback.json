@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "received_on": "2026-10-15",
+  "test_id": "1c77d4d070e58b4e50b7964cf74144ab5aa52824aeff0d75e10e9fe20395a32d",
+  "entry_id": "verbes-085",
+  "latin": "we99e3",
+  "model": "gpt-4o-mini-tts-2025-12-15",
+  "feedback_source_sha256": "836ae9e9d7a865a0114da4c4b6c5d62f1270d4de19f698502b65b61d99ec5952",
+  "identity_and_sample_hashes_verified": true,
+  "preferred_profile": "consonant_symbols",
+  "preferred_tts_text": "weqqeʕ",
+  "scope": "Listening preference for this word only; no corpus-level pronunciation certification or deployment approval.",
+  "linguistic_certification": false,
+  "automatic_activation": false,
+  "confidence": null,
+  "samples": [
+    {
+      "profile": "latin_phonetic",
+      "tts_text": "weqqeʿ",
+      "sha256": "963ea0fc43c2f5a04a580b6e56a515f4ec9079581306104a08e001273048cb02"
+    },
+    {
+      "profile": "consonant_symbols",
+      "tts_text": "weqqeʕ",
+      "sha256": "da53fc99dd25b8350140a0cbcd488f77918b65b08a06f40b0f1a04cea19f5c95"
+    }
+  ]
+}

@@ -190,3 +190,9 @@ Publication Pages `38659125219` réussie en 3 min 1 s. Contrôle HTTP
 `38659065319` passé : page, CSS et trois SHA-256 servis conformes
 (`phonetic-probe-http-check.json`). Écoute :
 https://mcofirty.github.io/Darijapp/test-audio-phonetic/
+
+Avis du 2026-10-15 reçu et rapproché du test et des deux SHA-256 :
+préférence pour **Symboles consonantiques**, `weqqeʕ` (`consonant_symbols`).
+Voir `phonetic-probe-feedback.json`. Ce résultat porte sur we99e3 seulement ;
+il ne certifie pas la méthode sur tout le corpus et n’active aucun MP3 dans les
+exercices. Le fichier original reste hors dépôt public ; aucun nouvel appel API.
