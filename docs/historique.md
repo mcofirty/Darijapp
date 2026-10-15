@@ -147,3 +147,5 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-14 : les consignes seules n’établissent pas une lecture fiable de we99e3 ; conserver les nouveaux fichiers comme candidats et demander le choix entre transcription phonétique latine pour le moteur et maintien de Jamal. Ne pas élargir à 50 mots ni confondre conformité technique, préférences d’écoute et certification linguistique.
 
 - 2026-10-15 : à la demande de l’utilisateur, séparer le latin affiché et le texte phonétique caché pour chaque entrée ; remplacer les chiffres-sons connus sans inventer les voyelles, préserver les vrais nombres et bloquer les nouveaux tokens ambigus. Tester deux notations sur we99e3 avant tout élargissement : OpenAI n’offre pas ici de garantie d’interprétation des phonèmes. Jamal reste active.
+
+- 2026-10-15 : essai phonétique réel limité à deux MP3 sur we99e3 ; diagnostic sans motif numérique apparent mais q/ayn/gémination non établis, avertissements de silence conservés. Publier seulement le comparatif autonome à trois lecteurs, garder les candidats en révision et Jamal active.

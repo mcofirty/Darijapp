@@ -202,7 +202,7 @@ Profil : en plus des réglages, `micro` (Dis-le avec score), `parler` et `ecoute
 
 Jalon en cours : **4 — Jeu** (contenu du jeu terminé). Les jalons 1 à 3 sont en ligne sur https://mcofirty.github.io/Darijapp/ (score de prononciation à éprouver sur iPhone avec une vraie voix).
 
-Test OpenAI : dix mots puis quatre reprises publiés ; six préférences OpenAI, deux Jamal, deux à revoir. Les consignes seules n’évitent pas la lecture numérique de we99e3. À la demande de l’utilisateur (2026-10-15), référentiel caché `audio-texts.json` pour 3 511 textes, deux notations consonantiques candidates et exceptions par entrée, distincts du latin affiché. Audit : 650 mots / 1 818 textes avec chiffres-sons (risques, pas erreurs établies). Essai limité à deux lectures de we99e3 avant élargissement ; Jamal reste active et aucune prononciation n’est certifiée.
+Test OpenAI : dix mots puis quatre reprises publiés ; six préférences OpenAI, deux Jamal, deux à revoir. Les consignes seules n’évitent pas la lecture numérique de we99e3. À la demande de l’utilisateur (2026-10-15), référentiel caché `audio-texts.json` pour 3 511 textes, deux notations consonantiques candidates et exceptions par entrée, distincts du latin affiché. Audit : 650 mots / 1 818 textes avec chiffres-sons (risques, pas erreurs établies). Deux MP3 réels générés pour we99e3, trois lecteurs et avis testés en mobile ; diagnostic sans lecture numérique apparente, q/ayn/gémination encore incertains. Comparatif autonome sur `/test-audio-phonetic/` ; Jamal reste active et aucune prononciation n’est certifiée.
 
 Voix HADRA refusée par l’utilisateur le 2026-10-14 après écoute des 50 mots : arrêt du corpus et suppression du déclenchement automatique. Le comparatif `/test-audio/` reste disponible. Jamal reste la voix active ; aucun déploiement de HADRA et aucune reprise sans nouvelle demande explicite.
 
@@ -253,7 +253,7 @@ Les principales, qui encadrent le travail à venir ; toutes, datées et avec leu
 
 ## Points en suspens
 
-- Texte audio caché (2026-10-15) : deux propositions par entrée, chiffres-sons convertis selon un lexique fermé ; vrais nombres conservés, nouveaux tokens mixtes bloqués, exceptions explicites par mot. Ni IPA complet ni interprétation garantie par OpenAI. Essai de deux lectures sans chiffres sur we99e3 ; avis d’écoute attendu avant 50 mots ou génération massive.
+- Texte audio caché (2026-10-15) : deux propositions par entrée, chiffres-sons convertis selon un lexique fermé ; vrais nombres conservés, nouveaux tokens mixtes bloqués, exceptions explicites par mot. Ni IPA complet ni interprétation garantie par OpenAI. Deux MP3 générés sur we99e3, avertissements de silence périphérique, avis d’écoute attendu avant 50 mots ou génération massive ; file `docs/openai-tts/phonetic-probe-review-queue.json`.
 
 - Test OpenAI autorisé (2026-10-14) : pilote de dix mots difficiles prêt avec `gpt-4o-mini-tts-2025-12-15` / Cedar, entrée latine, contrôles et reprise sans retry payant ; page autonome `/test-audio-openai/` publiée seulement après dix MP3 conformes. Clé ajoutée : HTTP 429 / `insufficient_quota` confirmé dans le run `38605552834`. Crédit ajouté : dix MP3 générés, test publié sur main et contrôle HTTP des vingt fichiers réussi. Avis reçu : six préférences OpenAI, deux Jamal, deux à revoir. Reprise ciblée de quatre mots avec consignes spécifiques et conservation des six autres ; attendre le nouvel avis avant 50 mots. Jamal conservée ; aucun lot de 50 ou de 3 511 sans décision suivante. Voir `docs/openai-tts/README.md`.
 

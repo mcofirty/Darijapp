@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "entry_id": "verbes-085",
+  "latin": "we99e3",
+  "test_id": "1c77d4d070e58b4e50b7964cf74144ab5aa52824aeff0d75e10e9fe20395a32d",
+  "preview_commit": "caa427c",
+  "generation_run_id": "38659003919",
+  "new_paid_samples": 2,
+  "technical_status": "passed_with_warnings",
+  "pronunciation_status": "uncertain",
+  "confidence": null,
+  "linguistic_certification": false,
+  "automatic_activation": false,
+  "assessment": "Digit-reading pattern is absent in these diagnostic outputs; q/ayn/gemination are not established. Listening remains necessary, no extrapolation to the full corpus.",
+  "limits": [
+    "Common Voice model, not a darija pronunciation validator",
+    "Gemination folded by existing scoring code",
+    "Jamal is synthetic and not linguistic ground truth",
+    "Greedy tokens and GOP scores are diagnostic, not certified IPA"
+  ],
+  "evaluator": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+  "samples": [
+    {
+      "profile": "latin_phonetic",
+      "tts_text": "weqqeʿ",
+      "sha256": "963ea0fc43c2f5a04a580b6e56a515f4ec9079581306104a08e001273048cb02",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "diagnostic_tokens_not_certified_ipa": [
+        "w",
+        "a",
+        "k",
+        "a"
+      ]
+    },
+    {
+      "profile": "consonant_symbols",
+      "tts_text": "weqqeʕ",
+      "sha256": "da53fc99dd25b8350140a0cbcd488f77918b65b08a06f40b0f1a04cea19f5c95",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "diagnostic_tokens_not_certified_ipa": [
+        "w",
+        "ɛ",
+        "k",
+        "eː"
+      ]
+    }
+  ]
+}

@@ -176,3 +176,12 @@ sur `/test-audio-phonetic/`, avec avis locaux et export JSON. Il lit le CLAUDE.m
 complet de main avant publication, vérifie les empreintes et ne touche qu’au
 nouveau dossier de test et à la mémoire du projet. Aucun remplacement des MP3
 actifs, aucun lot de 50 ou de 3 511 avant un résultat convaincant et une décision suivante.
+
+
+Résultat de l’essai : run `38659003919` réussi (1 min 22 s), deux MP3 réels et
+ancien MP3 conservé dans main `caa427c`. Trois empreintes/décodages vérifiés ;
+lecture exclusive, avis locaux, export et largeur mobile testés en Chromium.
+Les deux propositions ont un avertissement de silence périphérique ; elles ne
+sont pas certifiées. Le diagnostic Common Voice ne retrouve plus la séquence
+de lecture numérique, mais ne confirme ni q, ni ayn, ni la gémination. Voir
+`phonetic-probe-review-queue.json`. Aucun résultat n’est extrapolé aux 3 511 entrées.
