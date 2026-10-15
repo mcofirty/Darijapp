@@ -4,9 +4,11 @@ import { registerSW } from 'virtual:pwa-register'
 import App from './app/App.tsx'
 import { demarrerLancement } from './app/lancement'
 import { demanderStockagePersistant } from './app/stockage'
+import { bloquerZoom } from './app/zoom'
 import './index.css'
 
 demarrerLancement()
+bloquerZoom()
 registerSW({ immediate: true })
 void demanderStockagePersistant()
 
