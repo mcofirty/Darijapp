@@ -1,0 +1,278 @@
+{
+  "version": 1,
+  "model": "gpt-realtime-2.1",
+  "voice": "cedar",
+  "count": 5,
+  "maximum_new_responses": 10,
+  "source_script": "latin",
+  "complete_ipa": false,
+  "linguistic_certification": false,
+  "confidence": null,
+  "entries": [
+    {
+      "id": "corps-041",
+      "latin": "9elb",
+      "arabe": "قلب",
+      "fr": "cœur",
+      "theme": "corps",
+      "jamal_sha256": "157d8a985d957da51e88094a1d2f14adc1f1b0064aa34999da3feb427565223b",
+      "baseline_sha256": "746fde5e4bebabdac00ea5613dede3c5265fb4d597cee05c9f862f80075a0e70",
+      "baseline_model": "gpt-realtime-2.1",
+      "candidates": {
+        "a": {
+          "id": "corps-041-a",
+          "tts_text": "qelb",
+          "instructions": "Speak only the supplied Moroccan Darija word once, naturally, without any introduction or explanation. The input is a Latin phonetic cue, never an English word or letter name. Produce q as the Arabic qaf /q/: a voiceless UVULAR stop, made by the back of the tongue contacting the uvula, farther back than /k/. Keep a complete closure and a single clean release. Never substitute /k/, /g/, /t/, a glottal stop, or a spoken letter name. For qq, hold the closure longer and release once; do not insert a vowel between the consonants. The symbols ʕ, ħ, x, ɣ and ʃ denote ayn, haa, kh, gh and sh. Preserve the supplied vowels, final consonants and Moroccan rhythm; no spelling, exaggeration or extra syllable. Meaning for context only, do not speak it: cœur",
+          "key": "41479022abc1b3d531edc0cf12b75e959ed326a955b3dbed3ce7f8971231a512",
+          "actual_model": "gpt-realtime-2.1",
+          "technical_status": "passed",
+          "warnings": [],
+          "generated_transcript_not_independent_validation": "qelb"
+        },
+        "b": {
+          "id": "corps-041-b",
+          "tts_text": "ḳelb",
+          "instructions": "Prononce uniquement le mot fourni, une seule fois, en darija marocaine naturelle. Le texte est une aide phonétique latine expérimentale. Le signe ḳ représente exactement le qaf arabe ق, /q/, une occlusive uvulaire sourde : ferme avec le dos de la langue très en arrière, au niveau de la luette, puis relâche. Ne remplace pas ce son par k, g, t ou une coupure glottale. Ce signe ne se lit jamais comme le nom d'une lettre. Deux ḳ successifs indiquent une fermeture prolongée suivie d'un seul relâchement, sans voyelle ajoutée. ʕ désigne le ayn, ħ le haa, x le kh, ɣ le gh, ʃ le ch. Garde les voyelles fournies et le rythme marocain. Aucune explication, traduction, épellation ou syllabe supplémentaire. Meaning for context only, do not speak it: cœur",
+          "key": "9a38116ae5715ac0cf21de4c7fc25a008fbbe9a8ab83c7b0921b622992a6ad29",
+          "actual_model": "gpt-realtime-2.1",
+          "technical_status": "passed",
+          "warnings": [
+            "long_edge_silence"
+          ],
+          "generated_transcript_not_independent_validation": "ḳelb"
+        }
+      },
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null,
+      "jamal": "jamal/corps-041.mp3",
+      "baseline": "baseline/corps-041.mp3",
+      "a_sha256": "7a0924e3e8f5a96d1946d73211e6bfa3cc07da3749d14970f7b85264e7eac2f9",
+      "a": "a/corps-041.mp3",
+      "b_sha256": "d8c10958fc3d8f8300ba6e09c9ce687d7bc38f7af7148b270b9dd144e8bb3605",
+      "b": "b/corps-041.mp3"
+    },
+    {
+      "id": "adjectifs-020",
+      "latin": "n9i",
+      "arabe": "نقي",
+      "fr": "propre",
+      "theme": "adjectifs",
+      "jamal_sha256": "44108ce88292544ef8669513f6aaacacae012ea50b9db3a4743aee40d072826c",
+      "baseline_sha256": "3e63eec5695267f7589cbaa126fab87fff5753500babf0767ce2ceb7e3cbeecc",
+      "baseline_model": "gpt-4o-mini-tts-2025-12-15",
+      "candidates": {
+        "a": {
+          "id": "adjectifs-020-a",
+          "tts_text": "nqi",
+          "instructions": "Speak only the supplied Moroccan Darija word once, naturally, without any introduction or explanation. The input is a Latin phonetic cue, never an English word or letter name. Produce q as the Arabic qaf /q/: a voiceless UVULAR stop, made by the back of the tongue contacting the uvula, farther back than /k/. Keep a complete closure and a single clean release. Never substitute /k/, /g/, /t/, a glottal stop, or a spoken letter name. For qq, hold the closure longer and release once; do not insert a vowel between the consonants. The symbols ʕ, ħ, x, ɣ and ʃ denote ayn, haa, kh, gh and sh. Preserve the supplied vowels, final consonants and Moroccan rhythm; no spelling, exaggeration or extra syllable. Meaning for context only, do not speak it: propre",
+          "key": "0b551e58a8087bfc90c173df8c3ca8160d13f2c50997b7886fdeb072f1c77b2f",
+          "actual_model": "gpt-realtime-2.1",
+          "technical_status": "passed",
+          "warnings": [],
+          "generated_transcript_not_independent_validation": "nqi"
+        },
+        "b": {
+          "id": "adjectifs-020-b",
+          "tts_text": "nḳi",
+          "instructions": "Prononce uniquement le mot fourni, une seule fois, en darija marocaine naturelle. Le texte est une aide phonétique latine expérimentale. Le signe ḳ représente exactement le qaf arabe ق, /q/, une occlusive uvulaire sourde : ferme avec le dos de la langue très en arrière, au niveau de la luette, puis relâche. Ne remplace pas ce son par k, g, t ou une coupure glottale. Ce signe ne se lit jamais comme le nom d'une lettre. Deux ḳ successifs indiquent une fermeture prolongée suivie d'un seul relâchement, sans voyelle ajoutée. ʕ désigne le ayn, ħ le haa, x le kh, ɣ le gh, ʃ le ch. Garde les voyelles fournies et le rythme marocain. Aucune explication, traduction, épellation ou syllabe supplémentaire. Meaning for context only, do not speak it: propre",
+          "key": "ed1fcee5e8401d9ff4d48acf27392cd1fa0dc4f315d3e40cc787a81edc1c14b4",
+          "actual_model": "gpt-realtime-2.1",
+          "technical_status": "passed",
+          "warnings": [
+            "long_edge_silence"
+          ],
+          "generated_transcript_not_independent_validation": "nḳi"
+        }
+      },
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null,
+      "jamal": "jamal/adjectifs-020.mp3",
+      "baseline": "baseline/adjectifs-020.mp3",
+      "a_sha256": "f4f7e530e8e0581539d8d5f14142331f674d4a38f7c2590cafbf62627de33bac",
+      "a": "a/adjectifs-020.mp3",
+      "b_sha256": "496655db79f9e40b99edf5df608a9e433aa28311b75349d4accd81ca5a4bf1cd",
+      "b": "b/adjectifs-020.mp3"
+    },
+    {
+      "id": "adjectifs-007",
+      "latin": "m3e9ed",
+      "arabe": "معقد",
+      "fr": "compliqué",
+      "theme": "adjectifs",
+      "jamal_sha256": "d3a44527e8de9dc1bf39a76af65b09702b23ddea7a0997c21b636e86b00e6a85",
+      "baseline_sha256": "89a14a7761246a36af9f9fd0a6d670c33d858397a560bf04695b4075e2ad8444",
+      "baseline_model": "gpt-4o-mini-tts-2025-12-15",
+      "candidates": {
+        "a": {
+          "id": "adjectifs-007-a",
+          "tts_text": "mʕeqed",
+          "instructions": "Speak only the supplied Moroccan Darija word once, naturally, without any introduction or explanation. The input is a Latin phonetic cue, never an English word or letter name. Produce q as the Arabic qaf /q/: a voiceless UVULAR stop, made by the back of the tongue contacting the uvula, farther back than /k/. Keep a complete closure and a single clean release. Never substitute /k/, /g/, /t/, a glottal stop, or a spoken letter name. For qq, hold the closure longer and release once; do not insert a vowel between the consonants. The symbols ʕ, ħ, x, ɣ and ʃ denote ayn, haa, kh, gh and sh. Preserve the supplied vowels, final consonants and Moroccan rhythm; no spelling, exaggeration or extra syllable. Meaning for context only, do not speak it: compliqué",
+          "key": "22dd464c5683148212d69662d771cdd595672cb8124d933c292cbe4213324c2b",
+          "actual_model": "gpt-realtime-2.1",
+          "technical_status": "passed",
+          "warnings": [
+            "long_edge_silence"
+          ],
+          "generated_transcript_not_independent_validation": "mʕeqed"
+        },
+        "b": {
+          "id": "adjectifs-007-b",
+          "tts_text": "mʕeḳed",
+          "instructions": "Prononce uniquement le mot fourni, une seule fois, en darija marocaine naturelle. Le texte est une aide phonétique latine expérimentale. Le signe ḳ représente exactement le qaf arabe ق, /q/, une occlusive uvulaire sourde : ferme avec le dos de la langue très en arrière, au niveau de la luette, puis relâche. Ne remplace pas ce son par k, g, t ou une coupure glottale. Ce signe ne se lit jamais comme le nom d'une lettre. Deux ḳ successifs indiquent une fermeture prolongée suivie d'un seul relâchement, sans voyelle ajoutée. ʕ désigne le ayn, ħ le haa, x le kh, ɣ le gh, ʃ le ch. Garde les voyelles fournies et le rythme marocain. Aucune explication, traduction, épellation ou syllabe supplémentaire. Meaning for context only, do not speak it: compliqué",
+          "key": "c683828e6f026b9c577b76e4c0866b459ab10f0b060e160bdd2d8e6cc8dfca70",
+          "actual_model": "gpt-realtime-2.1",
+          "technical_status": "passed",
+          "warnings": [
+            "long_edge_silence"
+          ],
+          "generated_transcript_not_independent_validation": "mʕeḳed"
+        }
+      },
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null,
+      "jamal": "jamal/adjectifs-007.mp3",
+      "baseline": "baseline/adjectifs-007.mp3",
+      "a_sha256": "a72584f7498d5e8e92bf1d986f577e48f9cc39adb63c14671304d0128967aa80",
+      "a": "a/adjectifs-007.mp3",
+      "b_sha256": "6f6a4f6383295ecf10e2a38c4e604b7eaf16ad478780a8000770f699406f8ce1",
+      "b": "b/adjectifs-007.mp3"
+    },
+    {
+      "id": "adverbes-002",
+      "latin": "lfou9",
+      "arabe": "الفوق",
+      "fr": "là-haut",
+      "theme": "adverbes",
+      "jamal_sha256": "3841cfa84b833c4df67f9387d4b2fd4c1e3de8a5bbba6f2a61e4f7464a74f220",
+      "baseline_sha256": "18f19a44db2c108b001e4f60b7a45e58a040f4aaf90d05845a41e22ffbaa151e",
+      "baseline_model": "gpt-4o-mini-tts-2025-12-15",
+      "candidates": {
+        "a": {
+          "id": "adverbes-002-a",
+          "tts_text": "lfouq",
+          "instructions": "Speak only the supplied Moroccan Darija word once, naturally, without any introduction or explanation. The input is a Latin phonetic cue, never an English word or letter name. Produce q as the Arabic qaf /q/: a voiceless UVULAR stop, made by the back of the tongue contacting the uvula, farther back than /k/. Keep a complete closure and a single clean release. Never substitute /k/, /g/, /t/, a glottal stop, or a spoken letter name. For qq, hold the closure longer and release once; do not insert a vowel between the consonants. The symbols ʕ, ħ, x, ɣ and ʃ denote ayn, haa, kh, gh and sh. Preserve the supplied vowels, final consonants and Moroccan rhythm; no spelling, exaggeration or extra syllable. Meaning for context only, do not speak it: là-haut",
+          "key": "344944890aff6e2eefd8b32f4e0c0aa8d722f4a54fd284edf49156fb24c7fe60",
+          "actual_model": "gpt-realtime-2.1",
+          "technical_status": "passed",
+          "warnings": [
+            "long_edge_silence"
+          ],
+          "generated_transcript_not_independent_validation": "lfouq"
+        },
+        "b": {
+          "id": "adverbes-002-b",
+          "tts_text": "lfouḳ",
+          "instructions": "Prononce uniquement le mot fourni, une seule fois, en darija marocaine naturelle. Le texte est une aide phonétique latine expérimentale. Le signe ḳ représente exactement le qaf arabe ق, /q/, une occlusive uvulaire sourde : ferme avec le dos de la langue très en arrière, au niveau de la luette, puis relâche. Ne remplace pas ce son par k, g, t ou une coupure glottale. Ce signe ne se lit jamais comme le nom d'une lettre. Deux ḳ successifs indiquent une fermeture prolongée suivie d'un seul relâchement, sans voyelle ajoutée. ʕ désigne le ayn, ħ le haa, x le kh, ɣ le gh, ʃ le ch. Garde les voyelles fournies et le rythme marocain. Aucune explication, traduction, épellation ou syllabe supplémentaire. Meaning for context only, do not speak it: là-haut",
+          "key": "f654ef3bab3981b034a00bf2d7a13c620496b7a4da859382fd4ec2836c0f96fe",
+          "actual_model": "gpt-realtime-2.1",
+          "technical_status": "passed",
+          "warnings": [
+            "long_edge_silence"
+          ],
+          "generated_transcript_not_independent_validation": "lfouḳ"
+        }
+      },
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null,
+      "jamal": "jamal/adverbes-002.mp3",
+      "baseline": "baseline/adverbes-002.mp3",
+      "a_sha256": "ad69f7c228b78ce9fc0a2b1c63adc772092de3fc65f4c1292fd52e94cebccd7a",
+      "a": "a/adverbes-002.mp3",
+      "b_sha256": "ec668419b1f199d010618b407248831f014de86dfb6b8a9589087f4093bc23d4",
+      "b": "b/adverbes-002.mp3"
+    },
+    {
+      "id": "verbes-085",
+      "latin": "we99e3",
+      "arabe": "وقع",
+      "fr": "signer",
+      "theme": "verbes",
+      "jamal_sha256": "e6362f58d83be89af051870ca0bf0499beacc5e50d5740b108964f4eb235f817",
+      "baseline_sha256": "31722e3f3a20c2f61b6f5b0874fdc88d71509791d32bb8a790755763d301a05e",
+      "baseline_model": "gpt-realtime-2.1",
+      "candidates": {
+        "a": {
+          "id": "verbes-085-a",
+          "tts_text": "weqqeʕ",
+          "instructions": "Speak only the supplied Moroccan Darija word once, naturally, without any introduction or explanation. The input is a Latin phonetic cue, never an English word or letter name. Produce q as the Arabic qaf /q/: a voiceless UVULAR stop, made by the back of the tongue contacting the uvula, farther back than /k/. Keep a complete closure and a single clean release. Never substitute /k/, /g/, /t/, a glottal stop, or a spoken letter name. For qq, hold the closure longer and release once; do not insert a vowel between the consonants. The symbols ʕ, ħ, x, ɣ and ʃ denote ayn, haa, kh, gh and sh. Preserve the supplied vowels, final consonants and Moroccan rhythm; no spelling, exaggeration or extra syllable. Meaning for context only, do not speak it: signer",
+          "key": "055f9878531a3d88fb28c5a426d5e8707b31e11313fb9e960de20e4663c80331",
+          "actual_model": "gpt-realtime-2.1",
+          "technical_status": "passed",
+          "warnings": [
+            "long_edge_silence"
+          ],
+          "generated_transcript_not_independent_validation": "weqqeʕ"
+        },
+        "b": {
+          "id": "verbes-085-b",
+          "tts_text": "weḳḳeʕ",
+          "instructions": "Prononce uniquement le mot fourni, une seule fois, en darija marocaine naturelle. Le texte est une aide phonétique latine expérimentale. Le signe ḳ représente exactement le qaf arabe ق, /q/, une occlusive uvulaire sourde : ferme avec le dos de la langue très en arrière, au niveau de la luette, puis relâche. Ne remplace pas ce son par k, g, t ou une coupure glottale. Ce signe ne se lit jamais comme le nom d'une lettre. Deux ḳ successifs indiquent une fermeture prolongée suivie d'un seul relâchement, sans voyelle ajoutée. ʕ désigne le ayn, ħ le haa, x le kh, ɣ le gh, ʃ le ch. Garde les voyelles fournies et le rythme marocain. Aucune explication, traduction, épellation ou syllabe supplémentaire. Meaning for context only, do not speak it: signer",
+          "key": "c91507a3b059bc3db89b6d09a727464122c4940a5abcd234e5c6a20418e8aa88",
+          "actual_model": "gpt-realtime-2.1",
+          "technical_status": "passed",
+          "warnings": [
+            "long_edge_silence"
+          ],
+          "generated_transcript_not_independent_validation": "weḳḳeʕ"
+        }
+      },
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null,
+      "jamal": "jamal/verbes-085.mp3",
+      "baseline": "baseline/verbes-085.mp3",
+      "a_sha256": "cf664422fbbb0abf14d63cd07934fa5e8acae708f9f90bf7fec0d29aa467ede1",
+      "a": "a/verbes-085.mp3",
+      "b_sha256": "a0c38715cfd6d5f92304a5c1a058bdca98e126869adcfb7122ec894eab175b63",
+      "b": "b/verbes-085.mp3"
+    }
+  ],
+  "themes": {
+    "salutations": "Salutations et politesse",
+    "chiffres": "Chiffres et prix",
+    "nourriture": "Nourriture et boissons",
+    "souk": "Au souk et marchandage",
+    "transports": "Transports et directions",
+    "famille": "Se présenter et famille",
+    "jours": "Jours et moments",
+    "expressions": "Expressions utiles",
+    "questions": "Questions essentielles",
+    "grammaire": "Pronoms, liens et grammaire",
+    "corps": "Corps et apparence",
+    "sante": "Santé et besoins",
+    "emotions": "Sentiments et émotions",
+    "maison": "Maison et mobilier",
+    "cuisine": "Cuisine et vaisselle",
+    "vetements": "Vêtements et accessoires",
+    "couleurs": "Couleurs et formes",
+    "ville": "Ville et services",
+    "travail": "Travail et études",
+    "numerique": "Numérique et communication",
+    "nature": "Nature, météo et animaux",
+    "loisirs": "Sports et loisirs",
+    "verbes": "Verbes indispensables",
+    "adjectifs": "Adjectifs et descriptions",
+    "adverbes": "Adverbes et directions",
+    "conversation": "Conversation courante",
+    "restaurant": "Au restaurant",
+    "chemin": "Demander son chemin",
+    "rencontres": "Amitié et rencontres",
+    "organisation": "Organisation et apprentissage",
+    "tournures": "Négations et tournures"
+  },
+  "review_id": "1fede1669e6473062646d072943a8cb4ea21ec852e2141425fe99839cd9e2ac2"
+}

@@ -58,6 +58,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-15 | Comparatif de dix entrées à trois voix : Jamal, ancien OpenAI et nouveau Realtime ; trente MP3, avis locaux et export, exercices conservés | `public/test-audio-trois-voix/` |
 
+| 2026-10-15 | Test ciblé du son 9 : cinq mots, dix nouveaux candidats Realtime et dix audios précédents conservés ; comparatif à quatre lecteurs sans activation | `public/test-audio-son-9/` |
+
 ## Décisions
 
 
