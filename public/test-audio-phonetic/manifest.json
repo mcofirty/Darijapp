@@ -1,0 +1,94 @@
+{
+  "model": "gpt-4o-mini-tts-2025-12-15",
+  "voice": "cedar",
+  "entry_id": "verbes-085",
+  "latin": "we99e3",
+  "fr": "signer",
+  "maximum_paid_requests": 2,
+  "source_script": "latin",
+  "complete_ipa": false,
+  "linguistic_certification": false,
+  "confidence": null,
+  "records": [
+    {
+      "profile": "latin_phonetic",
+      "key": "64d25f24bd2b231637d134302ec0feb61c7d4b7228b37e058b20edbcec484816",
+      "request": {
+        "model": "gpt-4o-mini-tts-2025-12-15",
+        "voice": "cedar",
+        "input": "weqqeʿ",
+        "instructions": "Speak Moroccan Darija with a natural Moroccan accent. Read only the supplied verb meaning 'to sign', exactly once, with no introduction, explanation, spelling, or translation. The input is a Latin phonetic rendering, not an English word. The characters ʿ and ʕ represent the voiced pharyngeal consonant ayn /ʕ/, ʾ and ʔ represent a glottal stop, ḥ and ħ represent a voiceless pharyngeal /ħ/, and q represents a uvular stop /q/, never the English name of a letter. A doubled q is a sustained consonant, not two words. Start with consonant w and a short unstressed vowel, preserve the doubled consonant and the final pharyngeal consonant. Output only the Moroccan word, without speaking the names of the symbols.",
+        "response_format": "mp3",
+        "speed": 1.0
+      },
+      "notation": {
+        "display_latin": "we99e3",
+        "tts_text": "weqqeʿ",
+        "profile": "latin_phonetic",
+        "notation_version": 1,
+        "replacements": [
+          {
+            "source": "we99e3",
+            "target": "weqqeʿ"
+          }
+        ],
+        "preserved_numbers": [],
+        "ambiguous_tokens": [],
+        "status": "prepared_not_validated",
+        "complete_ipa": false,
+        "linguistic_certification": false,
+        "confidence": null,
+        "origin": "consonant_rules_v1"
+      },
+      "audio": "latin_phonetic-64d25f24bd2b.mp3",
+      "sha256": "963ea0fc43c2f5a04a580b6e56a515f4ec9079581306104a08e001273048cb02",
+      "technical_status": "passed",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "profile": "consonant_symbols",
+      "key": "f6daf1feecaea9c198a44da1566778589a49543f26b098c884f6b0581dd91ca3",
+      "request": {
+        "model": "gpt-4o-mini-tts-2025-12-15",
+        "voice": "cedar",
+        "input": "weqqeʕ",
+        "instructions": "Speak Moroccan Darija with a natural Moroccan accent. Read only the supplied verb meaning 'to sign', exactly once, with no introduction, explanation, spelling, or translation. The input is a Latin phonetic rendering, not an English word. The characters ʿ and ʕ represent the voiced pharyngeal consonant ayn /ʕ/, ʾ and ʔ represent a glottal stop, ḥ and ħ represent a voiceless pharyngeal /ħ/, and q represents a uvular stop /q/, never the English name of a letter. A doubled q is a sustained consonant, not two words. Start with consonant w and a short unstressed vowel, preserve the doubled consonant and the final pharyngeal consonant. Output only the Moroccan word, without speaking the names of the symbols.",
+        "response_format": "mp3",
+        "speed": 1.0
+      },
+      "notation": {
+        "display_latin": "we99e3",
+        "tts_text": "weqqeʕ",
+        "profile": "consonant_symbols",
+        "notation_version": 1,
+        "replacements": [
+          {
+            "source": "we99e3",
+            "target": "weqqeʕ"
+          }
+        ],
+        "preserved_numbers": [],
+        "ambiguous_tokens": [],
+        "status": "prepared_not_validated",
+        "complete_ipa": false,
+        "linguistic_certification": false,
+        "confidence": null,
+        "origin": "consonant_rules_v1"
+      },
+      "audio": "consonant_symbols-f6daf1feecae.mp3",
+      "sha256": "da53fc99dd25b8350140a0cbcd488f77918b65b08a06f40b0f1a04cea19f5c95",
+      "technical_status": "passed",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    }
+  ],
+  "original_sha256": "434d03853587e89f14072f60b48de29cdea8cb50c6afbbcc9a3593b5b8eda93d",
+  "test_id": "1c77d4d070e58b4e50b7964cf74144ab5aa52824aeff0d75e10e9fe20395a32d"
+}

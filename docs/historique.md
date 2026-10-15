@@ -36,6 +36,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-14 | Deuxième essai OpenAI : quatre nouvelles propositions depuis le latin et six MP3 conservés à l’identique ; premier essai accessible et Jamal active | `public/test-audio-openai/` |
 
+| 2026-10-15 | Essai de deux notations phonétiques sans chiffres sur we99e3, avec lecture chiffrée de référence et avis locaux ; application conservée | `public/test-audio-phonetic/` |
+
 ## Décisions
 
 
