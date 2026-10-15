@@ -1,0 +1,85 @@
+{
+  "review_id": "251c0ad12aecba178742f3e6243bb385d3560cb221b94900df4d3b5062d11cd1",
+  "linguistic_certification": false,
+  "entries": [
+    {
+      "id": "verbes-085",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "salutations-012",
+      "warnings": [],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "corps-041",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "nourriture-001",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "nourriture-006",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "jours-002",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "chiffres-017",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "adjectifs-052",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "salutations-035",
+      "warnings": [
+        "long_edge_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    },
+    {
+      "id": "conversation-001",
+      "warnings": [
+        "long_edge_silence",
+        "long_internal_silence"
+      ],
+      "pronunciation_status": "uncertain",
+      "confidence": null
+    }
+  ]
+}
