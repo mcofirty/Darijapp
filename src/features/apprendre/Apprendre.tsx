@@ -174,13 +174,9 @@ export function Apprendre() {
       <QuetesDuJour />
 
       <Section titre="Ma progression">
-        <CarteNiveau onClick={() => ouvrir({ type: 'jardin' })} />
-        <Ligne
-          tuile={<Plante stade={croissance(xpTotal).stade} avancement={croissance(xpTotal).avancement} espece={espece} pot={pot} taille={48} />}
-          titre="Mon jardin"
-          sousTitre={croissance(xpTotal).nomPalier}
-          chevron
+        <CarteNiveau
           onClick={() => ouvrir({ type: 'jardin' })}
+          plante={<Plante stade={croissance(xpTotal).stade} avancement={croissance(xpTotal).avancement} espece={espece} pot={pot} taille={44} />}
         />
         <LignesMotivation />
         <Ligne

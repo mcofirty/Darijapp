@@ -1,5 +1,6 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import { ChevronRight } from 'lucide-react'
+import type { ReactNode } from 'react'
 import { db } from '../../db/db'
 import { useResume } from '../../db/useResume'
 import { acquisVerifies } from '../../gamification/collection'
@@ -9,9 +10,9 @@ import { Anneau } from '../../ui/Anneau'
  * Carte de niveau compacte : un seul anneau (l'avancée dans le niveau), puis deux mesures bien distinctes.
  * L'activité (XP, jours pratiqués) dit l'effort ; les acquis vérifiés (mots retrouvés lors d'une révision
  * ultérieure, boîte 3 ou plus) disent ce qui est vraiment retenu. Rien n'est dit « maîtrisé » après une seule
- * bonne réponse.
+ * bonne réponse. Avec `plante`, la carte mène aussi à « Mon jardin » (un seul bouton pour les deux).
  */
-export function CarteNiveau({ onClick }: { onClick?: () => void }) {
+export function CarteNiveau({ onClick, plante }: { onClick?: () => void; plante?: ReactNode }) {
   const { niveau, xpTotal } = useResume()
   const mesures = useLiveQuery(async () => {
     const [sessions, progressions] = await Promise.all([db.sessions.toArray(), db.progression.toArray()])
@@ -32,7 +33,7 @@ export function CarteNiveau({ onClick }: { onClick?: () => void }) {
           <span className="t-titre-2 tabular-nums">{niveau.niveau}</span>
         </Anneau>
         <div className="min-w-0 flex-1">
-          <p className="t-titre-3 truncate">{niveau.nom}</p>
+          <p className="t-titre-3 text-balance">{niveau.nom}</p>
           <p className="t-sous-titre text-texte-2">
             {reste > 0 ? (
               <>
@@ -42,7 +43,9 @@ export function CarteNiveau({ onClick }: { onClick?: () => void }) {
               'Dernier niveau atteint'
             )}
           </p>
+          {plante && <p className="t-note mt-0.5 font-semibold text-accent">Voir mon jardin</p>}
         </div>
+        {plante && <span className="shrink-0">{plante}</span>}
         {onClick && <ChevronRight className="h-5 w-5 shrink-0 text-texte-3" strokeWidth={2.4} aria-hidden />}
       </div>
       <div className="mt-4 grid grid-cols-2 gap-2">
