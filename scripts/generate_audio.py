@@ -1,4 +1,4 @@
-"""Génère les MP3 manquants des mots et des exemples (src/data/*.json), des paires de sons (src/data/sons/paires.json), des phrases du marchandage (src/data/jeux/marchandage.json), des leçons de grammaire (src/data/parler/grammaire.json) et des dialogues (src/data/parler/dialogues.json, avec la version au féminin des répliques).
+"""Génère les MP3 manquants des mots et des exemples (src/data/*.json), des paires de sons (src/data/sons/paires.json), des phrases du marchandage (src/data/jeux/marchandage.json), des leçons de grammaire (src/data/parler/grammaire.json) des dialogues (src/data/parler/dialogues.json, avec la version au féminin des répliques) et des histoires (src/data/parler/histoires.json).
 
 Voix par défaut : Jamal (ar-MA-JamalNeural), voix neuronale marocaine de Microsoft, par l'API
 officielle Azure Speech (offre gratuite F0). Elle lit l'écriture arabe darija (champ « arabe »)
@@ -67,7 +67,7 @@ def lister_a_generer(theme: str | None, force: bool) -> list[tuple[str, Path]]:
                 cible = PUBLIC / audio
                 if force or not cible.exists():
                     taches.append((texte_a_lire(arabe), cible))
-    # Mots des paires de « Distingue les sons » (9elb / kelb…), phrases du marchandage, de la grammaire et des dialogues.
+    # Mots des paires de « Distingue les sons » (9elb / kelb…), phrases du marchandage, de la grammaire, des dialogues et des histoires.
     if not theme:
         autres = json.loads((DONNEES / "sons" / "paires.json").read_text(encoding="utf-8"))["mots"]
         for article in json.loads((DONNEES / "jeux" / "marchandage.json").read_text(encoding="utf-8"))["articles"]:
@@ -81,6 +81,10 @@ def lister_a_generer(theme: str | None, force: bool) -> list[tuple[str, Path]]:
                     autres.append(replique)
                     if "feminin" in replique:
                         autres.append(replique["feminin"])
+        histoires = DONNEES / "parler" / "histoires.json"
+        if histoires.exists():
+            for histoire in json.loads(histoires.read_text(encoding="utf-8"))["histoires"]:
+                autres += histoire["lignes"]
         for mot in autres:
             cible = PUBLIC / mot["audio"]
             if force or not cible.exists():

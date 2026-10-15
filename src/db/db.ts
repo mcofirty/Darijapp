@@ -67,6 +67,11 @@ export interface Profil {
   testNiveau: 'fait' | 'refuse' | null
   /** Dialogues : meilleur nombre de répliques réussies par scène. */
   dialogues: Record<string, number>
+  /** Histoires : meilleur nombre de bonnes réponses par histoire. */
+  histoires: Record<string, number>
+  /** Avatar (avec `prenom`) : visage (emoji) et couleur de fond. */
+  avatar: string
+  avatarFond: string
   /** Horodatage du dernier export de la progression (rappel tous les 7 jours), null si jamais. */
   derniereSauvegarde: number | null
 }
@@ -99,7 +104,7 @@ export interface SessionFaite {
 }
 
 /** Activité enregistrée dans l'historique : toutes comptent pour l'XP et la série. */
-export type TypeActivite = 'session' | 'quiz' | 'express' | 'sons' | 'marchandage' | 'taxi' | 'grammaire' | 'dialogue'
+export type TypeActivite = 'session' | 'quiz' | 'express' | 'sons' | 'marchandage' | 'taxi' | 'grammaire' | 'dialogue' | 'histoire'
 
 /** Ce qui ne va pas dans un mot signalé. */
 export type MotifSignalement = 'traduction' | 'ecriture' | 'prononciation'
@@ -177,6 +182,9 @@ export const PROFIL_DEFAUT: Profil = {
   etapesLegendaires: [],
   testNiveau: null,
   dialogues: {},
+  histoires: {},
+  avatar: '🧑',
+  avatarFond: '#c1272d',
   derniereSauvegarde: null,
 }
 

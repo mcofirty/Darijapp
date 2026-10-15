@@ -1,4 +1,6 @@
 import { Coins, Flame, Sparkles, Target } from 'lucide-react'
+import { humeurDuBilan } from '../../gamification/mascotte'
+import { MascotteBulle } from '../../ui/Mascotte'
 import { useState, type ReactNode } from 'react'
 import { useProfil } from '../../db/useProfil'
 import { useResume } from '../../db/useResume'
@@ -89,6 +91,7 @@ export function Bilan({ titre, sousTitre, xp, taux, activite, lignes, libelleEnc
       />
       <PluieConfettis type={confettis} />
       <div className="relative mx-auto flex min-h-full max-w-xl flex-col justify-center px-marge pb-[calc(max(0.75rem,env(safe-area-inset-bottom))+9rem)] pt-[calc(env(safe-area-inset-top)+2rem)]">
+        <MascotteBulle humeur={humeurDuBilan(taux)} className="mb-4 justify-center" />
         <h2 className="t-grand-titre mb-1 text-center">{titre}</h2>
         <p className="t-appel mb-8 text-center text-texte-2">{sousTitre}</p>
         {activite?.xpAvant !== undefined && croissance(activite.xpAvant + xp).niveau > croissance(activite.xpAvant).niveau && (

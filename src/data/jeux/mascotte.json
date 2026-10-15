@@ -1,0 +1,30 @@
+{
+  "bravo": [
+    { "latin": "mzyan!", "arabe": "مزيان!", "fr": "Bien !" },
+    { "latin": "tbarkellah 3lik!", "arabe": "تبارك الله عليك!", "fr": "Bravo à toi !" },
+    { "latin": "nadi!", "arabe": "نادي!", "fr": "Génial !" },
+    { "latin": "hakka!", "arabe": "هاكا!", "fr": "C'est ça !" },
+    { "latin": "zwin bezzaf!", "arabe": "زوين بزاف!", "fr": "Très bien !" }
+  ],
+  "rate": [
+    { "latin": "ma3lich, 3awed!", "arabe": "ماعليش، عاود!", "fr": "Pas grave, recommence !" },
+    { "latin": "chwiya b chwiya", "arabe": "شوية بشوية", "fr": "Petit à petit" },
+    { "latin": "ma kayn bas", "arabe": "ما كاين باس", "fr": "Ce n'est rien" },
+    { "latin": "ghir zid!", "arabe": "غير زيد!", "fr": "Continue !" }
+  ],
+  "fete": [
+    { "latin": "safi, nadi bezzaf!", "arabe": "صافي، نادي بزاف!", "fr": "Super, c'est génial !" },
+    { "latin": "tbarkellah 3lik!", "arabe": "تبارك الله عليك!", "fr": "Bravo à toi !" },
+    { "latin": "bravo 3lik!", "arabe": "برافو عليك!", "fr": "Bravo !" }
+  ],
+  "encourage": [
+    { "latin": "zid, ghadi twsel!", "arabe": "زيد، غادي توصل!", "fr": "Continue, tu vas y arriver !" },
+    { "latin": "chwiya b chwiya", "arabe": "شوية بشوية", "fr": "Petit à petit" },
+    { "latin": "ghedda 7sen!", "arabe": "غدا حسن!", "fr": "Demain, ce sera mieux !" }
+  ],
+  "salut": [
+    { "latin": "ahlan!", "arabe": "أهلا!", "fr": "Salut !" },
+    { "latin": "yallah n9raw!", "arabe": "يالله نقراو!", "fr": "Allez, on apprend !" },
+    { "latin": "mr7ba bik!", "arabe": "مرحبا بيك!", "fr": "Bienvenue !" }
+  ]
+}

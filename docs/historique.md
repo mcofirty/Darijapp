@@ -46,6 +46,8 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 
 | 2026-10-15 | Façon Duolingo (3) : test de niveau (Apprendre et Profil), épreuve « Passer l'étape », épreuve légendaire et tampon doré, guide de l'étape | `src/exercices/epreuves.ts`, `src/features/onboarding/TestNiveau.tsx`, `src/features/parcours/`, `src/ui/legendaire.ts` |
 
+| 2026-10-15 | Façon Duolingo (4) : Bellarej la cigogne (réagit aux réponses, félicite dans les bilans), avatar et prénom (Profil, salut dans Progrès), 6 histoires illustrées avec questions de compréhension | `src/ui/Mascotte.tsx`, `src/gamification/mascotte.ts`, `src/ui/Avatar.tsx`, `src/features/profil/MonAvatar.tsx`, `src/features/parler/Histoires.tsx`, `src/exercices/histoires.ts`, `src/data/parler/histoires.json` |
+
 ## Décisions
 
 
@@ -87,3 +89,5 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 - 2026-10-14 : après refus de HADRA, essai limité à dix mots avec OpenAI ; aucun changement de voix dans les exercices ni génération massive. La préférence d’écoute ne vaut pas certification linguistique.
 
 - 2026-10-14 : après refus de HADRA, essai limité à dix mots avec OpenAI ; aucun changement de voix dans les exercices ni génération massive. La préférence d’écoute ne vaut pas certification linguistique.
+
+- 2026-10-15 : mascotte en cigogne (Bellarej, oiseau emblématique du Maroc) dessinée en SVG dans le code, comme la plante, avec des phrases en darija dans un JSON vérifié par `data.test.ts` ; avatar en emoji sur fond de couleur (pas d'image, rien à télécharger), `avatar` et `avatarFond` ajoutés au profil sans migration à côté du `prenom` existant ; histoires lues par Jamal seule, questions en français pour vérifier la compréhension sans donner la traduction, français des lignes caché derrière « Traduire ».

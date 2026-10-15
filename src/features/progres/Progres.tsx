@@ -13,6 +13,9 @@ import { DefisReussis } from '../jeu/Motivation'
 import { QuetesDuJour } from '../jeu/QuetesDuJour'
 import { FicheMot } from '../mots/FicheMot'
 import { Dictionnaire } from './Dictionnaire'
+import { useProfil } from '../../db/useProfil'
+import { Avatar } from '../../ui/Avatar'
+import { Mascotte } from '../../ui/Mascotte'
 
 export function Progres() {
   const [vue, setVue] = useState<'tableau' | 'dictionnaire' | 'jardin'>('tableau')
@@ -20,6 +23,7 @@ export function Progres() {
   const [souk, setSouk] = useState(false)
   const { niveau, xpTotal, xpAujourdhui, sessionsAujourdhui, motsVus } = useResume()
   const MOTS = useMots()
+  const profil = useProfil()
 
   if (mot) return <FicheMot mot={mot} retour={{ libelle: 'Progrès', action: () => setMot(null) }} />
   if (souk) return <Souk retour={{ libelle: 'Progrès', action: () => setSouk(false) }} />
@@ -53,6 +57,14 @@ export function Progres() {
         />
       ) : (
         <>
+          <div className="mb-[26px] flex items-center gap-4 px-1">
+            <Avatar visage={profil.avatar} fond={profil.avatarFond} taille={64} />
+            <div className="min-w-0 flex-1">
+              <p className="t-titre-2 truncate">{profil.prenom.trim() ? `Salam, ${profil.prenom.trim()} !` : 'Salam !'}</p>
+              <p className="t-sous-titre text-texte-2">Voici où tu en es.</p>
+            </div>
+            <Mascotte humeur="salut" className="h-14 w-14" />
+          </div>
           <Section titre="Niveau">
             <Ligne
               tuile={<Tuile icone={Star} couleur="#ff9500" />}

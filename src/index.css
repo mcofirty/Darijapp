@@ -506,6 +506,29 @@ body {
   .micro-onde { animation: none; opacity: 0; }
 }
 
+/* Bellarej, la cigogne : elle saute de joie, ou penche la tête quand c'est raté. */
+.mascotte-saut {
+  transform-origin: 50% 100%;
+  animation: mascotte-saut 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes mascotte-saut {
+  0% { transform: translateY(0) scale(1, 1); }
+  30% { transform: translateY(-18%) scale(0.95, 1.05); }
+  60% { transform: translateY(0) scale(1.05, 0.95); }
+  100% { transform: translateY(0) scale(1, 1); }
+}
+.mascotte-penche {
+  transform-origin: 50% 100%;
+  animation: mascotte-penche 0.5s ease-out both;
+}
+@keyframes mascotte-penche {
+  from { transform: rotate(0); }
+  to { transform: rotate(-8deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mascotte-saut, .mascotte-penche { animation: none; }
+}
+
 /* Confettis du bilan de session. */
 .confetti {
   position: absolute;

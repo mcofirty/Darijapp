@@ -1,0 +1,673 @@
+{
+  "histoires": [
+    {
+      "id": "cafe",
+      "titre": "Le msemmen de Karim",
+      "resume": "Karim prend son petit-déjeuner au café.",
+      "illustration": "☕️",
+      "couleur": "#a2845e",
+      "lignes": [
+        {
+          "id": "his-cafe-1",
+          "qui": "Narrateur",
+          "image": "🌅",
+          "latin": "had ssba7, karim mcha l l9ahwa",
+          "arabe": "هاد الصباح، كريم مشا للقهوة",
+          "fr": "Ce matin, Karim est allé au café",
+          "audio": "audio/his-cafe-1.mp3"
+        },
+        {
+          "id": "his-cafe-2",
+          "qui": "Le serveur",
+          "image": "🧑‍🍳",
+          "latin": "salam, chno bghiti?",
+          "arabe": "سلام، شنو بغيتي؟",
+          "fr": "Bonjour, qu'est-ce que tu veux ?",
+          "audio": "audio/his-cafe-2.mp3"
+        },
+        {
+          "id": "his-cafe-3",
+          "qui": "Karim",
+          "image": "☕️",
+          "latin": "bghit wa7d 9ahwa b l7lib",
+          "arabe": "بغيت واحد قهوة بالحليب",
+          "fr": "Je veux un café au lait",
+          "audio": "audio/his-cafe-3.mp3"
+        },
+        {
+          "id": "his-cafe-4",
+          "qui": "Le serveur",
+          "image": "🍽️",
+          "latin": "bghiti m3aha chi 7aja dyal lmakla?",
+          "arabe": "بغيتي معاها شي حاجة ديال الماكلة؟",
+          "fr": "Tu veux quelque chose à manger avec ?",
+          "audio": "audio/his-cafe-4.mp3"
+        },
+        {
+          "id": "his-cafe-5",
+          "qui": "Karim",
+          "image": "🥞",
+          "latin": "iyeh, wa7d lmsemmen 3afak",
+          "arabe": "إيه، واحد المسمن عافاك",
+          "fr": "Oui, un msemmen, s'il te plaît",
+          "audio": "audio/his-cafe-5.mp3"
+        },
+        {
+          "id": "his-cafe-6",
+          "qui": "Narrateur",
+          "image": "😋",
+          "latin": "lmsemmen kan sokhon w bnin bezzaf",
+          "arabe": "المسمن كان سخون و بنين بزاف",
+          "fr": "Le msemmen était chaud et très bon",
+          "audio": "audio/his-cafe-6.mp3"
+        },
+        {
+          "id": "his-cafe-7",
+          "qui": "Karim",
+          "image": "💰",
+          "latin": "ch7al khassni nkhelles?",
+          "arabe": "شحال خاصني نخلص؟",
+          "fr": "Combien je dois payer ?",
+          "audio": "audio/his-cafe-7.mp3"
+        },
+        {
+          "id": "his-cafe-8",
+          "qui": "Le serveur",
+          "image": "🪙",
+          "latin": "tlatin derhem",
+          "arabe": "تلاتين درهم",
+          "fr": "Trente dirhams",
+          "audio": "audio/his-cafe-8.mp3"
+        }
+      ],
+      "questions": [
+        {
+          "apres": 2,
+          "question": "Qu'a commandé Karim à boire ?",
+          "choix": [
+            "Un café au lait",
+            "Un thé à la menthe",
+            "Un jus d'orange",
+            "Un verre d'eau"
+          ],
+          "bonne": 0
+        },
+        {
+          "apres": 5,
+          "question": "Comment était le msemmen ?",
+          "choix": [
+            "Chaud et très bon",
+            "Froid",
+            "Trop salé",
+            "Brûlé"
+          ],
+          "bonne": 0
+        },
+        {
+          "apres": 7,
+          "question": "Combien Karim doit-il payer ?",
+          "choix": [
+            "30 dirhams",
+            "10 dirhams",
+            "50 dirhams",
+            "100 dirhams"
+          ],
+          "bonne": 0
+        }
+      ]
+    },
+    {
+      "id": "taxi",
+      "titre": "Salma prend le taxi",
+      "resume": "Salma traverse la ville en petit taxi.",
+      "illustration": "🚕",
+      "couleur": "#ffcc00",
+      "lignes": [
+        {
+          "id": "his-taxi-1",
+          "qui": "Narrateur",
+          "image": "🧕",
+          "latin": "salma bghat tmchi l lmdina l9dima",
+          "arabe": "سلمى بغات تمشي للمدينة القديمة",
+          "fr": "Salma veut aller à la médina",
+          "audio": "audio/his-taxi-1.mp3"
+        },
+        {
+          "id": "his-taxi-2",
+          "qui": "Narrateur",
+          "image": "🚕",
+          "latin": "w9fat wa7d ttaksi sghir",
+          "arabe": "وقفات واحد الطاكسي الصغير",
+          "fr": "Elle a arrêté un petit taxi",
+          "audio": "audio/his-taxi-2.mp3"
+        },
+        {
+          "id": "his-taxi-3",
+          "qui": "Salma",
+          "image": "🕌",
+          "latin": "lmdina l9dima 3afak",
+          "arabe": "المدينة القديمة عافاك",
+          "fr": "À la médina, s'il te plaît",
+          "audio": "audio/his-taxi-3.mp3"
+        },
+        {
+          "id": "his-taxi-4",
+          "qui": "Le chauffeur",
+          "image": "👍",
+          "latin": "wakha, tl3i",
+          "arabe": "واخا، طلعي",
+          "fr": "D'accord, monte",
+          "audio": "audio/his-taxi-4.mp3"
+        },
+        {
+          "id": "his-taxi-5",
+          "qui": "Narrateur",
+          "image": "🚗",
+          "latin": "ttri9 kanet 3amra b ttomobilat",
+          "arabe": "الطريق كانت عامرة بالطوموبيلات",
+          "fr": "La route était pleine de voitures",
+          "audio": "audio/his-taxi-5.mp3"
+        },
+        {
+          "id": "his-taxi-6",
+          "qui": "Le chauffeur",
+          "image": "⏳",
+          "latin": "kayn zzi7am lyoum, sm7i lia",
+          "arabe": "كاين الزحام اليوم، سمحي ليا",
+          "fr": "Il y a des bouchons aujourd'hui, excuse-moi",
+          "audio": "audio/his-taxi-6.mp3"
+        },
+        {
+          "id": "his-taxi-7",
+          "qui": "Salma",
+          "image": "🙂",
+          "latin": "machi mochkil",
+          "arabe": "ماشي مشكل",
+          "fr": "Pas de problème",
+          "audio": "audio/his-taxi-7.mp3"
+        },
+        {
+          "id": "his-taxi-8",
+          "qui": "Narrateur",
+          "image": "🪙",
+          "latin": "f lekher, khelsat 3ichrin derhem",
+          "arabe": "ف اللخر، خلصات عشرين درهم",
+          "fr": "À la fin, elle a payé vingt dirhams",
+          "audio": "audio/his-taxi-8.mp3"
+        }
+      ],
+      "questions": [
+        {
+          "apres": 2,
+          "question": "Où veut aller Salma ?",
+          "choix": [
+            "À la médina",
+            "À la gare",
+            "À l'aéroport",
+            "À la plage"
+          ],
+          "bonne": 0
+        },
+        {
+          "apres": 6,
+          "question": "Pourquoi le trajet est-il long ?",
+          "choix": [
+            "Il y a des bouchons",
+            "Le taxi est en panne",
+            "Le chauffeur se perd",
+            "Il pleut fort"
+          ],
+          "bonne": 0
+        },
+        {
+          "apres": 7,
+          "question": "Combien a payé Salma ?",
+          "choix": [
+            "20 dirhams",
+            "30 dirhams",
+            "5 dirhams",
+            "50 dirhams"
+          ],
+          "bonne": 0
+        }
+      ]
+    },
+    {
+      "id": "souk",
+      "titre": "Les oranges du souk",
+      "resume": "Youssef marchande au souk.",
+      "illustration": "🍊",
+      "couleur": "#ff9500",
+      "lignes": [
+        {
+          "id": "his-souk-1",
+          "qui": "Narrateur",
+          "image": "🧺",
+          "latin": "youssef mcha l ssou9 bach ychri lbourte9al",
+          "arabe": "يوسف مشا للسوق باش يشري البرتقال",
+          "fr": "Youssef est allé au souk pour acheter des oranges",
+          "audio": "audio/his-souk-1.mp3"
+        },
+        {
+          "id": "his-souk-2",
+          "qui": "Youssef",
+          "image": "🍊",
+          "latin": "ch7al lkilo dyal lbourte9al?",
+          "arabe": "شحال الكيلو ديال البرتقال؟",
+          "fr": "Combien le kilo d'oranges ?",
+          "audio": "audio/his-souk-2.mp3"
+        },
+        {
+          "id": "his-souk-3",
+          "qui": "Le marchand",
+          "image": "🧔",
+          "latin": "sb3a drahem lkilo",
+          "arabe": "سبعة دراهم الكيلو",
+          "fr": "Sept dirhams le kilo",
+          "audio": "audio/his-souk-3.mp3"
+        },
+        {
+          "id": "his-souk-4",
+          "qui": "Youssef",
+          "image": "🤔",
+          "latin": "ghali chwiya! 3tini b khamsa",
+          "arabe": "غالي شوية! عطيني بخمسة",
+          "fr": "Un peu cher ! Fais-le-moi à cinq",
+          "audio": "audio/his-souk-4.mp3"
+        },
+        {
+          "id": "his-souk-5",
+          "qui": "Le marchand",
+          "image": "✋",
+          "latin": "la, ma ymkench. sta drahem",
+          "arabe": "لا، ما يمكنش. ستة دراهم",
+          "fr": "Non, impossible. Six dirhams",
+          "audio": "audio/his-souk-5.mp3"
+        },
+        {
+          "id": "his-souk-6",
+          "qui": "Youssef",
+          "image": "🤝",
+          "latin": "wakha, 3tini jouj kilo",
+          "arabe": "واخا، عطيني جوج كيلو",
+          "fr": "D'accord, donne-moi deux kilos",
+          "audio": "audio/his-souk-6.mp3"
+        },
+        {
+          "id": "his-souk-7",
+          "qui": "Narrateur",
+          "image": "😄",
+          "latin": "youssef khelles tna3ch derhem w rja3 fer7an",
+          "arabe": "يوسف خلص طناعش درهم و رجع فرحان",
+          "fr": "Youssef a payé douze dirhams et il est rentré content",
+          "audio": "audio/his-souk-7.mp3"
+        }
+      ],
+      "questions": [
+        {
+          "apres": 2,
+          "question": "Quel est le premier prix du marchand ?",
+          "choix": [
+            "7 dirhams le kilo",
+            "5 dirhams le kilo",
+            "10 dirhams le kilo",
+            "3 dirhams le kilo"
+          ],
+          "bonne": 0
+        },
+        {
+          "apres": 5,
+          "question": "Combien de kilos Youssef achète-t-il ?",
+          "choix": [
+            "Deux kilos",
+            "Un kilo",
+            "Trois kilos",
+            "Cinq kilos"
+          ],
+          "bonne": 0
+        },
+        {
+          "apres": 6,
+          "question": "À quel prix se sont-ils mis d'accord ?",
+          "choix": [
+            "6 dirhams le kilo",
+            "7 dirhams le kilo",
+            "5 dirhams le kilo",
+            "4 dirhams le kilo"
+          ],
+          "bonne": 0
+        }
+      ]
+    },
+    {
+      "id": "jedda",
+      "titre": "Le couscous du vendredi",
+      "resume": "Amina rend visite à sa grand-mère.",
+      "illustration": "🍲",
+      "couleur": "#34c759",
+      "lignes": [
+        {
+          "id": "his-jedda-1",
+          "qui": "Narrateur",
+          "image": "🏠",
+          "latin": "nhar jjem3a, amina mchat 3and jeddatha",
+          "arabe": "نهار الجمعة، أمينة مشات عند جدتها",
+          "fr": "Vendredi, Amina est allée chez sa grand-mère",
+          "audio": "audio/his-jedda-1.mp3"
+        },
+        {
+          "id": "his-jedda-2",
+          "qui": "La grand-mère",
+          "image": "👵",
+          "latin": "mr7ba bik a benti! dkhli",
+          "arabe": "مرحبا بيك أبنتي! دخلي",
+          "fr": "Bienvenue, ma fille ! Entre",
+          "audio": "audio/his-jedda-2.mp3"
+        },
+        {
+          "id": "his-jedda-3",
+          "qui": "Amina",
+          "image": "👧",
+          "latin": "kidayra a jedda? ach tayba lyoum?",
+          "arabe": "كيدايرة أجدة؟ آش طايبة اليوم؟",
+          "fr": "Comment vas-tu, grand-mère ? Qu'est-ce que tu cuisines aujourd'hui ?",
+          "audio": "audio/his-jedda-3.mp3"
+        },
+        {
+          "id": "his-jedda-4",
+          "qui": "La grand-mère",
+          "image": "🥕",
+          "latin": "tayba lkeskso b lkhodra",
+          "arabe": "طايبة الكسكسو بالخضرة",
+          "fr": "Je fais le couscous aux légumes",
+          "audio": "audio/his-jedda-4.mp3"
+        },
+        {
+          "id": "his-jedda-5",
+          "qui": "Narrateur",
+          "image": "🍳",
+          "latin": "amina 3awnat jeddatha f lkouzina",
+          "arabe": "أمينة عاونات جدتها ف الكوزينة",
+          "fr": "Amina a aidé sa grand-mère dans la cuisine",
+          "audio": "audio/his-jedda-5.mp3"
+        },
+        {
+          "id": "his-jedda-6",
+          "qui": "Narrateur",
+          "image": "👨‍👩‍👧",
+          "latin": "men b3d, klaw kamlin m3a lfamilia",
+          "arabe": "من بعد، كلاو كاملين مع الفاميلية",
+          "fr": "Ensuite, ils ont tous mangé en famille",
+          "audio": "audio/his-jedda-6.mp3"
+        },
+        {
+          "id": "his-jedda-7",
+          "qui": "Amina",
+          "image": "😍",
+          "latin": "lkeskso dyalek bnin bezzaf a jedda!",
+          "arabe": "الكسكسو ديالك بنين بزاف أجدة!",
+          "fr": "Ton couscous est délicieux, grand-mère !",
+          "audio": "audio/his-jedda-7.mp3"
+        }
+      ],
+      "questions": [
+        {
+          "apres": 3,
+          "question": "Qu'est-ce que la grand-mère cuisine ?",
+          "choix": [
+            "Du couscous aux légumes",
+            "Un tajine au poulet",
+            "De la harira",
+            "Des brochettes"
+          ],
+          "bonne": 0
+        },
+        {
+          "apres": 4,
+          "question": "Que fait Amina dans la cuisine ?",
+          "choix": [
+            "Elle aide sa grand-mère",
+            "Elle fait la vaisselle",
+            "Elle lit un livre",
+            "Elle dort"
+          ],
+          "bonne": 0
+        },
+        {
+          "apres": 6,
+          "question": "Quel jour se passe l'histoire ?",
+          "choix": [
+            "Le vendredi",
+            "Le lundi",
+            "Le dimanche",
+            "Le mercredi"
+          ],
+          "bonne": 0
+        }
+      ]
+    },
+    {
+      "id": "pharmacie",
+      "titre": "Mehdi est malade",
+      "resume": "Mehdi demande conseil au pharmacien.",
+      "illustration": "💊",
+      "couleur": "#ff2d55",
+      "lignes": [
+        {
+          "id": "his-pharmacie-1",
+          "qui": "Narrateur",
+          "image": "🤒",
+          "latin": "mehdi fa9 mrid, rasso kayderro",
+          "arabe": "مهدي فاق مريض، راسو كيضرو",
+          "fr": "Mehdi s'est réveillé malade, il a mal à la tête",
+          "audio": "audio/his-pharmacie-1.mp3"
+        },
+        {
+          "id": "his-pharmacie-2",
+          "qui": "Narrateur",
+          "image": "🏥",
+          "latin": "mcha l farmasyan",
+          "arabe": "مشا لفرماسيان",
+          "fr": "Il est allé à la pharmacie",
+          "audio": "audio/his-pharmacie-2.mp3"
+        },
+        {
+          "id": "his-pharmacie-3",
+          "qui": "Le pharmacien",
+          "image": "🧑‍⚕️",
+          "latin": "ach bik?",
+          "arabe": "آش بيك؟",
+          "fr": "Qu'est-ce que tu as ?",
+          "audio": "audio/his-pharmacie-3.mp3"
+        },
+        {
+          "id": "his-pharmacie-4",
+          "qui": "Mehdi",
+          "image": "🌡️",
+          "latin": "rassi kayderrni w fiya sskhana",
+          "arabe": "راسي كيضرني و فيا السخانة",
+          "fr": "J'ai mal à la tête et j'ai de la fièvre",
+          "audio": "audio/his-pharmacie-4.mp3"
+        },
+        {
+          "id": "his-pharmacie-5",
+          "qui": "Le pharmacien",
+          "image": "💊",
+          "latin": "khod had ddwa tlata d lmerrat f nhar",
+          "arabe": "خود هاد الدوا تلاتة د المرات ف النهار",
+          "fr": "Prends ce médicament trois fois par jour",
+          "audio": "audio/his-pharmacie-5.mp3"
+        },
+        {
+          "id": "his-pharmacie-6",
+          "qui": "Le pharmacien",
+          "image": "💧",
+          "latin": "w chreb lma bezzaf, w n3es mzyan",
+          "arabe": "و شرب الما بزاف، و نعس مزيان",
+          "fr": "Et bois beaucoup d'eau, et dors bien",
+          "audio": "audio/his-pharmacie-6.mp3"
+        },
+        {
+          "id": "his-pharmacie-7",
+          "qui": "Mehdi",
+          "image": "🙏",
+          "latin": "chokran bezzaf, lah ykhellik",
+          "arabe": "شكرا بزاف، الله يخليك",
+          "fr": "Merci beaucoup, que Dieu te garde",
+          "audio": "audio/his-pharmacie-7.mp3"
+        },
+        {
+          "id": "his-pharmacie-8",
+          "qui": "Narrateur",
+          "image": "☀️",
+          "latin": "f lghedda, mehdi wella mzyan",
+          "arabe": "ف الغدا، مهدي ولا مزيان",
+          "fr": "Le lendemain, Mehdi allait bien",
+          "audio": "audio/his-pharmacie-8.mp3"
+        }
+      ],
+      "questions": [
+        {
+          "apres": 3,
+          "question": "Qu'est-ce qui ne va pas chez Mehdi ?",
+          "choix": [
+            "Mal à la tête et de la fièvre",
+            "Mal au ventre",
+            "Mal aux dents",
+            "Il tousse"
+          ],
+          "bonne": 0
+        },
+        {
+          "apres": 4,
+          "question": "Combien de fois par jour prendre le médicament ?",
+          "choix": [
+            "Trois fois",
+            "Une fois",
+            "Deux fois",
+            "Quatre fois"
+          ],
+          "bonne": 0
+        },
+        {
+          "apres": 7,
+          "question": "Comment va Mehdi le lendemain ?",
+          "choix": [
+            "Il va bien",
+            "Il est encore malade",
+            "Il retourne à la pharmacie",
+            "Il reste au lit"
+          ],
+          "bonne": 0
+        }
+      ]
+    },
+    {
+      "id": "train",
+      "titre": "Nadia part à Marrakech",
+      "resume": "Nadia prend le train.",
+      "illustration": "🚆",
+      "couleur": "#007aff",
+      "lignes": [
+        {
+          "id": "his-train-1",
+          "qui": "Narrateur",
+          "image": "🧳",
+          "latin": "nadia bghat tsafer l merrakch f ttran",
+          "arabe": "نادية بغات تسافر لمراكش ف التران",
+          "fr": "Nadia veut aller à Marrakech en train",
+          "audio": "audio/his-train-1.mp3"
+        },
+        {
+          "id": "his-train-2",
+          "qui": "Nadia",
+          "image": "🎫",
+          "latin": "wa7d lwer9a l merrakch 3afak",
+          "arabe": "واحد الورقة لمراكش عافاك",
+          "fr": "Un billet pour Marrakech, s'il te plaît",
+          "audio": "audio/his-train-2.mp3"
+        },
+        {
+          "id": "his-train-3",
+          "qui": "Le guichetier",
+          "image": "🕙",
+          "latin": "ttran kaykhrej m3a l3achra",
+          "arabe": "التران كيخرج مع العشرة",
+          "fr": "Le train part à dix heures",
+          "audio": "audio/his-train-3.mp3"
+        },
+        {
+          "id": "his-train-4",
+          "qui": "Nadia",
+          "image": "❓",
+          "latin": "w f ch7al ghadi nwsel?",
+          "arabe": "و ف شحال غادي نوصل؟",
+          "fr": "Et à quelle heure j'arrive ?",
+          "audio": "audio/his-train-4.mp3"
+        },
+        {
+          "id": "his-train-5",
+          "qui": "Le guichetier",
+          "image": "🕑",
+          "latin": "m3a jouj d l3chiya",
+          "arabe": "مع جوج د العشية",
+          "fr": "À deux heures de l'après-midi",
+          "audio": "audio/his-train-5.mp3"
+        },
+        {
+          "id": "his-train-6",
+          "qui": "Narrateur",
+          "image": "📖",
+          "latin": "f ttran, nadia 9rat ktab w n3sat chwiya",
+          "arabe": "ف التران، نادية قرات كتاب و نعسات شوية",
+          "fr": "Dans le train, Nadia a lu un livre et dormi un peu",
+          "audio": "audio/his-train-6.mp3"
+        },
+        {
+          "id": "his-train-7",
+          "qui": "Narrateur",
+          "image": "☀️",
+          "latin": "melli wslat, ljow kan sokhon bezzaf",
+          "arabe": "ملي وصلات، الجو كان سخون بزاف",
+          "fr": "Quand elle est arrivée, il faisait très chaud",
+          "audio": "audio/his-train-7.mp3"
+        }
+      ],
+      "questions": [
+        {
+          "apres": 2,
+          "question": "À quelle heure part le train ?",
+          "choix": [
+            "À dix heures",
+            "À huit heures",
+            "À midi",
+            "À trois heures"
+          ],
+          "bonne": 0
+        },
+        {
+          "apres": 5,
+          "question": "Qu'a fait Nadia dans le train ?",
+          "choix": [
+            "Elle a lu et dormi un peu",
+            "Elle a mangé",
+            "Elle a téléphoné",
+            "Elle a regardé la mer"
+          ],
+          "bonne": 0
+        },
+        {
+          "apres": 6,
+          "question": "Quel temps fait-il à Marrakech ?",
+          "choix": [
+            "Très chaud",
+            "Il pleut",
+            "Il fait froid",
+            "Il y a du vent"
+          ],
+          "bonne": 0
+        }
+      ]
+    }
+  ]
+}

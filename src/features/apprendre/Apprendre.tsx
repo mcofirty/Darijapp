@@ -1,5 +1,5 @@
 import { useLiveQuery } from 'dexie-react-hooks'
-import { BookOpenText, Coins, Flame, Gauge, Headphones, MessagesSquare, Star, TriangleAlert } from 'lucide-react'
+import { BookMarked, BookOpenText, Coins, Flame, Gauge, Headphones, MessagesSquare, Star, TriangleAlert } from 'lucide-react'
 import { useState } from 'react'
 import { motsDuTheme } from '../../data'
 import { SONS } from '../../data/sons'
@@ -31,8 +31,10 @@ import { CarteSessionDuJour } from '../session/CarteSessionDuJour'
 import { preparerSession, type SessionPrete } from '../session/lancer'
 import { Session } from '../session/Session'
 import { Dialogues } from '../parler/Dialogues'
+import { Histoires } from '../parler/Histoires'
 import { Grammaire } from '../parler/Grammaire'
 import { SCENES } from '../../exercices/dialogues'
+import { HISTOIRES } from '../../exercices/histoires'
 import { LECONS_GRAMMAIRE } from '../../exercices/grammaire'
 import { GuideSons } from './GuideSons'
 import { ListeSpeciale } from './ListeSpeciale'
@@ -48,6 +50,7 @@ type Vue =
   | { type: 'jardin' }
   | { type: 'grammaire' }
   | { type: 'dialogues' }
+  | { type: 'histoires' }
   | { type: 'theme'; themeId: string }
   | { type: 'test' }
 
@@ -116,6 +119,7 @@ export function Apprendre() {
 
   if (vue.type === 'test') return <TestNiveau onRetour={() => setVue({ type: 'accueil' })} />
   if (vue.type === 'dialogues') return <Dialogues onRetour={() => setVue({ type: 'accueil' })} />
+  if (vue.type === 'histoires') return <Histoires onRetour={() => setVue({ type: 'accueil' })} />
   if (vue.type === 'grammaire') return <Grammaire onRetour={() => setVue({ type: 'accueil' })} />
   if (vue.type === 'sons') return <GuideSons onRetour={() => setVue({ type: 'accueil' })} />
   if (vue.type === 'ecoute') return <ModeEcoute onRetour={() => setVue({ type: 'accueil' })} />
@@ -210,6 +214,14 @@ export function Apprendre() {
           valeur={SCENES.length}
           chevron
           onClick={() => ouvrir({ type: 'dialogues' })}
+        />
+        <Ligne
+          tuile={<Tuile icone={BookMarked} couleur="#ff9500" />}
+          titre="Histoires"
+          sousTitre="De courts récits à écouter et à comprendre"
+          valeur={HISTOIRES.length}
+          chevron
+          onClick={() => ouvrir({ type: 'histoires' })}
         />
         <Ligne
           tuile={<Tuile icone={BookOpenText} couleur="#5856d6" />}

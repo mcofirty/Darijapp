@@ -23,6 +23,7 @@ import { Trou } from './Trou'
 import { ModeLegendaire } from '../../ui/legendaire'
 import { PhraseTouchable } from '../../ui/PhraseTouchable'
 import { RemplissageBarre } from '../../ui/zellige'
+import { Mascotte, PhraseDeMascotte } from '../../ui/Mascotte'
 
 interface Props {
   etapes: Etape[]
@@ -285,23 +286,33 @@ function SessionEnCours({ etapes: depart, nouveaux, entrainement, activite, lege
               <div className={`deplier ${retour ? 'ouvert' : ''}`} aria-live="polite">
                 <div>
                   {retour?.juste === true && (
-                    <p className="t-titre-3 flex flex-wrap items-center gap-2 px-2 pb-3 pt-1 text-vert">
-                      <CircleCheck className="h-6 w-6" strokeWidth={2.5} aria-hidden /> Bravo !
+                    <div className="flex items-center gap-3 px-2 pb-3 pt-1">
+                      <Mascotte humeur="bravo" className="h-12 w-12" />
+                      <div className="min-w-0 flex-1">
+                        <p className="t-titre-3 flex flex-wrap items-center gap-2 text-vert">
+                          <CircleCheck className="h-6 w-6" strokeWidth={2.5} aria-hidden /> Bravo !
+                        </p>
+                        <PhraseDeMascotte humeur="bravo" cle={retour} />
+                      </div>
                       {fete && (
                         <span className="combo-fete t-appel ml-auto flex items-center gap-1 rounded-full bg-[#fff3e0] px-3 py-1 font-semibold text-[#e65100] dark:bg-[#4a2a00] dark:text-[#ffb74d]">
                           <Flame className="h-4 w-4" strokeWidth={2.4} fill="currentColor" aria-hidden /> {fete} d’affilée ! +1 XP par réponse
                         </span>
                       )}
-                    </p>
+                    </div>
                   )}
                   {retour?.juste === false && (
-                    <div className="px-2 pb-3 pt-1 text-rouge">
-                      <p className="t-titre-3 flex items-center gap-2">
-                        <CircleX className="h-6 w-6" strokeWidth={2.5} aria-hidden /> Bonne réponse :
-                      </p>
-                      <p className="t-corps mt-1 text-texte">
-                        <span className="font-semibold">{retour.mot.latin}</span> = {retour.mot.fr}
-                      </p>
+                    <div className="flex items-center gap-3 px-2 pb-3 pt-1 text-rouge">
+                      <Mascotte humeur="rate" className="h-12 w-12" />
+                      <div className="min-w-0 flex-1">
+                        <p className="t-titre-3 flex items-center gap-2">
+                          <CircleX className="h-6 w-6" strokeWidth={2.5} aria-hidden /> Bonne réponse :
+                        </p>
+                        <p className="t-corps mt-1 text-texte">
+                          <span className="font-semibold">{retour.mot.latin}</span> = {retour.mot.fr}
+                        </p>
+                        <PhraseDeMascotte humeur="rate" cle={retour} />
+                      </div>
                     </div>
                   )}
                 </div>
