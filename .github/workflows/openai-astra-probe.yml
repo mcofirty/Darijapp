@@ -22,12 +22,12 @@ jobs:
           path: artifacts/astra-probe
           key: astra-audio-probe-v1-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: astra-audio-probe-v1-
-      - name: Tester l’identité du modèle, le plafond et l’absence de retry
-        run: python -m unittest discover -s scripts/openai_tts -p 'test_astra*.py'
       - run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq --no-install-recommends ffmpeg
           python -m pip install numpy==2.2.6 websocket-client==1.8.0
+      - name: Tester l’identité du modèle, le plafond et l’absence de retry
+        run: python -m unittest discover -s scripts/openai_tts -p 'test_astra*.py'
       - name: Vérifier le modèle puis essayer un mot sur deux interfaces au maximum
         env:
           DARIJA_TTS_KEY: ${{ secrets.DARIJA_TTS_KEY || secrets.OPENAI_API_KEY }}
