@@ -697,14 +697,22 @@ function Fond({ id }: { id: string }) {
   )
 }
 
-/** Ordre de dessin des objets et animaux, du fond vers l'avant. */
-const PROFONDEUR = ['moineaux', 'dromadaire', 'cigogne', 'lanterne', 'fennec', 'tapis', 'theiere', 'chat', 'tajine', 'poule', 'tortue']
+/** Ombre posée sous un objet : le relie au sol, quel que soit le fond. */
+function Ombre({ cx, cy, rx, ry = 2.6 }: { cx: number; cy: number; rx: number; ry?: number }) {
+  return <ellipse cx={cx} cy={cy} rx={rx} ry={ry} fill="#000" opacity="0.18" />
+}
 
-/** Objets et animaux posés autour du pot. */
-function Objet({ id }: { id: string }) {
+/** Ordre de dessin des objets et animaux, du fond vers l'avant. */
+const PROFONDEUR = ['moineaux', 'dromadaire', 'cigogne', 'lanterne', 'fennec', 'chat', 'tapis', 'theiere', 'tajine', 'poule', 'tortue']
+
+/**
+ * Objets et animaux posés autour du pot. Ceux du fond ont les pieds sur l'horizon (y = 250),
+ * ceux de devant plus bas dans l'herbe ; chacun a son ombre et sa place, sans en recouvrir un autre.
+ */
+function Objet({ id, nuit = false }: { id: string; nuit?: boolean }) {
   if (id === 'moineaux')
     return (
-      <g fill="#6b4f36">
+      <g fill={nuit ? '#9aa6cf' : '#6b4f36'}>
         {[
           [34, 52, 1],
           [66, 40, 0.8],
@@ -718,7 +726,8 @@ function Objet({ id }: { id: string }) {
     )
   if (id === 'dromadaire')
     return (
-      <g transform="translate(6 208) scale(0.45)" fill="#c8955a" opacity="0.9">
+      <g transform="translate(6 223) scale(0.45)" fill="#c8955a">
+        <Ombre cx={38} cy={60} rx={34} ry={4} />
         <path d="M10 30 q4 -22 20 -22 q8 -14 18 0 q10 0 12 14 h6 q2 -14 10 -18 l3 4 q-6 6 -6 18 q-2 8 -8 8 h-50z" />
         {[16, 24, 50, 58].map((x) => (
           <rect key={x} x={x} y="36" width="3.4" height="24" rx="1.5" />
@@ -729,6 +738,7 @@ function Objet({ id }: { id: string }) {
   if (id === 'fennec')
     return (
       <g transform="translate(52 214)">
+        <Ombre cx={20} cy={37} rx={16} />
         <path d="M6 30 q-10 -2 -6 -12 q4 6 10 6z" fill="#e8b77a" />
         <ellipse cx="22" cy="28" rx="13" ry="9" fill="#e8b77a" />
         <circle cx="30" cy="16" r="7" fill="#efc48c" />
@@ -742,6 +752,7 @@ function Objet({ id }: { id: string }) {
   if (id === 'poule')
     return (
       <g transform="translate(316 252)">
+        <Ombre cx={17} cy={30} rx={12} />
         <path d="M2 14 q-6 -10 2 -16 q2 6 8 6z" fill="#7a3a1a" />
         <ellipse cx="16" cy="16" rx="12" ry="9" fill="#a0522d" />
         <circle cx="26" cy="7" r="5" fill="#a0522d" />
@@ -755,6 +766,7 @@ function Objet({ id }: { id: string }) {
   if (id === 'tortue')
     return (
       <g transform="translate(104 266)">
+        <Ombre cx={18} cy={15.5} rx={18} ry={2.2} />
         <ellipse cx="34" cy="10" rx="5" ry="3.6" fill="#9aa64a" />
         <circle cx="35.5" cy="9" r="0.7" fill="#1c1c1e" />
         {[6, 22].map((x) => (
@@ -766,7 +778,8 @@ function Objet({ id }: { id: string }) {
     )
   if (id === 'lanterne')
     return (
-      <g transform="translate(96 186)">
+      <g transform="translate(96 198)">
+        <Ombre cx={12} cy={52} rx={14} />
         <path d="M0 0 h24 l-3 8 h-18z" fill="#b8860b" />
         <path d="M3 8 h18 l-2 40 h-14z" fill="#d4a017" />
         {[0, 1, 2].map((i) => (
@@ -779,7 +792,8 @@ function Objet({ id }: { id: string }) {
     )
   if (id === 'theiere')
     return (
-      <g transform="translate(250 216)">
+      <g transform="translate(226 242)">
+        <Ombre cx={24} cy={35} rx={27} />
         <ellipse cx="18" cy="22" rx="18" ry="12" fill="#c0c0c8" />
         <path d="M34 18 q12 -2 14 -12" stroke="#a8a8b2" strokeWidth="3" fill="none" />
         <path d="M2 16 q-8 2 -6 10" stroke="#a8a8b2" strokeWidth="3" fill="none" />
@@ -805,6 +819,7 @@ function Objet({ id }: { id: string }) {
   if (id === 'tajine')
     return (
       <g transform="translate(18 236)">
+        <Ombre cx={26} cy={29} rx={28} ry={3} />
         <ellipse cx="26" cy="24" rx="26" ry="6" fill="#8a3f1d" />
         <path d="M6 22 Q26 -10 46 22z" fill="#b65a2c" />
         <path d="M14 17 q12 -6 24 0" stroke="#f2d0a0" strokeWidth="1.4" fill="none" />
@@ -813,7 +828,8 @@ function Objet({ id }: { id: string }) {
     )
   if (id === 'chat')
     return (
-      <g transform="translate(262 222)">
+      <g transform="translate(270 219)">
+        <Ombre cx={30} cy={31} rx={24} />
         <path d="M44 26 q14 -2 10 -16" stroke="#e09a4a" strokeWidth="4" fill="none" strokeLinecap="round" />
         <ellipse cx="30" cy="22" rx="18" ry="9" fill="#e09a4a" />
         <circle cx="12" cy="14" r="9" fill="#e09a4a" />
@@ -826,7 +842,8 @@ function Objet({ id }: { id: string }) {
     )
   if (id === 'cigogne')
     return (
-      <g transform="translate(295 150)">
+      <g transform="translate(312 150)">
+        <Ombre cx={17} cy={100} rx={10} ry={2} />
         <path d="M14 70 v30 M20 70 v30" stroke="#e8743b" strokeWidth="1.8" />
         <ellipse cx="17" cy="58" rx="16" ry="12" fill="#f8f8f8" />
         <path d="M5 58 q12 14 28 4 q-6 8 -20 6z" fill="#1c1c1e" />
@@ -837,6 +854,13 @@ function Objet({ id }: { id: string }) {
       </g>
     )
   return null
+}
+
+/** Lumière de chaque fond sur les objets et la plante (matrice de couleur SVG) ; rien en plein jour. */
+const LUMIERES: Record<string, string> = {
+  nuitetoilee: '0.68 0 0 0 0.02  0 0.72 0 0 0.04  0 0 0.85 0 0.09  0 0 0 1 0',
+  // Au couchant, à contre-jour : un peu plus sombres que le sable, pour ne pas s'y fondre.
+  dunes: '0.8 0 0 0 0  0 0.74 0 0 0  0 0 0.74 0 0.02  0 0 0 1 0',
 }
 
 /** Scène complète de « Mon jardin » : fond, objets et plante en grand. */
@@ -857,20 +881,49 @@ export function Jardin({
   objets: string[]
   pop?: number
 }) {
+  const nuit = fond === 'nuitetoilee'
+  const lumiere = LUMIERES[fond]
   return (
     <svg viewBox="0 0 360 300" className="block h-auto w-full" role="img" aria-label={`Ton jardin : plante au stade ${stade} sur 10`}>
+      <defs>
+        {lumiere && (
+          <filter id={`lumiere-${fond}`} colorInterpolationFilters="sRGB">
+            <feColorMatrix type="matrix" values={lumiere} />
+          </filter>
+        )}
+        <radialGradient id="halo-lanterne">
+          <stop offset="0" stopColor="#ffd36b" stopOpacity="0.45" />
+          <stop offset="1" stopColor="#ffd36b" stopOpacity="0" />
+        </radialGradient>
+      </defs>
       <Fond id={fond} />
-      {/* Du plus loin au plus proche : le dromadaire et les moineaux derrière, la tortue devant. */}
-      {[...objets]
-        .sort((a, b) => PROFONDEUR.indexOf(a) - PROFONDEUR.indexOf(b))
-        .map((o) => (
-          <Objet key={o} id={o} />
-        ))}
-      {/* La plante, 2,1 fois sa taille : le bas du pot touche le sol. */}
-      <g transform="translate(75 10) scale(2.1)">
-        <PlanteDessin stade={stade} avancement={avancement} espece={espece} vivante pop={pop} />
-        <Pot pot={pot} />
+      {/* Les moineaux sont dans le ciel : hors de la lumière du sol. */}
+      {objets.includes('moineaux') && <Objet id="moineaux" nuit={nuit} />}
+      {/* Objets et plante prennent la lumière du fond (la nuit, plus sombres et bleutés). */}
+      <g filter={lumiere ? `url(#lumiere-${fond})` : undefined}>
+        {/* Du plus loin au plus proche : le dromadaire derrière, la tortue devant. */}
+        {[...objets]
+          .filter((o) => o !== 'moineaux')
+          .sort((a, b) => PROFONDEUR.indexOf(a) - PROFONDEUR.indexOf(b))
+          .map((o) => (
+            <Objet key={o} id={o} />
+          ))}
+        <Ombre cx={180} cy={250} rx={38} ry={3.2} />
+        {/* La plante, 2,1 fois sa taille : le bas du pot touche le sol. */}
+        <g transform="translate(75 10) scale(2.1)">
+          <PlanteDessin stade={stade} avancement={avancement} espece={espece} vivante pop={pop} />
+          <Pot pot={pot} />
+        </g>
       </g>
+      {/* Le halo de la lanterne reste lumineux la nuit. */}
+      {nuit && objets.includes('lanterne') && (
+        <g transform="translate(96 198)">
+          <circle cx="12" cy="26" r="30" fill="url(#halo-lanterne)" />
+          {[0, 1, 2].map((i) => (
+            <circle key={i} cx={8 + i * 4} cy={22 + (i % 2) * 8} r="1.6" fill="#fff4c2" />
+          ))}
+        </g>
+      )}
     </svg>
   )
 }
