@@ -9,8 +9,8 @@ import { ETAPES } from '../../gamification/voyage'
 import { ChampRecherche } from '../../ui/ChampRecherche'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
-import { VISUELS_THEMES } from '../../ui/visuels'
 import { ListeMots } from '../mots/ListeMots'
+import { CarreTheme } from './BlocsAccueil'
 
 interface Props {
   favoris: number
@@ -20,27 +20,23 @@ interface Props {
   onMot: (mot: Mot) => void
 }
 
-/** Les 31 thèmes rangés par étape du Parcours, avec les favoris et une recherche (thèmes et mots). */
+/** Les 31 thèmes en carrés (3 par ligne), rangés par étape du Parcours, avec les favoris et une recherche (thèmes et mots). */
 export function TousLesThemes({ favoris, onRetour, onTheme, onFavoris, onMot }: Props) {
   const [requete, setRequete] = useState('')
   const { motsVus } = useResume()
   const MOTS = useMots()
   const q = normaliser(requete)
 
-  function ligne(id: string) {
-    const theme = THEMES.find((t) => t.id === id)
-    if (!theme) return null
-    const mots = motsDuTheme(id)
-    const vus = mots.filter((m) => motsVus.has(m.id)).length
+  /** Grille de thèmes en carrés, 3 par ligne. */
+  function grille(ids: string[]) {
     return (
-      <Ligne
-        key={id}
-        tuile={<Tuile {...VISUELS_THEMES[id]} />}
-        titre={theme.titre}
-        valeur={vus > 0 ? `${vus}/${mots.length}` : mots.length}
-        chevron
-        onClick={() => onTheme(id)}
-      />
+      <div className="grid grid-cols-3 gap-2.5">
+        {ids.map((id) => {
+          const total = motsDuTheme(id).length
+          const vus = motsDuTheme(id).filter((m) => motsVus.has(m.id)).length
+          return <CarreTheme key={id} id={id} vus={vus} total={total} onClick={() => onTheme(id)} />
+        })}
+      </div>
     )
   }
 
@@ -50,7 +46,12 @@ export function TousLesThemes({ favoris, onRetour, onTheme, onFavoris, onMot }: 
     return (
       <Page titre="Thèmes" retour={{ libelle: 'Apprendre', action: onRetour }}>
         <ChampRecherche valeur={requete} onChange={setRequete} placeholder="Thème ou mot" />
-        {themes.length > 0 && <Section titre="Thèmes">{themes.map((t) => ligne(t.id))}</Section>}
+        {themes.length > 0 && (
+          <section className="mb-[26px]">
+            <h2 className="t-gras mb-2 px-marge text-texte-2">Thèmes</h2>
+            {grille(themes.map((t) => t.id))}
+          </section>
+        )}
         <ListeMots mots={mots} onChoisir={onMot} titre={`${mots.length} mot${mots.length > 1 ? 's' : ''}`} />
       </Page>
     )
@@ -62,10 +63,14 @@ export function TousLesThemes({ favoris, onRetour, onTheme, onFavoris, onMot }: 
       <Section>
         <Ligne tuile={<Tuile icone={Star} couleur="#ffcc00" />} titre="Mes favoris" valeur={favoris} chevron onClick={onFavoris} />
       </Section>
+      {/* Les thèmes rangés par étape du Parcours, en carrés, 3 par ligne. */}
       {ETAPES.map((e, i) => (
-        <Section key={e.id} titre={`${i + 1}. ${e.ville} · ${e.sujet}`}>
-          {e.themes.map(ligne)}
-        </Section>
+        <section key={e.id} className="mb-[26px]">
+          <h2 className="t-gras mb-2 px-marge text-texte-2">
+            {i + 1}. {e.ville} · {e.sujet}
+          </h2>
+          {grille(e.themes)}
+        </section>
       ))}
     </Page>
   )

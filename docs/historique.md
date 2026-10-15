@@ -51,6 +51,7 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 | 2026-10-15 | Parcours : ligne « Mon passeport » remise en haut de la page, sous le titre, à la place du petit bouton flottant | `src/features/parcours/Parcours.tsx` |
 | 2026-10-15 | Gestes : balayage vers la droite = retour de la page ouverte (sinon onglet précédent), balayage vers la gauche = onglet suivant depuis un accueil d'onglet ; appui sur l'onglet ouvert = retour à sa page d'accueil | `src/app/retour.ts`, `src/app/glisser.ts`, `src/app/App.tsx`, `src/app/BarreOnglets.tsx`, `src/ui/Page.tsx` |
 | 2026-10-15 | Retour par balayage animé : la page suit le doigt, sort à droite au relâchement puis la page d'avant arrive de la gauche, ou revient en place si le geste est trop court | `src/app/App.tsx`, `src/app/glisser.ts` |
+| 2026-10-15 | Accueil d'Apprendre : thèmes regroupés sous un seul bouton, page « Thèmes » en carrés, 3 par ligne, par étape du Parcours (à la place du carrousel et des listes) | `src/features/apprendre/BlocsAccueil.tsx`, `src/features/apprendre/TousLesThemes.tsx` |
 
 ## Décisions
 

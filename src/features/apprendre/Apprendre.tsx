@@ -13,7 +13,7 @@ import { DIRE_PAR_SESSION, composerSession, melanger } from '../../exercices/ses
 import { motsDifficiles } from '../../exercices/selections'
 import { useResume } from '../../db/useResume'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
-import { CarrouselThemes, GrillePratiquer, LigneNiveau } from './BlocsAccueil'
+import { BoutonThemes, GrillePratiquer, LigneNiveau } from './BlocsAccueil'
 import { TousLesThemes } from './TousLesThemes'
 import { Page } from '../../ui/Page'
 import { VISUEL_SONS } from '../../ui/visuels'
@@ -216,7 +216,7 @@ export function Apprendre() {
         plante={<Plante stade={croissance(xpTotal).stade} avancement={croissance(xpTotal).avancement} espece={espece} pot={pot} taille={40} />}
       />
 
-      <CarrouselThemes onTheme={(id) => ouvrir({ type: 'theme', themeId: id })} onTout={() => ouvrir({ type: 'themes' })} />
+      <BoutonThemes onClick={() => ouvrir({ type: 'themes' })} />
     </Page>
   )
 }
