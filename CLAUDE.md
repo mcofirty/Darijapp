@@ -187,6 +187,7 @@ Profil : en plus des réglages, `micro` (Dis-le avec score), `parler` et `ecoute
 - Les couleurs de texte éclaircies du mode sombre (#ff7f6b, #44d9a0) ne supportent pas de texte blanc : tout bouton plein utilise `--accent-plein` ou `--vert-plein` (corail et menthe, 5,1:1 et 5,4:1).
 - `data.test.ts` lit tout JSON à la racine de `src/data/` comme un thème : les autres données vont dans un sous-dossier (`situations/`, `sons/`, `parler/`, `jeux/`).
 - Safari sur iPhone n'a pas `navigator.vibrate` : `src/ui/haptique.ts` bascule un `<input type="checkbox" switch>` caché (« tic » d'iOS 18), pendant un geste seulement ; non vérifié sur iPhone.
+- Safari ignore `user-scalable=no` et l'orientation du manifeste : zoom bloqué aussi par `touch-action: pan-x pan-y` et l'annulation des gestes à deux doigts (`src/app/zoom.ts`) ; en paysage sur téléphone, l'écran « Remets ton téléphone à la verticale » (`#paysage`, CSS de `index.html`) cache l'appli sans la démonter.
 - `overflow-x: hidden` sur un conteneur en fait une zone de défilement : `position: sticky` à l'intérieur ne colle plus à la fenêtre. Utiliser `overflow-x: clip` (racine de `App.tsx`).
 - `opacity` sur un élément `.verre` (ex. `.pressable:active`) en fait une racine d'arrière-plan : le verre devient opaque pendant l'appui. Les commandes en verre grossissent au toucher, sans opacité.
 - Le Chromium de Playwright ne lit pas le H.264 (erreur 4 sur `lancement.mp4`) : pour tester la vidéo d'ouverture, servir une copie en VP9 (`ffmpeg -c:v libvpx-vp9`), sans la commiter.

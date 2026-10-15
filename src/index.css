@@ -249,6 +249,8 @@
  * (Dynamic Type) via -apple-system-body. Toutes les tailles sont en rem, relatives au corps 17 pt.
  */
 html {
+  /* Défilement au doigt, sans zoom au pincement ni au double toucher. */
+  touch-action: pan-x pan-y;
   font-size: 17px;
   font: -apple-system-body;
   font-family: -apple-system, system-ui, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
