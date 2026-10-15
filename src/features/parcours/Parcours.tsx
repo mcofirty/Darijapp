@@ -1,5 +1,5 @@
 import { useLiveQuery } from 'dexie-react-hooks'
-import { BookOpenText, Check, Crown, Gem, Lock, MapPin, Stamp, Swords } from 'lucide-react'
+import { BookOpenText, Check, ChevronRight, Crown, Gem, Lock, MapPin, Stamp, Swords } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { PAIRES_SONS } from '../../data/pairesSons'
 import { THEMES } from '../../data/themes'
@@ -27,8 +27,8 @@ const HAUTEUR_ETAPE = 128
 const HAUTEUR_TRESOR = 88
 /** Largeur la plus grande de la carte (celle du contenu des autres onglets, `max-w-xl`). */
 const LARGEUR_MAX = 576
-/** Haut de la carte, sous l'heure et la barre du titre ; bas, sous la barre d'onglets. */
-const MARGE_HAUT = 150
+/** Haut de la carte, sous l'heure, le titre et le passeport ; bas, sous la barre d'onglets. */
+const MARGE_HAUT = 230
 const MARGE_BAS = 170
 
 /** Largeur de l'écran, suivie à la rotation et au redimensionnement : la carte occupe toute la largeur. */
@@ -226,7 +226,7 @@ interface PropsCarte {
 
 /**
  * La carte occupe tout l'écran, d'un bord à l'autre et du haut (sous l'heure) jusque sous la barre d'onglets.
- * Le titre et le passeport flottent par-dessus, en haut.
+ * Le titre et le passeport sont posés en haut de la carte.
  */
 function CartePleinEcran({ etats, conseillee, ouverts, tampons, gain, onEtape, onPasseport, onTresor }: PropsCarte) {
   const largeur = useLargeurEcran()
@@ -267,30 +267,37 @@ function CartePleinEcran({ etats, conseillee, ouverts, tampons, gain, onEtape, o
           />
         ),
       )}
-      {/* Titre et passeport, qui restent en haut pendant le défilement. */}
-      <header className="fixed inset-x-0 top-0 z-10 pt-[calc(env(safe-area-inset-top)+0.5rem)]">
-        <div className="mx-auto flex max-w-xl items-center justify-between gap-3 px-marge">
-          <h1 className="t-titre-1 rounded-full bg-[#fffaf0]/95 px-4 py-1 font-bold text-[#1b1918] shadow-[0_2px_8px_-2px_rgba(60,40,10,0.35)] dark:bg-[#262321]/95 dark:text-white">Parcours</h1>
+      {/* En haut de la carte : le titre, puis le passeport, qui défilent avec elle. */}
+      <header className="absolute inset-x-0 top-0 z-10 pt-[calc(env(safe-area-inset-top)+0.75rem)]">
+        <div className="mx-auto max-w-xl px-marge">
+          <h1 className="t-titre-1 w-fit rounded-full bg-[#fffaf0]/95 px-4 py-1 font-bold text-[#1b1918] shadow-[0_2px_8px_-2px_rgba(60,40,10,0.35)] dark:bg-[#262321]/95 dark:text-white">Parcours</h1>
           <button
             type="button"
             onClick={onPasseport}
-            aria-label={`Mon passeport : ${tampons} tampon${tampons > 1 ? 's' : ''} sur ${ETAPES.length}, ${ouverts.size} trésor${ouverts.size > 1 ? 's' : ''}`}
-            className="verre pressable flex h-11 items-center gap-2 rounded-full pl-1.5 pr-3.5"
+            className="pressable mt-3 flex w-full items-center gap-3 rounded-liste bg-[#fffaf0]/95 px-4 py-3 text-left text-[#1b1918] shadow-[0_2px_8px_-2px_rgba(60,40,10,0.35)] dark:bg-[#262321]/95 dark:text-white"
           >
-            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#c1272d] text-white" aria-hidden>
+            <span className="flex h-[30px] w-[30px] shrink-0 items-center justify-center rounded-tuile bg-[#c1272d] text-white" aria-hidden>
               <Stamp className="h-[18px] w-[18px]" strokeWidth={2.2} />
             </span>
-            <span className="t-appel font-semibold tabular-nums">
-              {tampons}/{ETAPES.length}
+            <span className="min-w-0 flex-1">
+              <span className="t-corps block">Mon passeport</span>
+              <span className="t-sous-titre block text-[#6b625b] dark:text-[#a8a29e]">
+                {tampons} tampon{tampons > 1 ? 's' : ''} sur {ETAPES.length} · {ouverts.size} trésor{ouverts.size > 1 ? 's' : ''}
+              </span>
             </span>
+            <ChevronRight className="h-5 w-5 shrink-0 text-[#a8a29e]" strokeWidth={2.4} aria-hidden />
           </button>
         </div>
-        {gain && (
-          <p className="t-appel mx-auto mt-2 w-fit max-w-[calc(100%-40px)] rounded-full bg-[#fffaf0]/95 px-4 py-2 text-center font-semibold text-[#0b7a50] dark:bg-[#262321]/95 dark:text-vert shadow-[0_2px_8px_-2px_rgba(60,40,10,0.35)]" role="status">
-            {gain}
-          </p>
-        )}
       </header>
+      {/* Trésor ouvert : le message reste visible en haut de l'écran. */}
+      {gain && (
+        <p
+          className="t-appel fixed inset-x-0 top-[calc(env(safe-area-inset-top)+0.75rem)] z-20 mx-auto w-fit max-w-[calc(100%-40px)] rounded-full bg-[#fffaf0]/95 px-4 py-2 text-center font-semibold text-[#0b7a50] shadow-[0_2px_8px_-2px_rgba(60,40,10,0.35)] dark:bg-[#262321]/95 dark:text-vert"
+          role="status"
+        >
+          {gain}
+        </p>
+      )}
     </div>
   )
 }

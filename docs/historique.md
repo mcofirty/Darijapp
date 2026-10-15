@@ -48,6 +48,7 @@ Toutes les fonctionnalités livrées et les décisions prises, datées, avec leu
 | 2026-10-15 | Carte illustrée du Parcours : sol qui suit le voyage du nord vert au désert, monument de chaque ville, Atlas, rivière, décor semé par région (graine fixe), étapes et trésors en relief, crépuscule en mode sombre | `src/features/parcours/CarteMaroc.tsx`, `src/features/parcours/decor.ts`, `src/features/parcours/Parcours.tsx`, `src/index.css` |
 | 2026-10-15 | Parcours en plein écran : carte d'un bord à l'autre, sous l'heure et sous la barre d'onglets, à la largeur réelle de l'écran ; titre et passeport flottants en haut | `src/features/parcours/Parcours.tsx` |
 | 2026-10-15 | Parcours en mode sombre : plus de voile sur la carte, route, étapes, étiquettes et titre en sombre | `src/features/parcours/Parcours.tsx`, `src/features/parcours/CarteMaroc.tsx`, `src/index.css` |
+| 2026-10-15 | Parcours : ligne « Mon passeport » remise en haut de la page, sous le titre, à la place du petit bouton flottant | `src/features/parcours/Parcours.tsx` |
 
 ## Décisions
 
