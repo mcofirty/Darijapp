@@ -1,0 +1,43 @@
+{
+  "requested_model": "gpt-6-astra",
+  "entry_id": "verbes-085",
+  "latin": "we99e3",
+  "tts_text": "weqqeʕ",
+  "voice_requested": "cedar",
+  "maximum_generation_requests": 2,
+  "attempted_generation_requests": 2,
+  "audio_files_generated": 0,
+  "status": "audio_not_available_on_tested_endpoints",
+  "model_visible": true,
+  "endpoints": [
+    {
+      "endpoint": "audio/speech",
+      "requested_model": "gpt-6-astra",
+      "request_sha256": "f93f8bbc6007e2d03c945d6300e5162f96d17de25de07beef769855c3cb9dfc2",
+      "status": "rejected",
+      "http_status": 404,
+      "provider_code": "invalid_request_error",
+      "parameter": null,
+      "mentions_audio_limitation": false,
+      "mentions_model_limitation": false
+    },
+    {
+      "endpoint": "chat/completions",
+      "requested_model": "gpt-6-astra",
+      "request_sha256": "1a610bbaad419f13026a2088eb22a7129f27483664ef562d28ab8501296b67c2",
+      "status": "rejected",
+      "http_status": 400,
+      "provider_code": "invalid_request_error",
+      "parameter": "modalities",
+      "mentions_audio_limitation": false,
+      "mentions_model_limitation": false
+    }
+  ],
+  "linguistic_certification": false,
+  "confidence": null,
+  "production_voice": "Jamal",
+  "model_lookup": {
+    "http_status": 200
+  },
+  "run_id": "38760813825"
+}
