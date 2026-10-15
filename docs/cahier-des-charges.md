@@ -134,7 +134,7 @@ Mécaniques de motivation :
 - série de jours consécutifs avec calendrier de la semaine et mention « Série sécurisée pour aujourd'hui » ; une journée manquée par semaine ne casse pas la série ;
 - points d'expérience par exercice réussi, avec le total du jour affiché ;
 - trophées et nœuds « Trésor » dans le Parcours, badges d'étape (50 mots, 7 jours d'affilée, tous les sons maîtrisés) ;
-- confettis à chaque quête, niveau ou série validés, et retour immédiat après chaque réponse : couleur, petit son, bonne réponse rejouée.
+- célébration à trois intensités : validation discrète d'une bonne réponse (couleur, petit son, coche, retour haptique léger, bonne réponse rejouée), animation plus expressive en fin d'activité, célébration spéciale pour un vrai palier (niveau, série) ; une quête validée est fêtée par une animation à son retour à l'écran ; sons et retours haptiques désactivables.
 
 ## Contenu
 
@@ -242,7 +242,7 @@ Interface :
 - 5 onglets en barre basse : Apprendre, Parcours, Quiz, Progrès, Profil (détail dans « Écrans et navigation ») ;
 - gros boutons audio accessibles au pouce, lecture automatique à l'affichage d'un mot ;
 - aucune lecture de l'arabe exigée : l'arabe est affiché par défaut à côté du latin, et se masque dans les réglages ;
-- interface en français, aux couleurs du drapeau marocain (rouge et vert), avec un mode clair et un mode sombre au choix dans le Profil (ou automatique) ;
+- interface en français, en direction « Playful Premium » (corail pour l'accent, ambre « énergie » pour l'XP et la série, menthe pour les réussites ; le rouge et le vert du drapeau restent une couleur du souk ; changement demandé le 2026-10-15), avec un mode clair et un mode sombre au choix dans le Profil (ou automatique) ;
 - design conforme aux Human Interface Guidelines d'Apple (couleurs sémantiques, police système et taille de texte réglable, zones tactiles de 44 pt, contrastes AA).
 
 Exigences non fonctionnelles :

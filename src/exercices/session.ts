@@ -174,6 +174,14 @@ export class Resultats {
     else this.mauvaises++
   }
 
+  /**
+   * Expressions retrouvées : mots déjà connus avant la session (ni découverts aujourd'hui) répondus sans
+   * aucune erreur. C'est un acquis vérifié par une révision, pas une première bonne réponse.
+   */
+  retrouvees(nouveaux: Set<string>): number {
+    return [...this.vus].filter((id) => !nouveaux.has(id) && !this.erreurs.has(id)).length
+  }
+
   parMot(): Map<string, boolean> {
     return new Map([...this.vus].map((id) => [id, !this.erreurs.has(id)]))
   }

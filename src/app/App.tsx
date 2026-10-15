@@ -5,6 +5,7 @@ import { motDuLien } from '../data/motsPerso'
 import { AjoutMots } from '../features/ajout/AjoutMots'
 import { Proposition } from '../features/ajout/Proposition'
 import { choisirSons, couperSons } from '../audio/effets'
+import { activerHaptique } from '../ui/haptique'
 import { modelePresent, ouvrirModele } from '../audio/modeleSons'
 import { appliquerGels } from '../db/serie'
 import { Apprendre } from '../features/apprendre/Apprendre'
@@ -40,15 +41,16 @@ export default function App() {
   const [onglet, setOnglet] = useState<Onglet>('apprendre')
   const [entree, setEntree] = useState<'entree-droite' | 'entree-gauche' | ''>('')
   const depart = useRef<Toucher | null>(null)
-  const { apparence, couleur, sons, scorePrecis } = useProfil()
+  const { apparence, couleur, sons, scorePrecis, effets, haptique } = useProfil()
   useEffect(() => appliquerCouleur(couleur), [couleur])
   useEffect(() => choisirSons(sons), [sons])
   // Sans écoute (réglage ou pause de 15 min) : plus de lecture automatique ni de son de réponse.
   const ecouter = useModes()?.ecouter ?? true
   useEffect(() => {
     reglerLectureAutomatique(ecouter)
-    couperSons(!ecouter)
-  }, [ecouter])
+    couperSons(!ecouter || !effets)
+  }, [ecouter, effets])
+  useEffect(() => activerHaptique(haptique), [haptique])
   // Gel de série : utilisé tout seul à l'ouverture si des jours manqués cassent la série.
   useEffect(() => {
     void appliquerGels()

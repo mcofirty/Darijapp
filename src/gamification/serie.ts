@@ -126,3 +126,30 @@ export function reparationPossible(
   const apres = serieSiCouverts(pratiques, aujourdhui, deja, trou)
   return apres > avant ? { jours: trou, serie: apres } : null
 }
+
+/** Allure de la flamme de série : elle grandit avec la série (seuils de 3, 7, 30 et 100 jours). */
+export type PalierFlamme = 'eteinte' | 'braise' | 'flamme' | 'brasier' | 'soleil' | 'legende'
+
+export const SEUILS_FLAMME: { palier: PalierFlamme; jours: number; nom: string }[] = [
+  { palier: 'braise', jours: 1, nom: 'Braise' },
+  { palier: 'flamme', jours: 3, nom: 'Flamme' },
+  { palier: 'brasier', jours: 7, nom: 'Brasier' },
+  { palier: 'soleil', jours: 30, nom: 'Soleil' },
+  { palier: 'legende', jours: 100, nom: 'Flamme légendaire' },
+]
+
+export function palierFlamme(jours: number): PalierFlamme {
+  let palier: PalierFlamme = 'eteinte'
+  for (const s of SEUILS_FLAMME) if (jours >= s.jours) palier = s.palier
+  return palier
+}
+
+/**
+ * Palier de flamme atteint par la première activité du jour, à fêter dans le bilan (sauf la braise
+ * du tout premier jour) ; null sinon.
+ */
+export function nouveauPalierFlamme(jours: number, premiereDuJour: boolean): (typeof SEUILS_FLAMME)[number] | null {
+  if (!premiereDuJour) return null
+  const s = SEUILS_FLAMME.find((x) => x.jours === jours)
+  return s && s.jours > 1 ? s : null
+}

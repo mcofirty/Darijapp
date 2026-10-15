@@ -1,4 +1,4 @@
-import { BookOpen, Sparkles, Star, Trophy } from 'lucide-react'
+import { BookOpen, Sparkles } from 'lucide-react'
 import { useState } from 'react'
 import type { Mot } from '../../data/types'
 import { useMots } from '../../db/motsPerso'
@@ -13,6 +13,7 @@ import { DefisReussis } from '../jeu/Motivation'
 import { QuetesDuJour } from '../jeu/QuetesDuJour'
 import { FicheMot } from '../mots/FicheMot'
 import { Dictionnaire } from './Dictionnaire'
+import { CarteNiveau } from '../jeu/CarteNiveau'
 import { useProfil } from '../../db/useProfil'
 import { Avatar } from '../../ui/Avatar'
 import { Mascotte } from '../../ui/Mascotte'
@@ -21,7 +22,7 @@ export function Progres() {
   const [vue, setVue] = useState<'tableau' | 'dictionnaire' | 'jardin'>('tableau')
   const [mot, setMot] = useState<Mot | null>(null)
   const [souk, setSouk] = useState(false)
-  const { niveau, xpTotal, xpAujourdhui, sessionsAujourdhui, motsVus } = useResume()
+  const { xpAujourdhui, sessionsAujourdhui, motsVus } = useResume()
   const MOTS = useMots()
   const profil = useProfil()
 
@@ -66,27 +67,7 @@ export function Progres() {
             <Mascotte humeur="salut" className="h-14 w-14" />
           </div>
           <Section titre="Niveau">
-            <Ligne
-              tuile={<Tuile icone={Star} couleur="#ff9500" />}
-              titre={
-                <span className="block">
-                  <span className="flex items-baseline justify-between">
-                    <span>
-                      Niveau {niveau.niveau} · <span className="font-semibold">{niveau.nom}</span>
-                    </span>
-                    <span className="t-sous-titre text-texte-2">
-                      {niveau.objectif - niveau.xp} XP restants
-                    </span>
-                  </span>
-                  <span className="mt-2 block h-1.5 overflow-hidden rounded-full bg-remplissage" aria-hidden>
-                    <span className="block h-full rounded-full bg-accent" style={{ width: `${(niveau.xp / niveau.objectif) * 100}%` }} />
-                  </span>
-                </span>
-              }
-              chevron
-              onClick={ouvrirJardin}
-            />
-            <Ligne tuile={<Tuile icone={Trophy} couleur="#ffcc00" />} titre="XP au total" valeur={xpTotal} />
+            <CarteNiveau onClick={ouvrirJardin} />
           </Section>
           <Semaine />
           <Section titre="Aujourd'hui">

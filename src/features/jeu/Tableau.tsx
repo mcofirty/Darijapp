@@ -2,31 +2,40 @@ import { BookOpen, Coins, CupSoda, Flame, Snowflake, Gamepad2, Medal, MessagesSq
 import { useState } from 'react'
 import { useJeu } from '../../db/useJeu'
 import { useResume } from '../../db/useResume'
-import { COULEURS_MAITRISE, FAMILLES_BADGES, OBJECTIF_MOTS, type FamilleBadge, type Maitrise } from '../../gamification/collection'
+import { COULEURS_MAITRISE, FAMILLES_BADGES, OBJECTIF_MOTS, rangBadge, type FamilleBadge, type Maitrise } from '../../gamification/collection'
 import { Ligne, Section } from '../../ui/Liste'
+import { Flamme, Medaille } from '../../ui/recompenses'
+import { SEUILS_FLAMME } from '../../gamification/serie'
 
 /** Les 7 derniers jours : une flamme pleine pour chaque jour pratiqué. */
 export function Semaine() {
   const { semaine } = useJeu()
   const { serie } = useResume()
+  const prochain = SEUILS_FLAMME.find((x) => x.jours > serie.jours)
   return (
     <Section
       titre="Série"
       note={serie.aujourdhui ? 'Série sécurisée pour aujourd’hui.' : 'Fais une activité aujourd’hui pour garder ta série. Un jour manqué par semaine est pardonné ; au-delà, un gel de série (au souk) protège ta série.'}
     >
-      <Ligne titre={<span className="font-semibold">{serie.jours} jour{serie.jours > 1 ? 's' : ''} d’affilée</span>} />
+      <Ligne
+        tuile={<Flamme jours={serie.jours} active={serie.aujourdhui} taille={29} />}
+        titre={<span className="font-semibold">{serie.jours} jour{serie.jours > 1 ? 's' : ''} d’affilée</span>}
+        sousTitre={prochain ? `${prochain.nom} à ${prochain.jours} jour${prochain.jours > 1 ? 's' : ''}` : 'Flamme légendaire'}
+      />
       <div className="flex justify-between px-marge pb-4 pt-1">
         {semaine.map((j) => (
           <div key={j.date} className="flex flex-col items-center gap-1">
             <span className={`t-note ${j.aujourdhui ? 'font-semibold text-texte' : 'text-texte-2'}`}>{j.lettre}</span>
             <span
-              className={`flex h-9 w-9 items-center justify-center rounded-full ${j.fait ? 'bg-accent-doux text-accent' : j.gele ? 'bg-[#e3f2fd] text-[#1e88e5] dark:bg-[#0d3a5c] dark:text-[#64b5f6]' : 'bg-remplissage text-texte-3'}`}
+              className={`flex h-9 w-9 items-center justify-center rounded-full ${j.fait ? 'bg-energie-doux text-energie' : j.gele ? 'bg-[#e3f2fd] text-[#1e88e5] dark:bg-[#0d3a5c] dark:text-[#64b5f6]' : 'bg-remplissage text-texte-3'}`}
               aria-label={`${j.date} : ${j.fait ? 'pratiqué' : j.gele ? 'gelé' : 'pas pratiqué'}`}
             >
               {j.gele && !j.fait ? (
                 <Snowflake className="h-5 w-5" strokeWidth={2.2} aria-hidden />
+              ) : j.fait ? (
+                <Flamme jours={Math.max(serie.jours, 1)} taille={18} />
               ) : (
-                <Flame className="h-5 w-5" strokeWidth={2.2} fill={j.fait ? 'currentColor' : 'none'} aria-hidden />
+                <Flame className="h-5 w-5" strokeWidth={2.2} aria-hidden />
               )}
             </span>
           </div>
@@ -115,16 +124,10 @@ export function Badges() {
                 {gagnes}/{famille.length}
               </span>
             </p>
-            <div className="grid grid-cols-3 gap-y-4 px-3 pb-4 pt-3">
+            <div className="grid grid-cols-3 gap-y-5 px-3 pb-4 pt-4">
               {visibles.map(({ badge, obtenu, valeur, avancement }) => (
                 <div key={badge.id} className="flex flex-col items-center gap-1 px-1 text-center" title={badge.description}>
-                  <span
-                    className={`flex h-14 w-14 items-center justify-center rounded-full ${obtenu ? 'text-white' : 'bg-remplissage text-texte-3'}`}
-                    style={obtenu ? { background: couleur } : undefined}
-                    aria-hidden
-                  >
-                    <Icone className="h-7 w-7" strokeWidth={2.2} />
-                  </span>
+                  <Medaille icone={Icone} couleur={couleur} rang={rangBadge(badge)} obtenu={obtenu} />
                   <span className={`t-note font-semibold ${obtenu ? '' : 'text-texte-2'}`}>{badge.titre}</span>
                   <span className="t-legende text-texte-2">{badge.description}</span>
                   {!obtenu && (

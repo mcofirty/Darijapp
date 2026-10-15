@@ -1,4 +1,4 @@
-import { AudioLines, Ear, Flag, Languages, Mic, Speech, SunMoon, UserRound, Gauge } from 'lucide-react'
+import { AudioLines, Ear, Flag, Gauge, Languages, Mic, Speech, SunMoon, UserRound, Vibrate, Volume2 } from 'lucide-react'
 import { useState } from 'react'
 import { modifierProfil, reglerMode, type Apparence } from '../../db/db'
 import { useModes, useProfil } from '../../db/useProfil'
@@ -88,6 +88,18 @@ export function Profil() {
               onChange={(v) => void modifierProfil({ afficherArabe: v })}
             />
           }
+        />
+        <Ligne
+          tuile={<Tuile icone={Volume2} couleur="#e5533c" />}
+          titre="Sons des réponses"
+          sousTitre="Bonne réponse, erreur et fin d’activité"
+          fin={<Interrupteur libelle="Sons des réponses" actif={profil.effets} onChange={(v) => void modifierProfil({ effets: v })} />}
+        />
+        <Ligne
+          tuile={<Tuile icone={Vibrate} couleur="#7a5af5" />}
+          titre="Retours haptiques"
+          sousTitre="Une légère vibration à chaque réussite"
+          fin={<Interrupteur libelle="Retours haptiques" actif={profil.haptique} onChange={(v) => void modifierProfil({ haptique: v })} />}
         />
       </Section>
       <Section

@@ -3,7 +3,7 @@ import type { Apparence } from '../db/db'
 /** Copie locale du réglage, lue avant le premier affichage pour éviter un flash de couleurs. */
 export const CLE_APPARENCE = 'darija-apparence'
 
-const COULEURS_BARRE = { clair: '#f2f2f7', sombre: '#000000' }
+const COULEURS_BARRE = { clair: '#f2f2f7', sombre: '#1b1918' }
 
 /** Couleur achetée au souk, copiée aussi pour être appliquée avant le premier affichage. */
 export const CLE_COULEUR = 'darija-couleur'

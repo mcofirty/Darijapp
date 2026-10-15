@@ -58,7 +58,9 @@ export const PAR_DEFAUT: Record<CategorieUnique, string> = {
 }
 
 export const ARTICLES: Article[] = [
-  { id: 'drapeau', categorie: 'couleur', nom: 'Rouge du drapeau', description: 'La couleur de départ', prix: 0, apercu: '#c1272d' },
+  // L'id « drapeau » reste celui de la couleur de départ (profils déjà enregistrés), devenue le corail.
+  { id: 'drapeau', categorie: 'couleur', nom: 'Corail', description: 'La couleur de départ', prix: 0, apercu: '#c93a26' },
+  { id: 'rouge-drapeau', categorie: 'couleur', nom: 'Rouge du drapeau', description: 'Le rouge et le vert du drapeau marocain', prix: 80, apercu: '#c1272d' },
   { id: 'chefchaouen', categorie: 'couleur', nom: 'Bleu de Chefchaouen', description: 'Le bleu des ruelles de la ville bleue', prix: 150, apercu: '#2563c9' },
   { id: 'marrakech', categorie: 'couleur', nom: 'Ocre de Marrakech', description: 'La terre rouge de la ville ocre', prix: 150, apercu: '#b2491a' },
   { id: 'safran', categorie: 'couleur', nom: 'Safran de Taliouine', description: 'L’or rouge du Souss', prix: 200, apercu: '#8a6100' },
