@@ -1,6 +1,6 @@
 import { Star } from 'lucide-react'
 import { useState } from 'react'
-import { chercherMots, motsDuTheme, normaliser } from '../../data'
+import { chercherAvecProches, motsDuTheme, normaliser } from '../../data'
 import { THEMES } from '../../data/themes'
 import type { Mot } from '../../data/types'
 import { useMots } from '../../db/motsPerso'
@@ -9,7 +9,7 @@ import { ETAPES } from '../../gamification/voyage'
 import { ChampRecherche } from '../../ui/ChampRecherche'
 import { Ligne, Section, Tuile } from '../../ui/Liste'
 import { Page } from '../../ui/Page'
-import { ListeMots } from '../mots/ListeMots'
+import { ResultatsAvecProches } from '../mots/ListeMots'
 import { CarreTheme } from './BlocsAccueil'
 
 interface Props {
@@ -42,7 +42,7 @@ export function TousLesThemes({ favoris, onRetour, onTheme, onFavoris, onMot }: 
 
   if (q) {
     const themes = THEMES.filter((t) => normaliser(t.titre).includes(q))
-    const mots = chercherMots(MOTS, requete)
+    const { exacts, proches } = chercherAvecProches(MOTS, requete)
     return (
       <Page titre="Thèmes" retour={{ libelle: 'Apprendre', action: onRetour }}>
         <ChampRecherche valeur={requete} onChange={setRequete} placeholder="Thème ou mot" />
@@ -52,7 +52,7 @@ export function TousLesThemes({ favoris, onRetour, onTheme, onFavoris, onMot }: 
             {grille(themes.map((t) => t.id))}
           </section>
         )}
-        <ListeMots mots={mots} onChoisir={onMot} titre={`${mots.length} mot${mots.length > 1 ? 's' : ''}`} />
+        <ResultatsAvecProches exacts={exacts} proches={proches} onChoisir={onMot} />
       </Page>
     )
   }

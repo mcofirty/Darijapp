@@ -77,3 +77,15 @@ export function ListeMots({ mots, onChoisir, titre }: Props) {
     </>
   )
 }
+
+/** Résultats d'une recherche : les mots trouvés, puis « Ça ressemble à » (écriture différente, faute de frappe). */
+export function ResultatsAvecProches({ exacts, proches, onChoisir }: { exacts: Mot[]; proches: Mot[]; onChoisir: (mot: Mot) => void }) {
+  return (
+    <>
+      {(exacts.length > 0 || proches.length === 0) && (
+        <ListeMots mots={exacts} onChoisir={onChoisir} titre={`${exacts.length} mot${exacts.length > 1 ? 's' : ''}`} />
+      )}
+      {proches.length > 0 && <ListeMots mots={proches} onChoisir={onChoisir} titre="Ça ressemble à" />}
+    </>
+  )
+}
